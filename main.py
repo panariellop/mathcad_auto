@@ -1,5 +1,7 @@
 import os, sys
-from MathcadPy import Mathcad, Worksheet
+sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy")
+from mathcadpy import Mathcad, Worksheet #loading custom 
+# from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
 
@@ -23,18 +25,26 @@ def load_gui():
             break #ends gui 
     window.close()
 
-def open_worksheet(mathcad_app, filename:str)->Worksheet:
-    filepath = os.getcwd() + '\\' + filename
+def open_worksheet(mathcad_app, relative_filepath:str)->Worksheet:
+    filepath = os.getcwd() + '\\' + relative_filepath
     return mathcad_app.open(filepath)
 
-def set_inputs(worksheet:Worksheet):
+def save_worksheet_as(worksheet, filename:str):
+    filepath = os.getcwd() + "\\" + filename
+    try:
+        worksheet.save_as(filepath)
+        return True 
+    except:
+        return False
 
 
-def main():
-    mathcad_app = Mathcad(visible = True)
+def main(debug = False):
+    mathcad_app = Mathcad(visible = debug)
     print(f"Mathcad version: {mathcad_app.version}")
     cur_worksheet = open_worksheet(mathcad_app, 'test.mcdx')
     cur_worksheet.set_real_input('a', 16)
+    save_worksheet_as(cur_worksheet, "test5.mcdx")
+    cur_worksheet.close()
 
 if __name__ == "__main__":
-    load_gui()
+    main(debug = True)
