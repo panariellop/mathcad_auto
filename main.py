@@ -75,16 +75,41 @@ def load_gui():
 
         [
             sg.Frame("DETERMINE SEISMIC FORCE", [
-                [sg.Image(filename = (os.getcwd() + "\\build\images\\f_p_equation.png"))]
+                [sg.Text("F_p"), 
+                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_equation.png")), 
+                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_output"),
+                    sg.Text("", size = (20,1)),
+                    sg.Text("Connection to Equipment: "),
+                    ],
+                [sg.Text("F_p_max"), 
+                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_max_equation.png")), 
+                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_max_output"),
+                    sg.Text("", size = (25,1)),
+                    sg.Text("F_PV := "),
+                    ],
+                [sg.Text("F_p_min"), 
+                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_min_equation.png")), 
+                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_min_output"),
+                    sg.Text("", size = (25,1)),
+                    sg.Text("Connection to Base: "),
+                    ],
+                [sg.Text("F_p"), 
+                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_tot_equation.png")), 
+                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_tot_output"),
+                    sg.Text("", size = (25,1)),
+                    sg.Text("F_PV := "),
+                    ],
+            
             ]
             ,size = (100, -1))
         ],
 
-        [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "-EXCEL_FILE-"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKEXCEL-")]])],
-        [sg.Text("")],
-        [sg.Frame("Choose template", [[sg.FileBrowse(key = "-TEMPLATE_FILE-"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKFILE-")]])],
-        [sg.Text("")],
-        [sg.Text("File Name"), sg.InputText(key = '-SAVEFILENAME-', size = (15,1)), sg.Text(".mcdx")],
+
+        # [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "-EXCEL_FILE-"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKEXCEL-")]])],
+        # [sg.Text("")],
+        # [sg.Frame("Choose template", [[sg.FileBrowse(key = "-TEMPLATE_FILE-"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKFILE-")]])],
+        # [sg.Text("")],
+        # [sg.Text("File Name"), sg.InputText(key = '-SAVEFILENAME-', size = (15,1)), sg.Text(".mcdx")],
         [sg.Text(key = "cur_status", size = (20,3))],
         [sg.Button('Clear Inputs', key = '-CLEAR-')],
     ]
