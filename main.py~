@@ -14,8 +14,8 @@ def load_gui():
         [sg.Text('Value3'), sg.InputText(key = "-IN3-")],
         [sg.Text('Value4'), sg.InputText(key = "-IN4-")],
         [sg.Text("File Name"), sg.InputText(key = '-SAVEFILENAME-')],
-        [sg.Text(key = "-STATUS-", size = (20,1))],
-        [sg.Button('Generate file', key = "-GEN-"), sg.Button('Clear Inputs', key = '-CLEAR-')],
+        [sg.Text(key = "-STATUS-")],
+        [sg.Button('Generate file'), sg.Button('Clear Inputs', key = '-CLEAR-')],
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -44,9 +44,6 @@ def load_gui():
                             values[key] = "" 
                         popup.close()
                         break
-            elif event == "-GEN-": #perform calculations  
-                generate_file(debug = False)
-
 
 
 
@@ -66,7 +63,7 @@ def save_worksheet_as(worksheet, filename:str):
 
 
 
-def generate_file(debug = False):
+def main(debug = False):
     mathcad_app = Mathcad(visible = debug)
     print(f"Mathcad version: {mathcad_app.version}")
     cur_worksheet = open_worksheet(mathcad_app, 'test.mcdx')
@@ -76,5 +73,5 @@ def generate_file(debug = False):
 
 
 if __name__ == "__main__":
-    #generate_file(debug = True)
+    #main(debug = True)
     load_gui()
