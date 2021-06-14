@@ -1,9 +1,10 @@
 import os, sys
-sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy")
+sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module 
 from mathcadpy import Mathcad, Worksheet #loading custom 
 # from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
+
 class Popup():
     def __init__(self, title, message):
         self.title = title
@@ -29,7 +30,7 @@ def load_gui():
     layout = [
         [sg.Text("Check Mathcad Version"), sg.Button("Check", key = "-CHECKVER-"), sg.Text(key = "-VER-", size = (20,1))],
         [sg.Text("")],
-        [sg.Text("Load template file..."), sg.Input(size = (25, 1)), sg.FileBrowse(key = "-TEMPLATE_FILE-")],
+        [sg.Text("Load template file..."), sg.InputText(size = (20, 1), key = "-TEMPLATE_NAME-"), sg.FileBrowse(key = "-TEMPLATE_FILE-")],
         [sg.Text("")],
         [sg.Text('Value1'), sg.InputText(key = "-IN1-"), sg.Text("kg")],
         [sg.Text('Value2'), sg.InputText(key = "-IN2-")],
