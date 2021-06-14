@@ -4,6 +4,7 @@ from mathcadpy import Mathcad, Worksheet #loading custom
 # from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
+from openpyxl import Workbook, load_workbook
 
 class Popup():
     def __init__(self, title, message):
@@ -12,7 +13,7 @@ class Popup():
     def confirm(self)->bool:
         popup = sg.Window(self.title, [
                         [sg.Text("")],
-                        [sg.Text(self.message), sg.Button("YES", key = "YES"), sg.Button("NO", key = "NO")],
+                        [sg.Text(self.message), sg.Button("YES", key = "YES", button_color='green'), sg.Button("NO", key = "NO", button_color='red')],
                         [sg.Text("")],
                         ])
         while True:
@@ -27,19 +28,65 @@ class Popup():
 
 def load_gui():
     sg.theme('Reddit')
+    default_input_size = (6, 1)
     layout = [
-        [sg.Text("Check Mathcad Version"), sg.Button("Check", key = "-CHECKVER-"), sg.Text(key = "-VER-", size = (20,1))],
+        [sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], key = "mounting_location")],
+
+        [
+        sg.Text("W_p :="), sg.InputText("", size=(4,1)), sg.Text("lbf", size = (60,1)),
+        sg.Button("Update", key = "update"), 
+        sg.Frame("", [[
+            sg.Button("Generate Report", key = "generate_report"), 
+        ],
+        [
+            sg.Button("Previous", key="previous"), sg.Button("Next", key = "next")
+        ]
+        ])],
+
+        [
+            sg.Frame("SEISMIC PARAMETERS & GEOMETRY", [
+
+                [sg.Text("S_DS:=", size = (6,1)), sg.InputText(size = default_input_size, key = "s_ds_input")],
+                [sg.Text("a_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "a_p_input")],
+                [sg.Text("R_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "r_p_input")],
+                [sg.Text("I_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "i_p_input")],
+                [sg.Text("z:=", size = (6,1)), sg.InputText(size = default_input_size, key = "z_input")],
+                [sg.Text("h:=", size = (6,1)), sg.InputText(size = default_input_size, key = "h_input")],
+                [sg.Text("z/h:=", size = (6,1)), sg.Text(size = default_input_size, key = "z_h_output", background_color='yellow', text_color='black')],
+                [sg.Text("")],
+                [
+                    sg.Text("A:=", size = (4,1)), sg.InputText(size = default_input_size, key = "capital_a_input"), sg.Text("in", size = (6,1)), 
+                    sg.Text("B:=", size = (4,1)), sg.InputText(size = default_input_size, key = "capital_b_input"), sg.Text("in", size = (6,1))
+                ],
+                [
+                    sg.Text("a:=", size = (4,1)), sg.InputText(size = default_input_size, key = "a_input"), sg.Text("in", size = (6,1)), 
+                    sg.Text("b:=", size = (4,1)), sg.InputText(size = default_input_size, key = "b_input"), sg.Text("in", size = (6,1))
+                ],
+                [sg.Text("H:=", size = (4, 1)), sg.InputText(size = default_input_size, key = "capital_h_input"), sg.Text("in")],
+                [sg.Text("")],
+                [sg.Text("CG_y:= 2/3 * H =", size = (15, 1)), sg.Text(size = default_input_size, key = "cg_y_ouput", background_color='yellow')], 
+                [sg.Text("CG_X1:= A/2 =", size = (15, 1)), sg.Text(size = default_input_size, key = "cg_x1_ouput", background_color='yellow')], 
+                [sg.Text("CG_X2:= B/2 =", size = (15, 1)), sg.Text(size = default_input_size, key = "cg_x2_ouput", background_color='yellow')], 
+
+
+            ]
+            , size = (100,-1))
+        ],
+
+        [
+            sg.Frame("DETERMINE SEISMIC FORCE", [
+                [sg.Image(filename = (os.getcwd() + "\\build\images\\f_p_equation.png"))]
+            ]
+            ,size = (100, -1))
+        ],
+
+        [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "-EXCEL_FILE-"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKEXCEL-")]])],
         [sg.Text("")],
-        [sg.Text("Load template file..."), sg.InputText(size = (20, 1), key = "-TEMPLATE_NAME-"), sg.FileBrowse(key = "-TEMPLATE_FILE-")],
+        [sg.Frame("Choose template", [[sg.FileBrowse(key = "-TEMPLATE_FILE-"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKFILE-")]])],
         [sg.Text("")],
-        [sg.Text('Value1'), sg.InputText(key = "-IN1-"), sg.Text("kg")],
-        [sg.Text('Value2'), sg.InputText(key = "-IN2-")],
-        [sg.Text('Value3'), sg.InputText(key = "-IN3-")],
-        [sg.Text('Value4'), sg.InputText(key = "-IN4-")],
-        [sg.Text('', size = (2,1))],
         [sg.Text("File Name"), sg.InputText(key = '-SAVEFILENAME-', size = (15,1)), sg.Text(".mcdx")],
-        [sg.Text(key = "-STATUS-", size = (20,3))],
-        [sg.Button('Generate file', key = "-GEN-"), sg.Button('Clear Inputs', key = '-CLEAR-')],
+        [sg.Text(key = "cur_status", size = (20,3))],
+        [sg.Button('Clear Inputs', key = '-CLEAR-')],
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -48,10 +95,7 @@ def load_gui():
         if event == "OK" or event == sg.WIN_CLOSED:
             break #ends gui 
         else:
-            if event == "-CHECKVER-":
-                mathcad_app = Mathcad(visible = False)
-                window['-VER-'].update("Mathcad Version: " + str(mathcad_app.version))
-            elif event == "-CLEAR-":
+            if event == "-CLEAR-":
                 #creates confirming popup and then clears values
                 popup = Popup("Confirm clear", "Are you sure you want to clear all inputs?")
                 if popup.confirm() == True:
@@ -59,14 +103,16 @@ def load_gui():
                     for key in inputs:
                         window[key].update("")
                         values[key] = "" 
-            elif event == "-GEN-": #perform calculations  
-                status = generate_file(values, debug = False)
+            elif event == "-TEMPLATE_FILE-":
+                window['-TEMPLATE_NAME-'].update(values['-TEMPLATE_FILE-'].split("/")[-1])
+            elif event == "generate_report": #perform calculations  
+                status = generate_report(values, debug = False)
                 if status:
                     status = "File saved."
                 else:
                     status = "Error saving file."
-                values['-STATUS-'] = status 
-                window['-STATUS-'].update(status)
+                values['cur_status'] = status 
+                window['cur_status'].update(status)
 
 
 
@@ -74,16 +120,20 @@ def load_gui():
     window.close()
     return 
 
-             
-def save_worksheet_as(worksheet, filename:str)->bool:
-    filepath = os.getcwd() + "\\" + filename
-    try:
-        worksheet.save_as(filepath)
-        return True 
-    except:
-        return False
+# def excel_to_arr(filepath:str, bounds:list)->list:
+#     """
+#     bounds define the box which holds data(including header row)
 
-def generate_file(values, debug = False)->bool:
+#     Eqpt Name | Weight | COG ...
+#     ----------------------------
+#     Sink      | 250kg  | 12in
+
+#     header row is defined as the first index of the ouput array 
+#     """
+#     wb = load_workbook(filepath)
+
+
+def generate_report(values, debug = False)->bool:
     new_filepath = values['-TEMPLATE_FILE-'].split("/")[0:-1] 
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + values['-SAVEFILENAME-'] + ".mcdx" 
