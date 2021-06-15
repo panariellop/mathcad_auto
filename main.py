@@ -30,11 +30,22 @@ def load_gui():
     sg.theme('Reddit')
     default_input_size = (6, 1)
     layout = [
-        [sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location")],
+
+        [sg.Column([
+            [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "excel_file"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], ])],
+        ]),
+        sg.Column([
+            [sg.Frame("Choose template", [[sg.FileBrowse(key = "template_file"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], ])],
+        ]),
+        ],
+
+                  
+        [sg.Text("Eqipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location")],
 
         [
-        sg.Text("W_p :="), sg.InputText("", size=(4,1)), sg.Text("lbf", size = (60,1)),
-        sg.Button("Update", key = "update"), 
+        sg.Text("W_p :="), sg.InputText("", size=(4,1), key = "w_p_input"), sg.Text("lbf", size = (60,1)),
+        sg.Button("Calculate", key = "calculate"), 
+        sg.Text("File Name"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
         sg.Frame("", [[
             sg.Button("Generate Report", key = "generate_report"), 
         ],
@@ -43,8 +54,8 @@ def load_gui():
         ]
         ])],
 
-        [
-            sg.Frame("SEISMIC PARAMETERS & GEOMETRY", [
+        [sg.Column([
+            [sg.Frame("SEISMIC PARAMETERS & GEOMETRY", [
 
                 [sg.Text("S_DS:=", size = (6,1)), sg.InputText(size = default_input_size, key = "s_ds_input")],
                 [sg.Text("a_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "a_p_input")],
@@ -70,8 +81,18 @@ def load_gui():
 
 
             ]
-            , size = (100,-1))
-        ],
+            , size = (100,-1))]
+            ]),
+
+
+            #preview images
+        sg.Column([
+                [sg.Frame("Preview Images", [
+                    [sg.Text("Input images")], 
+                ])]
+            ]),
+
+            ],
 
         [sg.Column([[
             sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
@@ -127,14 +148,7 @@ def load_gui():
             ]),
             ],
 
-
-        # [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "-EXCEL_FILE-"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKEXCEL-")]])],
-        # [sg.Text("")],
-        # [sg.Frame("Choose template", [[sg.FileBrowse(key = "-TEMPLATE_FILE-"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], [sg.Button("Ok", key = "-OKFILE-")]])],
-        # [sg.Text("")],
-        # [sg.Text("File Name"), sg.InputText(key = '-SAVEFILENAME-', size = (15,1)), sg.Text(".mcdx")],
-        [sg.Text(key = "cur_status", size = (20,3))],
-        [sg.Button('Clear Inputs', key = '-CLEAR-')],
+        [sg.Text("Status: ", background_color = "yellow"), sg.Text("OK", key = "cur_status", size = (20,1), background_color = "yellow")],
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -143,38 +157,27 @@ def load_gui():
         if event == "OK" or event == sg.WIN_CLOSED:
             break #ends gui 
         else:
-            if event == "-CLEAR-":
-                #creates confirming popup and then clears values
-                popup = Popup("Confirm clear", "Are you sure you want to clear all inputs?")
-                if popup.confirm() == True:
-                    inputs = ["-IN1-", "-IN2-","-IN3-","-IN4-"]
-                    for key in inputs:
-                        window[key].update("")
-                        values[key] = "" 
-            elif event == "-TEMPLATE_FILE-":
-                window['-TEMPLATE_NAME-'].update(values['-TEMPLATE_FILE-'].split("/")[-1])
-
             """
             Update the maximum tension and shear anchor points labels
             """
-            elif event == "connection_to_base" or event == "connection_to_eqpt":
+            if event == "connection_to_base" or event == "connection_to_eqpt":
                 if values["connection_to_base"] == "ASD":
-                    window['base_t_max_det_label'].update("T_max")
-                    window['base_v_max_det_label'].update("T_max")
-                elif values["connection_to_eqpt"] == "ASD":
-                    window['eqpt_t_max_det_label'].update("T_max")
-                    window['eqpt_v_max_det_label'].update("V_max")
-                elif values["connection_to_base"] == "LRFD":
-                    window['base_t_max_det_label'].update("T_u")
-                    window['base_v_max_det_label'].update("V_u")
-                elif values["connection_to_eqpt"] == "LRFD":
-                    window['eqpt_t_max_det_label'].update("T_u")
-                    window['eqpt_v_max_det_label'].update("V_u")
+                    window['base_t_max_det_label'].update("T_max=")
+                    window['base_v_max_det_label'].update("T_max=")
+                if values["connection_to_eqpt"] == "ASD":
+                    window['eqpt_t_max_det_label'].update("T_max=")
+                    window['eqpt_v_max_det_label'].update("V_max=")
+                if values["connection_to_base"] == "LRFD":
+                    window['base_t_max_det_label'].update("T_u=")
+                    window['base_v_max_det_label'].update("V_u=")
+                if values["connection_to_eqpt"] == "LRFD":
+                    window['eqpt_t_max_det_label'].update("T_u=")
+                    window['eqpt_v_max_det_label'].update("V_u=")
 
             """
             Generate report from the values input
             """
-            elif event == "generate_report": #perform calculations  
+            if event == "generate_report": #perform calculations  
                 status = generate_report(values, debug = False)
                 if status:
                     status = "File saved."
