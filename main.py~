@@ -151,13 +151,13 @@ def load_gui():
                     for key in inputs:
                         window[key].update("")
                         values[key] = "" 
-            elif event == "-TEMPLATE_FILE-":
+            if event == "-TEMPLATE_FILE-":
                 window['-TEMPLATE_NAME-'].update(values['-TEMPLATE_FILE-'].split("/")[-1])
 
             """
             Update the maximum tension and shear anchor points labels
             """
-            elif event == "connection_to_base" or event == "connection_to_eqpt":
+            if event == "connection_to_base" or event == "connection_to_eqpt":
                 if values["connection_to_base"] == "ASD":
                     window['base_t_max_det_label'].update("T_max")
                     window['base_v_max_det_label'].update("T_max")
@@ -171,10 +171,7 @@ def load_gui():
                     window['eqpt_t_max_det_label'].update("T_u")
                     window['eqpt_v_max_det_label'].update("V_u")
 
-            """
-            Generate report from the values input
-            """
-            elif event == "generate_report": #perform calculations  
+            if event == "generate_report": #perform calculations  
                 status = generate_report(values, debug = False)
                 if status:
                     status = "File saved."
