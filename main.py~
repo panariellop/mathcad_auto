@@ -4,7 +4,8 @@ from mathcadpy import Mathcad, Worksheet #loading custom
 # from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
-from openpyxl import Workbook, load_workbook
+from openpyxl import Workbook as xlwkbk
+from openpyxl import load_workbook 
 
 class Popup():
     def __init__(self, title, message):
@@ -32,15 +33,15 @@ def load_gui():
     layout = [
 
         [sg.Column([
-            [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "excel_file"), sg.Text(key = "-EXCEL_NAME-", size = (50,1), background_color = 'white')], ])],
+            [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(key = "excel_name", size = (50,1), background_color = 'white', enable_events = True)], ])],
         ]),
         sg.Column([
-            [sg.Frame("Choose template", [[sg.FileBrowse(key = "template_file"), sg.Text(key = "-TEMPLATE_NAME-", size = (50,1), background_color = 'white')], ])],
+            [sg.Frame("Choose template", [[sg.FileBrowse(key = "template_file", enable_events = True), sg.InputText(key = "template_name", size = (50,1), background_color = 'white', enable_events = True)], ])],
         ]),
         ],
 
                   
-        [sg.Text("Eqipment Name: "), sg.InputText(key = "eqpt_name", size = (18, 1), background_color = "yellow"), sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location")],
+        [sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location")],
 
         [
         sg.Text("W_p :="), sg.InputText("", size=(4,1), key = "w_p_input"), sg.Text("lbf", size = (60,1)),
@@ -157,6 +158,15 @@ def load_gui():
         if event == "OK" or event == sg.WIN_CLOSED:
             break #ends gui 
         else:
+            if event == "excel_name":
+                if values["excel_name"] != "":
+                    inputs = set_inputs_from_xl(values['excel_name'])
+                    for key,val in inputs.items():
+                        values[key] = val
+                        window[key].update(val)
+
+
+
             """
             Update the maximum tension and shear anchor points labels
             """
@@ -174,6 +184,7 @@ def load_gui():
                     window['eqpt_t_max_det_label'].update("T_u=")
                     window['eqpt_v_max_det_label'].update("V_u=")
 
+
             """
             Generate report from the values input
             """
@@ -189,28 +200,56 @@ def load_gui():
 
 
 
-    window.close()
+
+
+    window.close(); del window
     return 
 
-# def excel_to_arr(filepath:str, bounds:list)->list:
-#     """
-#     bounds define the box which holds data(including header row)
+def set_inputs_from_xl(filepath: str)->dict:
+    """
+    Gets all the inputs from the excel sheet and returns the proper values packet back 
+    """
+    inputs = dict()
+    wb = load_workbook(filename = filepath)
+    sheet = wb['values']
+    inputs['eqpt_name'] = sheet['B1'].value
+    inputs['mounting_location'] = sheet['B2'].value.upper()
 
-#     Eqpt Name | Weight | COG ...
-#     ----------------------------
-#     Sink      | 250kg  | 12in
 
-#     header row is defined as the first index of the ouput array 
-#     """
-#     wb = load_workbook(filepath)
+    
+    return inputs
+     
+
+def mathcad_calculate(inputs:dict)->bool:
+    """
+    Gets all the inputs and performs calculations, updating the output fields in the UI 
+    Returns true if successful
+    """
+    pass
+
+
+def set_mathcad_inputs(inputs:dict, worksheet:Worksheet)->bool:
+    """
+    Gets all the inputs as a dictionary 
+    returns True if successful, False if unsuccessful
+    """
+    try:
+        for key in inputs:
+            worksheet.set_real_input(str(key), inputs[key])
+        return True 
+    except:
+        return False
 
 
 def generate_report(values, debug = False)->bool:
-    new_filepath = values['-TEMPLATE_FILE-'].split("/")[0:-1] 
+    """
+    Generates report with input values
+    """
+    new_filepath = values['template_file'].split("/")[0:-1] 
     new_filepath = "/".join(new_filepath)
-    new_filepath = new_filepath + "/" + values['-SAVEFILENAME-'] + ".mcdx" 
+    new_filepath = new_filepath + "/" + values['save_file_name'] + ".mcdx" 
     mathcad_app = Mathcad(visible = debug)
-    cur_worksheet = mathcad_app.open(values['-TEMPLATE_FILE-']) 
+    cur_worksheet = mathcad_app.open(values['template_file']) 
     #TODO make sure value input matches template input 
     cur_worksheet.set_real_input('a', 18)
     if cur_worksheet.save_as(new_filepath):
