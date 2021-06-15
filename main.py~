@@ -153,19 +153,33 @@ def load_gui():
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
+    eqpt_num = 1
+    max_rows = 0
     while True: #gui loop 
         event, values = window.read()
         if event == "OK" or event == sg.WIN_CLOSED:
             break #ends gui 
         else:
-            if event == "excel_name":
+            """
+            Load an excel file 
+            Update the current eqpt being viewed 
+            """
+            if event == "excel_name" or event == "next" or event == "previous":
+                if event == "next":
+                    eqpt_num = (eqpt_num + 1) % (max_rows+1)
+                    if eqpt_num == 0: eqpt_num = 1
+                    window['cur_status'].update(f'Equipment {eqpt_num}/{max_rows} loaded')
+                if event == "previous":
+                    eqpt_num = (eqpt_num - 1) % (max_rows+1)
+                    if eqpt_num == 0: eqpt_num = max_rows  
+                    window['cur_status'].update(f'Equipment {eqpt_num}/{max_rows} loaded')
                 if values["excel_name"] != "":
-                    inputs = set_inputs_from_xl(values['excel_name'])
+                    inputs, num_rows = set_inputs_from_xl(values['excel_name'], eqpt_num)
+                    max_rows = num_rows -1 
                     for key,val in inputs.items():
                         values[key] = val
                         window[key].update(val)
-
-
+                
 
             """
             Update the maximum tension and shear anchor points labels
@@ -205,19 +219,34 @@ def load_gui():
     window.close(); del window
     return 
 
-def set_inputs_from_xl(filepath: str)->dict:
+def set_inputs_from_xl(filepath: str, eqpt_num:int):
     """
     Gets all the inputs from the excel sheet and returns the proper values packet back 
     """
     inputs = dict()
     wb = load_workbook(filename = filepath)
     sheet = wb['values']
-    inputs['eqpt_name'] = sheet['B1'].value
-    inputs['mounting_location'] = sheet['B2'].value.upper()
+    for i in range(eqpt_num):
+        num = str(eqpt_num + 1)
+        inputs['eqpt_name'] = sheet['A'+num].value
+        inputs['mounting_location'] = sheet['B'+num].value.upper()
+        inputs['w_p_input'] = sheet['C' + num].value
+        inputs['s_ds_input'] = sheet['D' + num].value
+        inputs['a_p_input'] = sheet['E' + num].value
+        inputs['r_p_input'] = sheet['F' + num].value
+        inputs['i_p_input'] = sheet['G' + num].value
+        inputs['z_input'] = sheet['H' + num].value
+        inputs['h_input'] = sheet['I' + num].value
+        inputs['capital_a_input'] = sheet['J' + num].value
+        inputs['capital_b_input'] = sheet['K' + num].value
+        inputs['a_input'] = sheet['L' + num].value
+        inputs['b_input'] = sheet['M' + num].value
+        inputs['capital_h_input'] = sheet['N' + num].value
+
 
 
     
-    return inputs
+    return inputs, sheet.max_row
      
 
 def mathcad_calculate(inputs:dict)->bool:
