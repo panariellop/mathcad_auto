@@ -1,3 +1,4 @@
 @echo off 
 echo Setting up python environment...
-env\scripts\activate.bat && pip install -r requirements.txt 
+dist\env\scripts\activate.bat && pip install -r dist\requirements.txt 
+echo Environment setup. 

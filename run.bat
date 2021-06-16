@@ -1,4 +1,4 @@
 @echo off
 echo Running...
-env\scripts\activate.bat && python main.py
+dist\env\scripts\activate && python dist\main.py
 pause
