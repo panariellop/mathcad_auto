@@ -6,6 +6,7 @@ import PySimpleGUI as sg
 from pathlib import Path, PurePath
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook 
+from time import sleep 
 
 class Popup():
     def __init__(self, title, message):
@@ -261,7 +262,7 @@ def set_inputs_from_xl(filepath: str, eqpt_num:int):
     return inputs, sheet.max_row
      
 
-def mathcad_calculate(values:dict, debug = False)->dict:
+def mathcad_calculate(values:dict, debug = True)->dict:
     """
     Gets all the inputs and performs calculations, 
     returns a dictionary with the output values 
@@ -286,7 +287,6 @@ def mathcad_calculate(values:dict, debug = False)->dict:
     for key, value in tosave.items():
         cur_worksheet.set_real_input(str(key), float(value))
     cur_worksheet.synchronize()
-   
     toout = dict()
     outputs = [
             'z_h_output', 'cg_y_output', 
@@ -298,8 +298,8 @@ def mathcad_calculate(values:dict, debug = False)->dict:
     ]
     for o in outputs:
         toout[o] = cur_worksheet.get_real_output(o)
-    cur_worksheet.close(2) #closes the worksheet and doesn't save it
-
+    if debug == False:
+        cur_worksheet.close(2) #closes the worksheet and doesn't save it
     return toout
 
 
