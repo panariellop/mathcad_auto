@@ -221,6 +221,11 @@ def load_gui():
             if event == "calculate":
                 out = mathcad_calculate(values)
                 for key, val in out.items():
+                    #cleanup
+                    val = str(val[0]) + str(val[1])
+                    val = val.replace("{", "")
+                    val = val.replace("}", "")
+                    #save
                     values[key] = val
                     window[key].update(val)
 
