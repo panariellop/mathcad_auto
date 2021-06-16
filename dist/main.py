@@ -1,7 +1,7 @@
 import os, sys
 sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module 
-from mathcadpy import Mathcad, Worksheet #loading custom 
-# from MathcadPy import Mathcad, Worksheet
+#from mathcadpy import Mathcad, Worksheet #loading custom 
+from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
 from openpyxl import Workbook as xlwkbk
@@ -102,19 +102,19 @@ def load_gui():
         [sg.Column([[
             sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
                 [sg.Text("F_p"), 
-                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_equation.png")), 
+                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_output"),
                     ],
                 [sg.Text("F_p_max"), 
-                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_max_equation.png")), 
+                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_max_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_max_output"),
                     ],
                 [sg.Text("F_p_min"), 
-                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_min_equation.png")), 
+                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_min_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_min_output"),
                     ],
                 [sg.Text("F_p"), 
-                    sg.Image(filename = (os.getcwd() + "\\build\images\\rsz_f_p_tot_equation.png")), 
+                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_tot_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_tot_output"),
                     ],
             
