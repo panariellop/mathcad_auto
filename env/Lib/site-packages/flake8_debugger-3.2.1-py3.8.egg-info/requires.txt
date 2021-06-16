@@ -1,0 +1,2 @@
+flake8>=1.5
+pycodestyle

@@ -1,0 +1,9 @@
+MANIFEST.in
+README.rst
+eradicate
+eradicate.py
+setup.py
+eradicate.egg-info/PKG-INFO
+eradicate.egg-info/SOURCES.txt
+eradicate.egg-info/dependency_links.txt
+eradicate.egg-info/top_level.txt

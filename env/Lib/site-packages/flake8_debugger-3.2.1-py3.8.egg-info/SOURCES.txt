@@ -1,0 +1,11 @@
+README.md
+flake8_debugger.py
+setup.cfg
+setup.py
+flake8_debugger.egg-info/PKG-INFO
+flake8_debugger.egg-info/SOURCES.txt
+flake8_debugger.egg-info/dependency_links.txt
+flake8_debugger.egg-info/entry_points.txt
+flake8_debugger.egg-info/not-zip-safe
+flake8_debugger.egg-info/requires.txt
+flake8_debugger.egg-info/top_level.txt

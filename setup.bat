@@ -1,0 +1,3 @@
+@echo off 
+echo Setting up python environment...
+env\scripts\activate.bat && pip install -r requirements.txt 
