@@ -326,7 +326,7 @@ class Worksheet():
         """ Pauses worksheet calculation """
         self.ws_object.ResumeCalculation()
 
-    def synchronize(self):
+    def syncronize(self):
         """ Syncronises worksheet recalculates the worksheet""" 
         self.ws_object.Synchronize()
 

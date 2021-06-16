@@ -285,6 +285,7 @@ def mathcad_calculate(values:dict, debug = False)->dict:
         tosave[i] = values[i]
     for key, value in tosave.items():
         cur_worksheet.set_real_input(str(key), float(value))
+    cur_worksheet.synchronize()
    
     toout = dict()
     outputs = [
@@ -297,6 +298,7 @@ def mathcad_calculate(values:dict, debug = False)->dict:
     ]
     for o in outputs:
         toout[o] = cur_worksheet.get_real_output(o)
+    cur_worksheet.close(2) #closes the worksheet and doesn't save it
 
     return toout
 
