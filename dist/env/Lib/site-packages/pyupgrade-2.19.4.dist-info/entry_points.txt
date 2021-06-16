@@ -1,0 +1,3 @@
+[console_scripts]
+pyupgrade = pyupgrade._main:main
+
