@@ -49,11 +49,14 @@ def load_gui():
         sg.Button("Calculate", key = "calculate"), 
         sg.Text("File Name"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
         sg.Frame("", [[
-            sg.Button("Generate Report", key = "generate_report"), 
+            sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
         ],
         [
-            sg.Button("Previous", key="previous"), sg.Button("Next", key = "next")
-        ]
+            sg.Button("Previous", key="previous", size = (8,1)), sg.Button("Next", key = "next", size = (7,1))
+        ],
+        [
+            sg.Button("Generate Report For All", key = "generate_report_for_all")
+        ],
         ])],
 
         [sg.Column([
@@ -205,29 +208,68 @@ def load_gui():
             Generate report from the values input
             """
             if event == "generate_report": #perform calculations  
-                values['cur_status'] = "Generating Report"
-                window['cur_status'].update("Generating Report")
-                status = generate_report(values, debug = False)
-                if status:
-                    status = "File saved."
+                if values['excel_name'] == "" or values['template_file'] == "":
+                    values['cur_status'] = "Please select files"
+                    window['cur_status'].update("Please select files")
                 else:
-                    status = "Error saving file."
-                values['cur_status'] = status 
-                window['cur_status'].update(status)
+                    values['cur_status'] = "Generating Report"
+                    window['cur_status'].update("Generating Report")
+                    status = generate_report(values, debug = False)
+                    if status:
+                        status = "File saved."
+                    else:
+                        status = "Error saving file."
+                    values['cur_status'] = status 
+                    window['cur_status'].update(status)
+
+            """
+            Generate Report for all eqpt
+            """
+            if event == "generate_report_for_all":
+                if values['excel_name'] == "" or values['template_file'] == "":
+                    values['cur_status'] = "Please select files"
+                    window['cur_status'].update("Please select files")
+                else:
+                    values['cur_status'] = "Generating Reports"
+                    window['cur_status'].update("Generating Reports")
+                    for i in range(1, max_rows+1):
+                        print(f'{i}/{max_rows}')
+                        inputs, num_rows = set_inputs_from_xl(values['excel_name'], i)
+                        max_rows = num_rows -1 
+                        for key,val in inputs.items():
+                            values[key] = val
+                            window[key].update(val)
+                        new_name = values['eqpt_name']
+                        new_name = new_name.replace(" ", "_")
+                        new_name += "_report"
+                        values['save_file_name'] = new_name
+                        status = generate_report(values, debug = False)
+                        if status:
+                            status = "File saved."
+                        else:
+                            status = "Error saving file."
+                        values['cur_status'] = status 
+                        window['cur_status'].update(status)
+
 
             """
             Get the outputs from the mathcad file
             """
             if event == "calculate":
-                out = mathcad_calculate(values)
-                for key, val in out.items():
-                    #cleanup
-                    val = str(val[0]) + str(val[1])
-                    val = val.replace("{", "")
-                    val = val.replace("}", "")
-                    #save
-                    values[key] = val
-                    window[key].update(val)
+                if values['excel_name'] == "" or values['template_file'] == "":
+                    values['cur_status'] = "Please select files"
+                    window['cur_status'].update("Please select files")
+                else:
+                    out = mathcad_calculate(values)
+                    for key, val in out.items():
+                        #cleanup
+                        val = str(val[0]) + str(val[1])
+                        val = val.replace("{", "")
+                        val = val.replace("}", "")
+                        #save
+                        values[key] = val
+                        window[key].update(val)
+            
 
 
 
@@ -267,7 +309,7 @@ def set_inputs_from_xl(filepath: str, eqpt_num:int):
     return inputs, sheet.max_row
      
 
-def mathcad_calculate(values:dict, debug = True)->dict:
+def mathcad_calculate(values:dict, debug = False)->dict:
     """
     Gets all the inputs and performs calculations, 
     returns a dictionary with the output values 
@@ -343,7 +385,10 @@ def generate_report(values, debug = False)->bool:
     for i in inputs:
         tosave[i] = values[i]
     for key, value in tosave.items():
-        cur_worksheet.set_real_input(str(key), float(value))
+        try:
+            cur_worksheet.set_real_input(str(key), float(value))
+        except:
+            pass
 
     if cur_worksheet.save_as(new_filepath):
         cur_worksheet.close()
