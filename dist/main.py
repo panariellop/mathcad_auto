@@ -402,6 +402,13 @@ def generate_report(values, debug = False)->bool:
         except:
             pass
 
+    #name and mounting location:
+    try:
+        cur_worksheet.set_string_input('eqpt_name', values['eqpt_name'])
+        cur_worksheet.set_string_input('mounting_location', values['mounting_location'])
+    except:
+        pass
+
     if cur_worksheet.save_as(new_filepath):
         cur_worksheet.close()
         return True 
