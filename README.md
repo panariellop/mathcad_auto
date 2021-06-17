@@ -6,7 +6,7 @@
 
 <h4>Installation and Use:</h4>
 <ul>
-<li>Download the program and save it to any folder of your choice</li>
+<li>Click on the green Download Code button on Github and download the zip file. Save and extract it to any folder of your choice</li>
 <li>Double click the application_v1.exe file to launch the application</li>
 <li>Select the excel file from the templates folder containing the equipment and the input data. The excel sheet should follow this format:</li>
 
