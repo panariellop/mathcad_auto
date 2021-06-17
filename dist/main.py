@@ -6,6 +6,8 @@ import PySimpleGUI as sg
 from pathlib import Path, PurePath
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook 
+from shutil import copyfile
+import threading 
 from time import sleep 
 
 class Popup():
@@ -218,7 +220,7 @@ def load_gui():
                 else:
                     values['cur_status'] = "Generating Report"
                     window['cur_status'].update("Generating Report")
-                    status = generate_report(values, debug = False)
+                    status = generate_report(values, values['template_file'], debug = False)
                     if status:
                         status = "File saved."
                     else:
@@ -234,26 +236,34 @@ def load_gui():
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
-                    values['cur_status'] = "Generating Reports"
-                    window['cur_status'].update("Generating Reports")
+                    #pre-determine the max number of rows 
+                    my_inputs, max_num_rows = set_inputs_from_xl(values['excel_name'], 1)
+                    max_rows = max_num_rows - 1 
+                    #copy the template file for each 
                     for i in range(1, max_rows+1):
-                        print(f'{i}/{max_rows}')
-                        inputs, num_rows = set_inputs_from_xl(values['excel_name'], i)
-                        max_rows = num_rows -1 
-                        for key,val in inputs.items():
-                            values[key] = val
-                            window[key].update(val)
-                        new_name = values['eqpt_name']
-                        new_name = new_name.replace(" ", "_")
-                        new_name += "_report"
-                        values['save_file_name'] = new_name
-                        status = generate_report(values, debug = False)
-                        if status:
-                            status = "File saved."
-                        else:
-                            status = "Error saving file."
-                        values['cur_status'] = status 
-                        window['cur_status'].update(status)
+                        new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
+                        copyfile(values['template_file'],new_name)
+
+                    threads = list()
+                    num_threads = 4
+                    cur_row = 1
+                    while cur_row <= max_rows:
+                        for i in range(num_threads):
+                            if(cur_row<=max_rows):
+                                print(f'Processing equipment: {cur_row}/{max_rows}')
+                                t = threading.Thread(target = pre_generate_report, args = (cur_row, values))
+                                threads.append(t)
+                                t.start()
+                                cur_row += 1 
+                            else:
+                                break
+                        for i in range(len(threads)):
+                            threads[i].join() #join all threads to the main thread when finished
+                    print("Finished threading ...")
+                    #cleanup files
+                    for i in range(1, max_rows+1):
+                        new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
+                        os.remove(new_name)
 
 
             """
@@ -373,17 +383,28 @@ def set_mathcad_inputs(inputs:dict, worksheet:Worksheet)->bool:
     except:
         return False
 
+def pre_generate_report(eqpt_num, values):
+    inputs, num_rows = set_inputs_from_xl(values['excel_name'], eqpt_num)
+    for key,val in inputs.items():
+        values[key] = val
+    new_name = values['eqpt_name']
+    new_name = new_name.replace(" ", "_")
+    new_name += "_report"
+    values['save_file_name'] = new_name
+    template_file = values['template_file'].split(".")[0] + str(eqpt_num) + ".mcdx"
+    status = generate_report(values, template_file, debug = False)
+    print(f'Finished generating file {str(status)}')
 
-def generate_report(values, debug = False)->bool:
+def generate_report(values, template_file, debug = False)->bool:
     """
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
     """
-    new_filepath = values['template_file'].split("/")[0:-2] 
+    new_filepath = template_file.split("/")[0:-2] 
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/output/" + values['save_file_name'] + ".mcdx" 
     mathcad_app = Mathcad(visible = debug)
-    cur_worksheet = mathcad_app.open(values['template_file']) 
+    cur_worksheet = mathcad_app.open(template_file) 
 
     tosave = dict()
     inputs = [
