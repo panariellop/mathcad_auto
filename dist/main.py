@@ -30,6 +30,7 @@ class Popup():
 
 def load_gui():
     sg.theme('Reddit')
+    sg.set_options(suppress_raise_key_errors=True, suppress_error_popups=True, suppress_key_guessing=True)
     default_input_size = (14, 1)
     layout = [
 
@@ -124,8 +125,8 @@ def load_gui():
                [sg.Frame("DETERMINE SEISMIC FORCE", [
                     [sg.Text("Connection to equipment"), sg.Combo(["ASD", "LRFD"], enable_events = True, key = "connection_to_eqpt")],
                     [sg.Text("Load Combinations:")], 
-                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_connection_to_eqpt", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_connection_to_eqpt", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
+                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_output", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
+                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_output", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
 
                    ])], 
 
@@ -134,8 +135,8 @@ def load_gui():
                 [sg.Frame("DETERMINE SEISMIC FORCE", [
                     [sg.Text("Connection to base"), sg.Combo(["ASD", "LRFD"], enable_events = True, key = "connection_to_base")],
                     [sg.Text("Load Combinations:")], 
-                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_connection_to_base", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_connection_to_base", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
+                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_output1", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
+                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_output1", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
 
                     ])]
                 ])],
@@ -192,7 +193,7 @@ def load_gui():
             if event == "connection_to_base" or event == "connection_to_eqpt":
                 if values["connection_to_base"] == "ASD":
                     window['base_t_max_det_label'].update("T_max=")
-                    window['base_v_max_det_label'].update("T_max=")
+                    window['base_v_max_det_label'].update("V_max=")
                 if values["connection_to_eqpt"] == "ASD":
                     window['eqpt_t_max_det_label'].update("T_max=")
                     window['eqpt_v_max_det_label'].update("V_max=")
@@ -269,6 +270,12 @@ def load_gui():
                         val = str(val[0]) + str(val[1])
                         val = val.replace("{", "")
                         val = val.replace("}", "")
+                        if key == "f_pv_output":
+                            values['f_pv_output1'] = val
+                            window['f_pv_output1'].update(val)
+                        elif key == "f_ph_output":
+                            values['f_ph_output1'] = val
+                            window['f_ph_output1'].update(val)
                         #save
                         values[key] = val
                         window[key].update(val)
@@ -336,14 +343,15 @@ def mathcad_calculate(values:dict, debug = False)->dict:
         tosave[i] = values[i]
     for key, value in tosave.items():
         cur_worksheet.set_real_input(str(key), float(value))
-    cur_worksheet.synchronize()
+    cur_worksheet.ws_object.Synchronize()
     toout = dict()
     outputs = [
             'z_h_output', 'cg_y_output', 
             'cg_x1_output', 'cg_x2_output',
             'cg_x2_output', 'f_p_output',
             'f_p_max_output', 'f_p_min_output',
-            'f_p_tot_output', 
+            'f_p_tot_output', 'f_pv_output',
+            'f_ph_output',
 
     ]
     for o in outputs:
@@ -403,5 +411,4 @@ def generate_report(values, debug = False)->bool:
 
 
 if __name__ == "__main__":
-    #generate_file(debug = True)
     load_gui()
