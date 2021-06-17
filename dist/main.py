@@ -8,6 +8,7 @@ from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook 
 from shutil import copyfile
 import threading 
+import random 
 from time import sleep 
 
 class Popup():
@@ -28,6 +29,13 @@ class Popup():
             else:
                 popup.close()
                 return True 
+
+def gen_random_string(length):
+    out = ""
+    for i in range(length):
+        char = random.randint(65, 90)
+        out += chr(char)
+    return out 
  
 
 def load_gui():
@@ -402,7 +410,7 @@ def generate_report(values, template_file, debug = False)->bool:
     """
     new_filepath = template_file.split("/")[0:-2] 
     new_filepath = "/".join(new_filepath)
-    new_filepath = new_filepath + "/output/" + values['save_file_name'] + ".mcdx" 
+    new_filepath = new_filepath + "/output/" + values['save_file_name'] + "_"+ gen_random_string(8)+ ".mcdx" 
     mathcad_app = Mathcad(visible = debug)
     cur_worksheet = mathcad_app.open(template_file) 
 
