@@ -26,7 +26,7 @@
 <b>Note: all generated reports are saved in the folder called "Output"</b>
 
 
-<h4>Including your own files</h4>
+<h4>Including your own files:</h4>
 <ul>
 <li>If you want to include your own excel and mathcad template files, then simply copy them into the templates folder. </li>
 </ul>
