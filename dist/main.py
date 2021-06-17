@@ -430,6 +430,13 @@ def generate_report(values, template_file, debug = False)->bool:
     except:
         pass
 
+    #check if output folder exists, if not, make one 
+    output_folder_filepath = new_filepath.split('/')[0:-1]
+    output_folder_filepath = "/".join(output_folder_filepath)
+    if not os.path.exists(output_folder_filepath):
+        os.makedirs(output_folder_filepath)
+
+        
     if cur_worksheet.save_as(new_filepath):
         cur_worksheet.close()
         return True 
