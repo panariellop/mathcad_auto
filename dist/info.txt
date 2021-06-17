@@ -6,3 +6,11 @@ How to re-create the virtual env:
 python -m venv env 
 env\scripts\activate
 pip install -r requirements.txt
+
+Pyinstaller:
+(run on an administrative command prompt )
+PyInstaller --onefile main.py 
+
+pyinstaller --clean --onefile -w main.py 
+
+** -w means windowed 

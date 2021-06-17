@@ -1,5 +1,5 @@
 import os, sys
-sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module 
+#sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module 
 #from mathcadpy import Mathcad, Worksheet #loading custom 
 from MathcadPy import Mathcad, Worksheet
 import PySimpleGUI as sg
