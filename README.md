@@ -3,6 +3,7 @@
 
 <h4>About:</h4>
 <p>This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.</p>
+<p>This version is still in alpha, so not all functionality is available at the moment.</p>
 
 <h4>Installation and Use:</h4>
 <ul>
