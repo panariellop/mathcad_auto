@@ -17,7 +17,7 @@
 | Surgical Scrub Sink        	| Wall              	| 295 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 4  	| 75 	| 64 	| 28   	| 1.5 	| -3.5 	| 39.5  	|
 | Retractable Ceiling Column 	| Ceiling           	| 400 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 15 	| 75 	|    	|      	| 14  	| 14   	| 45    	|
 
-<li>Select your Mathcad template file from the templates folder. I have provided one to help with getting started. </li>
+<li>Select your Mathcad template file from the templates folder. I have provided one to help with getting started (01_LPCH ERCP_Anchorage_Template.mcdx)</li>
 <li>Click the Previous or Next buttons to scroll the equipment listed in your excel file. </li>
 <li>Click the Calculate button to preview the output values. 
 <li>Provide a file name and click the Generate button to generate a report for the equipment. </li>
