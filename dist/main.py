@@ -8,7 +8,10 @@ from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook 
 from shutil import copyfile
 import threading 
+import csv 
 import random 
+import copy 
+from datetime import  date 
 from time import sleep 
 
 class Popup():
@@ -30,7 +33,7 @@ class Popup():
                 popup.close()
                 return True 
 
-def gen_random_string(length):
+def gen_random_string(length:int)->str:
     out = ""
     for i in range(length):
         char = random.randint(65, 90)
@@ -53,7 +56,10 @@ def load_gui():
         ],
 
                   
-        [sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location")],
+        [   sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), 
+            sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location"),
+            sg.Text("Tags: "), sg.InputText(key = "tags", size = (30, 1)),
+        ],
 
         [
         sg.Text("W_p :="), sg.InputText("", size=(4,1), key = "w_p_input"), sg.Text("lbf", size = (60,1)),
@@ -259,7 +265,8 @@ def load_gui():
                         for i in range(num_threads):
                             if(cur_row<=max_rows):
                                 print(f'Processing equipment: {cur_row}/{max_rows}')
-                                t = threading.Thread(target = pre_generate_report, args = (cur_row, values))
+                                new_values = copy.copy(values) # need to copy values to avoid pass by reference 
+                                t = threading.Thread(target = pre_generate_report, args = (cur_row, new_values))
                                 threads.append(t)
                                 t.start()
                                 cur_row += 1 
@@ -297,6 +304,8 @@ def load_gui():
                         #save
                         values[key] = val
                         window[key].update(val)
+                values['cur_status'] = "Output fields updated"
+                window['cur_status'].update("Output fields updated")
             
 
 
@@ -306,6 +315,29 @@ def load_gui():
 
     window.close(); del window
     return 
+
+def save_eqpt_to_csv(values, filepath, unique_report_name):
+    cur_date = date.today()
+    try:
+        with open(filepath, "a", newline = "") as f:
+            csv_writer = csv.writer(f)
+            try:
+                new_row = [
+                    cur_date, 
+                    values['tags'].upper(), 
+                    values['eqpt_name'].upper(),
+                    values['mounting_location'].upper(),
+                    unique_report_name,
+                ]
+            except:
+                print("Equipment name, mounting location, and tags must all be included")
+            csv_writer.writerow(new_row)
+        f.close()
+        return True 
+    except: 
+        return False 
+
+
 
 def set_inputs_from_xl(filepath: str, eqpt_num:int):
     """
@@ -318,18 +350,19 @@ def set_inputs_from_xl(filepath: str, eqpt_num:int):
         num = str(eqpt_num + 1)
         inputs['eqpt_name'] = sheet['A'+num].value
         inputs['mounting_location'] = sheet['B'+num].value.upper()
-        inputs['w_p_input'] = sheet['C' + num].value
-        inputs['s_ds_input'] = sheet['D' + num].value
-        inputs['a_p_input'] = sheet['E' + num].value
-        inputs['r_p_input'] = sheet['F' + num].value
-        inputs['i_p_input'] = sheet['G' + num].value
-        inputs['z_input'] = sheet['H' + num].value
-        inputs['h_input'] = sheet['I' + num].value
-        inputs['capital_a_input'] = sheet['J' + num].value
-        inputs['capital_b_input'] = sheet['K' + num].value
-        inputs['a_input'] = sheet['L' + num].value
-        inputs['b_input'] = sheet['M' + num].value
-        inputs['capital_h_input'] = sheet['N' + num].value
+        inputs['tags'] = sheet['C'+num].value
+        inputs['w_p_input'] = sheet['D' + num].value
+        inputs['s_ds_input'] = sheet['E' + num].value
+        inputs['a_p_input'] = sheet['F' + num].value
+        inputs['r_p_input'] = sheet['G' + num].value
+        inputs['i_p_input'] = sheet['H' + num].value
+        inputs['z_input'] = sheet['I' + num].value
+        inputs['h_input'] = sheet['J' + num].value
+        inputs['capital_a_input'] = sheet['K' + num].value
+        inputs['capital_b_input'] = sheet['L' + num].value
+        inputs['a_input'] = sheet['M' + num].value
+        inputs['b_input'] = sheet['N' + num].value
+        inputs['capital_h_input'] = sheet['O' + num].value
 
 
 
@@ -376,6 +409,8 @@ def mathcad_calculate(values:dict, debug = False)->dict:
         toout[o] = cur_worksheet.get_real_output(o)
     if debug == False:
         cur_worksheet.close(2) #closes the worksheet and doesn't save it
+
+
     return toout
 
 
@@ -410,7 +445,8 @@ def generate_report(values, template_file, debug = False)->bool:
     """
     new_filepath = template_file.split("/")[0:-2] 
     new_filepath = "/".join(new_filepath)
-    new_filepath = new_filepath + "/output/" + values['save_file_name'] + "_"+ gen_random_string(8)+ ".mcdx" 
+    unique_string = gen_random_string(8)
+    new_filepath = new_filepath + "/output/" + values['save_file_name'] + "_"+ unique_string+ ".mcdx" 
     mathcad_app = Mathcad(visible = debug)
     cur_worksheet = mathcad_app.open(template_file) 
 
@@ -447,6 +483,10 @@ def generate_report(values, template_file, debug = False)->bool:
         
     if cur_worksheet.save_as(new_filepath):
         cur_worksheet.close()
+        #save to reports ledger 
+        ledger_filepath = new_filepath.split('/')[0:-1]
+        ledger_filepath = "/".join(ledger_filepath) + "/all_mathcad_reports.csv"
+        save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
         cur_worksheet.close()
