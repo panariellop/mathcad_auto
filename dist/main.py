@@ -59,6 +59,7 @@ def load_gui():
         [   sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), 
             sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location"),
             sg.Text("Tags: "), sg.InputText(key = "tags", size = (30, 1)),
+            sg.Checkbox("Save to database?", key = "database_save", default = True ), 
         ],
 
         [
@@ -485,9 +486,10 @@ def generate_report(values, template_file, debug = False)->bool:
     if cur_worksheet.save_as(new_filepath):
         cur_worksheet.close()
         #save to reports ledger 
-        ledger_filepath = new_filepath.split('/')[0:-1]
-        ledger_filepath = "/".join(ledger_filepath) + "/all_mathcad_reports.csv"
-        save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
+        if(values['database_save'] == True):
+            ledger_filepath = new_filepath.split('/')[0:-1]
+            ledger_filepath = "/".join(ledger_filepath) + "/all_mathcad_reports.csv"
+            save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
         cur_worksheet.close()
