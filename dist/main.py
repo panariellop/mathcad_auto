@@ -279,6 +279,7 @@ def load_gui():
                     for i in range(1, max_rows+1):
                         new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
                         os.remove(new_name)
+                window['cur_status'].update("Reports generated.")
 
 
             """
