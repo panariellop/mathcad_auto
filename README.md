@@ -13,7 +13,7 @@
 
 | Equipment Name             	| Mounting Location 	| Tags         	| W_p 	| S_DS  	| a_P 	| R_P 	| I_P 	| z  	| h  	| A  	| B    	| a   	| b    	| H     	|
 |----------------------------	|-------------------	|--------------	|-----	|-------	|-----	|-----	|-----	|----	|----	|----	|------	|-----	|------	|-------	|
-| Anesthesia Machine         	| Wall+Floor        	| Medical, ICU 	| 335 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 0  	| 75 	| 30 	| 20.5 	| 1.5 	| -1.5 	| 74.25 	|
+| Anesthesia Machine         	| Wall,Floor        	| Medical, ICU 	| 335 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 0  	| 75 	| 30 	| 20.5 	| 1.5 	| -1.5 	| 74.25 	|
 | Warming Cabinet            	| Floor             	| Medical      	| 137 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 3  	| 75 	| 30 	| 21.5 	| 1.5 	| -3.5 	| 24.5  	|
 | Surgical Scrub Sink        	| Wall              	| Medical      	| 295 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 4  	| 75 	| 64 	| 28   	| 1.5 	| -3.5 	| 39.5  	|
 | Retractable Ceiling Column 	| Ceiling           	| Medical      	| 400 	| 1.121 	| 1   	| 2.5 	| 1.5 	| 15 	| 75 	|    	|      	| 14  	| 14   	| 45    	|
