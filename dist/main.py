@@ -53,10 +53,13 @@ def load_gui():
     layout = [
 
         [sg.Column([
-            [sg.Frame("Choose Excel File", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(key = "excel_name", size = (50,1), background_color = 'white', enable_events = True)], ])],
+            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
         ]),
         sg.Column([
-            [sg.Frame("Choose template", [[sg.FileBrowse(key = "template_file", enable_events = True), sg.InputText(key = "template_name", size = (50,1), background_color = 'white', enable_events = True)], ])],
+            [sg.Frame("Choose template*", [[sg.FileBrowse(key = "template_file", enable_events = True), sg.InputText(key = "template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+        ]),
+        sg.Column([
+            [sg.Frame("Choose database", [[sg.FileBrowse(key = "database_file", enable_events = True), sg.InputText(key = "database_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
         ]),
         ],
 
@@ -493,7 +496,10 @@ def generate_report(values, template_file, debug = False)->bool:
         cur_worksheet.close()
         #save to reports ledger 
         if(values['database_save'] == True):
-            ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"
+            if(values['database_name'] == ""):
+                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"
+            else:
+                ledger_filepath = values['database_name']
             save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
