@@ -451,10 +451,6 @@ def generate_report(values, template_file, debug = False)->bool:
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
     """
-    new_filepath = template_file.split("/")[0:-2] 
-    new_filepath = "/".join(new_filepath)
-    unique_string = gen_random_string(8)
-    new_filepath = new_filepath + "/output/" + values['save_file_name'] + "_"+ unique_string+ ".mcdx" 
     mathcad_app = Mathcad(visible = debug)
     cur_worksheet = mathcad_app.open(template_file) 
 
@@ -482,19 +478,22 @@ def generate_report(values, template_file, debug = False)->bool:
     except:
         pass
 
+    
     #check if output folder exists, if not, make one 
-    output_folder_filepath = new_filepath.split('/')[0:-1]
-    output_folder_filepath = "/".join(output_folder_filepath)
+    output_folder_filepath = os.getcwd() + "/mathcad_automation_output"
     if not os.path.exists(output_folder_filepath):
         os.makedirs(output_folder_filepath)
 
+    unique_string = gen_random_string(8)
+    report_filepath = output_folder_filepath + "/" + values['save_file_name'] + "_"+ unique_string+ ".mcdx" 
+    
+
         
-    if cur_worksheet.save_as(new_filepath):
+    if cur_worksheet.save_as(report_filepath): #save the report 
         cur_worksheet.close()
         #save to reports ledger 
         if(values['database_save'] == True):
-            ledger_filepath = new_filepath.split('/')[0:-1]
-            ledger_filepath = "/".join(ledger_filepath) + "/all_mathcad_reports.csv"
+            ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"
             save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
