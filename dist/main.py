@@ -32,6 +32,19 @@ class Popup():
             else:
                 popup.close()
                 return True 
+    def alert(self):
+        popup = sg.Window(self.title, [
+            [sg.Text("")],
+            [sg.Text(self.message)],
+            [sg.Button("OK", key = 'OK', button_color = 'green')],
+        ])
+        while True:
+            event, values = popup.read()
+            if event == "OK" or event == sg.WIN_CLOSED:
+                popup.close()
+                break 
+            else:
+                pass 
 
 def gen_random_string(length:int)->str:
     out = ""
@@ -65,7 +78,7 @@ def load_gui():
 
                   
         [   sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), 
-            sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR+WALL"], enable_events = True, key = "mounting_location"),
+            sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "FLOOR, WALL"], enable_events = True, key = "mounting_location"),
             sg.Text("Tags: "), sg.InputText(key = "tags", size = (30, 1)),
             sg.Checkbox("Save to database?", key = "database_save", default = True ), 
         ],
@@ -246,6 +259,8 @@ def load_gui():
                     window['cur_status'].update("Generating Report")
                     status = generate_report(values, values['template_file'], debug = False)
                     if status:
+                        alert = Popup("File saved", "The file have been saved successfuly.")
+                        alert.alert()
                         status = "File saved."
                     else:
                         status = "Error saving file."
@@ -289,6 +304,8 @@ def load_gui():
                     for i in range(1, max_rows+1):
                         new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
                         os.remove(new_name)
+                alert = Popup("File saved", "The files have been saved successfuly.")
+                alert.alert()
                 window['cur_status'].update("Reports generated.")
 
 
@@ -315,6 +332,8 @@ def load_gui():
                         #save
                         values[key] = val
                         window[key].update(val)
+                alert = Popup("Calcuation Complete", "Output fields have been updated.")
+                alert.alert()
                 values['cur_status'] = "Output fields updated"
                 window['cur_status'].update("Output fields updated")
             
