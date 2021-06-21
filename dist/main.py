@@ -73,7 +73,7 @@ def load_gui():
         [
         sg.Text("W_p :="), sg.InputText("", size=(4,1), key = "w_p_input"), sg.Text("lbf", size = (60,1)),
         sg.Button("Preview", key = "calculate"), 
-        sg.Text("File Name"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
+        sg.Text("File Name*"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
         sg.Frame("", [[
             sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
         ],
