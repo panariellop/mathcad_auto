@@ -5,7 +5,7 @@ import os
 import stat 
 import dateutil.parser as parser
 
-def parse_eqpt():
+def parse_files():
     #get all the names of the eqpt, all the mounting locations, file name, date which it was saved 
     #get all files in dir 
     filenames = os.listdir(os.getcwd())
@@ -43,7 +43,10 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     except: 
         return False 
 
+def main():
+    pass
+
 
 
 if __name__ == "__main__":
-    parse_eqpt()
+    parse_files()
