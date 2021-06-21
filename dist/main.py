@@ -39,6 +39,11 @@ def gen_random_string(length:int)->str:
         char = random.randint(65, 90)
         out += chr(char)
     return out 
+def check_file_type(filename, filetype):
+    filename = filename.split(".")[-1]
+    if filename != filetype:
+        return False
+    return True 
  
 
 def load_gui():
@@ -195,7 +200,7 @@ def load_gui():
                 if event == "previous":
                     eqpt_num = (eqpt_num - 1) % (max_rows+1)
                     if eqpt_num == 0: eqpt_num = max_rows  
-                if values["excel_name"] != "":
+                if values["excel_name"] != "" and check_file_type(values['excel_name'], 'xlsx'):
                     inputs, num_rows = set_inputs_from_xl(values['excel_name'], eqpt_num)
                     max_rows = num_rows -1 
                     for key,val in inputs.items():
@@ -226,7 +231,8 @@ def load_gui():
             Generate report from the values input
             """
             if event == "generate_report": #perform calculations  
-                if values['excel_name'] == "" or values['template_file'] == "":
+                #check if the correct files are input 
+                if values['excel_name'] == "" or values['template_file'] == "" or check_file_type(values['template_file'], "mcdx") != True or check_file_type(values['excel_name'], "xlsx") != True:
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 if values['save_file_name'] == "":
