@@ -424,24 +424,32 @@ def load_gui():
 
 def save_eqpt_to_csv(values, filepath, unique_report_name):
     cur_date = date.today()
+    header = False 
+    # try:
     try:
-        with open(filepath, "a", newline = "") as f:
-            csv_writer = csv.writer(f)
-            try:
-                new_row = [
-                    cur_date, 
-                    values['tags'].upper(), 
-                    values['eqpt_name'].upper(),
-                    values['mounting_location'].upper(),
-                    unique_report_name,
-                ]
-            except:
-                print("Equipment name, mounting location, and tags must all be included")
-            csv_writer.writerow(new_row)
-        f.close()
-        return True 
-    except: 
-        return False 
+        with open(filepath, "r", newline = "") as f:
+            pass
+    except Exception as e:
+        header = True 
+            
+    with open(filepath, "a", newline = "") as f:
+        csv_writer = csv.writer(f)
+        if header: csv_writer.writerow(["Date","Tags", "Name", "Mounting Location", "File Name"])
+        try:
+            new_row = [
+                cur_date, 
+                values['tags'].upper(), 
+                values['eqpt_name'].upper(),
+                values['mounting_location'].upper(),
+                unique_report_name,
+            ]
+        except:
+            print("Equipment name, mounting location, and tags must all be included")
+        csv_writer.writerow(new_row)
+    f.close()
+    return True 
+    # except: 
+    #     return False 
 
 
 
@@ -620,7 +628,7 @@ def generate_report(values, template_file, debug = False)->bool:
         #save to reports ledger 
         if(values['database_save'] == True):
             if(values['database_name'] == ""):
-                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"
+                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv" #defaults save to the same folder as output if not specified 
             else:
                 ledger_filepath = values['database_name']
             save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
