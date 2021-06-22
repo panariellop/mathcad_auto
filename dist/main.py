@@ -74,11 +74,19 @@ def test_template_exists(template_file:str, mounting_location:str)->bool:
         return True 
     else:
         return False 
- 
+
+
+def resource_path(relative_path):
+    if hasattr(sys, '_MEIPASS'):
+        return os.path.join(sys._MEIPASS, relative_path)
+    return os.path.join(os.path.abspath("."), relative_path)
+
 
 def load_gui():
     sg.theme('Reddit')
-    sg.set_options(suppress_raise_key_errors=True, suppress_error_popups=True, suppress_key_guessing=True)
+    sg.set_options(suppress_raise_key_errors=True, 
+        suppress_error_popups=True, suppress_key_guessing=True,
+        icon = resource_path("./main_build/images/ma_logo.ico"))
     default_input_size = (14, 1)
     layout = [
 
@@ -265,7 +273,7 @@ def load_gui():
             """
             if event == "generate_report": #perform calculations  
                 #check if the correct files are input 
-                if values['excel_name'] == "" or values['template_file'] == "" or check_file_type(values['template_file'], "mcdx") != True or check_file_type(values['excel_name'], "xlsx") != True:
+                if values['excel_name'] == "" or check_file_type(values['excel_name'], "xlsx") != True:
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 if values['save_file_name'] == "":
@@ -303,17 +311,34 @@ def load_gui():
             Generate Report for all eqpt
             """
             if event == "generate_report_for_all":
-                if values['excel_name'] == "" or values['template_file'] == "":
+                if values['excel_name'] == "" or values['wall_template_name'] == ""or values['floor_template_name'] == ""or values['wallfloor_template_name'] == ""or values['ceiling_template_name'] == "":
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
                     #pre-determine the max number of rows 
                     my_inputs, max_num_rows = set_inputs_from_xl(values['excel_name'], 1)
                     max_rows = max_num_rows - 1 
+                    num_wall_templates, num_floor_templates, num_wallfloor_templates, num_ceiling_templates = 1,1,1,1
                     #copy the template file for each 
                     for i in range(1, max_rows+1):
-                        new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
-                        copyfile(values['template_file'],new_name)
+                        if values['mounting_location'] == "WALL":
+                            wall_new_name = values['wall_template_name'].split(".")[0] + str(num_wall_templates) + ".mcdx"
+                            copyfile(values['wall_template_name'],wall_new_name)
+                            num_wall_templates += 1
+                        if values['mounting_location'] == "FLOOR":
+                            floor_new_name = values['floor_template_name'].split(".")[0] + str(num_floor_templates) + ".mcdx"
+                            copyfile(values['floor_template_name'],floor_new_name)
+                            num_floor_templates += 1 
+                        if values['mounting_location'] == "WALL,FLOOR" or values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "FLOOR,WALL" or values['mounting_location'] == "FLOOR, WALL":
+                            wallfloor_new_name = values['wallfloor_template_name'].split(".")[0] + str(num_wallfloor_templates) + ".mcdx"
+                            copyfile(values['wallfloor_template_name'],wallfloor_new_name)
+                            num_wallfloor_templates += 1
+                        if values['mounting_location'] == "CEILING":
+                            ceiling_new_name = values['ceiling_template_name'].split(".")[0] + str(num_ceiling_templates) + ".mcdx"
+                            copyfile(values['ceiling_template_name'],ceiling_new_name)
+                            num_ceiling_templates += 1
+                        
+                        
 
                     threads = list()
                     num_threads = 4
@@ -332,10 +357,29 @@ def load_gui():
                         for i in range(len(threads)):
                             threads[i].join() #join all threads to the main thread when finished
                     print("Finished threading ...")
-                    #cleanup files
-                    for i in range(1, max_rows+1):
-                        new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
-                        os.remove(new_name)
+                    #cleanup files -- need to wrap in try except continue in case same file is used for multiple templates 
+                    for i in range(1,num_wall_templates+1):
+                        try:
+                            os.remove(values['wall_template_name'].split(".")[0] + str(i) + ".mcdx")
+                        except: continue 
+                    for i in range(1,num_floor_templates+1):
+                        try:
+                            os.remove(values['floor_template_name'].split(".")[0] + str(i) + ".mcdx")
+                        except: continue 
+                    for i in range(1,num_wallfloor_templates+1):
+                        try:
+                            os.remove(values['wallfloor_template_name'].split(".")[0] + str(i) + ".mcdx")
+                        except: continue
+                    for i in range(1,num_ceiling_templates+1):
+                        try:
+                            os.remove(values['ceiling_template_name'].split(".")[0] + str(i) + ".mcdx")
+                        except: continue 
+                    
+
+
+                    # for i in range(1, max_rows+1):
+                    #     new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
+                    #     os.remove(new_name)
                 alert = Popup("File saved", "The files have been saved successfuly.")
                 alert.alert()
                 window['cur_status'].update("Reports generated.")
