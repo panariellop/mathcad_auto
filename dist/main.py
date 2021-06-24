@@ -91,6 +91,17 @@ class Popup():
                 break 
             else:
                 pass 
+    def take_input(self, trailing_text:str)->str:
+        popup = sg.Window(self.title, [
+            [sg.Text("")],
+            [sg.Text(self.message), sg.InputText(key = "input", size = (15)), sg.Text(trailing_text)],
+            [sg.Button("OK", key = 'OK', button_color = 'green')],
+        ])
+        while True:
+            event, values = popup.read()
+            if event == "OK" or event == sg.WIN_CLOSED:
+                popup.close()
+                return values['input']
 
 class Equipment():
     """
@@ -198,19 +209,10 @@ def load_gui():
                   
         [  
             sg.Checkbox("Save to database?", key = "database_save", default = True ), 
+            sg.Button("Change Input Files", key = "change_input_files")
         ],
 
-        [
-        sg.Button("Preview", key = "calculate"), 
-        sg.Text("File Name*"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
-        sg.Frame("", [[
-            sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
-        ],
         
-        [
-            sg.Button("Generate Report For All", key = "generate_report_for_all")
-        ],
-        ])],
 
         [
             #list of equiptment
@@ -245,6 +247,17 @@ def load_gui():
                 
 
         ],
+
+        [
+        sg.Button("Preview Calculation Outputs", key = "calculate"), 
+        sg.Frame("", [[
+            sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
+        ],
+        
+        [
+            sg.Button("Generate Report For All", key = "generate_report_for_all")
+        ],
+        ])],
 
         [sg.Column([[
             sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
@@ -311,6 +324,11 @@ def load_gui():
         if event == "OK" or event == sg.WIN_CLOSED:
             break #ends gui 
         else:
+            """
+            Change Input Files 
+            """
+            if event == "change_input_files":
+                files.display_and_update()
             """
             Get the index of the eqpt being selected by the listbox 
             """
@@ -497,7 +515,6 @@ def load_gui():
                     output_layout = list() #this is where the sg objects live 
                     for key, val in outputs.items():
                         output_layout.append(str(key) + " = " + str(val))
-                    print("Outputs", outputs)
                     window['outputs'].update(values = output_layout)
                 alert = Popup("Calcuation Complete", "Output fields have been updated.")
                 alert.alert()
@@ -681,7 +698,9 @@ def generate_report(values, template_file, files, debug = False)->bool:
         os.makedirs(output_folder_filepath)
 
     unique_string = gen_random_string(8)
-    report_filepath = output_folder_filepath + "/" + values['save_file_name'] + "_"+ unique_string+ ".mcdx" 
+    save_file_name = Popup()
+    save_file_name = save_file_name.take_input(".mcdx")
+    report_filepath = output_folder_filepath + "/" +save_file_name + "_"+ unique_string+ ".mcdx" 
     
 
         
@@ -693,7 +712,7 @@ def generate_report(values, template_file, files, debug = False)->bool:
                 ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv" #defaults save to the same folder as output if not specified 
             else:
                 ledger_filepath = files.database
-            save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
+            save_eqpt_to_csv(values, ledger_filepath, (save_file_name + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
         cur_worksheet.close()
