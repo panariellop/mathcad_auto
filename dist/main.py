@@ -14,6 +14,50 @@ import copy
 from datetime import  date 
 from time import sleep 
 
+class SelectTemplates():
+    
+    def __init__(self):
+        self.title = "Mathcad Automation"
+        self.excel_file = ""
+        self.wall_template_file = "" 
+        self.floor_template_file = ""
+        self.wallfloor_template_file = ""
+        self.ceiling_template_file = ""
+    def display_and_update(self):
+        """
+        Displays the window and will update the object variables when the user hits continue
+        """
+        sg.theme("Reddit")
+        window = sg.Window(self.title, [
+            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(self.excel_file, key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+            
+            [sg.Frame("Choose Mathcad Templates*", [
+                    [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(self.wall_template_file, key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Floor Mounted Template", [[sg.FileBrowse(key = "floor_template_file", enable_events = True), sg.InputText(self.floor_template_file, key = "floor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Floor and Wall Mounted Template", [[sg.FileBrowse(key = "wallfoor_template_file", enable_events = True), sg.InputText(self.wallfloor_template_file, key = "wallfloor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Ceiling Mounted Template", [[sg.FileBrowse(key = "ceiling_template_file", enable_events = True), sg.InputText(self.ceiling_template_file, key = "ceiling_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                ])],
+
+            [sg.Button("Continue", key = "continue", button_color = "green")],
+        
+        ])
+        """Listen for events"""
+        while True:
+            event, values = window.read()
+            if event == 'OK' or event == sg.WIN_CLOSED:
+                window.close()
+                return False 
+            else:
+                if event == "continue": #user has input all information 
+                    self.excel_file = values['excel_name']
+                    self.wall_template_file = values['wall_template_name']
+                    self.floor_template_file = values['floor_template_name']
+                    self.wallfloor_template_file = values['wallfloor_template_name']
+                    self.ceiling_template_file = values['ceiling_template_name']
+                    window.close()
+                    return
+
+
 class Popup():
     def __init__(self, title, message):
         self.title = title
@@ -47,17 +91,26 @@ class Popup():
                 pass 
 
 def gen_random_string(length:int)->str:
+    """
+    Generates a string of random characters 
+    """
     out = ""
     for i in range(length):
         char = random.randint(65, 90)
         out += chr(char)
     return out 
 def check_file_type(filename, filetype):
+    """
+    Checks if the input file is of a certain type
+    """
     filename = filename.split(".")[-1]
     if filename != filetype:
         return False
     return True 
 def test_template_exists(template_file:str, mounting_location:str)->bool:
+    """
+    Tests if a template exists for a given mounting location 
+    """
     if mounting_location == "WALL" and template_file != "":
         return True 
     elif mounting_location == "FLOOR" and template_file != "":
@@ -77,12 +130,20 @@ def test_template_exists(template_file:str, mounting_location:str)->bool:
 
 
 def resource_path(relative_path):
+    """
+    Determines the resource path for an graphic, etc
+    """
     if hasattr(sys, '_MEIPASS'):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
 
 def load_gui():
+    template_files = SelectTemplates()
+    template_files.display_and_update()
+    print(vars(template_files))
+    template_files.display_and_update()
+
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
         suppress_error_popups=True, suppress_key_guessing=True,
@@ -166,19 +227,19 @@ def load_gui():
         [sg.Column([[
             sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
                 [sg.Text("F_p"), 
-                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_equation.png")), 
+                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_output"),
                     ],
                 [sg.Text("F_p_max"), 
-                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_max_equation.png")), 
+                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_max_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_max_output"),
                     ],
                 [sg.Text("F_p_min"), 
-                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_min_equation.png")), 
+                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_min_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_min_output"),
                     ],
                 [sg.Text("F_p"), 
-                    #sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_tot_equation.png")), 
+                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_tot_equation.png")), 
                     sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_tot_output"),
                     ],
             
