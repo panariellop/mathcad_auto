@@ -113,7 +113,10 @@ class Equipment():
     def next_index(self): #don't want to throw out of bounds error ! 
         self.cur_index = (self.cur_index + 1) % len(self.items)
     def prev_index(self):
-        self.cur_indes -= 1
+        if self.cur_index == 0:
+            self.cur_index = len(self.items) - 1
+        else: 
+            self.cur_index -= 1
 
 def gen_random_string(length:int)->str:
     """
@@ -180,18 +183,13 @@ def load_gui():
     files = SelectTemplates()
     files.display_and_update()
     equipment = get_eqpt_from_xl(files.excel) #initial loading of eqpt data 
-    print("Items: ", equipment.items)
-    print("Names", equipment.names)
-    print("Fields", equipment.fields)
-    print("Current index: ", equipment.cur_index)
 
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
         suppress_error_popups=True, suppress_key_guessing=True,
         icon = resource_path("./main_build/images/ma_logo.ico"))
     default_input_size = (14, 1)
-    layout = [ 
-        
+    layout = [         
                   
         [  
             sg.Checkbox("Save to database?", key = "database_save", default = True ), 
@@ -203,9 +201,7 @@ def load_gui():
         sg.Frame("", [[
             sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
         ],
-        [
-            sg.Button("Previous", key="previous", size = (8,1)), sg.Button("Next", key = "next", size = (7,1))
-        ],
+        
         [
             sg.Button("Generate Report For All", key = "generate_report_for_all")
         ],
@@ -213,20 +209,25 @@ def load_gui():
 
         [
             #list of equiptment
-            
-                [sg.Frame("Choose Equipment", [
-                    [sg.Listbox(values = equipment.names, 
-                                size = (30, 20),
-                                key = 'equipment_list',
-                                enable_events = True,
+                sg.Column([
+                    [sg.Frame("Choose Equipment", [
+                        [sg.Listbox(values = equipment.names, 
+                                    size = (30, 20),
+                                    key = 'equipment_list',
+                                    select_mode = "LISTBOX_SELECT_MODE_SINGLE",
+                                    enable_events = True,
+                        )],
+                        [
+                            sg.Button("Previous", key="previous", size = (8,1)), sg.Button("Next", key = "next", size = (7,1))
+                        ],
+                    ])],
+                ]),
+                sg.Column([
+                    [sg.Frame("Inputs", 
+                        load_inputs(equipment)
                     )],
-                ])],
-                [sg.Frame("Inputs", [
-                    [load_inputs(equipment)]
-                ])]
-            
-            
-            
+                ])
+                
 
         ],
 
@@ -296,21 +297,30 @@ def load_gui():
             break #ends gui 
         else:
             """
-            Load an excel file 
+            Get the index of the eqpt being selected by the listbox 
+            """
+            if event == "equipment_list":
+                #get the current index 
+                equipment.cur_index = window['equipment_list'].get_indexes()[0]
+                #update viewport 
+                for key, val in equipment.items[equipment.cur_index].items():
+                        values[key] = val
+                        window[key].update(val)
+                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded') 
+
+            """
             Update the current eqpt being viewed 
             """
-            if event == "excel_name" or event == "next" or event == "previous":
+            if event == "next" or event == "previous":
                 if event == "next":
                     equipment.next_index()
                 if event == "previous":
                     equipment.prev_index()  
                 if files.excel != "" and check_file_type(files.excel, 'xlsx'):
-                    inputs, num_rows = set_inputs_from_xl(files.excel, eqpt_num)
-                    max_rows = num_rows -1 
-                    for key,val in inputs.items():
+                    for key, val in equipment.items[equipment.cur_index].items():
                         values[key] = val
                         window[key].update(val)
-                window['cur_status'].update(f'Equipment {eqpt_num}/{max_rows} loaded')
+                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                 
 
             """
@@ -532,40 +542,6 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
             equipment.append(cur_eqpt)
     return equipment
 
-
-
-
-
-
-def set_inputs_from_xl(filepath: str, eqpt_num:int):
-    """
-    Gets all the inputs from the excel sheet and returns the proper values packet back 
-    """
-    inputs = dict()
-    wb = load_workbook(filename = filepath)
-    sheet = wb['values']
-    for i in range(eqpt_num):
-        num = str(eqpt_num + 1)
-        inputs['eqpt_name'] = sheet['A'+num].value
-        inputs['mounting_location'] = sheet['B'+num].value.upper().strip(" ")
-        inputs['tags'] = sheet['C'+num].value
-        inputs['w_p_input'] = sheet['D' + num].value
-        inputs['s_ds_input'] = sheet['E' + num].value
-        inputs['a_p_input'] = sheet['F' + num].value
-        inputs['r_p_input'] = sheet['G' + num].value
-        inputs['i_p_input'] = sheet['H' + num].value
-        inputs['z_input'] = sheet['I' + num].value
-        inputs['h_input'] = sheet['J' + num].value
-        inputs['capital_a_input'] = sheet['K' + num].value
-        inputs['capital_b_input'] = sheet['L' + num].value
-        inputs['a_input'] = sheet['M' + num].value
-        inputs['b_input'] = sheet['N' + num].value
-        inputs['capital_h_input'] = sheet['O' + num].value
-
-
-
-    
-    return inputs, sheet.max_row
      
 
 def mathcad_calculate(values:dict, files, debug = False):
