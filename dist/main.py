@@ -102,13 +102,16 @@ class Equipment():
         self.length = 0 
         self.fields = list()
         self.names = list()
+        self.inputs = list()
     def append(self, to_append:dict):
         self.items.append(to_append)
         for key, field in to_append.items(): #key value pair  
             if key not in self.fields: #append fields - this is the first row in the excel document 
                 self.fields.append(key)
             if key  == 'eqpt_name' or key == "Equipment Name": #append names of equiptment (always the first column in the template file)
-                self.names.append(to_append[key])
+                self.names.append(field)
+            if key.split("_")[-1] == "input" and key not in self.inputs:
+                self.inputs.append(key)
         return 
     def next_index(self): #don't want to throw out of bounds error ! 
         self.cur_index = (self.cur_index + 1) % len(self.items)
@@ -178,6 +181,8 @@ def load_inputs(equipment:Equipment):
         )
     return input_fields
 
+    
+
 def load_gui():
     
     files = SelectTemplates()
@@ -226,6 +231,16 @@ def load_gui():
                     [sg.Frame("Inputs", 
                         load_inputs(equipment)
                     )],
+                ]),
+                sg.Column([
+                    [sg.Frame("Outputs", 
+                        [[sg.Listbox(values = [], 
+                                    size = (30, 20),
+                                    key = 'outputs',
+                                    select_mode = "LISTBOX_SELECT_MODE_BROWSE",
+                                    right_click_menu = ['&Right', ["Copy"]],
+                                    enable_events = True)]]
+                    )]
                 ])
                 
 
@@ -307,6 +322,13 @@ def load_gui():
                         values[key] = val
                         window[key].update(val)
                 window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded') 
+            """
+            If user wants to copy output
+            """
+            if event == "outputs":
+                to_copy = window['outputs'].get()[0]
+                import pyperclip
+                pyperclip.copy(str(to_copy))
 
             """
             Update the current eqpt being viewed 
@@ -459,28 +481,24 @@ def load_gui():
 
 
             """
-            Get the outputs from the mathcad file
+            Preview 
             """
             if event == "calculate":
                 if files.excel == "":
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
-                    out = mathcad_calculate(values, files)
-                    for key, val in out.items():
+                    outputs = mathcad_calculate(equipment, files)
+                    for key, val in outputs.items():
                         #cleanup
                         val = str(val[0]) + str(val[1])
                         val = val.replace("{", "")
                         val = val.replace("}", "")
-                        if key == "f_pv_output":
-                            values['f_pv_output1'] = val
-                            window['f_pv_output1'].update(val)
-                        elif key == "f_ph_output":
-                            values['f_ph_output1'] = val
-                            window['f_ph_output1'].update(val)
-                        #save
-                        values[key] = val
-                        window[key].update(val)
+                    output_layout = list() #this is where the sg objects live 
+                    for key, val in outputs.items():
+                        output_layout.append(str(key) + " = " + str(val))
+                    print("Outputs", outputs)
+                    window['outputs'].update(values = output_layout)
                 alert = Popup("Calcuation Complete", "Output fields have been updated.")
                 alert.alert()
                 values['cur_status'] = "Output fields updated"
@@ -544,57 +562,41 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
 
      
 
-def mathcad_calculate(values:dict, files, debug = False):
+def mathcad_calculate(eqpt, files, debug = False):
     """
     Gets all the inputs and performs calculations, 
     returns a dictionary with the output values 
     """
-    
+    cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible = debug)
-    if values['mounting_location'] == "WALL":
+    if cur_eqpt['mounting_location'] == "WALL":
         template_file = files.wall_template
-    elif values['mounting_location'] == "FLOOR":
+    elif cur_eqpt['mounting_location'] == "FLOOR":
         template_file = files.floor_template
-    elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
+    elif cur_eqpt['mounting_location'].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'].upper() == "WALL,FLOOR":
         template_file = files.wallfloor_template
-    elif values['mounting_location'] == "CEILING":
+    elif cur_eqpt['mounting_location'] == "CEILING":
         template_file = files.ceiling_template
     else:  #defaults to floor mounted 
         template_file = files.floor_template
     new_filepath = template_file.split("/")[0:-1] 
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + "temp" + ".mcdx" 
-    if test_template_exists(template_file, mounting_location=values['mounting_location'])!=True:
+    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'].upper())!=True:
         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
         alert.alert()
         return dict()#template does not exist 
     cur_worksheet = mathcad_app.open(template_file) 
 
-    tosave = dict()
-    inputs = [
-            'w_p_input', 's_ds_input',
-            'a_p_input', 'r_p_input',
-            'i_p_input', 'z_input',
-            'h_input', 'capital_a_input',
-            'capital_b_input', 'a_input',
-            'b_input', 'capital_h_input',
-    ]
-    for i in inputs:
-        tosave[i] = values[i]
-    for key, value in tosave.items():
-        cur_worksheet.set_real_input(str(key), float(value))
+    for input in eqpt.inputs: #set inputs 
+        try:
+            cur_worksheet.set_real_input(input, float(cur_eqpt[input]))
+        except Exception as e:
+            print(e)
     cur_worksheet.ws_object.Synchronize()
     toout = dict()
-    outputs = [
-            'z_h_output', 'cg_y_output', 
-            'cg_x1_output', 'cg_x2_output',
-            'cg_x2_output', 'f_p_output',
-            'f_p_max_output', 'f_p_min_output',
-            'f_p_tot_output', 'f_pv_output',
-            'f_ph_output',
-
-    ]
-    for o in outputs:
+    output_aliases = cur_worksheet.outputs()
+    for o in output_aliases: #assign each alias the value associated with the output ex: r = 12 
         toout[o] = cur_worksheet.get_real_output(o)
     if debug == False:
         cur_worksheet.close(2) #closes the worksheet and doesn't save it
