@@ -92,6 +92,29 @@ class Popup():
             else:
                 pass 
 
+class Equipment():
+    """
+    Class of equipment (list of dictionaries)
+    """
+    def __init__(self):
+        self.items = list()
+        self.cur_index = 0 
+        self.length = 0 
+        self.fields = list()
+        self.names = list()
+    def append(self, to_append:dict):
+        self.items.append(to_append)
+        for key, field in to_append.items(): #key value pair  
+            if key not in self.fields: #append fields - this is the first row in the excel document 
+                self.fields.append(key)
+            if key  == 'eqpt_name' or key == "Equipment Name": #append names of equiptment (always the first column in the template file)
+                self.names.append(to_append[key])
+        return 
+    def next_index(self): #don't want to throw out of bounds error ! 
+        self.cur_index = (self.cur_index + 1) % len(self.items)
+    def prev_index(self):
+        self.cur_indes -= 1
+
 def gen_random_string(length:int)->str:
     """
     Generates a string of random characters 
@@ -139,36 +162,42 @@ def resource_path(relative_path):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
+def load_inputs(equipment:Equipment):
+    """
+    Takes in the equipment and returns all the input fields with sg parts
+    """
+    input_fields = list()
+
+    for field, value in equipment.items[equipment.cur_index].items(): #each eqpt is a dictionary, field is key 
+
+        input_fields.append(
+            [sg.Text(str(field + " = "), size = (20,1)), sg.InputText(value, size = (20, 1), key = str(field))]
+        )
+    return input_fields
 
 def load_gui():
+    
     files = SelectTemplates()
     files.display_and_update()
-
+    equipment = get_eqpt_from_xl(files.excel) #initial loading of eqpt data 
+    print("Items: ", equipment.items)
+    print("Names", equipment.names)
+    print("Fields", equipment.fields)
+    print("Current index: ", equipment.cur_index)
 
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
         suppress_error_popups=True, suppress_key_guessing=True,
         icon = resource_path("./main_build/images/ma_logo.ico"))
     default_input_size = (14, 1)
-    layout = [
-
-        [sg.Column([
-            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-        ]),
-        sg.Column([
-            [sg.Frame("Choose database", [[sg.FileBrowse(key = "database_file", enable_events = True), sg.InputText(key = "database_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-        ]),
-        ],
-
+    layout = [ 
+        
                   
-        [   sg.Text("Equipment Name: "), sg.InputText(key = "eqpt_name", size = (30, 1), background_color = "yellow"), 
-            sg.Text("Mounting Location: "), sg.Combo(["WALL","CEILING", "FLOOR", "WALL,FLOOR"], enable_events = True, key = "mounting_location"),
-            sg.Text("Tags: "), sg.InputText(key = "tags", size = (30, 1)),
+        [  
             sg.Checkbox("Save to database?", key = "database_save", default = True ), 
         ],
 
         [
-        sg.Text("W_p :="), sg.InputText("", size=(4,1), key = "w_p_input"), sg.Text("lbf", size = (60,1)),
         sg.Button("Preview", key = "calculate"), 
         sg.Text("File Name*"), sg.InputText(key = 'save_file_name', size = (15,1)), sg.Text(".mcdx"),
         sg.Frame("", [[
@@ -182,48 +211,24 @@ def load_gui():
         ],
         ])],
 
-        [sg.Column([
-            [sg.Frame("SEISMIC PARAMETERS & GEOMETRY", [
-
-                [sg.Text("S_DS:=", size = (6,1)), sg.InputText(size = default_input_size, key = "s_ds_input")],
-                [sg.Text("a_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "a_p_input")],
-                [sg.Text("R_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "r_p_input")],
-                [sg.Text("I_p:=", size = (6,1)), sg.InputText(size = default_input_size, key = "i_p_input")],
-                [sg.Text("z:=", size = (6,1)), sg.InputText(size = default_input_size, key = "z_input")],
-                [sg.Text("h:=", size = (6,1)), sg.InputText(size = default_input_size, key = "h_input")],
-                [sg.Text("z/h:=", size = (6,1)), sg.InputText(size = default_input_size, key = "z_h_output", background_color='yellow', text_color='black')],
-                [sg.Text("")],
-                [
-                    sg.Text("A:=", size = (4,1)), sg.InputText(size = default_input_size, key = "capital_a_input"), sg.Text("in", size = (6,1)), 
-                    sg.Text("B:=", size = (4,1)), sg.InputText(size = default_input_size, key = "capital_b_input"), sg.Text("in", size = (6,1))
-                ],
-                [
-                    sg.Text("a:=", size = (4,1)), sg.InputText(size = default_input_size, key = "a_input"), sg.Text("in", size = (6,1)), 
-                    sg.Text("b:=", size = (4,1)), sg.InputText(size = default_input_size, key = "b_input"), sg.Text("in", size = (6,1))
-                ],
-                [sg.Text("H:=", size = (4, 1)), sg.InputText(size = default_input_size, key = "capital_h_input"), sg.Text("in")],
-                [sg.Text("")],
-                [sg.Text("CG_y:= 2/3 * H =", size = (15, 1)), sg.InputText(size = default_input_size, key = "cg_y_output", background_color='yellow')], 
-                [sg.Text("CG_X1:= A/2 =", size = (15, 1)), sg.InputText(size = default_input_size, key = "cg_x1_output", background_color='yellow')], 
-                [sg.Text("CG_X2:= B/2 =", size = (15, 1)), sg.InputText(size = default_input_size, key = "cg_x2_output", background_color='yellow')], 
-
-
-            ]
-            , size = (100,-1))]
-            ]),
-
-
-        #(Right hand column )
-        sg.Column([
-                [sg.Frame("Choose Templates*", [
-                    [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Floor Mounted Template", [[sg.FileBrowse(key = "floor_template_file", enable_events = True), sg.InputText(key = "floor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Floor and Wall Mounted Template", [[sg.FileBrowse(key = "wallfoor_template_file", enable_events = True), sg.InputText(key = "wallfloor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Ceiling Mounted Template", [[sg.FileBrowse(key = "ceiling_template_file", enable_events = True), sg.InputText(key = "ceiling_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+        [
+            #list of equiptment
+            
+                [sg.Frame("Choose Equipment", [
+                    [sg.Listbox(values = equipment.names, 
+                                size = (30, 20),
+                                key = 'equipment_list',
+                                enable_events = True,
+                    )],
+                ])],
+                [sg.Frame("Inputs", [
+                    [load_inputs(equipment)]
                 ])]
-            ]),
+            
+            
+            
 
-            ],
+        ],
 
         [sg.Column([[
             sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
@@ -283,9 +288,7 @@ def load_gui():
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
-    """Some important values"""
-    eqpt_num = 1
-    max_rows = 0
+
     """GUI LOOP"""
     while True: 
         event, values = window.read()
@@ -298,11 +301,9 @@ def load_gui():
             """
             if event == "excel_name" or event == "next" or event == "previous":
                 if event == "next":
-                    eqpt_num = (eqpt_num + 1) % (max_rows+1)
-                    if eqpt_num == 0: eqpt_num = 1
+                    equipment.next_index()
                 if event == "previous":
-                    eqpt_num = (eqpt_num - 1) % (max_rows+1)
-                    if eqpt_num == 0: eqpt_num = max_rows  
+                    equipment.prev_index()  
                 if files.excel != "" and check_file_type(files.excel, 'xlsx'):
                     inputs, num_rows = set_inputs_from_xl(files.excel, eqpt_num)
                     max_rows = num_rows -1 
@@ -512,6 +513,27 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     return True 
     # except: 
     #     return False 
+
+
+def get_eqpt_from_xl(filepath:str)->Equipment:
+    wb = load_workbook(filename = filepath)
+    sheet = wb['values']
+    #iterate through each of the equipment and append it to the object 
+    headers = list()
+    equipment = Equipment()
+
+    for idx, row in enumerate(sheet.iter_rows(values_only=True)):
+        if idx == 0: #header row 
+            headers = list(row)
+        else:
+            cur_eqpt = dict()
+            for i, header in enumerate(headers):
+                cur_eqpt[header] = row[i]
+            equipment.append(cur_eqpt)
+    return equipment
+
+
+
 
 
 
