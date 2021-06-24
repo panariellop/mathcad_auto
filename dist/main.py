@@ -17,25 +17,26 @@ from time import sleep
 class SelectTemplates():
     
     def __init__(self):
-        self.title = "Mathcad Automation"
-        self.excel_file = ""
-        self.wall_template_file = "" 
-        self.floor_template_file = ""
-        self.wallfloor_template_file = ""
-        self.ceiling_template_file = ""
+        self.database = ""
+        self.excel = ""
+        self.wall_template = "" 
+        self.floor_template = ""
+        self.wallfloor_template = ""
+        self.ceiling_template = ""
     def display_and_update(self):
         """
         Displays the window and will update the object variables when the user hits continue
         """
         sg.theme("Reddit")
-        window = sg.Window(self.title, [
-            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(self.excel_file, key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+        window = sg.Window("Mathcad Automation", [
+            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(self.excel, key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+            [sg.Frame("Choose Database File", [[sg.FileBrowse(key = "database_file", enable_events = True), sg.InputText(self.database, key = "database_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
             
             [sg.Frame("Choose Mathcad Templates*", [
-                    [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(self.wall_template_file, key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Floor Mounted Template", [[sg.FileBrowse(key = "floor_template_file", enable_events = True), sg.InputText(self.floor_template_file, key = "floor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Floor and Wall Mounted Template", [[sg.FileBrowse(key = "wallfoor_template_file", enable_events = True), sg.InputText(self.wallfloor_template_file, key = "wallfloor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-                    [sg.Frame("Choose Ceiling Mounted Template", [[sg.FileBrowse(key = "ceiling_template_file", enable_events = True), sg.InputText(self.ceiling_template_file, key = "ceiling_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(self.wall_template, key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Floor Mounted Template", [[sg.FileBrowse(key = "floor_template_file", enable_events = True), sg.InputText(self.floor_template, key = "floor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Floor and Wall Mounted Template", [[sg.FileBrowse(key = "wallfoor_template_file", enable_events = True), sg.InputText(self.wallfloor_template, key = "wallfloor_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+                    [sg.Frame("Choose Ceiling Mounted Template", [[sg.FileBrowse(key = "ceiling_template_file", enable_events = True), sg.InputText(self.ceiling_template, key = "ceiling_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
                 ])],
 
             [sg.Button("Continue", key = "continue", button_color = "green")],
@@ -49,11 +50,12 @@ class SelectTemplates():
                 return False 
             else:
                 if event == "continue": #user has input all information 
-                    self.excel_file = values['excel_name']
-                    self.wall_template_file = values['wall_template_name']
-                    self.floor_template_file = values['floor_template_name']
-                    self.wallfloor_template_file = values['wallfloor_template_name']
-                    self.ceiling_template_file = values['ceiling_template_name']
+                    self.database = values['database_name']
+                    self.excel = values['excel_name']
+                    self.wall_template = values['wall_template_name']
+                    self.floor_template = values['floor_template_name']
+                    self.wallfloor_template = values['wallfloor_template_name']
+                    self.ceiling_template = values['ceiling_template_name']
                     window.close()
                     return
 
@@ -139,10 +141,9 @@ def resource_path(relative_path):
 
 
 def load_gui():
-    template_files = SelectTemplates()
-    template_files.display_and_update()
-    print(vars(template_files))
-    template_files.display_and_update()
+    files = SelectTemplates()
+    files.display_and_update()
+
 
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
@@ -302,8 +303,8 @@ def load_gui():
                 if event == "previous":
                     eqpt_num = (eqpt_num - 1) % (max_rows+1)
                     if eqpt_num == 0: eqpt_num = max_rows  
-                if values["excel_name"] != "" and check_file_type(values['excel_name'], 'xlsx'):
-                    inputs, num_rows = set_inputs_from_xl(values['excel_name'], eqpt_num)
+                if files.excel != "" and check_file_type(files.excel, 'xlsx'):
+                    inputs, num_rows = set_inputs_from_xl(files.excel, eqpt_num)
                     max_rows = num_rows -1 
                     for key,val in inputs.items():
                         values[key] = val
@@ -330,11 +331,11 @@ def load_gui():
 
 
             """
-            Generate report from the values input
+            Generate report for one eqpt 
             """
             if event == "generate_report": #perform calculations  
                 #check if the correct files are input 
-                if values['excel_name'] == "" or check_file_type(values['excel_name'], "xlsx") != True:
+                if files.excel == "" or check_file_type(files.excel, "xlsx") != True:
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 if values['save_file_name'] == "":
@@ -345,20 +346,20 @@ def load_gui():
                     window['cur_status'].update("Generating Report")
 
                     if values['mounting_location'] == "WALL":
-                        template_file = values['wall_template_name']
+                        template_file = files.wall_template
                     elif values['mounting_location'] == "FLOOR":
-                        template_file = values['floor_template_name']
+                        template_file = files.floor_template
                     elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
-                        template_file = values['wallfloor_template_name']
+                        template_file = files.wallfloor_template
                     elif values['mounting_location'] == "CEILING":
-                        template_file = values['ceiling_template_name']
+                        template_file = files.ceiling_template
                     else:  #defaults to floor mounted 
-                        template_file = values['floor_template_name']
+                        template_file = files.floor_template
                     if test_template_exists(template_file, mounting_location=values['mounting_location'])!=True:
                         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
                         alert.alert()
                         continue #template does not exist 
-                    status = generate_report(values, template_file, debug = False)
+                    status = generate_report(values, template_file, files, debug = False)
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
@@ -372,31 +373,31 @@ def load_gui():
             Generate Report for all eqpt
             """
             if event == "generate_report_for_all":
-                if values['excel_name'] == "" or values['wall_template_name'] == ""or values['floor_template_name'] == ""or values['wallfloor_template_name'] == ""or values['ceiling_template_name'] == "":
+                if files.excel == "" or files.wall_template == ""or files.floor_template == ""or files.wallfloor_template == ""or files.ceiling_template == "":
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
                     #pre-determine the max number of rows 
-                    my_inputs, max_num_rows = set_inputs_from_xl(values['excel_name'], 1)
+                    my_inputs, max_num_rows = set_inputs_from_xl(files.excel, 1)
                     max_rows = max_num_rows - 1 
                     num_wall_templates, num_floor_templates, num_wallfloor_templates, num_ceiling_templates = 1,1,1,1
                     #copy the template file for each 
                     for i in range(1, max_rows+1):
                         if values['mounting_location'] == "WALL":
-                            wall_new_name = values['wall_template_name'].split(".")[0] + str(num_wall_templates) + ".mcdx"
-                            copyfile(values['wall_template_name'],wall_new_name)
+                            wall_new_name = files.wall_template.split(".")[0] + str(num_wall_templates) + ".mcdx"
+                            copyfile(files.wall_template,wall_new_name)
                             num_wall_templates += 1
                         if values['mounting_location'] == "FLOOR":
-                            floor_new_name = values['floor_template_name'].split(".")[0] + str(num_floor_templates) + ".mcdx"
-                            copyfile(values['floor_template_name'],floor_new_name)
+                            floor_new_name = files.floor_template.split(".")[0] + str(num_floor_templates) + ".mcdx"
+                            copyfile(files.floor_template,floor_new_name)
                             num_floor_templates += 1 
                         if values['mounting_location'] == "WALL,FLOOR" or values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "FLOOR,WALL" or values['mounting_location'] == "FLOOR, WALL":
-                            wallfloor_new_name = values['wallfloor_template_name'].split(".")[0] + str(num_wallfloor_templates) + ".mcdx"
-                            copyfile(values['wallfloor_template_name'],wallfloor_new_name)
+                            wallfloor_new_name = files.wallfloor_template.split(".")[0] + str(num_wallfloor_templates) + ".mcdx"
+                            copyfile(files.wallfloor_template,wallfloor_new_name)
                             num_wallfloor_templates += 1
                         if values['mounting_location'] == "CEILING":
-                            ceiling_new_name = values['ceiling_template_name'].split(".")[0] + str(num_ceiling_templates) + ".mcdx"
-                            copyfile(values['ceiling_template_name'],ceiling_new_name)
+                            ceiling_new_name = files.ceiling_template.split(".")[0] + str(num_ceiling_templates) + ".mcdx"
+                            copyfile(files.ceiling_template,ceiling_new_name)
                             num_ceiling_templates += 1
                         
                         
@@ -409,7 +410,7 @@ def load_gui():
                             if(cur_row<=max_rows):
                                 print(f'Processing equipment: {cur_row}/{max_rows}')
                                 new_values = copy.copy(values) # need to copy values to avoid pass by reference 
-                                t = threading.Thread(target = pre_generate_report, args = (cur_row, new_values))
+                                t = threading.Thread(target = pre_generate_report, args = (cur_row, new_values, files))
                                 threads.append(t)
                                 t.start()
                                 cur_row += 1 
@@ -421,19 +422,19 @@ def load_gui():
                     #cleanup files -- need to wrap in try except continue in case same file is used for multiple templates 
                     for i in range(1,num_wall_templates+1):
                         try:
-                            os.remove(values['wall_template_name'].split(".")[0] + str(i) + ".mcdx")
+                            os.remove(files.wall_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
                     for i in range(1,num_floor_templates+1):
                         try:
-                            os.remove(values['floor_template_name'].split(".")[0] + str(i) + ".mcdx")
+                            os.remove(files.floor_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
                     for i in range(1,num_wallfloor_templates+1):
                         try:
-                            os.remove(values['wallfloor_template_name'].split(".")[0] + str(i) + ".mcdx")
+                            os.remove(files.wallfloor_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue
                     for i in range(1,num_ceiling_templates+1):
                         try:
-                            os.remove(values['ceiling_template_name'].split(".")[0] + str(i) + ".mcdx")
+                            os.remove(files.ceiling_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
                     
 
@@ -450,11 +451,11 @@ def load_gui():
             Get the outputs from the mathcad file
             """
             if event == "calculate":
-                if values['excel_name'] == "":
+                if files.excel == "":
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
-                    out = mathcad_calculate(values)
+                    out = mathcad_calculate(values, files)
                     for key, val in out.items():
                         #cleanup
                         val = str(val[0]) + str(val[1])
@@ -545,7 +546,7 @@ def set_inputs_from_xl(filepath: str, eqpt_num:int):
     return inputs, sheet.max_row
      
 
-def mathcad_calculate(values:dict, debug = False):
+def mathcad_calculate(values:dict, files, debug = False):
     """
     Gets all the inputs and performs calculations, 
     returns a dictionary with the output values 
@@ -553,15 +554,15 @@ def mathcad_calculate(values:dict, debug = False):
     
     mathcad_app = Mathcad(visible = debug)
     if values['mounting_location'] == "WALL":
-        template_file = values['wall_template_name']
+        template_file = files.wall_template
     elif values['mounting_location'] == "FLOOR":
-        template_file = values['floor_template_name']
+        template_file = files.floor_template
     elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
-        template_file = values['wallfloor_template_name']
+        template_file = files.wallfloor_template
     elif values['mounting_location'] == "CEILING":
-        template_file = values['ceiling_template_name']
+        template_file = files.ceiling_template
     else:  #defaults to floor mounted 
-        template_file = values['floor_template_name']
+        template_file = files.floor_template
     new_filepath = template_file.split("/")[0:-1] 
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + "temp" + ".mcdx" 
@@ -616,8 +617,8 @@ def set_mathcad_inputs(inputs:dict, worksheet:Worksheet)->bool:
     except:
         return False
 
-def pre_generate_report(eqpt_num, values):
-    inputs, num_rows = set_inputs_from_xl(values['excel_name'], eqpt_num)
+def pre_generate_report(eqpt_num, values, files):
+    inputs, num_rows = set_inputs_from_xl(files.excel, eqpt_num)
     for key,val in inputs.items():
         values[key] = val
     new_name = values['eqpt_name']
@@ -625,23 +626,23 @@ def pre_generate_report(eqpt_num, values):
     new_name += "_report"
     values['save_file_name'] = new_name #passing this to the generate_report function 
     if values['mounting_location'] == "WALL":
-        template_file = values['wall_template_name'].split(".")[0] + str(eqpt_num) + ".mcdx" #need this to enable multithreading
+        template_file = files.wall_template.split(".")[0] + str(eqpt_num) + ".mcdx" #need this to enable multithreading
     elif values['mounting_location'] == "FLOOR":
-        template_file = values['floor_template_name'].split(".")[0] + str(eqpt_num) + ".mcdx"
+        template_file = files.floor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
     elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
-        template_file = values['wallfloor_template_name'].split(".")[0] + str(eqpt_num) + ".mcdx"
+        template_file = files.wallfloor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
     elif values['mounting_location'] == "CEILING":
-        template_file = values['ceiling_template_name'].split(".")[0] + str(eqpt_num) + ".mcdx"
+        template_file = files.ceiling_template.split(".")[0] + str(eqpt_num) + ".mcdx"
     else:  #defaults to floor mounted 
-        template_file = values['floor_template_name'].split(".")[0] + str(eqpt_num) + ".mcdx"
+        template_file = files.floor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
     if test_template_exists(template_file, mounting_location=values['mounting_location'])!=True:
         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
         alert.alert()
         return #template does not exist 
-    status = generate_report(values, template_file, debug = False)
+    status = generate_report(values, template_file, files, debug = False)
     print(f'Finished generating file {str(status)}')
 
-def generate_report(values, template_file, debug = False)->bool:
+def generate_report(values, template_file, files, debug = False)->bool:
     """
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
@@ -688,10 +689,10 @@ def generate_report(values, template_file, debug = False)->bool:
         cur_worksheet.close()
         #save to reports ledger 
         if(values['database_save'] == True):
-            if(values['database_name'] == ""):
+            if(files.database == ""):
                 ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv" #defaults save to the same folder as output if not specified 
             else:
-                ledger_filepath = values['database_name']
+                ledger_filepath = files.database
             save_eqpt_to_csv(values, ledger_filepath, (values['save_file_name'] + "_"+ unique_string+ ".mcdx"))
         return True 
     else:
