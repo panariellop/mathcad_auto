@@ -121,7 +121,7 @@ class Equipment():
             if key not in self.fields: #append fields - this is the first row in the excel document 
                 self.fields.append(key)
             if key  == 'eqpt_name' or key == "Equipment Name": #append names of equiptment (always the first column in the template file)
-                self.names.append(field)
+                self.names.append(field[0])
             if key.split("_")[-1] == "input" and key not in self.inputs:
                 self.inputs.append(key)
         return 
