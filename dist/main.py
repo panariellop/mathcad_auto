@@ -414,7 +414,7 @@ def load_gui():
                 if files.excel == "" or files.wall_template == ""or files.floor_template == ""or files.wallfloor_template == ""or files.ceiling_template == "":
                     alert = Popup("Alert", "Please select templates for each mounting location")
                     alert.alert()
-
+                else:
                     threads = list()
                     num_threads = 4
                     cur_row = 0
@@ -604,7 +604,7 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
     if generating_multiple_reports: #generates a unique eqpt name (used if generating multiple reports)
         file_name = cur_eqpt['eqpt_name']
         file_name = file_name.replace(" ", "_")
-        file_name += "_report"
+        file_name += "_report_"
         file_name += gen_random_string(8)
     else: #prompts user for a filename input 
         popup = Popup("File Name", "Choose a file name:")
