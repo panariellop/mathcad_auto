@@ -133,6 +133,82 @@ class Equipment():
         else: 
             self.cur_index -= 1
 
+class Outputs():
+    def __init__(self):
+        self.items = list()
+        """
+        ['f_p_max_output', [408.81554560308007, 'kg', 0]]
+        ['f_p_min_output', [76.65291480057748, 'kg', 0]]
+        ['f_p_tot_output', [76.65291480057748, 'kg', 0]]
+        """
+    def append(self, to_append):
+        name = to_append[0]
+        values =  list(to_append[1]) #need to convert from tuple to array bc tuple is immutable 
+        self.items.append([name, values])
+    def display(self)->list:
+        to_display = list()
+        for i in self.items:
+            print(i)
+            to_display.append(str(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1])) #name = value units
+        return to_display 
+    def convert_units(self, in_units, tg_units):
+        """
+        Convert units: <input> is 'imperial' or 'metric' ; <target> is 'imperial' or 'metric'
+        """
+        for i in self.items:
+            if in_units == "imperial" and tg_units == 'metric': #convert from imperial to metric 
+                if i[1][1] == "in":
+                    i[1][1] = "m"
+                    i[1][0] = convert_units(i[1][0], "in", "m")
+                if i[1][1] == "ft":
+                    i[1][1] = "m"
+                    i[1][0] = convert_units(i[1][0], "ft", "m")
+                if i[1][1] == "lb":
+                    i[1][1] = "kg"
+                    i[1][0] = convert_units(i[1][0], "lb", "kg")
+                if i[1][1] == "lbf":
+                    i[1][1] = "n"
+                    i[1][0] = convert_units(i[1][0], "lb", "n")
+            else:
+                if i[1][1] == "m":
+                    i[1][1] = "ft"
+                    i[1][0] = convert_units(i[1][0], "m", "ft")
+                if i[1][1] == "kg":
+                    i[1][1] = "lb"
+                    i[1][0] = convert_units(i[1][0], "kg", "lb")
+                if i[1][1] == "n":
+                    i[1][1] = "lbf"
+                    i[1][0] = convert_units(i[1][0], "n", "lbf")
+
+    
+
+
+def convert_units(value:int, input_units:str, target_units:str)->int:
+    """
+    Takes in a value and its units and outputs the value in the target units 
+    Supported conversions: m <-> in ; m <-> ft ; kg <-> lb ; n <-> lbf
+    """
+    input_units = input_units.lower()
+    target_units = target_units.lower()
+    if input_units == "m" and target_units == "in":
+        return value * 39.37008
+    elif input_units == "in" and target_units == "m":
+        return value / 39.37008
+    elif input_units == "m" and target_units == "ft":
+        return value * 3.28084
+    elif input_units == "ft" and target_units == "m":
+        return value / 3.28084
+    elif input_units == "kg" and target_units == "lb":
+        return value * 2.204623
+    elif input_units == "lb" and target_units == "kg":
+        return value / 2.204623
+    elif input_units == "n" and target_units == "lbf":
+        return value * 0.2248089
+    elif input_units == "lbf" and target_units == "n":
+        return value / 0.2248089
+
+    else: return value 
+
 def gen_random_string(length:int)->str:
     """
     Generates a string of random characters 
@@ -204,6 +280,7 @@ def load_gui():
     files = SelectTemplates()
     files.display_and_update()
     equipment = get_eqpt_from_xl(files.excel) #initial loading of eqpt data 
+    outputs = Outputs() # preview output object 
 
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
@@ -241,14 +318,20 @@ def load_gui():
                 ]),
                 sg.Column([
                     [sg.Frame("Outputs", 
-                        [[sg.Listbox(values = [], 
+                        [   
+                            [sg.Radio("Inperial Units", "RADIO1",  key = "convert_to_imperial", enable_events = True), sg.Radio("Metric Units", "RADIO1", default = True, key = "convert_to_metric", enable_events = True)],
+
+                            [sg.Listbox(values = [], 
                                     size = (30, 20),
                                     key = 'outputs',
                                     select_mode = "LISTBOX_SELECT_MODE_BROWSE",
                                     right_click_menu = ['&Right', ["Copy"]],
-                                    enable_events = True)]]
+                                    enable_events = True)],
+                            [sg.Button("Preview Calculation Outputs", key = "calculate")],
+                        ],
+                        
                     )],
-                    [sg.Button("Preview Calculation Outputs", key = "calculate")], 
+                     
                 ])
                 
 
@@ -350,7 +433,6 @@ def load_gui():
             if event in equipment.fields:
                 #change the cur eqpt field being edited 
                 equipment.items[equipment.cur_index][event][0] = values[event] 
-                print(equipment.items[equipment.cur_index][event][0])
 
             """
             Move to the next or previous eqpt  
@@ -473,20 +555,20 @@ def load_gui():
                     values['cur_status'] = "Please select files"
                     window['cur_status'].update("Please select files")
                 else:
-                    outputs = mathcad_calculate(equipment, files)
-                    for key, val in outputs.items():
-                        #cleanup
-                        val = str(val[0]) + str(val[1])
-                        val = val.replace("{", "")
-                        val = val.replace("}", "")
-                    output_layout = list() #this is where the sg objects live 
-                    for key, val in outputs.items():
-                        output_layout.append(str(key) + " = " + str(val))
-                    window['outputs'].update(values = output_layout)
+                    to_out = mathcad_calculate(equipment, files)
+                    for key, val in to_out.items(): outputs.append([key,val])
+                    window['outputs'].update(values = outputs.display())
                 alert = Popup("Calcuation Complete", "Output fields have been updated.")
                 alert.alert()
                 values['cur_status'] = "Output fields updated"
                 window['cur_status'].update("Output fields updated")
+
+            if event == "convert_to_imperial":
+                outputs.convert_units('metric', 'imperial')
+                window['outputs'].update(values = outputs.display())
+            if event == "convert_to_metric":
+                outputs.convert_units('imperial', 'metric')
+                window['outputs'].update(values = outputs.display())
             
 
 
@@ -518,8 +600,8 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
                 values['mounting_location'][0].upper(),
                 unique_report_name + ".mcdx",
             ]
-        except:
-            print("Equipment name, mounting location, and tags must all be included")
+        except Exception as e:
+            print(e)
         csv_writer.writerow(new_row)
     f.close()
     return True 
@@ -552,7 +634,6 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
                     cur_eqpt[field] = [row[i], units]
                 except:
                     cur_eqpt[header] = [row[i], ""] #<- blank units 
-            print(cur_eqpt)
             equipment.append(cur_eqpt)
     return equipment
 
@@ -668,7 +749,6 @@ def generate_report(equipment:Equipment, file_name:str, template_file:str, files
     Saves the file in the save folder as the template chosen
     """
     mathcad_app = Mathcad(visible = debug)
-    print(template_file)
     cur_worksheet = mathcad_app.open(template_file) 
     cur_eqpt = equipment.items[equipment.cur_index]
 
