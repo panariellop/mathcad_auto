@@ -187,9 +187,13 @@ def load_inputs(equipment:Equipment):
     input_fields = list()
 
     for field, value in equipment.items[equipment.cur_index].items(): #each eqpt is a dictionary, field is key 
+        name = field.split("(")[0]
+        name = name.replace(" ", "")
 
         input_fields.append(
-            [sg.Text(str(field + " = "), size = (20,1)), sg.InputText(value, size = (20, 1), key = str(field), enable_events = True)]
+            [sg.Text(str(name + " = "), size = (20,1)), 
+            sg.InputText(value[0], size = (20, 1), key = str(field), enable_events = True), 
+            sg.Text(value[1])]
         )
     return input_fields
 
@@ -345,8 +349,8 @@ def load_gui():
             """
             if event in equipment.fields:
                 #change the cur eqpt field being edited 
-                equipment.items[equipment.cur_index][event] = values[event] #sets it as a temp 
-                print(equipment.items[equipment.cur_index])
+                equipment.items[equipment.cur_index][event][0] = values[event] 
+                print(equipment.items[equipment.cur_index][event][0])
 
             """
             Move to the next or previous eqpt  
@@ -509,10 +513,10 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
         try:
             new_row = [
                 cur_date, 
-                values['tags'].upper(), 
-                values['eqpt_name'].upper(),
-                values['mounting_location'].upper(),
-                unique_report_name,
+                values['tags'][0].upper(), 
+                values['eqpt_name'][0].upper(),
+                values['mounting_location'][0].upper(),
+                unique_report_name + ".mcdx",
             ]
         except:
             print("Equipment name, mounting location, and tags must all be included")
@@ -539,7 +543,16 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
         else:
             cur_eqpt = dict()
             for i, header in enumerate(headers):
-                cur_eqpt[header] = row[i]
+                #populates each eqpt with the input fields and [value, units]
+                try:
+                    units = header.split("(")[1]
+                    units = units.strip(")")
+                    field = header.split("(")[0]
+                    field = field.strip(" ")
+                    cur_eqpt[field] = [row[i], units]
+                except:
+                    cur_eqpt[header] = [row[i], ""] #<- blank units 
+            print(cur_eqpt)
             equipment.append(cur_eqpt)
     return equipment
 
@@ -552,20 +565,20 @@ def mathcad_calculate(eqpt, files, debug = False):
     """
     cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible = debug)
-    if cur_eqpt['mounting_location'].upper() == "WALL":
+    if cur_eqpt['mounting_location'][0].upper() == "WALL":
         template_file = files.wall_template
-    elif cur_eqpt['mounting_location'].upper() == "FLOOR":
+    elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
         template_file = files.floor_template
-    elif cur_eqpt['mounting_location'].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'].upper() == "WALL,FLOOR":
+    elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][0].upper() == "WALL,FLOOR":
         template_file = files.wallfloor_template
-    elif cur_eqpt['mounting_location'].upper() == "CEILING":
+    elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
         template_file = files.ceiling_template
     else:  #defaults to floor mounted 
         template_file = files.floor_template
     new_filepath = template_file.split("/")[0:-1] 
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + "temp" + ".mcdx" 
-    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'].upper())!=True:
+    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'][0].upper())!=True:
         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
         alert.alert()
         return dict()#template does not exist 
@@ -573,7 +586,7 @@ def mathcad_calculate(eqpt, files, debug = False):
 
     for input in eqpt.inputs: #set inputs 
         try:
-            cur_worksheet.set_real_input(input, float(cur_eqpt[input]))
+            cur_worksheet.set_real_input(input, float(cur_eqpt[input][0]), units = cur_eqpt[input][1], preserve_worksheet_units= False) #alias, value, units 
         except Exception as e:
             print(e)
     cur_worksheet.ws_object.Synchronize()
@@ -588,18 +601,6 @@ def mathcad_calculate(eqpt, files, debug = False):
     return toout
 
 
-def set_mathcad_inputs(inputs:dict, worksheet:Worksheet)->bool:
-    """
-    Gets all the inputs as a dictionary 
-    returns True if successful, False if unsuccessful
-    """
-    try:
-        for key in inputs:
-            worksheet.set_real_input(str(key), inputs[key])
-        return True 
-    except:
-        return False
-
 def pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False):
     """
     Checks if the proper template is given 
@@ -609,7 +610,7 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
     cur_eqpt = equipment.items[equipment.cur_index]
     file_name = str()
     if generating_multiple_reports: #generates a unique eqpt name (used if generating multiple reports)
-        file_name = cur_eqpt['eqpt_name']
+        file_name = cur_eqpt['eqpt_name'][0]
         file_name = file_name.replace(" ", "_")
         file_name += "_report_"
         file_name += gen_random_string(8)
@@ -617,28 +618,28 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
         popup = Popup("File Name", "Choose a file name:")
         file_name = popup.take_input(".mcdx")
 
-    if cur_eqpt['mounting_location'].upper() == "WALL":
+    if cur_eqpt['mounting_location'][0].upper() == "WALL":
         if generating_multiple_reports:
             template_file = files.wall_template.split(".")[0] + str(equipment.cur_index) + ".mcdx" #need this to enable multithreading
             copyfile(files.wall_template, template_file) #need to copy file to prevent collisions in writing/reading 
         else:
             template_file = files.wall_template
 
-    elif cur_eqpt['mounting_location'].upper() == "FLOOR":
+    elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
         if generating_multiple_reports:
             template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
             copyfile(files.wall_template, template_file)
         else:
             template_file = files.floor_template
 
-    elif cur_eqpt['mounting_location'].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'].upper() == "FLOOR, WALL" or cur_eqpt['mounting_location'].upper() == "FLOOR,WALL":
+    elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][0].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'][0].upper() == "FLOOR, WALL" or cur_eqpt['mounting_location'][0].upper() == "FLOOR,WALL":
         if generating_multiple_reports:
             template_file = files.wallfloor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
             copyfile(files.wall_template, template_file)
         else:
             template_file = files.wallfloor_template
 
-    elif cur_eqpt['mounting_location'].upper() == "CEILING":
+    elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
         if generating_multiple_reports: 
             template_file = files.ceiling_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
             copyfile(files.wall_template, template_file)
@@ -652,7 +653,7 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
             template_file = files.floor_template
     
     #check to see if the template exists 
-    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'].upper())!=True:
+    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'][0].upper())!=True:
         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
         alert.alert()
         return #template does not exist 
@@ -673,14 +674,14 @@ def generate_report(equipment:Equipment, file_name:str, template_file:str, files
 
     for input in equipment.inputs: #set all the real number inputs on the mathcad file
         try:
-            cur_worksheet.set_real_input(str(input), float(cur_eqpt[input])) #alias, value
+            cur_worksheet.set_real_input(str(input), float(cur_eqpt[input][0]), units = cur_eqpt[input][1], preserve_worksheet_units= False) #alias, value, units 
         except:
             pass
 
     #name and mounting location:
     try:
         cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'])
-        cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'])
+        cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
     except:
         pass
 
