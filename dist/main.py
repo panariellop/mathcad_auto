@@ -94,7 +94,7 @@ class Popup():
     def take_input(self, trailing_text:str)->str:
         popup = sg.Window(self.title, [
             [sg.Text("")],
-            [sg.Text(self.message), sg.InputText(key = "input", size = (15)), sg.Text(trailing_text)],
+            [sg.Text(self.message), sg.InputText(key = "input", size = (15, 1)), sg.Text(trailing_text)],
             [sg.Button("OK", key = 'OK', button_color = 'green')],
         ])
         while True:
@@ -114,6 +114,7 @@ class Equipment():
         self.fields = list()
         self.names = list()
         self.inputs = list()
+        self.save_to_database = True 
     def append(self, to_append:dict):
         self.items.append(to_append)
         for key, field in to_append.items(): #key value pair  
@@ -188,7 +189,7 @@ def load_inputs(equipment:Equipment):
     for field, value in equipment.items[equipment.cur_index].items(): #each eqpt is a dictionary, field is key 
 
         input_fields.append(
-            [sg.Text(str(field + " = "), size = (20,1)), sg.InputText(value, size = (20, 1), key = str(field))]
+            [sg.Text(str(field + " = "), size = (20,1)), sg.InputText(value, size = (20, 1), key = str(field), enable_events = True)]
         )
     return input_fields
 
@@ -349,7 +350,15 @@ def load_gui():
                 pyperclip.copy(str(to_copy))
 
             """
-            Update the current eqpt being viewed 
+            Update the Equipment object when the user edits an input field 
+            """
+            if event in equipment.fields:
+                #change the cur eqpt field being edited 
+                equipment.items[equipment.cur_index][event] = values[event] #sets it as a temp 
+                print(equipment.items[equipment.cur_index])
+
+            """
+            Move to the next or previous eqpt  
             """
             if event == "next" or event == "previous":
                 if event == "next":
@@ -384,118 +393,65 @@ def load_gui():
             """
             Generate report for one eqpt 
             """
-            if event == "generate_report": #perform calculations  
-                #check if the correct files are input 
+            if event == "generate_report": 
+                #check if the correct files are corrrect input 
                 if files.excel == "" or check_file_type(files.excel, "xlsx") != True:
-                    values['cur_status'] = "Please select files"
-                    window['cur_status'].update("Please select files")
-                if values['save_file_name'] == "":
-                    values['cur_status'] = "Please write file name"
-                    window['cur_status'].update("Please write file name")
+                    popup = Popup("Error", "Please select an input excel file.")
+                    popup.alert()
                 else:
-                    values['cur_status'] = "Generating Report"
-                    window['cur_status'].update("Generating Report")
-
-                    if values['mounting_location'] == "WALL":
-                        template_file = files.wall_template
-                    elif values['mounting_location'] == "FLOOR":
-                        template_file = files.floor_template
-                    elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
-                        template_file = files.wallfloor_template
-                    elif values['mounting_location'] == "CEILING":
-                        template_file = files.ceiling_template
-                    else:  #defaults to floor mounted 
-                        template_file = files.floor_template
-                    if test_template_exists(template_file, mounting_location=values['mounting_location'])!=True:
-                        alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
-                        alert.alert()
-                        continue #template does not exist 
-                    status = generate_report(values, template_file, files, debug = False)
+                    status = pre_generate_report(equipment = equipment, files = files, generating_multiple_reports=False)
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
-                        status = "File saved."
                     else:
-                        status = "Error saving file."
-                    values['cur_status'] = status 
-                    window['cur_status'].update(status)
+                        alert = Popup("Error", "There was an error saving the file")
+                        alert.alert()
 
             """
             Generate Report for all eqpt
             """
             if event == "generate_report_for_all":
                 if files.excel == "" or files.wall_template == ""or files.floor_template == ""or files.wallfloor_template == ""or files.ceiling_template == "":
-                    values['cur_status'] = "Please select files"
-                    window['cur_status'].update("Please select files")
-                else:
-                    #pre-determine the max number of rows 
-                    my_inputs, max_num_rows = set_inputs_from_xl(files.excel, 1)
-                    max_rows = max_num_rows - 1 
-                    num_wall_templates, num_floor_templates, num_wallfloor_templates, num_ceiling_templates = 1,1,1,1
-                    #copy the template file for each 
-                    for i in range(1, max_rows+1):
-                        if values['mounting_location'] == "WALL":
-                            wall_new_name = files.wall_template.split(".")[0] + str(num_wall_templates) + ".mcdx"
-                            copyfile(files.wall_template,wall_new_name)
-                            num_wall_templates += 1
-                        if values['mounting_location'] == "FLOOR":
-                            floor_new_name = files.floor_template.split(".")[0] + str(num_floor_templates) + ".mcdx"
-                            copyfile(files.floor_template,floor_new_name)
-                            num_floor_templates += 1 
-                        if values['mounting_location'] == "WALL,FLOOR" or values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "FLOOR,WALL" or values['mounting_location'] == "FLOOR, WALL":
-                            wallfloor_new_name = files.wallfloor_template.split(".")[0] + str(num_wallfloor_templates) + ".mcdx"
-                            copyfile(files.wallfloor_template,wallfloor_new_name)
-                            num_wallfloor_templates += 1
-                        if values['mounting_location'] == "CEILING":
-                            ceiling_new_name = files.ceiling_template.split(".")[0] + str(num_ceiling_templates) + ".mcdx"
-                            copyfile(files.ceiling_template,ceiling_new_name)
-                            num_ceiling_templates += 1
-                        
-                        
+                    alert = Popup("Alert", "Please select templates for each mounting location")
+                    alert.alert()
 
                     threads = list()
                     num_threads = 4
-                    cur_row = 1
-                    while cur_row <= max_rows:
+                    cur_row = 0
+                    while cur_row < len(equipment.items):
                         for i in range(num_threads):
-                            if(cur_row<=max_rows):
-                                print(f'Processing equipment: {cur_row}/{max_rows}')
-                                new_values = copy.copy(values) # need to copy values to avoid pass by reference 
-                                t = threading.Thread(target = pre_generate_report, args = (cur_row, new_values, files))
+                            if(cur_row<len(equipment.items)):
+                                print(f'Processing equipment: {cur_row+1}/{len(equipment.items)}')
+                                t = threading.Thread(target = pre_generate_report, args = (equipment, files, True))
                                 threads.append(t)
                                 t.start()
                                 cur_row += 1 
+                                equipment.next_index()
                             else:
-                                break
+                                break 
                         for i in range(len(threads)):
                             threads[i].join() #join all threads to the main thread when finished
                     print("Finished threading ...")
-                    #cleanup files -- need to wrap in try except continue in case same file is used for multiple templates 
-                    for i in range(1,num_wall_templates+1):
+                    #cleanup files -- need to guess the file names 
+                    for i in range(len(equipment.items)):
                         try:
                             os.remove(files.wall_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
-                    for i in range(1,num_floor_templates+1):
+                    for i in range(len(equipment.items)):
                         try:
                             os.remove(files.floor_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
-                    for i in range(1,num_wallfloor_templates+1):
+                    for i in range(len(equipment.items)):
                         try:
                             os.remove(files.wallfloor_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue
-                    for i in range(1,num_ceiling_templates+1):
+                    for i in range(len(equipment.items)):
                         try:
                             os.remove(files.ceiling_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
                     
-
-
-                    # for i in range(1, max_rows+1):
-                    #     new_name = values['template_file'].split(".")[0] + str(i) + ".mcdx"
-                    #     os.remove(new_name)
-                alert = Popup("File saved", "The files have been saved successfuly.")
+                alert = Popup("File saved", "All files have been saved successfuly.")
                 alert.alert()
-                window['cur_status'].update("Reports generated.")
 
 
             """
@@ -561,6 +517,9 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
 
 
 def get_eqpt_from_xl(filepath:str)->Equipment:
+    """
+    Gets all the equipment from an excel file and returns an equipment object 
+    """
     wb = load_workbook(filename = filepath)
     sheet = wb['values']
     #iterate through each of the equipment and append it to the object 
@@ -634,60 +593,87 @@ def set_mathcad_inputs(inputs:dict, worksheet:Worksheet)->bool:
     except:
         return False
 
-def pre_generate_report(eqpt_num, values, files):
-    inputs, num_rows = set_inputs_from_xl(files.excel, eqpt_num)
-    for key,val in inputs.items():
-        values[key] = val
-    new_name = values['eqpt_name']
-    new_name = new_name.replace(" ", "_")
-    new_name += "_report"
-    values['save_file_name'] = new_name #passing this to the generate_report function 
-    if values['mounting_location'] == "WALL":
-        template_file = files.wall_template.split(".")[0] + str(eqpt_num) + ".mcdx" #need this to enable multithreading
-    elif values['mounting_location'] == "FLOOR":
-        template_file = files.floor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
-    elif values['mounting_location'] == "WALL, FLOOR" or values['mounting_location'] == "WALL,FLOOR":
-        template_file = files.wallfloor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
-    elif values['mounting_location'] == "CEILING":
-        template_file = files.ceiling_template.split(".")[0] + str(eqpt_num) + ".mcdx"
+def pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False):
+    """
+    Checks if the proper template is given 
+    Creates a filename or asks for it 
+    Passes on the equipment (extracts the current eqpt from the object), file name, and template path to the generate report function
+    """
+    cur_eqpt = equipment.items[equipment.cur_index]
+    file_name = str()
+    if generating_multiple_reports: #generates a unique eqpt name (used if generating multiple reports)
+        file_name = cur_eqpt['eqpt_name']
+        file_name = file_name.replace(" ", "_")
+        file_name += "_report"
+        file_name += gen_random_string(8)
+    else: #prompts user for a filename input 
+        popup = Popup("File Name", "Choose a file name:")
+        file_name = popup.take_input(".mcdx")
+
+    if cur_eqpt['mounting_location'].upper() == "WALL":
+        if generating_multiple_reports:
+            template_file = files.wall_template.split(".")[0] + str(equipment.cur_index) + ".mcdx" #need this to enable multithreading
+            copyfile(files.wall_template, template_file) #need to copy file to prevent collisions in writing/reading 
+        else:
+            template_file = files.wall_template
+
+    elif cur_eqpt['mounting_location'].upper() == "FLOOR":
+        if generating_multiple_reports:
+            template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+            copyfile(files.wall_template, template_file)
+        else:
+            template_file = files.floor_template
+
+    elif cur_eqpt['mounting_location'].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'].upper() == "FLOOR, WALL" or cur_eqpt['mounting_location'].upper() == "FLOOR,WALL":
+        if generating_multiple_reports:
+            template_file = files.wallfloor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+            copyfile(files.wall_template, template_file)
+        else:
+            template_file = files.wallfloor_template
+
+    elif cur_eqpt['mounting_location'].upper() == "CEILING":
+        if generating_multiple_reports: 
+            template_file = files.ceiling_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+            copyfile(files.wall_template, template_file)
+        else:
+            template_file = files.ceiling_template
     else:  #defaults to floor mounted 
-        template_file = files.floor_template.split(".")[0] + str(eqpt_num) + ".mcdx"
-    if test_template_exists(template_file, mounting_location=values['mounting_location'])!=True:
+        if generating_multiple_reports:
+            template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+            copyfile(files.wall_template, template_file)
+        else:
+            template_file = files.floor_template
+    
+    #check to see if the template exists 
+    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'].upper())!=True:
         alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
         alert.alert()
         return #template does not exist 
-    status = generate_report(values, template_file, files, debug = False)
-    print(f'Finished generating file {str(status)}')
 
-def generate_report(values, template_file, files, debug = False)->bool:
+    status = generate_report(equipment, file_name, template_file, files, debug = False)
+    print(f'Finished generating file {str(status)}') #some debug output 
+    return status 
+
+def generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool:
     """
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
     """
     mathcad_app = Mathcad(visible = debug)
+    print(template_file)
     cur_worksheet = mathcad_app.open(template_file) 
+    cur_eqpt = equipment.items[equipment.cur_index]
 
-    tosave = dict()
-    inputs = [ #all the inputs in the mathcad worksheet 
-            'w_p_input', 's_ds_input',
-            'a_p_input', 'r_p_input',
-            'i_p_input', 'z_input',
-            'h_input', 'capital_a_input',
-            'capital_b_input', 'a_input',
-            'b_input', 'capital_h_input',
-    ]
-    for i in inputs:
-        tosave[i] = values[i]
-    for key, value in tosave.items():
+    for input in equipment.inputs: #set all the real number inputs on the mathcad file
         try:
-            cur_worksheet.set_real_input(str(key), float(value))
+            cur_worksheet.set_real_input(str(input), float(cur_eqpt[input])) #alias, value
         except:
             pass
 
     #name and mounting location:
     try:
-        cur_worksheet.set_string_input('eqpt_name', values['eqpt_name'])
-        cur_worksheet.set_string_input('mounting_location', values['mounting_location'])
+        cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'])
+        cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'])
     except:
         pass
 
@@ -697,22 +683,17 @@ def generate_report(values, template_file, files, debug = False)->bool:
     if not os.path.exists(output_folder_filepath):
         os.makedirs(output_folder_filepath)
 
-    unique_string = gen_random_string(8)
-    save_file_name = Popup()
-    save_file_name = save_file_name.take_input(".mcdx")
-    report_filepath = output_folder_filepath + "/" +save_file_name + "_"+ unique_string+ ".mcdx" 
-    
-
+    report_filepath = output_folder_filepath + "/" + file_name + ".mcdx"
         
     if cur_worksheet.save_as(report_filepath): #save the report 
         cur_worksheet.close()
         #save to reports ledger 
-        if(values['database_save'] == True):
+        if(equipment.save_to_database == True):
             if(files.database == ""):
                 ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv" #defaults save to the same folder as output if not specified 
             else:
                 ledger_filepath = files.database
-            save_eqpt_to_csv(values, ledger_filepath, (save_file_name + "_"+ unique_string+ ".mcdx"))
+            save_eqpt_to_csv(cur_eqpt, ledger_filepath, file_name)
         return True 
     else:
         cur_worksheet.close()
