@@ -243,14 +243,15 @@ def load_gui():
                                     select_mode = "LISTBOX_SELECT_MODE_BROWSE",
                                     right_click_menu = ['&Right', ["Copy"]],
                                     enable_events = True)]]
-                    )]
+                    )],
+                    [sg.Button("Preview Calculation Outputs", key = "calculate")], 
                 ])
                 
 
         ],
 
         [
-        sg.Button("Preview Calculation Outputs", key = "calculate"), 
+        
         sg.Frame("", [[
             sg.Button("Generate Report", key = "generate_report", size = (17,1)), 
         ],
@@ -330,17 +331,7 @@ def load_gui():
             """
             if event == "change_input_files":
                 files.display_and_update()
-            """
-            Get the index of the eqpt being selected by the listbox 
-            """
-            if event == "equipment_list":
-                #get the current index 
-                equipment.cur_index = window['equipment_list'].get_indexes()[0]
-                #update viewport 
-                for key, val in equipment.items[equipment.cur_index].items():
-                        values[key] = val
-                        window[key].update(val)
-                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded') 
+            
             """
             If user wants to copy output
             """
@@ -369,8 +360,20 @@ def load_gui():
                     for key, val in equipment.items[equipment.cur_index].items():
                         values[key] = val
                         window[key].update(val)
+                window['outputs'].update(values = [])
                 window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-                
+            """
+            Display the eqpt being selected by the listbox (left most column)
+            """
+            if event == "equipment_list":
+                #get the current index 
+                equipment.cur_index = window['equipment_list'].get_indexes()[0]
+                #update viewport 
+                for key, val in equipment.items[equipment.cur_index].items():
+                        values[key] = val
+                        window[key].update(val)
+                window['outputs'].update(values = [])
+                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')     
 
             """
             Update the maximum tension and shear anchor points labels
@@ -415,9 +418,13 @@ def load_gui():
                     alert = Popup("Alert", "Please select templates for each mounting location")
                     alert.alert()
                 else:
+                    """
+                    Using multithreading to improve speed
+                    """
                     threads = list()
                     num_threads = 4
                     cur_row = 0
+                    equipment.cur_index = 0 #set to beginning of list 
                     while cur_row < len(equipment.items):
                         for i in range(num_threads):
                             if(cur_row<len(equipment.items)):
@@ -432,7 +439,7 @@ def load_gui():
                         for i in range(len(threads)):
                             threads[i].join() #join all threads to the main thread when finished
                     print("Finished threading ...")
-                    #cleanup files -- need to guess the file names 
+                    #cleanup files -- need to guess the file names (performance should be fine for <1000 pieces of equipment)
                     for i in range(len(equipment.items)):
                         try:
                             os.remove(files.wall_template.split(".")[0] + str(i) + ".mcdx")
@@ -545,13 +552,13 @@ def mathcad_calculate(eqpt, files, debug = False):
     """
     cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible = debug)
-    if cur_eqpt['mounting_location'] == "WALL":
+    if cur_eqpt['mounting_location'].upper() == "WALL":
         template_file = files.wall_template
-    elif cur_eqpt['mounting_location'] == "FLOOR":
+    elif cur_eqpt['mounting_location'].upper() == "FLOOR":
         template_file = files.floor_template
     elif cur_eqpt['mounting_location'].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'].upper() == "WALL,FLOOR":
         template_file = files.wallfloor_template
-    elif cur_eqpt['mounting_location'] == "CEILING":
+    elif cur_eqpt['mounting_location'].upper() == "CEILING":
         template_file = files.ceiling_template
     else:  #defaults to floor mounted 
         template_file = files.floor_template
