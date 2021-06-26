@@ -67,15 +67,16 @@ class Popup():
     def confirm(self)->bool:
         popup = sg.Window(self.title, [
                         [sg.Text("")],
-                        [sg.Text(self.message), sg.Button("YES", key = "YES", button_color='green'), sg.Button("NO", key = "NO", button_color='red')],
+                        [sg.Text(self.message), ],
                         [sg.Text("")],
+                        [sg.Button("YES", key = "YES", button_color='green'), sg.Button("NO", key = "NO", button_color='red')],
                         ])
         while True:
             event, values = popup.read()
             if event == "OK" or event == "NO" or event == sg.WIN_CLOSED:
                 popup.close()
                 return False 
-            else:
+            if event == "YES":
                 popup.close()
                 return True 
     def alert(self):
@@ -145,10 +146,11 @@ class Outputs():
         name = to_append[0]
         values =  list(to_append[1]) #need to convert from tuple to array bc tuple is immutable 
         self.items.append([name, values])
+    def clear(self):
+        self.items = []
     def display(self)->list:
         to_display = list()
         for i in self.items:
-            print(i)
             to_display.append(str(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1])) #name = value units
         return to_display 
     def convert_units(self, in_units, tg_units):
@@ -273,6 +275,15 @@ def load_inputs(equipment:Equipment):
         )
     return input_fields
 
+def update_inputs(equipment:Equipment, values, window):
+    """
+    Updates the window and value to reflect the object selected 
+    """
+    for field, val in equipment.items[equipment.cur_index].items():
+        values[field] =  val[0]
+        window[field].update(val[0])
+
+    return values, window 
     
 
 def load_gui():
@@ -291,7 +302,9 @@ def load_gui():
                   
         [  
             sg.Checkbox("Save to database?", key = "database_save", default = True ), 
-            sg.Button("Change Input Files", key = "change_input_files")
+            sg.Button("Change Input Files", key = "change_input_files"), 
+            sg.Text(" ", size = (5,1)),
+            sg.Button("Refresh", key = "refresh_input_files")
         ],
 
         
@@ -307,7 +320,11 @@ def load_gui():
                                     enable_events = True,
                         )],
                         [
-                            sg.Button("Previous", key="previous", size = (8,1)), sg.Button("Next", key = "next", size = (7,1))
+                            sg.Button("Previous", key="previous", size = (8,1)), 
+                            sg.Button("Next", key = "next", size = (7,1)),
+                            sg.Text(" ", size = (5,1)),
+                            sg.Text("Go to:"),
+                            sg.InputText(equipment.cur_index, key = "goto_eqpt", enable_events = True, size = (3, 1)),
                         ],
                     ])],
                 ]),
@@ -319,7 +336,7 @@ def load_gui():
                 sg.Column([
                     [sg.Frame("Outputs", 
                         [   
-                            [sg.Radio("Inperial Units", "RADIO1",  key = "convert_to_imperial", enable_events = True), sg.Radio("Metric Units", "RADIO1", default = True, key = "convert_to_metric", enable_events = True)],
+                            [sg.Radio("Imperial Units", "RADIO1",  key = "convert_to_imperial", enable_events = True), sg.Radio("Metric Units", "RADIO1", default = True, key = "convert_to_metric", enable_events = True)],
 
                             [sg.Listbox(values = [], 
                                     size = (30, 20),
@@ -418,6 +435,16 @@ def load_gui():
             """
             if event == "change_input_files":
                 files.display_and_update()
+
+            """
+            Refresh input files
+            """
+            if event == "refresh_input_files":
+                confirm = Popup("Confirm", "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
+                if confirm.confirm():
+                    equipment = get_eqpt_from_xl(files.excel)
+                    values, window = update_inputs(equipment, values, window)
+
             
             """
             If user wants to copy output
@@ -443,10 +470,9 @@ def load_gui():
                 if event == "previous":
                     equipment.prev_index()  
                 if files.excel != "" and check_file_type(files.excel, 'xlsx'):
-                    for key, val in equipment.items[equipment.cur_index].items():
-                        values[key] = val
-                        window[key].update(val)
+                    values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
+                window['equipment_list'].set_focus(equipment.cur_index) #display the current one being selected 
                 window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
             """
             Display the eqpt being selected by the listbox (left most column)
@@ -454,13 +480,19 @@ def load_gui():
             if event == "equipment_list":
                 #get the current index 
                 equipment.cur_index = window['equipment_list'].get_indexes()[0]
-                #update viewport 
-                for key, val in equipment.items[equipment.cur_index].items():
-                        values[key] = val
-                        window[key].update(val)
+                #update viewport
+                values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
                 window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')     
 
+            """
+            Go to a specific eqpt number 
+            """
+            if event == "goto_eqpt":
+                if values['goto_eqpt'] != "" and int(values['goto_eqpt'])<=len(equipment.items):
+                    equipment.cur_index = int(values['goto_eqpt']) - 1 
+                    values, window = update_inputs(equipment, values, window) #update the inputs in the window 
+                    window['equipment_list'].set_focus(equipment.cur_index) #display the eqpt being selected
             """
             Update the maximum tension and shear anchor points labels
             """
@@ -556,6 +588,7 @@ def load_gui():
                     window['cur_status'].update("Please select files")
                 else:
                     to_out = mathcad_calculate(equipment, files)
+                    outputs.clear()
                     for key, val in to_out.items(): outputs.append([key,val])
                     window['outputs'].update(values = outputs.display())
                 alert = Popup("Calcuation Complete", "Output fields have been updated.")
