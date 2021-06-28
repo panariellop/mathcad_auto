@@ -18,6 +18,7 @@ class SelectTemplates():
     
     def __init__(self):
         self.database = ""
+        self.save_to_database = True 
         self.excel = ""
         self.wall_template = "" 
         self.floor_template = ""
@@ -31,6 +32,7 @@ class SelectTemplates():
         window = sg.Window("Mathcad Automation", [
             [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(self.excel, key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
             [sg.Frame("Choose Database File", [[sg.FileBrowse(key = "database_file", enable_events = True), sg.InputText(self.database, key = "database_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
+            [sg.Checkbox("Save to database?", key = "save_to_database", default = self.save_to_database)], 
             
             [sg.Frame("Choose Mathcad Templates*", [
                     [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(self.wall_template, key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
@@ -53,11 +55,12 @@ class SelectTemplates():
                     #error 
                     errors = list()
                     #validate the filepaths 
+                    self.save_to_database = values['save_to_database']
                     if check_file_type(values['database_name'], 'csv') or values['database_name'] == "":
                         self.database = values['database_name']
                     else:
                         errors.append("Database file must be a .csv file.")
-                    if check_file_type(values['excel_name'], 'xlsx') or values['excel_name'] == "":
+                    if check_file_type(values['excel_name'], 'xlsx'):
                         self.excel = values['excel_name']
                     else:
                         errors.append("Excel file must be a .xlsx file.")
@@ -143,7 +146,6 @@ class Equipment():
         self.fields = list()
         self.names = list()
         self.inputs = list()
-        self.save_to_database = True 
     def append(self, to_append:dict):
         self.items.append(to_append)
         for key, field in to_append.items(): #key value pair  
@@ -330,7 +332,6 @@ def load_gui():
     layout = [         
                   
         [  
-            sg.Checkbox("Save to database?", key = "database_save", default = True ), 
             sg.Button("Change Input Files", key = "change_input_files"), 
             sg.Text(" ", size = (5,1)),
             sg.Button("Refresh", key = "refresh_input_files")
@@ -837,7 +838,7 @@ def generate_report(equipment:Equipment, file_name:str, template_file:str, files
     if cur_worksheet.save_as(report_filepath): #save the report 
         cur_worksheet.close()
         #save to reports ledger 
-        if(equipment.save_to_database == True):
+        if(files.save_to_database == True):
             if(files.database == ""):
                 ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv" #defaults save to the same folder as output if not specified 
             else:
