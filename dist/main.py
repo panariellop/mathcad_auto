@@ -50,14 +50,42 @@ class SelectTemplates():
                 return False 
             else:
                 if event == "continue": #user has input all information 
-                    self.database = values['database_name']
-                    self.excel = values['excel_name']
-                    self.wall_template = values['wall_template_name']
-                    self.floor_template = values['floor_template_name']
-                    self.wallfloor_template = values['wallfloor_template_name']
-                    self.ceiling_template = values['ceiling_template_name']
-                    window.close()
-                    return
+                    #error 
+                    errors = list()
+                    #validate the filepaths 
+                    if check_file_type(values['database_name'], 'csv') or values['database_name'] == "":
+                        self.database = values['database_name']
+                    else:
+                        errors.append("Database file must be a .csv file.")
+                    if check_file_type(values['excel_name'], 'xlsx') or values['excel_name'] == "":
+                        self.excel = values['excel_name']
+                    else:
+                        errors.append("Excel file must be a .xlsx file.")
+                    if check_file_type(values['wall_template_name'], "mcdx") or values['wall_template_name'] == "":
+                        self.wall_template = values['wall_template_name']
+                    else:
+                        errors.append("Wall template file must be a .mcdx file.")
+                    if check_file_type(values['floor_template_name'], "mcdx") or values['floor_template_name'] == "":
+                        self.floor_template = values['floor_template_name']
+                    else:
+                        errors.append("Floor template must be a .mcdx file.")
+                    if check_file_type(values['wallfloor_template_name'], "mcdx") or values['wallfloor_template_name'] == "":
+                        self.wallfloor_template = values['wallfloor_template_name']
+                    else:
+                        errors.append("Wall and Floor template must be a .mcdx file.")
+                    if check_file_type(values['ceiling_template_name'], "mcdx") or values['ceiling_template_name'] == "":
+                        self.ceiling_template = values['ceiling_template_name']
+                    else:
+                        errors.append("Ceiling template must be a .mcdx file.")
+                    #Error handling 
+                    if len(errors) == 0:
+                        window.close()
+                        return
+                    else:
+                        alert = Popup("Errors", "\n".join(errors))
+                        alert.alert()
+                        continue 
+
 
 
 class Popup():
@@ -223,9 +251,10 @@ def gen_random_string(length:int)->str:
 def check_file_type(filename, filetype):
     """
     Checks if the input file is of a certain type
+    ex <filename.csv> <csv>
     """
-    filename = filename.split(".")[-1]
-    if filename != filetype:
+    type = filename.split(".")[-1]
+    if type != filetype:
         return False
     return True 
 def test_template_exists(template_file:str, mounting_location:str)->bool:
