@@ -355,6 +355,7 @@ def load_gui():
                             sg.Text("Go to:"),
                             sg.InputText(equipment.cur_index, key = "goto_eqpt", enable_events = True, size = (3, 1)),
                         ],
+                        [sg.Text("Equipment: ", key = "cur_eqpt", size = (20,1), background_color = "gray")],
                     ])],
                 ]),
                 sg.Column([
@@ -448,7 +449,7 @@ def load_gui():
             ]),
             ],
 
-        [sg.Text("Status: ", background_color = "yellow"), sg.Text("OK", key = "cur_status", size = (20,1), background_color = "yellow")],
+        
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -502,7 +503,7 @@ def load_gui():
                     values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
                 window['equipment_list'].set_focus(equipment.cur_index) #display the current one being selected 
-                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
             """
             Display the eqpt being selected by the listbox (left most column)
             """
@@ -512,7 +513,7 @@ def load_gui():
                 #update viewport
                 values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
-                window['cur_status'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')     
+                window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')     
 
             """
             Go to a specific eqpt number 
@@ -522,6 +523,7 @@ def load_gui():
                     equipment.cur_index = int(values['goto_eqpt']) - 1 
                     values, window = update_inputs(equipment, values, window) #update the inputs in the window 
                     window['equipment_list'].set_focus(equipment.cur_index) #display the eqpt being selected
+                    window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
             """
             Update the maximum tension and shear anchor points labels
             """
@@ -613,18 +615,15 @@ def load_gui():
             """
             if event == "calculate":
                 if files.excel == "":
-                    values['cur_status'] = "Please select files"
-                    window['cur_status'].update("Please select files")
+                    alert = Popup("Error", "Please select an input excel file from the input files window.")
+                    alert.alert()
                 else:
                     to_out = mathcad_calculate(equipment, files)
                     outputs.clear()
                     for key, val in to_out.items(): outputs.append([key,val])
                     window['outputs'].update(values = outputs.display())
-                alert = Popup("Calcuation Complete", "Output fields have been updated.")
-                alert.alert()
-                values['cur_status'] = "Output fields updated"
-                window['cur_status'].update("Output fields updated")
-
+                    alert = Popup("Calcuation Complete", "Output fields have been updated.")
+                    alert.alert()
             if event == "convert_to_imperial":
                 outputs.convert_units('metric', 'imperial')
                 window['outputs'].update(values = outputs.display())
