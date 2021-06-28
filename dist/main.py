@@ -24,6 +24,7 @@ class SelectTemplates():
         self.floor_template = ""
         self.wallfloor_template = ""
         self.ceiling_template = ""
+        self.images = dict()
     def display_and_update(self):
         """
         Displays the window and will update the object variables when the user hits continue
@@ -88,6 +89,26 @@ class SelectTemplates():
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
                         continue 
+    def get_images_from_xl(self, num_images:int):
+        """
+        Gets all the preview images from the excel file and saves a dictionary of mounting locations and binary images in self.images 
+        """
+        wb = load_workbook(self.excel)
+        sheet = wb['preview_images']
+        from openpyxl_image_loader import SheetImageLoader 
+        image_loader = SheetImageLoader(sheet)
+        for i in range(num_images):
+            #hard coded 
+            mounting_locations = ['wall', 'floor', 'wall,floor', 'ceiling']
+            try: #load all the images in cells B2-5 
+                image = image_loader.get('B' + str(i+2))
+                import io
+                buf = io.BytesIO()
+                image.save(buf, format="PNG") #save as a bytes string so pysimplegui can use it
+                self.images[mounting_locations[i]] =  buf.getvalue()
+            except Exception as e:
+                print(e)
+        
 
 
 
@@ -321,6 +342,7 @@ def load_gui():
     
     files = SelectTemplates()
     files.display_and_update()
+    files.get_images_from_xl(num_images = 4)
     equipment = get_eqpt_from_xl(files.excel) #initial loading of eqpt data 
     outputs = Outputs() # preview output object 
 
@@ -396,61 +418,7 @@ def load_gui():
         ],
         ])],
 
-        [sg.Column([[
-            sg.Frame("DETERMINE SEISMIC FORCE", [ #first column
-                [sg.Text("F_p"), 
-                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_equation.png")), 
-                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_output"),
-                    ],
-                [sg.Text("F_p_max"), 
-                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_max_equation.png")), 
-                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_max_output"),
-                    ],
-                [sg.Text("F_p_min"), 
-                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_min_equation.png")), 
-                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_min_output"),
-                    ],
-                [sg.Text("F_p"), 
-                    sg.Image(filename = (os.getcwd() + "\\main_build\images\\rsz_f_p_tot_equation.png")), 
-                    sg.Text("="), sg.InputText(size = default_input_size, background_color='yellow', key = "f_p_tot_output"),
-                    ],
-            
-            ]
-            ,size = (100, -1))
-            ]]), sg.Column([ #second column
-               [sg.Frame("DETERMINE SEISMIC FORCE", [
-                    [sg.Text("Connection to equipment"), sg.Combo(["ASD", "LRFD"], enable_events = True, key = "connection_to_eqpt")],
-                    [sg.Text("Load Combinations:")], 
-                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_output", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_output", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-
-                   ])], 
-
-            ]), sg.Column([#third column
-
-                [sg.Frame("DETERMINE SEISMIC FORCE", [
-                    [sg.Text("Connection to base"), sg.Combo(["ASD", "LRFD"], enable_events = True, key = "connection_to_base")],
-                    [sg.Text("Load Combinations:")], 
-                    [sg.Text("F_PV:="), sg.InputText("", key = "f_pv_output1", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-                    [sg.Text("F_PH:="), sg.InputText("", key = "f_ph_output1", size = default_input_size, background_color = "yellow"), sg.Text("lbf")],
-
-                    ])]
-                ])],
-
-            [sg.Text("Determine Maximum Tension and Shear at Anchor Points")],
-            [sg.Column([
-                [sg.Text("Connection to Equiptment", size = (30, 1))], 
-                [sg.Text("T_max =", key = "eqpt_t_max_det_label"), sg.InputText("", size = default_input_size, key = "eqpt_t_max_u_determine")],
-                [sg.Text("V_max =", key = "eqpt_v_max_det_label"), sg.InputText("", size = default_input_size, key = "eqpt_v_max_u_determine")],
-            ]),
-            sg.Column([
-                [sg.Text("Connection to Base")], 
-                [sg.Text("T_max =", key = "base_t_max_det_label"), sg.InputText("", size = default_input_size, key = "base_t_max_u_determine")],
-                [sg.Text("V_max =", key = "base_v_max_det_label"), sg.InputText("", size = default_input_size, key = "base_v_max_u_determine")],
-            ]),
-            ],
-
-        
+        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", data = files.images['wall,floor'])]]
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -474,6 +442,7 @@ def load_gui():
                 confirm = Popup("Confirm", "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
                 if confirm.confirm():
                     equipment = get_eqpt_from_xl(files.excel)
+                    files.get_images_from_xl()
                     values, window = update_inputs(equipment, values, window)
 
             
@@ -505,6 +474,8 @@ def load_gui():
                 window['outputs'].update(values = [])
                 window['equipment_list'].set_focus(equipment.cur_index) #display the current one being selected 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
+                window['preview_image'].update(data = image)
             """
             Display the eqpt being selected by the listbox (left most column)
             """
@@ -606,7 +577,6 @@ def load_gui():
                         try:
                             os.remove(files.ceiling_template.split(".")[0] + str(i) + ".mcdx")
                         except: continue 
-                    
                 alert = Popup("File saved", "All files have been saved successfuly.")
                 alert.alert()
 
@@ -650,7 +620,12 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
             pass
     except Exception as e:
         header = True 
-            
+    try:
+        import stat
+        os.chmod(filepath, stat.S_IRWXO)
+    except Exception as e:
+        print(e)
+        pass 
     with open(filepath, "a", newline = "") as f:
         csv_writer = csv.writer(f)
         if header: csv_writer.writerow(["Date","Tags", "Name", "Mounting Location", "File Name"])
