@@ -485,7 +485,9 @@ def load_gui():
                 #update viewport
                 values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
-                window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')     
+                window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
+                window['preview_image'].update(data = image)     
 
             """
             Go to a specific eqpt number 
@@ -496,6 +498,8 @@ def load_gui():
                     values, window = update_inputs(equipment, values, window) #update the inputs in the window 
                     window['equipment_list'].set_focus(equipment.cur_index) #display the eqpt being selected
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                    image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
+                    window['preview_image'].update(data = image)
             """
             Update the maximum tension and shear anchor points labels
             """
