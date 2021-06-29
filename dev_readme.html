@@ -1,0 +1,69 @@
+<h1 style = "text-align:center">Mathcad Anchorage Automation Software Developer's Documentation</h1>
+<p>Note: This is the developer documentation file. Use this as a reference to how the program is constructed. </p>
+
+<h3>Technologies Used:</h3>
+	<ol>
+		<li>Python is the programming language of choice</li>
+		<li>PySimpleGUI : used to render the graphical user interface</li>
+		<li>MathcadPy : wrapper written in python used to access the Mathcad api </li>
+		<li>Openpyxl : used to interface with the excel documents </li>
+		<li>PyInstaller : used to package the application as an executable</li>
+		<li>Look in the requirements.txt file in ./dist to view all the dependencies</li>
+	</ol>
+<h3>Outline: </h3>
+	<ol>
+		<li>Datatypes and storage of data</li>
+		<li>Connection between Excel document and Mathcad</li>
+		<li>Rendering to the GUI </li>
+	</ol>
+
+<h3>Documentation:</h3>
+
+<h4>Datypes and Storage of Data</h4>
+<p>
+	Equipment Class: (stores all the equipment from the excel file) 
+	<div style = "margin-left: 20px">
+	<p>Class variables:</p>
+	<ul>
+		<li>self.items = list()</li> <p>List of all the equipment in the excel file, stored as individual dictionaries.</p>
+		<li>self.cur_index = 0 </li> <p>The current index of the equipment that the user is viewing in the GUI</p>
+		<li>self.length = 0 </li> <p> Length of self.items</p>
+		<li>self.fields = list()</li> <p>A list of the header row from the excel document</p>
+		<li>self.names = list()</li><p>A list of all the equipment names</p>
+		<li>self.inputs = list()</li> <p>A list of all the inputs from the excel document</p>
+	</ul>
+	<p>Class methods:</p>
+	<ul>
+		<li><b>append(self, to_append:dict)</b> Takes in a dict as an argument</li><p>Appends self.items with the new equipment dictionary, appends self.names, appends self.inputs</p> 
+		<li><b>next_index(self)</b> No arguments<p>Increments the value of self.cur_index</p></li>
+		<li><b>prev_index(self)</b> No arguments<p>Decriments the value of self.cur_index</p></li>
+	</ul>
+	</div>
+</p>
+<p>
+	Outputs Class: (stores the values of the outputs when the user decides to preview the output variables from the Mathcad file)
+	<div style = "margin-left: 20px">
+	<p>Class variables:</p>
+	<ul>
+		<li>self.items = list()</li><p>Follows the format:</br>         
+		['f_p_max_output', [408.81554560308007, 'kg', 0]],</br>
+		['f_p_min_output', [76.65291480057748, 'kg', 0]],</br>
+		['f_p_tot_output', [76.65291480057748, 'kg', 0]],</br>...</p>	
+	</ul>
+	<p>Class methods:</p>
+	<ul>
+		<li><b>append(self, to_append)</b>Takes tuple or list argument</li><p>Converts to_append to array and appends self.items</p>
+		<li><b>clear(self)</b></li><p>Clears self.items</p>
+		<li><b>display(self)->list</b> No arguments</li><p>Returns a list of variables and values that is easier to display in the GUI. Rounds decimals to 2 digits. </br>Ex: [ 'f_p_tot_output = 408.82 kg', 'f_p_min_output = 76.65 kg', ...]  
+	</ul>
+	</div>
+</p>
+
+<h4>Excel and Mathad</h4>
+<p>
+	The MathcadPy library is used as a wrapper that allows you to access all of the mathcad api endpoints from the comfort of Python. You can read more about the Mathcad API <a target = blank href = "https://support.ptc.com/help/mathcad/r7.0/en/index.html#page/PTC_Mathcad_Help%2Fmathcad_and_automation_api.html%23">here</a>. The API allows you to modify and change Mathcad Prime files. Despite PTC's documenation, you cannot print documents.
+</p>
+<p>
+	The function <b>get_eqpt_from_xl(filepath:str)->Equipment</b> takes in the filepath of the input excel file and returns the Equipment object. To find more documenation 	
+</p>
+
