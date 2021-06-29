@@ -13,7 +13,12 @@ import csv
 import random 
 import copy 
 from datetime import  date 
+import pyperclip
+import io
 from time import sleep 
+from openpyxl_image_loader import SheetImageLoader 
+import stat
+
 
 class SelectTemplates():
     
@@ -85,7 +90,7 @@ class SelectTemplates():
                     #Error handling 
                     if len(errors) == 0:
                         window.close()
-                        return
+                        return True
                     else:
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
@@ -97,14 +102,13 @@ class SelectTemplates():
         """
         wb = load_workbook(self.excel)
         sheet = wb['preview_images']
-        from openpyxl_image_loader import SheetImageLoader 
+        
         image_loader = SheetImageLoader(sheet)
         for i in range(num_images):
             #hard coded 
             mounting_locations = ['wall', 'floor', 'wall,floor', 'ceiling']
             try: #load all the images in cells B2-5 
                 image = image_loader.get('B' + str(i+2))
-                import io
                 buf = io.BytesIO()
                 image.save(buf, format="PNG") #save as a bytes string so pysimplegui can use it
                 self.images[mounting_locations[i]] =  buf.getvalue()
@@ -352,10 +356,7 @@ def load_gui():
     outputs = Outputs() # preview output object 
 
     sg.theme('Reddit')
-    sg.set_options(suppress_raise_key_errors=True, 
-        suppress_error_popups=True, suppress_key_guessing=True,
-        icon = ma_logo_png)
-    default_input_size = (14, 1)
+    sg.set_options(icon = ma_logo_png)
     layout = [         
                   
         [  
@@ -456,7 +457,6 @@ def load_gui():
             """
             if event == "outputs":
                 to_copy = window['outputs'].get()[0]
-                import pyperclip
                 pyperclip.copy(str(to_copy))
 
             """
@@ -630,7 +630,7 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     except Exception as e:
         header = True 
     try:
-        import stat
+        
         os.chmod(filepath, stat.S_IRWXO)
     except Exception as e:
         print(e)
