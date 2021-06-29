@@ -2,6 +2,7 @@ import os, sys
 #sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module 
 #from mathcadpy import Mathcad, Worksheet #loading custom 
 from MathcadPy import Mathcad, Worksheet
+from images import * 
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
 from openpyxl import Workbook as xlwkbk
@@ -44,7 +45,7 @@ class SelectTemplates():
 
             [sg.Button("Continue", key = "continue", button_color = "green")],
         
-        ])
+        ], icon = ma_logo_png)
         """Listen for events"""
         while True:
             event, values = window.read()
@@ -92,6 +93,7 @@ class SelectTemplates():
     def get_images_from_xl(self, num_images:int):
         """
         Gets all the preview images from the excel file and saves a dictionary of mounting locations and binary images in self.images 
+        <num_images:int> Corresponds to the number of mounting locations, indicated in the preview_images portion of the input excel document
         """
         wb = load_workbook(self.excel)
         sheet = wb['preview_images']
@@ -122,7 +124,8 @@ class Popup():
                         [sg.Text(self.message), ],
                         [sg.Text("")],
                         [sg.Button("YES", key = "YES", button_color='green'), sg.Button("NO", key = "NO", button_color='red')],
-                        ])
+                        ], 
+                        icon = ma_logo_png,)
         while True:
             event, values = popup.read()
             if event == "OK" or event == "NO" or event == sg.WIN_CLOSED:
@@ -136,7 +139,8 @@ class Popup():
             [sg.Text("")],
             [sg.Text(self.message)],
             [sg.Button("OK", key = 'OK', button_color = 'green')],
-        ])
+        ], 
+        icon = ma_logo_png,)
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
@@ -149,7 +153,8 @@ class Popup():
             [sg.Text("")],
             [sg.Text(self.message), sg.InputText(key = "input", size = (15, 1)), sg.Text(trailing_text)],
             [sg.Button("OK", key = 'OK', button_color = 'green')],
-        ])
+        ], 
+        icon = ma_logo_png,)
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
@@ -349,7 +354,7 @@ def load_gui():
     sg.theme('Reddit')
     sg.set_options(suppress_raise_key_errors=True, 
         suppress_error_popups=True, suppress_key_guessing=True,
-        icon = resource_path("./main_build/images/ma_logo.ico"))
+        icon = ma_logo_png)
     default_input_size = (14, 1)
     layout = [         
                   
@@ -442,7 +447,7 @@ def load_gui():
                 confirm = Popup("Confirm", "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
                 if confirm.confirm():
                     equipment = get_eqpt_from_xl(files.excel)
-                    files.get_images_from_xl()
+                    files.get_images_from_xl(4)
                     values, window = update_inputs(equipment, values, window)
 
             
