@@ -462,8 +462,11 @@ def load_gui():
             If user wants to copy output
             """
             if event == "outputs":
-                to_copy = window['outputs'].get()[0]
-                pyperclip.copy(str(to_copy))
+                try:
+                    to_copy = window['outputs'].get()[0]
+                    pyperclip.copy(str(to_copy))
+                except:
+                    pass
 
             """
             Update the Equipment object when the user edits an input field 
@@ -635,12 +638,6 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
             pass
     except Exception as e:
         header = True 
-    try:
-        
-        os.chmod(filepath, stat.S_IRWXO)
-    except Exception as e:
-        print(e)
-        pass 
     with open(filepath, "a", newline = "") as f:
         csv_writer = csv.writer(f)
         if header: csv_writer.writerow(["Date","Tags", "Name", "Mounting Location", "File Name"])
@@ -751,12 +748,14 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
         popup = Popup("File Name", "Choose a file name:")
         file_name = popup.take_input(".mcdx")
 
+
     if cur_eqpt['mounting_location'][0].upper() == "WALL":
         if generating_multiple_reports:
             template_file = files.wall_template.split(".")[0] + str(equipment.cur_index) + ".mcdx" #need this to enable multithreading
             copyfile(files.wall_template, template_file) #need to copy file to prevent collisions in writing/reading 
         else:
             template_file = files.wall_template
+            
 
     elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
         if generating_multiple_reports:
@@ -784,6 +783,7 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
             copyfile(files.wall_template, template_file)
         else:
             template_file = files.floor_template
+            
     
     #check to see if the template exists 
     if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'][0].upper())!=True:
@@ -791,18 +791,18 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
         alert.alert()
         return #template does not exist 
 
-    status = generate_report(equipment, file_name, template_file, files, debug = False)
+    status = generate_report(cur_eqpt, equipment, file_name, template_file, files, debug = True)
     print(f'Finished generating file {str(status)}') #some debug output 
     return status 
 
-def generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool:
+def generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool:
     """
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
     """
+    print(cur_eqpt['mounting_location'])
     mathcad_app = Mathcad(visible = debug)
     cur_worksheet = mathcad_app.open(template_file) 
-    cur_eqpt = equipment.items[equipment.cur_index]
 
     for input in equipment.inputs: #set all the real number inputs on the mathcad file
         try:
@@ -811,11 +811,8 @@ def generate_report(equipment:Equipment, file_name:str, template_file:str, files
             pass
 
     #name and mounting location:
-    try:
-        cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'])
-        cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
-    except:
-        pass
+    cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'][0])
+    cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
 
     
     #check if output folder exists, if not, make one 
