@@ -791,7 +791,7 @@ def pre_generate_report(equipment:Equipment, files, generating_multiple_reports 
         alert.alert()
         return #template does not exist 
 
-    status = generate_report(cur_eqpt, equipment, file_name, template_file, files, debug = True)
+    status = generate_report(cur_eqpt, equipment, file_name, template_file, files, debug = False)
     print(f'Finished generating file {str(status)}') #some debug output 
     return status 
 
