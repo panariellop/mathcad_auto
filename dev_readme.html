@@ -7,8 +7,9 @@
 		<li>PySimpleGUI : used to render the graphical user interface</li>
 		<li>MathcadPy : wrapper written in python used to access the Mathcad api </li>
 		<li>Openpyxl : used to interface with the excel documents </li>
-		<li>PyInstaller : used to package the application as an executable</li>
-		<li>Look in the requirements.txt file in ./dist to view all the dependencies</li>
+		<li>Nuitka : used to package the application as an executable</li>
+		<li>Look in ./dist/requirements.txt to view all the dependencies</li>
+		<li>Look in ./dist/info.txt for more information on how to package the application and how to re-create the python virutal environment.</li>
 	</ol>
 <h3>Outline: </h3>
 	<ol>
@@ -60,11 +61,36 @@
 </p>
 
 <h4 style = "text-align:center">Excel and Mathcad</h4>
+<div style = "margin-left:auto; margin-right:auto;width:80vw; padding:0 20px 0 20px;">
 <p>
 	The MathcadPy library is used as a wrapper that allows you to access all of the mathcad api endpoints from the comfort of Python. You can read more about the Mathcad API <a target = blank href = "https://support.ptc.com/help/mathcad/r7.0/en/index.html#page/PTC_Mathcad_Help%2Fmathcad_and_automation_api.html%23">here</a>. The API allows you to modify and change Mathcad Prime files. Despite PTC's documenation, you cannot print documents.
 </p>
 <p>
-	The function <b>get_eqpt_from_xl(filepath:str)->Equipment</b> takes in the filepath of the input excel file and returns the Equipment object.
+	The function <b>get_eqpt_from_xl(filepath:str)->Equipment</b> takes in the filepath of the input excel file and returns the Equipment object. This function is executed right after the choose files window is closed. 
 
 </p>
 
+<p>
+	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. 
+</p>
+<p>
+	The function <b>mathcad_calculate(eqpt, files, debug = False)</b> allows the user to preview the Mathcad calculation output. It returns a dictionary with the output values. 
+</p>
+</div>
+
+<h4 style = "text-align:center">Rendering to the GUI</h4>
+<div style = "margin-left:auto; margin-right:auto;width:80vw; padding:0 20px 50px 20px;">
+<p>
+	Choose equipment:   Once the user has input the excel file they want to read from, the program extracts all information in the <b>get_eqpt_from_xl</b> function and places all the equipment names in the Choose Equipment column.
+</p>
+<p>
+	Inputs:   Once we get the Equipment from the <b>get_eqpt_from_xl</b> function, we can then render it to the input fields in the GUI. 
+</p>
+<p>
+	Outputs:  If the user clicks the <b>Preview Calculation Outputs</b> button, the inputs from the current equipment being used is sent to the template corresponding to the correct mounting location and the output fields are gathered via the <b>mathcad_calculate</b> function. The outputs are saved in the Outputs class and the information is displayed in the GUI. 
+</p>
+<p>
+	Preview Images:  The user has the option to include preview images that correspond to the mounting locations. The images must be included in the excel document. Use the <b>example_sheet.xlsx</b> as a template. Images muse be .png or .jpg or .jpeg. The images are gathered from the excel sheet using the <b>get_images_from_xl(self, num_images:int)</b> function. Images are stored as binaries. When the user views a different equipment, the image corresponding to the mounting location is loaded into the Image Preview section of the GUI. Use ./dist/img_to_b64.py to convert images from .png/.jpg to binaries. It provides a python file called output.py with the binaries stored in variables. Preview images are automatically converted to binaries in <b>get_images_from_xl</b>. 
+</p>
+
+</div>

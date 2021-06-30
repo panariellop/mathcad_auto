@@ -1,21 +1,11 @@
-How to package:
-https://www.youtube.com/watch?v=UZX5kH72Yx4
-* Have to open command prompt as administrator 
-
 How to re-create the virtual env:
 python -m venv env 
 env\scripts\activate
 pip install -r requirements.txt
 
-Pyinstaller:
-(run on an administrative command prompt )
-PyInstaller --onefile main.py 
-
-pyinstaller --clean --onefile -w main.py 
-
-
+How to package the application: 
 Nuitka: (python to exe converter -- runs on c)
-python -m nuitka --follow-imports --windows-disable-console --windows-icon='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' --standalone main.py
+python -m nuitka --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' -o 'Mathcad Anchorage Automation' main.py
 
 Nuitka Options:
   --version

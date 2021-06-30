@@ -346,6 +346,12 @@ def update_inputs(equipment:Equipment, values, window):
 
     return values, window 
     
+def update_preview_image(equipment:Equipment, files):
+	"""
+	Takes in the equipment and files and window objects and returns the image binary	
+	"""
+	image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
+	return image  
 
 def load_gui():
     
@@ -424,7 +430,7 @@ def load_gui():
         ],
         ])],
 
-        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", data = files.images['wall,floor'])]]
+        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", data = update_preview_image(equipment, files))]]
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -479,8 +485,8 @@ def load_gui():
                 window['outputs'].update(values = [])
                 window['equipment_list'].set_focus(equipment.cur_index) #display the current one being selected 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-                image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
-                window['preview_image'].update(data = image)
+		#load preview image
+                window['preview_image'].update(data = update_preview_image(equipment, files))
             """
             Display the eqpt being selected by the listbox (left most column)
             """
@@ -491,8 +497,8 @@ def load_gui():
                 values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-                image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
-                window['preview_image'].update(data = image)     
+		#load preview image
+                window['preview_image'].update(data = update_preview_image(equipment, files))
 
             """
             Go to a specific eqpt number 
@@ -503,8 +509,8 @@ def load_gui():
                     values, window = update_inputs(equipment, values, window) #update the inputs in the window 
                     window['equipment_list'].set_focus(equipment.cur_index) #display the eqpt being selected
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-                    image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
-                    window['preview_image'].update(data = image)
+		#load preview image
+                    window['preview_image'].update(data = update_preview_image(equipment, files))
             """
             Update the maximum tension and shear anchor points labels
             """
