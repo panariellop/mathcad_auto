@@ -800,7 +800,6 @@ def generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:
     Generates report with input values found in the gui 
     Saves the file in the save folder as the template chosen
     """
-    print(cur_eqpt['mounting_location'])
     mathcad_app = Mathcad(visible = debug)
     cur_worksheet = mathcad_app.open(template_file) 
 
