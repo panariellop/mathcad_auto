@@ -5,6 +5,8 @@
 <p>This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.</p>
 <p>This version is still in alpha, so not all functionality is available at the moment.</p>
 
+<h3><a target = blank href = "https://youtu.be/La43SoQ3HMg">Tutorial</h3>
+
 <h3>Installation and Use:</h3>
 <ul>
 <li>Go to the releases tab on this github page, find the lastest distribution and download it. Download the template files provided to get started.</li>
@@ -20,6 +22,7 @@
 </br>
 <i>Note: Tags should be seperated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview_images. Take a look at example_sheet.xlsx for reference.</i>
 <li>Select your Mathcad template file for each mounting locaiton. I have provided one to help you get started (01_LPCH ERCP_Anchorage_Template.mcdx).</li>
+<li>You can always go back to the file selection screen by clicking <b>Change Input Files</b>. You can reload the information from the excel spreadsheet by clicking <b>Refresh</b>.
 <li>If you want to save details about the report to a database, then click "Save to database?".</li>
 <ul>
     <li>The "database" is a .csv file containting all the calculations you have performed with the automation software. This helps with organiziation and future reference.</li>
