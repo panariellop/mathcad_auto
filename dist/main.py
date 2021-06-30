@@ -430,7 +430,7 @@ def load_gui():
         ],
         ])],
 
-        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", data = update_preview_image(equipment, files))]]
+        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", size = (100, 100), data = update_preview_image(equipment, files))]]
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)

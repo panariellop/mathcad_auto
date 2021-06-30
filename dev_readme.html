@@ -4,13 +4,16 @@
 <h3>Technologies Used:</h3>
 	<ol>
 		<li>Python is the programming language of choice</li>
-		<li>PySimpleGUI : used to render the graphical user interface</li>
-		<li>MathcadPy : wrapper written in python used to access the Mathcad api </li>
-		<li>Openpyxl : used to interface with the excel documents </li>
-		<li>Nuitka : used to package the application as an executable</li>
-		<li>Look in ./dist/requirements.txt to view all the dependencies</li>
-		<li>Look in ./dist/info.txt for more information on how to package the application and how to re-create the python virutal environment.</li>
+		<li>PySimpleGUI : used to render the graphical user interface. <a target=blank href = "https://pysimplegui.readthedocs.io/en/latest/">Documentation</a></li>
+		<li>MathcadPy : wrapper written in python used to access the Mathcad api. <a target=blank href = "https://github.com/MattWoodhead/MathcadPy/blob/master/MathcadPy/_application.py">Documentation</a> </li>
+		<li>Openpyxl : used to interface with the excel documents. <a target=blank href = "https://openpyxl.readthedocs.io/en/stable/">Documentation</a> </li>
+		<li>Nuitka : used to package the application as an executable. <a target=blank href = "https://nuitka.net/doc/user-manual.html">Documentation</a></li>
+		<li>Look in ~./dist/requirements.txt to view all the dependencies</li>
+		<li>Look in ~./dist/info.txt for more information on how to package the application and how to re-create the python virutal environment.</li>
 	</ol>
+<h3>Flowchart:</h3>
+<img src = "./dist/documentation/component_flowchart.png" style = "width: 50%; margin:0 auto 0 auto" />
+
 <h3>Outline: </h3>
 	<ol>
 		<li>Datatypes and storage of data</li>
@@ -71,7 +74,7 @@
 </p>
 
 <p>
-	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. 
+	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput.   
 </p>
 <p>
 	The function <b>mathcad_calculate(eqpt, files, debug = False)</b> allows the user to preview the Mathcad calculation output. It returns a dictionary with the output values. 
@@ -79,7 +82,7 @@
 </div>
 
 <h4 style = "text-align:center">Rendering to the GUI</h4>
-<div style = "margin-left:auto; margin-right:auto;width:80vw; padding:0 20px 50px 20px;">
+<div style = "margin-left:auto; margin-right:auto;width:80vw; padding:0 20px 0 20px;">
 <p>
 	Choose equipment:   Once the user has input the excel file they want to read from, the program extracts all information in the <b>get_eqpt_from_xl</b> function and places all the equipment names in the Choose Equipment column.
 </p>
@@ -93,4 +96,10 @@
 	Preview Images:  The user has the option to include preview images that correspond to the mounting locations. The images must be included in the excel document. Use the <b>example_sheet.xlsx</b> as a template. Images muse be .png or .jpg or .jpeg. The images are gathered from the excel sheet using the <b>get_images_from_xl(self, num_images:int)</b> function. Images are stored as binaries. When the user views a different equipment, the image corresponding to the mounting location is loaded into the Image Preview section of the GUI. Use ./dist/img_to_b64.py to convert images from .png/.jpg to binaries. It provides a python file called output.py with the binaries stored in variables. Preview images are automatically converted to binaries in <b>get_images_from_xl</b>. 
 </p>
 
+</div>
+<h4 style = "text-align:center">Saving to the Database</h4>
+<div style = "margin-left:auto; margin-right:auto;width:80vw; padding:0 20px 50px 20px;">
+<p>
+	Saving to Database:   The database is a .csv file which holds some important information about generated repors. The function <b>save_to_csv</b> is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the mathcad_automation_output folder.  
+</p>
 </div>

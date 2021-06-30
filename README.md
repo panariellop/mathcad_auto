@@ -18,7 +18,7 @@
 | Surgical Scrub Sink        | Wall               | Medical      | 295             | 1.121        | 1           | 2.5         | 1.5         | 4        | 75       | 64                    | 28                    | 1.5          | \-3.5        | 39.5                  | 2.5          |
 | Retractable Ceiling Column | Ceiling            | Medical      | 800             | 1.121        | 1           | 2.5         | 1.5         | 15       | 75       |                       |                       | 14           | 14           | 45                    | 2.5          |
 </br>
-<i>Note: Tags should be seperated by comma. All units are the default units indicated on the template file.</i>
+<i>Note: Tags should be seperated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview_images. Take a look at example_sheet.xlsx for reference.</i>
 <li>Select your Mathcad template file for each mounting locaiton. I have provided one to help you get started (01_LPCH ERCP_Anchorage_Template.mcdx).</li>
 <li>If you want to save details about the report to a database, then click "Save to database?".</li>
 <ul>
@@ -28,7 +28,7 @@
 <li>Click the Previous or Next buttons to scroll the equipment listed in your excel file. </li>
 <li>Click the "Preview Calculation Outputs" button to preview the output values. 
 <li>Click the Generate button and provide a file name to generate a report for the equipment. You do not need to provide a filename if you are generating a report for all equipment entries.</li>
-<li>The application is processing your request once you click a buttion. A confirmation popup will appear when the processing is complete. Please be patient - the Mathcad API is a little slow.</li>
+<li>The application is processing your request once you click a buttion. A confirmation popup will appear when the processing is complete.</li>
 </ul>
 </br>
 <b>Note: all generated reports are saved in the folder called "mathcad_automation_output".</b>
