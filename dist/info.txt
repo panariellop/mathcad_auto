@@ -1,16 +1,76 @@
-How to package:
-https://www.youtube.com/watch?v=UZX5kH72Yx4
-* Have to open command prompt as administrator 
-
 How to re-create the virtual env:
 python -m venv env 
 env\scripts\activate
 pip install -r requirements.txt
 
-Pyinstaller:
-(run on an administrative command prompt )
-PyInstaller --onefile main.py 
+How to package the application: 
+Nuitka: (python to exe converter -- runs on c)
+python -m nuitka --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' -o 'Mathcad Anchorage Automation' main.py
 
-pyinstaller --clean --onefile -w main.py 
-
-** -w means windowed 
+Nuitka Options:
+  --version
+  -h, --help
+  --module
+  --standalone
+  --python-debug
+  --python-flag=PYTHON_FLAGS
+  --python-for-scons=PYTHON_SCONS
+  --warn-implicit-exceptions
+  --warn-unusual-code
+  --assume-yes-for-downloads
+  Control the inclusion of modules and packages:
+    --include-package=PACKAGE
+    --include-module=MODULE
+    --include-plugin-directory=MODULE/PACKAGE
+    --include-plugin-files=PATTERN
+  Control the recursion into imported modules:
+    --follow-stdlib, --recurse-stdlib
+    --nofollow-imports, --recurse-none
+    --follow-imports, --recurse-all
+    --follow-import-to=MODULE/PACKAGE, --recurse-to=MODULE/PACKAGE
+    --nofollow-import-to=MODULE/PACKAGE, --recurse-not-to=MODULE/PACKAGE
+  Immediate execution after compilation:
+    --run
+    --debugger, --gdb
+    --execute-with-pythonpath
+  Dump options for internal tree:
+    --xml
+  Code generation choices:
+    --full-compat
+    --file-reference-choice=FILE_REFERENCE_MODE
+  Output choices:
+    -o FILENAME
+    --output-dir=DIRECTORY
+    --remove-output
+    --no-pyi-file
+  Debug features:
+    --debug
+    --unstripped
+    --profile
+    --graph
+    --trace-execution
+    --recompile-c-only
+    --generate-c-only
+    --experimental=EXPERIMENTAL
+  Backend C compiler choice:
+    --clang
+    --mingw64
+    --msvc=MSVC
+    -j N, --jobs=N
+    --lto
+  Tracing features:
+    --show-scons
+    --show-progress
+    --show-memory
+    --show-modules
+    --verbose
+  Windows specific controls:
+    --windows-dependency-tool=DEPENDENCY_TOOL
+    --windows-disable-console
+    --windows-icon=ICON_PATH
+  Plugin control:
+    --plugin-enable=PLUGINS_ENABLED, --enable-plugin=PLUGINS_ENABLED
+    --plugin-disable=PLUGINS_DISABLED, --disable-plugin=PLUGINS_DISABLED
+    --plugin-no-detection
+    --plugin-list
+    --user-plugin=USER_PLUGINS
