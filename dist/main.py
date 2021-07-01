@@ -347,11 +347,15 @@ def update_inputs(equipment:Equipment, values, window):
     return values, window
 
 def update_preview_image(equipment:Equipment, files):
-	"""
-	Takes in the equipment and files and window objects and returns the image binary
-	"""
-	image = files.images[str(equipment.items[equipment.cur_index]['mounting_location'][0]).lower().replace(" ", "")]
-	return image
+    """
+    Takes in the equipment and files and window objects and returns the image binary
+    """
+    mounting_location = str(equipment.items[equipment.cur_index]['mounting_location'][0])
+    mounting_location = mounting_location.lower().replace(" ", "")
+    #wall,floor and floor,wall handling:
+    if mounting_location == "floor,wall": mounting_location = "wall,floor"
+    image = files.images[mounting_location]
+    return image
 
 def load_gui():
 
