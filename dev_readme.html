@@ -74,10 +74,10 @@
 </p>
 
 <p>
-	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput.   
+	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called <b>num_threads</b> in the event <b>generate_report_for_all</b>.   
 </p>
 <p>
-	The function <b>mathcad_calculate(eqpt, files, debug = False)</b> allows the user to preview the Mathcad calculation output. It returns a dictionary with the output values. 
+	The function <b>mathcad_calculate(eqpt, files, debug = False)</b> allows the user to preview the Mathcad calculation output. It returns a dictionary with the output values. The debug variable changes if Mathcad will display the windows being edited or not. When debug = False, no window is shown, when debug = True, windows are shown.  
 </p>
 </div>
 
