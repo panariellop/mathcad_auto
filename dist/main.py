@@ -690,7 +690,7 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
     header_row_found = False
     for idx, row in enumerate(sheet.iter_rows(values_only=True)):
         if row[0] == "eqpt_name":
-            headers = list(row)
+            headers = list(row) #will search for header row, then start to take data from the rest of the rows 
             header_row_found = True  
         elif header_row_found and row[0] is not None:
             cur_eqpt = dict()
@@ -705,6 +705,8 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
                 except:
                     cur_eqpt[header] = [row[i], ""] #<- blank units
             equipment.append(cur_eqpt)
+        elif header_row_found and row[0] is None:
+            break #want to break out and not view all rows when reached end of eqpt list 
     return equipment
 
 
