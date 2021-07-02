@@ -687,10 +687,12 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
     headers = list()
     equipment = Equipment()
 
+    header_row_found = False
     for idx, row in enumerate(sheet.iter_rows(values_only=True)):
-        if idx == 0: #header row
+        if row[0] == "eqpt_name":
             headers = list(row)
-        else:
+            header_row_found = True  
+        elif header_row_found and row[0] is not None:
             cur_eqpt = dict()
             for i, header in enumerate(headers):
                 #populates each eqpt with the input fields and [value, units]
@@ -699,7 +701,7 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
                     units = units.strip(")")
                     field = header.split("(")[0]
                     field = field.strip(" ")
-                    cur_eqpt[field] = [row[i], units]
+                    cur_eqpt[field] = [row[i], units] #assign cur_eqpt
                 except:
                     cur_eqpt[header] = [row[i], ""] #<- blank units
             equipment.append(cur_eqpt)
