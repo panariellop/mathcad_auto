@@ -39,7 +39,8 @@ class SelectTemplates():
         window = sg.Window("Mathcad Automation", [
             [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key = "excel_file", enable_events = True), sg.InputText(self.excel, key = "excel_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
             [sg.Frame("Choose Database File", [[sg.FileBrowse(key = "database_file", enable_events = True), sg.InputText(self.database, key = "database_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
-            [sg.Checkbox("Save to database?", key = "save_to_database", default = self.save_to_database)],
+            [sg.Checkbox("Save to database?", key = "save_to_database", default = self.save_to_database,
+                        tooltip = "If selected, details about the generated report will be saved to a database.")],
 
             [sg.Frame("Choose Mathcad Templates*", [
                     [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key = "wall_template_file", enable_events = True), sg.InputText(self.wall_template, key = "wall_template_name", size = (30,1), background_color = 'white', enable_events = True)], ])],
@@ -193,6 +194,16 @@ class Equipment():
             self.cur_index = len(self.items) - 1
         else:
             self.cur_index -= 1
+    def display_choose_eqpt(self)->list:
+        """
+        Converts the names of the equipment to a list and provides the number to the left 
+        ex: ['1. Anesthesia Machine', ...]
+        """
+        output = list()
+        for idx, name in enumerate(self.names):
+            output.append(str(idx + 1) + ". " + name)
+        return output
+
 
 class Outputs():
     def __init__(self):
@@ -370,9 +381,9 @@ def load_gui():
     layout = [
 
         [
-            sg.Button("Change Input Files", key = "change_input_files"),
+            sg.Button("Change Input Files", key = "change_input_files", tooltip = "Reselect the input files."),
             sg.Text(" ", size = (5,1)),
-            sg.Button("Refresh", key = "refresh_input_files")
+            sg.Button("Refresh", key = "refresh_input_files", tooltip = "Reload the data from the excel sheet.")
         ],
 
 
@@ -381,18 +392,18 @@ def load_gui():
             #list of equiptment
                 sg.Column([
                     [sg.Frame("Choose Equipment", [
-                        [sg.Listbox(values = equipment.names,
+                        [sg.Listbox(values = equipment.display_choose_eqpt(),
                                     size = (30, 20),
                                     key = 'equipment_list',
                                     select_mode = "LISTBOX_SELECT_MODE_SINGLE",
                                     enable_events = True,
                         )],
                         [
-                            sg.Button("Previous", key="previous", size = (8,1)),
-                            sg.Button("Next", key = "next", size = (7,1)),
+                            sg.Button("Previous", key="previous", size = (8,1), tooltip = "Go to the previous equipment in the list."),
+                            sg.Button("Next", key = "next", size = (7,1), tooltip = "Go to the next equipment in the list."),
                             sg.Text(" ", size = (5,1)),
                             sg.Text("Go to:"),
-                            sg.InputText(equipment.cur_index, key = "goto_eqpt", enable_events = True, size = (3, 1)),
+                            sg.InputText(equipment.cur_index, key = "goto_eqpt", enable_events = True, size = (3, 1), tooltip = "Go to a specific equipment index."),
                         ],
                         [sg.Text("Equipment: ", key = "cur_eqpt", size = (20,1), background_color = "gray")],
                     ])],
@@ -405,7 +416,7 @@ def load_gui():
                 sg.Column([
                     [sg.Frame("Outputs",
                         [
-                            [sg.Radio("Imperial Units", "RADIO1",  key = "convert_to_imperial", enable_events = True), sg.Radio("Metric Units", "RADIO1", default = True, key = "convert_to_metric", enable_events = True)],
+                            [sg.Radio("Imperial Units", "RADIO1",  key = "convert_to_imperial", enable_events = True, tooltip = "Switch outputs to imperial units."), sg.Radio("Metric Units", "RADIO1", default = True, key = "convert_to_metric", enable_events = True, tooltip = "Switch outputs to metric units.")],
 
                             [sg.Listbox(values = [],
                                     size = (30, 20),
@@ -413,7 +424,7 @@ def load_gui():
                                     select_mode = "LISTBOX_SELECT_MODE_BROWSE",
                                     right_click_menu = ['&Right', ["Copy"]],
                                     enable_events = True)],
-                            [sg.Button("Preview Calculation Outputs", key = "calculate")],
+                            [sg.Button("Preview Calculation Outputs", key = "calculate", tooltip = "This will calculate the designated outputs for the current inputs and display them in the output field.")],
                         ],
 
                     )],
@@ -426,11 +437,11 @@ def load_gui():
         [
 
         sg.Frame("", [[
-            sg.Button("Generate Report", key = "generate_report", size = (17,1)),
+            sg.Button("Generate Report", key = "generate_report", size = (17,1), tooltip = "This will save a Mathcad report for the equipment being viewed. \nThe template file corresponding to the mounting location will be used."),
         ],
 
         [
-            sg.Button("Generate Report For All", key = "generate_report_for_all")
+            sg.Button("Generate Report For All", key = "generate_report_for_all", tooltip = "This will generate a Mathad report for all the equipment listed.\nTemplate files corresponding to each equipment's mounting location will be used.")
         ],
         ])],
 
