@@ -1,0 +1,16 @@
+#+TITLE: Todo
+#+author: Piero Panariello
+#+STARTUP: content
+
+* TODO
+* In Progress
+** CG in excel
+Set one of the inputs as center of gravity
+
+** Tooltips
+Set tooltips in the program
+* Done
+** Excel doc
+Write some documentation on the excel sheet
+* Testing
+* Not Possible
