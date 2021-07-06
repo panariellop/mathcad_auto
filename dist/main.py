@@ -102,6 +102,7 @@ class SelectTemplates():
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
                         continue
+
     def get_images_from_xl(self, num_images:int):
         """
         Gets all the preview images from the excel file and saves a dictionary of mounting locations and binary images in self.images
