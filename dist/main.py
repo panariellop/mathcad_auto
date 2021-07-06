@@ -2,20 +2,26 @@ import os, sys
 #sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module
 #from mathcadpy import Mathcad, Worksheet #loading custom
 from MathcadPy import Mathcad, Worksheet
+#imports the images as binaries
 from images import *
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
+#needed to open excel files
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
+#needed for parrallel processing
 from shutil import copyfile
 import threading
+#needed to save to leger csv
 import csv
 import random
 import copy
 from datetime import  date
+#so user can copy to clipboard
 import pyperclip
 import io
 from time import sleep
+#so we can grab images from the sheet
 from openpyxl_image_loader import SheetImageLoader
 import stat
 
@@ -673,8 +679,6 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
         csv_writer.writerow(new_row)
     f.close()
     return True
-    # except:
-    #     return False
 
 
 def get_eqpt_from_xl(filepath:str)->Equipment:
