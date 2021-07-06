@@ -583,7 +583,7 @@ def load_gui():
                     Using multithreading to improve speed
                     """
                     threads = list()
-                    num_threads = 4
+                    num_threads = 16
                     cur_row = 0
                     equipment.cur_index = 0 #set to beginning of list
                     while cur_row < len(equipment.items):
