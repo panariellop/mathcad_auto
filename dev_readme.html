@@ -29,12 +29,12 @@
 	<div style = "margin-left: 20px">
 	<p>Class variables:</p>
 	<ul>
-		<li>self.items = list()</li> <p>List of all the equipment in the excel file, stored as individual dictionaries.</p>
-		<li>self.cur_index = 0 </li> <p>The current index of the equipment that the user is viewing in the GUI</p>
-		<li>self.length = 0 </li> <p> Length of self.items</p>
-		<li>self.fields = list()</li> <p>A list of the header row from the excel document</p>
-		<li>self.names = list()</li><p>A list of all the equipment names</p>
-		<li>self.inputs = list()</li> <p>A list of all the inputs from the excel document</p>
+		<li><b>self.items</b> = list()</li> <p>List of all the equipment in the excel file, stored as individual dictionaries.</p>
+		<li><b>self.cur_index </b>= 0 </li> <p>The current index of the equipment that the user is viewing in the GUI</p>
+		<li><b>self.length </b>= 0 </li> <p> Holds the length of self.items</p>
+		<li><b>self.fields </b>= list()</li> <p>A list of all the elements from the header row from the excel document</p>
+		<li><b>self.names</b> = list()</li><p>A list of all the equipment names from the excel document</p>
+		<li><b>self.inputs</b> = list()</li> <p>A list of all the inputs from the header row in the excel document</p>
 	</ul>
 	<p>Class methods:</p>
 	<ul>
@@ -49,7 +49,8 @@
 	<div style = "margin-left: 20px">
 	<p>Class variables:</p>
 	<ul>
-		<li>self.items = list()</li><p>Follows the format:</br>
+		<li><b>self.items = list()</b></li><p>Follows the format:</br>
+		<i>alias, [value, unit, power]</i></br>
 		['f_p_max_output', [408.81554560308007, 'kg', 0]],</br>
 		['f_p_min_output', [76.65291480057748, 'kg', 0]],</br>
 		['f_p_tot_output', [76.65291480057748, 'kg', 0]],</br>...</p>
@@ -72,6 +73,105 @@
 	The function <b>get_eqpt_from_xl(filepath:str)->Equipment</b> takes in the filepath of the input excel file and returns the Equipment object. This function is executed right after the choose files window is closed.
 
 </p>
+<p>The excel table looks like the one below:</p>
+<div class = "excel_table">
+	<table style = "border: 1px solid black;" class="table table-bordered table-hover table-condensed">
+	<thead><tr><th title="Field #1">eqpt_name</th>
+	<th title="Field #2">mounting_location</th>
+	<th title="Field #3">tags</th>
+	<th title="Field #4">w_p_input(lb)</th>
+	<th title="Field #5">s_ds_input</th>
+	<th title="Field #6">a_p_input</th>
+	<th title="Field #7">r_p_input</th>
+	<th title="Field #8">i_p_input</th>
+	<th title="Field #9">z_input</th>
+	<th title="Field #10">h_input</th>
+	<th title="Field #11">capital_a_input(in)</th>
+	<th title="Field #12">capital_b_input(in)</th>
+	<th title="Field #13">a_input(in)</th>
+	<th title="Field #14">b_input(in)</th>
+	<th title="Field #15">capital_h_input(ft)</th>
+	<th title="Field #16">omega_input</th>
+	<th title="Field #17">factor_input</th>
+	</tr></thead>
+	<tbody><tr>
+	<td>Anesthesia Machine </td>
+	<td>Wall, Floor</td>
+	<td>Medical, ICU, something</td>
+	<td align="right">335</td>
+	<td align="right">1.121</td>
+	<td>1</td>
+	<td align="right">2.5</td>
+	<td align="right">1.5</td>
+	<td align="right">0</td>
+	<td align="right">75</td>
+	<td align="right">30</td>
+	<td align="right">20.5</td>
+	<td align="right">1.5</td>
+	<td align="right">-1.5</td>
+	<td align="right">74.25</td>
+	<td align="right">2.5</td>
+	<td align="right">0.666666</td>
+	</tr>
+	<tr>
+	<td>Warming Cabinet</td>
+	<td>Floor</td>
+	<td>Medical</td>
+	<td align="right">137</td>
+	<td align="right">1.121</td>
+	<td>1</td>
+	<td align="right">2.5</td>
+	<td align="right">1.5</td>
+	<td align="right">3</td>
+	<td align="right">75</td>
+	<td align="right">30</td>
+	<td align="right">21.5</td>
+	<td align="right">1.5</td>
+	<td align="right">-3.5</td>
+	<td align="right">24.5</td>
+	<td align="right">2.5</td>
+	<td align="right">0.666666</td>
+	</tr>
+	<tr>
+	<td>Surgical Scrub Sink</td>
+	<td>Wall</td>
+	<td>Medical</td>
+	<td align="right">295</td>
+	<td align="right">1.121</td>
+	<td>1</td>
+	<td align="right">2.5</td>
+	<td align="right">1.5</td>
+	<td align="right">4</td>
+	<td align="right">75</td>
+	<td align="right">64</td>
+	<td align="right">28</td>
+	<td align="right">1.5</td>
+	<td align="right">-3.5</td>
+	<td align="right">39.5</td>
+	<td align="right">2.5</td>
+	<td align="right">0.666666</td>
+	</tr>
+	<tr>
+	<td>Retractable Ceiling Column</td>
+	<td>Ceiling</td>
+	<td>Medical</td>
+	<td align="right">800</td>
+	<td align="right">1.121</td>
+	<td>1</td>
+	<td align="right">2.5</td>
+	<td align="right">1.5</td>
+	<td align="right">15</td>
+	<td align="right">75</td>
+	<td align="right"></td>
+	<td align="right"></td>
+	<td align="right">14</td>
+	<td align="right">14</td>
+	<td align="right">45</td>
+	<td align="right">2.5</td>
+	<td align="right">0.666666</td>
+	</tr>
+	</tbody></table>
+</div>
 
 <p>
 	The function <b>pre_generate_report(equipment:Equipment, files, generating_multiple_reports = False)</b> acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the <b>generate_report</b> function. The function <b>generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:str, files, debug = False)->bool</b> connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called <b>num_threads</b> in the event <b>generate_report_for_all</b>.
@@ -102,4 +202,59 @@
 <p>
 	Saving to Database:   The database is a .csv file which holds some important information about generated repors. The function <b>save_to_csv</b> is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the mathcad_automation_output folder.
 </p>
+<p>
+	The table looks like the one below:
+</p>
+<div class = "csv_table">
+	<table style = "border: 1px solid black" class="table table-bordered table-hover table-condensed">
+	<thead><tr><th title="Field #1">Date</th>
+	<th title="Field #2">Tags</th>
+	<th title="Field #3">Name</th>
+	<th title="Field #4">Mounting Location</th>
+	<th title="Field #5">File Name</th>
+	</tr></thead>
+	<tbody><tr>
+	<td>2021-06-30</td>
+	<td>MEDICAL</td>
+	<td>RETRACTABLE CEILING COLUMN</td>
+	<td>CEILING</td>
+	<td>test.mcdx</td>
+	</tr>
+	<tr>
+	<td>2021-06-30</td>
+	<td>MEDICAL</td>
+	<td>RETRACTABLE CEILING COLUMN</td>
+	<td>CEILING</td>
+	<td>Retractable_Ceiling_Column_report_MKDXSPPA.mcdx</td>
+	</tr>
+	<tr>
+	<td>2021-06-30</td>
+	<td>MEDICAL</td>
+	<td>SURGICAL SCRUB SINK</td>
+	<td>WALL</td>
+	<td>Surgical_Scrub_Sink_report_YILGRVNK.mcdx</td>
+	</tr>
+	<tr>
+	<td>2021-06-30</td>
+	<td>MEDICAL, ICU</td>
+	<td>ANESTHESIA MACHINE </td>
+	<td>WALL, FLOOR</td>
+	<td>Anesthesia_Machine__report_WWHGKNKN.mcdx</td>
+	</tr>
+	<tr>
+	<td>2021-06-30</td>
+	<td>MEDICAL</td>
+	<td>WARMING CABINET</td>
+	<td>FLOOR</td>
+	<td>Warming_Cabinet_report_WSIDKRWK.mcdx</td>
+	</tr>
+	<tr>
+	<td>2021-07-01</td>
+	<td>MEDICAL</td>
+	<td>RETRACTABLE CEILING COLUMN</td>
+	<td>CEILING</td>
+	<td>testing.mcdx</td>
+	</tr>
+	</tbody></table>
+</div>
 </div>
