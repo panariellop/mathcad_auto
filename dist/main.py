@@ -692,6 +692,9 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
     headers = list()
     equipment = Equipment()
 
+    """
+    Search for header row before finding data
+    """
     header_row_found = False
     for idx, row in enumerate(sheet.iter_rows(values_only=True)):
         if row[0] == "eqpt_name":
