@@ -8,7 +8,7 @@ PyInstaller -i "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_lo
 
 How to package the application: 
 Nuitka: (python to exe converter -- runs on c)
-python -m nuitka --standalone --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' main.py
+python -m nuitka --standalone --debug=all --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' main.py
 
 Nuitka Options:
   --version
