@@ -63,14 +63,16 @@ class Mathcad():
         """ Opens the filepath (if valid) in Mathcad """
         try:
             filepath = Path(filepath)
-            if filepath.exists() and (filepath.suffix.lower() == ".mcdx"):
+            if filepath.exists() and (filepath.suffix.lower() == ".mcdx"): #check if file exists 
+                print("Opening mathcad file from: ", filepath)
                 local_obj = self.__mcadapp.Open(str(filepath))
+                print(f"App: {self.__mcadapp}")
+                print(f"Local Object: {local_obj}")
                 # now we have opened a new worksheet, generate the list of open worksheets from the COM API
                 local_worksheets = {}
                 for i in range(self.__mcadapp.Worksheets.Count):  # a for loop because the Mathcad API is shit
                     sheet_object = self.__mcadapp.Worksheets.item(i)
                     local_worksheets[sheet_object.Name] = sheet_object# this is necessary because the open method only returns a basic IMathcadPrimeWorksheet object
-                print("Local_obj.Name: ", local_obj)
                 self.open_worksheets[local_obj.Name] = Worksheet(local_worksheets[local_obj.Name])  # add the worksheet into the open worksheets dictionary
                 return self.open_worksheets[local_obj.Name]  # return the worksheet object
             else:

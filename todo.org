@@ -11,6 +11,8 @@
     Set one of the inputs as center of gravity
 ** Tooltips
     Set tooltips in the program
+** Fix Mathcad 5.0 Bug 
+    - no localobj 
 * Done
 ** Excel doc
     Write some documentation on the excel sheet
