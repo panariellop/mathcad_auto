@@ -27,7 +27,7 @@ exe = EXE(pyz,
           bootloader_ignore_signals=False,
           strip=False,
           upx=True,
-          console=False , icon='C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\main_build\\images\\ma_logo.ico')
+          console=True , icon='C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\main_build\\images\\ma_logo.ico')
 coll = COLLECT(exe,
                a.binaries,
                a.zipfiles,

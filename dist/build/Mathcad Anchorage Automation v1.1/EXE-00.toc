@@ -1,6 +1,6 @@
 ('C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\build\\Mathcad Anchorage '
  'Automation v1.1\\Mathcad Anchorage Automation v1.1.exe',
- False,
+ True,
  False,
  True,
  'C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\main_build\\images\\ma_logo.ico',
@@ -49,7 +49,7 @@
  [],
  False,
  False,
- 1625689394,
- [('runw.exe',
-   'c:\\users\\owner\\desktop\\mathcad_auto\\dist\\env\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
+ 1625689915,
+ [('run.exe',
+   'c:\\users\\owner\\desktop\\mathcad_auto\\dist\\env\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
    'EXECUTABLE')])
