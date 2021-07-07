@@ -3,6 +3,9 @@ python -m venv env
 env\scripts\activate
 pip install -r requirements.txt
 
+Pyinstaller 
+PyInstaller --onefile --windowed --name "Mathcad Anchorage Automation v1.x" main.py 
+
 How to package the application: 
 Nuitka: (python to exe converter -- runs on c)
 python -m nuitka --standalone --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' main.py
