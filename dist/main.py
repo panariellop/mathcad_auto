@@ -766,7 +766,8 @@ def mathcad_calculate(eqpt, files, debug = False):
     new_filepath = template_file.split("/")[0:-1]
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + "temp" + ".mcdx"
-
+    print("Template file: ", template_file)
+    print("Mathcad application: ", mathcad_app, mathcad_app.version, mathcad_app.open_worksheets)
     cur_worksheet = mathcad_app.open(template_file)
 
     for input in eqpt.inputs: #set inputs
