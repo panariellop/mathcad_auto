@@ -23,7 +23,7 @@
 <i>Note: Tags should be seperated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview_images. Take a look at example_sheet.xlsx for reference.</i>
 <li>Select your Mathcad template file for each mounting locaiton. I have provided one to help you get started (01_LPCH ERCP_Anchorage_Template.mcdx).</li>
 <li>You can always go back to the file selection screen by clicking <b>Change Input Files</b>. You can reload the information from the excel spreadsheet by clicking <b>Refresh</b>.
-<li>If you want to save details about the report to a database, then click "Save to database?".</li>
+<li>If you want to save details about the report to a database, then click <b>Save to database?</b>.</li>
 <ul>
     <li>The "database" is a .csv file containting all the calculations you have performed with the automation software. This helps with organiziation and future reference.</li>
     <li>Choose the database that you want to make an entry into. If you choose an already existing database, your new reports will be appended. You can leave this field blank, and the software will automatically generate a database file saved to the same folder as the generated reports. </li>
@@ -39,6 +39,7 @@
 
 <h3>Using your own files:</h3>
 <ul>
+<li>If you decide to use your own inputs, make sure to label them <b><my_label>_input</b>. For example, <b>omega_input</b> would work, but <b>omega_something</b> would not work.</li>  
 <li>To use your custom template, just choose it using the graphical user interface.</li>
 <li>If you decide to create your own custom template, then ensure that the inputs and outputs follow the format of the template provided.</li>
 </ul>
