@@ -69,7 +69,7 @@ void checkModuleConstants_pywin32_system32(void) {
 
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = mod_consts[6]; CHECK_OBJECT(module_filename_obj);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[6]); CHECK_OBJECT(module_filename_obj);
 }
 
 // The module function declarations.

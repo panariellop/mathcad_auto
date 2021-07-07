@@ -66,63 +66,63 @@ void checkModuleConstants_openpyxl$cell$cell(void) {
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_3e2fd5d3add7776e3fb72ac75aeb34b9;
-static PyCodeObject *codeobj_522919331c65005da30eb86bc0d4c890;
-static PyCodeObject *codeobj_26e3a3728d9ebc6aebe10adf361d3cd5;
-static PyCodeObject *codeobj_caa6daeaeca653ebdf0aa57fe693a7fb;
-static PyCodeObject *codeobj_a8ba8cfa9476858ebdd85033a6b8fa26;
-static PyCodeObject *codeobj_68f6857c2d6eec8d67c9390bbf1b1629;
-static PyCodeObject *codeobj_c1c8244c4619d4e30ebd285ecbee251a;
-static PyCodeObject *codeobj_35d0efb6751f3f0ad857db91c8c20c61;
-static PyCodeObject *codeobj_e77971103361f57265bb1907db9fee0a;
-static PyCodeObject *codeobj_5fcb537e40b381e3bbc8877ce556e2b7;
-static PyCodeObject *codeobj_0745f65b6c92dc88f70be257de262c77;
-static PyCodeObject *codeobj_c28f6fb1fd1f0cdeae4465a17fd87eeb;
-static PyCodeObject *codeobj_c97cf0de330a65057bac8499b331aa4a;
-static PyCodeObject *codeobj_a26d79b401518d1a61102769adb6c94e;
-static PyCodeObject *codeobj_ba8170c00374341a6704e16fdcaf1784;
-static PyCodeObject *codeobj_aa24fa45973eec3427b61d3157b86190;
-static PyCodeObject *codeobj_da64cef9ef8c4903b22f64abb915787f;
-static PyCodeObject *codeobj_6d8cd2aa75216b9639bd2028f73587bc;
-static PyCodeObject *codeobj_eb03d101d835e3bcb2dfb7b76cdc5975;
-static PyCodeObject *codeobj_08f274756aa56c427cb7c12c58c08af0;
-static PyCodeObject *codeobj_166245fa74647e9aef3967c13510f88e;
-static PyCodeObject *codeobj_a9ca0a5c474650c4d5a74d153172a0b6;
-static PyCodeObject *codeobj_5bf2b9002ac0c0bf8dba0166b5492172;
-static PyCodeObject *codeobj_d40083364cf44dfffb7ed9a389377e34;
-static PyCodeObject *codeobj_4f545cc3da6c21c5c5aad0da6e6ea3ad;
-static PyCodeObject *codeobj_2f9ee8bd543969d84b56764c36ae6385;
-static PyCodeObject *codeobj_7bd4622a4e036d050e74bd8b76965b06;
+static PyCodeObject *codeobj_c9a2fc20ceb797497dfc9d0030532171;
+static PyCodeObject *codeobj_2694e3a6f4a2e0d0bb306f44183734ab;
+static PyCodeObject *codeobj_1bf3172501be253fc895eef92ebabd50;
+static PyCodeObject *codeobj_8a1487ca7e74124b2e863ab38c097b90;
+static PyCodeObject *codeobj_5509ac5c39668ea4ad0e5d35c459370e;
+static PyCodeObject *codeobj_b340d8c55d64500bf3394a5724e02585;
+static PyCodeObject *codeobj_dd6ded7f8600fdaaf46ce0e0414bda33;
+static PyCodeObject *codeobj_cb97483d97664104b98d883adbe1873b;
+static PyCodeObject *codeobj_cda805f312dc4aec4a7de69e88903aa4;
+static PyCodeObject *codeobj_fd531f06ffd83cefd9fc46e965271d1d;
+static PyCodeObject *codeobj_6274a879ef4adb345cd978db8fb04782;
+static PyCodeObject *codeobj_3fc6f465b6438a1f3d31a5ded8fdb162;
+static PyCodeObject *codeobj_1946b367b07c1b0e6623c7ee9f0afaf5;
+static PyCodeObject *codeobj_3ef90352028ad43414eabff7313d59fb;
+static PyCodeObject *codeobj_7477094a34d5f3f0b9f146950b74d5a9;
+static PyCodeObject *codeobj_801a2f06f72fcabe7688415841123b5d;
+static PyCodeObject *codeobj_7845e3339512d0ba9e1af2264d65bc4c;
+static PyCodeObject *codeobj_b5d290cf759bfde8e5bf2a44e05332ed;
+static PyCodeObject *codeobj_55e71ade8dd76fd4b2a40672dc7d2b42;
+static PyCodeObject *codeobj_88a99ef270982fa322a97d6b00e93794;
+static PyCodeObject *codeobj_eae4ff1d64710c6c0b3381c8276b68bd;
+static PyCodeObject *codeobj_898685cf3b37eeecaacdabb3456c193f;
+static PyCodeObject *codeobj_18821f5e1165c056c5a6edb737027d52;
+static PyCodeObject *codeobj_935cb8a7a07a3622191fa90370fd7456;
+static PyCodeObject *codeobj_f1accc1a57134d7f1764d942001085bc;
+static PyCodeObject *codeobj_edd790f933259134171665703ba1c53c;
+static PyCodeObject *codeobj_d9986803dbbbe7971e70f3dd2b316996;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = mod_consts[80]; CHECK_OBJECT(module_filename_obj);
-    codeobj_3e2fd5d3add7776e3fb72ac75aeb34b9 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[181], NULL, NULL, 0, 0, 0);
-    codeobj_522919331c65005da30eb86bc0d4c890 = MAKE_CODEOBJECT(module_filename_obj, 89, CO_NOFREE, mod_consts[16], mod_consts[182], NULL, 0, 0, 0);
-    codeobj_26e3a3728d9ebc6aebe10adf361d3cd5 = MAKE_CODEOBJECT(module_filename_obj, 297, CO_NOFREE, mod_consts[75], mod_consts[182], NULL, 0, 0, 0);
-    codeobj_caa6daeaeca653ebdf0aa57fe693a7fb = MAKE_CODEOBJECT(module_filename_obj, 328, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[180], mod_consts[183], NULL, 2, 0, 0);
-    codeobj_a8ba8cfa9476858ebdd85033a6b8fa26 = MAKE_CODEOBJECT(module_filename_obj, 314, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[17], mod_consts[184], NULL, 4, 0, 0);
-    codeobj_68f6857c2d6eec8d67c9390bbf1b1629 = MAKE_CODEOBJECT(module_filename_obj, 105, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[17], mod_consts[185], NULL, 6, 0, 0);
-    codeobj_c1c8244c4619d4e30ebd285ecbee251a = MAKE_CODEOBJECT(module_filename_obj, 147, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[155], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_35d0efb6751f3f0ad857db91c8c20c61 = MAKE_CODEOBJECT(module_filename_obj, 320, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[155], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_e77971103361f57265bb1907db9fee0a = MAKE_CODEOBJECT(module_filename_obj, 173, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[56], mod_consts[187], NULL, 2, 0, 0);
-    codeobj_5fcb537e40b381e3bbc8877ce556e2b7 = MAKE_CODEOBJECT(module_filename_obj, 143, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[153], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_0745f65b6c92dc88f70be257de262c77 = MAKE_CODEOBJECT(module_filename_obj, 165, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[158], mod_consts[188], NULL, 2, 0, 0);
-    codeobj_c28f6fb1fd1f0cdeae4465a17fd87eeb = MAKE_CODEOBJECT(module_filename_obj, 150, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[188], NULL, 2, 0, 0);
-    codeobj_c97cf0de330a65057bac8499b331aa4a = MAKE_CODEOBJECT(module_filename_obj, 128, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_a26d79b401518d1a61102769adb6c94e = MAKE_CODEOBJECT(module_filename_obj, 134, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[150], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_ba8170c00374341a6704e16fdcaf1784 = MAKE_CODEOBJECT(module_filename_obj, 274, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[172], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_aa24fa45973eec3427b61d3157b86190 = MAKE_CODEOBJECT(module_filename_obj, 283, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[172], mod_consts[188], NULL, 2, 0, 0);
-    codeobj_da64cef9ef8c4903b22f64abb915787f = MAKE_CODEOBJECT(module_filename_obj, 121, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[34], mod_consts[189], NULL, 1, 0, 0);
-    codeobj_6d8cd2aa75216b9639bd2028f73587bc = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_eb03d101d835e3bcb2dfb7b76cdc5975 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[190], NULL, 1, 0, 0);
-    codeobj_08f274756aa56c427cb7c12c58c08af0 = MAKE_CODEOBJECT(module_filename_obj, 64, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[191], NULL, 2, 0, 0);
-    codeobj_166245fa74647e9aef3967c13510f88e = MAKE_CODEOBJECT(module_filename_obj, 223, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[165], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_a9ca0a5c474650c4d5a74d153172a0b6 = MAKE_CODEOBJECT(module_filename_obj, 229, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[165], mod_consts[192], NULL, 2, 0, 0);
-    codeobj_5bf2b9002ac0c0bf8dba0166b5492172 = MAKE_CODEOBJECT(module_filename_obj, 218, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[163], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_d40083364cf44dfffb7ed9a389377e34 = MAKE_CODEOBJECT(module_filename_obj, 247, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[167], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_4f545cc3da6c21c5c5aad0da6e6ea3ad = MAKE_CODEOBJECT(module_filename_obj, 257, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[193], NULL, 3, 0, 0);
-    codeobj_2f9ee8bd543969d84b56764c36ae6385 = MAKE_CODEOBJECT(module_filename_obj, 204, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[186], NULL, 1, 0, 0);
-    codeobj_7bd4622a4e036d050e74bd8b76965b06 = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[188], NULL, 2, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[180]); CHECK_OBJECT(module_filename_obj);
+    codeobj_c9a2fc20ceb797497dfc9d0030532171 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[181], NULL, NULL, 0, 0, 0);
+    codeobj_2694e3a6f4a2e0d0bb306f44183734ab = MAKE_CODEOBJECT(module_filename_obj, 89, CO_NOFREE, mod_consts[16], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_1bf3172501be253fc895eef92ebabd50 = MAKE_CODEOBJECT(module_filename_obj, 297, CO_NOFREE, mod_consts[75], mod_consts[182], NULL, 0, 0, 0);
+    codeobj_8a1487ca7e74124b2e863ab38c097b90 = MAKE_CODEOBJECT(module_filename_obj, 328, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[183], NULL, 2, 0, 0);
+    codeobj_5509ac5c39668ea4ad0e5d35c459370e = MAKE_CODEOBJECT(module_filename_obj, 314, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[17], mod_consts[184], NULL, 4, 0, 0);
+    codeobj_b340d8c55d64500bf3394a5724e02585 = MAKE_CODEOBJECT(module_filename_obj, 105, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[17], mod_consts[185], NULL, 6, 0, 0);
+    codeobj_dd6ded7f8600fdaaf46ce0e0414bda33 = MAKE_CODEOBJECT(module_filename_obj, 147, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_cb97483d97664104b98d883adbe1873b = MAKE_CODEOBJECT(module_filename_obj, 320, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[154], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_cda805f312dc4aec4a7de69e88903aa4 = MAKE_CODEOBJECT(module_filename_obj, 173, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[56], mod_consts[187], NULL, 2, 0, 0);
+    codeobj_fd531f06ffd83cefd9fc46e965271d1d = MAKE_CODEOBJECT(module_filename_obj, 143, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[152], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_6274a879ef4adb345cd978db8fb04782 = MAKE_CODEOBJECT(module_filename_obj, 165, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[157], mod_consts[188], NULL, 2, 0, 0);
+    codeobj_3fc6f465b6438a1f3d31a5ded8fdb162 = MAKE_CODEOBJECT(module_filename_obj, 150, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[47], mod_consts[188], NULL, 2, 0, 0);
+    codeobj_1946b367b07c1b0e6623c7ee9f0afaf5 = MAKE_CODEOBJECT(module_filename_obj, 128, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[67], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_3ef90352028ad43414eabff7313d59fb = MAKE_CODEOBJECT(module_filename_obj, 134, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[149], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_7477094a34d5f3f0b9f146950b74d5a9 = MAKE_CODEOBJECT(module_filename_obj, 274, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_801a2f06f72fcabe7688415841123b5d = MAKE_CODEOBJECT(module_filename_obj, 283, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[188], NULL, 2, 0, 0);
+    codeobj_7845e3339512d0ba9e1af2264d65bc4c = MAKE_CODEOBJECT(module_filename_obj, 121, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[34], mod_consts[189], NULL, 1, 0, 0);
+    codeobj_b5d290cf759bfde8e5bf2a44e05332ed = MAKE_CODEOBJECT(module_filename_obj, 139, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[30], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_55e71ade8dd76fd4b2a40672dc7d2b42 = MAKE_CODEOBJECT(module_filename_obj, 77, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[46], mod_consts[190], NULL, 1, 0, 0);
+    codeobj_88a99ef270982fa322a97d6b00e93794 = MAKE_CODEOBJECT(module_filename_obj, 64, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[42], mod_consts[191], NULL, 2, 0, 0);
+    codeobj_eae4ff1d64710c6c0b3381c8276b68bd = MAKE_CODEOBJECT(module_filename_obj, 223, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[164], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_898685cf3b37eeecaacdabb3456c193f = MAKE_CODEOBJECT(module_filename_obj, 229, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[164], mod_consts[192], NULL, 2, 0, 0);
+    codeobj_18821f5e1165c056c5a6edb737027d52 = MAKE_CODEOBJECT(module_filename_obj, 218, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[162], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_935cb8a7a07a3622191fa90370fd7456 = MAKE_CODEOBJECT(module_filename_obj, 247, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[166], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_f1accc1a57134d7f1764d942001085bc = MAKE_CODEOBJECT(module_filename_obj, 257, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[169], mod_consts[193], NULL, 3, 0, 0);
+    codeobj_edd790f933259134171665703ba1c53c = MAKE_CODEOBJECT(module_filename_obj, 204, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[186], NULL, 1, 0, 0);
+    codeobj_d9986803dbbbe7971e70f3dd2b316996 = MAKE_CODEOBJECT(module_filename_obj, 213, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[15], mod_consts[188], NULL, 2, 0, 0);
 }
 
 // The module function declarations.
@@ -212,7 +212,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
     PyObject *par_t = python_pars[0];
     PyObject *par_value = python_pars[1];
     PyObject *var_dt = NULL;
-    struct Nuitka_FrameObject *frame_08f274756aa56c427cb7c12c58c08af0;
+    struct Nuitka_FrameObject *frame_88a99ef270982fa322a97d6b00e93794;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -221,7 +221,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
     int tmp_res;
     PyObject *tmp_return_value = NULL;
     bool tmp_result;
-    static struct Nuitka_FrameObject *cache_frame_08f274756aa56c427cb7c12c58c08af0 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_88a99ef270982fa322a97d6b00e93794 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -229,31 +229,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_08f274756aa56c427cb7c12c58c08af0)) {
-        Py_XDECREF(cache_frame_08f274756aa56c427cb7c12c58c08af0);
+    if (isFrameUnusable(cache_frame_88a99ef270982fa322a97d6b00e93794)) {
+        Py_XDECREF(cache_frame_88a99ef270982fa322a97d6b00e93794);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_08f274756aa56c427cb7c12c58c08af0 == NULL) {
+        if (cache_frame_88a99ef270982fa322a97d6b00e93794 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_08f274756aa56c427cb7c12c58c08af0 = MAKE_FUNCTION_FRAME(codeobj_08f274756aa56c427cb7c12c58c08af0, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_88a99ef270982fa322a97d6b00e93794 = MAKE_FUNCTION_FRAME(codeobj_88a99ef270982fa322a97d6b00e93794, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_08f274756aa56c427cb7c12c58c08af0->m_type_description == NULL);
-    frame_08f274756aa56c427cb7c12c58c08af0 = cache_frame_08f274756aa56c427cb7c12c58c08af0;
+    assert(cache_frame_88a99ef270982fa322a97d6b00e93794->m_type_description == NULL);
+    frame_88a99ef270982fa322a97d6b00e93794 = cache_frame_88a99ef270982fa322a97d6b00e93794;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_08f274756aa56c427cb7c12c58c08af0);
+    pushFrameStack(frame_88a99ef270982fa322a97d6b00e93794);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_08f274756aa56c427cb7c12c58c08af0) == 2); // Frame stack
+    assert(Py_REFCNT(frame_88a99ef270982fa322a97d6b00e93794) == 2); // Frame stack
 
     // Framed code:
     {
@@ -476,7 +476,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_08f274756aa56c427cb7c12c58c08af0);
+    RESTORE_FRAME_EXCEPTION(frame_88a99ef270982fa322a97d6b00e93794);
 #endif
 
     // Put the previous frame back on top.
@@ -486,7 +486,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_08f274756aa56c427cb7c12c58c08af0);
+    RESTORE_FRAME_EXCEPTION(frame_88a99ef270982fa322a97d6b00e93794);
 #endif
 
     // Put the previous frame back on top.
@@ -497,18 +497,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_08f274756aa56c427cb7c12c58c08af0);
+    RESTORE_FRAME_EXCEPTION(frame_88a99ef270982fa322a97d6b00e93794);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_08f274756aa56c427cb7c12c58c08af0, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_08f274756aa56c427cb7c12c58c08af0->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_08f274756aa56c427cb7c12c58c08af0, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_88a99ef270982fa322a97d6b00e93794, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_88a99ef270982fa322a97d6b00e93794->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_88a99ef270982fa322a97d6b00e93794, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_08f274756aa56c427cb7c12c58c08af0,
+        frame_88a99ef270982fa322a97d6b00e93794,
         type_description_1,
         par_t,
         par_value,
@@ -517,17 +517,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__1_get_type(struct Nuitka_Fu
 
 
     // Release cached frame if used for exception.
-    if (frame_08f274756aa56c427cb7c12c58c08af0 == cache_frame_08f274756aa56c427cb7c12c58c08af0) {
+    if (frame_88a99ef270982fa322a97d6b00e93794 == cache_frame_88a99ef270982fa322a97d6b00e93794) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_08f274756aa56c427cb7c12c58c08af0);
-        cache_frame_08f274756aa56c427cb7c12c58c08af0 = NULL;
+        Py_DECREF(cache_frame_88a99ef270982fa322a97d6b00e93794);
+        cache_frame_88a99ef270982fa322a97d6b00e93794 = NULL;
     }
 
-    assertFrameObject(frame_08f274756aa56c427cb7c12c58c08af0);
+    assertFrameObject(frame_88a99ef270982fa322a97d6b00e93794);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -610,7 +610,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
     PyObject *var_base = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_eb03d101d835e3bcb2dfb7b76cdc5975;
+    struct Nuitka_FrameObject *frame_55e71ade8dd76fd4b2a40672dc7d2b42;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -622,7 +622,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
-    static struct Nuitka_FrameObject *cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -630,31 +630,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975)) {
-        Py_XDECREF(cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    if (isFrameUnusable(cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42)) {
+        Py_XDECREF(cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975 == NULL) {
+        if (cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975 = MAKE_FUNCTION_FRAME(codeobj_eb03d101d835e3bcb2dfb7b76cdc5975, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42 = MAKE_FUNCTION_FRAME(codeobj_55e71ade8dd76fd4b2a40672dc7d2b42, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_type_description == NULL);
-    frame_eb03d101d835e3bcb2dfb7b76cdc5975 = cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975;
+    assert(cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_type_description == NULL);
+    frame_55e71ade8dd76fd4b2a40672dc7d2b42 = cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    pushFrameStack(frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_eb03d101d835e3bcb2dfb7b76cdc5975) == 2); // Frame stack
+    assert(Py_REFCNT(frame_55e71ade8dd76fd4b2a40672dc7d2b42) == 2); // Frame stack
 
     // Framed code:
     {
@@ -679,7 +679,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
         }
         CHECK_OBJECT(par_t);
         tmp_args_element_name_1 = par_t;
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame.f_lineno = 78;
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame.f_lineno = 78;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[9], tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -741,7 +741,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
         }
 
         tmp_called_instance_2 = par_t;
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame.f_lineno = 81;
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame.f_lineno = 81;
         tmp_expression_name_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[11]);
         if (tmp_expression_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -843,7 +843,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
         }
         CHECK_OBJECT(var_base);
         tmp_args_element_name_2 = var_base;
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame.f_lineno = 82;
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame.f_lineno = 82;
         tmp_assign_source_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[9], tmp_args_element_name_2);
         if (tmp_assign_source_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -1008,7 +1008,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
         }
 
         tmp_args_element_name_3 = var_value;
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame.f_lineno = 86;
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame.f_lineno = 86;
         tmp_make_exception_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
         Py_DECREF(tmp_called_name_1);
         if (tmp_make_exception_arg_1 == NULL) {
@@ -1021,7 +1021,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame.f_lineno = 86;
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame.f_lineno = 86;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -1033,7 +1033,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    RESTORE_FRAME_EXCEPTION(frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 #endif
 
     // Put the previous frame back on top.
@@ -1043,7 +1043,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    RESTORE_FRAME_EXCEPTION(frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 #endif
 
     // Put the previous frame back on top.
@@ -1054,18 +1054,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    RESTORE_FRAME_EXCEPTION(frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_eb03d101d835e3bcb2dfb7b76cdc5975, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_eb03d101d835e3bcb2dfb7b76cdc5975->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_eb03d101d835e3bcb2dfb7b76cdc5975, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_55e71ade8dd76fd4b2a40672dc7d2b42, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_55e71ade8dd76fd4b2a40672dc7d2b42->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_55e71ade8dd76fd4b2a40672dc7d2b42, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_eb03d101d835e3bcb2dfb7b76cdc5975,
+        frame_55e71ade8dd76fd4b2a40672dc7d2b42,
         type_description_1,
         par_t,
         var_value,
@@ -1074,17 +1074,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__2_get_time_format(struct Nu
 
 
     // Release cached frame if used for exception.
-    if (frame_eb03d101d835e3bcb2dfb7b76cdc5975 == cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975) {
+    if (frame_55e71ade8dd76fd4b2a40672dc7d2b42 == cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975);
-        cache_frame_eb03d101d835e3bcb2dfb7b76cdc5975 = NULL;
+        Py_DECREF(cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42);
+        cache_frame_55e71ade8dd76fd4b2a40672dc7d2b42 = NULL;
     }
 
-    assertFrameObject(frame_eb03d101d835e3bcb2dfb7b76cdc5975);
+    assertFrameObject(frame_55e71ade8dd76fd4b2a40672dc7d2b42);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1165,7 +1165,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
     PyObject *par_column = python_pars[3];
     PyObject *par_value = python_pars[4];
     PyObject *par_style_array = python_pars[5];
-    struct Nuitka_FrameObject *frame_68f6857c2d6eec8d67c9390bbf1b1629;
+    struct Nuitka_FrameObject *frame_b340d8c55d64500bf3394a5724e02585;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
@@ -1173,7 +1173,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
-    static struct Nuitka_FrameObject *cache_frame_68f6857c2d6eec8d67c9390bbf1b1629 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_b340d8c55d64500bf3394a5724e02585 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -1182,31 +1182,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_68f6857c2d6eec8d67c9390bbf1b1629)) {
-        Py_XDECREF(cache_frame_68f6857c2d6eec8d67c9390bbf1b1629);
+    if (isFrameUnusable(cache_frame_b340d8c55d64500bf3394a5724e02585)) {
+        Py_XDECREF(cache_frame_b340d8c55d64500bf3394a5724e02585);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_68f6857c2d6eec8d67c9390bbf1b1629 == NULL) {
+        if (cache_frame_b340d8c55d64500bf3394a5724e02585 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_68f6857c2d6eec8d67c9390bbf1b1629 = MAKE_FUNCTION_FRAME(codeobj_68f6857c2d6eec8d67c9390bbf1b1629, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_b340d8c55d64500bf3394a5724e02585 = MAKE_FUNCTION_FRAME(codeobj_b340d8c55d64500bf3394a5724e02585, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_68f6857c2d6eec8d67c9390bbf1b1629->m_type_description == NULL);
-    frame_68f6857c2d6eec8d67c9390bbf1b1629 = cache_frame_68f6857c2d6eec8d67c9390bbf1b1629;
+    assert(cache_frame_b340d8c55d64500bf3394a5724e02585->m_type_description == NULL);
+    frame_b340d8c55d64500bf3394a5724e02585 = cache_frame_b340d8c55d64500bf3394a5724e02585;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_68f6857c2d6eec8d67c9390bbf1b1629);
+    pushFrameStack(frame_b340d8c55d64500bf3394a5724e02585);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_68f6857c2d6eec8d67c9390bbf1b1629) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b340d8c55d64500bf3394a5724e02585) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1249,7 +1249,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
         tmp_args_element_name_1 = par_worksheet;
         CHECK_OBJECT(par_style_array);
         tmp_args_element_name_2 = par_style_array;
-        frame_68f6857c2d6eec8d67c9390bbf1b1629->m_frame.f_lineno = 106;
+        frame_b340d8c55d64500bf3394a5724e02585->m_frame.f_lineno = 106;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
             tmp_call_result_1 = CALL_METHOD_WITH_ARGS2(
@@ -1419,7 +1419,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_68f6857c2d6eec8d67c9390bbf1b1629);
+    RESTORE_FRAME_EXCEPTION(frame_b340d8c55d64500bf3394a5724e02585);
 #endif
 
     // Put the previous frame back on top.
@@ -1430,18 +1430,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_68f6857c2d6eec8d67c9390bbf1b1629);
+    RESTORE_FRAME_EXCEPTION(frame_b340d8c55d64500bf3394a5724e02585);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_68f6857c2d6eec8d67c9390bbf1b1629, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_68f6857c2d6eec8d67c9390bbf1b1629->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_68f6857c2d6eec8d67c9390bbf1b1629, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_b340d8c55d64500bf3394a5724e02585, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_b340d8c55d64500bf3394a5724e02585->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_b340d8c55d64500bf3394a5724e02585, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_68f6857c2d6eec8d67c9390bbf1b1629,
+        frame_b340d8c55d64500bf3394a5724e02585,
         type_description_1,
         par_self,
         par_worksheet,
@@ -1454,17 +1454,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__3___init__(struct Nuitka_Fu
 
 
     // Release cached frame if used for exception.
-    if (frame_68f6857c2d6eec8d67c9390bbf1b1629 == cache_frame_68f6857c2d6eec8d67c9390bbf1b1629) {
+    if (frame_b340d8c55d64500bf3394a5724e02585 == cache_frame_b340d8c55d64500bf3394a5724e02585) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_68f6857c2d6eec8d67c9390bbf1b1629);
-        cache_frame_68f6857c2d6eec8d67c9390bbf1b1629 = NULL;
+        Py_DECREF(cache_frame_b340d8c55d64500bf3394a5724e02585);
+        cache_frame_b340d8c55d64500bf3394a5724e02585 = NULL;
     }
 
-    assertFrameObject(frame_68f6857c2d6eec8d67c9390bbf1b1629);
+    assertFrameObject(frame_b340d8c55d64500bf3394a5724e02585);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1563,14 +1563,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *var_col = NULL;
-    struct Nuitka_FrameObject *frame_da64cef9ef8c4903b22f64abb915787f;
+    struct Nuitka_FrameObject *frame_7845e3339512d0ba9e1af2264d65bc4c;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_da64cef9ef8c4903b22f64abb915787f = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7845e3339512d0ba9e1af2264d65bc4c = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -1578,31 +1578,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_da64cef9ef8c4903b22f64abb915787f)) {
-        Py_XDECREF(cache_frame_da64cef9ef8c4903b22f64abb915787f);
+    if (isFrameUnusable(cache_frame_7845e3339512d0ba9e1af2264d65bc4c)) {
+        Py_XDECREF(cache_frame_7845e3339512d0ba9e1af2264d65bc4c);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_da64cef9ef8c4903b22f64abb915787f == NULL) {
+        if (cache_frame_7845e3339512d0ba9e1af2264d65bc4c == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_da64cef9ef8c4903b22f64abb915787f = MAKE_FUNCTION_FRAME(codeobj_da64cef9ef8c4903b22f64abb915787f, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_7845e3339512d0ba9e1af2264d65bc4c = MAKE_FUNCTION_FRAME(codeobj_7845e3339512d0ba9e1af2264d65bc4c, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_da64cef9ef8c4903b22f64abb915787f->m_type_description == NULL);
-    frame_da64cef9ef8c4903b22f64abb915787f = cache_frame_da64cef9ef8c4903b22f64abb915787f;
+    assert(cache_frame_7845e3339512d0ba9e1af2264d65bc4c->m_type_description == NULL);
+    frame_7845e3339512d0ba9e1af2264d65bc4c = cache_frame_7845e3339512d0ba9e1af2264d65bc4c;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_da64cef9ef8c4903b22f64abb915787f);
+    pushFrameStack(frame_7845e3339512d0ba9e1af2264d65bc4c);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_da64cef9ef8c4903b22f64abb915787f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7845e3339512d0ba9e1af2264d65bc4c) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1639,7 +1639,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_da64cef9ef8c4903b22f64abb915787f->m_frame.f_lineno = 123;
+        frame_7845e3339512d0ba9e1af2264d65bc4c->m_frame.f_lineno = 123;
         tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -1742,7 +1742,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_da64cef9ef8c4903b22f64abb915787f);
+    RESTORE_FRAME_EXCEPTION(frame_7845e3339512d0ba9e1af2264d65bc4c);
 #endif
 
     // Put the previous frame back on top.
@@ -1752,7 +1752,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_da64cef9ef8c4903b22f64abb915787f);
+    RESTORE_FRAME_EXCEPTION(frame_7845e3339512d0ba9e1af2264d65bc4c);
 #endif
 
     // Put the previous frame back on top.
@@ -1763,18 +1763,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_da64cef9ef8c4903b22f64abb915787f);
+    RESTORE_FRAME_EXCEPTION(frame_7845e3339512d0ba9e1af2264d65bc4c);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_da64cef9ef8c4903b22f64abb915787f, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_da64cef9ef8c4903b22f64abb915787f->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_da64cef9ef8c4903b22f64abb915787f, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_7845e3339512d0ba9e1af2264d65bc4c, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_7845e3339512d0ba9e1af2264d65bc4c->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_7845e3339512d0ba9e1af2264d65bc4c, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_da64cef9ef8c4903b22f64abb915787f,
+        frame_7845e3339512d0ba9e1af2264d65bc4c,
         type_description_1,
         par_self,
         var_col
@@ -1782,17 +1782,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__4_coordinate(struct Nuitka_
 
 
     // Release cached frame if used for exception.
-    if (frame_da64cef9ef8c4903b22f64abb915787f == cache_frame_da64cef9ef8c4903b22f64abb915787f) {
+    if (frame_7845e3339512d0ba9e1af2264d65bc4c == cache_frame_7845e3339512d0ba9e1af2264d65bc4c) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_da64cef9ef8c4903b22f64abb915787f);
-        cache_frame_da64cef9ef8c4903b22f64abb915787f = NULL;
+        Py_DECREF(cache_frame_7845e3339512d0ba9e1af2264d65bc4c);
+        cache_frame_7845e3339512d0ba9e1af2264d65bc4c = NULL;
     }
 
-    assertFrameObject(frame_da64cef9ef8c4903b22f64abb915787f);
+    assertFrameObject(frame_7845e3339512d0ba9e1af2264d65bc4c);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1864,14 +1864,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__5_col_idx(struct Nuitka_Fun
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_c97cf0de330a65057bac8499b331aa4a;
+    struct Nuitka_FrameObject *frame_1946b367b07c1b0e6623c7ee9f0afaf5;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_c97cf0de330a65057bac8499b331aa4a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -1879,31 +1879,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__5_col_idx(struct Nuitka_Fun
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_c97cf0de330a65057bac8499b331aa4a)) {
-        Py_XDECREF(cache_frame_c97cf0de330a65057bac8499b331aa4a);
+    if (isFrameUnusable(cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5)) {
+        Py_XDECREF(cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_c97cf0de330a65057bac8499b331aa4a == NULL) {
+        if (cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_c97cf0de330a65057bac8499b331aa4a = MAKE_FUNCTION_FRAME(codeobj_c97cf0de330a65057bac8499b331aa4a, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5 = MAKE_FUNCTION_FRAME(codeobj_1946b367b07c1b0e6623c7ee9f0afaf5, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_c97cf0de330a65057bac8499b331aa4a->m_type_description == NULL);
-    frame_c97cf0de330a65057bac8499b331aa4a = cache_frame_c97cf0de330a65057bac8499b331aa4a;
+    assert(cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5->m_type_description == NULL);
+    frame_1946b367b07c1b0e6623c7ee9f0afaf5 = cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_c97cf0de330a65057bac8499b331aa4a);
+    pushFrameStack(frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c97cf0de330a65057bac8499b331aa4a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1946b367b07c1b0e6623c7ee9f0afaf5) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1925,7 +1925,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__5_col_idx(struct Nuitka_Fun
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c97cf0de330a65057bac8499b331aa4a);
+    RESTORE_FRAME_EXCEPTION(frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 #endif
 
     // Put the previous frame back on top.
@@ -1935,7 +1935,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__5_col_idx(struct Nuitka_Fun
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c97cf0de330a65057bac8499b331aa4a);
+    RESTORE_FRAME_EXCEPTION(frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 #endif
 
     // Put the previous frame back on top.
@@ -1946,35 +1946,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__5_col_idx(struct Nuitka_Fun
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c97cf0de330a65057bac8499b331aa4a);
+    RESTORE_FRAME_EXCEPTION(frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_c97cf0de330a65057bac8499b331aa4a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_c97cf0de330a65057bac8499b331aa4a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_c97cf0de330a65057bac8499b331aa4a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_1946b367b07c1b0e6623c7ee9f0afaf5, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_1946b367b07c1b0e6623c7ee9f0afaf5->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_1946b367b07c1b0e6623c7ee9f0afaf5, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_c97cf0de330a65057bac8499b331aa4a,
+        frame_1946b367b07c1b0e6623c7ee9f0afaf5,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_c97cf0de330a65057bac8499b331aa4a == cache_frame_c97cf0de330a65057bac8499b331aa4a) {
+    if (frame_1946b367b07c1b0e6623c7ee9f0afaf5 == cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_c97cf0de330a65057bac8499b331aa4a);
-        cache_frame_c97cf0de330a65057bac8499b331aa4a = NULL;
+        Py_DECREF(cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5);
+        cache_frame_1946b367b07c1b0e6623c7ee9f0afaf5 = NULL;
     }
 
-    assertFrameObject(frame_c97cf0de330a65057bac8499b331aa4a);
+    assertFrameObject(frame_1946b367b07c1b0e6623c7ee9f0afaf5);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2041,14 +2041,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_a26d79b401518d1a61102769adb6c94e;
+    struct Nuitka_FrameObject *frame_3ef90352028ad43414eabff7313d59fb;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_a26d79b401518d1a61102769adb6c94e = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3ef90352028ad43414eabff7313d59fb = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -2056,31 +2056,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_a26d79b401518d1a61102769adb6c94e)) {
-        Py_XDECREF(cache_frame_a26d79b401518d1a61102769adb6c94e);
+    if (isFrameUnusable(cache_frame_3ef90352028ad43414eabff7313d59fb)) {
+        Py_XDECREF(cache_frame_3ef90352028ad43414eabff7313d59fb);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_a26d79b401518d1a61102769adb6c94e == NULL) {
+        if (cache_frame_3ef90352028ad43414eabff7313d59fb == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_a26d79b401518d1a61102769adb6c94e = MAKE_FUNCTION_FRAME(codeobj_a26d79b401518d1a61102769adb6c94e, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_3ef90352028ad43414eabff7313d59fb = MAKE_FUNCTION_FRAME(codeobj_3ef90352028ad43414eabff7313d59fb, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_a26d79b401518d1a61102769adb6c94e->m_type_description == NULL);
-    frame_a26d79b401518d1a61102769adb6c94e = cache_frame_a26d79b401518d1a61102769adb6c94e;
+    assert(cache_frame_3ef90352028ad43414eabff7313d59fb->m_type_description == NULL);
+    frame_3ef90352028ad43414eabff7313d59fb = cache_frame_3ef90352028ad43414eabff7313d59fb;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_a26d79b401518d1a61102769adb6c94e);
+    pushFrameStack(frame_3ef90352028ad43414eabff7313d59fb);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a26d79b401518d1a61102769adb6c94e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3ef90352028ad43414eabff7313d59fb) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2116,7 +2116,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_a26d79b401518d1a61102769adb6c94e->m_frame.f_lineno = 135;
+        frame_3ef90352028ad43414eabff7313d59fb->m_frame.f_lineno = 135;
         tmp_return_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_return_value == NULL) {
@@ -2133,7 +2133,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a26d79b401518d1a61102769adb6c94e);
+    RESTORE_FRAME_EXCEPTION(frame_3ef90352028ad43414eabff7313d59fb);
 #endif
 
     // Put the previous frame back on top.
@@ -2143,7 +2143,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a26d79b401518d1a61102769adb6c94e);
+    RESTORE_FRAME_EXCEPTION(frame_3ef90352028ad43414eabff7313d59fb);
 #endif
 
     // Put the previous frame back on top.
@@ -2154,35 +2154,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__6_column_letter(struct Nuit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a26d79b401518d1a61102769adb6c94e);
+    RESTORE_FRAME_EXCEPTION(frame_3ef90352028ad43414eabff7313d59fb);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_a26d79b401518d1a61102769adb6c94e, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_a26d79b401518d1a61102769adb6c94e->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_a26d79b401518d1a61102769adb6c94e, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_3ef90352028ad43414eabff7313d59fb, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_3ef90352028ad43414eabff7313d59fb->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_3ef90352028ad43414eabff7313d59fb, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_a26d79b401518d1a61102769adb6c94e,
+        frame_3ef90352028ad43414eabff7313d59fb,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_a26d79b401518d1a61102769adb6c94e == cache_frame_a26d79b401518d1a61102769adb6c94e) {
+    if (frame_3ef90352028ad43414eabff7313d59fb == cache_frame_3ef90352028ad43414eabff7313d59fb) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_a26d79b401518d1a61102769adb6c94e);
-        cache_frame_a26d79b401518d1a61102769adb6c94e = NULL;
+        Py_DECREF(cache_frame_3ef90352028ad43414eabff7313d59fb);
+        cache_frame_3ef90352028ad43414eabff7313d59fb = NULL;
     }
 
-    assertFrameObject(frame_a26d79b401518d1a61102769adb6c94e);
+    assertFrameObject(frame_3ef90352028ad43414eabff7313d59fb);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2249,14 +2249,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__7_encoding(struct Nuitka_Fu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_6d8cd2aa75216b9639bd2028f73587bc;
+    struct Nuitka_FrameObject *frame_b5d290cf759bfde8e5bf2a44e05332ed;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_6d8cd2aa75216b9639bd2028f73587bc = NULL;
+    static struct Nuitka_FrameObject *cache_frame_b5d290cf759bfde8e5bf2a44e05332ed = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -2264,31 +2264,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__7_encoding(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_6d8cd2aa75216b9639bd2028f73587bc)) {
-        Py_XDECREF(cache_frame_6d8cd2aa75216b9639bd2028f73587bc);
+    if (isFrameUnusable(cache_frame_b5d290cf759bfde8e5bf2a44e05332ed)) {
+        Py_XDECREF(cache_frame_b5d290cf759bfde8e5bf2a44e05332ed);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_6d8cd2aa75216b9639bd2028f73587bc == NULL) {
+        if (cache_frame_b5d290cf759bfde8e5bf2a44e05332ed == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_6d8cd2aa75216b9639bd2028f73587bc = MAKE_FUNCTION_FRAME(codeobj_6d8cd2aa75216b9639bd2028f73587bc, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_b5d290cf759bfde8e5bf2a44e05332ed = MAKE_FUNCTION_FRAME(codeobj_b5d290cf759bfde8e5bf2a44e05332ed, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_6d8cd2aa75216b9639bd2028f73587bc->m_type_description == NULL);
-    frame_6d8cd2aa75216b9639bd2028f73587bc = cache_frame_6d8cd2aa75216b9639bd2028f73587bc;
+    assert(cache_frame_b5d290cf759bfde8e5bf2a44e05332ed->m_type_description == NULL);
+    frame_b5d290cf759bfde8e5bf2a44e05332ed = cache_frame_b5d290cf759bfde8e5bf2a44e05332ed;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_6d8cd2aa75216b9639bd2028f73587bc);
+    pushFrameStack(frame_b5d290cf759bfde8e5bf2a44e05332ed);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6d8cd2aa75216b9639bd2028f73587bc) == 2); // Frame stack
+    assert(Py_REFCNT(frame_b5d290cf759bfde8e5bf2a44e05332ed) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2323,7 +2323,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__7_encoding(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_6d8cd2aa75216b9639bd2028f73587bc);
+    RESTORE_FRAME_EXCEPTION(frame_b5d290cf759bfde8e5bf2a44e05332ed);
 #endif
 
     // Put the previous frame back on top.
@@ -2333,7 +2333,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__7_encoding(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_6d8cd2aa75216b9639bd2028f73587bc);
+    RESTORE_FRAME_EXCEPTION(frame_b5d290cf759bfde8e5bf2a44e05332ed);
 #endif
 
     // Put the previous frame back on top.
@@ -2344,35 +2344,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__7_encoding(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_6d8cd2aa75216b9639bd2028f73587bc);
+    RESTORE_FRAME_EXCEPTION(frame_b5d290cf759bfde8e5bf2a44e05332ed);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_6d8cd2aa75216b9639bd2028f73587bc, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_6d8cd2aa75216b9639bd2028f73587bc->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_6d8cd2aa75216b9639bd2028f73587bc, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_b5d290cf759bfde8e5bf2a44e05332ed, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_b5d290cf759bfde8e5bf2a44e05332ed->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_b5d290cf759bfde8e5bf2a44e05332ed, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_6d8cd2aa75216b9639bd2028f73587bc,
+        frame_b5d290cf759bfde8e5bf2a44e05332ed,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_6d8cd2aa75216b9639bd2028f73587bc == cache_frame_6d8cd2aa75216b9639bd2028f73587bc) {
+    if (frame_b5d290cf759bfde8e5bf2a44e05332ed == cache_frame_b5d290cf759bfde8e5bf2a44e05332ed) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_6d8cd2aa75216b9639bd2028f73587bc);
-        cache_frame_6d8cd2aa75216b9639bd2028f73587bc = NULL;
+        Py_DECREF(cache_frame_b5d290cf759bfde8e5bf2a44e05332ed);
+        cache_frame_b5d290cf759bfde8e5bf2a44e05332ed = NULL;
     }
 
-    assertFrameObject(frame_6d8cd2aa75216b9639bd2028f73587bc);
+    assertFrameObject(frame_b5d290cf759bfde8e5bf2a44e05332ed);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2439,14 +2439,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__8_base_date(struct Nuitka_F
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_5fcb537e40b381e3bbc8877ce556e2b7;
+    struct Nuitka_FrameObject *frame_fd531f06ffd83cefd9fc46e965271d1d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_5fcb537e40b381e3bbc8877ce556e2b7 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_fd531f06ffd83cefd9fc46e965271d1d = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -2454,31 +2454,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__8_base_date(struct Nuitka_F
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_5fcb537e40b381e3bbc8877ce556e2b7)) {
-        Py_XDECREF(cache_frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    if (isFrameUnusable(cache_frame_fd531f06ffd83cefd9fc46e965271d1d)) {
+        Py_XDECREF(cache_frame_fd531f06ffd83cefd9fc46e965271d1d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_5fcb537e40b381e3bbc8877ce556e2b7 == NULL) {
+        if (cache_frame_fd531f06ffd83cefd9fc46e965271d1d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_5fcb537e40b381e3bbc8877ce556e2b7 = MAKE_FUNCTION_FRAME(codeobj_5fcb537e40b381e3bbc8877ce556e2b7, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_fd531f06ffd83cefd9fc46e965271d1d = MAKE_FUNCTION_FRAME(codeobj_fd531f06ffd83cefd9fc46e965271d1d, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_5fcb537e40b381e3bbc8877ce556e2b7->m_type_description == NULL);
-    frame_5fcb537e40b381e3bbc8877ce556e2b7 = cache_frame_5fcb537e40b381e3bbc8877ce556e2b7;
+    assert(cache_frame_fd531f06ffd83cefd9fc46e965271d1d->m_type_description == NULL);
+    frame_fd531f06ffd83cefd9fc46e965271d1d = cache_frame_fd531f06ffd83cefd9fc46e965271d1d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    pushFrameStack(frame_fd531f06ffd83cefd9fc46e965271d1d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_5fcb537e40b381e3bbc8877ce556e2b7) == 2); // Frame stack
+    assert(Py_REFCNT(frame_fd531f06ffd83cefd9fc46e965271d1d) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2526,7 +2526,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__8_base_date(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    RESTORE_FRAME_EXCEPTION(frame_fd531f06ffd83cefd9fc46e965271d1d);
 #endif
 
     // Put the previous frame back on top.
@@ -2536,7 +2536,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__8_base_date(struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    RESTORE_FRAME_EXCEPTION(frame_fd531f06ffd83cefd9fc46e965271d1d);
 #endif
 
     // Put the previous frame back on top.
@@ -2547,35 +2547,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__8_base_date(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    RESTORE_FRAME_EXCEPTION(frame_fd531f06ffd83cefd9fc46e965271d1d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5fcb537e40b381e3bbc8877ce556e2b7, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5fcb537e40b381e3bbc8877ce556e2b7->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5fcb537e40b381e3bbc8877ce556e2b7, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_fd531f06ffd83cefd9fc46e965271d1d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_fd531f06ffd83cefd9fc46e965271d1d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_fd531f06ffd83cefd9fc46e965271d1d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_5fcb537e40b381e3bbc8877ce556e2b7,
+        frame_fd531f06ffd83cefd9fc46e965271d1d,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_5fcb537e40b381e3bbc8877ce556e2b7 == cache_frame_5fcb537e40b381e3bbc8877ce556e2b7) {
+    if (frame_fd531f06ffd83cefd9fc46e965271d1d == cache_frame_fd531f06ffd83cefd9fc46e965271d1d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_5fcb537e40b381e3bbc8877ce556e2b7);
-        cache_frame_5fcb537e40b381e3bbc8877ce556e2b7 = NULL;
+        Py_DECREF(cache_frame_fd531f06ffd83cefd9fc46e965271d1d);
+        cache_frame_fd531f06ffd83cefd9fc46e965271d1d = NULL;
     }
 
-    assertFrameObject(frame_5fcb537e40b381e3bbc8877ce556e2b7);
+    assertFrameObject(frame_fd531f06ffd83cefd9fc46e965271d1d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2642,14 +2642,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_c1c8244c4619d4e30ebd285ecbee251a;
+    struct Nuitka_FrameObject *frame_dd6ded7f8600fdaaf46ce0e0414bda33;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_c1c8244c4619d4e30ebd285ecbee251a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -2657,31 +2657,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_c1c8244c4619d4e30ebd285ecbee251a)) {
-        Py_XDECREF(cache_frame_c1c8244c4619d4e30ebd285ecbee251a);
+    if (isFrameUnusable(cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33)) {
+        Py_XDECREF(cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_c1c8244c4619d4e30ebd285ecbee251a == NULL) {
+        if (cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_c1c8244c4619d4e30ebd285ecbee251a = MAKE_FUNCTION_FRAME(codeobj_c1c8244c4619d4e30ebd285ecbee251a, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33 = MAKE_FUNCTION_FRAME(codeobj_dd6ded7f8600fdaaf46ce0e0414bda33, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_c1c8244c4619d4e30ebd285ecbee251a->m_type_description == NULL);
-    frame_c1c8244c4619d4e30ebd285ecbee251a = cache_frame_c1c8244c4619d4e30ebd285ecbee251a;
+    assert(cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33->m_type_description == NULL);
+    frame_dd6ded7f8600fdaaf46ce0e0414bda33 = cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_c1c8244c4619d4e30ebd285ecbee251a);
+    pushFrameStack(frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c1c8244c4619d4e30ebd285ecbee251a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_dd6ded7f8600fdaaf46ce0e0414bda33) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2746,7 +2746,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_c1c8244c4619d4e30ebd285ecbee251a->m_frame.f_lineno = 148;
+        frame_dd6ded7f8600fdaaf46ce0e0414bda33->m_frame.f_lineno = 148;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
             tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
@@ -2769,7 +2769,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c1c8244c4619d4e30ebd285ecbee251a);
+    RESTORE_FRAME_EXCEPTION(frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 #endif
 
     // Put the previous frame back on top.
@@ -2779,7 +2779,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c1c8244c4619d4e30ebd285ecbee251a);
+    RESTORE_FRAME_EXCEPTION(frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 #endif
 
     // Put the previous frame back on top.
@@ -2790,35 +2790,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__9___repr__(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c1c8244c4619d4e30ebd285ecbee251a);
+    RESTORE_FRAME_EXCEPTION(frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_c1c8244c4619d4e30ebd285ecbee251a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_c1c8244c4619d4e30ebd285ecbee251a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_c1c8244c4619d4e30ebd285ecbee251a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_dd6ded7f8600fdaaf46ce0e0414bda33, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_dd6ded7f8600fdaaf46ce0e0414bda33->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_dd6ded7f8600fdaaf46ce0e0414bda33, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_c1c8244c4619d4e30ebd285ecbee251a,
+        frame_dd6ded7f8600fdaaf46ce0e0414bda33,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_c1c8244c4619d4e30ebd285ecbee251a == cache_frame_c1c8244c4619d4e30ebd285ecbee251a) {
+    if (frame_dd6ded7f8600fdaaf46ce0e0414bda33 == cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_c1c8244c4619d4e30ebd285ecbee251a);
-        cache_frame_c1c8244c4619d4e30ebd285ecbee251a = NULL;
+        Py_DECREF(cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33);
+        cache_frame_dd6ded7f8600fdaaf46ce0e0414bda33 = NULL;
     }
 
-    assertFrameObject(frame_c1c8244c4619d4e30ebd285ecbee251a);
+    assertFrameObject(frame_dd6ded7f8600fdaaf46ce0e0414bda33);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2887,14 +2887,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
     PyObject *par_self = python_pars[0];
     PyObject *par_value = python_pars[1];
     PyObject *tmp_return_value = NULL;
-    struct Nuitka_FrameObject *frame_c28f6fb1fd1f0cdeae4465a17fd87eeb;
+    struct Nuitka_FrameObject *frame_3fc6f465b6438a1f3d31a5ded8fdb162;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -2921,31 +2921,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
     Py_INCREF(tmp_return_value);
     goto try_return_handler_1;
     branch_no_1:;
-    if (isFrameUnusable(cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb)) {
-        Py_XDECREF(cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    if (isFrameUnusable(cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162)) {
+        Py_XDECREF(cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb == NULL) {
+        if (cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb = MAKE_FUNCTION_FRAME(codeobj_c28f6fb1fd1f0cdeae4465a17fd87eeb, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162 = MAKE_FUNCTION_FRAME(codeobj_3fc6f465b6438a1f3d31a5ded8fdb162, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb->m_type_description == NULL);
-    frame_c28f6fb1fd1f0cdeae4465a17fd87eeb = cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb;
+    assert(cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162->m_type_description == NULL);
+    frame_3fc6f465b6438a1f3d31a5ded8fdb162 = cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    pushFrameStack(frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3fc6f465b6438a1f3d31a5ded8fdb162) == 2); // Frame stack
 
     // Framed code:
     {
@@ -3104,7 +3104,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
         }
         CHECK_OBJECT(par_value);
         tmp_args_element_name_1 = par_value;
-        frame_c28f6fb1fd1f0cdeae4465a17fd87eeb->m_frame.f_lineno = 161;
+        frame_3fc6f465b6438a1f3d31a5ded8fdb162->m_frame.f_lineno = 161;
         tmp_next_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[37], tmp_args_element_name_1);
         if (tmp_next_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3192,7 +3192,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    RESTORE_FRAME_EXCEPTION(frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 #endif
 
     // Put the previous frame back on top.
@@ -3202,7 +3202,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    RESTORE_FRAME_EXCEPTION(frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 #endif
 
     // Put the previous frame back on top.
@@ -3213,18 +3213,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    RESTORE_FRAME_EXCEPTION(frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_c28f6fb1fd1f0cdeae4465a17fd87eeb->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_c28f6fb1fd1f0cdeae4465a17fd87eeb, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_3fc6f465b6438a1f3d31a5ded8fdb162, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_3fc6f465b6438a1f3d31a5ded8fdb162->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_3fc6f465b6438a1f3d31a5ded8fdb162, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_c28f6fb1fd1f0cdeae4465a17fd87eeb,
+        frame_3fc6f465b6438a1f3d31a5ded8fdb162,
         type_description_1,
         par_self,
         par_value
@@ -3232,17 +3232,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__10_check_string(struct Nuit
 
 
     // Release cached frame if used for exception.
-    if (frame_c28f6fb1fd1f0cdeae4465a17fd87eeb == cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb) {
+    if (frame_3fc6f465b6438a1f3d31a5ded8fdb162 == cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
-        cache_frame_c28f6fb1fd1f0cdeae4465a17fd87eeb = NULL;
+        Py_DECREF(cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162);
+        cache_frame_3fc6f465b6438a1f3d31a5ded8fdb162 = NULL;
     }
 
-    assertFrameObject(frame_c28f6fb1fd1f0cdeae4465a17fd87eeb);
+    assertFrameObject(frame_3fc6f465b6438a1f3d31a5ded8fdb162);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3314,7 +3314,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_value = python_pars[1];
-    struct Nuitka_FrameObject *frame_0745f65b6c92dc88f70be257de262c77;
+    struct Nuitka_FrameObject *frame_6274a879ef4adb345cd978db8fb04782;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
@@ -3334,7 +3334,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_0745f65b6c92dc88f70be257de262c77 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_6274a879ef4adb345cd978db8fb04782 = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -3342,31 +3342,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_0745f65b6c92dc88f70be257de262c77)) {
-        Py_XDECREF(cache_frame_0745f65b6c92dc88f70be257de262c77);
+    if (isFrameUnusable(cache_frame_6274a879ef4adb345cd978db8fb04782)) {
+        Py_XDECREF(cache_frame_6274a879ef4adb345cd978db8fb04782);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_0745f65b6c92dc88f70be257de262c77 == NULL) {
+        if (cache_frame_6274a879ef4adb345cd978db8fb04782 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_0745f65b6c92dc88f70be257de262c77 = MAKE_FUNCTION_FRAME(codeobj_0745f65b6c92dc88f70be257de262c77, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_6274a879ef4adb345cd978db8fb04782 = MAKE_FUNCTION_FRAME(codeobj_6274a879ef4adb345cd978db8fb04782, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_0745f65b6c92dc88f70be257de262c77->m_type_description == NULL);
-    frame_0745f65b6c92dc88f70be257de262c77 = cache_frame_0745f65b6c92dc88f70be257de262c77;
+    assert(cache_frame_6274a879ef4adb345cd978db8fb04782->m_type_description == NULL);
+    frame_6274a879ef4adb345cd978db8fb04782 = cache_frame_6274a879ef4adb345cd978db8fb04782;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_0745f65b6c92dc88f70be257de262c77);
+    pushFrameStack(frame_6274a879ef4adb345cd978db8fb04782);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0745f65b6c92dc88f70be257de262c77) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6274a879ef4adb345cd978db8fb04782) == 2); // Frame stack
 
     // Framed code:
     // Tried code:
@@ -3404,9 +3404,9 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_0745f65b6c92dc88f70be257de262c77, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_6274a879ef4adb345cd978db8fb04782, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_0745f65b6c92dc88f70be257de262c77, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_6274a879ef4adb345cd978db8fb04782, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -3439,7 +3439,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
         exception_lineno = 167;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_0745f65b6c92dc88f70be257de262c77->m_frame) frame_0745f65b6c92dc88f70be257de262c77->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_6274a879ef4adb345cd978db8fb04782->m_frame) frame_6274a879ef4adb345cd978db8fb04782->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "oo";
     goto try_except_handler_3;
     branch_end_1:;
@@ -3476,7 +3476,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
     // End of try:
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0745f65b6c92dc88f70be257de262c77);
+    RESTORE_FRAME_EXCEPTION(frame_6274a879ef4adb345cd978db8fb04782);
 #endif
 
     // Put the previous frame back on top.
@@ -3486,7 +3486,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0745f65b6c92dc88f70be257de262c77);
+    RESTORE_FRAME_EXCEPTION(frame_6274a879ef4adb345cd978db8fb04782);
 #endif
 
     // Put the previous frame back on top.
@@ -3497,18 +3497,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0745f65b6c92dc88f70be257de262c77);
+    RESTORE_FRAME_EXCEPTION(frame_6274a879ef4adb345cd978db8fb04782);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_0745f65b6c92dc88f70be257de262c77, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_0745f65b6c92dc88f70be257de262c77->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_0745f65b6c92dc88f70be257de262c77, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_6274a879ef4adb345cd978db8fb04782, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_6274a879ef4adb345cd978db8fb04782->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_6274a879ef4adb345cd978db8fb04782, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_0745f65b6c92dc88f70be257de262c77,
+        frame_6274a879ef4adb345cd978db8fb04782,
         type_description_1,
         par_self,
         par_value
@@ -3516,17 +3516,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__11_check_error(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_0745f65b6c92dc88f70be257de262c77 == cache_frame_0745f65b6c92dc88f70be257de262c77) {
+    if (frame_6274a879ef4adb345cd978db8fb04782 == cache_frame_6274a879ef4adb345cd978db8fb04782) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_0745f65b6c92dc88f70be257de262c77);
-        cache_frame_0745f65b6c92dc88f70be257de262c77 = NULL;
+        Py_DECREF(cache_frame_6274a879ef4adb345cd978db8fb04782);
+        cache_frame_6274a879ef4adb345cd978db8fb04782 = NULL;
     }
 
-    assertFrameObject(frame_0745f65b6c92dc88f70be257de262c77);
+    assertFrameObject(frame_6274a879ef4adb345cd978db8fb04782);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3604,7 +3604,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
     PyObject *par_value = python_pars[1];
     PyObject *var_t = NULL;
     PyObject *var_dt = NULL;
-    struct Nuitka_FrameObject *frame_e77971103361f57265bb1907db9fee0a;
+    struct Nuitka_FrameObject *frame_cda805f312dc4aec4a7de69e88903aa4;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
@@ -3623,7 +3623,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_e77971103361f57265bb1907db9fee0a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_cda805f312dc4aec4a7de69e88903aa4 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -3632,31 +3632,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_e77971103361f57265bb1907db9fee0a)) {
-        Py_XDECREF(cache_frame_e77971103361f57265bb1907db9fee0a);
+    if (isFrameUnusable(cache_frame_cda805f312dc4aec4a7de69e88903aa4)) {
+        Py_XDECREF(cache_frame_cda805f312dc4aec4a7de69e88903aa4);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_e77971103361f57265bb1907db9fee0a == NULL) {
+        if (cache_frame_cda805f312dc4aec4a7de69e88903aa4 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_e77971103361f57265bb1907db9fee0a = MAKE_FUNCTION_FRAME(codeobj_e77971103361f57265bb1907db9fee0a, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_cda805f312dc4aec4a7de69e88903aa4 = MAKE_FUNCTION_FRAME(codeobj_cda805f312dc4aec4a7de69e88903aa4, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_e77971103361f57265bb1907db9fee0a->m_type_description == NULL);
-    frame_e77971103361f57265bb1907db9fee0a = cache_frame_e77971103361f57265bb1907db9fee0a;
+    assert(cache_frame_cda805f312dc4aec4a7de69e88903aa4->m_type_description == NULL);
+    frame_cda805f312dc4aec4a7de69e88903aa4 = cache_frame_cda805f312dc4aec4a7de69e88903aa4;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_e77971103361f57265bb1907db9fee0a);
+    pushFrameStack(frame_cda805f312dc4aec4a7de69e88903aa4);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_e77971103361f57265bb1907db9fee0a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_cda805f312dc4aec4a7de69e88903aa4) == 2); // Frame stack
 
     // Framed code:
     {
@@ -3740,9 +3740,9 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_e77971103361f57265bb1907db9fee0a, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_cda805f312dc4aec4a7de69e88903aa4, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_e77971103361f57265bb1907db9fee0a, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_cda805f312dc4aec4a7de69e88903aa4, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -3790,7 +3790,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         tmp_args_element_name_1 = var_t;
         CHECK_OBJECT(par_value);
         tmp_args_element_name_2 = par_value;
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 181;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 181;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
             tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
@@ -3816,7 +3816,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         exception_lineno = 178;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_e77971103361f57265bb1907db9fee0a->m_frame) frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_cda805f312dc4aec4a7de69e88903aa4->m_frame) frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "oooo";
     goto try_except_handler_3;
     branch_end_1:;
@@ -3907,7 +3907,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         tmp_called_instance_1 = mod_consts[43];
         CHECK_OBJECT(par_value);
         tmp_args_element_name_3 = par_value;
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 184;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 184;
         tmp_make_exception_arg_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[14], tmp_args_element_name_3);
         if (tmp_make_exception_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -3919,7 +3919,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 184;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 184;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -4081,7 +4081,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 190;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 190;
         tmp_operand_name_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_4);
         Py_DECREF(tmp_args_element_name_4);
         if (tmp_operand_name_1 == NULL) {
@@ -4137,7 +4137,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         }
         CHECK_OBJECT(var_t);
         tmp_args_element_name_5 = var_t;
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 191;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 191;
         tmp_assattr_name_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_5);
         if (tmp_assattr_name_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4237,7 +4237,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_value);
         tmp_args_element_name_6 = par_value;
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 194;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 194;
         tmp_assign_source_4 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[47], tmp_args_element_name_6);
         if (tmp_assign_source_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4310,7 +4310,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
         }
 
         tmp_called_instance_3 = par_value;
-        frame_e77971103361f57265bb1907db9fee0a->m_frame.f_lineno = 195;
+        frame_cda805f312dc4aec4a7de69e88903aa4->m_frame.f_lineno = 195;
         tmp_call_result_1 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_3,
             mod_consts[49],
@@ -4511,7 +4511,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_e77971103361f57265bb1907db9fee0a);
+    RESTORE_FRAME_EXCEPTION(frame_cda805f312dc4aec4a7de69e88903aa4);
 #endif
 
     // Put the previous frame back on top.
@@ -4522,18 +4522,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_e77971103361f57265bb1907db9fee0a);
+    RESTORE_FRAME_EXCEPTION(frame_cda805f312dc4aec4a7de69e88903aa4);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_e77971103361f57265bb1907db9fee0a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_e77971103361f57265bb1907db9fee0a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_e77971103361f57265bb1907db9fee0a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_cda805f312dc4aec4a7de69e88903aa4, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_cda805f312dc4aec4a7de69e88903aa4->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_cda805f312dc4aec4a7de69e88903aa4, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_e77971103361f57265bb1907db9fee0a,
+        frame_cda805f312dc4aec4a7de69e88903aa4,
         type_description_1,
         par_self,
         par_value,
@@ -4543,17 +4543,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__12__bind_value(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_e77971103361f57265bb1907db9fee0a == cache_frame_e77971103361f57265bb1907db9fee0a) {
+    if (frame_cda805f312dc4aec4a7de69e88903aa4 == cache_frame_cda805f312dc4aec4a7de69e88903aa4) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_e77971103361f57265bb1907db9fee0a);
-        cache_frame_e77971103361f57265bb1907db9fee0a = NULL;
+        Py_DECREF(cache_frame_cda805f312dc4aec4a7de69e88903aa4);
+        cache_frame_cda805f312dc4aec4a7de69e88903aa4 = NULL;
     }
 
-    assertFrameObject(frame_e77971103361f57265bb1907db9fee0a);
+    assertFrameObject(frame_cda805f312dc4aec4a7de69e88903aa4);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4636,14 +4636,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__13_value(struct Nuitka_Func
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_2f9ee8bd543969d84b56764c36ae6385;
+    struct Nuitka_FrameObject *frame_edd790f933259134171665703ba1c53c;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_2f9ee8bd543969d84b56764c36ae6385 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_edd790f933259134171665703ba1c53c = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -4651,31 +4651,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__13_value(struct Nuitka_Func
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_2f9ee8bd543969d84b56764c36ae6385)) {
-        Py_XDECREF(cache_frame_2f9ee8bd543969d84b56764c36ae6385);
+    if (isFrameUnusable(cache_frame_edd790f933259134171665703ba1c53c)) {
+        Py_XDECREF(cache_frame_edd790f933259134171665703ba1c53c);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_2f9ee8bd543969d84b56764c36ae6385 == NULL) {
+        if (cache_frame_edd790f933259134171665703ba1c53c == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_2f9ee8bd543969d84b56764c36ae6385 = MAKE_FUNCTION_FRAME(codeobj_2f9ee8bd543969d84b56764c36ae6385, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_edd790f933259134171665703ba1c53c = MAKE_FUNCTION_FRAME(codeobj_edd790f933259134171665703ba1c53c, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_2f9ee8bd543969d84b56764c36ae6385->m_type_description == NULL);
-    frame_2f9ee8bd543969d84b56764c36ae6385 = cache_frame_2f9ee8bd543969d84b56764c36ae6385;
+    assert(cache_frame_edd790f933259134171665703ba1c53c->m_type_description == NULL);
+    frame_edd790f933259134171665703ba1c53c = cache_frame_edd790f933259134171665703ba1c53c;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_2f9ee8bd543969d84b56764c36ae6385);
+    pushFrameStack(frame_edd790f933259134171665703ba1c53c);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_2f9ee8bd543969d84b56764c36ae6385) == 2); // Frame stack
+    assert(Py_REFCNT(frame_edd790f933259134171665703ba1c53c) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4697,7 +4697,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__13_value(struct Nuitka_Func
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2f9ee8bd543969d84b56764c36ae6385);
+    RESTORE_FRAME_EXCEPTION(frame_edd790f933259134171665703ba1c53c);
 #endif
 
     // Put the previous frame back on top.
@@ -4707,7 +4707,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__13_value(struct Nuitka_Func
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2f9ee8bd543969d84b56764c36ae6385);
+    RESTORE_FRAME_EXCEPTION(frame_edd790f933259134171665703ba1c53c);
 #endif
 
     // Put the previous frame back on top.
@@ -4718,35 +4718,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__13_value(struct Nuitka_Func
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2f9ee8bd543969d84b56764c36ae6385);
+    RESTORE_FRAME_EXCEPTION(frame_edd790f933259134171665703ba1c53c);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_2f9ee8bd543969d84b56764c36ae6385, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_2f9ee8bd543969d84b56764c36ae6385->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_2f9ee8bd543969d84b56764c36ae6385, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_edd790f933259134171665703ba1c53c, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_edd790f933259134171665703ba1c53c->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_edd790f933259134171665703ba1c53c, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_2f9ee8bd543969d84b56764c36ae6385,
+        frame_edd790f933259134171665703ba1c53c,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_2f9ee8bd543969d84b56764c36ae6385 == cache_frame_2f9ee8bd543969d84b56764c36ae6385) {
+    if (frame_edd790f933259134171665703ba1c53c == cache_frame_edd790f933259134171665703ba1c53c) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_2f9ee8bd543969d84b56764c36ae6385);
-        cache_frame_2f9ee8bd543969d84b56764c36ae6385 = NULL;
+        Py_DECREF(cache_frame_edd790f933259134171665703ba1c53c);
+        cache_frame_edd790f933259134171665703ba1c53c = NULL;
     }
 
-    assertFrameObject(frame_2f9ee8bd543969d84b56764c36ae6385);
+    assertFrameObject(frame_edd790f933259134171665703ba1c53c);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4814,14 +4814,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_value = python_pars[1];
-    struct Nuitka_FrameObject *frame_7bd4622a4e036d050e74bd8b76965b06;
+    struct Nuitka_FrameObject *frame_d9986803dbbbe7971e70f3dd2b316996;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_7bd4622a4e036d050e74bd8b76965b06 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_d9986803dbbbe7971e70f3dd2b316996 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -4830,31 +4830,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_7bd4622a4e036d050e74bd8b76965b06)) {
-        Py_XDECREF(cache_frame_7bd4622a4e036d050e74bd8b76965b06);
+    if (isFrameUnusable(cache_frame_d9986803dbbbe7971e70f3dd2b316996)) {
+        Py_XDECREF(cache_frame_d9986803dbbbe7971e70f3dd2b316996);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_7bd4622a4e036d050e74bd8b76965b06 == NULL) {
+        if (cache_frame_d9986803dbbbe7971e70f3dd2b316996 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_7bd4622a4e036d050e74bd8b76965b06 = MAKE_FUNCTION_FRAME(codeobj_7bd4622a4e036d050e74bd8b76965b06, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_d9986803dbbbe7971e70f3dd2b316996 = MAKE_FUNCTION_FRAME(codeobj_d9986803dbbbe7971e70f3dd2b316996, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_7bd4622a4e036d050e74bd8b76965b06->m_type_description == NULL);
-    frame_7bd4622a4e036d050e74bd8b76965b06 = cache_frame_7bd4622a4e036d050e74bd8b76965b06;
+    assert(cache_frame_d9986803dbbbe7971e70f3dd2b316996->m_type_description == NULL);
+    frame_d9986803dbbbe7971e70f3dd2b316996 = cache_frame_d9986803dbbbe7971e70f3dd2b316996;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_7bd4622a4e036d050e74bd8b76965b06);
+    pushFrameStack(frame_d9986803dbbbe7971e70f3dd2b316996);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_7bd4622a4e036d050e74bd8b76965b06) == 2); // Frame stack
+    assert(Py_REFCNT(frame_d9986803dbbbe7971e70f3dd2b316996) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4865,7 +4865,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
         tmp_called_instance_1 = par_self;
         CHECK_OBJECT(par_value);
         tmp_args_element_name_1 = par_value;
-        frame_7bd4622a4e036d050e74bd8b76965b06->m_frame.f_lineno = 215;
+        frame_d9986803dbbbe7971e70f3dd2b316996->m_frame.f_lineno = 215;
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[56], tmp_args_element_name_1);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4881,7 +4881,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_7bd4622a4e036d050e74bd8b76965b06);
+    RESTORE_FRAME_EXCEPTION(frame_d9986803dbbbe7971e70f3dd2b316996);
 #endif
 
     // Put the previous frame back on top.
@@ -4892,18 +4892,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_7bd4622a4e036d050e74bd8b76965b06);
+    RESTORE_FRAME_EXCEPTION(frame_d9986803dbbbe7971e70f3dd2b316996);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_7bd4622a4e036d050e74bd8b76965b06, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_7bd4622a4e036d050e74bd8b76965b06->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_7bd4622a4e036d050e74bd8b76965b06, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_d9986803dbbbe7971e70f3dd2b316996, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_d9986803dbbbe7971e70f3dd2b316996->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_d9986803dbbbe7971e70f3dd2b316996, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_7bd4622a4e036d050e74bd8b76965b06,
+        frame_d9986803dbbbe7971e70f3dd2b316996,
         type_description_1,
         par_self,
         par_value
@@ -4911,17 +4911,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__14_value(struct Nuitka_Func
 
 
     // Release cached frame if used for exception.
-    if (frame_7bd4622a4e036d050e74bd8b76965b06 == cache_frame_7bd4622a4e036d050e74bd8b76965b06) {
+    if (frame_d9986803dbbbe7971e70f3dd2b316996 == cache_frame_d9986803dbbbe7971e70f3dd2b316996) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_7bd4622a4e036d050e74bd8b76965b06);
-        cache_frame_7bd4622a4e036d050e74bd8b76965b06 = NULL;
+        Py_DECREF(cache_frame_d9986803dbbbe7971e70f3dd2b316996);
+        cache_frame_d9986803dbbbe7971e70f3dd2b316996 = NULL;
     }
 
-    assertFrameObject(frame_7bd4622a4e036d050e74bd8b76965b06);
+    assertFrameObject(frame_d9986803dbbbe7971e70f3dd2b316996);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4995,14 +4995,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__15_internal_value(struct Nu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_5bf2b9002ac0c0bf8dba0166b5492172;
+    struct Nuitka_FrameObject *frame_18821f5e1165c056c5a6edb737027d52;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_5bf2b9002ac0c0bf8dba0166b5492172 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_18821f5e1165c056c5a6edb737027d52 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -5010,31 +5010,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__15_internal_value(struct Nu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_5bf2b9002ac0c0bf8dba0166b5492172)) {
-        Py_XDECREF(cache_frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    if (isFrameUnusable(cache_frame_18821f5e1165c056c5a6edb737027d52)) {
+        Py_XDECREF(cache_frame_18821f5e1165c056c5a6edb737027d52);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_5bf2b9002ac0c0bf8dba0166b5492172 == NULL) {
+        if (cache_frame_18821f5e1165c056c5a6edb737027d52 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_5bf2b9002ac0c0bf8dba0166b5492172 = MAKE_FUNCTION_FRAME(codeobj_5bf2b9002ac0c0bf8dba0166b5492172, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_18821f5e1165c056c5a6edb737027d52 = MAKE_FUNCTION_FRAME(codeobj_18821f5e1165c056c5a6edb737027d52, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_5bf2b9002ac0c0bf8dba0166b5492172->m_type_description == NULL);
-    frame_5bf2b9002ac0c0bf8dba0166b5492172 = cache_frame_5bf2b9002ac0c0bf8dba0166b5492172;
+    assert(cache_frame_18821f5e1165c056c5a6edb737027d52->m_type_description == NULL);
+    frame_18821f5e1165c056c5a6edb737027d52 = cache_frame_18821f5e1165c056c5a6edb737027d52;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    pushFrameStack(frame_18821f5e1165c056c5a6edb737027d52);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_5bf2b9002ac0c0bf8dba0166b5492172) == 2); // Frame stack
+    assert(Py_REFCNT(frame_18821f5e1165c056c5a6edb737027d52) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5056,7 +5056,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__15_internal_value(struct Nu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    RESTORE_FRAME_EXCEPTION(frame_18821f5e1165c056c5a6edb737027d52);
 #endif
 
     // Put the previous frame back on top.
@@ -5066,7 +5066,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__15_internal_value(struct Nu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    RESTORE_FRAME_EXCEPTION(frame_18821f5e1165c056c5a6edb737027d52);
 #endif
 
     // Put the previous frame back on top.
@@ -5077,35 +5077,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__15_internal_value(struct Nu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    RESTORE_FRAME_EXCEPTION(frame_18821f5e1165c056c5a6edb737027d52);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5bf2b9002ac0c0bf8dba0166b5492172, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5bf2b9002ac0c0bf8dba0166b5492172->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5bf2b9002ac0c0bf8dba0166b5492172, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_18821f5e1165c056c5a6edb737027d52, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_18821f5e1165c056c5a6edb737027d52->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_18821f5e1165c056c5a6edb737027d52, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_5bf2b9002ac0c0bf8dba0166b5492172,
+        frame_18821f5e1165c056c5a6edb737027d52,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_5bf2b9002ac0c0bf8dba0166b5492172 == cache_frame_5bf2b9002ac0c0bf8dba0166b5492172) {
+    if (frame_18821f5e1165c056c5a6edb737027d52 == cache_frame_18821f5e1165c056c5a6edb737027d52) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_5bf2b9002ac0c0bf8dba0166b5492172);
-        cache_frame_5bf2b9002ac0c0bf8dba0166b5492172 = NULL;
+        Py_DECREF(cache_frame_18821f5e1165c056c5a6edb737027d52);
+        cache_frame_18821f5e1165c056c5a6edb737027d52 = NULL;
     }
 
-    assertFrameObject(frame_5bf2b9002ac0c0bf8dba0166b5492172);
+    assertFrameObject(frame_18821f5e1165c056c5a6edb737027d52);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5172,14 +5172,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__16_hyperlink(struct Nuitka_
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_166245fa74647e9aef3967c13510f88e;
+    struct Nuitka_FrameObject *frame_eae4ff1d64710c6c0b3381c8276b68bd;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_166245fa74647e9aef3967c13510f88e = NULL;
+    static struct Nuitka_FrameObject *cache_frame_eae4ff1d64710c6c0b3381c8276b68bd = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -5187,31 +5187,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__16_hyperlink(struct Nuitka_
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_166245fa74647e9aef3967c13510f88e)) {
-        Py_XDECREF(cache_frame_166245fa74647e9aef3967c13510f88e);
+    if (isFrameUnusable(cache_frame_eae4ff1d64710c6c0b3381c8276b68bd)) {
+        Py_XDECREF(cache_frame_eae4ff1d64710c6c0b3381c8276b68bd);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_166245fa74647e9aef3967c13510f88e == NULL) {
+        if (cache_frame_eae4ff1d64710c6c0b3381c8276b68bd == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_166245fa74647e9aef3967c13510f88e = MAKE_FUNCTION_FRAME(codeobj_166245fa74647e9aef3967c13510f88e, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_eae4ff1d64710c6c0b3381c8276b68bd = MAKE_FUNCTION_FRAME(codeobj_eae4ff1d64710c6c0b3381c8276b68bd, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_166245fa74647e9aef3967c13510f88e->m_type_description == NULL);
-    frame_166245fa74647e9aef3967c13510f88e = cache_frame_166245fa74647e9aef3967c13510f88e;
+    assert(cache_frame_eae4ff1d64710c6c0b3381c8276b68bd->m_type_description == NULL);
+    frame_eae4ff1d64710c6c0b3381c8276b68bd = cache_frame_eae4ff1d64710c6c0b3381c8276b68bd;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_166245fa74647e9aef3967c13510f88e);
+    pushFrameStack(frame_eae4ff1d64710c6c0b3381c8276b68bd);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_166245fa74647e9aef3967c13510f88e) == 2); // Frame stack
+    assert(Py_REFCNT(frame_eae4ff1d64710c6c0b3381c8276b68bd) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5233,7 +5233,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__16_hyperlink(struct Nuitka_
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_166245fa74647e9aef3967c13510f88e);
+    RESTORE_FRAME_EXCEPTION(frame_eae4ff1d64710c6c0b3381c8276b68bd);
 #endif
 
     // Put the previous frame back on top.
@@ -5243,7 +5243,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__16_hyperlink(struct Nuitka_
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_166245fa74647e9aef3967c13510f88e);
+    RESTORE_FRAME_EXCEPTION(frame_eae4ff1d64710c6c0b3381c8276b68bd);
 #endif
 
     // Put the previous frame back on top.
@@ -5254,35 +5254,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__16_hyperlink(struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_166245fa74647e9aef3967c13510f88e);
+    RESTORE_FRAME_EXCEPTION(frame_eae4ff1d64710c6c0b3381c8276b68bd);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_166245fa74647e9aef3967c13510f88e, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_166245fa74647e9aef3967c13510f88e->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_166245fa74647e9aef3967c13510f88e, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_eae4ff1d64710c6c0b3381c8276b68bd, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_eae4ff1d64710c6c0b3381c8276b68bd->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_eae4ff1d64710c6c0b3381c8276b68bd, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_166245fa74647e9aef3967c13510f88e,
+        frame_eae4ff1d64710c6c0b3381c8276b68bd,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_166245fa74647e9aef3967c13510f88e == cache_frame_166245fa74647e9aef3967c13510f88e) {
+    if (frame_eae4ff1d64710c6c0b3381c8276b68bd == cache_frame_eae4ff1d64710c6c0b3381c8276b68bd) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_166245fa74647e9aef3967c13510f88e);
-        cache_frame_166245fa74647e9aef3967c13510f88e = NULL;
+        Py_DECREF(cache_frame_eae4ff1d64710c6c0b3381c8276b68bd);
+        cache_frame_eae4ff1d64710c6c0b3381c8276b68bd = NULL;
     }
 
-    assertFrameObject(frame_166245fa74647e9aef3967c13510f88e);
+    assertFrameObject(frame_eae4ff1d64710c6c0b3381c8276b68bd);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5350,7 +5350,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_val = python_pars[1];
-    struct Nuitka_FrameObject *frame_a9ca0a5c474650c4d5a74d153172a0b6;
+    struct Nuitka_FrameObject *frame_898685cf3b37eeecaacdabb3456c193f;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
@@ -5358,7 +5358,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     int tmp_res;
-    static struct Nuitka_FrameObject *cache_frame_a9ca0a5c474650c4d5a74d153172a0b6 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_898685cf3b37eeecaacdabb3456c193f = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -5367,31 +5367,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_a9ca0a5c474650c4d5a74d153172a0b6)) {
-        Py_XDECREF(cache_frame_a9ca0a5c474650c4d5a74d153172a0b6);
+    if (isFrameUnusable(cache_frame_898685cf3b37eeecaacdabb3456c193f)) {
+        Py_XDECREF(cache_frame_898685cf3b37eeecaacdabb3456c193f);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_a9ca0a5c474650c4d5a74d153172a0b6 == NULL) {
+        if (cache_frame_898685cf3b37eeecaacdabb3456c193f == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_a9ca0a5c474650c4d5a74d153172a0b6 = MAKE_FUNCTION_FRAME(codeobj_a9ca0a5c474650c4d5a74d153172a0b6, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_898685cf3b37eeecaacdabb3456c193f = MAKE_FUNCTION_FRAME(codeobj_898685cf3b37eeecaacdabb3456c193f, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_a9ca0a5c474650c4d5a74d153172a0b6->m_type_description == NULL);
-    frame_a9ca0a5c474650c4d5a74d153172a0b6 = cache_frame_a9ca0a5c474650c4d5a74d153172a0b6;
+    assert(cache_frame_898685cf3b37eeecaacdabb3456c193f->m_type_description == NULL);
+    frame_898685cf3b37eeecaacdabb3456c193f = cache_frame_898685cf3b37eeecaacdabb3456c193f;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_a9ca0a5c474650c4d5a74d153172a0b6);
+    pushFrameStack(frame_898685cf3b37eeecaacdabb3456c193f);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a9ca0a5c474650c4d5a74d153172a0b6) == 2); // Frame stack
+    assert(Py_REFCNT(frame_898685cf3b37eeecaacdabb3456c193f) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5515,7 +5515,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
         tmp_dict_value_1 = par_val;
         tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        frame_a9ca0a5c474650c4d5a74d153172a0b6->m_frame.f_lineno = 239;
+        frame_898685cf3b37eeecaacdabb3456c193f->m_frame.f_lineno = 239;
         tmp_assign_source_1 = CALL_FUNCTION_WITH_KEYARGS(tmp_called_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_kwargs_name_1);
         if (tmp_assign_source_1 == NULL) {
@@ -5736,7 +5736,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a9ca0a5c474650c4d5a74d153172a0b6);
+    RESTORE_FRAME_EXCEPTION(frame_898685cf3b37eeecaacdabb3456c193f);
 #endif
 
     // Put the previous frame back on top.
@@ -5747,18 +5747,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a9ca0a5c474650c4d5a74d153172a0b6);
+    RESTORE_FRAME_EXCEPTION(frame_898685cf3b37eeecaacdabb3456c193f);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_a9ca0a5c474650c4d5a74d153172a0b6, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_a9ca0a5c474650c4d5a74d153172a0b6->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_a9ca0a5c474650c4d5a74d153172a0b6, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_898685cf3b37eeecaacdabb3456c193f, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_898685cf3b37eeecaacdabb3456c193f->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_898685cf3b37eeecaacdabb3456c193f, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_a9ca0a5c474650c4d5a74d153172a0b6,
+        frame_898685cf3b37eeecaacdabb3456c193f,
         type_description_1,
         par_self,
         par_val
@@ -5766,17 +5766,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__17_hyperlink(struct Nuitka_
 
 
     // Release cached frame if used for exception.
-    if (frame_a9ca0a5c474650c4d5a74d153172a0b6 == cache_frame_a9ca0a5c474650c4d5a74d153172a0b6) {
+    if (frame_898685cf3b37eeecaacdabb3456c193f == cache_frame_898685cf3b37eeecaacdabb3456c193f) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_a9ca0a5c474650c4d5a74d153172a0b6);
-        cache_frame_a9ca0a5c474650c4d5a74d153172a0b6 = NULL;
+        Py_DECREF(cache_frame_898685cf3b37eeecaacdabb3456c193f);
+        cache_frame_898685cf3b37eeecaacdabb3456c193f = NULL;
     }
 
-    assertFrameObject(frame_a9ca0a5c474650c4d5a74d153172a0b6);
+    assertFrameObject(frame_898685cf3b37eeecaacdabb3456c193f);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5850,14 +5850,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_d40083364cf44dfffb7ed9a389377e34;
+    struct Nuitka_FrameObject *frame_935cb8a7a07a3622191fa90370fd7456;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_d40083364cf44dfffb7ed9a389377e34 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_935cb8a7a07a3622191fa90370fd7456 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -5865,31 +5865,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_d40083364cf44dfffb7ed9a389377e34)) {
-        Py_XDECREF(cache_frame_d40083364cf44dfffb7ed9a389377e34);
+    if (isFrameUnusable(cache_frame_935cb8a7a07a3622191fa90370fd7456)) {
+        Py_XDECREF(cache_frame_935cb8a7a07a3622191fa90370fd7456);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_d40083364cf44dfffb7ed9a389377e34 == NULL) {
+        if (cache_frame_935cb8a7a07a3622191fa90370fd7456 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_d40083364cf44dfffb7ed9a389377e34 = MAKE_FUNCTION_FRAME(codeobj_d40083364cf44dfffb7ed9a389377e34, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_935cb8a7a07a3622191fa90370fd7456 = MAKE_FUNCTION_FRAME(codeobj_935cb8a7a07a3622191fa90370fd7456, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_d40083364cf44dfffb7ed9a389377e34->m_type_description == NULL);
-    frame_d40083364cf44dfffb7ed9a389377e34 = cache_frame_d40083364cf44dfffb7ed9a389377e34;
+    assert(cache_frame_935cb8a7a07a3622191fa90370fd7456->m_type_description == NULL);
+    frame_935cb8a7a07a3622191fa90370fd7456 = cache_frame_935cb8a7a07a3622191fa90370fd7456;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_d40083364cf44dfffb7ed9a389377e34);
+    pushFrameStack(frame_935cb8a7a07a3622191fa90370fd7456);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_d40083364cf44dfffb7ed9a389377e34) == 2); // Frame stack
+    assert(Py_REFCNT(frame_935cb8a7a07a3622191fa90370fd7456) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6047,7 +6047,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_d40083364cf44dfffb7ed9a389377e34->m_frame.f_lineno = 253;
+        frame_935cb8a7a07a3622191fa90370fd7456->m_frame.f_lineno = 253;
         tmp_and_right_value_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_and_right_value_1 == NULL) {
@@ -6074,7 +6074,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_d40083364cf44dfffb7ed9a389377e34);
+    RESTORE_FRAME_EXCEPTION(frame_935cb8a7a07a3622191fa90370fd7456);
 #endif
 
     // Put the previous frame back on top.
@@ -6084,7 +6084,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_d40083364cf44dfffb7ed9a389377e34);
+    RESTORE_FRAME_EXCEPTION(frame_935cb8a7a07a3622191fa90370fd7456);
 #endif
 
     // Put the previous frame back on top.
@@ -6095,35 +6095,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__18_is_date(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_d40083364cf44dfffb7ed9a389377e34);
+    RESTORE_FRAME_EXCEPTION(frame_935cb8a7a07a3622191fa90370fd7456);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_d40083364cf44dfffb7ed9a389377e34, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_d40083364cf44dfffb7ed9a389377e34->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_d40083364cf44dfffb7ed9a389377e34, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_935cb8a7a07a3622191fa90370fd7456, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_935cb8a7a07a3622191fa90370fd7456->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_935cb8a7a07a3622191fa90370fd7456, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_d40083364cf44dfffb7ed9a389377e34,
+        frame_935cb8a7a07a3622191fa90370fd7456,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_d40083364cf44dfffb7ed9a389377e34 == cache_frame_d40083364cf44dfffb7ed9a389377e34) {
+    if (frame_935cb8a7a07a3622191fa90370fd7456 == cache_frame_935cb8a7a07a3622191fa90370fd7456) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_d40083364cf44dfffb7ed9a389377e34);
-        cache_frame_d40083364cf44dfffb7ed9a389377e34 = NULL;
+        Py_DECREF(cache_frame_935cb8a7a07a3622191fa90370fd7456);
+        cache_frame_935cb8a7a07a3622191fa90370fd7456 = NULL;
     }
 
-    assertFrameObject(frame_d40083364cf44dfffb7ed9a389377e34);
+    assertFrameObject(frame_935cb8a7a07a3622191fa90370fd7456);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6194,7 +6194,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
     PyObject *par_column = python_pars[2];
     PyObject *var_offset_column = NULL;
     PyObject *var_offset_row = NULL;
-    struct Nuitka_FrameObject *frame_4f545cc3da6c21c5c5aad0da6e6ea3ad;
+    struct Nuitka_FrameObject *frame_f1accc1a57134d7f1764d942001085bc;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -6202,7 +6202,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
     int tmp_res;
-    static struct Nuitka_FrameObject *cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad = NULL;
+    static struct Nuitka_FrameObject *cache_frame_f1accc1a57134d7f1764d942001085bc = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -6210,31 +6210,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad)) {
-        Py_XDECREF(cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    if (isFrameUnusable(cache_frame_f1accc1a57134d7f1764d942001085bc)) {
+        Py_XDECREF(cache_frame_f1accc1a57134d7f1764d942001085bc);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad == NULL) {
+        if (cache_frame_f1accc1a57134d7f1764d942001085bc == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad = MAKE_FUNCTION_FRAME(codeobj_4f545cc3da6c21c5c5aad0da6e6ea3ad, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_f1accc1a57134d7f1764d942001085bc = MAKE_FUNCTION_FRAME(codeobj_f1accc1a57134d7f1764d942001085bc, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad->m_type_description == NULL);
-    frame_4f545cc3da6c21c5c5aad0da6e6ea3ad = cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad;
+    assert(cache_frame_f1accc1a57134d7f1764d942001085bc->m_type_description == NULL);
+    frame_f1accc1a57134d7f1764d942001085bc = cache_frame_f1accc1a57134d7f1764d942001085bc;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    pushFrameStack(frame_f1accc1a57134d7f1764d942001085bc);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad) == 2); // Frame stack
+    assert(Py_REFCNT(frame_f1accc1a57134d7f1764d942001085bc) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6372,7 +6372,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
         tmp_dict_value_1 = var_offset_row;
         tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        frame_4f545cc3da6c21c5c5aad0da6e6ea3ad->m_frame.f_lineno = 270;
+        frame_f1accc1a57134d7f1764d942001085bc->m_frame.f_lineno = 270;
         tmp_return_value = CALL_FUNCTION_WITH_KEYARGS(tmp_called_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_kwargs_name_1);
@@ -6390,7 +6390,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    RESTORE_FRAME_EXCEPTION(frame_f1accc1a57134d7f1764d942001085bc);
 #endif
 
     // Put the previous frame back on top.
@@ -6400,7 +6400,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    RESTORE_FRAME_EXCEPTION(frame_f1accc1a57134d7f1764d942001085bc);
 #endif
 
     // Put the previous frame back on top.
@@ -6411,18 +6411,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    RESTORE_FRAME_EXCEPTION(frame_f1accc1a57134d7f1764d942001085bc);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_4f545cc3da6c21c5c5aad0da6e6ea3ad->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_4f545cc3da6c21c5c5aad0da6e6ea3ad, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_f1accc1a57134d7f1764d942001085bc, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_f1accc1a57134d7f1764d942001085bc->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_f1accc1a57134d7f1764d942001085bc, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_4f545cc3da6c21c5c5aad0da6e6ea3ad,
+        frame_f1accc1a57134d7f1764d942001085bc,
         type_description_1,
         par_self,
         par_row,
@@ -6433,17 +6433,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__19_offset(struct Nuitka_Fun
 
 
     // Release cached frame if used for exception.
-    if (frame_4f545cc3da6c21c5c5aad0da6e6ea3ad == cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad) {
+    if (frame_f1accc1a57134d7f1764d942001085bc == cache_frame_f1accc1a57134d7f1764d942001085bc) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
-        cache_frame_4f545cc3da6c21c5c5aad0da6e6ea3ad = NULL;
+        Py_DECREF(cache_frame_f1accc1a57134d7f1764d942001085bc);
+        cache_frame_f1accc1a57134d7f1764d942001085bc = NULL;
     }
 
-    assertFrameObject(frame_4f545cc3da6c21c5c5aad0da6e6ea3ad);
+    assertFrameObject(frame_f1accc1a57134d7f1764d942001085bc);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6526,14 +6526,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__20_comment(struct Nuitka_Fu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_ba8170c00374341a6704e16fdcaf1784;
+    struct Nuitka_FrameObject *frame_7477094a34d5f3f0b9f146950b74d5a9;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_ba8170c00374341a6704e16fdcaf1784 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7477094a34d5f3f0b9f146950b74d5a9 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -6541,31 +6541,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__20_comment(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_ba8170c00374341a6704e16fdcaf1784)) {
-        Py_XDECREF(cache_frame_ba8170c00374341a6704e16fdcaf1784);
+    if (isFrameUnusable(cache_frame_7477094a34d5f3f0b9f146950b74d5a9)) {
+        Py_XDECREF(cache_frame_7477094a34d5f3f0b9f146950b74d5a9);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_ba8170c00374341a6704e16fdcaf1784 == NULL) {
+        if (cache_frame_7477094a34d5f3f0b9f146950b74d5a9 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_ba8170c00374341a6704e16fdcaf1784 = MAKE_FUNCTION_FRAME(codeobj_ba8170c00374341a6704e16fdcaf1784, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_7477094a34d5f3f0b9f146950b74d5a9 = MAKE_FUNCTION_FRAME(codeobj_7477094a34d5f3f0b9f146950b74d5a9, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_ba8170c00374341a6704e16fdcaf1784->m_type_description == NULL);
-    frame_ba8170c00374341a6704e16fdcaf1784 = cache_frame_ba8170c00374341a6704e16fdcaf1784;
+    assert(cache_frame_7477094a34d5f3f0b9f146950b74d5a9->m_type_description == NULL);
+    frame_7477094a34d5f3f0b9f146950b74d5a9 = cache_frame_7477094a34d5f3f0b9f146950b74d5a9;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_ba8170c00374341a6704e16fdcaf1784);
+    pushFrameStack(frame_7477094a34d5f3f0b9f146950b74d5a9);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_ba8170c00374341a6704e16fdcaf1784) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7477094a34d5f3f0b9f146950b74d5a9) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6587,7 +6587,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__20_comment(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ba8170c00374341a6704e16fdcaf1784);
+    RESTORE_FRAME_EXCEPTION(frame_7477094a34d5f3f0b9f146950b74d5a9);
 #endif
 
     // Put the previous frame back on top.
@@ -6597,7 +6597,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__20_comment(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ba8170c00374341a6704e16fdcaf1784);
+    RESTORE_FRAME_EXCEPTION(frame_7477094a34d5f3f0b9f146950b74d5a9);
 #endif
 
     // Put the previous frame back on top.
@@ -6608,35 +6608,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__20_comment(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ba8170c00374341a6704e16fdcaf1784);
+    RESTORE_FRAME_EXCEPTION(frame_7477094a34d5f3f0b9f146950b74d5a9);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_ba8170c00374341a6704e16fdcaf1784, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_ba8170c00374341a6704e16fdcaf1784->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_ba8170c00374341a6704e16fdcaf1784, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_7477094a34d5f3f0b9f146950b74d5a9, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_7477094a34d5f3f0b9f146950b74d5a9->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_7477094a34d5f3f0b9f146950b74d5a9, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_ba8170c00374341a6704e16fdcaf1784,
+        frame_7477094a34d5f3f0b9f146950b74d5a9,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_ba8170c00374341a6704e16fdcaf1784 == cache_frame_ba8170c00374341a6704e16fdcaf1784) {
+    if (frame_7477094a34d5f3f0b9f146950b74d5a9 == cache_frame_7477094a34d5f3f0b9f146950b74d5a9) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_ba8170c00374341a6704e16fdcaf1784);
-        cache_frame_ba8170c00374341a6704e16fdcaf1784 = NULL;
+        Py_DECREF(cache_frame_7477094a34d5f3f0b9f146950b74d5a9);
+        cache_frame_7477094a34d5f3f0b9f146950b74d5a9 = NULL;
     }
 
-    assertFrameObject(frame_ba8170c00374341a6704e16fdcaf1784);
+    assertFrameObject(frame_7477094a34d5f3f0b9f146950b74d5a9);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6704,7 +6704,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_value = python_pars[1];
-    struct Nuitka_FrameObject *frame_aa24fa45973eec3427b61d3157b86190;
+    struct Nuitka_FrameObject *frame_801a2f06f72fcabe7688415841123b5d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -6712,7 +6712,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     bool tmp_result;
-    static struct Nuitka_FrameObject *cache_frame_aa24fa45973eec3427b61d3157b86190 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_801a2f06f72fcabe7688415841123b5d = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -6721,31 +6721,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_aa24fa45973eec3427b61d3157b86190)) {
-        Py_XDECREF(cache_frame_aa24fa45973eec3427b61d3157b86190);
+    if (isFrameUnusable(cache_frame_801a2f06f72fcabe7688415841123b5d)) {
+        Py_XDECREF(cache_frame_801a2f06f72fcabe7688415841123b5d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_aa24fa45973eec3427b61d3157b86190 == NULL) {
+        if (cache_frame_801a2f06f72fcabe7688415841123b5d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_aa24fa45973eec3427b61d3157b86190 = MAKE_FUNCTION_FRAME(codeobj_aa24fa45973eec3427b61d3157b86190, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_801a2f06f72fcabe7688415841123b5d = MAKE_FUNCTION_FRAME(codeobj_801a2f06f72fcabe7688415841123b5d, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_aa24fa45973eec3427b61d3157b86190->m_type_description == NULL);
-    frame_aa24fa45973eec3427b61d3157b86190 = cache_frame_aa24fa45973eec3427b61d3157b86190;
+    assert(cache_frame_801a2f06f72fcabe7688415841123b5d->m_type_description == NULL);
+    frame_801a2f06f72fcabe7688415841123b5d = cache_frame_801a2f06f72fcabe7688415841123b5d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_aa24fa45973eec3427b61d3157b86190);
+    pushFrameStack(frame_801a2f06f72fcabe7688415841123b5d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_aa24fa45973eec3427b61d3157b86190) == 2); // Frame stack
+    assert(Py_REFCNT(frame_801a2f06f72fcabe7688415841123b5d) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6834,7 +6834,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
         }
 
         tmp_args_element_name_1 = par_value;
-        frame_aa24fa45973eec3427b61d3157b86190->m_frame.f_lineno = 290;
+        frame_801a2f06f72fcabe7688415841123b5d->m_frame.f_lineno = 290;
         tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6873,7 +6873,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
         tmp_called_instance_1 = par_value;
         CHECK_OBJECT(par_self);
         tmp_args_element_name_2 = par_self;
-        frame_aa24fa45973eec3427b61d3157b86190->m_frame.f_lineno = 291;
+        frame_801a2f06f72fcabe7688415841123b5d->m_frame.f_lineno = 291;
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[72], tmp_args_element_name_2);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -6976,7 +6976,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_aa24fa45973eec3427b61d3157b86190->m_frame.f_lineno = 293;
+        frame_801a2f06f72fcabe7688415841123b5d->m_frame.f_lineno = 293;
         tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[73]);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_call_result_2 == NULL) {
@@ -7036,7 +7036,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_aa24fa45973eec3427b61d3157b86190);
+    RESTORE_FRAME_EXCEPTION(frame_801a2f06f72fcabe7688415841123b5d);
 #endif
 
     // Put the previous frame back on top.
@@ -7047,18 +7047,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_aa24fa45973eec3427b61d3157b86190);
+    RESTORE_FRAME_EXCEPTION(frame_801a2f06f72fcabe7688415841123b5d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_aa24fa45973eec3427b61d3157b86190, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_aa24fa45973eec3427b61d3157b86190->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_aa24fa45973eec3427b61d3157b86190, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_801a2f06f72fcabe7688415841123b5d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_801a2f06f72fcabe7688415841123b5d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_801a2f06f72fcabe7688415841123b5d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_aa24fa45973eec3427b61d3157b86190,
+        frame_801a2f06f72fcabe7688415841123b5d,
         type_description_1,
         par_self,
         par_value
@@ -7066,17 +7066,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__21_comment(struct Nuitka_Fu
 
 
     // Release cached frame if used for exception.
-    if (frame_aa24fa45973eec3427b61d3157b86190 == cache_frame_aa24fa45973eec3427b61d3157b86190) {
+    if (frame_801a2f06f72fcabe7688415841123b5d == cache_frame_801a2f06f72fcabe7688415841123b5d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_aa24fa45973eec3427b61d3157b86190);
-        cache_frame_aa24fa45973eec3427b61d3157b86190 = NULL;
+        Py_DECREF(cache_frame_801a2f06f72fcabe7688415841123b5d);
+        cache_frame_801a2f06f72fcabe7688415841123b5d = NULL;
     }
 
-    assertFrameObject(frame_aa24fa45973eec3427b61d3157b86190);
+    assertFrameObject(frame_801a2f06f72fcabe7688415841123b5d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7153,7 +7153,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
     PyObject *par_worksheet = python_pars[1];
     PyObject *par_row = python_pars[2];
     PyObject *par_column = python_pars[3];
-    struct Nuitka_FrameObject *frame_a8ba8cfa9476858ebdd85033a6b8fa26;
+    struct Nuitka_FrameObject *frame_5509ac5c39668ea4ad0e5d35c459370e;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
@@ -7161,7 +7161,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
-    static struct Nuitka_FrameObject *cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_5509ac5c39668ea4ad0e5d35c459370e = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -7170,31 +7170,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26)) {
-        Py_XDECREF(cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26);
+    if (isFrameUnusable(cache_frame_5509ac5c39668ea4ad0e5d35c459370e)) {
+        Py_XDECREF(cache_frame_5509ac5c39668ea4ad0e5d35c459370e);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26 == NULL) {
+        if (cache_frame_5509ac5c39668ea4ad0e5d35c459370e == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26 = MAKE_FUNCTION_FRAME(codeobj_a8ba8cfa9476858ebdd85033a6b8fa26, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_5509ac5c39668ea4ad0e5d35c459370e = MAKE_FUNCTION_FRAME(codeobj_5509ac5c39668ea4ad0e5d35c459370e, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26->m_type_description == NULL);
-    frame_a8ba8cfa9476858ebdd85033a6b8fa26 = cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26;
+    assert(cache_frame_5509ac5c39668ea4ad0e5d35c459370e->m_type_description == NULL);
+    frame_5509ac5c39668ea4ad0e5d35c459370e = cache_frame_5509ac5c39668ea4ad0e5d35c459370e;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_a8ba8cfa9476858ebdd85033a6b8fa26);
+    pushFrameStack(frame_5509ac5c39668ea4ad0e5d35c459370e);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a8ba8cfa9476858ebdd85033a6b8fa26) == 2); // Frame stack
+    assert(Py_REFCNT(frame_5509ac5c39668ea4ad0e5d35c459370e) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7234,7 +7234,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
         }
         CHECK_OBJECT(par_worksheet);
         tmp_args_element_name_1 = par_worksheet;
-        frame_a8ba8cfa9476858ebdd85033a6b8fa26->m_frame.f_lineno = 315;
+        frame_5509ac5c39668ea4ad0e5d35c459370e->m_frame.f_lineno = 315;
         tmp_call_result_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[17], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -7289,7 +7289,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a8ba8cfa9476858ebdd85033a6b8fa26);
+    RESTORE_FRAME_EXCEPTION(frame_5509ac5c39668ea4ad0e5d35c459370e);
 #endif
 
     // Put the previous frame back on top.
@@ -7300,18 +7300,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a8ba8cfa9476858ebdd85033a6b8fa26);
+    RESTORE_FRAME_EXCEPTION(frame_5509ac5c39668ea4ad0e5d35c459370e);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_a8ba8cfa9476858ebdd85033a6b8fa26, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_a8ba8cfa9476858ebdd85033a6b8fa26->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_a8ba8cfa9476858ebdd85033a6b8fa26, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_5509ac5c39668ea4ad0e5d35c459370e, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_5509ac5c39668ea4ad0e5d35c459370e->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_5509ac5c39668ea4ad0e5d35c459370e, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_a8ba8cfa9476858ebdd85033a6b8fa26,
+        frame_5509ac5c39668ea4ad0e5d35c459370e,
         type_description_1,
         par_self,
         par_worksheet,
@@ -7322,17 +7322,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__22___init__(struct Nuitka_F
 
 
     // Release cached frame if used for exception.
-    if (frame_a8ba8cfa9476858ebdd85033a6b8fa26 == cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26) {
+    if (frame_5509ac5c39668ea4ad0e5d35c459370e == cache_frame_5509ac5c39668ea4ad0e5d35c459370e) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26);
-        cache_frame_a8ba8cfa9476858ebdd85033a6b8fa26 = NULL;
+        Py_DECREF(cache_frame_5509ac5c39668ea4ad0e5d35c459370e);
+        cache_frame_5509ac5c39668ea4ad0e5d35c459370e = NULL;
     }
 
-    assertFrameObject(frame_a8ba8cfa9476858ebdd85033a6b8fa26);
+    assertFrameObject(frame_5509ac5c39668ea4ad0e5d35c459370e);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7420,14 +7420,14 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_35d0efb6751f3f0ad857db91c8c20c61;
+    struct Nuitka_FrameObject *frame_cb97483d97664104b98d883adbe1873b;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_35d0efb6751f3f0ad857db91c8c20c61 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_cb97483d97664104b98d883adbe1873b = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7435,31 +7435,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_35d0efb6751f3f0ad857db91c8c20c61)) {
-        Py_XDECREF(cache_frame_35d0efb6751f3f0ad857db91c8c20c61);
+    if (isFrameUnusable(cache_frame_cb97483d97664104b98d883adbe1873b)) {
+        Py_XDECREF(cache_frame_cb97483d97664104b98d883adbe1873b);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_35d0efb6751f3f0ad857db91c8c20c61 == NULL) {
+        if (cache_frame_cb97483d97664104b98d883adbe1873b == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_35d0efb6751f3f0ad857db91c8c20c61 = MAKE_FUNCTION_FRAME(codeobj_35d0efb6751f3f0ad857db91c8c20c61, module_openpyxl$cell$cell, sizeof(void *));
+        cache_frame_cb97483d97664104b98d883adbe1873b = MAKE_FUNCTION_FRAME(codeobj_cb97483d97664104b98d883adbe1873b, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_35d0efb6751f3f0ad857db91c8c20c61->m_type_description == NULL);
-    frame_35d0efb6751f3f0ad857db91c8c20c61 = cache_frame_35d0efb6751f3f0ad857db91c8c20c61;
+    assert(cache_frame_cb97483d97664104b98d883adbe1873b->m_type_description == NULL);
+    frame_cb97483d97664104b98d883adbe1873b = cache_frame_cb97483d97664104b98d883adbe1873b;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_35d0efb6751f3f0ad857db91c8c20c61);
+    pushFrameStack(frame_cb97483d97664104b98d883adbe1873b);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_35d0efb6751f3f0ad857db91c8c20c61) == 2); // Frame stack
+    assert(Py_REFCNT(frame_cb97483d97664104b98d883adbe1873b) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7524,7 +7524,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_35d0efb6751f3f0ad857db91c8c20c61->m_frame.f_lineno = 321;
+        frame_cb97483d97664104b98d883adbe1873b->m_frame.f_lineno = 321;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
             tmp_return_value = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_1, call_args);
@@ -7547,7 +7547,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_35d0efb6751f3f0ad857db91c8c20c61);
+    RESTORE_FRAME_EXCEPTION(frame_cb97483d97664104b98d883adbe1873b);
 #endif
 
     // Put the previous frame back on top.
@@ -7557,7 +7557,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_35d0efb6751f3f0ad857db91c8c20c61);
+    RESTORE_FRAME_EXCEPTION(frame_cb97483d97664104b98d883adbe1873b);
 #endif
 
     // Put the previous frame back on top.
@@ -7568,35 +7568,35 @@ static PyObject *impl_openpyxl$cell$cell$$$function__23___repr__(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_35d0efb6751f3f0ad857db91c8c20c61);
+    RESTORE_FRAME_EXCEPTION(frame_cb97483d97664104b98d883adbe1873b);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_35d0efb6751f3f0ad857db91c8c20c61, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_35d0efb6751f3f0ad857db91c8c20c61->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_35d0efb6751f3f0ad857db91c8c20c61, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_cb97483d97664104b98d883adbe1873b, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_cb97483d97664104b98d883adbe1873b->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_cb97483d97664104b98d883adbe1873b, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_35d0efb6751f3f0ad857db91c8c20c61,
+        frame_cb97483d97664104b98d883adbe1873b,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_35d0efb6751f3f0ad857db91c8c20c61 == cache_frame_35d0efb6751f3f0ad857db91c8c20c61) {
+    if (frame_cb97483d97664104b98d883adbe1873b == cache_frame_cb97483d97664104b98d883adbe1873b) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_35d0efb6751f3f0ad857db91c8c20c61);
-        cache_frame_35d0efb6751f3f0ad857db91c8c20c61 = NULL;
+        Py_DECREF(cache_frame_cb97483d97664104b98d883adbe1873b);
+        cache_frame_cb97483d97664104b98d883adbe1873b = NULL;
     }
 
-    assertFrameObject(frame_35d0efb6751f3f0ad857db91c8c20c61);
+    assertFrameObject(frame_cb97483d97664104b98d883adbe1873b);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7664,7 +7664,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
     // Local variable declarations.
     PyObject *par_ws = python_pars[0];
     PyObject *par_value = python_pars[1];
-    struct Nuitka_FrameObject *frame_caa6daeaeca653ebdf0aa57fe693a7fb;
+    struct Nuitka_FrameObject *frame_8a1487ca7e74124b2e863ab38c097b90;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
@@ -7672,7 +7672,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     int tmp_res;
-    static struct Nuitka_FrameObject *cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8a1487ca7e74124b2e863ab38c097b90 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7680,31 +7680,31 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb)) {
-        Py_XDECREF(cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    if (isFrameUnusable(cache_frame_8a1487ca7e74124b2e863ab38c097b90)) {
+        Py_XDECREF(cache_frame_8a1487ca7e74124b2e863ab38c097b90);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb == NULL) {
+        if (cache_frame_8a1487ca7e74124b2e863ab38c097b90 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb = MAKE_FUNCTION_FRAME(codeobj_caa6daeaeca653ebdf0aa57fe693a7fb, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
+        cache_frame_8a1487ca7e74124b2e863ab38c097b90 = MAKE_FUNCTION_FRAME(codeobj_8a1487ca7e74124b2e863ab38c097b90, module_openpyxl$cell$cell, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb->m_type_description == NULL);
-    frame_caa6daeaeca653ebdf0aa57fe693a7fb = cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb;
+    assert(cache_frame_8a1487ca7e74124b2e863ab38c097b90->m_type_description == NULL);
+    frame_8a1487ca7e74124b2e863ab38c097b90 = cache_frame_8a1487ca7e74124b2e863ab38c097b90;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    pushFrameStack(frame_8a1487ca7e74124b2e863ab38c097b90);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_caa6daeaeca653ebdf0aa57fe693a7fb) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8a1487ca7e74124b2e863ab38c097b90) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7747,7 +7747,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
         tmp_dict_value_1 = par_value;
         tmp_res = PyDict_SetItem(tmp_kwargs_name_1, tmp_dict_key_1, tmp_dict_value_1);
         assert(!(tmp_res != 0));
-        frame_caa6daeaeca653ebdf0aa57fe693a7fb->m_frame.f_lineno = 329;
+        frame_8a1487ca7e74124b2e863ab38c097b90->m_frame.f_lineno = 329;
         tmp_return_value = CALL_FUNCTION_WITH_KEYARGS(tmp_called_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_kwargs_name_1);
         if (tmp_return_value == NULL) {
@@ -7764,7 +7764,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    RESTORE_FRAME_EXCEPTION(frame_8a1487ca7e74124b2e863ab38c097b90);
 #endif
 
     // Put the previous frame back on top.
@@ -7774,7 +7774,7 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    RESTORE_FRAME_EXCEPTION(frame_8a1487ca7e74124b2e863ab38c097b90);
 #endif
 
     // Put the previous frame back on top.
@@ -7785,18 +7785,18 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    RESTORE_FRAME_EXCEPTION(frame_8a1487ca7e74124b2e863ab38c097b90);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_caa6daeaeca653ebdf0aa57fe693a7fb, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_caa6daeaeca653ebdf0aa57fe693a7fb->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_caa6daeaeca653ebdf0aa57fe693a7fb, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_8a1487ca7e74124b2e863ab38c097b90, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_8a1487ca7e74124b2e863ab38c097b90->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_8a1487ca7e74124b2e863ab38c097b90, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_caa6daeaeca653ebdf0aa57fe693a7fb,
+        frame_8a1487ca7e74124b2e863ab38c097b90,
         type_description_1,
         par_ws,
         par_value
@@ -7804,17 +7804,17 @@ static PyObject *impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell(struct Nui
 
 
     // Release cached frame if used for exception.
-    if (frame_caa6daeaeca653ebdf0aa57fe693a7fb == cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb) {
+    if (frame_8a1487ca7e74124b2e863ab38c097b90 == cache_frame_8a1487ca7e74124b2e863ab38c097b90) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb);
-        cache_frame_caa6daeaeca653ebdf0aa57fe693a7fb = NULL;
+        Py_DECREF(cache_frame_8a1487ca7e74124b2e863ab38c097b90);
+        cache_frame_8a1487ca7e74124b2e863ab38c097b90 = NULL;
     }
 
-    assertFrameObject(frame_caa6daeaeca653ebdf0aa57fe693a7fb);
+    assertFrameObject(frame_8a1487ca7e74124b2e863ab38c097b90);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7887,9 +7887,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__10_check_string() 
         impl_openpyxl$cell$cell$$$function__10_check_string,
         mod_consts[47],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[157],
+        mod_consts[156],
 #endif
-        codeobj_c28f6fb1fd1f0cdeae4465a17fd87eeb,
+        codeobj_3fc6f465b6438a1f3d31a5ded8fdb162,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -7910,11 +7910,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__10_check_string() 
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__11_check_error() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__11_check_error,
-        mod_consts[158],
+        mod_consts[157],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[159],
+        mod_consts[158],
 #endif
-        codeobj_0745f65b6c92dc88f70be257de262c77,
+        codeobj_6274a879ef4adb345cd978db8fb04782,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -7937,9 +7937,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__12__bind_value() {
         impl_openpyxl$cell$cell$$$function__12__bind_value,
         mod_consts[56],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[160],
+        mod_consts[159],
 #endif
-        codeobj_e77971103361f57265bb1907db9fee0a,
+        codeobj_cda805f312dc4aec4a7de69e88903aa4,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -7962,9 +7962,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__13_value() {
         impl_openpyxl$cell$cell$$$function__13_value,
         mod_consts[15],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[161],
+        mod_consts[160],
 #endif
-        codeobj_2f9ee8bd543969d84b56764c36ae6385,
+        codeobj_edd790f933259134171665703ba1c53c,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -7987,9 +7987,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__14_value() {
         impl_openpyxl$cell$cell$$$function__14_value,
         mod_consts[15],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[161],
+        mod_consts[160],
 #endif
-        codeobj_7bd4622a4e036d050e74bd8b76965b06,
+        codeobj_d9986803dbbbe7971e70f3dd2b316996,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8010,11 +8010,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__14_value() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__15_internal_value() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__15_internal_value,
-        mod_consts[163],
+        mod_consts[162],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[164],
+        mod_consts[163],
 #endif
-        codeobj_5bf2b9002ac0c0bf8dba0166b5492172,
+        codeobj_18821f5e1165c056c5a6edb737027d52,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8035,11 +8035,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__15_internal_value(
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__16_hyperlink() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__16_hyperlink,
-        mod_consts[165],
+        mod_consts[164],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[166],
+        mod_consts[165],
 #endif
-        codeobj_166245fa74647e9aef3967c13510f88e,
+        codeobj_eae4ff1d64710c6c0b3381c8276b68bd,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8060,11 +8060,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__16_hyperlink() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__17_hyperlink() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__17_hyperlink,
-        mod_consts[165],
+        mod_consts[164],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[166],
+        mod_consts[165],
 #endif
-        codeobj_a9ca0a5c474650c4d5a74d153172a0b6,
+        codeobj_898685cf3b37eeecaacdabb3456c193f,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8085,11 +8085,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__17_hyperlink() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__18_is_date() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__18_is_date,
-        mod_consts[167],
+        mod_consts[166],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[168],
+        mod_consts[167],
 #endif
-        codeobj_d40083364cf44dfffb7ed9a389377e34,
+        codeobj_935cb8a7a07a3622191fa90370fd7456,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8110,11 +8110,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__18_is_date() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__19_offset(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__19_offset,
-        mod_consts[170],
+        mod_consts[169],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[171],
+        mod_consts[170],
 #endif
-        codeobj_4f545cc3da6c21c5c5aad0da6e6ea3ad,
+        codeobj_f1accc1a57134d7f1764d942001085bc,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8139,7 +8139,7 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__1_get_type() {
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_08f274756aa56c427cb7c12c58c08af0,
+        codeobj_88a99ef270982fa322a97d6b00e93794,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8160,11 +8160,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__1_get_type() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__20_comment() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__20_comment,
-        mod_consts[172],
+        mod_consts[171],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[173],
+        mod_consts[172],
 #endif
-        codeobj_ba8170c00374341a6704e16fdcaf1784,
+        codeobj_7477094a34d5f3f0b9f146950b74d5a9,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8185,11 +8185,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__20_comment() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__21_comment() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__21_comment,
-        mod_consts[172],
+        mod_consts[171],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[173],
+        mod_consts[172],
 #endif
-        codeobj_aa24fa45973eec3427b61d3157b86190,
+        codeobj_801a2f06f72fcabe7688415841123b5d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8212,9 +8212,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__22___init__(PyObje
         impl_openpyxl$cell$cell$$$function__22___init__,
         mod_consts[17],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[178],
+        mod_consts[177],
 #endif
-        codeobj_a8ba8cfa9476858ebdd85033a6b8fa26,
+        codeobj_5509ac5c39668ea4ad0e5d35c459370e,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8235,11 +8235,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__22___init__(PyObje
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__23___repr__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__23___repr__,
-        mod_consts[155],
+        mod_consts[154],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[179],
+        mod_consts[178],
 #endif
-        codeobj_35d0efb6751f3f0ad857db91c8c20c61,
+        codeobj_cb97483d97664104b98d883adbe1873b,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8260,11 +8260,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__23___repr__() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__24_WriteOnlyCell(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__24_WriteOnlyCell,
-        mod_consts[180],
+        mod_consts[179],
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_caa6daeaeca653ebdf0aa57fe693a7fb,
+        codeobj_8a1487ca7e74124b2e863ab38c097b90,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8289,7 +8289,7 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__2_get_time_format(
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_eb03d101d835e3bcb2dfb7b76cdc5975,
+        codeobj_55e71ade8dd76fd4b2a40672dc7d2b42,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8312,9 +8312,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__3___init__(PyObjec
         impl_openpyxl$cell$cell$$$function__3___init__,
         mod_consts[17],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[146],
+        mod_consts[145],
 #endif
-        codeobj_68f6857c2d6eec8d67c9390bbf1b1629,
+        codeobj_b340d8c55d64500bf3394a5724e02585,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8337,9 +8337,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__4_coordinate() {
         impl_openpyxl$cell$cell$$$function__4_coordinate,
         mod_consts[34],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[148],
+        mod_consts[147],
 #endif
-        codeobj_da64cef9ef8c4903b22f64abb915787f,
+        codeobj_7845e3339512d0ba9e1af2264d65bc4c,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8362,9 +8362,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__5_col_idx() {
         impl_openpyxl$cell$cell$$$function__5_col_idx,
         mod_consts[67],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[149],
+        mod_consts[148],
 #endif
-        codeobj_c97cf0de330a65057bac8499b331aa4a,
+        codeobj_1946b367b07c1b0e6623c7ee9f0afaf5,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8385,11 +8385,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__5_col_idx() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__6_column_letter() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__6_column_letter,
-        mod_consts[150],
+        mod_consts[149],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[151],
+        mod_consts[150],
 #endif
-        codeobj_a26d79b401518d1a61102769adb6c94e,
+        codeobj_3ef90352028ad43414eabff7313d59fb,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8412,9 +8412,9 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__7_encoding() {
         impl_openpyxl$cell$cell$$$function__7_encoding,
         mod_consts[30],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[152],
+        mod_consts[151],
 #endif
-        codeobj_6d8cd2aa75216b9639bd2028f73587bc,
+        codeobj_b5d290cf759bfde8e5bf2a44e05332ed,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8435,11 +8435,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__7_encoding() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__8_base_date() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__8_base_date,
-        mod_consts[153],
+        mod_consts[152],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[154],
+        mod_consts[153],
 #endif
-        codeobj_5fcb537e40b381e3bbc8877ce556e2b7,
+        codeobj_fd531f06ffd83cefd9fc46e965271d1d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8460,11 +8460,11 @@ static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__8_base_date() {
 static PyObject *MAKE_FUNCTION_openpyxl$cell$cell$$$function__9___repr__() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_openpyxl$cell$cell$$$function__9___repr__,
-        mod_consts[155],
+        mod_consts[154],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[156],
+        mod_consts[155],
 #endif
-        codeobj_c1c8244c4619d4e30ebd285ecbee251a,
+        codeobj_dd6ded7f8600fdaaf46ce0e0414bda33,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -8861,7 +8861,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     PyObject *tmp_class_creation_2__prepared = NULL;
     PyObject *tmp_import_from_1__module = NULL;
     PyObject *tmp_import_from_2__module = NULL;
-    struct Nuitka_FrameObject *frame_3e2fd5d3add7776e3fb72ac75aeb34b9;
+    struct Nuitka_FrameObject *frame_c9a2fc20ceb797497dfc9d0030532171;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
@@ -8881,9 +8881,9 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     PyObject *tmp_dictdel_key;
     PyObject *locals_openpyxl$cell$cell$$$class__1_Cell_89 = NULL;
     PyObject *tmp_dictset_value;
-    struct Nuitka_FrameObject *frame_522919331c65005da30eb86bc0d4c890_2;
+    struct Nuitka_FrameObject *frame_2694e3a6f4a2e0d0bb306f44183734ab_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_522919331c65005da30eb86bc0d4c890_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2 = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -8897,9 +8897,9 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     PyTracebackObject *exception_keeper_tb_5;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_5;
     PyObject *locals_openpyxl$cell$cell$$$class__2_MergedCell_297 = NULL;
-    struct Nuitka_FrameObject *frame_26e3a3728d9ebc6aebe10adf361d3cd5_3;
+    struct Nuitka_FrameObject *frame_1bf3172501be253fc895eef92ebabd50_3;
     NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1bf3172501be253fc895eef92ebabd50_3 = NULL;
     PyObject *exception_keeper_type_6;
     PyObject *exception_keeper_value_6;
     PyTracebackObject *exception_keeper_tb_6;
@@ -8921,30 +8921,30 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[80];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[81], tmp_assign_source_2);
+        tmp_assign_source_2 = module_filename_obj;
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[80], tmp_assign_source_2);
     }
     // Frame without reuse.
-    frame_3e2fd5d3add7776e3fb72ac75aeb34b9 = MAKE_MODULE_FRAME(codeobj_3e2fd5d3add7776e3fb72ac75aeb34b9, module_openpyxl$cell$cell);
+    frame_c9a2fc20ceb797497dfc9d0030532171 = MAKE_MODULE_FRAME(codeobj_c9a2fc20ceb797497dfc9d0030532171, module_openpyxl$cell$cell);
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack(frame_3e2fd5d3add7776e3fb72ac75aeb34b9);
-    assert(Py_REFCNT(frame_3e2fd5d3add7776e3fb72ac75aeb34b9) == 2);
+    pushFrameStack(frame_c9a2fc20ceb797497dfc9d0030532171);
+    assert(Py_REFCNT(frame_c9a2fc20ceb797497dfc9d0030532171) == 2);
 
     // Framed code:
     {
         PyObject *tmp_assattr_name_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = mod_consts[80];
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[81]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[83], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[82], tmp_assattr_name_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8960,14 +8960,14 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assattr_name_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[82]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[81]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[82]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[81]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[84], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[83], tmp_assattr_name_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -8982,12 +8982,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[85], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[84], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[86];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[87], tmp_assign_source_4);
+        tmp_assign_source_4 = mod_consts[85];
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[86], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
@@ -9000,9 +9000,9 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         tmp_name_name_1 = mod_consts[71];
         tmp_globals_arg_name_1 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[88];
-        tmp_level_name_1 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 14;
+        tmp_fromlist_name_1 = mod_consts[87];
+        tmp_level_name_1 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 14;
         tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9019,7 +9019,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[71],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[71]);
@@ -9045,12 +9045,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_2;
         PyObject *tmp_fromlist_name_2;
         PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[90];
+        tmp_name_name_2 = mod_consts[89];
         tmp_globals_arg_name_2 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_2 = Py_None;
         tmp_fromlist_name_2 = Py_None;
-        tmp_level_name_2 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 15;
+        tmp_level_name_2 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 15;
         tmp_assign_source_6 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9062,7 +9062,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
@@ -9071,12 +9071,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_3;
         PyObject *tmp_fromlist_name_3;
         PyObject *tmp_level_name_3;
-        tmp_name_name_3 = mod_consts[91];
+        tmp_name_name_3 = mod_consts[90];
         tmp_globals_arg_name_3 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_3 = Py_None;
         tmp_fromlist_name_3 = Py_None;
-        tmp_level_name_3 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 16;
+        tmp_level_name_3 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 16;
         tmp_assign_source_7 = IMPORT_MODULE5(tmp_name_name_3, tmp_globals_arg_name_3, tmp_locals_arg_name_3, tmp_fromlist_name_3, tmp_level_name_3);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9088,7 +9088,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[91], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
@@ -9097,12 +9097,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_4;
         PyObject *tmp_fromlist_name_4;
         PyObject *tmp_level_name_4;
-        tmp_name_name_4 = mod_consts[92];
+        tmp_name_name_4 = mod_consts[91];
         tmp_globals_arg_name_4 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_4 = Py_None;
-        tmp_fromlist_name_4 = mod_consts[93];
-        tmp_level_name_4 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 19;
+        tmp_fromlist_name_4 = mod_consts[92];
+        tmp_level_name_4 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 19;
         tmp_assign_source_8 = IMPORT_MODULE5(tmp_name_name_4, tmp_globals_arg_name_4, tmp_locals_arg_name_4, tmp_fromlist_name_4, tmp_level_name_4);
         if (tmp_assign_source_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9128,7 +9128,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[0],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_9 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[0]);
@@ -9155,11 +9155,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_10 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_3,
                 (PyObject *)moduledict_openpyxl$cell$cell,
-                mod_consts[94],
-                mod_consts[89]
+                mod_consts[93],
+                mod_consts[88]
             );
         } else {
-            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[94]);
+            tmp_assign_source_10 = IMPORT_NAME(tmp_import_name_from_3, mod_consts[93]);
         }
 
         if (tmp_assign_source_10 == NULL) {
@@ -9172,7 +9172,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_1;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[94], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[93], tmp_assign_source_10);
     }
     goto try_end_1;
     // Exception handler code:
@@ -9209,12 +9209,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_5;
         PyObject *tmp_fromlist_name_5;
         PyObject *tmp_level_name_5;
-        tmp_name_name_5 = mod_consts[95];
+        tmp_name_name_5 = mod_consts[94];
         tmp_globals_arg_name_5 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_5 = Py_None;
-        tmp_fromlist_name_5 = mod_consts[96];
-        tmp_level_name_5 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 24;
+        tmp_fromlist_name_5 = mod_consts[95];
+        tmp_level_name_5 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 24;
         tmp_import_name_from_4 = IMPORT_MODULE5(tmp_name_name_5, tmp_globals_arg_name_5, tmp_locals_arg_name_5, tmp_fromlist_name_5, tmp_level_name_5);
         if (tmp_import_name_from_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9231,7 +9231,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_4,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[38],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_11 = IMPORT_NAME(tmp_import_name_from_4, mod_consts[38]);
@@ -9258,12 +9258,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_6;
         PyObject *tmp_fromlist_name_6;
         PyObject *tmp_level_name_6;
-        tmp_name_name_6 = mod_consts[97];
+        tmp_name_name_6 = mod_consts[96];
         tmp_globals_arg_name_6 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_6 = Py_None;
-        tmp_fromlist_name_6 = mod_consts[98];
-        tmp_level_name_6 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 26;
+        tmp_fromlist_name_6 = mod_consts[97];
+        tmp_level_name_6 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 26;
         tmp_import_name_from_5 = IMPORT_MODULE5(tmp_name_name_6, tmp_globals_arg_name_6, tmp_locals_arg_name_6, tmp_fromlist_name_6, tmp_level_name_6);
         if (tmp_import_name_from_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9280,7 +9280,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_5,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[24],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_12 = IMPORT_NAME(tmp_import_name_from_5, mod_consts[24]);
@@ -9306,12 +9306,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_7;
         PyObject *tmp_fromlist_name_7;
         PyObject *tmp_level_name_7;
-        tmp_name_name_7 = mod_consts[99];
+        tmp_name_name_7 = mod_consts[98];
         tmp_globals_arg_name_7 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_7 = Py_None;
-        tmp_fromlist_name_7 = mod_consts[100];
-        tmp_level_name_7 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 27;
+        tmp_fromlist_name_7 = mod_consts[99];
+        tmp_level_name_7 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 27;
         tmp_assign_source_13 = IMPORT_MODULE5(tmp_name_name_7, tmp_globals_arg_name_7, tmp_locals_arg_name_7, tmp_fromlist_name_7, tmp_level_name_7);
         if (tmp_assign_source_13 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9336,11 +9336,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_14 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_6,
                 (PyObject *)moduledict_openpyxl$cell$cell,
-                mod_consts[101],
-                mod_consts[89]
+                mod_consts[100],
+                mod_consts[88]
             );
         } else {
-            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[101]);
+            tmp_assign_source_14 = IMPORT_NAME(tmp_import_name_from_6, mod_consts[100]);
         }
 
         if (tmp_assign_source_14 == NULL) {
@@ -9353,7 +9353,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_2;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[101], tmp_assign_source_14);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[100], tmp_assign_source_14);
     }
     {
         PyObject *tmp_assign_source_15;
@@ -9365,7 +9365,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_7,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[44],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_15 = IMPORT_NAME(tmp_import_name_from_7, mod_consts[44]);
@@ -9418,12 +9418,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_8;
         PyObject *tmp_fromlist_name_8;
         PyObject *tmp_level_name_8;
-        tmp_name_name_8 = mod_consts[102];
+        tmp_name_name_8 = mod_consts[101];
         tmp_globals_arg_name_8 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_8 = Py_None;
-        tmp_fromlist_name_8 = mod_consts[103];
-        tmp_level_name_8 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 28;
+        tmp_fromlist_name_8 = mod_consts[102];
+        tmp_level_name_8 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 28;
         tmp_import_name_from_8 = IMPORT_MODULE5(tmp_name_name_8, tmp_globals_arg_name_8, tmp_locals_arg_name_8, tmp_fromlist_name_8, tmp_level_name_8);
         if (tmp_import_name_from_8 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9439,11 +9439,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             tmp_assign_source_16 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_8,
                 (PyObject *)moduledict_openpyxl$cell$cell,
-                mod_consts[104],
-                mod_consts[89]
+                mod_consts[103],
+                mod_consts[88]
             );
         } else {
-            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[104]);
+            tmp_assign_source_16 = IMPORT_NAME(tmp_import_name_from_8, mod_consts[103]);
         }
 
         Py_DECREF(tmp_import_name_from_8);
@@ -9457,7 +9457,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[104], tmp_assign_source_16);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[103], tmp_assign_source_16);
     }
     {
         PyObject *tmp_assign_source_17;
@@ -9467,12 +9467,12 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_locals_arg_name_9;
         PyObject *tmp_fromlist_name_9;
         PyObject *tmp_level_name_9;
-        tmp_name_name_9 = mod_consts[105];
+        tmp_name_name_9 = mod_consts[104];
         tmp_globals_arg_name_9 = (PyObject *)moduledict_openpyxl$cell$cell;
         tmp_locals_arg_name_9 = Py_None;
-        tmp_fromlist_name_9 = mod_consts[106];
-        tmp_level_name_9 = mod_consts[89];
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 29;
+        tmp_fromlist_name_9 = mod_consts[105];
+        tmp_level_name_9 = mod_consts[88];
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 29;
         tmp_import_name_from_9 = IMPORT_MODULE5(tmp_name_name_9, tmp_globals_arg_name_9, tmp_locals_arg_name_9, tmp_fromlist_name_9, tmp_level_name_9);
         if (tmp_import_name_from_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9489,7 +9489,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 tmp_import_name_from_9,
                 (PyObject *)moduledict_openpyxl$cell$cell,
                 mod_consts[60],
-                mod_consts[89]
+                mod_consts[88]
             );
         } else {
             tmp_assign_source_17 = IMPORT_NAME(tmp_import_name_from_9, mod_consts[60]);
@@ -9512,10 +9512,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_assign_source_18;
         PyObject *tmp_tuple_element_1;
         PyObject *tmp_expression_name_1;
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
         if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
         if (tmp_expression_name_1 == NULL) {
@@ -9528,7 +9528,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[90]);
+        tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[89]);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9545,10 +9545,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_expression_name_3;
             PyObject *tmp_expression_name_4;
             PyTuple_SET_ITEM(tmp_assign_source_18, 0, tmp_tuple_element_1);
-            tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_2 == NULL)) {
-                tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_2 == NULL) {
@@ -9561,7 +9561,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[107]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[106]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9573,10 +9573,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_assign_source_18, 1, tmp_tuple_element_1);
-            tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_3 == NULL)) {
-                tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_3 == NULL) {
@@ -9589,7 +9589,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[108]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[107]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9601,10 +9601,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto tuple_build_exception_1;
             }
             PyTuple_SET_ITEM(tmp_assign_source_18, 2, tmp_tuple_element_1);
-            tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_4 == NULL)) {
-                tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_4 == NULL) {
@@ -9617,7 +9617,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto tuple_build_exception_1;
             }
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[109]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[108]);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9645,10 +9645,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_dict_value_1;
         PyObject *tmp_expression_name_5;
         PyObject *tmp_expression_name_6;
-        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+        tmp_expression_name_5 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
         if (unlikely(tmp_expression_name_5 == NULL)) {
-            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+            tmp_expression_name_5 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
         }
 
         if (tmp_expression_name_5 == NULL) {
@@ -9661,7 +9661,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[90]);
+        tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_5, mod_consts[89]);
         if (tmp_dict_key_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9672,10 +9672,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[101]);
+        tmp_expression_name_6 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[100]);
 
         if (unlikely(tmp_expression_name_6 == NULL)) {
-            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[101]);
+            tmp_expression_name_6 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
         }
 
         if (tmp_expression_name_6 == NULL) {
@@ -9688,7 +9688,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[110]);
+        tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[109]);
         if (tmp_dict_value_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -9720,10 +9720,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_7 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_7 == NULL)) {
-                tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_7 == NULL) {
@@ -9736,7 +9736,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[107]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_7, mod_consts[106]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9747,10 +9747,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[101]);
+            tmp_expression_name_8 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[100]);
 
             if (unlikely(tmp_expression_name_8 == NULL)) {
-                tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[101]);
+                tmp_expression_name_8 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
             }
 
             if (tmp_expression_name_8 == NULL) {
@@ -9763,7 +9763,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[111]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[110]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9787,10 +9787,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_9 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_9 == NULL)) {
-                tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_9 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_9 == NULL) {
@@ -9803,7 +9803,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[108]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_9, mod_consts[107]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9814,10 +9814,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[101]);
+            tmp_expression_name_10 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[100]);
 
             if (unlikely(tmp_expression_name_10 == NULL)) {
-                tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[101]);
+                tmp_expression_name_10 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
             }
 
             if (tmp_expression_name_10 == NULL) {
@@ -9830,7 +9830,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[112]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_10, mod_consts[111]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9854,10 +9854,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
+            tmp_expression_name_11 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[89]);
 
             if (unlikely(tmp_expression_name_11 == NULL)) {
-                tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
+                tmp_expression_name_11 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[89]);
             }
 
             if (tmp_expression_name_11 == NULL) {
@@ -9870,7 +9870,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[109]);
+            tmp_dict_key_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_11, mod_consts[108]);
             if (tmp_dict_key_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9881,10 +9881,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[101]);
+            tmp_expression_name_12 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[100]);
 
             if (unlikely(tmp_expression_name_12 == NULL)) {
-                tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[101]);
+                tmp_expression_name_12 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[100]);
             }
 
             if (tmp_expression_name_12 == NULL) {
@@ -9897,7 +9897,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
                 goto dict_build_exception_1;
             }
-            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[113]);
+            tmp_dict_value_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_12, mod_consts[112]);
             if (tmp_dict_value_1 == NULL) {
                 assert(ERROR_OCCURRED());
 
@@ -9933,7 +9933,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_20;
-        tmp_assign_source_20 = mod_consts[114];
+        tmp_assign_source_20 = mod_consts[113];
         UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_20);
     }
     {
@@ -10015,7 +10015,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        tmp_right_name_3 = mod_consts[115];
+        tmp_right_name_3 = mod_consts[114];
         tmp_assign_source_21 = BINARY_OPERATION_ADD_OBJECT_OBJECT_TUPLE(tmp_left_name_1, tmp_right_name_3);
         Py_DECREF(tmp_left_name_1);
         if (tmp_assign_source_21 == NULL) {
@@ -10028,15 +10028,15 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[116], tmp_assign_source_21);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[115], tmp_assign_source_21);
     }
     {
         PyObject *tmp_assign_source_22;
         PyObject *tmp_called_instance_1;
-        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[91]);
+        tmp_called_instance_1 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[90]);
 
         if (unlikely(tmp_called_instance_1 == NULL)) {
-            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[91]);
+            tmp_called_instance_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[90]);
         }
 
         if (tmp_called_instance_1 == NULL) {
@@ -10049,11 +10049,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto frame_exception_exit_1;
         }
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 44;
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 44;
         tmp_assign_source_22 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_1,
-            mod_consts[117],
-            &PyTuple_GET_ITEM(mod_consts[118], 0)
+            mod_consts[116],
+            &PyTuple_GET_ITEM(mod_consts[117], 0)
         );
 
         if (tmp_assign_source_22 == NULL) {
@@ -10070,52 +10070,61 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     }
     {
         PyObject *tmp_assign_source_23;
-        tmp_assign_source_23 = mod_consts[119];
+        tmp_assign_source_23 = mod_consts[118];
         UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[52], tmp_assign_source_23);
     }
     {
         PyObject *tmp_assign_source_24;
         tmp_assign_source_24 = mod_consts[3];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[120], tmp_assign_source_24);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[119], tmp_assign_source_24);
     }
     {
         PyObject *tmp_assign_source_25;
         tmp_assign_source_25 = mod_consts[51];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_25);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[120], tmp_assign_source_25);
     }
     {
         PyObject *tmp_assign_source_26;
         tmp_assign_source_26 = mod_consts[1];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[122], tmp_assign_source_26);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[121], tmp_assign_source_26);
     }
     {
         PyObject *tmp_assign_source_27;
-        tmp_assign_source_27 = mod_consts[123];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[124], tmp_assign_source_27);
+        tmp_assign_source_27 = mod_consts[122];
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[123], tmp_assign_source_27);
     }
     {
         PyObject *tmp_assign_source_28;
         tmp_assign_source_28 = mod_consts[1];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[125], tmp_assign_source_28);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[124], tmp_assign_source_28);
     }
     {
         PyObject *tmp_assign_source_29;
-        tmp_assign_source_29 = mod_consts[126];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_29);
+        tmp_assign_source_29 = mod_consts[125];
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[126], tmp_assign_source_29);
     }
     {
         PyObject *tmp_assign_source_30;
         tmp_assign_source_30 = mod_consts[53];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[128], tmp_assign_source_30);
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[127], tmp_assign_source_30);
     }
     {
         PyObject *tmp_assign_source_31;
-        tmp_assign_source_31 = mod_consts[129];
-        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_31);
+        tmp_assign_source_31 = mod_consts[128];
+        UPDATE_STRING_DICT0(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[129], tmp_assign_source_31);
     }
     {
         PyObject *tmp_assign_source_32;
         PyObject *tmp_tuple_element_2;
+        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[119]);
+
+        if (unlikely(tmp_tuple_element_2 == NULL)) {
+            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[119]);
+        }
+
+        assert(!(tmp_tuple_element_2 == NULL));
+        tmp_assign_source_32 = PyTuple_New(8);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 0, tmp_tuple_element_2);
         tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[120]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
@@ -10123,8 +10132,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        tmp_assign_source_32 = PyTuple_New(8);
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 0, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 1, tmp_tuple_element_2);
         tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[121]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
@@ -10132,15 +10140,15 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 1, tmp_tuple_element_2);
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[122]);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 2, tmp_tuple_element_2);
+        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[123]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[122]);
+            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[123]);
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 2, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 3, tmp_tuple_element_2);
         tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[124]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
@@ -10148,15 +10156,15 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 3, tmp_tuple_element_2);
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[125]);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 4, tmp_tuple_element_2);
+        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[126]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[125]);
+            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[126]);
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 4, tmp_tuple_element_2);
+        PyTuple_SET_ITEM0(tmp_assign_source_32, 5, tmp_tuple_element_2);
         tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[127]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
@@ -10164,28 +10172,20 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
-        PyTuple_SET_ITEM0(tmp_assign_source_32, 5, tmp_tuple_element_2);
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[128]);
-
-        if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[128]);
-        }
-
-        assert(!(tmp_tuple_element_2 == NULL));
         PyTuple_SET_ITEM0(tmp_assign_source_32, 6, tmp_tuple_element_2);
-        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[130]);
+        tmp_tuple_element_2 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[129]);
 
         if (unlikely(tmp_tuple_element_2 == NULL)) {
-            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[130]);
+            tmp_tuple_element_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[129]);
         }
 
         assert(!(tmp_tuple_element_2 == NULL));
         PyTuple_SET_ITEM0(tmp_assign_source_32, 7, tmp_tuple_element_2);
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[131], tmp_assign_source_32);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[130], tmp_assign_source_32);
     }
     {
         PyObject *tmp_assign_source_33;
-        tmp_assign_source_33 = PyDict_Copy(mod_consts[132]);
+        tmp_assign_source_33 = PyDict_Copy(mod_consts[131]);
         UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_33);
     }
     {
@@ -10208,10 +10208,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_36;
         PyObject *tmp_tuple_element_3;
-        tmp_tuple_element_3 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[104]);
+        tmp_tuple_element_3 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[103]);
 
         if (unlikely(tmp_tuple_element_3 == NULL)) {
-            tmp_tuple_element_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
+            tmp_tuple_element_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
         }
 
         if (tmp_tuple_element_3 == NULL) {
@@ -10273,7 +10273,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_13;
         PyObject *tmp_subscript_name_1;
         PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[133];
+        tmp_key_name_1 = mod_consts[132];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
@@ -10287,7 +10287,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[133];
+        tmp_key_name_2 = mod_consts[132];
         tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
         if (tmp_metaclass_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10322,7 +10322,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_1__bases);
         tmp_expression_name_13 = tmp_class_creation_1__bases;
-        tmp_subscript_name_1 = mod_consts[89];
+        tmp_subscript_name_1 = mod_consts[88];
         tmp_type_arg_1 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_13, tmp_subscript_name_1, 0);
         if (tmp_type_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10373,7 +10373,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         nuitka_bool tmp_condition_result_3;
         PyObject *tmp_key_name_3;
         PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[133];
+        tmp_key_name_3 = mod_consts[132];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
@@ -10388,7 +10388,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[133];
+    tmp_dictdel_key = mod_consts[132];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -10406,7 +10406,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_14;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_14 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_14, mod_consts[134]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_14, mod_consts[133]);
         tmp_condition_result_4 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_4 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -10424,7 +10424,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_kwargs_name_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_15 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[134]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_15, mod_consts[133]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -10443,7 +10443,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyTuple_SET_ITEM0(tmp_args_name_1, 1, tmp_tuple_element_4);
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 89;
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 89;
         tmp_assign_source_40 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_name_1);
@@ -10466,7 +10466,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_16;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_name_16 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_16, mod_consts[135]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_16, mod_consts[134]);
         tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
         if (tmp_res == -1) {
@@ -10497,11 +10497,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_4 = mod_consts[136];
+        tmp_left_name_4 = mod_consts[135];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[137];
-        tmp_getattr_default_1 = mod_consts[138];
+        tmp_getattr_attr_1 = mod_consts[136];
+        tmp_getattr_default_1 = mod_consts[137];
         tmp_tuple_element_5 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10522,7 +10522,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             tmp_type_arg_2 = tmp_class_creation_1__prepared;
             tmp_expression_name_17 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_name_17 == NULL));
-            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[137]);
+            tmp_tuple_element_5 = LOOKUP_ATTRIBUTE(tmp_expression_name_17, mod_consts[136]);
             Py_DECREF(tmp_expression_name_17);
             if (tmp_tuple_element_5 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -10584,8 +10584,8 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[139];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[140], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[138];
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[139], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -10596,7 +10596,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_5;
         }
-        tmp_dictset_value = mod_consts[141];
+        tmp_dictset_value = mod_consts[140];
         tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[79], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -10609,7 +10609,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             goto try_except_handler_5;
         }
         tmp_dictset_value = mod_consts[16];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[142], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[141], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -10620,35 +10620,35 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_5;
         }
-        if (isFrameUnusable(cache_frame_522919331c65005da30eb86bc0d4c890_2)) {
-            Py_XDECREF(cache_frame_522919331c65005da30eb86bc0d4c890_2);
+        if (isFrameUnusable(cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2)) {
+            Py_XDECREF(cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_522919331c65005da30eb86bc0d4c890_2 == NULL) {
+            if (cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_522919331c65005da30eb86bc0d4c890_2 = MAKE_FUNCTION_FRAME(codeobj_522919331c65005da30eb86bc0d4c890, module_openpyxl$cell$cell, sizeof(void *));
+            cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2 = MAKE_FUNCTION_FRAME(codeobj_2694e3a6f4a2e0d0bb306f44183734ab, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_522919331c65005da30eb86bc0d4c890_2->m_type_description == NULL);
-        frame_522919331c65005da30eb86bc0d4c890_2 = cache_frame_522919331c65005da30eb86bc0d4c890_2;
+        assert(cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_type_description == NULL);
+        frame_2694e3a6f4a2e0d0bb306f44183734ab_2 = cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_522919331c65005da30eb86bc0d4c890_2);
+        pushFrameStack(frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_522919331c65005da30eb86bc0d4c890_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_2694e3a6f4a2e0d0bb306f44183734ab_2) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[143];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[144], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[142];
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -10661,7 +10661,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[145];
+            tmp_defaults_1 = mod_consts[144];
             Py_INCREF(tmp_defaults_1);
 
 
@@ -10686,7 +10686,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_1;
             PyObject *tmp_called_name_3;
             PyObject *tmp_args_element_name_2;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -10705,11 +10705,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_3;
             }
             condexpr_true_3:;
-            tmp_called_name_2 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_2 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_2 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -10732,7 +10732,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_1 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__4_coordinate();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 120;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 120;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_1);
             Py_DECREF(tmp_called_name_2);
             Py_DECREF(tmp_args_element_name_1);
@@ -10753,7 +10753,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_2 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__4_coordinate();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 120;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 120;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_2);
             Py_DECREF(tmp_args_element_name_2);
             if (tmp_dictset_value == NULL) {
@@ -10786,7 +10786,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_3;
             PyObject *tmp_called_name_5;
             PyObject *tmp_args_element_name_4;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -10805,11 +10805,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_4;
             }
             condexpr_true_4:;
-            tmp_called_name_4 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_4 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -10832,7 +10832,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_3 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__5_col_idx();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 127;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 127;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_3);
             Py_DECREF(tmp_called_name_4);
             Py_DECREF(tmp_args_element_name_3);
@@ -10853,7 +10853,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_4 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__5_col_idx();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 127;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 127;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_5, tmp_args_element_name_4);
             Py_DECREF(tmp_args_element_name_4);
             if (tmp_dictset_value == NULL) {
@@ -10886,7 +10886,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_5;
             PyObject *tmp_called_name_7;
             PyObject *tmp_args_element_name_6;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -10905,11 +10905,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_5;
             }
             condexpr_true_5:;
-            tmp_called_name_6 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_6 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_6 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -10932,7 +10932,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_5 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__6_column_letter();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 133;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 133;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_6, tmp_args_element_name_5);
             Py_DECREF(tmp_called_name_6);
             Py_DECREF(tmp_args_element_name_5);
@@ -10953,7 +10953,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_6 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__6_column_letter();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 133;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 133;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_7, tmp_args_element_name_6);
             Py_DECREF(tmp_args_element_name_6);
             if (tmp_dictset_value == NULL) {
@@ -10967,7 +10967,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_5:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[150], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[149], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -10986,7 +10986,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_7;
             PyObject *tmp_called_name_9;
             PyObject *tmp_args_element_name_8;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11005,11 +11005,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_6;
             }
             condexpr_true_6:;
-            tmp_called_name_8 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_8 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_8 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11032,7 +11032,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_7 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__7_encoding();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 138;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 138;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_8, tmp_args_element_name_7);
             Py_DECREF(tmp_called_name_8);
             Py_DECREF(tmp_args_element_name_7);
@@ -11053,7 +11053,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_8 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__7_encoding();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 138;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 138;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_9, tmp_args_element_name_8);
             Py_DECREF(tmp_args_element_name_8);
             if (tmp_dictset_value == NULL) {
@@ -11086,7 +11086,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_9;
             PyObject *tmp_called_name_11;
             PyObject *tmp_args_element_name_10;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11105,11 +11105,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_7;
             }
             condexpr_true_7:;
-            tmp_called_name_10 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_10 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_10 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11132,7 +11132,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_9 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__8_base_date();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 142;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 142;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_10, tmp_args_element_name_9);
             Py_DECREF(tmp_called_name_10);
             Py_DECREF(tmp_args_element_name_9);
@@ -11153,7 +11153,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_10 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__8_base_date();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 142;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 142;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_11, tmp_args_element_name_10);
             Py_DECREF(tmp_args_element_name_10);
             if (tmp_dictset_value == NULL) {
@@ -11167,7 +11167,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_7:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[153], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[152], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11184,7 +11184,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_openpyxl$cell$cell$$$function__9___repr__();
 
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[155], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[154], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -11216,7 +11216,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_openpyxl$cell$cell$$$function__11_check_error();
 
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[158], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[157], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -11250,7 +11250,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_11;
             PyObject *tmp_called_name_13;
             PyObject *tmp_args_element_name_12;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11269,11 +11269,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_8;
             }
             condexpr_true_8:;
-            tmp_called_name_12 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_12 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_12 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11296,7 +11296,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_11 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__13_value();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 203;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 203;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_12, tmp_args_element_name_11);
             Py_DECREF(tmp_called_name_12);
             Py_DECREF(tmp_args_element_name_11);
@@ -11317,7 +11317,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_12 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__13_value();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 203;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 203;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_13, tmp_args_element_name_12);
             Py_DECREF(tmp_args_element_name_12);
             if (tmp_dictset_value == NULL) {
@@ -11374,8 +11374,8 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_13 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__14_value();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 212;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[162], tmp_args_element_name_13);
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 212;
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[161], tmp_args_element_name_13);
             Py_DECREF(tmp_called_instance_2);
             Py_DECREF(tmp_args_element_name_13);
             if (tmp_dictset_value == NULL) {
@@ -11407,7 +11407,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_14;
             PyObject *tmp_called_name_15;
             PyObject *tmp_args_element_name_15;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11426,11 +11426,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_9;
             }
             condexpr_true_9:;
-            tmp_called_name_14 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_14 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_14 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11453,7 +11453,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_14 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__15_internal_value();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 217;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 217;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_14, tmp_args_element_name_14);
             Py_DECREF(tmp_called_name_14);
             Py_DECREF(tmp_args_element_name_14);
@@ -11474,7 +11474,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_15 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__15_internal_value();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 217;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 217;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_15, tmp_args_element_name_15);
             Py_DECREF(tmp_args_element_name_15);
             if (tmp_dictset_value == NULL) {
@@ -11488,7 +11488,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_9:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[163], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[162], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11507,7 +11507,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_16;
             PyObject *tmp_called_name_17;
             PyObject *tmp_args_element_name_17;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11526,11 +11526,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_10;
             }
             condexpr_true_10:;
-            tmp_called_name_16 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_16 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_16 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11553,7 +11553,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_16 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__16_hyperlink();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 222;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 222;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_16, tmp_args_element_name_16);
             Py_DECREF(tmp_called_name_16);
             Py_DECREF(tmp_args_element_name_16);
@@ -11574,7 +11574,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_17 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__16_hyperlink();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 222;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 222;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_17, tmp_args_element_name_17);
             Py_DECREF(tmp_args_element_name_17);
             if (tmp_dictset_value == NULL) {
@@ -11588,7 +11588,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_10:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[165], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[164], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11604,11 +11604,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         {
             PyObject *tmp_called_instance_3;
             PyObject *tmp_args_element_name_18;
-            tmp_called_instance_3 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[165]);
+            tmp_called_instance_3 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[164]);
 
             if (unlikely(tmp_called_instance_3 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[165]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[164]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11631,8 +11631,8 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_18 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__17_hyperlink();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 228;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[162], tmp_args_element_name_18);
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 228;
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[161], tmp_args_element_name_18);
             Py_DECREF(tmp_called_instance_3);
             Py_DECREF(tmp_args_element_name_18);
             if (tmp_dictset_value == NULL) {
@@ -11645,7 +11645,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[165], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[164], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11664,7 +11664,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_19;
             PyObject *tmp_called_name_19;
             PyObject *tmp_args_element_name_20;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11683,11 +11683,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_11;
             }
             condexpr_true_11:;
-            tmp_called_name_18 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_18 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_18 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11710,7 +11710,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_19 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__18_is_date();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 246;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 246;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_18, tmp_args_element_name_19);
             Py_DECREF(tmp_called_name_18);
             Py_DECREF(tmp_args_element_name_19);
@@ -11731,7 +11731,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_20 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__18_is_date();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 246;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 246;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_19, tmp_args_element_name_20);
             Py_DECREF(tmp_args_element_name_20);
             if (tmp_dictset_value == NULL) {
@@ -11745,7 +11745,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_11:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[167], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[166], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11760,13 +11760,13 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[169];
+            tmp_defaults_2 = mod_consts[168];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_openpyxl$cell$cell$$$function__19_offset(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[170], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[169], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11785,7 +11785,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyObject *tmp_args_element_name_21;
             PyObject *tmp_called_name_21;
             PyObject *tmp_args_element_name_22;
-            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_res = MAPPING_HAS_ITEM(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (tmp_res == -1) {
                 assert(ERROR_OCCURRED());
@@ -11804,11 +11804,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto condexpr_false_12;
             }
             condexpr_true_12:;
-            tmp_called_name_20 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[147]);
+            tmp_called_name_20 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[146]);
 
             if (unlikely(tmp_called_name_20 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[147]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[146]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11831,7 +11831,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_21 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__20_comment();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 273;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 273;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_20, tmp_args_element_name_21);
             Py_DECREF(tmp_called_name_20);
             Py_DECREF(tmp_args_element_name_21);
@@ -11852,7 +11852,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_22 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__20_comment();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 273;
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 273;
             tmp_dictset_value = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_21, tmp_args_element_name_22);
             Py_DECREF(tmp_args_element_name_22);
             if (tmp_dictset_value == NULL) {
@@ -11866,7 +11866,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_2;
             }
             condexpr_end_12:;
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[172], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[171], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11882,11 +11882,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         {
             PyObject *tmp_called_instance_4;
             PyObject *tmp_args_element_name_23;
-            tmp_called_instance_4 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[172]);
+            tmp_called_instance_4 = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[171]);
 
             if (unlikely(tmp_called_instance_4 == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[172]);
+                FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[171]);
                 NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
                 CHAIN_EXCEPTION(exception_value);
 
@@ -11909,8 +11909,8 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             tmp_args_element_name_23 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__21_comment();
 
-            frame_522919331c65005da30eb86bc0d4c890_2->m_frame.f_lineno = 282;
-            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[162], tmp_args_element_name_23);
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame.f_lineno = 282;
+            tmp_dictset_value = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_4, mod_consts[161], tmp_args_element_name_23);
             Py_DECREF(tmp_called_instance_4);
             Py_DECREF(tmp_args_element_name_23);
             if (tmp_dictset_value == NULL) {
@@ -11923,7 +11923,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 type_description_2 = "o";
                 goto frame_exception_exit_2;
             }
-            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[172], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[171], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -11938,7 +11938,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_522919331c65005da30eb86bc0d4c890_2);
+        RESTORE_FRAME_EXCEPTION(frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
 #endif
 
         // Put the previous frame back on top.
@@ -11949,35 +11949,35 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         frame_exception_exit_2:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_522919331c65005da30eb86bc0d4c890_2);
+        RESTORE_FRAME_EXCEPTION(frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_522919331c65005da30eb86bc0d4c890_2, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_522919331c65005da30eb86bc0d4c890_2->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_522919331c65005da30eb86bc0d4c890_2, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_2694e3a6f4a2e0d0bb306f44183734ab_2, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_2694e3a6f4a2e0d0bb306f44183734ab_2->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_2694e3a6f4a2e0d0bb306f44183734ab_2, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_522919331c65005da30eb86bc0d4c890_2,
+            frame_2694e3a6f4a2e0d0bb306f44183734ab_2,
             type_description_2,
             outline_0_var___class__
         );
 
 
         // Release cached frame if used for exception.
-        if (frame_522919331c65005da30eb86bc0d4c890_2 == cache_frame_522919331c65005da30eb86bc0d4c890_2) {
+        if (frame_2694e3a6f4a2e0d0bb306f44183734ab_2 == cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_522919331c65005da30eb86bc0d4c890_2);
-            cache_frame_522919331c65005da30eb86bc0d4c890_2 = NULL;
+            Py_DECREF(cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
+            cache_frame_2694e3a6f4a2e0d0bb306f44183734ab_2 = NULL;
         }
 
-        assertFrameObject(frame_522919331c65005da30eb86bc0d4c890_2);
+        assertFrameObject(frame_2694e3a6f4a2e0d0bb306f44183734ab_2);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -12020,7 +12020,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         branch_yes_4:;
         CHECK_OBJECT(tmp_class_creation_1__bases_orig);
         tmp_dictset_value = tmp_class_creation_1__bases_orig;
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[174], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__1_Cell_89, mod_consts[173], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12050,7 +12050,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_6);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
             tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
-            frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 89;
+            frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 89;
             tmp_assign_source_43 = CALL_FUNCTION(tmp_called_name_22, tmp_args_name_2, tmp_kwargs_name_2);
             Py_DECREF(tmp_args_name_2);
             if (tmp_assign_source_43 == NULL) {
@@ -12180,10 +12180,10 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_44;
         PyObject *tmp_tuple_element_7;
-        tmp_tuple_element_7 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[104]);
+        tmp_tuple_element_7 = GET_STRING_DICT_VALUE(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[103]);
 
         if (unlikely(tmp_tuple_element_7 == NULL)) {
-            tmp_tuple_element_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[104]);
+            tmp_tuple_element_7 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[103]);
         }
 
         if (tmp_tuple_element_7 == NULL) {
@@ -12245,7 +12245,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_18;
         PyObject *tmp_subscript_name_2;
         PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[133];
+        tmp_key_name_4 = mod_consts[132];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
@@ -12259,7 +12259,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         condexpr_true_13:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[133];
+        tmp_key_name_5 = mod_consts[132];
         tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
         if (tmp_metaclass_name_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12294,7 +12294,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         condexpr_true_14:;
         CHECK_OBJECT(tmp_class_creation_2__bases);
         tmp_expression_name_18 = tmp_class_creation_2__bases;
-        tmp_subscript_name_2 = mod_consts[89];
+        tmp_subscript_name_2 = mod_consts[88];
         tmp_type_arg_3 = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_18, tmp_subscript_name_2, 0);
         if (tmp_type_arg_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12345,7 +12345,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         nuitka_bool tmp_condition_result_19;
         PyObject *tmp_key_name_6;
         PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[133];
+        tmp_key_name_6 = mod_consts[132];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
@@ -12360,7 +12360,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     branch_yes_5:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[133];
+    tmp_dictdel_key = mod_consts[132];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -12378,7 +12378,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_19;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_expression_name_19 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_19, mod_consts[134]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_19, mod_consts[133]);
         tmp_condition_result_20 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_20 == NUITKA_BOOL_TRUE) {
             goto branch_yes_6;
@@ -12396,7 +12396,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_kwargs_name_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_expression_name_20 = tmp_class_creation_2__metaclass;
-        tmp_called_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[134]);
+        tmp_called_name_23 = LOOKUP_ATTRIBUTE(tmp_expression_name_20, mod_consts[133]);
         if (tmp_called_name_23 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -12415,7 +12415,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyTuple_SET_ITEM0(tmp_args_name_3, 1, tmp_tuple_element_8);
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
-        frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 297;
+        frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 297;
         tmp_assign_source_48 = CALL_FUNCTION(tmp_called_name_23, tmp_args_name_3, tmp_kwargs_name_3);
         Py_DECREF(tmp_called_name_23);
         Py_DECREF(tmp_args_name_3);
@@ -12438,7 +12438,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_expression_name_21;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
         tmp_expression_name_21 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_21, mod_consts[135]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_21, mod_consts[134]);
         tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
         if (tmp_res == -1) {
@@ -12469,11 +12469,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_5 = mod_consts[136];
+        tmp_left_name_5 = mod_consts[135];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[137];
-        tmp_getattr_default_2 = mod_consts[138];
+        tmp_getattr_attr_2 = mod_consts[136];
+        tmp_getattr_default_2 = mod_consts[137];
         tmp_tuple_element_9 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_9 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12494,7 +12494,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             tmp_type_arg_4 = tmp_class_creation_2__prepared;
             tmp_expression_name_22 = BUILTIN_TYPE1(tmp_type_arg_4);
             assert(!(tmp_expression_name_22 == NULL));
-            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[137]);
+            tmp_tuple_element_9 = LOOKUP_ATTRIBUTE(tmp_expression_name_22, mod_consts[136]);
             Py_DECREF(tmp_expression_name_22);
             if (tmp_tuple_element_9 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -12556,8 +12556,8 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[139];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[140], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[138];
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[139], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12568,7 +12568,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        tmp_dictset_value = mod_consts[175];
+        tmp_dictset_value = mod_consts[174];
         tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[79], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -12581,7 +12581,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             goto try_except_handler_8;
         }
         tmp_dictset_value = mod_consts[75];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[142], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[141], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12592,35 +12592,35 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
             goto try_except_handler_8;
         }
-        if (isFrameUnusable(cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3)) {
-            Py_XDECREF(cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
+        if (isFrameUnusable(cache_frame_1bf3172501be253fc895eef92ebabd50_3)) {
+            Py_XDECREF(cache_frame_1bf3172501be253fc895eef92ebabd50_3);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 == NULL) {
+            if (cache_frame_1bf3172501be253fc895eef92ebabd50_3 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 = MAKE_FUNCTION_FRAME(codeobj_26e3a3728d9ebc6aebe10adf361d3cd5, module_openpyxl$cell$cell, sizeof(void *));
+            cache_frame_1bf3172501be253fc895eef92ebabd50_3 = MAKE_FUNCTION_FRAME(codeobj_1bf3172501be253fc895eef92ebabd50, module_openpyxl$cell$cell, sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3->m_type_description == NULL);
-        frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 = cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3;
+        assert(cache_frame_1bf3172501be253fc895eef92ebabd50_3->m_type_description == NULL);
+        frame_1bf3172501be253fc895eef92ebabd50_3 = cache_frame_1bf3172501be253fc895eef92ebabd50_3;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
+        pushFrameStack(frame_1bf3172501be253fc895eef92ebabd50_3);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3) == 2); // Frame stack
+        assert(Py_REFCNT(frame_1bf3172501be253fc895eef92ebabd50_3) == 2); // Frame stack
 
         // Framed code:
-        tmp_dictset_value = mod_consts[176];
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[144], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[175];
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12656,7 +12656,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             goto frame_exception_exit_3;
         }
         tmp_dictset_value = Py_None;
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[172], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[171], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12668,7 +12668,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             goto frame_exception_exit_3;
         }
         tmp_dictset_value = Py_None;
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[165], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[164], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12681,7 +12681,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[177];
+            tmp_defaults_3 = mod_consts[176];
             Py_INCREF(tmp_defaults_3);
 
 
@@ -12704,7 +12704,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
         tmp_dictset_value = MAKE_FUNCTION_openpyxl$cell$cell$$$function__23___repr__();
 
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[155], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[154], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -12767,11 +12767,11 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
                 goto frame_exception_exit_3;
             }
         }
-        tmp_dictset_value = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[172]);
+        tmp_dictset_value = PyObject_GetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[171]);
 
         if (unlikely(tmp_dictset_value == NULL && CHECK_AND_CLEAR_KEY_ERROR_OCCURRED())) {
 
-            FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[172]);
+            FORMAT_NAME_ERROR(&exception_type, &exception_value, mod_consts[171]);
             NORMALIZE_EXCEPTION(&exception_type, &exception_value, &exception_tb);
             CHAIN_EXCEPTION(exception_value);
 
@@ -12839,7 +12839,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         }
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
+        RESTORE_FRAME_EXCEPTION(frame_1bf3172501be253fc895eef92ebabd50_3);
 #endif
 
         // Put the previous frame back on top.
@@ -12850,35 +12850,35 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         frame_exception_exit_3:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
+        RESTORE_FRAME_EXCEPTION(frame_1bf3172501be253fc895eef92ebabd50_3);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_26e3a3728d9ebc6aebe10adf361d3cd5_3->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_26e3a3728d9ebc6aebe10adf361d3cd5_3, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_1bf3172501be253fc895eef92ebabd50_3, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_1bf3172501be253fc895eef92ebabd50_3->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_1bf3172501be253fc895eef92ebabd50_3, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_26e3a3728d9ebc6aebe10adf361d3cd5_3,
+            frame_1bf3172501be253fc895eef92ebabd50_3,
             type_description_2,
             outline_1_var___class__
         );
 
 
         // Release cached frame if used for exception.
-        if (frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 == cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3) {
+        if (frame_1bf3172501be253fc895eef92ebabd50_3 == cache_frame_1bf3172501be253fc895eef92ebabd50_3) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
-            cache_frame_26e3a3728d9ebc6aebe10adf361d3cd5_3 = NULL;
+            Py_DECREF(cache_frame_1bf3172501be253fc895eef92ebabd50_3);
+            cache_frame_1bf3172501be253fc895eef92ebabd50_3 = NULL;
         }
 
-        assertFrameObject(frame_26e3a3728d9ebc6aebe10adf361d3cd5_3);
+        assertFrameObject(frame_1bf3172501be253fc895eef92ebabd50_3);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -12921,7 +12921,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
         branch_yes_8:;
         CHECK_OBJECT(tmp_class_creation_2__bases_orig);
         tmp_dictset_value = tmp_class_creation_2__bases_orig;
-        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[174], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_openpyxl$cell$cell$$$class__2_MergedCell_297, mod_consts[173], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -12951,7 +12951,7 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
             PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_10);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
             tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
-            frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame.f_lineno = 297;
+            frame_c9a2fc20ceb797497dfc9d0030532171->m_frame.f_lineno = 297;
             tmp_assign_source_51 = CALL_FUNCTION(tmp_called_name_24, tmp_args_name_4, tmp_kwargs_name_4);
             Py_DECREF(tmp_args_name_4);
             if (tmp_assign_source_51 == NULL) {
@@ -13068,23 +13068,23 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_3e2fd5d3add7776e3fb72ac75aeb34b9);
+    RESTORE_FRAME_EXCEPTION(frame_c9a2fc20ceb797497dfc9d0030532171);
 #endif
     popFrameStack();
 
-    assertFrameObject(frame_3e2fd5d3add7776e3fb72ac75aeb34b9);
+    assertFrameObject(frame_c9a2fc20ceb797497dfc9d0030532171);
 
     goto frame_no_exception_3;
 
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_3e2fd5d3add7776e3fb72ac75aeb34b9);
+    RESTORE_FRAME_EXCEPTION(frame_c9a2fc20ceb797497dfc9d0030532171);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_3e2fd5d3add7776e3fb72ac75aeb34b9, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_3e2fd5d3add7776e3fb72ac75aeb34b9->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_3e2fd5d3add7776e3fb72ac75aeb34b9, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_c9a2fc20ceb797497dfc9d0030532171, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_c9a2fc20ceb797497dfc9d0030532171->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_c9a2fc20ceb797497dfc9d0030532171, exception_lineno);
     }
 
     // Put the previous frame back on top.
@@ -13109,13 +13109,13 @@ PyObject *modulecode_openpyxl$cell$cell(PyObject *module, struct Nuitka_MetaPath
     {
         PyObject *tmp_assign_source_52;
         PyObject *tmp_defaults_4;
-        tmp_defaults_4 = mod_consts[177];
+        tmp_defaults_4 = mod_consts[176];
         Py_INCREF(tmp_defaults_4);
 
 
         tmp_assign_source_52 = MAKE_FUNCTION_openpyxl$cell$cell$$$function__24_WriteOnlyCell(tmp_defaults_4);
 
-        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[180], tmp_assign_source_52);
+        UPDATE_STRING_DICT1(moduledict_openpyxl$cell$cell, (Nuitka_StringObject *)mod_consts[179], tmp_assign_source_52);
     }
 
     return module_openpyxl$cell$cell;

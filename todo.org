@@ -3,14 +3,22 @@
 #+STARTUP: content
 
 * TODO
+** Change size of preview images 
+** Documentation 
+    Convert user and developer documentation to PDF format
 * In Progress
 ** CG in excel
-Set one of the inputs as center of gravity
-
+    Set one of the inputs as center of gravity
 ** Tooltips
-Set tooltips in the program
+    Set tooltips in the program
 * Done
 ** Excel doc
-Write some documentation on the excel sheet
+    Write some documentation on the excel sheet
+** Project Number
+    - Include project number as one of the required fields
+    - Include prject number in the database 
+** Python38.dll
+    Create a zip folder with the program, python38.dll, template files 
 * Testing
 * Not Possible
+** Can save to database csv even when it is open in excel 

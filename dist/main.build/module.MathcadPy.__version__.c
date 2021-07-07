@@ -66,11 +66,11 @@ void checkModuleConstants_MathcadPy$__version__(void) {
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_5fc0d2be3b9a8377362663125247c11a;
+static PyCodeObject *codeobj_c5bb014ad89136114895cd7d0b4531c9;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = mod_consts[2]; CHECK_OBJECT(module_filename_obj);
-    codeobj_5fc0d2be3b9a8377362663125247c11a = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[22], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[21]); CHECK_OBJECT(module_filename_obj);
+    codeobj_c5bb014ad89136114895cd7d0b4531c9 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[22], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -422,7 +422,7 @@ PyObject *modulecode_MathcadPy$__version__(PyObject *module, struct Nuitka_MetaP
 #endif
 
     // Temp variables if any
-    struct Nuitka_FrameObject *frame_5fc0d2be3b9a8377362663125247c11a;
+    struct Nuitka_FrameObject *frame_c5bb014ad89136114895cd7d0b4531c9;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
@@ -438,30 +438,30 @@ PyObject *modulecode_MathcadPy$__version__(PyObject *module, struct Nuitka_MetaP
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[2];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[3], tmp_assign_source_2);
+        tmp_assign_source_2 = module_filename_obj;
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_2);
     }
     // Frame without reuse.
-    frame_5fc0d2be3b9a8377362663125247c11a = MAKE_MODULE_FRAME(codeobj_5fc0d2be3b9a8377362663125247c11a, module_MathcadPy$__version__);
+    frame_c5bb014ad89136114895cd7d0b4531c9 = MAKE_MODULE_FRAME(codeobj_c5bb014ad89136114895cd7d0b4531c9, module_MathcadPy$__version__);
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack(frame_5fc0d2be3b9a8377362663125247c11a);
-    assert(Py_REFCNT(frame_5fc0d2be3b9a8377362663125247c11a) == 2);
+    pushFrameStack(frame_c5bb014ad89136114895cd7d0b4531c9);
+    assert(Py_REFCNT(frame_c5bb014ad89136114895cd7d0b4531c9) == 2);
 
     // Framed code:
     {
         PyObject *tmp_assattr_name_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = mod_consts[2];
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[3]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[5], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[4], tmp_assattr_name_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -477,14 +477,14 @@ PyObject *modulecode_MathcadPy$__version__(PyObject *module, struct Nuitka_MetaP
         PyObject *tmp_assattr_name_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[4]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[3]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[4]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[3]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[6], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[5], tmp_assattr_name_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -499,23 +499,23 @@ PyObject *modulecode_MathcadPy$__version__(PyObject *module, struct Nuitka_MetaP
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5fc0d2be3b9a8377362663125247c11a);
+    RESTORE_FRAME_EXCEPTION(frame_c5bb014ad89136114895cd7d0b4531c9);
 #endif
     popFrameStack();
 
-    assertFrameObject(frame_5fc0d2be3b9a8377362663125247c11a);
+    assertFrameObject(frame_c5bb014ad89136114895cd7d0b4531c9);
 
     goto frame_no_exception_1;
 
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5fc0d2be3b9a8377362663125247c11a);
+    RESTORE_FRAME_EXCEPTION(frame_c5bb014ad89136114895cd7d0b4531c9);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5fc0d2be3b9a8377362663125247c11a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5fc0d2be3b9a8377362663125247c11a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5fc0d2be3b9a8377362663125247c11a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_c5bb014ad89136114895cd7d0b4531c9, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_c5bb014ad89136114895cd7d0b4531c9->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_c5bb014ad89136114895cd7d0b4531c9, exception_lineno);
     }
 
     // Put the previous frame back on top.
@@ -528,42 +528,42 @@ PyObject *modulecode_MathcadPy$__version__(PyObject *module, struct Nuitka_MetaP
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[7], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[6], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
-        tmp_assign_source_4 = mod_consts[8];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[9], tmp_assign_source_4);
+        tmp_assign_source_4 = mod_consts[7];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[8], tmp_assign_source_4);
     }
     {
         PyObject *tmp_assign_source_5;
-        tmp_assign_source_5 = mod_consts[10];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_5);
+        tmp_assign_source_5 = mod_consts[9];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[10], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
-        tmp_assign_source_6 = mod_consts[12];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[13], tmp_assign_source_6);
+        tmp_assign_source_6 = mod_consts[11];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[12], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
-        tmp_assign_source_7 = mod_consts[14];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[15], tmp_assign_source_7);
+        tmp_assign_source_7 = mod_consts[13];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_7);
     }
     {
         PyObject *tmp_assign_source_8;
-        tmp_assign_source_8 = mod_consts[16];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_8);
+        tmp_assign_source_8 = mod_consts[15];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[16], tmp_assign_source_8);
     }
     {
         PyObject *tmp_assign_source_9;
-        tmp_assign_source_9 = mod_consts[18];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[19], tmp_assign_source_9);
+        tmp_assign_source_9 = mod_consts[17];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_9);
     }
     {
         PyObject *tmp_assign_source_10;
-        tmp_assign_source_10 = mod_consts[20];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_10);
+        tmp_assign_source_10 = mod_consts[19];
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$__version__, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_10);
     }
 
     return module_MathcadPy$__version__;

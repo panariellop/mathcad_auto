@@ -1,3 +1,8 @@
+#########################################
+# Mathcad Anchorage Automation Software #
+#########################################
+# By: Piero Panariello
+# Created: July 2021 
 import os, sys
 #sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module
 #from mathcadpy import Mathcad, Worksheet #loading custom
@@ -127,7 +132,7 @@ class SelectTemplates():
 
 
 class Popup():
-    def __init__(self, title, message):
+    def __init__(self, title, message=""):
         self.title = title
         self.message = message
     def confirm(self)->bool:
@@ -172,6 +177,18 @@ class Popup():
             if event == "OK" or event == sg.WIN_CLOSED:
                 popup.close()
                 return values['input']
+    def image(self, image):
+        """
+        Creates a popup window with title and image 
+        """
+        popup = sg.Window(self.title, [
+            [sg.Image(data = image)]
+        ])
+        while True:
+            event, values = popup.read()
+            if event == "OK" or event == sg.WIN_CLOSED:
+                popup.close()
+                break 
 
 class Equipment():
     """
@@ -413,6 +430,7 @@ def load_gui():
                             sg.InputText(equipment.cur_index, key = "goto_eqpt", enable_events = True, size = (3, 1), tooltip = "Go to a specific equipment index."),
                         ],
                         [sg.Text("Equipment: ", key = "cur_eqpt", size = (20,1), background_color = "gray")],
+                        [sg.Button("View Preview Image", tooltip = "View the image corresponding to the mounting location. This image is defined in the excel spreadsheet in the preview_images tab", key = "preview_image")]
                     ])],
                 ]),
                 sg.Column([
@@ -452,7 +470,6 @@ def load_gui():
         ],
         ])],
 
-        [[sg.Text("Preview Images:")] , [sg.Image(key = "preview_image", size = (100, 100), data = update_preview_image(equipment, files))]]
     ]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -496,6 +513,9 @@ def load_gui():
             if event in equipment.fields:
                 #change the cur eqpt field being edited
                 equipment.items[equipment.cur_index][event][0] = values[event]
+            if event == "preview_image":
+                popup = Popup("Preview Image")
+                popup.image(update_preview_image(equipment, files))
 
             """
             Move to the next or previous eqpt
@@ -510,8 +530,7 @@ def load_gui():
                 window['outputs'].update(values = [])
                 window['equipment_list'].set_focus(equipment.cur_index) #display the current one being selected
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-		#load preview image
-                window['preview_image'].update(data = update_preview_image(equipment, files))
+
             """
             Display the eqpt being selected by the listbox (left most column)
             """
@@ -522,8 +541,7 @@ def load_gui():
                 values, window = update_inputs(equipment, values, window)
                 window['outputs'].update(values = [])
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-		#load preview image
-                window['preview_image'].update(data = update_preview_image(equipment, files))
+
 
             """
             Go to a specific eqpt number
@@ -534,8 +552,7 @@ def load_gui():
                     values, window = update_inputs(equipment, values, window) #update the inputs in the window
                     window['equipment_list'].set_focus(equipment.cur_index) #display the eqpt being selected
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
-		#load preview image
-                    window['preview_image'].update(data = update_preview_image(equipment, files))
+
             """
             Update the maximum tension and shear anchor points labels
             """
@@ -666,10 +683,11 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
         header = True
     with open(filepath, "a", newline = "") as f:
         csv_writer = csv.writer(f)
-        if header: csv_writer.writerow(["Date","Tags", "Name", "Mounting Location", "File Name"])
+        if header: csv_writer.writerow(["Date","Project Number", "Tags", "Name", "Mounting Location", "File Name"])
         try:
             new_row = [
                 cur_date,
+                values['project_number'][0], 
                 values['tags'][0].upper(),
                 values['eqpt_name'][0].upper(),
                 values['mounting_location'][0].upper(),

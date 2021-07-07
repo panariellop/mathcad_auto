@@ -33,7 +33,7 @@ PyObject *module_MathcadPy;
 PyDictObject *moduledict_MathcadPy;
 
 /* The declarations of module constants used, if any. */
-static PyObject *mod_consts[20];
+static PyObject *mod_consts[24];
 
 static PyObject *module_filename_obj = NULL;
 
@@ -66,11 +66,11 @@ void checkModuleConstants_MathcadPy(void) {
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_524980300f2b1895d7c4e38551277cd2;
+static PyCodeObject *codeobj_91945625abceafb82cf1ddae35eb223a;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = mod_consts[2]; CHECK_OBJECT(module_filename_obj);
-    codeobj_524980300f2b1895d7c4e38551277cd2 = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[19], NULL, NULL, 0, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[22]); CHECK_OBJECT(module_filename_obj);
+    codeobj_91945625abceafb82cf1ddae35eb223a = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[23], NULL, NULL, 0, 0, 0);
 }
 
 // The module function declarations.
@@ -422,14 +422,14 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 #endif
 
     // Temp variables if any
-    struct Nuitka_FrameObject *frame_524980300f2b1895d7c4e38551277cd2;
+    struct Nuitka_FrameObject *frame_91945625abceafb82cf1ddae35eb223a;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
-    PyObject *tmp_dictset_value;
-    PyObject *tmp_dictset_dict;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
+    PyObject *tmp_dictset_value;
+    PyObject *tmp_dictset_dict;
     PyObject *tmp_dictset_key;
     int tmp_res;
     bool tmp_result;
@@ -442,25 +442,115 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[2];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[3], tmp_assign_source_2);
-    }
-    {
-        PyObject *tmp_assign_source_3;
-        tmp_assign_source_3 = LIST_COPY(mod_consts[4]);
-        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[5], tmp_assign_source_3);
+        tmp_assign_source_2 = module_filename_obj;
+        UPDATE_STRING_DICT0(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[2], tmp_assign_source_2);
     }
     // Frame without reuse.
-    frame_524980300f2b1895d7c4e38551277cd2 = MAKE_MODULE_FRAME(codeobj_524980300f2b1895d7c4e38551277cd2, module_MathcadPy);
+    frame_91945625abceafb82cf1ddae35eb223a = MAKE_MODULE_FRAME(codeobj_91945625abceafb82cf1ddae35eb223a, module_MathcadPy);
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack(frame_524980300f2b1895d7c4e38551277cd2);
-    assert(Py_REFCNT(frame_524980300f2b1895d7c4e38551277cd2) == 2);
+    pushFrameStack(frame_91945625abceafb82cf1ddae35eb223a);
+    assert(Py_REFCNT(frame_91945625abceafb82cf1ddae35eb223a) == 2);
 
     // Framed code:
     {
+        PyObject *tmp_assign_source_3;
+        PyObject *tmp_list_element_1;
+        PyObject *tmp_called_name_1;
         PyObject *tmp_expression_name_1;
+        PyObject *tmp_args_element_name_1;
+        frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 1;
+        {
+            PyObject *hard_module = IMPORT_HARD_OS();
+            tmp_expression_name_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[3]);
+        }
+
+        if (tmp_expression_name_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_1, mod_consts[4]);
+        if (tmp_called_name_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_args_element_name_1 = module_filename_obj;
+        frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 1;
+        tmp_list_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
+        Py_DECREF(tmp_called_name_1);
+        if (tmp_list_element_1 == NULL) {
+            assert(ERROR_OCCURRED());
+
+            FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+            exception_lineno = 1;
+
+            goto frame_exception_exit_1;
+        }
+        tmp_assign_source_3 = PyList_New(2);
+        {
+            PyObject *tmp_called_instance_1;
+            PyList_SET_ITEM(tmp_assign_source_3, 0, tmp_list_element_1);
+            frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 1;
+            {
+                PyObject *hard_module = IMPORT_HARD_OS();
+                tmp_called_instance_1 = LOOKUP_ATTRIBUTE(hard_module, mod_consts[5]);
+            }
+
+            if (tmp_called_instance_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 1;
+            tmp_list_element_1 = CALL_METHOD_WITH_ARGS2(
+                tmp_called_instance_1,
+                mod_consts[6],
+                &PyTuple_GET_ITEM(mod_consts[7], 0)
+            );
+
+            if (tmp_list_element_1 == NULL) {
+                assert(ERROR_OCCURRED());
+
+                FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
+
+
+                exception_lineno = 1;
+
+                goto list_build_exception_1;
+            }
+            PyList_SET_ITEM(tmp_assign_source_3, 1, tmp_list_element_1);
+        }
+        goto list_build_noexception_1;
+        // Exception handling pass through code for list_build:
+        list_build_exception_1:;
+        Py_DECREF(tmp_assign_source_3);
+        goto frame_exception_exit_1;
+        // Finished with no exception for list_build:
+        list_build_noexception_1:;
+        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[8], tmp_assign_source_3);
+    }
+    {
+        PyObject *tmp_expression_name_2;
         PyObject *tmp_subscript_name_1;
         tmp_dictset_value = Nuitka_Loader_New(module_entry);
         tmp_dictset_dict = PySys_GetObject((char *)"path_importer_cache");
@@ -474,15 +564,15 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        tmp_expression_name_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[5]);
+        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[8]);
 
-        if (unlikely(tmp_expression_name_1 == NULL)) {
-            tmp_expression_name_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+        if (unlikely(tmp_expression_name_2 == NULL)) {
+            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
-        assert(!(tmp_expression_name_1 == NULL));
-        tmp_subscript_name_1 = mod_consts[6];
-        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_1, tmp_subscript_name_1, 0);
+        assert(!(tmp_expression_name_2 == NULL));
+        tmp_subscript_name_1 = mod_consts[9];
+        tmp_dictset_key = LOOKUP_SUBSCRIPT_CONST(tmp_expression_name_2, tmp_subscript_name_1, 0);
         if (tmp_dictset_key == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -509,15 +599,15 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
     {
         PyObject *tmp_assattr_name_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = mod_consts[2];
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[10]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[8], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[11], tmp_assattr_name_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -533,14 +623,14 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
         PyObject *tmp_assattr_name_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[10]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[9], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[12], tmp_assattr_name_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -555,10 +645,10 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
     {
         PyObject *tmp_assattr_name_3;
         PyObject *tmp_assattr_target_3;
-        tmp_assattr_name_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[5]);
+        tmp_assattr_name_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[8]);
 
         if (unlikely(tmp_assattr_name_3 == NULL)) {
-            tmp_assattr_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[5]);
+            tmp_assattr_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[8]);
         }
 
         if (tmp_assattr_name_3 == NULL) {
@@ -571,14 +661,14 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        tmp_assattr_target_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[7]);
+        tmp_assattr_target_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[10]);
 
         if (unlikely(tmp_assattr_target_3 == NULL)) {
-            tmp_assattr_target_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[7]);
+            tmp_assattr_target_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[10]);
         }
 
         assert(!(tmp_assattr_target_3 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[10], tmp_assattr_name_3);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_3, mod_consts[13], tmp_assattr_name_3);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -593,7 +683,7 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
     {
         PyObject *tmp_assign_source_4;
         tmp_assign_source_4 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[11], tmp_assign_source_4);
+        UPDATE_STRING_DICT0(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[14], tmp_assign_source_4);
     }
     {
         PyObject *tmp_star_imported_1;
@@ -602,12 +692,12 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
         PyObject *tmp_locals_arg_name_1;
         PyObject *tmp_fromlist_name_1;
         PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[12];
+        tmp_name_name_1 = mod_consts[15];
         tmp_globals_arg_name_1 = (PyObject *)moduledict_MathcadPy;
         tmp_locals_arg_name_1 = (PyObject *)moduledict_MathcadPy;
-        tmp_fromlist_name_1 = mod_consts[13];
-        tmp_level_name_1 = mod_consts[14];
-        frame_524980300f2b1895d7c4e38551277cd2->m_frame.f_lineno = 15;
+        tmp_fromlist_name_1 = mod_consts[16];
+        tmp_level_name_1 = mod_consts[17];
+        frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 15;
         tmp_star_imported_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
         if (tmp_star_imported_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -640,12 +730,12 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
         PyObject *tmp_locals_arg_name_2;
         PyObject *tmp_fromlist_name_2;
         PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[15];
+        tmp_name_name_2 = mod_consts[18];
         tmp_globals_arg_name_2 = (PyObject *)moduledict_MathcadPy;
         tmp_locals_arg_name_2 = Py_None;
-        tmp_fromlist_name_2 = mod_consts[16];
-        tmp_level_name_2 = mod_consts[14];
-        frame_524980300f2b1895d7c4e38551277cd2->m_frame.f_lineno = 16;
+        tmp_fromlist_name_2 = mod_consts[19];
+        tmp_level_name_2 = mod_consts[17];
+        frame_91945625abceafb82cf1ddae35eb223a->m_frame.f_lineno = 16;
         tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -661,11 +751,11 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_1,
                 (PyObject *)moduledict_MathcadPy,
-                mod_consts[17],
-                mod_consts[6]
+                mod_consts[20],
+                mod_consts[9]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[17]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_1, mod_consts[20]);
         }
 
         Py_DECREF(tmp_import_name_from_1);
@@ -679,19 +769,19 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_5);
+        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_5);
     }
     {
         PyObject *tmp_assign_source_6;
-        PyObject *tmp_expression_name_2;
-        tmp_expression_name_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_expression_name_3;
+        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_expression_name_2 == NULL)) {
-            tmp_expression_name_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_expression_name_3 == NULL)) {
+            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        assert(!(tmp_expression_name_2 == NULL));
-        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[18]);
+        assert(!(tmp_expression_name_3 == NULL));
+        tmp_assign_source_6 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[21]);
         if (tmp_assign_source_6 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -702,18 +792,18 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[18], tmp_assign_source_6);
+        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[21], tmp_assign_source_6);
     }
     {
         PyObject *tmp_assign_source_7;
-        PyObject *tmp_expression_name_3;
-        tmp_expression_name_3 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[17]);
+        PyObject *tmp_expression_name_4;
+        tmp_expression_name_4 = GET_STRING_DICT_VALUE(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[20]);
 
-        if (unlikely(tmp_expression_name_3 == NULL)) {
-            tmp_expression_name_3 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[17]);
+        if (unlikely(tmp_expression_name_4 == NULL)) {
+            tmp_expression_name_4 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[20]);
         }
 
-        if (tmp_expression_name_3 == NULL) {
+        if (tmp_expression_name_4 == NULL) {
             assert(ERROR_OCCURRED());
 
             FETCH_ERROR_OCCURRED(&exception_type, &exception_value, &exception_tb);
@@ -723,7 +813,7 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_3, mod_consts[17]);
+        tmp_assign_source_7 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[20]);
         if (tmp_assign_source_7 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -734,28 +824,28 @@ PyObject *modulecode_MathcadPy(PyObject *module, struct Nuitka_MetaPathBasedLoad
 
             goto frame_exception_exit_1;
         }
-        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[17], tmp_assign_source_7);
+        UPDATE_STRING_DICT1(moduledict_MathcadPy, (Nuitka_StringObject *)mod_consts[20], tmp_assign_source_7);
     }
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_524980300f2b1895d7c4e38551277cd2);
+    RESTORE_FRAME_EXCEPTION(frame_91945625abceafb82cf1ddae35eb223a);
 #endif
     popFrameStack();
 
-    assertFrameObject(frame_524980300f2b1895d7c4e38551277cd2);
+    assertFrameObject(frame_91945625abceafb82cf1ddae35eb223a);
 
     goto frame_no_exception_1;
 
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_524980300f2b1895d7c4e38551277cd2);
+    RESTORE_FRAME_EXCEPTION(frame_91945625abceafb82cf1ddae35eb223a);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_524980300f2b1895d7c4e38551277cd2, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_524980300f2b1895d7c4e38551277cd2->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_524980300f2b1895d7c4e38551277cd2, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_91945625abceafb82cf1ddae35eb223a, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_91945625abceafb82cf1ddae35eb223a->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_91945625abceafb82cf1ddae35eb223a, exception_lineno);
     }
 
     // Put the previous frame back on top.

@@ -1,10 +1,10 @@
 AS=as
 CC="C:\Users\Owner\AppData\Local\Nuitka\Nuitka\ccache\v3.7.12\ccache.exe" "C:\Users\Owner\AppData\Local\Nuitka\Nuitka\gcc\x86_64\10.2.0-11.0.0-8.0.0-r5\mingw64\bin\gcc.exe"
 CCACHE_DIR=C:\Users\Owner\AppData\Local\Nuitka\Nuitka\Cache\ccache
-CCACHE_LOGFILE=C:\Users\Owner\Desktop\mathcad_auto\dist\main.build\ccache-11268.txt
+CCACHE_LOGFILE=C:\Users\Owner\Desktop\mathcad_auto\dist\main.build\ccache-10288.txt
 CCCOM=$CC -o $TARGET -c $CFLAGS $CCFLAGS $_CCCOMCOM $SOURCES
 CFILESUFFIX=.c
-CPPDEFINES=['_WIN32_WINNT=0x0501', '_NUITKA_WINMAIN_ENTRY_POINT', '__NUITKA_NO_ASSERT__', 'MS_WIN64', '_NUITKA_CONSTANTS_FROM_RESOURCE', '_NUITKA_FROZEN=0', '_NUITKA_EXE']
+CPPDEFINES=['_WIN32_WINNT=0x0501', '_NUITKA_STANDALONE', '_NUITKA_WINMAIN_ENTRY_POINT', '__NUITKA_NO_ASSERT__', 'MS_WIN64', '_NUITKA_CONSTANTS_FROM_RESOURCE', '_NUITKA_FROZEN=165', '_NUITKA_EXE']
 CPPDEFPREFIX=-D
 CPPDEFSUFFIX=
 CPPPATH=['C:\\Python38\\include', '.', 'C:\\Users\\Owner\\Desktop\\MATHCA~1\\dist\\env\\lib\\SITE-P~1\\nuitka\\build\\include', 'C:\\Users\\Owner\\Desktop\\MATHCA~1\\dist\\env\\lib\\SITE-P~1\\nuitka\\build\\static_src']

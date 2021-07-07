@@ -66,85 +66,85 @@ void checkModuleConstants_MathcadPy$_application(void) {
 #endif
 
 // The module code objects.
-static PyCodeObject *codeobj_4f5c44839442e2d92d3c63cf7b1f54d3;
-static PyCodeObject *codeobj_40ebc8245c20f7dc396b60848d94a3cd;
-static PyCodeObject *codeobj_754e0e1c9205757d97e96f8c44ac10ba;
-static PyCodeObject *codeobj_31d8095f5713157b22f1edc887100378;
-static PyCodeObject *codeobj_61ba5e74e848cf4b12fa743638b08834;
-static PyCodeObject *codeobj_4985a9f64740ff2e1e53709bd1aef4de;
-static PyCodeObject *codeobj_bf00e955d25f7701c719ff5a99d63d2a;
-static PyCodeObject *codeobj_57cbabaede0185952805c0816ebf0b26;
-static PyCodeObject *codeobj_c4f3ebfe83414ae849700a1853b7fb51;
-static PyCodeObject *codeobj_5dc3ac0d5bc1892d9348ef25c3ab70d3;
-static PyCodeObject *codeobj_f249231654c3cdcc3317bfe98435ffd3;
-static PyCodeObject *codeobj_6df5834952c8223b2f6df4353e4e5ab6;
-static PyCodeObject *codeobj_1396bb6b163d30b08e7759bf081b9d59;
-static PyCodeObject *codeobj_0e45e2da56d8f984023a3541937e527f;
-static PyCodeObject *codeobj_c8dd0bec30299178b2161eef95ceb2c0;
-static PyCodeObject *codeobj_2184245ca50ef6461e9935b93f25ff09;
-static PyCodeObject *codeobj_4e1e7aa7709814993bc107bb0944e524;
-static PyCodeObject *codeobj_7b1ffead3aea27a209544ea30ae5d610;
-static PyCodeObject *codeobj_953522ba484e7c8623fccb5a907b059a;
-static PyCodeObject *codeobj_56dfdc9a85bbe3c32ec3ab7a53cdb72d;
-static PyCodeObject *codeobj_ca01af5d5d5e0ef7bc098a64258078bd;
-static PyCodeObject *codeobj_89c26f2ae9454f93e152d0ab49086548;
-static PyCodeObject *codeobj_829e7571b36e923f1504ee50a8a90444;
-static PyCodeObject *codeobj_e13b477985c6bda70aa9451b106ac91c;
-static PyCodeObject *codeobj_fd8422f3742161fc3b8f1555e4ccb899;
-static PyCodeObject *codeobj_74002e0f2049bfbf8931b0e5c0ef46b0;
-static PyCodeObject *codeobj_a16de434f92054f98876a8c215f72ad3;
-static PyCodeObject *codeobj_47ae7f7626b16bbee221728f1c6b8c25;
-static PyCodeObject *codeobj_5522127fb64481944c985cb30f89b14d;
-static PyCodeObject *codeobj_00710c2cc9d4c59d19e9a5776950a196;
-static PyCodeObject *codeobj_b971a9da48e543c11d1965591bd844ad;
-static PyCodeObject *codeobj_5f1c4e6c7f0892bc6ab948ee116edb5f;
-static PyCodeObject *codeobj_870d36aa4fb9600440099a585c3f3f25;
-static PyCodeObject *codeobj_58197cb6e8f713617fe7d8b23f75a42b;
-static PyCodeObject *codeobj_69ecb4fc22eb9a78970a15e73918bbdf;
-static PyCodeObject *codeobj_0ec55e2f6dc8b03141a39038a9cc3435;
-static PyCodeObject *codeobj_55ec54ffc428a8adab47506ccad655fd;
-static PyCodeObject *codeobj_afcd210ba784845ba55d8547adb98a0d;
+static PyCodeObject *codeobj_34f21d97d213bf7b829daf5d92e5ab52;
+static PyCodeObject *codeobj_6892340176eb9cc08251e698b2b69dab;
+static PyCodeObject *codeobj_18fd8dec6823605605cc1d818bf4d3f0;
+static PyCodeObject *codeobj_fec049f21066d86db4c43226e922b932;
+static PyCodeObject *codeobj_a93827b20102e54846e19e54c20852c1;
+static PyCodeObject *codeobj_458ca302b53781e55fc8254e915e6314;
+static PyCodeObject *codeobj_42c092ede1e8956f51f197b85d03ace3;
+static PyCodeObject *codeobj_8853356009f468da2c1ec3bf4e30ce8e;
+static PyCodeObject *codeobj_66e39118f4f75a3341448709e5778aae;
+static PyCodeObject *codeobj_7b85c3bcb95f2b76bf41d451dcac1a7d;
+static PyCodeObject *codeobj_65adfb5e577551e57ba69e65cc8d6158;
+static PyCodeObject *codeobj_7618de4fce53bc92e736edfc1934f599;
+static PyCodeObject *codeobj_2d9de910d3bfd1042a3d16d92010f611;
+static PyCodeObject *codeobj_675d3603a58a0d1adbbae965894ce7b5;
+static PyCodeObject *codeobj_35c17ae10e4afd96f51eb95cd0d86f9b;
+static PyCodeObject *codeobj_7e1bb88b5ed7f4f9e19347a9d0d14927;
+static PyCodeObject *codeobj_357626e5a6c1c999d7febd539786e95e;
+static PyCodeObject *codeobj_88344e1f883d12ba535a07e13554417f;
+static PyCodeObject *codeobj_1e63f0b7316b971cf0fb582b7a348404;
+static PyCodeObject *codeobj_a4f1d2c02867e52aed1101513523a3d6;
+static PyCodeObject *codeobj_d974edd9bb9da198468bf68ba72426bb;
+static PyCodeObject *codeobj_565f0de28f9c4c0654ad1f9986e15b63;
+static PyCodeObject *codeobj_ab57116c0b7e4dc0ce4aabca080cc7da;
+static PyCodeObject *codeobj_6ebcdc969ad63ad59daf48bb9cc844ff;
+static PyCodeObject *codeobj_a4bde9bf9ed2a5186fd64da6c873a06b;
+static PyCodeObject *codeobj_cda8899a1a68e8b1c4c04de10d7a47fd;
+static PyCodeObject *codeobj_3fb7337ae5376966a930a488eda30f02;
+static PyCodeObject *codeobj_1c85b6ee3dc1102631c67ab0eed10f96;
+static PyCodeObject *codeobj_850d29625866f07a43562814bbbd93ea;
+static PyCodeObject *codeobj_13b7bd41a0946af811656f99688bc9d7;
+static PyCodeObject *codeobj_dfad3bc229bc486092d2e9c96523e170;
+static PyCodeObject *codeobj_3916d12da29c16a5f75ef1fd07e34723;
+static PyCodeObject *codeobj_dccbe69499346fcc50b1d49c364b29cb;
+static PyCodeObject *codeobj_8cd03fb9cfc6932e1bac44ea7b414dcd;
+static PyCodeObject *codeobj_efd6d3b83485037e61591174a2fb94f6;
+static PyCodeObject *codeobj_f3d132612bd655df687aa2dc23fb425e;
+static PyCodeObject *codeobj_be78ce611859ed342220e63c5fe8dd4d;
+static PyCodeObject *codeobj_c7e26a64553ad5252d4bae7ee63eb963;
 
 static void createModuleCodeObjects(void) {
-    module_filename_obj = mod_consts[144]; CHECK_OBJECT(module_filename_obj);
-    codeobj_4f5c44839442e2d92d3c63cf7b1f54d3 = MAKE_CODEOBJECT(module_filename_obj, 338, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[232], mod_consts[233], NULL, 1, 0, 0);
-    codeobj_40ebc8245c20f7dc396b60848d94a3cd = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[234], NULL, NULL, 0, 0, 0);
-    codeobj_754e0e1c9205757d97e96f8c44ac10ba = MAKE_CODEOBJECT(module_filename_obj, 13, CO_NOFREE, mod_consts[165], mod_consts[235], NULL, 0, 0, 0);
-    codeobj_31d8095f5713157b22f1edc887100378 = MAKE_CODEOBJECT(module_filename_obj, 316, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_61ba5e74e848cf4b12fa743638b08834 = MAKE_CODEOBJECT(module_filename_obj, 320, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_4985a9f64740ff2e1e53709bd1aef4de = MAKE_CODEOBJECT(module_filename_obj, 93, CO_NOFREE, mod_consts[15], mod_consts[235], NULL, 0, 0, 0);
-    codeobj_bf00e955d25f7701c719ff5a99d63d2a = MAKE_CODEOBJECT(module_filename_obj, 101, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[168], mod_consts[237], NULL, 2, 0, 0);
-    codeobj_57cbabaede0185952805c0816ebf0b26 = MAKE_CODEOBJECT(module_filename_obj, 16, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[168], mod_consts[238], NULL, 2, 0, 0);
-    codeobj_c4f3ebfe83414ae849700a1853b7fb51 = MAKE_CODEOBJECT(module_filename_obj, 343, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[113], mod_consts[239], NULL, 1, 0, 0);
-    codeobj_5dc3ac0d5bc1892d9348ef25c3ab70d3 = MAKE_CODEOBJECT(module_filename_obj, 195, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[240], NULL, 2, 0, 0);
-    codeobj_f249231654c3cdcc3317bfe98435ffd3 = MAKE_CODEOBJECT(module_filename_obj, 180, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[102], mod_consts[240], NULL, 2, 0, 0);
-    codeobj_6df5834952c8223b2f6df4353e4e5ab6 = MAKE_CODEOBJECT(module_filename_obj, 30, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[11], mod_consts[241], NULL, 1, 0, 0);
-    codeobj_1396bb6b163d30b08e7759bf081b9d59 = MAKE_CODEOBJECT(module_filename_obj, 329, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[242], NULL, 1, 0, 0);
-    codeobj_0e45e2da56d8f984023a3541937e527f = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_c8dd0bec30299178b2161eef95ceb2c0 = MAKE_CODEOBJECT(module_filename_obj, 108, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[171], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_2184245ca50ef6461e9935b93f25ff09 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[173], mod_consts[243], NULL, 1, 0, 0);
-    codeobj_4e1e7aa7709814993bc107bb0944e524 = MAKE_CODEOBJECT(module_filename_obj, 112, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[190], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_7b1ffead3aea27a209544ea30ae5d610 = MAKE_CODEOBJECT(module_filename_obj, 80, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[182], mod_consts[244], NULL, 2, 0, 0);
-    codeobj_953522ba484e7c8623fccb5a907b059a = MAKE_CODEOBJECT(module_filename_obj, 172, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[207], mod_consts[245], NULL, 2, 0, 0);
-    codeobj_56dfdc9a85bbe3c32ec3ab7a53cdb72d = MAKE_CODEOBJECT(module_filename_obj, 187, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[210], mod_consts[245], NULL, 2, 0, 0);
-    codeobj_ca01af5d5d5e0ef7bc098a64258078bd = MAKE_CODEOBJECT(module_filename_obj, 227, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[217], mod_consts[246], NULL, 3, 0, 0);
-    codeobj_89c26f2ae9454f93e152d0ab49086548 = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[215], mod_consts[246], NULL, 3, 0, 0);
-    codeobj_829e7571b36e923f1504ee50a8a90444 = MAKE_CODEOBJECT(module_filename_obj, 165, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[247], NULL, 1, 0, 0);
-    codeobj_e13b477985c6bda70aa9451b106ac91c = MAKE_CODEOBJECT(module_filename_obj, 149, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[200], mod_consts[248], NULL, 2, 0, 0);
-    codeobj_fd8422f3742161fc3b8f1555e4ccb899 = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[198], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_74002e0f2049bfbf8931b0e5c0ef46b0 = MAKE_CODEOBJECT(module_filename_obj, 141, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[196], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_a16de434f92054f98876a8c215f72ad3 = MAKE_CODEOBJECT(module_filename_obj, 62, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[179], mod_consts[249], NULL, 2, 0, 0);
-    codeobj_47ae7f7626b16bbee221728f1c6b8c25 = MAKE_CODEOBJECT(module_filename_obj, 202, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[250], NULL, 1, 0, 0);
-    codeobj_5522127fb64481944c985cb30f89b14d = MAKE_CODEOBJECT(module_filename_obj, 157, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[202], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_00710c2cc9d4c59d19e9a5776950a196 = MAKE_CODEOBJECT(module_filename_obj, 161, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[204], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_b971a9da48e543c11d1965591bd844ad = MAKE_CODEOBJECT(module_filename_obj, 123, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[192], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_5f1c4e6c7f0892bc6ab948ee116edb5f = MAKE_CODEOBJECT(module_filename_obj, 127, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[194], mod_consts[251], NULL, 2, 0, 0);
-    codeobj_870d36aa4fb9600440099a585c3f3f25 = MAKE_CODEOBJECT(module_filename_obj, 279, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[224], mod_consts[252], NULL, 5, 0, 0);
-    codeobj_58197cb6e8f713617fe7d8b23f75a42b = MAKE_CODEOBJECT(module_filename_obj, 243, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[220], mod_consts[253], NULL, 5, 0, 0);
-    codeobj_69ecb4fc22eb9a78970a15e73918bbdf = MAKE_CODEOBJECT(module_filename_obj, 266, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[222], mod_consts[254], NULL, 3, 0, 0);
-    codeobj_0ec55e2f6dc8b03141a39038a9cc3435 = MAKE_CODEOBJECT(module_filename_obj, 324, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[228], mod_consts[236], NULL, 1, 0, 0);
-    codeobj_55ec54ffc428a8adab47506ccad655fd = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[175], mod_consts[255], NULL, 1, 0, 0);
-    codeobj_afcd210ba784845ba55d8547adb98a0d = MAKE_CODEOBJECT(module_filename_obj, 55, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[177], mod_consts[255], NULL, 1, 0, 0);
+    module_filename_obj = MAKE_RELATIVE_PATH(mod_consts[231]); CHECK_OBJECT(module_filename_obj);
+    codeobj_34f21d97d213bf7b829daf5d92e5ab52 = MAKE_CODEOBJECT(module_filename_obj, 338, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[232], mod_consts[233], NULL, 1, 0, 0);
+    codeobj_6892340176eb9cc08251e698b2b69dab = MAKE_CODEOBJECT(module_filename_obj, 1, CO_NOFREE, mod_consts[234], NULL, NULL, 0, 0, 0);
+    codeobj_18fd8dec6823605605cc1d818bf4d3f0 = MAKE_CODEOBJECT(module_filename_obj, 13, CO_NOFREE, mod_consts[164], mod_consts[235], NULL, 0, 0, 0);
+    codeobj_fec049f21066d86db4c43226e922b932 = MAKE_CODEOBJECT(module_filename_obj, 316, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[68], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_a93827b20102e54846e19e54c20852c1 = MAKE_CODEOBJECT(module_filename_obj, 320, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[70], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_458ca302b53781e55fc8254e915e6314 = MAKE_CODEOBJECT(module_filename_obj, 93, CO_NOFREE, mod_consts[15], mod_consts[235], NULL, 0, 0, 0);
+    codeobj_42c092ede1e8956f51f197b85d03ace3 = MAKE_CODEOBJECT(module_filename_obj, 101, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[167], mod_consts[237], NULL, 2, 0, 0);
+    codeobj_8853356009f468da2c1ec3bf4e30ce8e = MAKE_CODEOBJECT(module_filename_obj, 16, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[167], mod_consts[238], NULL, 2, 0, 0);
+    codeobj_66e39118f4f75a3341448709e5778aae = MAKE_CODEOBJECT(module_filename_obj, 343, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[113], mod_consts[239], NULL, 1, 0, 0);
+    codeobj_7b85c3bcb95f2b76bf41d451dcac1a7d = MAKE_CODEOBJECT(module_filename_obj, 195, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[112], mod_consts[240], NULL, 2, 0, 0);
+    codeobj_65adfb5e577551e57ba69e65cc8d6158 = MAKE_CODEOBJECT(module_filename_obj, 180, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[102], mod_consts[240], NULL, 2, 0, 0);
+    codeobj_7618de4fce53bc92e736edfc1934f599 = MAKE_CODEOBJECT(module_filename_obj, 30, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[11], mod_consts[241], NULL, 1, 0, 0);
+    codeobj_2d9de910d3bfd1042a3d16d92010f611 = MAKE_CODEOBJECT(module_filename_obj, 329, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[86], mod_consts[242], NULL, 1, 0, 0);
+    codeobj_675d3603a58a0d1adbbae965894ce7b5 = MAKE_CODEOBJECT(module_filename_obj, 37, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_35c17ae10e4afd96f51eb95cd0d86f9b = MAKE_CODEOBJECT(module_filename_obj, 108, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[170], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_7e1bb88b5ed7f4f9e19347a9d0d14927 = MAKE_CODEOBJECT(module_filename_obj, 41, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[172], mod_consts[243], NULL, 1, 0, 0);
+    codeobj_357626e5a6c1c999d7febd539786e95e = MAKE_CODEOBJECT(module_filename_obj, 112, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[189], mod_consts[244], NULL, 2, 0, 0);
+    codeobj_88344e1f883d12ba535a07e13554417f = MAKE_CODEOBJECT(module_filename_obj, 80, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[181], mod_consts[244], NULL, 2, 0, 0);
+    codeobj_1e63f0b7316b971cf0fb582b7a348404 = MAKE_CODEOBJECT(module_filename_obj, 172, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[206], mod_consts[245], NULL, 2, 0, 0);
+    codeobj_a4f1d2c02867e52aed1101513523a3d6 = MAKE_CODEOBJECT(module_filename_obj, 187, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[209], mod_consts[245], NULL, 2, 0, 0);
+    codeobj_d974edd9bb9da198468bf68ba72426bb = MAKE_CODEOBJECT(module_filename_obj, 227, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[216], mod_consts[246], NULL, 3, 0, 0);
+    codeobj_565f0de28f9c4c0654ad1f9986e15b63 = MAKE_CODEOBJECT(module_filename_obj, 209, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[214], mod_consts[246], NULL, 3, 0, 0);
+    codeobj_ab57116c0b7e4dc0ce4aabca080cc7da = MAKE_CODEOBJECT(module_filename_obj, 165, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[76], mod_consts[247], NULL, 1, 0, 0);
+    codeobj_6ebcdc969ad63ad59daf48bb9cc844ff = MAKE_CODEOBJECT(module_filename_obj, 149, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[199], mod_consts[248], NULL, 2, 0, 0);
+    codeobj_a4bde9bf9ed2a5186fd64da6c873a06b = MAKE_CODEOBJECT(module_filename_obj, 145, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[197], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_cda8899a1a68e8b1c4c04de10d7a47fd = MAKE_CODEOBJECT(module_filename_obj, 141, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[195], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_3fb7337ae5376966a930a488eda30f02 = MAKE_CODEOBJECT(module_filename_obj, 62, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[178], mod_consts[249], NULL, 2, 0, 0);
+    codeobj_1c85b6ee3dc1102631c67ab0eed10f96 = MAKE_CODEOBJECT(module_filename_obj, 202, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[90], mod_consts[250], NULL, 1, 0, 0);
+    codeobj_850d29625866f07a43562814bbbd93ea = MAKE_CODEOBJECT(module_filename_obj, 157, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[201], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_13b7bd41a0946af811656f99688bc9d7 = MAKE_CODEOBJECT(module_filename_obj, 161, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[203], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_dfad3bc229bc486092d2e9c96523e170 = MAKE_CODEOBJECT(module_filename_obj, 123, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[191], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_3916d12da29c16a5f75ef1fd07e34723 = MAKE_CODEOBJECT(module_filename_obj, 127, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[193], mod_consts[251], NULL, 2, 0, 0);
+    codeobj_dccbe69499346fcc50b1d49c364b29cb = MAKE_CODEOBJECT(module_filename_obj, 279, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[223], mod_consts[252], NULL, 5, 0, 0);
+    codeobj_8cd03fb9cfc6932e1bac44ea7b414dcd = MAKE_CODEOBJECT(module_filename_obj, 243, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[219], mod_consts[253], NULL, 5, 0, 0);
+    codeobj_efd6d3b83485037e61591174a2fb94f6 = MAKE_CODEOBJECT(module_filename_obj, 266, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[221], mod_consts[254], NULL, 3, 0, 0);
+    codeobj_f3d132612bd655df687aa2dc23fb425e = MAKE_CODEOBJECT(module_filename_obj, 324, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[227], mod_consts[236], NULL, 1, 0, 0);
+    codeobj_be78ce611859ed342220e63c5fe8dd4d = MAKE_CODEOBJECT(module_filename_obj, 48, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[174], mod_consts[255], NULL, 1, 0, 0);
+    codeobj_c7e26a64553ad5252d4bae7ee63eb963 = MAKE_CODEOBJECT(module_filename_obj, 55, CO_OPTIMIZED | CO_NEWLOCALS | CO_NOFREE, mod_consts[176], mod_consts[255], NULL, 1, 0, 0);
 }
 
 // The module function declarations.
@@ -260,7 +260,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_visible = python_pars[1];
-    struct Nuitka_FrameObject *frame_57cbabaede0185952805c0816ebf0b26;
+    struct Nuitka_FrameObject *frame_8853356009f468da2c1ec3bf4e30ce8e;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
@@ -279,7 +279,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_57cbabaede0185952805c0816ebf0b26 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8853356009f468da2c1ec3bf4e30ce8e = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
@@ -288,31 +288,31 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_57cbabaede0185952805c0816ebf0b26)) {
-        Py_XDECREF(cache_frame_57cbabaede0185952805c0816ebf0b26);
+    if (isFrameUnusable(cache_frame_8853356009f468da2c1ec3bf4e30ce8e)) {
+        Py_XDECREF(cache_frame_8853356009f468da2c1ec3bf4e30ce8e);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_57cbabaede0185952805c0816ebf0b26 == NULL) {
+        if (cache_frame_8853356009f468da2c1ec3bf4e30ce8e == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_57cbabaede0185952805c0816ebf0b26 = MAKE_FUNCTION_FRAME(codeobj_57cbabaede0185952805c0816ebf0b26, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_8853356009f468da2c1ec3bf4e30ce8e = MAKE_FUNCTION_FRAME(codeobj_8853356009f468da2c1ec3bf4e30ce8e, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_57cbabaede0185952805c0816ebf0b26->m_type_description == NULL);
-    frame_57cbabaede0185952805c0816ebf0b26 = cache_frame_57cbabaede0185952805c0816ebf0b26;
+    assert(cache_frame_8853356009f468da2c1ec3bf4e30ce8e->m_type_description == NULL);
+    frame_8853356009f468da2c1ec3bf4e30ce8e = cache_frame_8853356009f468da2c1ec3bf4e30ce8e;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_57cbabaede0185952805c0816ebf0b26);
+    pushFrameStack(frame_8853356009f468da2c1ec3bf4e30ce8e);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_57cbabaede0185952805c0816ebf0b26) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8853356009f468da2c1ec3bf4e30ce8e) == 2); // Frame stack
 
     // Framed code:
     {
@@ -320,7 +320,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
         PyObject *tmp_call_result_1;
         tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_1 != NULL);
-        frame_57cbabaede0185952805c0816ebf0b26->m_frame.f_lineno = 17;
+        frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame.f_lineno = 17;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[1]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -355,7 +355,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        frame_57cbabaede0185952805c0816ebf0b26->m_frame.f_lineno = 19;
+        frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame.f_lineno = 19;
         tmp_assattr_name_1 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_1,
             mod_consts[3],
@@ -405,7 +405,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
             type_description_1 = "oo";
             goto try_except_handler_2;
         }
-        frame_57cbabaede0185952805c0816ebf0b26->m_frame.f_lineno = 20;
+        frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame.f_lineno = 20;
         tmp_assattr_name_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[6]);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assattr_name_2 == NULL) {
@@ -592,7 +592,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
         }
 
         tmp_called_instance_3 = par_self;
-        frame_57cbabaede0185952805c0816ebf0b26->m_frame.f_lineno = 26;
+        frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame.f_lineno = 26;
         tmp_call_result_2 = CALL_METHOD_NO_ARGS(tmp_called_instance_3, mod_consts[11]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -622,9 +622,9 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_57cbabaede0185952805c0816ebf0b26, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_8853356009f468da2c1ec3bf4e30ce8e, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_57cbabaede0185952805c0816ebf0b26, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_8853356009f468da2c1ec3bf4e30ce8e, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -636,7 +636,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
         PyObject *tmp_call_result_3;
         tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_2 != NULL);
-        frame_57cbabaede0185952805c0816ebf0b26->m_frame.f_lineno = 28;
+        frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame.f_lineno = 28;
         tmp_call_result_3 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[12]);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -684,7 +684,7 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
     try_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_57cbabaede0185952805c0816ebf0b26);
+    RESTORE_FRAME_EXCEPTION(frame_8853356009f468da2c1ec3bf4e30ce8e);
 #endif
 
     // Put the previous frame back on top.
@@ -695,18 +695,18 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_57cbabaede0185952805c0816ebf0b26);
+    RESTORE_FRAME_EXCEPTION(frame_8853356009f468da2c1ec3bf4e30ce8e);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_57cbabaede0185952805c0816ebf0b26, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_57cbabaede0185952805c0816ebf0b26->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_57cbabaede0185952805c0816ebf0b26, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_8853356009f468da2c1ec3bf4e30ce8e, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_8853356009f468da2c1ec3bf4e30ce8e->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_8853356009f468da2c1ec3bf4e30ce8e, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_57cbabaede0185952805c0816ebf0b26,
+        frame_8853356009f468da2c1ec3bf4e30ce8e,
         type_description_1,
         par_self,
         par_visible
@@ -714,17 +714,17 @@ static PyObject *impl_MathcadPy$_application$$$function__1___init__(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_57cbabaede0185952805c0816ebf0b26 == cache_frame_57cbabaede0185952805c0816ebf0b26) {
+    if (frame_8853356009f468da2c1ec3bf4e30ce8e == cache_frame_8853356009f468da2c1ec3bf4e30ce8e) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_57cbabaede0185952805c0816ebf0b26);
-        cache_frame_57cbabaede0185952805c0816ebf0b26 = NULL;
+        Py_DECREF(cache_frame_8853356009f468da2c1ec3bf4e30ce8e);
+        cache_frame_8853356009f468da2c1ec3bf4e30ce8e = NULL;
     }
 
-    assertFrameObject(frame_57cbabaede0185952805c0816ebf0b26);
+    assertFrameObject(frame_8853356009f468da2c1ec3bf4e30ce8e);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -804,7 +804,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
     PyObject *var_i = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_6df5834952c8223b2f6df4353e4e5ab6;
+    struct Nuitka_FrameObject *frame_7618de4fce53bc92e736edfc1934f599;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -815,7 +815,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
-    static struct Nuitka_FrameObject *cache_frame_6df5834952c8223b2f6df4353e4e5ab6 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7618de4fce53bc92e736edfc1934f599 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
@@ -830,31 +830,31 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
         var_ws_list = tmp_assign_source_1;
     }
     // Tried code:
-    if (isFrameUnusable(cache_frame_6df5834952c8223b2f6df4353e4e5ab6)) {
-        Py_XDECREF(cache_frame_6df5834952c8223b2f6df4353e4e5ab6);
+    if (isFrameUnusable(cache_frame_7618de4fce53bc92e736edfc1934f599)) {
+        Py_XDECREF(cache_frame_7618de4fce53bc92e736edfc1934f599);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_6df5834952c8223b2f6df4353e4e5ab6 == NULL) {
+        if (cache_frame_7618de4fce53bc92e736edfc1934f599 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_6df5834952c8223b2f6df4353e4e5ab6 = MAKE_FUNCTION_FRAME(codeobj_6df5834952c8223b2f6df4353e4e5ab6, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_7618de4fce53bc92e736edfc1934f599 = MAKE_FUNCTION_FRAME(codeobj_7618de4fce53bc92e736edfc1934f599, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_6df5834952c8223b2f6df4353e4e5ab6->m_type_description == NULL);
-    frame_6df5834952c8223b2f6df4353e4e5ab6 = cache_frame_6df5834952c8223b2f6df4353e4e5ab6;
+    assert(cache_frame_7618de4fce53bc92e736edfc1934f599->m_type_description == NULL);
+    frame_7618de4fce53bc92e736edfc1934f599 = cache_frame_7618de4fce53bc92e736edfc1934f599;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_6df5834952c8223b2f6df4353e4e5ab6);
+    pushFrameStack(frame_7618de4fce53bc92e736edfc1934f599);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_6df5834952c8223b2f6df4353e4e5ab6) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7618de4fce53bc92e736edfc1934f599) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1038,7 +1038,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_2 = var_i;
-        frame_6df5834952c8223b2f6df4353e4e5ab6->m_frame.f_lineno = 34;
+        frame_7618de4fce53bc92e736edfc1934f599->m_frame.f_lineno = 34;
         tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[16], tmp_args_element_name_2);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_args_element_name_1 == NULL) {
@@ -1051,7 +1051,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        frame_6df5834952c8223b2f6df4353e4e5ab6->m_frame.f_lineno = 34;
+        frame_7618de4fce53bc92e736edfc1934f599->m_frame.f_lineno = 34;
         tmp_ass_subvalue_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_ass_subvalue_1 == NULL) {
@@ -1139,7 +1139,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
         }
 
         tmp_args_element_name_3 = var_i;
-        frame_6df5834952c8223b2f6df4353e4e5ab6->m_frame.f_lineno = 34;
+        frame_7618de4fce53bc92e736edfc1934f599->m_frame.f_lineno = 34;
         tmp_expression_name_6 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_3);
         Py_DECREF(tmp_called_name_2);
         if (tmp_expression_name_6 == NULL) {
@@ -1262,7 +1262,7 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_6df5834952c8223b2f6df4353e4e5ab6);
+    RESTORE_FRAME_EXCEPTION(frame_7618de4fce53bc92e736edfc1934f599);
 #endif
 
     // Put the previous frame back on top.
@@ -1273,18 +1273,18 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_6df5834952c8223b2f6df4353e4e5ab6);
+    RESTORE_FRAME_EXCEPTION(frame_7618de4fce53bc92e736edfc1934f599);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_6df5834952c8223b2f6df4353e4e5ab6, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_6df5834952c8223b2f6df4353e4e5ab6->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_6df5834952c8223b2f6df4353e4e5ab6, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_7618de4fce53bc92e736edfc1934f599, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_7618de4fce53bc92e736edfc1934f599->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_7618de4fce53bc92e736edfc1934f599, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_6df5834952c8223b2f6df4353e4e5ab6,
+        frame_7618de4fce53bc92e736edfc1934f599,
         type_description_1,
         par_self,
         var_ws_list,
@@ -1293,17 +1293,17 @@ static PyObject *impl_MathcadPy$_application$$$function__2__list_worksheets(stru
 
 
     // Release cached frame if used for exception.
-    if (frame_6df5834952c8223b2f6df4353e4e5ab6 == cache_frame_6df5834952c8223b2f6df4353e4e5ab6) {
+    if (frame_7618de4fce53bc92e736edfc1934f599 == cache_frame_7618de4fce53bc92e736edfc1934f599) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_6df5834952c8223b2f6df4353e4e5ab6);
-        cache_frame_6df5834952c8223b2f6df4353e4e5ab6 = NULL;
+        Py_DECREF(cache_frame_7618de4fce53bc92e736edfc1934f599);
+        cache_frame_7618de4fce53bc92e736edfc1934f599 = NULL;
     }
 
-    assertFrameObject(frame_6df5834952c8223b2f6df4353e4e5ab6);
+    assertFrameObject(frame_7618de4fce53bc92e736edfc1934f599);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1381,14 +1381,14 @@ static PyObject *impl_MathcadPy$_application$$$function__3_activate(struct Nuitk
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_0e45e2da56d8f984023a3541937e527f;
+    struct Nuitka_FrameObject *frame_675d3603a58a0d1adbbae965894ce7b5;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_0e45e2da56d8f984023a3541937e527f = NULL;
+    static struct Nuitka_FrameObject *cache_frame_675d3603a58a0d1adbbae965894ce7b5 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -1397,31 +1397,31 @@ static PyObject *impl_MathcadPy$_application$$$function__3_activate(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_0e45e2da56d8f984023a3541937e527f)) {
-        Py_XDECREF(cache_frame_0e45e2da56d8f984023a3541937e527f);
+    if (isFrameUnusable(cache_frame_675d3603a58a0d1adbbae965894ce7b5)) {
+        Py_XDECREF(cache_frame_675d3603a58a0d1adbbae965894ce7b5);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_0e45e2da56d8f984023a3541937e527f == NULL) {
+        if (cache_frame_675d3603a58a0d1adbbae965894ce7b5 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_0e45e2da56d8f984023a3541937e527f = MAKE_FUNCTION_FRAME(codeobj_0e45e2da56d8f984023a3541937e527f, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_675d3603a58a0d1adbbae965894ce7b5 = MAKE_FUNCTION_FRAME(codeobj_675d3603a58a0d1adbbae965894ce7b5, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_0e45e2da56d8f984023a3541937e527f->m_type_description == NULL);
-    frame_0e45e2da56d8f984023a3541937e527f = cache_frame_0e45e2da56d8f984023a3541937e527f;
+    assert(cache_frame_675d3603a58a0d1adbbae965894ce7b5->m_type_description == NULL);
+    frame_675d3603a58a0d1adbbae965894ce7b5 = cache_frame_675d3603a58a0d1adbbae965894ce7b5;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_0e45e2da56d8f984023a3541937e527f);
+    pushFrameStack(frame_675d3603a58a0d1adbbae965894ce7b5);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0e45e2da56d8f984023a3541937e527f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_675d3603a58a0d1adbbae965894ce7b5) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1441,7 +1441,7 @@ static PyObject *impl_MathcadPy$_application$$$function__3_activate(struct Nuitk
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_0e45e2da56d8f984023a3541937e527f->m_frame.f_lineno = 39;
+        frame_675d3603a58a0d1adbbae965894ce7b5->m_frame.f_lineno = 39;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[21]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -1458,7 +1458,7 @@ static PyObject *impl_MathcadPy$_application$$$function__3_activate(struct Nuitk
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0e45e2da56d8f984023a3541937e527f);
+    RESTORE_FRAME_EXCEPTION(frame_675d3603a58a0d1adbbae965894ce7b5);
 #endif
 
     // Put the previous frame back on top.
@@ -1469,35 +1469,35 @@ static PyObject *impl_MathcadPy$_application$$$function__3_activate(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0e45e2da56d8f984023a3541937e527f);
+    RESTORE_FRAME_EXCEPTION(frame_675d3603a58a0d1adbbae965894ce7b5);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_0e45e2da56d8f984023a3541937e527f, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_0e45e2da56d8f984023a3541937e527f->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_0e45e2da56d8f984023a3541937e527f, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_675d3603a58a0d1adbbae965894ce7b5, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_675d3603a58a0d1adbbae965894ce7b5->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_675d3603a58a0d1adbbae965894ce7b5, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_0e45e2da56d8f984023a3541937e527f,
+        frame_675d3603a58a0d1adbbae965894ce7b5,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_0e45e2da56d8f984023a3541937e527f == cache_frame_0e45e2da56d8f984023a3541937e527f) {
+    if (frame_675d3603a58a0d1adbbae965894ce7b5 == cache_frame_675d3603a58a0d1adbbae965894ce7b5) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_0e45e2da56d8f984023a3541937e527f);
-        cache_frame_0e45e2da56d8f984023a3541937e527f = NULL;
+        Py_DECREF(cache_frame_675d3603a58a0d1adbbae965894ce7b5);
+        cache_frame_675d3603a58a0d1adbbae965894ce7b5 = NULL;
     }
 
-    assertFrameObject(frame_0e45e2da56d8f984023a3541937e527f);
+    assertFrameObject(frame_675d3603a58a0d1adbbae965894ce7b5);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1568,14 +1568,14 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *var_name = NULL;
-    struct Nuitka_FrameObject *frame_2184245ca50ef6461e9935b93f25ff09;
+    struct Nuitka_FrameObject *frame_7e1bb88b5ed7f4f9e19347a9d0d14927;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_2184245ca50ef6461e9935b93f25ff09 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -1583,31 +1583,31 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_2184245ca50ef6461e9935b93f25ff09)) {
-        Py_XDECREF(cache_frame_2184245ca50ef6461e9935b93f25ff09);
+    if (isFrameUnusable(cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927)) {
+        Py_XDECREF(cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_2184245ca50ef6461e9935b93f25ff09 == NULL) {
+        if (cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_2184245ca50ef6461e9935b93f25ff09 = MAKE_FUNCTION_FRAME(codeobj_2184245ca50ef6461e9935b93f25ff09, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927 = MAKE_FUNCTION_FRAME(codeobj_7e1bb88b5ed7f4f9e19347a9d0d14927, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_2184245ca50ef6461e9935b93f25ff09->m_type_description == NULL);
-    frame_2184245ca50ef6461e9935b93f25ff09 = cache_frame_2184245ca50ef6461e9935b93f25ff09;
+    assert(cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927->m_type_description == NULL);
+    frame_7e1bb88b5ed7f4f9e19347a9d0d14927 = cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_2184245ca50ef6461e9935b93f25ff09);
+    pushFrameStack(frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_2184245ca50ef6461e9935b93f25ff09) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7e1bb88b5ed7f4f9e19347a9d0d14927) == 2); // Frame stack
 
     // Framed code:
     {
@@ -1701,7 +1701,7 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
     branch_no_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2184245ca50ef6461e9935b93f25ff09);
+    RESTORE_FRAME_EXCEPTION(frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 #endif
 
     // Put the previous frame back on top.
@@ -1711,7 +1711,7 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2184245ca50ef6461e9935b93f25ff09);
+    RESTORE_FRAME_EXCEPTION(frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 #endif
 
     // Put the previous frame back on top.
@@ -1722,18 +1722,18 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_2184245ca50ef6461e9935b93f25ff09);
+    RESTORE_FRAME_EXCEPTION(frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_2184245ca50ef6461e9935b93f25ff09, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_2184245ca50ef6461e9935b93f25ff09->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_2184245ca50ef6461e9935b93f25ff09, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_7e1bb88b5ed7f4f9e19347a9d0d14927, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_7e1bb88b5ed7f4f9e19347a9d0d14927->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_7e1bb88b5ed7f4f9e19347a9d0d14927, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_2184245ca50ef6461e9935b93f25ff09,
+        frame_7e1bb88b5ed7f4f9e19347a9d0d14927,
         type_description_1,
         par_self,
         var_name
@@ -1741,17 +1741,17 @@ static PyObject *impl_MathcadPy$_application$$$function__4_active_sheet(struct N
 
 
     // Release cached frame if used for exception.
-    if (frame_2184245ca50ef6461e9935b93f25ff09 == cache_frame_2184245ca50ef6461e9935b93f25ff09) {
+    if (frame_7e1bb88b5ed7f4f9e19347a9d0d14927 == cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_2184245ca50ef6461e9935b93f25ff09);
-        cache_frame_2184245ca50ef6461e9935b93f25ff09 = NULL;
+        Py_DECREF(cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
+        cache_frame_7e1bb88b5ed7f4f9e19347a9d0d14927 = NULL;
     }
 
-    assertFrameObject(frame_2184245ca50ef6461e9935b93f25ff09);
+    assertFrameObject(frame_7e1bb88b5ed7f4f9e19347a9d0d14927);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -1831,7 +1831,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
     PyObject *var_i = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_55ec54ffc428a8adab47506ccad655fd;
+    struct Nuitka_FrameObject *frame_be78ce611859ed342220e63c5fe8dd4d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -1843,7 +1843,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_55ec54ffc428a8adab47506ccad655fd = NULL;
+    static struct Nuitka_FrameObject *cache_frame_be78ce611859ed342220e63c5fe8dd4d = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -1857,31 +1857,31 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
         var_worksheets = tmp_assign_source_1;
     }
     // Tried code:
-    if (isFrameUnusable(cache_frame_55ec54ffc428a8adab47506ccad655fd)) {
-        Py_XDECREF(cache_frame_55ec54ffc428a8adab47506ccad655fd);
+    if (isFrameUnusable(cache_frame_be78ce611859ed342220e63c5fe8dd4d)) {
+        Py_XDECREF(cache_frame_be78ce611859ed342220e63c5fe8dd4d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_55ec54ffc428a8adab47506ccad655fd == NULL) {
+        if (cache_frame_be78ce611859ed342220e63c5fe8dd4d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_55ec54ffc428a8adab47506ccad655fd = MAKE_FUNCTION_FRAME(codeobj_55ec54ffc428a8adab47506ccad655fd, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_be78ce611859ed342220e63c5fe8dd4d = MAKE_FUNCTION_FRAME(codeobj_be78ce611859ed342220e63c5fe8dd4d, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_55ec54ffc428a8adab47506ccad655fd->m_type_description == NULL);
-    frame_55ec54ffc428a8adab47506ccad655fd = cache_frame_55ec54ffc428a8adab47506ccad655fd;
+    assert(cache_frame_be78ce611859ed342220e63c5fe8dd4d->m_type_description == NULL);
+    frame_be78ce611859ed342220e63c5fe8dd4d = cache_frame_be78ce611859ed342220e63c5fe8dd4d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_55ec54ffc428a8adab47506ccad655fd);
+    pushFrameStack(frame_be78ce611859ed342220e63c5fe8dd4d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_55ec54ffc428a8adab47506ccad655fd) == 2); // Frame stack
+    assert(Py_REFCNT(frame_be78ce611859ed342220e63c5fe8dd4d) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2067,7 +2067,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_2 = var_i;
-        frame_55ec54ffc428a8adab47506ccad655fd->m_frame.f_lineno = 52;
+        frame_be78ce611859ed342220e63c5fe8dd4d->m_frame.f_lineno = 52;
         tmp_expression_name_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[16], tmp_args_element_name_2);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_expression_name_5 == NULL) {
@@ -2092,7 +2092,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        frame_55ec54ffc428a8adab47506ccad655fd->m_frame.f_lineno = 52;
+        frame_be78ce611859ed342220e63c5fe8dd4d->m_frame.f_lineno = 52;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_1);
@@ -2166,7 +2166,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_55ec54ffc428a8adab47506ccad655fd);
+    RESTORE_FRAME_EXCEPTION(frame_be78ce611859ed342220e63c5fe8dd4d);
 #endif
 
     // Put the previous frame back on top.
@@ -2176,7 +2176,7 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_55ec54ffc428a8adab47506ccad655fd);
+    RESTORE_FRAME_EXCEPTION(frame_be78ce611859ed342220e63c5fe8dd4d);
 #endif
 
     // Put the previous frame back on top.
@@ -2187,18 +2187,18 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_55ec54ffc428a8adab47506ccad655fd);
+    RESTORE_FRAME_EXCEPTION(frame_be78ce611859ed342220e63c5fe8dd4d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_55ec54ffc428a8adab47506ccad655fd, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_55ec54ffc428a8adab47506ccad655fd->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_55ec54ffc428a8adab47506ccad655fd, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_be78ce611859ed342220e63c5fe8dd4d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_be78ce611859ed342220e63c5fe8dd4d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_be78ce611859ed342220e63c5fe8dd4d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_55ec54ffc428a8adab47506ccad655fd,
+        frame_be78ce611859ed342220e63c5fe8dd4d,
         type_description_1,
         par_self,
         var_worksheets,
@@ -2207,17 +2207,17 @@ static PyObject *impl_MathcadPy$_application$$$function__5_worksheet_names(struc
 
 
     // Release cached frame if used for exception.
-    if (frame_55ec54ffc428a8adab47506ccad655fd == cache_frame_55ec54ffc428a8adab47506ccad655fd) {
+    if (frame_be78ce611859ed342220e63c5fe8dd4d == cache_frame_be78ce611859ed342220e63c5fe8dd4d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_55ec54ffc428a8adab47506ccad655fd);
-        cache_frame_55ec54ffc428a8adab47506ccad655fd = NULL;
+        Py_DECREF(cache_frame_be78ce611859ed342220e63c5fe8dd4d);
+        cache_frame_be78ce611859ed342220e63c5fe8dd4d = NULL;
     }
 
-    assertFrameObject(frame_55ec54ffc428a8adab47506ccad655fd);
+    assertFrameObject(frame_be78ce611859ed342220e63c5fe8dd4d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2296,7 +2296,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
     PyObject *var_i = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_afcd210ba784845ba55d8547adb98a0d;
+    struct Nuitka_FrameObject *frame_c7e26a64553ad5252d4bae7ee63eb963;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -2308,7 +2308,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_afcd210ba784845ba55d8547adb98a0d = NULL;
+    static struct Nuitka_FrameObject *cache_frame_c7e26a64553ad5252d4bae7ee63eb963 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -2322,31 +2322,31 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
         var_worksheets = tmp_assign_source_1;
     }
     // Tried code:
-    if (isFrameUnusable(cache_frame_afcd210ba784845ba55d8547adb98a0d)) {
-        Py_XDECREF(cache_frame_afcd210ba784845ba55d8547adb98a0d);
+    if (isFrameUnusable(cache_frame_c7e26a64553ad5252d4bae7ee63eb963)) {
+        Py_XDECREF(cache_frame_c7e26a64553ad5252d4bae7ee63eb963);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_afcd210ba784845ba55d8547adb98a0d == NULL) {
+        if (cache_frame_c7e26a64553ad5252d4bae7ee63eb963 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_afcd210ba784845ba55d8547adb98a0d = MAKE_FUNCTION_FRAME(codeobj_afcd210ba784845ba55d8547adb98a0d, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_c7e26a64553ad5252d4bae7ee63eb963 = MAKE_FUNCTION_FRAME(codeobj_c7e26a64553ad5252d4bae7ee63eb963, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_afcd210ba784845ba55d8547adb98a0d->m_type_description == NULL);
-    frame_afcd210ba784845ba55d8547adb98a0d = cache_frame_afcd210ba784845ba55d8547adb98a0d;
+    assert(cache_frame_c7e26a64553ad5252d4bae7ee63eb963->m_type_description == NULL);
+    frame_c7e26a64553ad5252d4bae7ee63eb963 = cache_frame_c7e26a64553ad5252d4bae7ee63eb963;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_afcd210ba784845ba55d8547adb98a0d);
+    pushFrameStack(frame_c7e26a64553ad5252d4bae7ee63eb963);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_afcd210ba784845ba55d8547adb98a0d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_c7e26a64553ad5252d4bae7ee63eb963) == 2); // Frame stack
 
     // Framed code:
     {
@@ -2532,7 +2532,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_2 = var_i;
-        frame_afcd210ba784845ba55d8547adb98a0d->m_frame.f_lineno = 59;
+        frame_c7e26a64553ad5252d4bae7ee63eb963->m_frame.f_lineno = 59;
         tmp_expression_name_5 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[16], tmp_args_element_name_2);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_expression_name_5 == NULL) {
@@ -2557,7 +2557,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        frame_afcd210ba784845ba55d8547adb98a0d->m_frame.f_lineno = 59;
+        frame_c7e26a64553ad5252d4bae7ee63eb963->m_frame.f_lineno = 59;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_1);
@@ -2631,7 +2631,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_afcd210ba784845ba55d8547adb98a0d);
+    RESTORE_FRAME_EXCEPTION(frame_c7e26a64553ad5252d4bae7ee63eb963);
 #endif
 
     // Put the previous frame back on top.
@@ -2641,7 +2641,7 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_afcd210ba784845ba55d8547adb98a0d);
+    RESTORE_FRAME_EXCEPTION(frame_c7e26a64553ad5252d4bae7ee63eb963);
 #endif
 
     // Put the previous frame back on top.
@@ -2652,18 +2652,18 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_afcd210ba784845ba55d8547adb98a0d);
+    RESTORE_FRAME_EXCEPTION(frame_c7e26a64553ad5252d4bae7ee63eb963);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_afcd210ba784845ba55d8547adb98a0d, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_afcd210ba784845ba55d8547adb98a0d->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_afcd210ba784845ba55d8547adb98a0d, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_c7e26a64553ad5252d4bae7ee63eb963, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_c7e26a64553ad5252d4bae7ee63eb963->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_c7e26a64553ad5252d4bae7ee63eb963, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_afcd210ba784845ba55d8547adb98a0d,
+        frame_c7e26a64553ad5252d4bae7ee63eb963,
         type_description_1,
         par_self,
         var_worksheets,
@@ -2672,17 +2672,17 @@ static PyObject *impl_MathcadPy$_application$$$function__6_worksheet_paths(struc
 
 
     // Release cached frame if used for exception.
-    if (frame_afcd210ba784845ba55d8547adb98a0d == cache_frame_afcd210ba784845ba55d8547adb98a0d) {
+    if (frame_c7e26a64553ad5252d4bae7ee63eb963 == cache_frame_c7e26a64553ad5252d4bae7ee63eb963) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_afcd210ba784845ba55d8547adb98a0d);
-        cache_frame_afcd210ba784845ba55d8547adb98a0d = NULL;
+        Py_DECREF(cache_frame_c7e26a64553ad5252d4bae7ee63eb963);
+        cache_frame_c7e26a64553ad5252d4bae7ee63eb963 = NULL;
     }
 
-    assertFrameObject(frame_afcd210ba784845ba55d8547adb98a0d);
+    assertFrameObject(frame_c7e26a64553ad5252d4bae7ee63eb963);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -2764,7 +2764,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
     PyObject *var_sheet_object = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_a16de434f92054f98876a8c215f72ad3;
+    struct Nuitka_FrameObject *frame_3fb7337ae5376966a930a488eda30f02;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -2788,7 +2788,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
-    static struct Nuitka_FrameObject *cache_frame_a16de434f92054f98876a8c215f72ad3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3fb7337ae5376966a930a488eda30f02 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -2796,31 +2796,31 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_a16de434f92054f98876a8c215f72ad3)) {
-        Py_XDECREF(cache_frame_a16de434f92054f98876a8c215f72ad3);
+    if (isFrameUnusable(cache_frame_3fb7337ae5376966a930a488eda30f02)) {
+        Py_XDECREF(cache_frame_3fb7337ae5376966a930a488eda30f02);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_a16de434f92054f98876a8c215f72ad3 == NULL) {
+        if (cache_frame_3fb7337ae5376966a930a488eda30f02 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_a16de434f92054f98876a8c215f72ad3 = MAKE_FUNCTION_FRAME(codeobj_a16de434f92054f98876a8c215f72ad3, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_3fb7337ae5376966a930a488eda30f02 = MAKE_FUNCTION_FRAME(codeobj_3fb7337ae5376966a930a488eda30f02, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_a16de434f92054f98876a8c215f72ad3->m_type_description == NULL);
-    frame_a16de434f92054f98876a8c215f72ad3 = cache_frame_a16de434f92054f98876a8c215f72ad3;
+    assert(cache_frame_3fb7337ae5376966a930a488eda30f02->m_type_description == NULL);
+    frame_3fb7337ae5376966a930a488eda30f02 = cache_frame_3fb7337ae5376966a930a488eda30f02;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_a16de434f92054f98876a8c215f72ad3);
+    pushFrameStack(frame_3fb7337ae5376966a930a488eda30f02);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_a16de434f92054f98876a8c215f72ad3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3fb7337ae5376966a930a488eda30f02) == 2); // Frame stack
 
     // Framed code:
     // Tried code:
@@ -2846,7 +2846,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         }
         CHECK_OBJECT(par_filepath);
         tmp_args_element_name_1 = par_filepath;
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 65;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 65;
         tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2882,7 +2882,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         int tmp_truth_name_2;
         CHECK_OBJECT(par_filepath);
         tmp_called_instance_1 = par_filepath;
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 66;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 66;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[30]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -2948,7 +2948,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 66;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 66;
         tmp_compexpr_left_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_2, mod_consts[33]);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_compexpr_left_1 == NULL) {
@@ -3055,7 +3055,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 67;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 67;
         tmp_assign_source_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
         Py_DECREF(tmp_called_name_2);
         Py_DECREF(tmp_args_element_name_2);
@@ -3244,7 +3244,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_3 = var_i;
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 71;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 71;
         tmp_assign_source_7 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_3, mod_consts[36], tmp_args_element_name_3);
         Py_DECREF(tmp_called_instance_3);
         if (tmp_assign_source_7 == NULL) {
@@ -3416,7 +3416,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
             type_description_1 = "oooooo";
             goto try_except_handler_2;
         }
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 73;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 73;
         tmp_ass_subvalue_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, tmp_args_element_name_4);
         Py_DECREF(tmp_args_element_name_4);
         if (tmp_ass_subvalue_2 == NULL) {
@@ -3568,7 +3568,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
         tmp_make_exception_arg_1 = mod_consts[39];
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 76;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 76;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
@@ -3595,9 +3595,9 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_2 == NULL) {
-        exception_keeper_tb_2 = MAKE_TRACEBACK(frame_a16de434f92054f98876a8c215f72ad3, exception_keeper_lineno_2);
+        exception_keeper_tb_2 = MAKE_TRACEBACK(frame_3fb7337ae5376966a930a488eda30f02, exception_keeper_lineno_2);
     } else if (exception_keeper_lineno_2 != 0) {
-        exception_keeper_tb_2 = ADD_TRACEBACK(exception_keeper_tb_2, frame_a16de434f92054f98876a8c215f72ad3, exception_keeper_lineno_2);
+        exception_keeper_tb_2 = ADD_TRACEBACK(exception_keeper_tb_2, frame_3fb7337ae5376966a930a488eda30f02, exception_keeper_lineno_2);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_2, &exception_keeper_value_2, &exception_keeper_tb_2);
@@ -3624,7 +3624,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         PyObject *tmp_raise_type_2;
         PyObject *tmp_make_exception_arg_2;
         tmp_make_exception_arg_2 = mod_consts[40];
-        frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = 78;
+        frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = 78;
         tmp_raise_type_2 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_TypeError, tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_2 == NULL));
         exception_type = tmp_raise_type_2;
@@ -3640,7 +3640,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
         exception_lineno = 64;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_a16de434f92054f98876a8c215f72ad3->m_frame) frame_a16de434f92054f98876a8c215f72ad3->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_3fb7337ae5376966a930a488eda30f02->m_frame) frame_3fb7337ae5376966a930a488eda30f02->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "oooooo";
     goto try_except_handler_4;
     branch_end_2:;
@@ -3671,7 +3671,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
     // End of try:
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a16de434f92054f98876a8c215f72ad3);
+    RESTORE_FRAME_EXCEPTION(frame_3fb7337ae5376966a930a488eda30f02);
 #endif
 
     // Put the previous frame back on top.
@@ -3681,7 +3681,7 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a16de434f92054f98876a8c215f72ad3);
+    RESTORE_FRAME_EXCEPTION(frame_3fb7337ae5376966a930a488eda30f02);
 #endif
 
     // Put the previous frame back on top.
@@ -3692,18 +3692,18 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_a16de434f92054f98876a8c215f72ad3);
+    RESTORE_FRAME_EXCEPTION(frame_3fb7337ae5376966a930a488eda30f02);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_a16de434f92054f98876a8c215f72ad3, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_a16de434f92054f98876a8c215f72ad3->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_a16de434f92054f98876a8c215f72ad3, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_3fb7337ae5376966a930a488eda30f02, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_3fb7337ae5376966a930a488eda30f02->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_3fb7337ae5376966a930a488eda30f02, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_a16de434f92054f98876a8c215f72ad3,
+        frame_3fb7337ae5376966a930a488eda30f02,
         type_description_1,
         par_self,
         par_filepath,
@@ -3715,17 +3715,17 @@ static PyObject *impl_MathcadPy$_application$$$function__7_open(struct Nuitka_Fu
 
 
     // Release cached frame if used for exception.
-    if (frame_a16de434f92054f98876a8c215f72ad3 == cache_frame_a16de434f92054f98876a8c215f72ad3) {
+    if (frame_3fb7337ae5376966a930a488eda30f02 == cache_frame_3fb7337ae5376966a930a488eda30f02) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_a16de434f92054f98876a8c215f72ad3);
-        cache_frame_a16de434f92054f98876a8c215f72ad3 = NULL;
+        Py_DECREF(cache_frame_3fb7337ae5376966a930a488eda30f02);
+        cache_frame_3fb7337ae5376966a930a488eda30f02 = NULL;
     }
 
-    assertFrameObject(frame_a16de434f92054f98876a8c215f72ad3);
+    assertFrameObject(frame_3fb7337ae5376966a930a488eda30f02);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -3813,7 +3813,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_save_option = python_pars[1];
-    struct Nuitka_FrameObject *frame_7b1ffead3aea27a209544ea30ae5d610;
+    struct Nuitka_FrameObject *frame_88344e1f883d12ba535a07e13554417f;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -3821,7 +3821,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_7b1ffead3aea27a209544ea30ae5d610 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_88344e1f883d12ba535a07e13554417f = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -3830,31 +3830,31 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_7b1ffead3aea27a209544ea30ae5d610)) {
-        Py_XDECREF(cache_frame_7b1ffead3aea27a209544ea30ae5d610);
+    if (isFrameUnusable(cache_frame_88344e1f883d12ba535a07e13554417f)) {
+        Py_XDECREF(cache_frame_88344e1f883d12ba535a07e13554417f);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_7b1ffead3aea27a209544ea30ae5d610 == NULL) {
+        if (cache_frame_88344e1f883d12ba535a07e13554417f == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_7b1ffead3aea27a209544ea30ae5d610 = MAKE_FUNCTION_FRAME(codeobj_7b1ffead3aea27a209544ea30ae5d610, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_88344e1f883d12ba535a07e13554417f = MAKE_FUNCTION_FRAME(codeobj_88344e1f883d12ba535a07e13554417f, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_7b1ffead3aea27a209544ea30ae5d610->m_type_description == NULL);
-    frame_7b1ffead3aea27a209544ea30ae5d610 = cache_frame_7b1ffead3aea27a209544ea30ae5d610;
+    assert(cache_frame_88344e1f883d12ba535a07e13554417f->m_type_description == NULL);
+    frame_88344e1f883d12ba535a07e13554417f = cache_frame_88344e1f883d12ba535a07e13554417f;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_7b1ffead3aea27a209544ea30ae5d610);
+    pushFrameStack(frame_88344e1f883d12ba535a07e13554417f);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_7b1ffead3aea27a209544ea30ae5d610) == 2); // Frame stack
+    assert(Py_REFCNT(frame_88344e1f883d12ba535a07e13554417f) == 2); // Frame stack
 
     // Framed code:
     {
@@ -3901,7 +3901,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_7b1ffead3aea27a209544ea30ae5d610->m_frame.f_lineno = 83;
+        frame_88344e1f883d12ba535a07e13554417f->m_frame.f_lineno = 83;
         tmp_call_result_1 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_1,
             mod_consts[43],
@@ -3967,7 +3967,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_7b1ffead3aea27a209544ea30ae5d610->m_frame.f_lineno = 85;
+        frame_88344e1f883d12ba535a07e13554417f->m_frame.f_lineno = 85;
         tmp_call_result_2 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_2,
             mod_consts[43],
@@ -4033,7 +4033,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_7b1ffead3aea27a209544ea30ae5d610->m_frame.f_lineno = 87;
+        frame_88344e1f883d12ba535a07e13554417f->m_frame.f_lineno = 87;
         tmp_call_result_3 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_3,
             mod_consts[43],
@@ -4060,7 +4060,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
         PyObject *tmp_call_result_4;
         tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_1 != NULL);
-        frame_7b1ffead3aea27a209544ea30ae5d610->m_frame.f_lineno = 89;
+        frame_88344e1f883d12ba535a07e13554417f->m_frame.f_lineno = 89;
         tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[49]);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4093,7 +4093,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
         }
 
         tmp_called_instance_4 = par_self;
-        frame_7b1ffead3aea27a209544ea30ae5d610->m_frame.f_lineno = 90;
+        frame_88344e1f883d12ba535a07e13554417f->m_frame.f_lineno = 90;
         tmp_call_result_5 = CALL_METHOD_NO_ARGS(tmp_called_instance_4, mod_consts[11]);
         if (tmp_call_result_5 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4109,7 +4109,7 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_7b1ffead3aea27a209544ea30ae5d610);
+    RESTORE_FRAME_EXCEPTION(frame_88344e1f883d12ba535a07e13554417f);
 #endif
 
     // Put the previous frame back on top.
@@ -4120,18 +4120,18 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_7b1ffead3aea27a209544ea30ae5d610);
+    RESTORE_FRAME_EXCEPTION(frame_88344e1f883d12ba535a07e13554417f);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_7b1ffead3aea27a209544ea30ae5d610, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_7b1ffead3aea27a209544ea30ae5d610->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_7b1ffead3aea27a209544ea30ae5d610, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_88344e1f883d12ba535a07e13554417f, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_88344e1f883d12ba535a07e13554417f->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_88344e1f883d12ba535a07e13554417f, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_7b1ffead3aea27a209544ea30ae5d610,
+        frame_88344e1f883d12ba535a07e13554417f,
         type_description_1,
         par_self,
         par_save_option
@@ -4139,17 +4139,17 @@ static PyObject *impl_MathcadPy$_application$$$function__8_close_all(struct Nuit
 
 
     // Release cached frame if used for exception.
-    if (frame_7b1ffead3aea27a209544ea30ae5d610 == cache_frame_7b1ffead3aea27a209544ea30ae5d610) {
+    if (frame_88344e1f883d12ba535a07e13554417f == cache_frame_88344e1f883d12ba535a07e13554417f) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_7b1ffead3aea27a209544ea30ae5d610);
-        cache_frame_7b1ffead3aea27a209544ea30ae5d610 = NULL;
+        Py_DECREF(cache_frame_88344e1f883d12ba535a07e13554417f);
+        cache_frame_88344e1f883d12ba535a07e13554417f = NULL;
     }
 
-    assertFrameObject(frame_7b1ffead3aea27a209544ea30ae5d610);
+    assertFrameObject(frame_88344e1f883d12ba535a07e13554417f);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4226,14 +4226,14 @@ static PyObject *impl_MathcadPy$_application$$$function__9___init__(struct Nuitk
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par__worksheet_COM_object = python_pars[1];
-    struct Nuitka_FrameObject *frame_bf00e955d25f7701c719ff5a99d63d2a;
+    struct Nuitka_FrameObject *frame_42c092ede1e8956f51f197b85d03ace3;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_bf00e955d25f7701c719ff5a99d63d2a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_42c092ede1e8956f51f197b85d03ace3 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -4242,31 +4242,31 @@ static PyObject *impl_MathcadPy$_application$$$function__9___init__(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_bf00e955d25f7701c719ff5a99d63d2a)) {
-        Py_XDECREF(cache_frame_bf00e955d25f7701c719ff5a99d63d2a);
+    if (isFrameUnusable(cache_frame_42c092ede1e8956f51f197b85d03ace3)) {
+        Py_XDECREF(cache_frame_42c092ede1e8956f51f197b85d03ace3);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_bf00e955d25f7701c719ff5a99d63d2a == NULL) {
+        if (cache_frame_42c092ede1e8956f51f197b85d03ace3 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_bf00e955d25f7701c719ff5a99d63d2a = MAKE_FUNCTION_FRAME(codeobj_bf00e955d25f7701c719ff5a99d63d2a, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_42c092ede1e8956f51f197b85d03ace3 = MAKE_FUNCTION_FRAME(codeobj_42c092ede1e8956f51f197b85d03ace3, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_bf00e955d25f7701c719ff5a99d63d2a->m_type_description == NULL);
-    frame_bf00e955d25f7701c719ff5a99d63d2a = cache_frame_bf00e955d25f7701c719ff5a99d63d2a;
+    assert(cache_frame_42c092ede1e8956f51f197b85d03ace3->m_type_description == NULL);
+    frame_42c092ede1e8956f51f197b85d03ace3 = cache_frame_42c092ede1e8956f51f197b85d03ace3;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_bf00e955d25f7701c719ff5a99d63d2a);
+    pushFrameStack(frame_42c092ede1e8956f51f197b85d03ace3);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_bf00e955d25f7701c719ff5a99d63d2a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_42c092ede1e8956f51f197b85d03ace3) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4346,7 +4346,7 @@ static PyObject *impl_MathcadPy$_application$$$function__9___init__(struct Nuitk
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_bf00e955d25f7701c719ff5a99d63d2a);
+    RESTORE_FRAME_EXCEPTION(frame_42c092ede1e8956f51f197b85d03ace3);
 #endif
 
     // Put the previous frame back on top.
@@ -4357,18 +4357,18 @@ static PyObject *impl_MathcadPy$_application$$$function__9___init__(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_bf00e955d25f7701c719ff5a99d63d2a);
+    RESTORE_FRAME_EXCEPTION(frame_42c092ede1e8956f51f197b85d03ace3);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_bf00e955d25f7701c719ff5a99d63d2a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_bf00e955d25f7701c719ff5a99d63d2a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_bf00e955d25f7701c719ff5a99d63d2a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_42c092ede1e8956f51f197b85d03ace3, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_42c092ede1e8956f51f197b85d03ace3->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_42c092ede1e8956f51f197b85d03ace3, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_bf00e955d25f7701c719ff5a99d63d2a,
+        frame_42c092ede1e8956f51f197b85d03ace3,
         type_description_1,
         par_self,
         par__worksheet_COM_object
@@ -4376,17 +4376,17 @@ static PyObject *impl_MathcadPy$_application$$$function__9___init__(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_bf00e955d25f7701c719ff5a99d63d2a == cache_frame_bf00e955d25f7701c719ff5a99d63d2a) {
+    if (frame_42c092ede1e8956f51f197b85d03ace3 == cache_frame_42c092ede1e8956f51f197b85d03ace3) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_bf00e955d25f7701c719ff5a99d63d2a);
-        cache_frame_bf00e955d25f7701c719ff5a99d63d2a = NULL;
+        Py_DECREF(cache_frame_42c092ede1e8956f51f197b85d03ace3);
+        cache_frame_42c092ede1e8956f51f197b85d03ace3 = NULL;
     }
 
-    assertFrameObject(frame_bf00e955d25f7701c719ff5a99d63d2a);
+    assertFrameObject(frame_42c092ede1e8956f51f197b85d03ace3);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4462,14 +4462,14 @@ static PyObject *impl_MathcadPy$_application$$$function__10_activate(struct Nuit
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_c8dd0bec30299178b2161eef95ceb2c0;
+    struct Nuitka_FrameObject *frame_35c17ae10e4afd96f51eb95cd0d86f9b;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_c8dd0bec30299178b2161eef95ceb2c0 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -4478,31 +4478,31 @@ static PyObject *impl_MathcadPy$_application$$$function__10_activate(struct Nuit
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_c8dd0bec30299178b2161eef95ceb2c0)) {
-        Py_XDECREF(cache_frame_c8dd0bec30299178b2161eef95ceb2c0);
+    if (isFrameUnusable(cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b)) {
+        Py_XDECREF(cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_c8dd0bec30299178b2161eef95ceb2c0 == NULL) {
+        if (cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_c8dd0bec30299178b2161eef95ceb2c0 = MAKE_FUNCTION_FRAME(codeobj_c8dd0bec30299178b2161eef95ceb2c0, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b = MAKE_FUNCTION_FRAME(codeobj_35c17ae10e4afd96f51eb95cd0d86f9b, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_c8dd0bec30299178b2161eef95ceb2c0->m_type_description == NULL);
-    frame_c8dd0bec30299178b2161eef95ceb2c0 = cache_frame_c8dd0bec30299178b2161eef95ceb2c0;
+    assert(cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b->m_type_description == NULL);
+    frame_35c17ae10e4afd96f51eb95cd0d86f9b = cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_c8dd0bec30299178b2161eef95ceb2c0);
+    pushFrameStack(frame_35c17ae10e4afd96f51eb95cd0d86f9b);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c8dd0bec30299178b2161eef95ceb2c0) == 2); // Frame stack
+    assert(Py_REFCNT(frame_35c17ae10e4afd96f51eb95cd0d86f9b) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4522,7 +4522,7 @@ static PyObject *impl_MathcadPy$_application$$$function__10_activate(struct Nuit
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_c8dd0bec30299178b2161eef95ceb2c0->m_frame.f_lineno = 110;
+        frame_35c17ae10e4afd96f51eb95cd0d86f9b->m_frame.f_lineno = 110;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[21]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -4539,7 +4539,7 @@ static PyObject *impl_MathcadPy$_application$$$function__10_activate(struct Nuit
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c8dd0bec30299178b2161eef95ceb2c0);
+    RESTORE_FRAME_EXCEPTION(frame_35c17ae10e4afd96f51eb95cd0d86f9b);
 #endif
 
     // Put the previous frame back on top.
@@ -4550,35 +4550,35 @@ static PyObject *impl_MathcadPy$_application$$$function__10_activate(struct Nuit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c8dd0bec30299178b2161eef95ceb2c0);
+    RESTORE_FRAME_EXCEPTION(frame_35c17ae10e4afd96f51eb95cd0d86f9b);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_c8dd0bec30299178b2161eef95ceb2c0, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_c8dd0bec30299178b2161eef95ceb2c0->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_c8dd0bec30299178b2161eef95ceb2c0, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_35c17ae10e4afd96f51eb95cd0d86f9b, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_35c17ae10e4afd96f51eb95cd0d86f9b->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_35c17ae10e4afd96f51eb95cd0d86f9b, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_c8dd0bec30299178b2161eef95ceb2c0,
+        frame_35c17ae10e4afd96f51eb95cd0d86f9b,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_c8dd0bec30299178b2161eef95ceb2c0 == cache_frame_c8dd0bec30299178b2161eef95ceb2c0) {
+    if (frame_35c17ae10e4afd96f51eb95cd0d86f9b == cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_c8dd0bec30299178b2161eef95ceb2c0);
-        cache_frame_c8dd0bec30299178b2161eef95ceb2c0 = NULL;
+        Py_DECREF(cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b);
+        cache_frame_35c17ae10e4afd96f51eb95cd0d86f9b = NULL;
     }
 
-    assertFrameObject(frame_c8dd0bec30299178b2161eef95ceb2c0);
+    assertFrameObject(frame_35c17ae10e4afd96f51eb95cd0d86f9b);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -4649,7 +4649,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_save_option = python_pars[1];
-    struct Nuitka_FrameObject *frame_4e1e7aa7709814993bc107bb0944e524;
+    struct Nuitka_FrameObject *frame_357626e5a6c1c999d7febd539786e95e;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -4657,7 +4657,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    static struct Nuitka_FrameObject *cache_frame_4e1e7aa7709814993bc107bb0944e524 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_357626e5a6c1c999d7febd539786e95e = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -4666,31 +4666,31 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_4e1e7aa7709814993bc107bb0944e524)) {
-        Py_XDECREF(cache_frame_4e1e7aa7709814993bc107bb0944e524);
+    if (isFrameUnusable(cache_frame_357626e5a6c1c999d7febd539786e95e)) {
+        Py_XDECREF(cache_frame_357626e5a6c1c999d7febd539786e95e);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_4e1e7aa7709814993bc107bb0944e524 == NULL) {
+        if (cache_frame_357626e5a6c1c999d7febd539786e95e == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_4e1e7aa7709814993bc107bb0944e524 = MAKE_FUNCTION_FRAME(codeobj_4e1e7aa7709814993bc107bb0944e524, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_357626e5a6c1c999d7febd539786e95e = MAKE_FUNCTION_FRAME(codeobj_357626e5a6c1c999d7febd539786e95e, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_4e1e7aa7709814993bc107bb0944e524->m_type_description == NULL);
-    frame_4e1e7aa7709814993bc107bb0944e524 = cache_frame_4e1e7aa7709814993bc107bb0944e524;
+    assert(cache_frame_357626e5a6c1c999d7febd539786e95e->m_type_description == NULL);
+    frame_357626e5a6c1c999d7febd539786e95e = cache_frame_357626e5a6c1c999d7febd539786e95e;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_4e1e7aa7709814993bc107bb0944e524);
+    pushFrameStack(frame_357626e5a6c1c999d7febd539786e95e);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_4e1e7aa7709814993bc107bb0944e524) == 2); // Frame stack
+    assert(Py_REFCNT(frame_357626e5a6c1c999d7febd539786e95e) == 2); // Frame stack
 
     // Framed code:
     {
@@ -4737,7 +4737,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_4e1e7aa7709814993bc107bb0944e524->m_frame.f_lineno = 115;
+        frame_357626e5a6c1c999d7febd539786e95e->m_frame.f_lineno = 115;
         tmp_call_result_1 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_1,
             mod_consts[54],
@@ -4803,7 +4803,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_4e1e7aa7709814993bc107bb0944e524->m_frame.f_lineno = 117;
+        frame_357626e5a6c1c999d7febd539786e95e->m_frame.f_lineno = 117;
         tmp_call_result_2 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_2,
             mod_consts[54],
@@ -4869,7 +4869,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
             type_description_1 = "oo";
             goto frame_exception_exit_1;
         }
-        frame_4e1e7aa7709814993bc107bb0944e524->m_frame.f_lineno = 119;
+        frame_357626e5a6c1c999d7febd539786e95e->m_frame.f_lineno = 119;
         tmp_call_result_3 = CALL_METHOD_WITH_ARGS1(
             tmp_called_instance_3,
             mod_consts[54],
@@ -4896,7 +4896,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
         PyObject *tmp_call_result_4;
         tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_1 != NULL);
-        frame_4e1e7aa7709814993bc107bb0944e524->m_frame.f_lineno = 121;
+        frame_357626e5a6c1c999d7febd539786e95e->m_frame.f_lineno = 121;
         tmp_call_result_4 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[49]);
         if (tmp_call_result_4 == NULL) {
             assert(ERROR_OCCURRED());
@@ -4915,7 +4915,7 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4e1e7aa7709814993bc107bb0944e524);
+    RESTORE_FRAME_EXCEPTION(frame_357626e5a6c1c999d7febd539786e95e);
 #endif
 
     // Put the previous frame back on top.
@@ -4926,18 +4926,18 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_4e1e7aa7709814993bc107bb0944e524);
+    RESTORE_FRAME_EXCEPTION(frame_357626e5a6c1c999d7febd539786e95e);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_4e1e7aa7709814993bc107bb0944e524, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_4e1e7aa7709814993bc107bb0944e524->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_4e1e7aa7709814993bc107bb0944e524, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_357626e5a6c1c999d7febd539786e95e, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_357626e5a6c1c999d7febd539786e95e->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_357626e5a6c1c999d7febd539786e95e, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_4e1e7aa7709814993bc107bb0944e524,
+        frame_357626e5a6c1c999d7febd539786e95e,
         type_description_1,
         par_self,
         par_save_option
@@ -4945,17 +4945,17 @@ static PyObject *impl_MathcadPy$_application$$$function__11_close(struct Nuitka_
 
 
     // Release cached frame if used for exception.
-    if (frame_4e1e7aa7709814993bc107bb0944e524 == cache_frame_4e1e7aa7709814993bc107bb0944e524) {
+    if (frame_357626e5a6c1c999d7febd539786e95e == cache_frame_357626e5a6c1c999d7febd539786e95e) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_4e1e7aa7709814993bc107bb0944e524);
-        cache_frame_4e1e7aa7709814993bc107bb0944e524 = NULL;
+        Py_DECREF(cache_frame_357626e5a6c1c999d7febd539786e95e);
+        cache_frame_357626e5a6c1c999d7febd539786e95e = NULL;
     }
 
-    assertFrameObject(frame_4e1e7aa7709814993bc107bb0944e524);
+    assertFrameObject(frame_357626e5a6c1c999d7febd539786e95e);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5031,14 +5031,14 @@ static PyObject *impl_MathcadPy$_application$$$function__12_save(struct Nuitka_F
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_b971a9da48e543c11d1965591bd844ad;
+    struct Nuitka_FrameObject *frame_dfad3bc229bc486092d2e9c96523e170;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_b971a9da48e543c11d1965591bd844ad = NULL;
+    static struct Nuitka_FrameObject *cache_frame_dfad3bc229bc486092d2e9c96523e170 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -5047,31 +5047,31 @@ static PyObject *impl_MathcadPy$_application$$$function__12_save(struct Nuitka_F
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_b971a9da48e543c11d1965591bd844ad)) {
-        Py_XDECREF(cache_frame_b971a9da48e543c11d1965591bd844ad);
+    if (isFrameUnusable(cache_frame_dfad3bc229bc486092d2e9c96523e170)) {
+        Py_XDECREF(cache_frame_dfad3bc229bc486092d2e9c96523e170);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_b971a9da48e543c11d1965591bd844ad == NULL) {
+        if (cache_frame_dfad3bc229bc486092d2e9c96523e170 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_b971a9da48e543c11d1965591bd844ad = MAKE_FUNCTION_FRAME(codeobj_b971a9da48e543c11d1965591bd844ad, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_dfad3bc229bc486092d2e9c96523e170 = MAKE_FUNCTION_FRAME(codeobj_dfad3bc229bc486092d2e9c96523e170, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_b971a9da48e543c11d1965591bd844ad->m_type_description == NULL);
-    frame_b971a9da48e543c11d1965591bd844ad = cache_frame_b971a9da48e543c11d1965591bd844ad;
+    assert(cache_frame_dfad3bc229bc486092d2e9c96523e170->m_type_description == NULL);
+    frame_dfad3bc229bc486092d2e9c96523e170 = cache_frame_dfad3bc229bc486092d2e9c96523e170;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_b971a9da48e543c11d1965591bd844ad);
+    pushFrameStack(frame_dfad3bc229bc486092d2e9c96523e170);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_b971a9da48e543c11d1965591bd844ad) == 2); // Frame stack
+    assert(Py_REFCNT(frame_dfad3bc229bc486092d2e9c96523e170) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5091,7 +5091,7 @@ static PyObject *impl_MathcadPy$_application$$$function__12_save(struct Nuitka_F
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_b971a9da48e543c11d1965591bd844ad->m_frame.f_lineno = 125;
+        frame_dfad3bc229bc486092d2e9c96523e170->m_frame.f_lineno = 125;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[56]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -5108,7 +5108,7 @@ static PyObject *impl_MathcadPy$_application$$$function__12_save(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_b971a9da48e543c11d1965591bd844ad);
+    RESTORE_FRAME_EXCEPTION(frame_dfad3bc229bc486092d2e9c96523e170);
 #endif
 
     // Put the previous frame back on top.
@@ -5119,35 +5119,35 @@ static PyObject *impl_MathcadPy$_application$$$function__12_save(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_b971a9da48e543c11d1965591bd844ad);
+    RESTORE_FRAME_EXCEPTION(frame_dfad3bc229bc486092d2e9c96523e170);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_b971a9da48e543c11d1965591bd844ad, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_b971a9da48e543c11d1965591bd844ad->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_b971a9da48e543c11d1965591bd844ad, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_dfad3bc229bc486092d2e9c96523e170, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_dfad3bc229bc486092d2e9c96523e170->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_dfad3bc229bc486092d2e9c96523e170, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_b971a9da48e543c11d1965591bd844ad,
+        frame_dfad3bc229bc486092d2e9c96523e170,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_b971a9da48e543c11d1965591bd844ad == cache_frame_b971a9da48e543c11d1965591bd844ad) {
+    if (frame_dfad3bc229bc486092d2e9c96523e170 == cache_frame_dfad3bc229bc486092d2e9c96523e170) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_b971a9da48e543c11d1965591bd844ad);
-        cache_frame_b971a9da48e543c11d1965591bd844ad = NULL;
+        Py_DECREF(cache_frame_dfad3bc229bc486092d2e9c96523e170);
+        cache_frame_dfad3bc229bc486092d2e9c96523e170 = NULL;
     }
 
-    assertFrameObject(frame_b971a9da48e543c11d1965591bd844ad);
+    assertFrameObject(frame_dfad3bc229bc486092d2e9c96523e170);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5218,7 +5218,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_new_filepath = python_pars[1];
-    struct Nuitka_FrameObject *frame_5f1c4e6c7f0892bc6ab948ee116edb5f;
+    struct Nuitka_FrameObject *frame_3916d12da29c16a5f75ef1fd07e34723;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -5237,7 +5237,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f = NULL;
+    static struct Nuitka_FrameObject *cache_frame_3916d12da29c16a5f75ef1fd07e34723 = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -5245,31 +5245,31 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f)) {
-        Py_XDECREF(cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    if (isFrameUnusable(cache_frame_3916d12da29c16a5f75ef1fd07e34723)) {
+        Py_XDECREF(cache_frame_3916d12da29c16a5f75ef1fd07e34723);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f == NULL) {
+        if (cache_frame_3916d12da29c16a5f75ef1fd07e34723 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f = MAKE_FUNCTION_FRAME(codeobj_5f1c4e6c7f0892bc6ab948ee116edb5f, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_3916d12da29c16a5f75ef1fd07e34723 = MAKE_FUNCTION_FRAME(codeobj_3916d12da29c16a5f75ef1fd07e34723, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_type_description == NULL);
-    frame_5f1c4e6c7f0892bc6ab948ee116edb5f = cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f;
+    assert(cache_frame_3916d12da29c16a5f75ef1fd07e34723->m_type_description == NULL);
+    frame_3916d12da29c16a5f75ef1fd07e34723 = cache_frame_3916d12da29c16a5f75ef1fd07e34723;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    pushFrameStack(frame_3916d12da29c16a5f75ef1fd07e34723);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_5f1c4e6c7f0892bc6ab948ee116edb5f) == 2); // Frame stack
+    assert(Py_REFCNT(frame_3916d12da29c16a5f75ef1fd07e34723) == 2); // Frame stack
 
     // Framed code:
     // Tried code:
@@ -5295,7 +5295,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
         }
         CHECK_OBJECT(par_new_filepath);
         tmp_args_element_name_1 = par_new_filepath;
-        frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_frame.f_lineno = 130;
+        frame_3916d12da29c16a5f75ef1fd07e34723->m_frame.f_lineno = 130;
         tmp_assign_source_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5412,7 +5412,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
         }
 
         tmp_args_element_name_2 = par_new_filepath;
-        frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_frame.f_lineno = 132;
+        frame_3916d12da29c16a5f75ef1fd07e34723->m_frame.f_lineno = 132;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
         Py_DECREF(tmp_called_name_2);
         if (tmp_call_result_1 == NULL) {
@@ -5436,7 +5436,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
         tmp_make_exception_arg_1 = mod_consts[60];
-        frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_frame.f_lineno = 136;
+        frame_3916d12da29c16a5f75ef1fd07e34723->m_frame.f_lineno = 136;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
@@ -5463,9 +5463,9 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_5f1c4e6c7f0892bc6ab948ee116edb5f, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_3916d12da29c16a5f75ef1fd07e34723, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_5f1c4e6c7f0892bc6ab948ee116edb5f, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_3916d12da29c16a5f75ef1fd07e34723, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -5477,7 +5477,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
         PyObject *tmp_call_result_2;
         tmp_called_name_3 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_3 != NULL);
-        frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_frame.f_lineno = 138;
+        frame_3916d12da29c16a5f75ef1fd07e34723->m_frame.f_lineno = 138;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_3, mod_consts[61]);
         if (tmp_call_result_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -5525,7 +5525,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
     try_end_2:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    RESTORE_FRAME_EXCEPTION(frame_3916d12da29c16a5f75ef1fd07e34723);
 #endif
 
     // Put the previous frame back on top.
@@ -5535,7 +5535,7 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    RESTORE_FRAME_EXCEPTION(frame_3916d12da29c16a5f75ef1fd07e34723);
 #endif
 
     // Put the previous frame back on top.
@@ -5546,18 +5546,18 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    RESTORE_FRAME_EXCEPTION(frame_3916d12da29c16a5f75ef1fd07e34723);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5f1c4e6c7f0892bc6ab948ee116edb5f, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5f1c4e6c7f0892bc6ab948ee116edb5f->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5f1c4e6c7f0892bc6ab948ee116edb5f, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_3916d12da29c16a5f75ef1fd07e34723, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_3916d12da29c16a5f75ef1fd07e34723->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_3916d12da29c16a5f75ef1fd07e34723, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_5f1c4e6c7f0892bc6ab948ee116edb5f,
+        frame_3916d12da29c16a5f75ef1fd07e34723,
         type_description_1,
         par_self,
         par_new_filepath
@@ -5565,17 +5565,17 @@ static PyObject *impl_MathcadPy$_application$$$function__13_save_as(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_5f1c4e6c7f0892bc6ab948ee116edb5f == cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f) {
+    if (frame_3916d12da29c16a5f75ef1fd07e34723 == cache_frame_3916d12da29c16a5f75ef1fd07e34723) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
-        cache_frame_5f1c4e6c7f0892bc6ab948ee116edb5f = NULL;
+        Py_DECREF(cache_frame_3916d12da29c16a5f75ef1fd07e34723);
+        cache_frame_3916d12da29c16a5f75ef1fd07e34723 = NULL;
     }
 
-    assertFrameObject(frame_5f1c4e6c7f0892bc6ab948ee116edb5f);
+    assertFrameObject(frame_3916d12da29c16a5f75ef1fd07e34723);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5649,14 +5649,14 @@ static PyObject *impl_MathcadPy$_application$$$function__14_name(struct Nuitka_F
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_74002e0f2049bfbf8931b0e5c0ef46b0;
+    struct Nuitka_FrameObject *frame_cda8899a1a68e8b1c4c04de10d7a47fd;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -5664,31 +5664,31 @@ static PyObject *impl_MathcadPy$_application$$$function__14_name(struct Nuitka_F
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0)) {
-        Py_XDECREF(cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    if (isFrameUnusable(cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd)) {
+        Py_XDECREF(cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0 == NULL) {
+        if (cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0 = MAKE_FUNCTION_FRAME(codeobj_74002e0f2049bfbf8931b0e5c0ef46b0, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd = MAKE_FUNCTION_FRAME(codeobj_cda8899a1a68e8b1c4c04de10d7a47fd, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0->m_type_description == NULL);
-    frame_74002e0f2049bfbf8931b0e5c0ef46b0 = cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0;
+    assert(cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd->m_type_description == NULL);
+    frame_cda8899a1a68e8b1c4c04de10d7a47fd = cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    pushFrameStack(frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_74002e0f2049bfbf8931b0e5c0ef46b0) == 2); // Frame stack
+    assert(Py_REFCNT(frame_cda8899a1a68e8b1c4c04de10d7a47fd) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5723,7 +5723,7 @@ static PyObject *impl_MathcadPy$_application$$$function__14_name(struct Nuitka_F
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    RESTORE_FRAME_EXCEPTION(frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 #endif
 
     // Put the previous frame back on top.
@@ -5733,7 +5733,7 @@ static PyObject *impl_MathcadPy$_application$$$function__14_name(struct Nuitka_F
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    RESTORE_FRAME_EXCEPTION(frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 #endif
 
     // Put the previous frame back on top.
@@ -5744,35 +5744,35 @@ static PyObject *impl_MathcadPy$_application$$$function__14_name(struct Nuitka_F
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    RESTORE_FRAME_EXCEPTION(frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_74002e0f2049bfbf8931b0e5c0ef46b0, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_74002e0f2049bfbf8931b0e5c0ef46b0->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_74002e0f2049bfbf8931b0e5c0ef46b0, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_cda8899a1a68e8b1c4c04de10d7a47fd, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_cda8899a1a68e8b1c4c04de10d7a47fd->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_cda8899a1a68e8b1c4c04de10d7a47fd, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_74002e0f2049bfbf8931b0e5c0ef46b0,
+        frame_cda8899a1a68e8b1c4c04de10d7a47fd,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_74002e0f2049bfbf8931b0e5c0ef46b0 == cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0) {
+    if (frame_cda8899a1a68e8b1c4c04de10d7a47fd == cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0);
-        cache_frame_74002e0f2049bfbf8931b0e5c0ef46b0 = NULL;
+        Py_DECREF(cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd);
+        cache_frame_cda8899a1a68e8b1c4c04de10d7a47fd = NULL;
     }
 
-    assertFrameObject(frame_74002e0f2049bfbf8931b0e5c0ef46b0);
+    assertFrameObject(frame_cda8899a1a68e8b1c4c04de10d7a47fd);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -5839,14 +5839,14 @@ static PyObject *impl_MathcadPy$_application$$$function__15_is_readonly(struct N
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_fd8422f3742161fc3b8f1555e4ccb899;
+    struct Nuitka_FrameObject *frame_a4bde9bf9ed2a5186fd64da6c873a06b;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_fd8422f3742161fc3b8f1555e4ccb899 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -5854,31 +5854,31 @@ static PyObject *impl_MathcadPy$_application$$$function__15_is_readonly(struct N
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_fd8422f3742161fc3b8f1555e4ccb899)) {
-        Py_XDECREF(cache_frame_fd8422f3742161fc3b8f1555e4ccb899);
+    if (isFrameUnusable(cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b)) {
+        Py_XDECREF(cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_fd8422f3742161fc3b8f1555e4ccb899 == NULL) {
+        if (cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_fd8422f3742161fc3b8f1555e4ccb899 = MAKE_FUNCTION_FRAME(codeobj_fd8422f3742161fc3b8f1555e4ccb899, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b = MAKE_FUNCTION_FRAME(codeobj_a4bde9bf9ed2a5186fd64da6c873a06b, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_fd8422f3742161fc3b8f1555e4ccb899->m_type_description == NULL);
-    frame_fd8422f3742161fc3b8f1555e4ccb899 = cache_frame_fd8422f3742161fc3b8f1555e4ccb899;
+    assert(cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b->m_type_description == NULL);
+    frame_a4bde9bf9ed2a5186fd64da6c873a06b = cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_fd8422f3742161fc3b8f1555e4ccb899);
+    pushFrameStack(frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_fd8422f3742161fc3b8f1555e4ccb899) == 2); // Frame stack
+    assert(Py_REFCNT(frame_a4bde9bf9ed2a5186fd64da6c873a06b) == 2); // Frame stack
 
     // Framed code:
     {
@@ -5913,7 +5913,7 @@ static PyObject *impl_MathcadPy$_application$$$function__15_is_readonly(struct N
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fd8422f3742161fc3b8f1555e4ccb899);
+    RESTORE_FRAME_EXCEPTION(frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 #endif
 
     // Put the previous frame back on top.
@@ -5923,7 +5923,7 @@ static PyObject *impl_MathcadPy$_application$$$function__15_is_readonly(struct N
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fd8422f3742161fc3b8f1555e4ccb899);
+    RESTORE_FRAME_EXCEPTION(frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 #endif
 
     // Put the previous frame back on top.
@@ -5934,35 +5934,35 @@ static PyObject *impl_MathcadPy$_application$$$function__15_is_readonly(struct N
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_fd8422f3742161fc3b8f1555e4ccb899);
+    RESTORE_FRAME_EXCEPTION(frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_fd8422f3742161fc3b8f1555e4ccb899, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_fd8422f3742161fc3b8f1555e4ccb899->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_fd8422f3742161fc3b8f1555e4ccb899, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_a4bde9bf9ed2a5186fd64da6c873a06b, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_a4bde9bf9ed2a5186fd64da6c873a06b->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_a4bde9bf9ed2a5186fd64da6c873a06b, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_fd8422f3742161fc3b8f1555e4ccb899,
+        frame_a4bde9bf9ed2a5186fd64da6c873a06b,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_fd8422f3742161fc3b8f1555e4ccb899 == cache_frame_fd8422f3742161fc3b8f1555e4ccb899) {
+    if (frame_a4bde9bf9ed2a5186fd64da6c873a06b == cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_fd8422f3742161fc3b8f1555e4ccb899);
-        cache_frame_fd8422f3742161fc3b8f1555e4ccb899 = NULL;
+        Py_DECREF(cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b);
+        cache_frame_a4bde9bf9ed2a5186fd64da6c873a06b = NULL;
     }
 
-    assertFrameObject(frame_fd8422f3742161fc3b8f1555e4ccb899);
+    assertFrameObject(frame_a4bde9bf9ed2a5186fd64da6c873a06b);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6030,7 +6030,7 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_setmodfied = python_pars[1];
-    struct Nuitka_FrameObject *frame_e13b477985c6bda70aa9451b106ac91c;
+    struct Nuitka_FrameObject *frame_6ebcdc969ad63ad59daf48bb9cc844ff;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -6038,7 +6038,7 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     bool tmp_result;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_e13b477985c6bda70aa9451b106ac91c = NULL;
+    static struct Nuitka_FrameObject *cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -6046,31 +6046,31 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_e13b477985c6bda70aa9451b106ac91c)) {
-        Py_XDECREF(cache_frame_e13b477985c6bda70aa9451b106ac91c);
+    if (isFrameUnusable(cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff)) {
+        Py_XDECREF(cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_e13b477985c6bda70aa9451b106ac91c == NULL) {
+        if (cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_e13b477985c6bda70aa9451b106ac91c = MAKE_FUNCTION_FRAME(codeobj_e13b477985c6bda70aa9451b106ac91c, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff = MAKE_FUNCTION_FRAME(codeobj_6ebcdc969ad63ad59daf48bb9cc844ff, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_e13b477985c6bda70aa9451b106ac91c->m_type_description == NULL);
-    frame_e13b477985c6bda70aa9451b106ac91c = cache_frame_e13b477985c6bda70aa9451b106ac91c;
+    assert(cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff->m_type_description == NULL);
+    frame_6ebcdc969ad63ad59daf48bb9cc844ff = cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_e13b477985c6bda70aa9451b106ac91c);
+    pushFrameStack(frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_e13b477985c6bda70aa9451b106ac91c) == 2); // Frame stack
+    assert(Py_REFCNT(frame_6ebcdc969ad63ad59daf48bb9cc844ff) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6163,7 +6163,7 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_e13b477985c6bda70aa9451b106ac91c);
+    RESTORE_FRAME_EXCEPTION(frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 #endif
 
     // Put the previous frame back on top.
@@ -6173,7 +6173,7 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_e13b477985c6bda70aa9451b106ac91c);
+    RESTORE_FRAME_EXCEPTION(frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 #endif
 
     // Put the previous frame back on top.
@@ -6184,18 +6184,18 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_e13b477985c6bda70aa9451b106ac91c);
+    RESTORE_FRAME_EXCEPTION(frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_e13b477985c6bda70aa9451b106ac91c, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_e13b477985c6bda70aa9451b106ac91c->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_e13b477985c6bda70aa9451b106ac91c, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_6ebcdc969ad63ad59daf48bb9cc844ff, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_6ebcdc969ad63ad59daf48bb9cc844ff->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_6ebcdc969ad63ad59daf48bb9cc844ff, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_e13b477985c6bda70aa9451b106ac91c,
+        frame_6ebcdc969ad63ad59daf48bb9cc844ff,
         type_description_1,
         par_self,
         par_setmodfied
@@ -6203,17 +6203,17 @@ static PyObject *impl_MathcadPy$_application$$$function__16_is_modified(struct N
 
 
     // Release cached frame if used for exception.
-    if (frame_e13b477985c6bda70aa9451b106ac91c == cache_frame_e13b477985c6bda70aa9451b106ac91c) {
+    if (frame_6ebcdc969ad63ad59daf48bb9cc844ff == cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_e13b477985c6bda70aa9451b106ac91c);
-        cache_frame_e13b477985c6bda70aa9451b106ac91c = NULL;
+        Py_DECREF(cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff);
+        cache_frame_6ebcdc969ad63ad59daf48bb9cc844ff = NULL;
     }
 
-    assertFrameObject(frame_e13b477985c6bda70aa9451b106ac91c);
+    assertFrameObject(frame_6ebcdc969ad63ad59daf48bb9cc844ff);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6286,14 +6286,14 @@ static PyObject *impl_MathcadPy$_application$$$function__17_pause_calculation(st
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_5522127fb64481944c985cb30f89b14d;
+    struct Nuitka_FrameObject *frame_850d29625866f07a43562814bbbd93ea;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_5522127fb64481944c985cb30f89b14d = NULL;
+    static struct Nuitka_FrameObject *cache_frame_850d29625866f07a43562814bbbd93ea = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -6302,31 +6302,31 @@ static PyObject *impl_MathcadPy$_application$$$function__17_pause_calculation(st
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_5522127fb64481944c985cb30f89b14d)) {
-        Py_XDECREF(cache_frame_5522127fb64481944c985cb30f89b14d);
+    if (isFrameUnusable(cache_frame_850d29625866f07a43562814bbbd93ea)) {
+        Py_XDECREF(cache_frame_850d29625866f07a43562814bbbd93ea);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_5522127fb64481944c985cb30f89b14d == NULL) {
+        if (cache_frame_850d29625866f07a43562814bbbd93ea == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_5522127fb64481944c985cb30f89b14d = MAKE_FUNCTION_FRAME(codeobj_5522127fb64481944c985cb30f89b14d, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_850d29625866f07a43562814bbbd93ea = MAKE_FUNCTION_FRAME(codeobj_850d29625866f07a43562814bbbd93ea, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_5522127fb64481944c985cb30f89b14d->m_type_description == NULL);
-    frame_5522127fb64481944c985cb30f89b14d = cache_frame_5522127fb64481944c985cb30f89b14d;
+    assert(cache_frame_850d29625866f07a43562814bbbd93ea->m_type_description == NULL);
+    frame_850d29625866f07a43562814bbbd93ea = cache_frame_850d29625866f07a43562814bbbd93ea;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_5522127fb64481944c985cb30f89b14d);
+    pushFrameStack(frame_850d29625866f07a43562814bbbd93ea);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_5522127fb64481944c985cb30f89b14d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_850d29625866f07a43562814bbbd93ea) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6346,7 +6346,7 @@ static PyObject *impl_MathcadPy$_application$$$function__17_pause_calculation(st
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_5522127fb64481944c985cb30f89b14d->m_frame.f_lineno = 159;
+        frame_850d29625866f07a43562814bbbd93ea->m_frame.f_lineno = 159;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[68]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -6363,7 +6363,7 @@ static PyObject *impl_MathcadPy$_application$$$function__17_pause_calculation(st
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5522127fb64481944c985cb30f89b14d);
+    RESTORE_FRAME_EXCEPTION(frame_850d29625866f07a43562814bbbd93ea);
 #endif
 
     // Put the previous frame back on top.
@@ -6374,35 +6374,35 @@ static PyObject *impl_MathcadPy$_application$$$function__17_pause_calculation(st
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5522127fb64481944c985cb30f89b14d);
+    RESTORE_FRAME_EXCEPTION(frame_850d29625866f07a43562814bbbd93ea);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5522127fb64481944c985cb30f89b14d, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5522127fb64481944c985cb30f89b14d->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5522127fb64481944c985cb30f89b14d, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_850d29625866f07a43562814bbbd93ea, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_850d29625866f07a43562814bbbd93ea->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_850d29625866f07a43562814bbbd93ea, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_5522127fb64481944c985cb30f89b14d,
+        frame_850d29625866f07a43562814bbbd93ea,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_5522127fb64481944c985cb30f89b14d == cache_frame_5522127fb64481944c985cb30f89b14d) {
+    if (frame_850d29625866f07a43562814bbbd93ea == cache_frame_850d29625866f07a43562814bbbd93ea) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_5522127fb64481944c985cb30f89b14d);
-        cache_frame_5522127fb64481944c985cb30f89b14d = NULL;
+        Py_DECREF(cache_frame_850d29625866f07a43562814bbbd93ea);
+        cache_frame_850d29625866f07a43562814bbbd93ea = NULL;
     }
 
-    assertFrameObject(frame_5522127fb64481944c985cb30f89b14d);
+    assertFrameObject(frame_850d29625866f07a43562814bbbd93ea);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6472,14 +6472,14 @@ static PyObject *impl_MathcadPy$_application$$$function__18_resume_calculation(s
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_00710c2cc9d4c59d19e9a5776950a196;
+    struct Nuitka_FrameObject *frame_13b7bd41a0946af811656f99688bc9d7;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_00710c2cc9d4c59d19e9a5776950a196 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_13b7bd41a0946af811656f99688bc9d7 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -6488,31 +6488,31 @@ static PyObject *impl_MathcadPy$_application$$$function__18_resume_calculation(s
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_00710c2cc9d4c59d19e9a5776950a196)) {
-        Py_XDECREF(cache_frame_00710c2cc9d4c59d19e9a5776950a196);
+    if (isFrameUnusable(cache_frame_13b7bd41a0946af811656f99688bc9d7)) {
+        Py_XDECREF(cache_frame_13b7bd41a0946af811656f99688bc9d7);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_00710c2cc9d4c59d19e9a5776950a196 == NULL) {
+        if (cache_frame_13b7bd41a0946af811656f99688bc9d7 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_00710c2cc9d4c59d19e9a5776950a196 = MAKE_FUNCTION_FRAME(codeobj_00710c2cc9d4c59d19e9a5776950a196, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_13b7bd41a0946af811656f99688bc9d7 = MAKE_FUNCTION_FRAME(codeobj_13b7bd41a0946af811656f99688bc9d7, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_00710c2cc9d4c59d19e9a5776950a196->m_type_description == NULL);
-    frame_00710c2cc9d4c59d19e9a5776950a196 = cache_frame_00710c2cc9d4c59d19e9a5776950a196;
+    assert(cache_frame_13b7bd41a0946af811656f99688bc9d7->m_type_description == NULL);
+    frame_13b7bd41a0946af811656f99688bc9d7 = cache_frame_13b7bd41a0946af811656f99688bc9d7;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_00710c2cc9d4c59d19e9a5776950a196);
+    pushFrameStack(frame_13b7bd41a0946af811656f99688bc9d7);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_00710c2cc9d4c59d19e9a5776950a196) == 2); // Frame stack
+    assert(Py_REFCNT(frame_13b7bd41a0946af811656f99688bc9d7) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6532,7 +6532,7 @@ static PyObject *impl_MathcadPy$_application$$$function__18_resume_calculation(s
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_00710c2cc9d4c59d19e9a5776950a196->m_frame.f_lineno = 163;
+        frame_13b7bd41a0946af811656f99688bc9d7->m_frame.f_lineno = 163;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[70]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -6549,7 +6549,7 @@ static PyObject *impl_MathcadPy$_application$$$function__18_resume_calculation(s
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_00710c2cc9d4c59d19e9a5776950a196);
+    RESTORE_FRAME_EXCEPTION(frame_13b7bd41a0946af811656f99688bc9d7);
 #endif
 
     // Put the previous frame back on top.
@@ -6560,35 +6560,35 @@ static PyObject *impl_MathcadPy$_application$$$function__18_resume_calculation(s
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_00710c2cc9d4c59d19e9a5776950a196);
+    RESTORE_FRAME_EXCEPTION(frame_13b7bd41a0946af811656f99688bc9d7);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_00710c2cc9d4c59d19e9a5776950a196, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_00710c2cc9d4c59d19e9a5776950a196->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_00710c2cc9d4c59d19e9a5776950a196, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_13b7bd41a0946af811656f99688bc9d7, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_13b7bd41a0946af811656f99688bc9d7->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_13b7bd41a0946af811656f99688bc9d7, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_00710c2cc9d4c59d19e9a5776950a196,
+        frame_13b7bd41a0946af811656f99688bc9d7,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_00710c2cc9d4c59d19e9a5776950a196 == cache_frame_00710c2cc9d4c59d19e9a5776950a196) {
+    if (frame_13b7bd41a0946af811656f99688bc9d7 == cache_frame_13b7bd41a0946af811656f99688bc9d7) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_00710c2cc9d4c59d19e9a5776950a196);
-        cache_frame_00710c2cc9d4c59d19e9a5776950a196 = NULL;
+        Py_DECREF(cache_frame_13b7bd41a0946af811656f99688bc9d7);
+        cache_frame_13b7bd41a0946af811656f99688bc9d7 = NULL;
     }
 
-    assertFrameObject(frame_00710c2cc9d4c59d19e9a5776950a196);
+    assertFrameObject(frame_13b7bd41a0946af811656f99688bc9d7);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -6662,7 +6662,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
     PyObject *var_i = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_829e7571b36e923f1504ee50a8a90444;
+    struct Nuitka_FrameObject *frame_ab57116c0b7e4dc0ce4aabca080cc7da;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -6674,7 +6674,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_829e7571b36e923f1504ee50a8a90444 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -6688,31 +6688,31 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
         var__inputs = tmp_assign_source_1;
     }
     // Tried code:
-    if (isFrameUnusable(cache_frame_829e7571b36e923f1504ee50a8a90444)) {
-        Py_XDECREF(cache_frame_829e7571b36e923f1504ee50a8a90444);
+    if (isFrameUnusable(cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da)) {
+        Py_XDECREF(cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_829e7571b36e923f1504ee50a8a90444 == NULL) {
+        if (cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_829e7571b36e923f1504ee50a8a90444 = MAKE_FUNCTION_FRAME(codeobj_829e7571b36e923f1504ee50a8a90444, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da = MAKE_FUNCTION_FRAME(codeobj_ab57116c0b7e4dc0ce4aabca080cc7da, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_829e7571b36e923f1504ee50a8a90444->m_type_description == NULL);
-    frame_829e7571b36e923f1504ee50a8a90444 = cache_frame_829e7571b36e923f1504ee50a8a90444;
+    assert(cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da->m_type_description == NULL);
+    frame_ab57116c0b7e4dc0ce4aabca080cc7da = cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_829e7571b36e923f1504ee50a8a90444);
+    pushFrameStack(frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_829e7571b36e923f1504ee50a8a90444) == 2); // Frame stack
+    assert(Py_REFCNT(frame_ab57116c0b7e4dc0ce4aabca080cc7da) == 2); // Frame stack
 
     // Framed code:
     {
@@ -6897,7 +6897,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_2 = var_i;
-        frame_829e7571b36e923f1504ee50a8a90444->m_frame.f_lineno = 169;
+        frame_ab57116c0b7e4dc0ce4aabca080cc7da->m_frame.f_lineno = 169;
         tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[74], tmp_args_element_name_2);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_args_element_name_1 == NULL) {
@@ -6910,7 +6910,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        frame_829e7571b36e923f1504ee50a8a90444->m_frame.f_lineno = 169;
+        frame_ab57116c0b7e4dc0ce4aabca080cc7da->m_frame.f_lineno = 169;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_1);
@@ -6984,7 +6984,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_829e7571b36e923f1504ee50a8a90444);
+    RESTORE_FRAME_EXCEPTION(frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 #endif
 
     // Put the previous frame back on top.
@@ -6994,7 +6994,7 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_829e7571b36e923f1504ee50a8a90444);
+    RESTORE_FRAME_EXCEPTION(frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 #endif
 
     // Put the previous frame back on top.
@@ -7005,18 +7005,18 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_829e7571b36e923f1504ee50a8a90444);
+    RESTORE_FRAME_EXCEPTION(frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_829e7571b36e923f1504ee50a8a90444, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_829e7571b36e923f1504ee50a8a90444->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_829e7571b36e923f1504ee50a8a90444, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_ab57116c0b7e4dc0ce4aabca080cc7da, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_ab57116c0b7e4dc0ce4aabca080cc7da->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_ab57116c0b7e4dc0ce4aabca080cc7da, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_829e7571b36e923f1504ee50a8a90444,
+        frame_ab57116c0b7e4dc0ce4aabca080cc7da,
         type_description_1,
         par_self,
         var__inputs,
@@ -7025,17 +7025,17 @@ static PyObject *impl_MathcadPy$_application$$$function__19_inputs(struct Nuitka
 
 
     // Release cached frame if used for exception.
-    if (frame_829e7571b36e923f1504ee50a8a90444 == cache_frame_829e7571b36e923f1504ee50a8a90444) {
+    if (frame_ab57116c0b7e4dc0ce4aabca080cc7da == cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_829e7571b36e923f1504ee50a8a90444);
-        cache_frame_829e7571b36e923f1504ee50a8a90444 = NULL;
+        Py_DECREF(cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da);
+        cache_frame_ab57116c0b7e4dc0ce4aabca080cc7da = NULL;
     }
 
-    assertFrameObject(frame_829e7571b36e923f1504ee50a8a90444);
+    assertFrameObject(frame_ab57116c0b7e4dc0ce4aabca080cc7da);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7112,7 +7112,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
     PyObject *par_self = python_pars[0];
     PyObject *par_input_alias = python_pars[1];
     PyObject *var_getinput = NULL;
-    struct Nuitka_FrameObject *frame_953522ba484e7c8623fccb5a907b059a;
+    struct Nuitka_FrameObject *frame_1e63f0b7316b971cf0fb582b7a348404;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -7120,7 +7120,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     int tmp_res;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_953522ba484e7c8623fccb5a907b059a = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1e63f0b7316b971cf0fb582b7a348404 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7128,31 +7128,31 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_953522ba484e7c8623fccb5a907b059a)) {
-        Py_XDECREF(cache_frame_953522ba484e7c8623fccb5a907b059a);
+    if (isFrameUnusable(cache_frame_1e63f0b7316b971cf0fb582b7a348404)) {
+        Py_XDECREF(cache_frame_1e63f0b7316b971cf0fb582b7a348404);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_953522ba484e7c8623fccb5a907b059a == NULL) {
+        if (cache_frame_1e63f0b7316b971cf0fb582b7a348404 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_953522ba484e7c8623fccb5a907b059a = MAKE_FUNCTION_FRAME(codeobj_953522ba484e7c8623fccb5a907b059a, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_1e63f0b7316b971cf0fb582b7a348404 = MAKE_FUNCTION_FRAME(codeobj_1e63f0b7316b971cf0fb582b7a348404, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_953522ba484e7c8623fccb5a907b059a->m_type_description == NULL);
-    frame_953522ba484e7c8623fccb5a907b059a = cache_frame_953522ba484e7c8623fccb5a907b059a;
+    assert(cache_frame_1e63f0b7316b971cf0fb582b7a348404->m_type_description == NULL);
+    frame_1e63f0b7316b971cf0fb582b7a348404 = cache_frame_1e63f0b7316b971cf0fb582b7a348404;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_953522ba484e7c8623fccb5a907b059a);
+    pushFrameStack(frame_1e63f0b7316b971cf0fb582b7a348404);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_953522ba484e7c8623fccb5a907b059a) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1e63f0b7316b971cf0fb582b7a348404) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7164,7 +7164,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
         tmp_compexpr_left_1 = par_input_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_953522ba484e7c8623fccb5a907b059a->m_frame.f_lineno = 174;
+        frame_1e63f0b7316b971cf0fb582b7a348404->m_frame.f_lineno = 174;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[76]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7227,7 +7227,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
         }
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_953522ba484e7c8623fccb5a907b059a->m_frame.f_lineno = 175;
+        frame_1e63f0b7316b971cf0fb582b7a348404->m_frame.f_lineno = 175;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[77], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assign_source_1 == NULL) {
@@ -7363,7 +7363,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        frame_953522ba484e7c8623fccb5a907b059a->m_frame.f_lineno = 178;
+        frame_1e63f0b7316b971cf0fb582b7a348404->m_frame.f_lineno = 178;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -7376,7 +7376,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_953522ba484e7c8623fccb5a907b059a);
+    RESTORE_FRAME_EXCEPTION(frame_1e63f0b7316b971cf0fb582b7a348404);
 #endif
 
     // Put the previous frame back on top.
@@ -7386,7 +7386,7 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_953522ba484e7c8623fccb5a907b059a);
+    RESTORE_FRAME_EXCEPTION(frame_1e63f0b7316b971cf0fb582b7a348404);
 #endif
 
     // Put the previous frame back on top.
@@ -7397,18 +7397,18 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_953522ba484e7c8623fccb5a907b059a);
+    RESTORE_FRAME_EXCEPTION(frame_1e63f0b7316b971cf0fb582b7a348404);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_953522ba484e7c8623fccb5a907b059a, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_953522ba484e7c8623fccb5a907b059a->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_953522ba484e7c8623fccb5a907b059a, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_1e63f0b7316b971cf0fb582b7a348404, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_1e63f0b7316b971cf0fb582b7a348404->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_1e63f0b7316b971cf0fb582b7a348404, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_953522ba484e7c8623fccb5a907b059a,
+        frame_1e63f0b7316b971cf0fb582b7a348404,
         type_description_1,
         par_self,
         par_input_alias,
@@ -7417,17 +7417,17 @@ static PyObject *impl_MathcadPy$_application$$$function__20_get_input(struct Nui
 
 
     // Release cached frame if used for exception.
-    if (frame_953522ba484e7c8623fccb5a907b059a == cache_frame_953522ba484e7c8623fccb5a907b059a) {
+    if (frame_1e63f0b7316b971cf0fb582b7a348404 == cache_frame_1e63f0b7316b971cf0fb582b7a348404) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_953522ba484e7c8623fccb5a907b059a);
-        cache_frame_953522ba484e7c8623fccb5a907b059a = NULL;
+        Py_DECREF(cache_frame_1e63f0b7316b971cf0fb582b7a348404);
+        cache_frame_1e63f0b7316b971cf0fb582b7a348404 = NULL;
     }
 
-    assertFrameObject(frame_953522ba484e7c8623fccb5a907b059a);
+    assertFrameObject(frame_1e63f0b7316b971cf0fb582b7a348404);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7503,14 +7503,14 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_input_alias = python_pars[1];
-    struct Nuitka_FrameObject *frame_f249231654c3cdcc3317bfe98435ffd3;
+    struct Nuitka_FrameObject *frame_65adfb5e577551e57ba69e65cc8d6158;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_f249231654c3cdcc3317bfe98435ffd3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_65adfb5e577551e57ba69e65cc8d6158 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7518,31 +7518,31 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_f249231654c3cdcc3317bfe98435ffd3)) {
-        Py_XDECREF(cache_frame_f249231654c3cdcc3317bfe98435ffd3);
+    if (isFrameUnusable(cache_frame_65adfb5e577551e57ba69e65cc8d6158)) {
+        Py_XDECREF(cache_frame_65adfb5e577551e57ba69e65cc8d6158);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_f249231654c3cdcc3317bfe98435ffd3 == NULL) {
+        if (cache_frame_65adfb5e577551e57ba69e65cc8d6158 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_f249231654c3cdcc3317bfe98435ffd3 = MAKE_FUNCTION_FRAME(codeobj_f249231654c3cdcc3317bfe98435ffd3, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_65adfb5e577551e57ba69e65cc8d6158 = MAKE_FUNCTION_FRAME(codeobj_65adfb5e577551e57ba69e65cc8d6158, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_f249231654c3cdcc3317bfe98435ffd3->m_type_description == NULL);
-    frame_f249231654c3cdcc3317bfe98435ffd3 = cache_frame_f249231654c3cdcc3317bfe98435ffd3;
+    assert(cache_frame_65adfb5e577551e57ba69e65cc8d6158->m_type_description == NULL);
+    frame_65adfb5e577551e57ba69e65cc8d6158 = cache_frame_65adfb5e577551e57ba69e65cc8d6158;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_f249231654c3cdcc3317bfe98435ffd3);
+    pushFrameStack(frame_65adfb5e577551e57ba69e65cc8d6158);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_f249231654c3cdcc3317bfe98435ffd3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_65adfb5e577551e57ba69e65cc8d6158) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7565,7 +7565,7 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
         }
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_f249231654c3cdcc3317bfe98435ffd3->m_frame.f_lineno = 185;
+        frame_65adfb5e577551e57ba69e65cc8d6158->m_frame.f_lineno = 185;
         tmp_expression_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[77], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_expression_name_1 == NULL) {
@@ -7594,7 +7594,7 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_f249231654c3cdcc3317bfe98435ffd3);
+    RESTORE_FRAME_EXCEPTION(frame_65adfb5e577551e57ba69e65cc8d6158);
 #endif
 
     // Put the previous frame back on top.
@@ -7604,7 +7604,7 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_f249231654c3cdcc3317bfe98435ffd3);
+    RESTORE_FRAME_EXCEPTION(frame_65adfb5e577551e57ba69e65cc8d6158);
 #endif
 
     // Put the previous frame back on top.
@@ -7615,18 +7615,18 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_f249231654c3cdcc3317bfe98435ffd3);
+    RESTORE_FRAME_EXCEPTION(frame_65adfb5e577551e57ba69e65cc8d6158);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_f249231654c3cdcc3317bfe98435ffd3, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_f249231654c3cdcc3317bfe98435ffd3->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_f249231654c3cdcc3317bfe98435ffd3, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_65adfb5e577551e57ba69e65cc8d6158, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_65adfb5e577551e57ba69e65cc8d6158->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_65adfb5e577551e57ba69e65cc8d6158, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_f249231654c3cdcc3317bfe98435ffd3,
+        frame_65adfb5e577551e57ba69e65cc8d6158,
         type_description_1,
         par_self,
         par_input_alias
@@ -7634,17 +7634,17 @@ static PyObject *impl_MathcadPy$_application$$$function__21__get_real_input_unit
 
 
     // Release cached frame if used for exception.
-    if (frame_f249231654c3cdcc3317bfe98435ffd3 == cache_frame_f249231654c3cdcc3317bfe98435ffd3) {
+    if (frame_65adfb5e577551e57ba69e65cc8d6158 == cache_frame_65adfb5e577551e57ba69e65cc8d6158) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_f249231654c3cdcc3317bfe98435ffd3);
-        cache_frame_f249231654c3cdcc3317bfe98435ffd3 = NULL;
+        Py_DECREF(cache_frame_65adfb5e577551e57ba69e65cc8d6158);
+        cache_frame_65adfb5e577551e57ba69e65cc8d6158 = NULL;
     }
 
-    assertFrameObject(frame_f249231654c3cdcc3317bfe98435ffd3);
+    assertFrameObject(frame_65adfb5e577551e57ba69e65cc8d6158);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -7717,7 +7717,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
     PyObject *par_self = python_pars[0];
     PyObject *par_input_alias = python_pars[1];
     PyObject *var_getinput = NULL;
-    struct Nuitka_FrameObject *frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d;
+    struct Nuitka_FrameObject *frame_a4f1d2c02867e52aed1101513523a3d6;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -7725,7 +7725,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     int tmp_res;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a4f1d2c02867e52aed1101513523a3d6 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -7733,31 +7733,31 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d)) {
-        Py_XDECREF(cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    if (isFrameUnusable(cache_frame_a4f1d2c02867e52aed1101513523a3d6)) {
+        Py_XDECREF(cache_frame_a4f1d2c02867e52aed1101513523a3d6);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d == NULL) {
+        if (cache_frame_a4f1d2c02867e52aed1101513523a3d6 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d = MAKE_FUNCTION_FRAME(codeobj_56dfdc9a85bbe3c32ec3ab7a53cdb72d, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_a4f1d2c02867e52aed1101513523a3d6 = MAKE_FUNCTION_FRAME(codeobj_a4f1d2c02867e52aed1101513523a3d6, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_type_description == NULL);
-    frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d = cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d;
+    assert(cache_frame_a4f1d2c02867e52aed1101513523a3d6->m_type_description == NULL);
+    frame_a4f1d2c02867e52aed1101513523a3d6 = cache_frame_a4f1d2c02867e52aed1101513523a3d6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    pushFrameStack(frame_a4f1d2c02867e52aed1101513523a3d6);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d) == 2); // Frame stack
+    assert(Py_REFCNT(frame_a4f1d2c02867e52aed1101513523a3d6) == 2); // Frame stack
 
     // Framed code:
     {
@@ -7769,7 +7769,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
         tmp_compexpr_left_1 = par_input_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_frame.f_lineno = 189;
+        frame_a4f1d2c02867e52aed1101513523a3d6->m_frame.f_lineno = 189;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[76]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -7832,7 +7832,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
         }
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_frame.f_lineno = 190;
+        frame_a4f1d2c02867e52aed1101513523a3d6->m_frame.f_lineno = 190;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[85], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assign_source_1 == NULL) {
@@ -7882,7 +7882,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_frame.f_lineno = 191;
+        frame_a4f1d2c02867e52aed1101513523a3d6->m_frame.f_lineno = 191;
         tmp_tuple_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_tuple_element_1 == NULL) {
@@ -7999,7 +7999,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
             type_description_1 = "ooo";
             goto frame_exception_exit_1;
         }
-        frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_frame.f_lineno = 193;
+        frame_a4f1d2c02867e52aed1101513523a3d6->m_frame.f_lineno = 193;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
@@ -8012,7 +8012,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
     branch_end_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    RESTORE_FRAME_EXCEPTION(frame_a4f1d2c02867e52aed1101513523a3d6);
 #endif
 
     // Put the previous frame back on top.
@@ -8022,7 +8022,7 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    RESTORE_FRAME_EXCEPTION(frame_a4f1d2c02867e52aed1101513523a3d6);
 #endif
 
     // Put the previous frame back on top.
@@ -8033,18 +8033,18 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    RESTORE_FRAME_EXCEPTION(frame_a4f1d2c02867e52aed1101513523a3d6);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_a4f1d2c02867e52aed1101513523a3d6, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_a4f1d2c02867e52aed1101513523a3d6->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_a4f1d2c02867e52aed1101513523a3d6, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d,
+        frame_a4f1d2c02867e52aed1101513523a3d6,
         type_description_1,
         par_self,
         par_input_alias,
@@ -8053,17 +8053,17 @@ static PyObject *impl_MathcadPy$_application$$$function__22_get_matrix_input(str
 
 
     // Release cached frame if used for exception.
-    if (frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d == cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d) {
+    if (frame_a4f1d2c02867e52aed1101513523a3d6 == cache_frame_a4f1d2c02867e52aed1101513523a3d6) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
-        cache_frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d = NULL;
+        Py_DECREF(cache_frame_a4f1d2c02867e52aed1101513523a3d6);
+        cache_frame_a4f1d2c02867e52aed1101513523a3d6 = NULL;
     }
 
-    assertFrameObject(frame_56dfdc9a85bbe3c32ec3ab7a53cdb72d);
+    assertFrameObject(frame_a4f1d2c02867e52aed1101513523a3d6);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8139,14 +8139,14 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
     PyObject *par_input_alias = python_pars[1];
-    struct Nuitka_FrameObject *frame_5dc3ac0d5bc1892d9348ef25c3ab70d3;
+    struct Nuitka_FrameObject *frame_7b85c3bcb95f2b76bf41d451dcac1a7d;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -8154,31 +8154,31 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3)) {
-        Py_XDECREF(cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    if (isFrameUnusable(cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d)) {
+        Py_XDECREF(cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 == NULL) {
+        if (cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 = MAKE_FUNCTION_FRAME(codeobj_5dc3ac0d5bc1892d9348ef25c3ab70d3, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
+        cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d = MAKE_FUNCTION_FRAME(codeobj_7b85c3bcb95f2b76bf41d451dcac1a7d, module_MathcadPy$_application, sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3->m_type_description == NULL);
-    frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 = cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3;
+    assert(cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d->m_type_description == NULL);
+    frame_7b85c3bcb95f2b76bf41d451dcac1a7d = cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    pushFrameStack(frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3) == 2); // Frame stack
+    assert(Py_REFCNT(frame_7b85c3bcb95f2b76bf41d451dcac1a7d) == 2); // Frame stack
 
     // Framed code:
     {
@@ -8201,7 +8201,7 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
         }
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_5dc3ac0d5bc1892d9348ef25c3ab70d3->m_frame.f_lineno = 200;
+        frame_7b85c3bcb95f2b76bf41d451dcac1a7d->m_frame.f_lineno = 200;
         tmp_expression_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[85], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_expression_name_1 == NULL) {
@@ -8230,7 +8230,7 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    RESTORE_FRAME_EXCEPTION(frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 #endif
 
     // Put the previous frame back on top.
@@ -8240,7 +8240,7 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    RESTORE_FRAME_EXCEPTION(frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 #endif
 
     // Put the previous frame back on top.
@@ -8251,18 +8251,18 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    RESTORE_FRAME_EXCEPTION(frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_5dc3ac0d5bc1892d9348ef25c3ab70d3->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_5dc3ac0d5bc1892d9348ef25c3ab70d3, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_7b85c3bcb95f2b76bf41d451dcac1a7d, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_7b85c3bcb95f2b76bf41d451dcac1a7d->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_7b85c3bcb95f2b76bf41d451dcac1a7d, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_5dc3ac0d5bc1892d9348ef25c3ab70d3,
+        frame_7b85c3bcb95f2b76bf41d451dcac1a7d,
         type_description_1,
         par_self,
         par_input_alias
@@ -8270,17 +8270,17 @@ static PyObject *impl_MathcadPy$_application$$$function__23__get_matrix_input_un
 
 
     // Release cached frame if used for exception.
-    if (frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 == cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3) {
+    if (frame_7b85c3bcb95f2b76bf41d451dcac1a7d == cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
-        cache_frame_5dc3ac0d5bc1892d9348ef25c3ab70d3 = NULL;
+        Py_DECREF(cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
+        cache_frame_7b85c3bcb95f2b76bf41d451dcac1a7d = NULL;
     }
 
-    assertFrameObject(frame_5dc3ac0d5bc1892d9348ef25c3ab70d3);
+    assertFrameObject(frame_7b85c3bcb95f2b76bf41d451dcac1a7d);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8355,7 +8355,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
     PyObject *var_i = NULL;
     PyObject *tmp_for_loop_1__for_iterator = NULL;
     PyObject *tmp_for_loop_1__iter_value = NULL;
-    struct Nuitka_FrameObject *frame_47ae7f7626b16bbee221728f1c6b8c25;
+    struct Nuitka_FrameObject *frame_1c85b6ee3dc1102631c67ab0eed10f96;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -8367,7 +8367,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_47ae7f7626b16bbee221728f1c6b8c25 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_1c85b6ee3dc1102631c67ab0eed10f96 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -8381,31 +8381,31 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
         var__outputs = tmp_assign_source_1;
     }
     // Tried code:
-    if (isFrameUnusable(cache_frame_47ae7f7626b16bbee221728f1c6b8c25)) {
-        Py_XDECREF(cache_frame_47ae7f7626b16bbee221728f1c6b8c25);
+    if (isFrameUnusable(cache_frame_1c85b6ee3dc1102631c67ab0eed10f96)) {
+        Py_XDECREF(cache_frame_1c85b6ee3dc1102631c67ab0eed10f96);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_47ae7f7626b16bbee221728f1c6b8c25 == NULL) {
+        if (cache_frame_1c85b6ee3dc1102631c67ab0eed10f96 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_47ae7f7626b16bbee221728f1c6b8c25 = MAKE_FUNCTION_FRAME(codeobj_47ae7f7626b16bbee221728f1c6b8c25, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_1c85b6ee3dc1102631c67ab0eed10f96 = MAKE_FUNCTION_FRAME(codeobj_1c85b6ee3dc1102631c67ab0eed10f96, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_47ae7f7626b16bbee221728f1c6b8c25->m_type_description == NULL);
-    frame_47ae7f7626b16bbee221728f1c6b8c25 = cache_frame_47ae7f7626b16bbee221728f1c6b8c25;
+    assert(cache_frame_1c85b6ee3dc1102631c67ab0eed10f96->m_type_description == NULL);
+    frame_1c85b6ee3dc1102631c67ab0eed10f96 = cache_frame_1c85b6ee3dc1102631c67ab0eed10f96;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_47ae7f7626b16bbee221728f1c6b8c25);
+    pushFrameStack(frame_1c85b6ee3dc1102631c67ab0eed10f96);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_47ae7f7626b16bbee221728f1c6b8c25) == 2); // Frame stack
+    assert(Py_REFCNT(frame_1c85b6ee3dc1102631c67ab0eed10f96) == 2); // Frame stack
 
     // Framed code:
     {
@@ -8590,7 +8590,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
         }
         CHECK_OBJECT(var_i);
         tmp_args_element_name_2 = var_i;
-        frame_47ae7f7626b16bbee221728f1c6b8c25->m_frame.f_lineno = 206;
+        frame_1c85b6ee3dc1102631c67ab0eed10f96->m_frame.f_lineno = 206;
         tmp_args_element_name_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[74], tmp_args_element_name_2);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_args_element_name_1 == NULL) {
@@ -8603,7 +8603,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
             type_description_1 = "ooo";
             goto try_except_handler_2;
         }
-        frame_47ae7f7626b16bbee221728f1c6b8c25->m_frame.f_lineno = 206;
+        frame_1c85b6ee3dc1102631c67ab0eed10f96->m_frame.f_lineno = 206;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_called_name_1);
         Py_DECREF(tmp_args_element_name_1);
@@ -8677,7 +8677,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_47ae7f7626b16bbee221728f1c6b8c25);
+    RESTORE_FRAME_EXCEPTION(frame_1c85b6ee3dc1102631c67ab0eed10f96);
 #endif
 
     // Put the previous frame back on top.
@@ -8687,7 +8687,7 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_47ae7f7626b16bbee221728f1c6b8c25);
+    RESTORE_FRAME_EXCEPTION(frame_1c85b6ee3dc1102631c67ab0eed10f96);
 #endif
 
     // Put the previous frame back on top.
@@ -8698,18 +8698,18 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_47ae7f7626b16bbee221728f1c6b8c25);
+    RESTORE_FRAME_EXCEPTION(frame_1c85b6ee3dc1102631c67ab0eed10f96);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_47ae7f7626b16bbee221728f1c6b8c25, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_47ae7f7626b16bbee221728f1c6b8c25->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_47ae7f7626b16bbee221728f1c6b8c25, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_1c85b6ee3dc1102631c67ab0eed10f96, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_1c85b6ee3dc1102631c67ab0eed10f96->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_1c85b6ee3dc1102631c67ab0eed10f96, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_47ae7f7626b16bbee221728f1c6b8c25,
+        frame_1c85b6ee3dc1102631c67ab0eed10f96,
         type_description_1,
         par_self,
         var__outputs,
@@ -8718,17 +8718,17 @@ static PyObject *impl_MathcadPy$_application$$$function__24_outputs(struct Nuitk
 
 
     // Release cached frame if used for exception.
-    if (frame_47ae7f7626b16bbee221728f1c6b8c25 == cache_frame_47ae7f7626b16bbee221728f1c6b8c25) {
+    if (frame_1c85b6ee3dc1102631c67ab0eed10f96 == cache_frame_1c85b6ee3dc1102631c67ab0eed10f96) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_47ae7f7626b16bbee221728f1c6b8c25);
-        cache_frame_47ae7f7626b16bbee221728f1c6b8c25 = NULL;
+        Py_DECREF(cache_frame_1c85b6ee3dc1102631c67ab0eed10f96);
+        cache_frame_1c85b6ee3dc1102631c67ab0eed10f96 = NULL;
     }
 
-    assertFrameObject(frame_47ae7f7626b16bbee221728f1c6b8c25);
+    assertFrameObject(frame_1c85b6ee3dc1102631c67ab0eed10f96);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -8806,7 +8806,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
     PyObject *par_output_alias = python_pars[1];
     PyObject *par_units = python_pars[2];
     PyObject *var_result = NULL;
-    struct Nuitka_FrameObject *frame_89c26f2ae9454f93e152d0ab49086548;
+    struct Nuitka_FrameObject *frame_565f0de28f9c4c0654ad1f9986e15b63;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -8826,7 +8826,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_89c26f2ae9454f93e152d0ab49086548 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_565f0de28f9c4c0654ad1f9986e15b63 = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -8834,31 +8834,31 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_89c26f2ae9454f93e152d0ab49086548)) {
-        Py_XDECREF(cache_frame_89c26f2ae9454f93e152d0ab49086548);
+    if (isFrameUnusable(cache_frame_565f0de28f9c4c0654ad1f9986e15b63)) {
+        Py_XDECREF(cache_frame_565f0de28f9c4c0654ad1f9986e15b63);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_89c26f2ae9454f93e152d0ab49086548 == NULL) {
+        if (cache_frame_565f0de28f9c4c0654ad1f9986e15b63 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_89c26f2ae9454f93e152d0ab49086548 = MAKE_FUNCTION_FRAME(codeobj_89c26f2ae9454f93e152d0ab49086548, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_565f0de28f9c4c0654ad1f9986e15b63 = MAKE_FUNCTION_FRAME(codeobj_565f0de28f9c4c0654ad1f9986e15b63, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_89c26f2ae9454f93e152d0ab49086548->m_type_description == NULL);
-    frame_89c26f2ae9454f93e152d0ab49086548 = cache_frame_89c26f2ae9454f93e152d0ab49086548;
+    assert(cache_frame_565f0de28f9c4c0654ad1f9986e15b63->m_type_description == NULL);
+    frame_565f0de28f9c4c0654ad1f9986e15b63 = cache_frame_565f0de28f9c4c0654ad1f9986e15b63;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_89c26f2ae9454f93e152d0ab49086548);
+    pushFrameStack(frame_565f0de28f9c4c0654ad1f9986e15b63);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_89c26f2ae9454f93e152d0ab49086548) == 2); // Frame stack
+    assert(Py_REFCNT(frame_565f0de28f9c4c0654ad1f9986e15b63) == 2); // Frame stack
 
     // Framed code:
     {
@@ -8970,7 +8970,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
         tmp_compexpr_left_1 = par_output_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_89c26f2ae9454f93e152d0ab49086548->m_frame.f_lineno = 213;
+        frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame.f_lineno = 213;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[90]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9074,7 +9074,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
         }
         CHECK_OBJECT(par_output_alias);
         tmp_args_element_name_1 = par_output_alias;
-        frame_89c26f2ae9454f93e152d0ab49086548->m_frame.f_lineno = 216;
+        frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame.f_lineno = 216;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[92], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assign_source_1 == NULL) {
@@ -9207,7 +9207,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
         tmp_args_element_name_2 = par_output_alias;
         CHECK_OBJECT(par_units);
         tmp_args_element_name_3 = par_units;
-        frame_89c26f2ae9454f93e152d0ab49086548->m_frame.f_lineno = 219;
+        frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame.f_lineno = 219;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
             tmp_assign_source_2 = CALL_METHOD_WITH_ARGS2(
@@ -9318,9 +9318,9 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_89c26f2ae9454f93e152d0ab49086548, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_565f0de28f9c4c0654ad1f9986e15b63, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_89c26f2ae9454f93e152d0ab49086548, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_565f0de28f9c4c0654ad1f9986e15b63, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -9332,7 +9332,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
         PyObject *tmp_call_result_1;
         tmp_called_name_1 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_1 != NULL);
-        frame_89c26f2ae9454f93e152d0ab49086548->m_frame.f_lineno = 223;
+        frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame.f_lineno = 223;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, mod_consts[96]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9417,7 +9417,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_89c26f2ae9454f93e152d0ab49086548->m_frame.f_lineno = 225;
+        frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame.f_lineno = 225;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_3 == NULL));
@@ -9430,7 +9430,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
     branch_end_3:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_89c26f2ae9454f93e152d0ab49086548);
+    RESTORE_FRAME_EXCEPTION(frame_565f0de28f9c4c0654ad1f9986e15b63);
 #endif
 
     // Put the previous frame back on top.
@@ -9440,7 +9440,7 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_89c26f2ae9454f93e152d0ab49086548);
+    RESTORE_FRAME_EXCEPTION(frame_565f0de28f9c4c0654ad1f9986e15b63);
 #endif
 
     // Put the previous frame back on top.
@@ -9451,18 +9451,18 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_89c26f2ae9454f93e152d0ab49086548);
+    RESTORE_FRAME_EXCEPTION(frame_565f0de28f9c4c0654ad1f9986e15b63);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_89c26f2ae9454f93e152d0ab49086548, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_89c26f2ae9454f93e152d0ab49086548->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_89c26f2ae9454f93e152d0ab49086548, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_565f0de28f9c4c0654ad1f9986e15b63, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_565f0de28f9c4c0654ad1f9986e15b63->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_565f0de28f9c4c0654ad1f9986e15b63, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_89c26f2ae9454f93e152d0ab49086548,
+        frame_565f0de28f9c4c0654ad1f9986e15b63,
         type_description_1,
         par_self,
         par_output_alias,
@@ -9472,17 +9472,17 @@ static PyObject *impl_MathcadPy$_application$$$function__25_get_real_output(stru
 
 
     // Release cached frame if used for exception.
-    if (frame_89c26f2ae9454f93e152d0ab49086548 == cache_frame_89c26f2ae9454f93e152d0ab49086548) {
+    if (frame_565f0de28f9c4c0654ad1f9986e15b63 == cache_frame_565f0de28f9c4c0654ad1f9986e15b63) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_89c26f2ae9454f93e152d0ab49086548);
-        cache_frame_89c26f2ae9454f93e152d0ab49086548 = NULL;
+        Py_DECREF(cache_frame_565f0de28f9c4c0654ad1f9986e15b63);
+        cache_frame_565f0de28f9c4c0654ad1f9986e15b63 = NULL;
     }
 
-    assertFrameObject(frame_89c26f2ae9454f93e152d0ab49086548);
+    assertFrameObject(frame_565f0de28f9c4c0654ad1f9986e15b63);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -9567,7 +9567,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
     PyObject *par_output_alias = python_pars[1];
     PyObject *par_units = python_pars[2];
     PyObject *var_result = NULL;
-    struct Nuitka_FrameObject *frame_ca01af5d5d5e0ef7bc098a64258078bd;
+    struct Nuitka_FrameObject *frame_d974edd9bb9da198468bf68ba72426bb;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -9587,7 +9587,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
-    static struct Nuitka_FrameObject *cache_frame_ca01af5d5d5e0ef7bc098a64258078bd = NULL;
+    static struct Nuitka_FrameObject *cache_frame_d974edd9bb9da198468bf68ba72426bb = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -9595,31 +9595,31 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_ca01af5d5d5e0ef7bc098a64258078bd)) {
-        Py_XDECREF(cache_frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    if (isFrameUnusable(cache_frame_d974edd9bb9da198468bf68ba72426bb)) {
+        Py_XDECREF(cache_frame_d974edd9bb9da198468bf68ba72426bb);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_ca01af5d5d5e0ef7bc098a64258078bd == NULL) {
+        if (cache_frame_d974edd9bb9da198468bf68ba72426bb == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_ca01af5d5d5e0ef7bc098a64258078bd = MAKE_FUNCTION_FRAME(codeobj_ca01af5d5d5e0ef7bc098a64258078bd, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_d974edd9bb9da198468bf68ba72426bb = MAKE_FUNCTION_FRAME(codeobj_d974edd9bb9da198468bf68ba72426bb, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_ca01af5d5d5e0ef7bc098a64258078bd->m_type_description == NULL);
-    frame_ca01af5d5d5e0ef7bc098a64258078bd = cache_frame_ca01af5d5d5e0ef7bc098a64258078bd;
+    assert(cache_frame_d974edd9bb9da198468bf68ba72426bb->m_type_description == NULL);
+    frame_d974edd9bb9da198468bf68ba72426bb = cache_frame_d974edd9bb9da198468bf68ba72426bb;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    pushFrameStack(frame_d974edd9bb9da198468bf68ba72426bb);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_ca01af5d5d5e0ef7bc098a64258078bd) == 2); // Frame stack
+    assert(Py_REFCNT(frame_d974edd9bb9da198468bf68ba72426bb) == 2); // Frame stack
 
     // Framed code:
     {
@@ -9731,7 +9731,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
         tmp_compexpr_left_1 = par_output_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 231;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 231;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[90]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -9835,7 +9835,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
         }
         CHECK_OBJECT(par_output_alias);
         tmp_args_element_name_1 = par_output_alias;
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 234;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 234;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[99], tmp_args_element_name_1);
         Py_DECREF(tmp_called_instance_2);
         if (tmp_assign_source_1 == NULL) {
@@ -9887,7 +9887,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
         tmp_args_element_name_2 = par_output_alias;
         CHECK_OBJECT(par_units);
         tmp_args_element_name_3 = par_units;
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 236;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 236;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3};
             tmp_assign_source_2 = CALL_METHOD_WITH_ARGS2(
@@ -9946,7 +9946,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
             type_description_1 = "oooo";
             goto try_except_handler_2;
         }
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 237;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 237;
         tmp_tuple_element_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_4);
         Py_DECREF(tmp_args_element_name_4);
         if (tmp_tuple_element_1 == NULL) {
@@ -10041,9 +10041,9 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_ca01af5d5d5e0ef7bc098a64258078bd, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_d974edd9bb9da198468bf68ba72426bb, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_ca01af5d5d5e0ef7bc098a64258078bd, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_d974edd9bb9da198468bf68ba72426bb, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -10055,7 +10055,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
         PyObject *tmp_call_result_1;
         tmp_called_name_2 = LOOKUP_BUILTIN(mod_consts[0]);
         assert(tmp_called_name_2 != NULL);
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 239;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 239;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, mod_consts[96]);
         if (tmp_call_result_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10140,7 +10140,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame.f_lineno = 241;
+        frame_d974edd9bb9da198468bf68ba72426bb->m_frame.f_lineno = 241;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_3 == NULL));
@@ -10153,7 +10153,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
     branch_end_3:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    RESTORE_FRAME_EXCEPTION(frame_d974edd9bb9da198468bf68ba72426bb);
 #endif
 
     // Put the previous frame back on top.
@@ -10163,7 +10163,7 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    RESTORE_FRAME_EXCEPTION(frame_d974edd9bb9da198468bf68ba72426bb);
 #endif
 
     // Put the previous frame back on top.
@@ -10174,18 +10174,18 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    RESTORE_FRAME_EXCEPTION(frame_d974edd9bb9da198468bf68ba72426bb);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_ca01af5d5d5e0ef7bc098a64258078bd, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_ca01af5d5d5e0ef7bc098a64258078bd->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_ca01af5d5d5e0ef7bc098a64258078bd, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_d974edd9bb9da198468bf68ba72426bb, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_d974edd9bb9da198468bf68ba72426bb->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_d974edd9bb9da198468bf68ba72426bb, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_ca01af5d5d5e0ef7bc098a64258078bd,
+        frame_d974edd9bb9da198468bf68ba72426bb,
         type_description_1,
         par_self,
         par_output_alias,
@@ -10195,17 +10195,17 @@ static PyObject *impl_MathcadPy$_application$$$function__26_get_matrix_output(st
 
 
     // Release cached frame if used for exception.
-    if (frame_ca01af5d5d5e0ef7bc098a64258078bd == cache_frame_ca01af5d5d5e0ef7bc098a64258078bd) {
+    if (frame_d974edd9bb9da198468bf68ba72426bb == cache_frame_d974edd9bb9da198468bf68ba72426bb) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_ca01af5d5d5e0ef7bc098a64258078bd);
-        cache_frame_ca01af5d5d5e0ef7bc098a64258078bd = NULL;
+        Py_DECREF(cache_frame_d974edd9bb9da198468bf68ba72426bb);
+        cache_frame_d974edd9bb9da198468bf68ba72426bb = NULL;
     }
 
-    assertFrameObject(frame_ca01af5d5d5e0ef7bc098a64258078bd);
+    assertFrameObject(frame_d974edd9bb9da198468bf68ba72426bb);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -10293,7 +10293,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
     PyObject *par_preserve_worksheet_units = python_pars[4];
     PyObject *var_previous_units = NULL;
     PyObject *var_error = NULL;
-    struct Nuitka_FrameObject *frame_58197cb6e8f713617fe7d8b23f75a42b;
+    struct Nuitka_FrameObject *frame_8cd03fb9cfc6932e1bac44ea7b414dcd;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -10314,7 +10314,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_2;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_58197cb6e8f713617fe7d8b23f75a42b = NULL;
+    static struct Nuitka_FrameObject *cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd = NULL;
     PyObject *exception_keeper_type_3;
     PyObject *exception_keeper_value_3;
     PyTracebackObject *exception_keeper_tb_3;
@@ -10322,31 +10322,31 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_58197cb6e8f713617fe7d8b23f75a42b)) {
-        Py_XDECREF(cache_frame_58197cb6e8f713617fe7d8b23f75a42b);
+    if (isFrameUnusable(cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd)) {
+        Py_XDECREF(cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_58197cb6e8f713617fe7d8b23f75a42b == NULL) {
+        if (cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_58197cb6e8f713617fe7d8b23f75a42b = MAKE_FUNCTION_FRAME(codeobj_58197cb6e8f713617fe7d8b23f75a42b, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd = MAKE_FUNCTION_FRAME(codeobj_8cd03fb9cfc6932e1bac44ea7b414dcd, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_58197cb6e8f713617fe7d8b23f75a42b->m_type_description == NULL);
-    frame_58197cb6e8f713617fe7d8b23f75a42b = cache_frame_58197cb6e8f713617fe7d8b23f75a42b;
+    assert(cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_type_description == NULL);
+    frame_8cd03fb9cfc6932e1bac44ea7b414dcd = cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_58197cb6e8f713617fe7d8b23f75a42b);
+    pushFrameStack(frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_58197cb6e8f713617fe7d8b23f75a42b) == 2); // Frame stack
+    assert(Py_REFCNT(frame_8cd03fb9cfc6932e1bac44ea7b414dcd) == 2); // Frame stack
 
     // Framed code:
     {
@@ -10508,7 +10508,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
         tmp_compexpr_left_1 = par_input_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 248;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 248;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[76]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10582,7 +10582,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 250;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 250;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[102], tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -10688,9 +10688,9 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_58197cb6e8f713617fe7d8b23f75a42b, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_8cd03fb9cfc6932e1bac44ea7b414dcd, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_58197cb6e8f713617fe7d8b23f75a42b, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_8cd03fb9cfc6932e1bac44ea7b414dcd, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -10717,7 +10717,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_1;
         tmp_make_exception_arg_1 = mod_consts[103];
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 255;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 255;
         tmp_raise_type_5 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_AssertionError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_5 == NULL));
         exception_type = tmp_raise_type_5;
@@ -10733,7 +10733,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
         exception_lineno = 252;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame) frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame) frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooooooo";
     goto try_except_handler_3;
     branch_end_8:;
@@ -10852,7 +10852,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
         }
 
         tmp_args_element_name_4 = par_units;
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 258;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 258;
         {
             PyObject *call_args[] = {tmp_args_element_name_2, tmp_args_element_name_3, tmp_args_element_name_4};
             tmp_assign_source_3 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_1, call_args);
@@ -10911,7 +10911,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 261;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 261;
         tmp_raise_type_6 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         Py_DECREF(tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_6 == NULL));
@@ -11035,7 +11035,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
             type_description_1 = "ooooooo";
             goto frame_exception_exit_1;
         }
-        frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame.f_lineno = 263;
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame.f_lineno = 263;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_5);
         Py_DECREF(tmp_args_element_name_5);
         if (tmp_call_result_1 == NULL) {
@@ -11068,7 +11068,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_58197cb6e8f713617fe7d8b23f75a42b);
+    RESTORE_FRAME_EXCEPTION(frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 #endif
 
     // Put the previous frame back on top.
@@ -11078,7 +11078,7 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_58197cb6e8f713617fe7d8b23f75a42b);
+    RESTORE_FRAME_EXCEPTION(frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 #endif
 
     // Put the previous frame back on top.
@@ -11089,18 +11089,18 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_58197cb6e8f713617fe7d8b23f75a42b);
+    RESTORE_FRAME_EXCEPTION(frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_58197cb6e8f713617fe7d8b23f75a42b, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_58197cb6e8f713617fe7d8b23f75a42b->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_58197cb6e8f713617fe7d8b23f75a42b, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_8cd03fb9cfc6932e1bac44ea7b414dcd, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_8cd03fb9cfc6932e1bac44ea7b414dcd->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_8cd03fb9cfc6932e1bac44ea7b414dcd, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_58197cb6e8f713617fe7d8b23f75a42b,
+        frame_8cd03fb9cfc6932e1bac44ea7b414dcd,
         type_description_1,
         par_self,
         par_input_alias,
@@ -11113,17 +11113,17 @@ static PyObject *impl_MathcadPy$_application$$$function__27_set_real_input(struc
 
 
     // Release cached frame if used for exception.
-    if (frame_58197cb6e8f713617fe7d8b23f75a42b == cache_frame_58197cb6e8f713617fe7d8b23f75a42b) {
+    if (frame_8cd03fb9cfc6932e1bac44ea7b414dcd == cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_58197cb6e8f713617fe7d8b23f75a42b);
-        cache_frame_58197cb6e8f713617fe7d8b23f75a42b = NULL;
+        Py_DECREF(cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
+        cache_frame_8cd03fb9cfc6932e1bac44ea7b414dcd = NULL;
     }
 
-    assertFrameObject(frame_58197cb6e8f713617fe7d8b23f75a42b);
+    assertFrameObject(frame_8cd03fb9cfc6932e1bac44ea7b414dcd);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -11219,7 +11219,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
     PyObject *par_input_alias = python_pars[1];
     PyObject *par_string_value = python_pars[2];
     PyObject *var_error = NULL;
-    struct Nuitka_FrameObject *frame_69ecb4fc22eb9a78970a15e73918bbdf;
+    struct Nuitka_FrameObject *frame_efd6d3b83485037e61591174a2fb94f6;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -11228,7 +11228,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_69ecb4fc22eb9a78970a15e73918bbdf = NULL;
+    static struct Nuitka_FrameObject *cache_frame_efd6d3b83485037e61591174a2fb94f6 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -11236,31 +11236,31 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_69ecb4fc22eb9a78970a15e73918bbdf)) {
-        Py_XDECREF(cache_frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    if (isFrameUnusable(cache_frame_efd6d3b83485037e61591174a2fb94f6)) {
+        Py_XDECREF(cache_frame_efd6d3b83485037e61591174a2fb94f6);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_69ecb4fc22eb9a78970a15e73918bbdf == NULL) {
+        if (cache_frame_efd6d3b83485037e61591174a2fb94f6 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_69ecb4fc22eb9a78970a15e73918bbdf = MAKE_FUNCTION_FRAME(codeobj_69ecb4fc22eb9a78970a15e73918bbdf, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_efd6d3b83485037e61591174a2fb94f6 = MAKE_FUNCTION_FRAME(codeobj_efd6d3b83485037e61591174a2fb94f6, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_69ecb4fc22eb9a78970a15e73918bbdf->m_type_description == NULL);
-    frame_69ecb4fc22eb9a78970a15e73918bbdf = cache_frame_69ecb4fc22eb9a78970a15e73918bbdf;
+    assert(cache_frame_efd6d3b83485037e61591174a2fb94f6->m_type_description == NULL);
+    frame_efd6d3b83485037e61591174a2fb94f6 = cache_frame_efd6d3b83485037e61591174a2fb94f6;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    pushFrameStack(frame_efd6d3b83485037e61591174a2fb94f6);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_69ecb4fc22eb9a78970a15e73918bbdf) == 2); // Frame stack
+    assert(Py_REFCNT(frame_efd6d3b83485037e61591174a2fb94f6) == 2); // Frame stack
 
     // Framed code:
     {
@@ -11372,7 +11372,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
         tmp_compexpr_left_1 = par_input_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_69ecb4fc22eb9a78970a15e73918bbdf->m_frame.f_lineno = 270;
+        frame_efd6d3b83485037e61591174a2fb94f6->m_frame.f_lineno = 270;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[76]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -11438,7 +11438,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
         tmp_args_element_name_1 = par_input_alias;
         CHECK_OBJECT(par_string_value);
         tmp_args_element_name_2 = par_string_value;
-        frame_69ecb4fc22eb9a78970a15e73918bbdf->m_frame.f_lineno = 271;
+        frame_efd6d3b83485037e61591174a2fb94f6->m_frame.f_lineno = 271;
         {
             PyObject *call_args[] = {tmp_args_element_name_1, tmp_args_element_name_2};
             tmp_assign_source_1 = CALL_METHOD_WITH_ARGS2(
@@ -11501,7 +11501,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_69ecb4fc22eb9a78970a15e73918bbdf->m_frame.f_lineno = 274;
+        frame_efd6d3b83485037e61591174a2fb94f6->m_frame.f_lineno = 274;
         tmp_raise_type_3 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         Py_DECREF(tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_3 == NULL));
@@ -11625,7 +11625,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
             type_description_1 = "oooo";
             goto frame_exception_exit_1;
         }
-        frame_69ecb4fc22eb9a78970a15e73918bbdf->m_frame.f_lineno = 276;
+        frame_efd6d3b83485037e61591174a2fb94f6->m_frame.f_lineno = 276;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_3);
         Py_DECREF(tmp_args_element_name_3);
         if (tmp_call_result_1 == NULL) {
@@ -11658,7 +11658,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    RESTORE_FRAME_EXCEPTION(frame_efd6d3b83485037e61591174a2fb94f6);
 #endif
 
     // Put the previous frame back on top.
@@ -11668,7 +11668,7 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    RESTORE_FRAME_EXCEPTION(frame_efd6d3b83485037e61591174a2fb94f6);
 #endif
 
     // Put the previous frame back on top.
@@ -11679,18 +11679,18 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    RESTORE_FRAME_EXCEPTION(frame_efd6d3b83485037e61591174a2fb94f6);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_69ecb4fc22eb9a78970a15e73918bbdf, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_69ecb4fc22eb9a78970a15e73918bbdf->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_69ecb4fc22eb9a78970a15e73918bbdf, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_efd6d3b83485037e61591174a2fb94f6, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_efd6d3b83485037e61591174a2fb94f6->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_efd6d3b83485037e61591174a2fb94f6, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_69ecb4fc22eb9a78970a15e73918bbdf,
+        frame_efd6d3b83485037e61591174a2fb94f6,
         type_description_1,
         par_self,
         par_input_alias,
@@ -11700,17 +11700,17 @@ static PyObject *impl_MathcadPy$_application$$$function__28_set_string_input(str
 
 
     // Release cached frame if used for exception.
-    if (frame_69ecb4fc22eb9a78970a15e73918bbdf == cache_frame_69ecb4fc22eb9a78970a15e73918bbdf) {
+    if (frame_efd6d3b83485037e61591174a2fb94f6 == cache_frame_efd6d3b83485037e61591174a2fb94f6) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_69ecb4fc22eb9a78970a15e73918bbdf);
-        cache_frame_69ecb4fc22eb9a78970a15e73918bbdf = NULL;
+        Py_DECREF(cache_frame_efd6d3b83485037e61591174a2fb94f6);
+        cache_frame_efd6d3b83485037e61591174a2fb94f6 = NULL;
     }
 
-    assertFrameObject(frame_69ecb4fc22eb9a78970a15e73918bbdf);
+    assertFrameObject(frame_efd6d3b83485037e61591174a2fb94f6);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -11808,7 +11808,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     PyObject *tmp_tuple_unpack_1__element_1 = NULL;
     PyObject *tmp_tuple_unpack_1__element_2 = NULL;
     PyObject *tmp_tuple_unpack_1__source_iter = NULL;
-    struct Nuitka_FrameObject *frame_870d36aa4fb9600440099a585c3f3f25;
+    struct Nuitka_FrameObject *frame_dccbe69499346fcc50b1d49c364b29cb;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     int tmp_res;
     PyObject *exception_type = NULL;
@@ -11857,7 +11857,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     PyTracebackObject *exception_keeper_tb_8;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_8;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_870d36aa4fb9600440099a585c3f3f25 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_dccbe69499346fcc50b1d49c364b29cb = NULL;
     PyObject *exception_keeper_type_9;
     PyObject *exception_keeper_value_9;
     PyTracebackObject *exception_keeper_tb_9;
@@ -11865,31 +11865,31 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_870d36aa4fb9600440099a585c3f3f25)) {
-        Py_XDECREF(cache_frame_870d36aa4fb9600440099a585c3f3f25);
+    if (isFrameUnusable(cache_frame_dccbe69499346fcc50b1d49c364b29cb)) {
+        Py_XDECREF(cache_frame_dccbe69499346fcc50b1d49c364b29cb);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_870d36aa4fb9600440099a585c3f3f25 == NULL) {
+        if (cache_frame_dccbe69499346fcc50b1d49c364b29cb == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_870d36aa4fb9600440099a585c3f3f25 = MAKE_FUNCTION_FRAME(codeobj_870d36aa4fb9600440099a585c3f3f25, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_dccbe69499346fcc50b1d49c364b29cb = MAKE_FUNCTION_FRAME(codeobj_dccbe69499346fcc50b1d49c364b29cb, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_870d36aa4fb9600440099a585c3f3f25->m_type_description == NULL);
-    frame_870d36aa4fb9600440099a585c3f3f25 = cache_frame_870d36aa4fb9600440099a585c3f3f25;
+    assert(cache_frame_dccbe69499346fcc50b1d49c364b29cb->m_type_description == NULL);
+    frame_dccbe69499346fcc50b1d49c364b29cb = cache_frame_dccbe69499346fcc50b1d49c364b29cb;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_870d36aa4fb9600440099a585c3f3f25);
+    pushFrameStack(frame_dccbe69499346fcc50b1d49c364b29cb);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_870d36aa4fb9600440099a585c3f3f25) == 2); // Frame stack
+    assert(Py_REFCNT(frame_dccbe69499346fcc50b1d49c364b29cb) == 2); // Frame stack
 
     // Framed code:
     {
@@ -12051,7 +12051,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         tmp_compexpr_left_1 = par_input_alias;
         CHECK_OBJECT(par_self);
         tmp_called_instance_1 = par_self;
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 284;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 284;
         tmp_compexpr_right_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[76]);
         if (tmp_compexpr_right_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12125,7 +12125,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         tmp_called_instance_2 = par_self;
         CHECK_OBJECT(par_input_alias);
         tmp_args_element_name_1 = par_input_alias;
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 286;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 286;
         tmp_assign_source_1 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_2, mod_consts[112], tmp_args_element_name_1);
         if (tmp_assign_source_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12231,9 +12231,9 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     GET_CURRENT_EXCEPTION(&exception_preserved_type_1, &exception_preserved_value_1, &exception_preserved_tb_1);
 
     if (exception_keeper_tb_1 == NULL) {
-        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_870d36aa4fb9600440099a585c3f3f25, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = MAKE_TRACEBACK(frame_dccbe69499346fcc50b1d49c364b29cb, exception_keeper_lineno_1);
     } else if (exception_keeper_lineno_1 != 0) {
-        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_870d36aa4fb9600440099a585c3f3f25, exception_keeper_lineno_1);
+        exception_keeper_tb_1 = ADD_TRACEBACK(exception_keeper_tb_1, frame_dccbe69499346fcc50b1d49c364b29cb, exception_keeper_lineno_1);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_1, &exception_keeper_value_1, &exception_keeper_tb_1);
@@ -12260,7 +12260,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         PyObject *tmp_raise_type_5;
         PyObject *tmp_make_exception_arg_1;
         tmp_make_exception_arg_1 = mod_consts[103];
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 291;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 291;
         tmp_raise_type_5 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_AssertionError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_5 == NULL));
         exception_type = tmp_raise_type_5;
@@ -12276,7 +12276,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         exception_lineno = 288;
     }
 
-    if (exception_tb && exception_tb->tb_frame == &frame_870d36aa4fb9600440099a585c3f3f25->m_frame) frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = exception_tb->tb_lineno;
+    if (exception_tb && exception_tb->tb_frame == &frame_dccbe69499346fcc50b1d49c364b29cb->m_frame) frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = exception_tb->tb_lineno;
     type_description_1 = "ooooooooooooo";
     goto try_except_handler_3;
     branch_end_8:;
@@ -12347,7 +12347,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         }
         CHECK_OBJECT(par_matrix_array);
         tmp_args_element_name_2 = par_matrix_array;
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 295;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 295;
         tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_2);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -12570,7 +12570,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         tmp_args_element_name_3 = var_rows;
         CHECK_OBJECT(var_cols);
         tmp_args_element_name_4 = var_cols;
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 296;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 296;
         {
             PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
             tmp_assign_source_8 = CALL_METHOD_WITH_ARGS2(
@@ -12877,7 +12877,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
         tmp_args_element_name_6 = var_col;
         CHECK_OBJECT(var_value);
         tmp_args_element_name_7 = var_value;
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 301;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 301;
         {
             PyObject *call_args[] = {tmp_args_element_name_5, tmp_args_element_name_6, tmp_args_element_name_7};
             tmp_call_result_1 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_2, call_args);
@@ -12912,9 +12912,9 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     GET_CURRENT_EXCEPTION(&exception_preserved_type_2, &exception_preserved_value_2, &exception_preserved_tb_2);
 
     if (exception_keeper_tb_5 == NULL) {
-        exception_keeper_tb_5 = MAKE_TRACEBACK(frame_870d36aa4fb9600440099a585c3f3f25, exception_keeper_lineno_5);
+        exception_keeper_tb_5 = MAKE_TRACEBACK(frame_dccbe69499346fcc50b1d49c364b29cb, exception_keeper_lineno_5);
     } else if (exception_keeper_lineno_5 != 0) {
-        exception_keeper_tb_5 = ADD_TRACEBACK(exception_keeper_tb_5, frame_870d36aa4fb9600440099a585c3f3f25, exception_keeper_lineno_5);
+        exception_keeper_tb_5 = ADD_TRACEBACK(exception_keeper_tb_5, frame_dccbe69499346fcc50b1d49c364b29cb, exception_keeper_lineno_5);
     }
 
     NORMALIZE_EXCEPTION(&exception_keeper_type_5, &exception_keeper_value_5, &exception_keeper_tb_5);
@@ -13038,7 +13038,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
             type_description_1 = "ooooooooooooo";
             goto try_except_handler_9;
         }
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 303;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 303;
         tmp_raise_type_6 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_2);
         Py_DECREF(tmp_make_exception_arg_2);
         assert(!(tmp_raise_type_6 == NULL));
@@ -13266,7 +13266,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 305;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 305;
         {
             PyObject *call_args[] = {tmp_args_element_name_8, tmp_args_element_name_9, tmp_args_element_name_10};
             tmp_assign_source_16 = CALL_FUNCTION_WITH_ARGS3(tmp_called_name_3, call_args);
@@ -13327,7 +13327,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 311;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 311;
         tmp_raise_type_7 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_3);
         Py_DECREF(tmp_make_exception_arg_3);
         assert(!(tmp_raise_type_7 == NULL));
@@ -13451,7 +13451,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
             type_description_1 = "ooooooooooooo";
             goto frame_exception_exit_1;
         }
-        frame_870d36aa4fb9600440099a585c3f3f25->m_frame.f_lineno = 313;
+        frame_dccbe69499346fcc50b1d49c364b29cb->m_frame.f_lineno = 313;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_4, tmp_args_element_name_11);
         Py_DECREF(tmp_args_element_name_11);
         if (tmp_call_result_2 == NULL) {
@@ -13484,7 +13484,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_870d36aa4fb9600440099a585c3f3f25);
+    RESTORE_FRAME_EXCEPTION(frame_dccbe69499346fcc50b1d49c364b29cb);
 #endif
 
     // Put the previous frame back on top.
@@ -13494,7 +13494,7 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_870d36aa4fb9600440099a585c3f3f25);
+    RESTORE_FRAME_EXCEPTION(frame_dccbe69499346fcc50b1d49c364b29cb);
 #endif
 
     // Put the previous frame back on top.
@@ -13505,18 +13505,18 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_870d36aa4fb9600440099a585c3f3f25);
+    RESTORE_FRAME_EXCEPTION(frame_dccbe69499346fcc50b1d49c364b29cb);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_870d36aa4fb9600440099a585c3f3f25, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_870d36aa4fb9600440099a585c3f3f25->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_870d36aa4fb9600440099a585c3f3f25, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_dccbe69499346fcc50b1d49c364b29cb, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_dccbe69499346fcc50b1d49c364b29cb->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_dccbe69499346fcc50b1d49c364b29cb, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_870d36aa4fb9600440099a585c3f3f25,
+        frame_dccbe69499346fcc50b1d49c364b29cb,
         type_description_1,
         par_self,
         par_input_alias,
@@ -13535,17 +13535,17 @@ static PyObject *impl_MathcadPy$_application$$$function__29_set_matrix_input(str
 
 
     // Release cached frame if used for exception.
-    if (frame_870d36aa4fb9600440099a585c3f3f25 == cache_frame_870d36aa4fb9600440099a585c3f3f25) {
+    if (frame_dccbe69499346fcc50b1d49c364b29cb == cache_frame_dccbe69499346fcc50b1d49c364b29cb) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_870d36aa4fb9600440099a585c3f3f25);
-        cache_frame_870d36aa4fb9600440099a585c3f3f25 = NULL;
+        Py_DECREF(cache_frame_dccbe69499346fcc50b1d49c364b29cb);
+        cache_frame_dccbe69499346fcc50b1d49c364b29cb = NULL;
     }
 
-    assertFrameObject(frame_870d36aa4fb9600440099a585c3f3f25);
+    assertFrameObject(frame_dccbe69499346fcc50b1d49c364b29cb);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -13662,14 +13662,14 @@ static PyObject *impl_MathcadPy$_application$$$function__30_PauseCalculation(str
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_31d8095f5713157b22f1edc887100378;
+    struct Nuitka_FrameObject *frame_fec049f21066d86db4c43226e922b932;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_31d8095f5713157b22f1edc887100378 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_fec049f21066d86db4c43226e922b932 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -13678,31 +13678,31 @@ static PyObject *impl_MathcadPy$_application$$$function__30_PauseCalculation(str
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_31d8095f5713157b22f1edc887100378)) {
-        Py_XDECREF(cache_frame_31d8095f5713157b22f1edc887100378);
+    if (isFrameUnusable(cache_frame_fec049f21066d86db4c43226e922b932)) {
+        Py_XDECREF(cache_frame_fec049f21066d86db4c43226e922b932);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_31d8095f5713157b22f1edc887100378 == NULL) {
+        if (cache_frame_fec049f21066d86db4c43226e922b932 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_31d8095f5713157b22f1edc887100378 = MAKE_FUNCTION_FRAME(codeobj_31d8095f5713157b22f1edc887100378, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_fec049f21066d86db4c43226e922b932 = MAKE_FUNCTION_FRAME(codeobj_fec049f21066d86db4c43226e922b932, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_31d8095f5713157b22f1edc887100378->m_type_description == NULL);
-    frame_31d8095f5713157b22f1edc887100378 = cache_frame_31d8095f5713157b22f1edc887100378;
+    assert(cache_frame_fec049f21066d86db4c43226e922b932->m_type_description == NULL);
+    frame_fec049f21066d86db4c43226e922b932 = cache_frame_fec049f21066d86db4c43226e922b932;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_31d8095f5713157b22f1edc887100378);
+    pushFrameStack(frame_fec049f21066d86db4c43226e922b932);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_31d8095f5713157b22f1edc887100378) == 2); // Frame stack
+    assert(Py_REFCNT(frame_fec049f21066d86db4c43226e922b932) == 2); // Frame stack
 
     // Framed code:
     {
@@ -13722,7 +13722,7 @@ static PyObject *impl_MathcadPy$_application$$$function__30_PauseCalculation(str
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_31d8095f5713157b22f1edc887100378->m_frame.f_lineno = 318;
+        frame_fec049f21066d86db4c43226e922b932->m_frame.f_lineno = 318;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[68]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -13739,7 +13739,7 @@ static PyObject *impl_MathcadPy$_application$$$function__30_PauseCalculation(str
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_31d8095f5713157b22f1edc887100378);
+    RESTORE_FRAME_EXCEPTION(frame_fec049f21066d86db4c43226e922b932);
 #endif
 
     // Put the previous frame back on top.
@@ -13750,35 +13750,35 @@ static PyObject *impl_MathcadPy$_application$$$function__30_PauseCalculation(str
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_31d8095f5713157b22f1edc887100378);
+    RESTORE_FRAME_EXCEPTION(frame_fec049f21066d86db4c43226e922b932);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_31d8095f5713157b22f1edc887100378, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_31d8095f5713157b22f1edc887100378->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_31d8095f5713157b22f1edc887100378, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_fec049f21066d86db4c43226e922b932, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_fec049f21066d86db4c43226e922b932->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_fec049f21066d86db4c43226e922b932, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_31d8095f5713157b22f1edc887100378,
+        frame_fec049f21066d86db4c43226e922b932,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_31d8095f5713157b22f1edc887100378 == cache_frame_31d8095f5713157b22f1edc887100378) {
+    if (frame_fec049f21066d86db4c43226e922b932 == cache_frame_fec049f21066d86db4c43226e922b932) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_31d8095f5713157b22f1edc887100378);
-        cache_frame_31d8095f5713157b22f1edc887100378 = NULL;
+        Py_DECREF(cache_frame_fec049f21066d86db4c43226e922b932);
+        cache_frame_fec049f21066d86db4c43226e922b932 = NULL;
     }
 
-    assertFrameObject(frame_31d8095f5713157b22f1edc887100378);
+    assertFrameObject(frame_fec049f21066d86db4c43226e922b932);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -13848,14 +13848,14 @@ static PyObject *impl_MathcadPy$_application$$$function__31_ResumeCalculation(st
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_61ba5e74e848cf4b12fa743638b08834;
+    struct Nuitka_FrameObject *frame_a93827b20102e54846e19e54c20852c1;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_61ba5e74e848cf4b12fa743638b08834 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_a93827b20102e54846e19e54c20852c1 = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -13864,31 +13864,31 @@ static PyObject *impl_MathcadPy$_application$$$function__31_ResumeCalculation(st
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_61ba5e74e848cf4b12fa743638b08834)) {
-        Py_XDECREF(cache_frame_61ba5e74e848cf4b12fa743638b08834);
+    if (isFrameUnusable(cache_frame_a93827b20102e54846e19e54c20852c1)) {
+        Py_XDECREF(cache_frame_a93827b20102e54846e19e54c20852c1);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_61ba5e74e848cf4b12fa743638b08834 == NULL) {
+        if (cache_frame_a93827b20102e54846e19e54c20852c1 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_61ba5e74e848cf4b12fa743638b08834 = MAKE_FUNCTION_FRAME(codeobj_61ba5e74e848cf4b12fa743638b08834, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_a93827b20102e54846e19e54c20852c1 = MAKE_FUNCTION_FRAME(codeobj_a93827b20102e54846e19e54c20852c1, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_61ba5e74e848cf4b12fa743638b08834->m_type_description == NULL);
-    frame_61ba5e74e848cf4b12fa743638b08834 = cache_frame_61ba5e74e848cf4b12fa743638b08834;
+    assert(cache_frame_a93827b20102e54846e19e54c20852c1->m_type_description == NULL);
+    frame_a93827b20102e54846e19e54c20852c1 = cache_frame_a93827b20102e54846e19e54c20852c1;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_61ba5e74e848cf4b12fa743638b08834);
+    pushFrameStack(frame_a93827b20102e54846e19e54c20852c1);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_61ba5e74e848cf4b12fa743638b08834) == 2); // Frame stack
+    assert(Py_REFCNT(frame_a93827b20102e54846e19e54c20852c1) == 2); // Frame stack
 
     // Framed code:
     {
@@ -13908,7 +13908,7 @@ static PyObject *impl_MathcadPy$_application$$$function__31_ResumeCalculation(st
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_61ba5e74e848cf4b12fa743638b08834->m_frame.f_lineno = 322;
+        frame_a93827b20102e54846e19e54c20852c1->m_frame.f_lineno = 322;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[70]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -13925,7 +13925,7 @@ static PyObject *impl_MathcadPy$_application$$$function__31_ResumeCalculation(st
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_61ba5e74e848cf4b12fa743638b08834);
+    RESTORE_FRAME_EXCEPTION(frame_a93827b20102e54846e19e54c20852c1);
 #endif
 
     // Put the previous frame back on top.
@@ -13936,35 +13936,35 @@ static PyObject *impl_MathcadPy$_application$$$function__31_ResumeCalculation(st
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_61ba5e74e848cf4b12fa743638b08834);
+    RESTORE_FRAME_EXCEPTION(frame_a93827b20102e54846e19e54c20852c1);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_61ba5e74e848cf4b12fa743638b08834, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_61ba5e74e848cf4b12fa743638b08834->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_61ba5e74e848cf4b12fa743638b08834, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_a93827b20102e54846e19e54c20852c1, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_a93827b20102e54846e19e54c20852c1->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_a93827b20102e54846e19e54c20852c1, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_61ba5e74e848cf4b12fa743638b08834,
+        frame_a93827b20102e54846e19e54c20852c1,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_61ba5e74e848cf4b12fa743638b08834 == cache_frame_61ba5e74e848cf4b12fa743638b08834) {
+    if (frame_a93827b20102e54846e19e54c20852c1 == cache_frame_a93827b20102e54846e19e54c20852c1) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_61ba5e74e848cf4b12fa743638b08834);
-        cache_frame_61ba5e74e848cf4b12fa743638b08834 = NULL;
+        Py_DECREF(cache_frame_a93827b20102e54846e19e54c20852c1);
+        cache_frame_a93827b20102e54846e19e54c20852c1 = NULL;
     }
 
-    assertFrameObject(frame_61ba5e74e848cf4b12fa743638b08834);
+    assertFrameObject(frame_a93827b20102e54846e19e54c20852c1);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -14034,14 +14034,14 @@ static PyObject *impl_MathcadPy$_application$$$function__32_syncronize(struct Nu
 
     // Local variable declarations.
     PyObject *par_self = python_pars[0];
-    struct Nuitka_FrameObject *frame_0ec55e2f6dc8b03141a39038a9cc3435;
+    struct Nuitka_FrameObject *frame_f3d132612bd655df687aa2dc23fb425e;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
-    static struct Nuitka_FrameObject *cache_frame_0ec55e2f6dc8b03141a39038a9cc3435 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_f3d132612bd655df687aa2dc23fb425e = NULL;
     PyObject *tmp_return_value = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
@@ -14050,31 +14050,31 @@ static PyObject *impl_MathcadPy$_application$$$function__32_syncronize(struct Nu
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_0ec55e2f6dc8b03141a39038a9cc3435)) {
-        Py_XDECREF(cache_frame_0ec55e2f6dc8b03141a39038a9cc3435);
+    if (isFrameUnusable(cache_frame_f3d132612bd655df687aa2dc23fb425e)) {
+        Py_XDECREF(cache_frame_f3d132612bd655df687aa2dc23fb425e);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_0ec55e2f6dc8b03141a39038a9cc3435 == NULL) {
+        if (cache_frame_f3d132612bd655df687aa2dc23fb425e == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_0ec55e2f6dc8b03141a39038a9cc3435 = MAKE_FUNCTION_FRAME(codeobj_0ec55e2f6dc8b03141a39038a9cc3435, module_MathcadPy$_application, sizeof(void *));
+        cache_frame_f3d132612bd655df687aa2dc23fb425e = MAKE_FUNCTION_FRAME(codeobj_f3d132612bd655df687aa2dc23fb425e, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_0ec55e2f6dc8b03141a39038a9cc3435->m_type_description == NULL);
-    frame_0ec55e2f6dc8b03141a39038a9cc3435 = cache_frame_0ec55e2f6dc8b03141a39038a9cc3435;
+    assert(cache_frame_f3d132612bd655df687aa2dc23fb425e->m_type_description == NULL);
+    frame_f3d132612bd655df687aa2dc23fb425e = cache_frame_f3d132612bd655df687aa2dc23fb425e;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_0ec55e2f6dc8b03141a39038a9cc3435);
+    pushFrameStack(frame_f3d132612bd655df687aa2dc23fb425e);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_0ec55e2f6dc8b03141a39038a9cc3435) == 2); // Frame stack
+    assert(Py_REFCNT(frame_f3d132612bd655df687aa2dc23fb425e) == 2); // Frame stack
 
     // Framed code:
     {
@@ -14094,7 +14094,7 @@ static PyObject *impl_MathcadPy$_application$$$function__32_syncronize(struct Nu
             type_description_1 = "o";
             goto frame_exception_exit_1;
         }
-        frame_0ec55e2f6dc8b03141a39038a9cc3435->m_frame.f_lineno = 326;
+        frame_f3d132612bd655df687aa2dc23fb425e->m_frame.f_lineno = 326;
         tmp_call_result_1 = CALL_METHOD_NO_ARGS(tmp_called_instance_1, mod_consts[129]);
         Py_DECREF(tmp_called_instance_1);
         if (tmp_call_result_1 == NULL) {
@@ -14111,7 +14111,7 @@ static PyObject *impl_MathcadPy$_application$$$function__32_syncronize(struct Nu
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ec55e2f6dc8b03141a39038a9cc3435);
+    RESTORE_FRAME_EXCEPTION(frame_f3d132612bd655df687aa2dc23fb425e);
 #endif
 
     // Put the previous frame back on top.
@@ -14122,35 +14122,35 @@ static PyObject *impl_MathcadPy$_application$$$function__32_syncronize(struct Nu
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_0ec55e2f6dc8b03141a39038a9cc3435);
+    RESTORE_FRAME_EXCEPTION(frame_f3d132612bd655df687aa2dc23fb425e);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_0ec55e2f6dc8b03141a39038a9cc3435, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_0ec55e2f6dc8b03141a39038a9cc3435->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_0ec55e2f6dc8b03141a39038a9cc3435, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_f3d132612bd655df687aa2dc23fb425e, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_f3d132612bd655df687aa2dc23fb425e->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_f3d132612bd655df687aa2dc23fb425e, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_0ec55e2f6dc8b03141a39038a9cc3435,
+        frame_f3d132612bd655df687aa2dc23fb425e,
         type_description_1,
         par_self
     );
 
 
     // Release cached frame if used for exception.
-    if (frame_0ec55e2f6dc8b03141a39038a9cc3435 == cache_frame_0ec55e2f6dc8b03141a39038a9cc3435) {
+    if (frame_f3d132612bd655df687aa2dc23fb425e == cache_frame_f3d132612bd655df687aa2dc23fb425e) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_0ec55e2f6dc8b03141a39038a9cc3435);
-        cache_frame_0ec55e2f6dc8b03141a39038a9cc3435 = NULL;
+        Py_DECREF(cache_frame_f3d132612bd655df687aa2dc23fb425e);
+        cache_frame_f3d132612bd655df687aa2dc23fb425e = NULL;
     }
 
-    assertFrameObject(frame_0ec55e2f6dc8b03141a39038a9cc3435);
+    assertFrameObject(frame_f3d132612bd655df687aa2dc23fb425e);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -14231,21 +14231,21 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
     PyObject *tmp_listcomp_1__$0 = NULL;
     PyObject *tmp_listcomp_1__contraction = NULL;
     PyObject *tmp_listcomp_1__iter_value_0 = NULL;
-    struct Nuitka_FrameObject *frame_1396bb6b163d30b08e7759bf081b9d59;
+    struct Nuitka_FrameObject *frame_2d9de910d3bfd1042a3d16d92010f611;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
     PyTracebackObject *exception_tb = NULL;
     NUITKA_MAY_BE_UNUSED int exception_lineno = 0;
     NUITKA_MAY_BE_UNUSED nuitka_void tmp_unused;
-    struct Nuitka_FrameObject *frame_4f5c44839442e2d92d3c63cf7b1f54d3_2;
+    struct Nuitka_FrameObject *frame_34f21d97d213bf7b829daf5d92e5ab52_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
     bool tmp_result;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_1;
-    static struct Nuitka_FrameObject *cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2 = NULL;
     PyObject *exception_keeper_type_2;
     PyObject *exception_keeper_value_2;
     PyTracebackObject *exception_keeper_tb_2;
@@ -14255,7 +14255,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_1396bb6b163d30b08e7759bf081b9d59 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_2d9de910d3bfd1042a3d16d92010f611 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -14263,31 +14263,31 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_1396bb6b163d30b08e7759bf081b9d59)) {
-        Py_XDECREF(cache_frame_1396bb6b163d30b08e7759bf081b9d59);
+    if (isFrameUnusable(cache_frame_2d9de910d3bfd1042a3d16d92010f611)) {
+        Py_XDECREF(cache_frame_2d9de910d3bfd1042a3d16d92010f611);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_1396bb6b163d30b08e7759bf081b9d59 == NULL) {
+        if (cache_frame_2d9de910d3bfd1042a3d16d92010f611 == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_1396bb6b163d30b08e7759bf081b9d59 = MAKE_FUNCTION_FRAME(codeobj_1396bb6b163d30b08e7759bf081b9d59, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_2d9de910d3bfd1042a3d16d92010f611 = MAKE_FUNCTION_FRAME(codeobj_2d9de910d3bfd1042a3d16d92010f611, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_1396bb6b163d30b08e7759bf081b9d59->m_type_description == NULL);
-    frame_1396bb6b163d30b08e7759bf081b9d59 = cache_frame_1396bb6b163d30b08e7759bf081b9d59;
+    assert(cache_frame_2d9de910d3bfd1042a3d16d92010f611->m_type_description == NULL);
+    frame_2d9de910d3bfd1042a3d16d92010f611 = cache_frame_2d9de910d3bfd1042a3d16d92010f611;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_1396bb6b163d30b08e7759bf081b9d59);
+    pushFrameStack(frame_2d9de910d3bfd1042a3d16d92010f611);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_1396bb6b163d30b08e7759bf081b9d59) == 2); // Frame stack
+    assert(Py_REFCNT(frame_2d9de910d3bfd1042a3d16d92010f611) == 2); // Frame stack
 
     // Framed code:
     {
@@ -14371,7 +14371,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        frame_1396bb6b163d30b08e7759bf081b9d59->m_frame.f_lineno = 333;
+        frame_2d9de910d3bfd1042a3d16d92010f611->m_frame.f_lineno = 333;
         tmp_call_result_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         Py_DECREF(tmp_args_element_name_1);
         if (tmp_call_result_1 == NULL) {
@@ -14478,7 +14478,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
             type_description_1 = "oooooo";
             goto frame_exception_exit_1;
         }
-        frame_1396bb6b163d30b08e7759bf081b9d59->m_frame.f_lineno = 335;
+        frame_2d9de910d3bfd1042a3d16d92010f611->m_frame.f_lineno = 335;
         tmp_call_result_2 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_2, tmp_args_element_name_2);
         Py_DECREF(tmp_args_element_name_2);
         if (tmp_call_result_2 == NULL) {
@@ -14631,31 +14631,31 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
             }
 
         }
-        if (isFrameUnusable(cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2)) {
-            Py_XDECREF(cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        if (isFrameUnusable(cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2)) {
+            Py_XDECREF(cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 == NULL) {
+            if (cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 = MAKE_FUNCTION_FRAME(codeobj_4f5c44839442e2d92d3c63cf7b1f54d3, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
+            cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2 = MAKE_FUNCTION_FRAME(codeobj_34f21d97d213bf7b829daf5d92e5ab52, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2->m_type_description == NULL);
-        frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 = cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2;
+        assert(cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2->m_type_description == NULL);
+        frame_34f21d97d213bf7b829daf5d92e5ab52_2 = cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        pushFrameStack(frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_34f21d97d213bf7b829daf5d92e5ab52_2) == 2); // Frame stack
 
         // Framed code:
         // Tried code:
@@ -14746,7 +14746,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
             tmp_args_element_name_3 = var_row;
             CHECK_OBJECT(outline_0_var_col);
             tmp_args_element_name_4 = outline_0_var_col;
-            frame_4f5c44839442e2d92d3c63cf7b1f54d3_2->m_frame.f_lineno = 338;
+            frame_34f21d97d213bf7b829daf5d92e5ab52_2->m_frame.f_lineno = 338;
             {
                 PyObject *call_args[] = {tmp_args_element_name_3, tmp_args_element_name_4};
                 tmp_append_value_1 = CALL_FUNCTION_WITH_ARGS2(tmp_called_name_3, call_args);
@@ -14832,7 +14832,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
         // End of try:
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        RESTORE_FRAME_EXCEPTION(frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 #endif
 
         // Put the previous frame back on top.
@@ -14842,7 +14842,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
 
         frame_return_exit_2:;
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        RESTORE_FRAME_EXCEPTION(frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 #endif
 
         // Put the previous frame back on top.
@@ -14853,18 +14853,18 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
         frame_exception_exit_2:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        RESTORE_FRAME_EXCEPTION(frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_4f5c44839442e2d92d3c63cf7b1f54d3_2->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_4f5c44839442e2d92d3c63cf7b1f54d3_2, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_34f21d97d213bf7b829daf5d92e5ab52_2, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_34f21d97d213bf7b829daf5d92e5ab52_2->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_34f21d97d213bf7b829daf5d92e5ab52_2, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_4f5c44839442e2d92d3c63cf7b1f54d3_2,
+            frame_34f21d97d213bf7b829daf5d92e5ab52_2,
             type_description_2,
             outline_0_var_col,
             par_mathcad_matrix_obj,
@@ -14873,17 +14873,17 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
 
 
         // Release cached frame if used for exception.
-        if (frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 == cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2) {
+        if (frame_34f21d97d213bf7b829daf5d92e5ab52_2 == cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
-            cache_frame_4f5c44839442e2d92d3c63cf7b1f54d3_2 = NULL;
+            Py_DECREF(cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2);
+            cache_frame_34f21d97d213bf7b829daf5d92e5ab52_2 = NULL;
         }
 
-        assertFrameObject(frame_4f5c44839442e2d92d3c63cf7b1f54d3_2);
+        assertFrameObject(frame_34f21d97d213bf7b829daf5d92e5ab52_2);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -14957,7 +14957,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
         tmp_called_instance_1 = var_matrix;
         CHECK_OBJECT(var_row_list);
         tmp_args_element_name_5 = var_row_list;
-        frame_1396bb6b163d30b08e7759bf081b9d59->m_frame.f_lineno = 339;
+        frame_2d9de910d3bfd1042a3d16d92010f611->m_frame.f_lineno = 339;
         tmp_call_result_3 = CALL_METHOD_WITH_SINGLE_ARG(tmp_called_instance_1, mod_consts[27], tmp_args_element_name_5);
         if (tmp_call_result_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15029,7 +15029,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
     goto frame_return_exit_1;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_1396bb6b163d30b08e7759bf081b9d59);
+    RESTORE_FRAME_EXCEPTION(frame_2d9de910d3bfd1042a3d16d92010f611);
 #endif
 
     // Put the previous frame back on top.
@@ -15039,7 +15039,7 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_1396bb6b163d30b08e7759bf081b9d59);
+    RESTORE_FRAME_EXCEPTION(frame_2d9de910d3bfd1042a3d16d92010f611);
 #endif
 
     // Put the previous frame back on top.
@@ -15050,18 +15050,18 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_1396bb6b163d30b08e7759bf081b9d59);
+    RESTORE_FRAME_EXCEPTION(frame_2d9de910d3bfd1042a3d16d92010f611);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_1396bb6b163d30b08e7759bf081b9d59, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_1396bb6b163d30b08e7759bf081b9d59->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_1396bb6b163d30b08e7759bf081b9d59, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_2d9de910d3bfd1042a3d16d92010f611, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_2d9de910d3bfd1042a3d16d92010f611->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_2d9de910d3bfd1042a3d16d92010f611, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_1396bb6b163d30b08e7759bf081b9d59,
+        frame_2d9de910d3bfd1042a3d16d92010f611,
         type_description_1,
         par_mathcad_matrix_obj,
         var_rows,
@@ -15073,17 +15073,17 @@ static PyObject *impl_MathcadPy$_application$$$function__33__matrix_to_array(str
 
 
     // Release cached frame if used for exception.
-    if (frame_1396bb6b163d30b08e7759bf081b9d59 == cache_frame_1396bb6b163d30b08e7759bf081b9d59) {
+    if (frame_2d9de910d3bfd1042a3d16d92010f611 == cache_frame_2d9de910d3bfd1042a3d16d92010f611) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_1396bb6b163d30b08e7759bf081b9d59);
-        cache_frame_1396bb6b163d30b08e7759bf081b9d59 = NULL;
+        Py_DECREF(cache_frame_2d9de910d3bfd1042a3d16d92010f611);
+        cache_frame_2d9de910d3bfd1042a3d16d92010f611 = NULL;
     }
 
-    assertFrameObject(frame_1396bb6b163d30b08e7759bf081b9d59);
+    assertFrameObject(frame_2d9de910d3bfd1042a3d16d92010f611);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -15181,7 +15181,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
     PyObject *tmp_tuple_unpack_1__element_1 = NULL;
     PyObject *tmp_tuple_unpack_1__element_2 = NULL;
     PyObject *tmp_tuple_unpack_1__source_iter = NULL;
-    struct Nuitka_FrameObject *frame_c4f3ebfe83414ae849700a1853b7fb51;
+    struct Nuitka_FrameObject *frame_66e39118f4f75a3341448709e5778aae;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     PyObject *exception_type = NULL;
     PyObject *exception_value = NULL;
@@ -15201,7 +15201,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
     PyObject *tmp_return_value = NULL;
-    static struct Nuitka_FrameObject *cache_frame_c4f3ebfe83414ae849700a1853b7fb51 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_66e39118f4f75a3341448709e5778aae = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -15209,31 +15209,31 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
 
     // Actual function body.
     // Tried code:
-    if (isFrameUnusable(cache_frame_c4f3ebfe83414ae849700a1853b7fb51)) {
-        Py_XDECREF(cache_frame_c4f3ebfe83414ae849700a1853b7fb51);
+    if (isFrameUnusable(cache_frame_66e39118f4f75a3341448709e5778aae)) {
+        Py_XDECREF(cache_frame_66e39118f4f75a3341448709e5778aae);
 
 #if _DEBUG_REFCOUNTS
-        if (cache_frame_c4f3ebfe83414ae849700a1853b7fb51 == NULL) {
+        if (cache_frame_66e39118f4f75a3341448709e5778aae == NULL) {
             count_active_frame_cache_instances += 1;
         } else {
             count_released_frame_cache_instances += 1;
         }
         count_allocated_frame_cache_instances += 1;
 #endif
-        cache_frame_c4f3ebfe83414ae849700a1853b7fb51 = MAKE_FUNCTION_FRAME(codeobj_c4f3ebfe83414ae849700a1853b7fb51, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
+        cache_frame_66e39118f4f75a3341448709e5778aae = MAKE_FUNCTION_FRAME(codeobj_66e39118f4f75a3341448709e5778aae, module_MathcadPy$_application, sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *)+sizeof(void *));
 #if _DEBUG_REFCOUNTS
     } else {
         count_hit_frame_cache_instances += 1;
 #endif
     }
-    assert(cache_frame_c4f3ebfe83414ae849700a1853b7fb51->m_type_description == NULL);
-    frame_c4f3ebfe83414ae849700a1853b7fb51 = cache_frame_c4f3ebfe83414ae849700a1853b7fb51;
+    assert(cache_frame_66e39118f4f75a3341448709e5778aae->m_type_description == NULL);
+    frame_66e39118f4f75a3341448709e5778aae = cache_frame_66e39118f4f75a3341448709e5778aae;
 
     // Push the new frame as the currently active one.
-    pushFrameStack(frame_c4f3ebfe83414ae849700a1853b7fb51);
+    pushFrameStack(frame_66e39118f4f75a3341448709e5778aae);
 
     // Mark the frame object as in use, ref count 1 will be up for reuse.
-    assert(Py_REFCNT(frame_c4f3ebfe83414ae849700a1853b7fb51) == 2); // Frame stack
+    assert(Py_REFCNT(frame_66e39118f4f75a3341448709e5778aae) == 2); // Frame stack
 
     // Framed code:
     {
@@ -15281,7 +15281,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
         }
 
         tmp_args_element_name_1 = par_matrix_array;
-        frame_c4f3ebfe83414ae849700a1853b7fb51->m_frame.f_lineno = 347;
+        frame_66e39118f4f75a3341448709e5778aae->m_frame.f_lineno = 347;
         tmp_iter_arg_1 = CALL_FUNCTION_WITH_SINGLE_ARG(tmp_called_name_1, tmp_args_element_name_1);
         if (tmp_iter_arg_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -15636,7 +15636,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
         PyObject *tmp_raise_type_1;
         PyObject *tmp_make_exception_arg_1;
         tmp_make_exception_arg_1 = mod_consts[140];
-        frame_c4f3ebfe83414ae849700a1853b7fb51->m_frame.f_lineno = 351;
+        frame_66e39118f4f75a3341448709e5778aae->m_frame.f_lineno = 351;
         tmp_raise_type_1 = CALL_FUNCTION_WITH_SINGLE_ARG(PyExc_ValueError, tmp_make_exception_arg_1);
         assert(!(tmp_raise_type_1 == NULL));
         exception_type = tmp_raise_type_1;
@@ -15731,7 +15731,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
     }
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c4f3ebfe83414ae849700a1853b7fb51);
+    RESTORE_FRAME_EXCEPTION(frame_66e39118f4f75a3341448709e5778aae);
 #endif
 
     // Put the previous frame back on top.
@@ -15741,7 +15741,7 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
 
     frame_return_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c4f3ebfe83414ae849700a1853b7fb51);
+    RESTORE_FRAME_EXCEPTION(frame_66e39118f4f75a3341448709e5778aae);
 #endif
 
     // Put the previous frame back on top.
@@ -15752,18 +15752,18 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
     frame_exception_exit_1:;
 
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_c4f3ebfe83414ae849700a1853b7fb51);
+    RESTORE_FRAME_EXCEPTION(frame_66e39118f4f75a3341448709e5778aae);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_c4f3ebfe83414ae849700a1853b7fb51, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_c4f3ebfe83414ae849700a1853b7fb51->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_c4f3ebfe83414ae849700a1853b7fb51, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_66e39118f4f75a3341448709e5778aae, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_66e39118f4f75a3341448709e5778aae->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_66e39118f4f75a3341448709e5778aae, exception_lineno);
     }
 
     // Attaches locals to frame if any.
     Nuitka_Frame_AttachLocals(
-        frame_c4f3ebfe83414ae849700a1853b7fb51,
+        frame_66e39118f4f75a3341448709e5778aae,
         type_description_1,
         par_matrix_array,
         var_rows,
@@ -15775,17 +15775,17 @@ static PyObject *impl_MathcadPy$_application$$$function__34__array_check(struct 
 
 
     // Release cached frame if used for exception.
-    if (frame_c4f3ebfe83414ae849700a1853b7fb51 == cache_frame_c4f3ebfe83414ae849700a1853b7fb51) {
+    if (frame_66e39118f4f75a3341448709e5778aae == cache_frame_66e39118f4f75a3341448709e5778aae) {
 #if _DEBUG_REFCOUNTS
         count_active_frame_cache_instances -= 1;
         count_released_frame_cache_instances += 1;
 #endif
 
-        Py_DECREF(cache_frame_c4f3ebfe83414ae849700a1853b7fb51);
-        cache_frame_c4f3ebfe83414ae849700a1853b7fb51 = NULL;
+        Py_DECREF(cache_frame_66e39118f4f75a3341448709e5778aae);
+        cache_frame_66e39118f4f75a3341448709e5778aae = NULL;
     }
 
-    assertFrameObject(frame_c4f3ebfe83414ae849700a1853b7fb51);
+    assertFrameObject(frame_66e39118f4f75a3341448709e5778aae);
 
     // Put the previous frame back on top.
     popFrameStack();
@@ -15869,11 +15869,11 @@ function_return_exit:
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__10_activate() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__10_activate,
-        mod_consts[171],
+        mod_consts[170],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[188],
+        mod_consts[187],
 #endif
-        codeobj_c8dd0bec30299178b2161eef95ceb2c0,
+        codeobj_35c17ae10e4afd96f51eb95cd0d86f9b,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15894,11 +15894,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__10_activate() 
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__11_close(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__11_close,
-        mod_consts[190],
+        mod_consts[189],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[191],
+        mod_consts[190],
 #endif
-        codeobj_4e1e7aa7709814993bc107bb0944e524,
+        codeobj_357626e5a6c1c999d7febd539786e95e,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15919,11 +15919,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__11_close(PyObj
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__12_save() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__12_save,
-        mod_consts[192],
+        mod_consts[191],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[193],
+        mod_consts[192],
 #endif
-        codeobj_b971a9da48e543c11d1965591bd844ad,
+        codeobj_dfad3bc229bc486092d2e9c96523e170,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15944,11 +15944,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__12_save() {
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__13_save_as(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__13_save_as,
-        mod_consts[194],
+        mod_consts[193],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[195],
+        mod_consts[194],
 #endif
-        codeobj_5f1c4e6c7f0892bc6ab948ee116edb5f,
+        codeobj_3916d12da29c16a5f75ef1fd07e34723,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15969,11 +15969,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__13_save_as(PyO
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__14_name() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__14_name,
-        mod_consts[196],
+        mod_consts[195],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[197],
+        mod_consts[196],
 #endif
-        codeobj_74002e0f2049bfbf8931b0e5c0ef46b0,
+        codeobj_cda8899a1a68e8b1c4c04de10d7a47fd,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -15994,11 +15994,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__14_name() {
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__15_is_readonly() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__15_is_readonly,
-        mod_consts[198],
+        mod_consts[197],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[199],
+        mod_consts[198],
 #endif
-        codeobj_fd8422f3742161fc3b8f1555e4ccb899,
+        codeobj_a4bde9bf9ed2a5186fd64da6c873a06b,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16019,11 +16019,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__15_is_readonly
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__16_is_modified(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__16_is_modified,
-        mod_consts[200],
+        mod_consts[199],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[201],
+        mod_consts[200],
 #endif
-        codeobj_e13b477985c6bda70aa9451b106ac91c,
+        codeobj_6ebcdc969ad63ad59daf48bb9cc844ff,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16044,11 +16044,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__16_is_modified
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__17_pause_calculation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__17_pause_calculation,
-        mod_consts[202],
+        mod_consts[201],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[203],
+        mod_consts[202],
 #endif
-        codeobj_5522127fb64481944c985cb30f89b14d,
+        codeobj_850d29625866f07a43562814bbbd93ea,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16069,11 +16069,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__17_pause_calcu
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__18_resume_calculation() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__18_resume_calculation,
-        mod_consts[204],
+        mod_consts[203],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[205],
+        mod_consts[204],
 #endif
-        codeobj_00710c2cc9d4c59d19e9a5776950a196,
+        codeobj_13b7bd41a0946af811656f99688bc9d7,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16096,9 +16096,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__19_inputs() {
         impl_MathcadPy$_application$$$function__19_inputs,
         mod_consts[76],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[206],
+        mod_consts[205],
 #endif
-        codeobj_829e7571b36e923f1504ee50a8a90444,
+        codeobj_ab57116c0b7e4dc0ce4aabca080cc7da,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16119,11 +16119,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__19_inputs() {
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__1___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__1___init__,
-        mod_consts[168],
+        mod_consts[167],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[169],
+        mod_consts[168],
 #endif
-        codeobj_57cbabaede0185952805c0816ebf0b26,
+        codeobj_8853356009f468da2c1ec3bf4e30ce8e,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16144,11 +16144,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__1___init__(PyO
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__20_get_input() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__20_get_input,
-        mod_consts[207],
+        mod_consts[206],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[208],
+        mod_consts[207],
 #endif
-        codeobj_953522ba484e7c8623fccb5a907b059a,
+        codeobj_1e63f0b7316b971cf0fb582b7a348404,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16171,9 +16171,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__21__get_real_i
         impl_MathcadPy$_application$$$function__21__get_real_input_units,
         mod_consts[102],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[209],
+        mod_consts[208],
 #endif
-        codeobj_f249231654c3cdcc3317bfe98435ffd3,
+        codeobj_65adfb5e577551e57ba69e65cc8d6158,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16194,11 +16194,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__21__get_real_i
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__22_get_matrix_input() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__22_get_matrix_input,
-        mod_consts[210],
+        mod_consts[209],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[211],
+        mod_consts[210],
 #endif
-        codeobj_56dfdc9a85bbe3c32ec3ab7a53cdb72d,
+        codeobj_a4f1d2c02867e52aed1101513523a3d6,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16221,9 +16221,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__23__get_matrix
         impl_MathcadPy$_application$$$function__23__get_matrix_input_units,
         mod_consts[112],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[212],
+        mod_consts[211],
 #endif
-        codeobj_5dc3ac0d5bc1892d9348ef25c3ab70d3,
+        codeobj_7b85c3bcb95f2b76bf41d451dcac1a7d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16246,9 +16246,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__24_outputs() {
         impl_MathcadPy$_application$$$function__24_outputs,
         mod_consts[90],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[213],
+        mod_consts[212],
 #endif
-        codeobj_47ae7f7626b16bbee221728f1c6b8c25,
+        codeobj_1c85b6ee3dc1102631c67ab0eed10f96,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16269,11 +16269,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__24_outputs() {
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__25_get_real_output(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__25_get_real_output,
-        mod_consts[215],
+        mod_consts[214],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[216],
+        mod_consts[215],
 #endif
-        codeobj_89c26f2ae9454f93e152d0ab49086548,
+        codeobj_565f0de28f9c4c0654ad1f9986e15b63,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16294,11 +16294,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__25_get_real_ou
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__26_get_matrix_output(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__26_get_matrix_output,
-        mod_consts[217],
+        mod_consts[216],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[218],
+        mod_consts[217],
 #endif
-        codeobj_ca01af5d5d5e0ef7bc098a64258078bd,
+        codeobj_d974edd9bb9da198468bf68ba72426bb,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16319,11 +16319,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__26_get_matrix_
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__27_set_real_input(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__27_set_real_input,
-        mod_consts[220],
+        mod_consts[219],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[221],
+        mod_consts[220],
 #endif
-        codeobj_58197cb6e8f713617fe7d8b23f75a42b,
+        codeobj_8cd03fb9cfc6932e1bac44ea7b414dcd,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16344,11 +16344,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__27_set_real_in
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__28_set_string_input() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__28_set_string_input,
-        mod_consts[222],
+        mod_consts[221],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[223],
+        mod_consts[222],
 #endif
-        codeobj_69ecb4fc22eb9a78970a15e73918bbdf,
+        codeobj_efd6d3b83485037e61591174a2fb94f6,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16369,11 +16369,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__28_set_string_
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__29_set_matrix_input(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__29_set_matrix_input,
-        mod_consts[224],
+        mod_consts[223],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[225],
+        mod_consts[224],
 #endif
-        codeobj_870d36aa4fb9600440099a585c3f3f25,
+        codeobj_dccbe69499346fcc50b1d49c364b29cb,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16396,9 +16396,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__2__list_worksh
         impl_MathcadPy$_application$$$function__2__list_worksheets,
         mod_consts[11],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[170],
+        mod_consts[169],
 #endif
-        codeobj_6df5834952c8223b2f6df4353e4e5ab6,
+        codeobj_7618de4fce53bc92e736edfc1934f599,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16421,9 +16421,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__30_PauseCalcul
         impl_MathcadPy$_application$$$function__30_PauseCalculation,
         mod_consts[68],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[226],
+        mod_consts[225],
 #endif
-        codeobj_31d8095f5713157b22f1edc887100378,
+        codeobj_fec049f21066d86db4c43226e922b932,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16446,9 +16446,9 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__31_ResumeCalcu
         impl_MathcadPy$_application$$$function__31_ResumeCalculation,
         mod_consts[70],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[227],
+        mod_consts[226],
 #endif
-        codeobj_61ba5e74e848cf4b12fa743638b08834,
+        codeobj_a93827b20102e54846e19e54c20852c1,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16469,11 +16469,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__31_ResumeCalcu
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__32_syncronize() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__32_syncronize,
-        mod_consts[228],
+        mod_consts[227],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[229],
+        mod_consts[228],
 #endif
-        codeobj_0ec55e2f6dc8b03141a39038a9cc3435,
+        codeobj_f3d132612bd655df687aa2dc23fb425e,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16498,7 +16498,7 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__33__matrix_to_
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_1396bb6b163d30b08e7759bf081b9d59,
+        codeobj_2d9de910d3bfd1042a3d16d92010f611,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16523,7 +16523,7 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__34__array_chec
 #if PYTHON_VERSION >= 0x300
         NULL,
 #endif
-        codeobj_c4f3ebfe83414ae849700a1853b7fb51,
+        codeobj_66e39118f4f75a3341448709e5778aae,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16544,11 +16544,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__34__array_chec
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__3_activate() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__3_activate,
-        mod_consts[171],
+        mod_consts[170],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[172],
+        mod_consts[171],
 #endif
-        codeobj_0e45e2da56d8f984023a3541937e527f,
+        codeobj_675d3603a58a0d1adbbae965894ce7b5,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16569,11 +16569,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__3_activate() {
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__4_active_sheet() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__4_active_sheet,
-        mod_consts[173],
+        mod_consts[172],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[174],
+        mod_consts[173],
 #endif
-        codeobj_2184245ca50ef6461e9935b93f25ff09,
+        codeobj_7e1bb88b5ed7f4f9e19347a9d0d14927,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16594,11 +16594,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__4_active_sheet
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__5_worksheet_names() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__5_worksheet_names,
-        mod_consts[175],
+        mod_consts[174],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[176],
+        mod_consts[175],
 #endif
-        codeobj_55ec54ffc428a8adab47506ccad655fd,
+        codeobj_be78ce611859ed342220e63c5fe8dd4d,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16619,11 +16619,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__5_worksheet_na
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__6_worksheet_paths() {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__6_worksheet_paths,
-        mod_consts[177],
+        mod_consts[176],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[178],
+        mod_consts[177],
 #endif
-        codeobj_afcd210ba784845ba55d8547adb98a0d,
+        codeobj_c7e26a64553ad5252d4bae7ee63eb963,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16644,11 +16644,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__6_worksheet_pa
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__7_open(PyObject *annotations) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__7_open,
-        mod_consts[179],
+        mod_consts[178],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[180],
+        mod_consts[179],
 #endif
-        codeobj_a16de434f92054f98876a8c215f72ad3,
+        codeobj_3fb7337ae5376966a930a488eda30f02,
         NULL,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16669,11 +16669,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__7_open(PyObjec
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__8_close_all(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__8_close_all,
-        mod_consts[182],
+        mod_consts[181],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[183],
+        mod_consts[182],
 #endif
-        codeobj_7b1ffead3aea27a209544ea30ae5d610,
+        codeobj_88344e1f883d12ba535a07e13554417f,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -16694,11 +16694,11 @@ static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__8_close_all(Py
 static PyObject *MAKE_FUNCTION_MathcadPy$_application$$$function__9___init__(PyObject *defaults) {
     struct Nuitka_FunctionObject *result = Nuitka_Function_New(
         impl_MathcadPy$_application$$$function__9___init__,
-        mod_consts[168],
+        mod_consts[167],
 #if PYTHON_VERSION >= 0x300
-        mod_consts[187],
+        mod_consts[186],
 #endif
-        codeobj_bf00e955d25f7701c719ff5a99d63d2a,
+        codeobj_42c092ede1e8956f51f197b85d03ace3,
         defaults,
 #if PYTHON_VERSION >= 0x300
         NULL,
@@ -17099,7 +17099,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     PyObject *tmp_class_creation_2__class_decl_dict = NULL;
     PyObject *tmp_class_creation_2__metaclass = NULL;
     PyObject *tmp_class_creation_2__prepared = NULL;
-    struct Nuitka_FrameObject *frame_40ebc8245c20f7dc396b60848d94a3cd;
+    struct Nuitka_FrameObject *frame_6892340176eb9cc08251e698b2b69dab;
     NUITKA_MAY_BE_UNUSED char const *type_description_1 = NULL;
     bool tmp_result;
     PyObject *exception_type = NULL;
@@ -17111,9 +17111,9 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     PyObject *tmp_dictdel_key;
     PyObject *locals_MathcadPy$_application$$$class__1_Mathcad_13 = NULL;
     PyObject *tmp_dictset_value;
-    struct Nuitka_FrameObject *frame_754e0e1c9205757d97e96f8c44ac10ba_2;
+    struct Nuitka_FrameObject *frame_18fd8dec6823605605cc1d818bf4d3f0_2;
     NUITKA_MAY_BE_UNUSED char const *type_description_2 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2 = NULL;
     PyObject *exception_keeper_type_1;
     PyObject *exception_keeper_value_1;
     PyTracebackObject *exception_keeper_tb_1;
@@ -17127,9 +17127,9 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     PyTracebackObject *exception_keeper_tb_3;
     NUITKA_MAY_BE_UNUSED int exception_keeper_lineno_3;
     PyObject *locals_MathcadPy$_application$$$class__2_Worksheet_93 = NULL;
-    struct Nuitka_FrameObject *frame_4985a9f64740ff2e1e53709bd1aef4de_3;
+    struct Nuitka_FrameObject *frame_458ca302b53781e55fc8254e915e6314_3;
     NUITKA_MAY_BE_UNUSED char const *type_description_3 = NULL;
-    static struct Nuitka_FrameObject *cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3 = NULL;
+    static struct Nuitka_FrameObject *cache_frame_458ca302b53781e55fc8254e915e6314_3 = NULL;
     PyObject *exception_keeper_type_4;
     PyObject *exception_keeper_value_4;
     PyTracebackObject *exception_keeper_tb_4;
@@ -17151,30 +17151,30 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     }
     {
         PyObject *tmp_assign_source_2;
-        tmp_assign_source_2 = mod_consts[144];
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[145], tmp_assign_source_2);
+        tmp_assign_source_2 = module_filename_obj;
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[144], tmp_assign_source_2);
     }
     // Frame without reuse.
-    frame_40ebc8245c20f7dc396b60848d94a3cd = MAKE_MODULE_FRAME(codeobj_40ebc8245c20f7dc396b60848d94a3cd, module_MathcadPy$_application);
+    frame_6892340176eb9cc08251e698b2b69dab = MAKE_MODULE_FRAME(codeobj_6892340176eb9cc08251e698b2b69dab, module_MathcadPy$_application);
 
     // Push the new frame as the currently active one, and we should be exclusively
     // owning it.
-    pushFrameStack(frame_40ebc8245c20f7dc396b60848d94a3cd);
-    assert(Py_REFCNT(frame_40ebc8245c20f7dc396b60848d94a3cd) == 2);
+    pushFrameStack(frame_6892340176eb9cc08251e698b2b69dab);
+    assert(Py_REFCNT(frame_6892340176eb9cc08251e698b2b69dab) == 2);
 
     // Framed code:
     {
         PyObject *tmp_assattr_name_1;
         PyObject *tmp_assattr_target_1;
-        tmp_assattr_name_1 = mod_consts[144];
-        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assattr_name_1 = module_filename_obj;
+        tmp_assattr_target_1 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[145]);
 
         if (unlikely(tmp_assattr_target_1 == NULL)) {
-            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assattr_target_1 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
         assert(!(tmp_assattr_target_1 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[147], tmp_assattr_name_1);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_1, mod_consts[146], tmp_assattr_name_1);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -17190,14 +17190,14 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_assattr_name_2;
         PyObject *tmp_assattr_target_2;
         tmp_assattr_name_2 = Py_True;
-        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[146]);
+        tmp_assattr_target_2 = GET_STRING_DICT_VALUE(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[145]);
 
         if (unlikely(tmp_assattr_target_2 == NULL)) {
-            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[146]);
+            tmp_assattr_target_2 = GET_MODULE_VARIABLE_VALUE_FALLBACK(mod_consts[145]);
         }
 
         assert(!(tmp_assattr_target_2 == NULL));
-        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[148], tmp_assattr_name_2);
+        tmp_result = SET_ATTRIBUTE(tmp_assattr_target_2, mod_consts[147], tmp_assattr_name_2);
         if (tmp_result == false) {
             assert(ERROR_OCCURRED());
 
@@ -17212,7 +17212,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     {
         PyObject *tmp_assign_source_3;
         tmp_assign_source_3 = Py_None;
-        UPDATE_STRING_DICT0(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[149], tmp_assign_source_3);
+        UPDATE_STRING_DICT0(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[148], tmp_assign_source_3);
     }
     {
         PyObject *tmp_assign_source_4;
@@ -17222,12 +17222,12 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_locals_arg_name_1;
         PyObject *tmp_fromlist_name_1;
         PyObject *tmp_level_name_1;
-        tmp_name_name_1 = mod_consts[150];
+        tmp_name_name_1 = mod_consts[149];
         tmp_globals_arg_name_1 = (PyObject *)moduledict_MathcadPy$_application;
         tmp_locals_arg_name_1 = Py_None;
-        tmp_fromlist_name_1 = mod_consts[151];
+        tmp_fromlist_name_1 = mod_consts[150];
         tmp_level_name_1 = mod_consts[107];
-        frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 9;
+        frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 9;
         tmp_import_name_from_1 = IMPORT_MODULE5(tmp_name_name_1, tmp_globals_arg_name_1, tmp_locals_arg_name_1, tmp_fromlist_name_1, tmp_level_name_1);
         if (tmp_import_name_from_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17271,12 +17271,12 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_locals_arg_name_2;
         PyObject *tmp_fromlist_name_2;
         PyObject *tmp_level_name_2;
-        tmp_name_name_2 = mod_consts[152];
+        tmp_name_name_2 = mod_consts[151];
         tmp_globals_arg_name_2 = (PyObject *)moduledict_MathcadPy$_application;
         tmp_locals_arg_name_2 = Py_None;
         tmp_fromlist_name_2 = Py_None;
         tmp_level_name_2 = mod_consts[107];
-        frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 10;
+        frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 10;
         tmp_import_name_from_2 = IMPORT_MODULE5(tmp_name_name_2, tmp_globals_arg_name_2, tmp_locals_arg_name_2, tmp_fromlist_name_2, tmp_level_name_2);
         if (tmp_import_name_from_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17292,11 +17292,11 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             tmp_assign_source_5 = IMPORT_NAME_OR_MODULE(
                 tmp_import_name_from_2,
                 (PyObject *)moduledict_MathcadPy$_application,
-                mod_consts[153],
+                mod_consts[152],
                 mod_consts[107]
             );
         } else {
-            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[153]);
+            tmp_assign_source_5 = IMPORT_NAME(tmp_import_name_from_2, mod_consts[152]);
         }
 
         Py_DECREF(tmp_import_name_from_2);
@@ -17328,7 +17328,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_dict_arg_name_2;
         PyObject *tmp_key_name_2;
         PyObject *tmp_bases_name_1;
-        tmp_key_name_1 = mod_consts[154];
+        tmp_key_name_1 = mod_consts[153];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_1 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_1, tmp_key_name_1);
@@ -17342,7 +17342,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         condexpr_true_1:;
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_2 = tmp_class_creation_1__class_decl_dict;
-        tmp_key_name_2 = mod_consts[154];
+        tmp_key_name_2 = mod_consts[153];
         tmp_metaclass_name_1 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_2, tmp_key_name_2);
         if (tmp_metaclass_name_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17359,7 +17359,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         tmp_metaclass_name_1 = (PyObject *)&PyType_Type;
         Py_INCREF(tmp_metaclass_name_1);
         condexpr_end_1:;
-        tmp_bases_name_1 = mod_consts[155];
+        tmp_bases_name_1 = mod_consts[154];
         tmp_assign_source_7 = SELECT_METACLASS(tmp_metaclass_name_1, tmp_bases_name_1);
         Py_DECREF(tmp_metaclass_name_1);
         if (tmp_assign_source_7 == NULL) {
@@ -17379,7 +17379,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         nuitka_bool tmp_condition_result_2;
         PyObject *tmp_key_name_3;
         PyObject *tmp_dict_arg_name_3;
-        tmp_key_name_3 = mod_consts[154];
+        tmp_key_name_3 = mod_consts[153];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_dict_arg_name_3 = tmp_class_creation_1__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_3, tmp_key_name_3);
@@ -17394,7 +17394,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     branch_yes_1:;
     CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_1__class_decl_dict;
-    tmp_dictdel_key = mod_consts[154];
+    tmp_dictdel_key = mod_consts[153];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -17412,7 +17412,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_expression_name_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_1 = tmp_class_creation_1__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[156]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_1, mod_consts[155]);
         tmp_condition_result_3 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_3 == NUITKA_BOOL_TRUE) {
             goto branch_yes_2;
@@ -17429,7 +17429,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_kwargs_name_1;
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_expression_name_2 = tmp_class_creation_1__metaclass;
-        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[156]);
+        tmp_called_name_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_2, mod_consts[155]);
         if (tmp_called_name_1 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -17440,10 +17440,10 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_1;
         }
-        tmp_args_name_1 = mod_consts[157];
+        tmp_args_name_1 = mod_consts[156];
         CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
         tmp_kwargs_name_1 = tmp_class_creation_1__class_decl_dict;
-        frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 13;
+        frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 13;
         tmp_assign_source_8 = CALL_FUNCTION(tmp_called_name_1, tmp_args_name_1, tmp_kwargs_name_1);
         Py_DECREF(tmp_called_name_1);
         if (tmp_assign_source_8 == NULL) {
@@ -17465,7 +17465,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_expression_name_3;
         CHECK_OBJECT(tmp_class_creation_1__prepared);
         tmp_expression_name_3 = tmp_class_creation_1__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[158]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_3, mod_consts[157]);
         tmp_operand_name_1 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_name_1);
         if (tmp_res == -1) {
@@ -17496,11 +17496,11 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_getattr_attr_1;
         PyObject *tmp_getattr_default_1;
         tmp_raise_type_1 = PyExc_TypeError;
-        tmp_left_name_1 = mod_consts[159];
+        tmp_left_name_1 = mod_consts[158];
         CHECK_OBJECT(tmp_class_creation_1__metaclass);
         tmp_getattr_target_1 = tmp_class_creation_1__metaclass;
-        tmp_getattr_attr_1 = mod_consts[160];
-        tmp_getattr_default_1 = mod_consts[161];
+        tmp_getattr_attr_1 = mod_consts[159];
+        tmp_getattr_default_1 = mod_consts[160];
         tmp_tuple_element_1 = BUILTIN_GETATTR(tmp_getattr_target_1, tmp_getattr_attr_1, tmp_getattr_default_1);
         if (tmp_tuple_element_1 == NULL) {
             assert(ERROR_OCCURRED());
@@ -17521,7 +17521,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             tmp_type_arg_1 = tmp_class_creation_1__prepared;
             tmp_expression_name_4 = BUILTIN_TYPE1(tmp_type_arg_1);
             assert(!(tmp_expression_name_4 == NULL));
-            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[160]);
+            tmp_tuple_element_1 = LOOKUP_ATTRIBUTE(tmp_expression_name_4, mod_consts[159]);
             Py_DECREF(tmp_expression_name_4);
             if (tmp_tuple_element_1 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -17583,8 +17583,8 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[162];
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[163], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[161];
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[162], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17595,7 +17595,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[164];
+        tmp_dictset_value = mod_consts[163];
         tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17607,8 +17607,8 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_3;
         }
-        tmp_dictset_value = mod_consts[165];
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[166], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[164];
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[165], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -17619,42 +17619,42 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_3;
         }
-        if (isFrameUnusable(cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2)) {
-            Py_XDECREF(cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2);
+        if (isFrameUnusable(cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2)) {
+            Py_XDECREF(cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2 == NULL) {
+            if (cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2 = MAKE_FUNCTION_FRAME(codeobj_754e0e1c9205757d97e96f8c44ac10ba, module_MathcadPy$_application, sizeof(void *));
+            cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2 = MAKE_FUNCTION_FRAME(codeobj_18fd8dec6823605605cc1d818bf4d3f0, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2->m_type_description == NULL);
-        frame_754e0e1c9205757d97e96f8c44ac10ba_2 = cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2;
+        assert(cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2->m_type_description == NULL);
+        frame_18fd8dec6823605605cc1d818bf4d3f0_2 = cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_754e0e1c9205757d97e96f8c44ac10ba_2);
+        pushFrameStack(frame_18fd8dec6823605605cc1d818bf4d3f0_2);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_754e0e1c9205757d97e96f8c44ac10ba_2) == 2); // Frame stack
+        assert(Py_REFCNT(frame_18fd8dec6823605605cc1d818bf4d3f0_2) == 2); // Frame stack
 
         // Framed code:
         {
             PyObject *tmp_defaults_1;
-            tmp_defaults_1 = mod_consts[167];
+            tmp_defaults_1 = mod_consts[166];
             Py_INCREF(tmp_defaults_1);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__1___init__(tmp_defaults_1);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[168], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[167], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17687,7 +17687,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__3_activate();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[171], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[170], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17703,7 +17703,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__4_active_sheet();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[173], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[172], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17719,7 +17719,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__5_worksheet_names();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[175], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[174], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17735,7 +17735,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__6_worksheet_paths();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[177], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[176], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -17784,7 +17784,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__7_open(tmp_annotations_1);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[179], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[178], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17799,13 +17799,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_2;
-            tmp_defaults_2 = mod_consts[181];
+            tmp_defaults_2 = mod_consts[180];
             Py_INCREF(tmp_defaults_2);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__8_close_all(tmp_defaults_2);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[182], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__1_Mathcad_13, mod_consts[181], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -17820,7 +17820,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_754e0e1c9205757d97e96f8c44ac10ba_2);
+        RESTORE_FRAME_EXCEPTION(frame_18fd8dec6823605605cc1d818bf4d3f0_2);
 #endif
 
         // Put the previous frame back on top.
@@ -17831,35 +17831,35 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         frame_exception_exit_2:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_754e0e1c9205757d97e96f8c44ac10ba_2);
+        RESTORE_FRAME_EXCEPTION(frame_18fd8dec6823605605cc1d818bf4d3f0_2);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_754e0e1c9205757d97e96f8c44ac10ba_2, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_754e0e1c9205757d97e96f8c44ac10ba_2->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_754e0e1c9205757d97e96f8c44ac10ba_2, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_18fd8dec6823605605cc1d818bf4d3f0_2, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_18fd8dec6823605605cc1d818bf4d3f0_2->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_18fd8dec6823605605cc1d818bf4d3f0_2, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_754e0e1c9205757d97e96f8c44ac10ba_2,
+            frame_18fd8dec6823605605cc1d818bf4d3f0_2,
             type_description_2,
             outline_0_var___class__
         );
 
 
         // Release cached frame if used for exception.
-        if (frame_754e0e1c9205757d97e96f8c44ac10ba_2 == cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2) {
+        if (frame_18fd8dec6823605605cc1d818bf4d3f0_2 == cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2);
-            cache_frame_754e0e1c9205757d97e96f8c44ac10ba_2 = NULL;
+            Py_DECREF(cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2);
+            cache_frame_18fd8dec6823605605cc1d818bf4d3f0_2 = NULL;
         }
 
-        assertFrameObject(frame_754e0e1c9205757d97e96f8c44ac10ba_2);
+        assertFrameObject(frame_18fd8dec6823605605cc1d818bf4d3f0_2);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -17881,16 +17881,16 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             PyObject *tmp_kwargs_name_2;
             CHECK_OBJECT(tmp_class_creation_1__metaclass);
             tmp_called_name_2 = tmp_class_creation_1__metaclass;
-            tmp_tuple_element_2 = mod_consts[165];
+            tmp_tuple_element_2 = mod_consts[164];
             tmp_args_name_2 = PyTuple_New(3);
             PyTuple_SET_ITEM0(tmp_args_name_2, 0, tmp_tuple_element_2);
-            tmp_tuple_element_2 = mod_consts[155];
+            tmp_tuple_element_2 = mod_consts[154];
             PyTuple_SET_ITEM0(tmp_args_name_2, 1, tmp_tuple_element_2);
             tmp_tuple_element_2 = locals_MathcadPy$_application$$$class__1_Mathcad_13;
             PyTuple_SET_ITEM0(tmp_args_name_2, 2, tmp_tuple_element_2);
             CHECK_OBJECT(tmp_class_creation_1__class_decl_dict);
             tmp_kwargs_name_2 = tmp_class_creation_1__class_decl_dict;
-            frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 13;
+            frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 13;
             tmp_assign_source_11 = CALL_FUNCTION(tmp_called_name_2, tmp_args_name_2, tmp_kwargs_name_2);
             Py_DECREF(tmp_args_name_2);
             if (tmp_assign_source_11 == NULL) {
@@ -17971,7 +17971,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         exception_lineno = 13;
         goto try_except_handler_1;
         outline_result_1:;
-        UPDATE_STRING_DICT1(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[165], tmp_assign_source_10);
+        UPDATE_STRING_DICT1(moduledict_MathcadPy$_application, (Nuitka_StringObject *)mod_consts[164], tmp_assign_source_10);
     }
     goto try_end_1;
     // Exception handler code:
@@ -18023,7 +18023,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_dict_arg_name_5;
         PyObject *tmp_key_name_5;
         PyObject *tmp_bases_name_2;
-        tmp_key_name_4 = mod_consts[154];
+        tmp_key_name_4 = mod_consts[153];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_4 = tmp_class_creation_2__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_4, tmp_key_name_4);
@@ -18037,7 +18037,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         condexpr_true_2:;
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_5 = tmp_class_creation_2__class_decl_dict;
-        tmp_key_name_5 = mod_consts[154];
+        tmp_key_name_5 = mod_consts[153];
         tmp_metaclass_name_2 = DICT_GET_ITEM_WITH_ERROR(tmp_dict_arg_name_5, tmp_key_name_5);
         if (tmp_metaclass_name_2 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18054,7 +18054,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         tmp_metaclass_name_2 = (PyObject *)&PyType_Type;
         Py_INCREF(tmp_metaclass_name_2);
         condexpr_end_2:;
-        tmp_bases_name_2 = mod_consts[155];
+        tmp_bases_name_2 = mod_consts[154];
         tmp_assign_source_13 = SELECT_METACLASS(tmp_metaclass_name_2, tmp_bases_name_2);
         Py_DECREF(tmp_metaclass_name_2);
         if (tmp_assign_source_13 == NULL) {
@@ -18074,7 +18074,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         nuitka_bool tmp_condition_result_6;
         PyObject *tmp_key_name_6;
         PyObject *tmp_dict_arg_name_6;
-        tmp_key_name_6 = mod_consts[154];
+        tmp_key_name_6 = mod_consts[153];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_dict_arg_name_6 = tmp_class_creation_2__class_decl_dict;
         tmp_res = DICT_HAS_ITEM(tmp_dict_arg_name_6, tmp_key_name_6);
@@ -18089,7 +18089,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     branch_yes_4:;
     CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
     tmp_dictdel_dict = tmp_class_creation_2__class_decl_dict;
-    tmp_dictdel_key = mod_consts[154];
+    tmp_dictdel_key = mod_consts[153];
     tmp_result = DICT_REMOVE_ITEM(tmp_dictdel_dict, tmp_dictdel_key);
     if (tmp_result == false) {
         assert(ERROR_OCCURRED());
@@ -18107,7 +18107,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_expression_name_5;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_expression_name_5 = tmp_class_creation_2__metaclass;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[156]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_5, mod_consts[155]);
         tmp_condition_result_7 = (tmp_result) ? NUITKA_BOOL_TRUE : NUITKA_BOOL_FALSE;
         if (tmp_condition_result_7 == NUITKA_BOOL_TRUE) {
             goto branch_yes_5;
@@ -18124,7 +18124,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_kwargs_name_3;
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_expression_name_6 = tmp_class_creation_2__metaclass;
-        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[156]);
+        tmp_called_name_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_6, mod_consts[155]);
         if (tmp_called_name_3 == NULL) {
             assert(ERROR_OCCURRED());
 
@@ -18135,10 +18135,10 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_4;
         }
-        tmp_args_name_3 = mod_consts[184];
+        tmp_args_name_3 = mod_consts[183];
         CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
         tmp_kwargs_name_3 = tmp_class_creation_2__class_decl_dict;
-        frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 93;
+        frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 93;
         tmp_assign_source_14 = CALL_FUNCTION(tmp_called_name_3, tmp_args_name_3, tmp_kwargs_name_3);
         Py_DECREF(tmp_called_name_3);
         if (tmp_assign_source_14 == NULL) {
@@ -18160,7 +18160,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_expression_name_7;
         CHECK_OBJECT(tmp_class_creation_2__prepared);
         tmp_expression_name_7 = tmp_class_creation_2__prepared;
-        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_7, mod_consts[158]);
+        tmp_result = HAS_ATTR_BOOL(tmp_expression_name_7, mod_consts[157]);
         tmp_operand_name_2 = (tmp_result) ? Py_True : Py_False;
         tmp_res = CHECK_IF_TRUE(tmp_operand_name_2);
         if (tmp_res == -1) {
@@ -18191,11 +18191,11 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         PyObject *tmp_getattr_attr_2;
         PyObject *tmp_getattr_default_2;
         tmp_raise_type_2 = PyExc_TypeError;
-        tmp_left_name_2 = mod_consts[159];
+        tmp_left_name_2 = mod_consts[158];
         CHECK_OBJECT(tmp_class_creation_2__metaclass);
         tmp_getattr_target_2 = tmp_class_creation_2__metaclass;
-        tmp_getattr_attr_2 = mod_consts[160];
-        tmp_getattr_default_2 = mod_consts[161];
+        tmp_getattr_attr_2 = mod_consts[159];
+        tmp_getattr_default_2 = mod_consts[160];
         tmp_tuple_element_3 = BUILTIN_GETATTR(tmp_getattr_target_2, tmp_getattr_attr_2, tmp_getattr_default_2);
         if (tmp_tuple_element_3 == NULL) {
             assert(ERROR_OCCURRED());
@@ -18216,7 +18216,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             tmp_type_arg_2 = tmp_class_creation_2__prepared;
             tmp_expression_name_8 = BUILTIN_TYPE1(tmp_type_arg_2);
             assert(!(tmp_expression_name_8 == NULL));
-            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[160]);
+            tmp_tuple_element_3 = LOOKUP_ATTRIBUTE(tmp_expression_name_8, mod_consts[159]);
             Py_DECREF(tmp_expression_name_8);
             if (tmp_tuple_element_3 == NULL) {
                 assert(ERROR_OCCURRED());
@@ -18278,8 +18278,8 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         // Tried code:
         // Tried code:
-        tmp_dictset_value = mod_consts[162];
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[163], tmp_dictset_value);
+        tmp_dictset_value = mod_consts[161];
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[162], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -18290,7 +18290,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_6;
         }
-        tmp_dictset_value = mod_consts[185];
+        tmp_dictset_value = mod_consts[184];
         tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[143], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18303,7 +18303,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             goto try_except_handler_6;
         }
         tmp_dictset_value = mod_consts[15];
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[166], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[165], tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
 
@@ -18314,42 +18314,42 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             goto try_except_handler_6;
         }
-        if (isFrameUnusable(cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3)) {
-            Py_XDECREF(cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3);
+        if (isFrameUnusable(cache_frame_458ca302b53781e55fc8254e915e6314_3)) {
+            Py_XDECREF(cache_frame_458ca302b53781e55fc8254e915e6314_3);
 
 #if _DEBUG_REFCOUNTS
-            if (cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3 == NULL) {
+            if (cache_frame_458ca302b53781e55fc8254e915e6314_3 == NULL) {
                 count_active_frame_cache_instances += 1;
             } else {
                 count_released_frame_cache_instances += 1;
             }
             count_allocated_frame_cache_instances += 1;
 #endif
-            cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3 = MAKE_FUNCTION_FRAME(codeobj_4985a9f64740ff2e1e53709bd1aef4de, module_MathcadPy$_application, sizeof(void *));
+            cache_frame_458ca302b53781e55fc8254e915e6314_3 = MAKE_FUNCTION_FRAME(codeobj_458ca302b53781e55fc8254e915e6314, module_MathcadPy$_application, sizeof(void *));
 #if _DEBUG_REFCOUNTS
         } else {
             count_hit_frame_cache_instances += 1;
 #endif
         }
-        assert(cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3->m_type_description == NULL);
-        frame_4985a9f64740ff2e1e53709bd1aef4de_3 = cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3;
+        assert(cache_frame_458ca302b53781e55fc8254e915e6314_3->m_type_description == NULL);
+        frame_458ca302b53781e55fc8254e915e6314_3 = cache_frame_458ca302b53781e55fc8254e915e6314_3;
 
         // Push the new frame as the currently active one.
-        pushFrameStack(frame_4985a9f64740ff2e1e53709bd1aef4de_3);
+        pushFrameStack(frame_458ca302b53781e55fc8254e915e6314_3);
 
         // Mark the frame object as in use, ref count 1 will be up for reuse.
-        assert(Py_REFCNT(frame_4985a9f64740ff2e1e53709bd1aef4de_3) == 2); // Frame stack
+        assert(Py_REFCNT(frame_458ca302b53781e55fc8254e915e6314_3) == 2); // Frame stack
 
         // Framed code:
         {
             PyObject *tmp_defaults_3;
-            tmp_defaults_3 = mod_consts[186];
+            tmp_defaults_3 = mod_consts[185];
             Py_INCREF(tmp_defaults_3);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__9___init__(tmp_defaults_3);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[168], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[167], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18366,7 +18366,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__10_activate();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[171], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[170], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18380,13 +18380,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_4;
-            tmp_defaults_4 = mod_consts[189];
+            tmp_defaults_4 = mod_consts[188];
             Py_INCREF(tmp_defaults_4);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__11_close(tmp_defaults_4);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[190], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[189], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18403,7 +18403,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__12_save();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[192], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[191], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18452,7 +18452,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__13_save_as(tmp_annotations_2);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[194], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[193], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18469,7 +18469,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__14_name();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[196], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[195], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18485,7 +18485,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__15_is_readonly();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[198], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[197], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18499,13 +18499,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_5;
-            tmp_defaults_5 = mod_consts[186];
+            tmp_defaults_5 = mod_consts[185];
             Py_INCREF(tmp_defaults_5);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__16_is_modified(tmp_defaults_5);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[200], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[199], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18522,7 +18522,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__17_pause_calculation();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[202], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[201], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18538,7 +18538,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__18_resume_calculation();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[204], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[203], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18570,7 +18570,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__20_get_input();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[207], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[206], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18602,7 +18602,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__22_get_matrix_input();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[210], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[209], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18648,13 +18648,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_6;
-            tmp_defaults_6 = mod_consts[214];
+            tmp_defaults_6 = mod_consts[213];
             Py_INCREF(tmp_defaults_6);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__25_get_real_output(tmp_defaults_6);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[215], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[214], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18669,13 +18669,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_7;
-            tmp_defaults_7 = mod_consts[214];
+            tmp_defaults_7 = mod_consts[213];
             Py_INCREF(tmp_defaults_7);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__26_get_matrix_output(tmp_defaults_7);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[217], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[216], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18690,13 +18690,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_8;
-            tmp_defaults_8 = mod_consts[219];
+            tmp_defaults_8 = mod_consts[218];
             Py_INCREF(tmp_defaults_8);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__27_set_real_input(tmp_defaults_8);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[220], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[219], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18713,7 +18713,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__28_set_string_input();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[222], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[221], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18727,13 +18727,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
         {
             PyObject *tmp_defaults_9;
-            tmp_defaults_9 = mod_consts[219];
+            tmp_defaults_9 = mod_consts[218];
             Py_INCREF(tmp_defaults_9);
 
 
             tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__29_set_matrix_input(tmp_defaults_9);
 
-            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[224], tmp_dictset_value);
+            tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[223], tmp_dictset_value);
             Py_DECREF(tmp_dictset_value);
             if (tmp_res != 0) {
                 assert(ERROR_OCCURRED());
@@ -18782,7 +18782,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
         tmp_dictset_value = MAKE_FUNCTION_MathcadPy$_application$$$function__32_syncronize();
 
-        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[228], tmp_dictset_value);
+        tmp_res = PyObject_SetItem(locals_MathcadPy$_application$$$class__2_Worksheet_93, mod_consts[227], tmp_dictset_value);
         Py_DECREF(tmp_dictset_value);
         if (tmp_res != 0) {
             assert(ERROR_OCCURRED());
@@ -18796,7 +18796,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         }
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_4985a9f64740ff2e1e53709bd1aef4de_3);
+        RESTORE_FRAME_EXCEPTION(frame_458ca302b53781e55fc8254e915e6314_3);
 #endif
 
         // Put the previous frame back on top.
@@ -18807,35 +18807,35 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
         frame_exception_exit_3:;
 
 #if 0
-        RESTORE_FRAME_EXCEPTION(frame_4985a9f64740ff2e1e53709bd1aef4de_3);
+        RESTORE_FRAME_EXCEPTION(frame_458ca302b53781e55fc8254e915e6314_3);
 #endif
 
         if (exception_tb == NULL) {
-            exception_tb = MAKE_TRACEBACK(frame_4985a9f64740ff2e1e53709bd1aef4de_3, exception_lineno);
-        } else if (exception_tb->tb_frame != &frame_4985a9f64740ff2e1e53709bd1aef4de_3->m_frame) {
-            exception_tb = ADD_TRACEBACK(exception_tb, frame_4985a9f64740ff2e1e53709bd1aef4de_3, exception_lineno);
+            exception_tb = MAKE_TRACEBACK(frame_458ca302b53781e55fc8254e915e6314_3, exception_lineno);
+        } else if (exception_tb->tb_frame != &frame_458ca302b53781e55fc8254e915e6314_3->m_frame) {
+            exception_tb = ADD_TRACEBACK(exception_tb, frame_458ca302b53781e55fc8254e915e6314_3, exception_lineno);
         }
 
         // Attaches locals to frame if any.
         Nuitka_Frame_AttachLocals(
-            frame_4985a9f64740ff2e1e53709bd1aef4de_3,
+            frame_458ca302b53781e55fc8254e915e6314_3,
             type_description_2,
             outline_1_var___class__
         );
 
 
         // Release cached frame if used for exception.
-        if (frame_4985a9f64740ff2e1e53709bd1aef4de_3 == cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3) {
+        if (frame_458ca302b53781e55fc8254e915e6314_3 == cache_frame_458ca302b53781e55fc8254e915e6314_3) {
 #if _DEBUG_REFCOUNTS
             count_active_frame_cache_instances -= 1;
             count_released_frame_cache_instances += 1;
 #endif
 
-            Py_DECREF(cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3);
-            cache_frame_4985a9f64740ff2e1e53709bd1aef4de_3 = NULL;
+            Py_DECREF(cache_frame_458ca302b53781e55fc8254e915e6314_3);
+            cache_frame_458ca302b53781e55fc8254e915e6314_3 = NULL;
         }
 
-        assertFrameObject(frame_4985a9f64740ff2e1e53709bd1aef4de_3);
+        assertFrameObject(frame_458ca302b53781e55fc8254e915e6314_3);
 
         // Put the previous frame back on top.
         popFrameStack();
@@ -18860,13 +18860,13 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
             tmp_tuple_element_4 = mod_consts[15];
             tmp_args_name_4 = PyTuple_New(3);
             PyTuple_SET_ITEM0(tmp_args_name_4, 0, tmp_tuple_element_4);
-            tmp_tuple_element_4 = mod_consts[155];
+            tmp_tuple_element_4 = mod_consts[154];
             PyTuple_SET_ITEM0(tmp_args_name_4, 1, tmp_tuple_element_4);
             tmp_tuple_element_4 = locals_MathcadPy$_application$$$class__2_Worksheet_93;
             PyTuple_SET_ITEM0(tmp_args_name_4, 2, tmp_tuple_element_4);
             CHECK_OBJECT(tmp_class_creation_2__class_decl_dict);
             tmp_kwargs_name_4 = tmp_class_creation_2__class_decl_dict;
-            frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame.f_lineno = 93;
+            frame_6892340176eb9cc08251e698b2b69dab->m_frame.f_lineno = 93;
             tmp_assign_source_17 = CALL_FUNCTION(tmp_called_name_4, tmp_args_name_4, tmp_kwargs_name_4);
             Py_DECREF(tmp_args_name_4);
             if (tmp_assign_source_17 == NULL) {
@@ -18979,23 +18979,23 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
 
     // Restore frame exception if necessary.
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_40ebc8245c20f7dc396b60848d94a3cd);
+    RESTORE_FRAME_EXCEPTION(frame_6892340176eb9cc08251e698b2b69dab);
 #endif
     popFrameStack();
 
-    assertFrameObject(frame_40ebc8245c20f7dc396b60848d94a3cd);
+    assertFrameObject(frame_6892340176eb9cc08251e698b2b69dab);
 
     goto frame_no_exception_3;
 
     frame_exception_exit_1:;
 #if 0
-    RESTORE_FRAME_EXCEPTION(frame_40ebc8245c20f7dc396b60848d94a3cd);
+    RESTORE_FRAME_EXCEPTION(frame_6892340176eb9cc08251e698b2b69dab);
 #endif
 
     if (exception_tb == NULL) {
-        exception_tb = MAKE_TRACEBACK(frame_40ebc8245c20f7dc396b60848d94a3cd, exception_lineno);
-    } else if (exception_tb->tb_frame != &frame_40ebc8245c20f7dc396b60848d94a3cd->m_frame) {
-        exception_tb = ADD_TRACEBACK(exception_tb, frame_40ebc8245c20f7dc396b60848d94a3cd, exception_lineno);
+        exception_tb = MAKE_TRACEBACK(frame_6892340176eb9cc08251e698b2b69dab, exception_lineno);
+    } else if (exception_tb->tb_frame != &frame_6892340176eb9cc08251e698b2b69dab->m_frame) {
+        exception_tb = ADD_TRACEBACK(exception_tb, frame_6892340176eb9cc08251e698b2b69dab, exception_lineno);
     }
 
     // Put the previous frame back on top.
@@ -19015,7 +19015,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     {
         PyObject *tmp_assign_source_18;
         PyObject *tmp_annotations_3;
-        tmp_annotations_3 = PyDict_Copy(mod_consts[230]);
+        tmp_annotations_3 = PyDict_Copy(mod_consts[229]);
 
 
         tmp_assign_source_18 = MAKE_FUNCTION_MathcadPy$_application$$$function__33__matrix_to_array(tmp_annotations_3);
@@ -19025,7 +19025,7 @@ PyObject *modulecode_MathcadPy$_application(PyObject *module, struct Nuitka_Meta
     {
         PyObject *tmp_assign_source_19;
         PyObject *tmp_annotations_4;
-        tmp_annotations_4 = PyDict_Copy(mod_consts[231]);
+        tmp_annotations_4 = PyDict_Copy(mod_consts[230]);
 
 
         tmp_assign_source_19 = MAKE_FUNCTION_MathcadPy$_application$$$function__34__array_check(tmp_annotations_4);

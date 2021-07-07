@@ -3,7 +3,7 @@
 #include "structseq.h"
 
 // Global constants storage
-PyObject *global_constants[69];
+PyObject *global_constants[68];
 
 // Sentinel PyObject to be used for all our call iterator endings. It will
 // become a PyCObject pointing to NULL. It's address is unique, and that's
@@ -37,13 +37,13 @@ static void _createGlobalConstants(void) {
     /* Set the "sys.prefix" path to the original one. */
     PySys_SetObject(
         (char *)"prefix",
-        global_constants[68]
+        None
     );
 
     /* Set the "sys.prefix" path to the original one. */
     PySys_SetObject(
         (char *)"exec_prefix",
-        global_constants[68]
+        None
     );
 
 
@@ -51,13 +51,13 @@ static void _createGlobalConstants(void) {
     /* Set the "sys.base_prefix" path to the original one. */
     PySys_SetObject(
         (char *)"base_prefix",
-        global_constants[68]
+        None
     );
 
     /* Set the "sys.exec_base_prefix" path to the original one. */
     PySys_SetObject(
         (char *)"base_exec_prefix",
-        global_constants[68]
+        None
     );
 
 #endif

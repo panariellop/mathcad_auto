@@ -5,7 +5,7 @@ pip install -r requirements.txt
 
 How to package the application: 
 Nuitka: (python to exe converter -- runs on c)
-python -m nuitka --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' -o 'Mathcad Anchorage Automation' main.py
+python -m nuitka --standalone --follow-imports --windows-disable-console --windows-icon-from-ico='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico' main.py
 
 Nuitka Options:
   --version
