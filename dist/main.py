@@ -4,9 +4,9 @@
 # By: Piero Panariello
 # Created: July 2021 
 import os, sys
-#sys.path.insert(1, os.getcwd() + "\\build\\MathCadPy") #allows inport of mathcad module
-#from mathcadpy import Mathcad, Worksheet #loading custom
-from MathcadPy import Mathcad, Worksheet
+sys.path.append(os.getcwd() + "/main_build/MathcadPy") #allows inport of mathcad module
+from mathcadpy import Mathcad, Worksheet #loading custom
+#from MathcadPy import Mathcad, Worksheet
 #imports the images as binaries
 from images import *
 import PySimpleGUI as sg
