@@ -31,4 +31,4 @@ exe = EXE(pyz,
           upx=True,
           upx_exclude=[],
           runtime_tmpdir=None,
-          console=False )
+          console=False , icon='C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\main_build\\images\\ma_logo.ico')

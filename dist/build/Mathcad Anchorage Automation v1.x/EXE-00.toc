@@ -3,7 +3,7 @@
  False,
  False,
  False,
- 'c:\\users\\owner\\desktop\\mathcad_auto\\dist\\env\\lib\\site-packages\\PyInstaller\\bootloader\\images\\icon-windowed.ico',
+ 'C:\\Users\\Owner\\Desktop\\mathcad_auto\\dist\\main_build\\images\\ma_logo.ico',
  None,
  False,
  False,
@@ -2707,7 +2707,7 @@
  [],
  False,
  False,
- 1625687674,
+ 1625688576,
  [('runw.exe',
    'c:\\users\\owner\\desktop\\mathcad_auto\\dist\\env\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\runw.exe',
    'EXECUTABLE')])
