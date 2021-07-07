@@ -46,7 +46,7 @@
  [],
  False,
  False,
- 1625695415,
+ 1625695690,
  [('run.exe',
    'c:\\users\\owner\\desktop\\mathcad_auto\\dist\\env\\lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit\\run.exe',
    'EXECUTABLE')])

@@ -70,7 +70,7 @@ class Mathcad():
                 for i in range(self.__mcadapp.Worksheets.Count):  # a for loop because the Mathcad API is shit
                     sheet_object = self.__mcadapp.Worksheets.item(i)
                     local_worksheets[sheet_object.Name] = sheet_object# this is necessary because the open method only returns a basic IMathcadPrimeWorksheet object
-                print("Local_obj.Name: ", local_obj.Name)
+                print("Local_obj.Name: ", local_obj)
                 self.open_worksheets[local_obj.Name] = Worksheet(local_worksheets[local_obj.Name])  # add the worksheet into the open worksheets dictionary
                 return self.open_worksheets[local_obj.Name]  # return the worksheet object
             else:
