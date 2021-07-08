@@ -1,26 +1,38 @@
 #+TITLE: Todo
 #+author: Piero Panariello
 #+STARTUP: content
+#+BEGIN: clocktable :scope file :maxlevel 2
+#+CAPTION: Clock summary at [2021-07-08 Thu 12:52]
+| Headline     | Time   |
+|--------------+--------|
+| *Total time* | *0:00* |
+#+END:
 
 * TODO
-** Change size of preview images 
 ** Documentation 
-    Convert user and developer documentation to PDF format
+   Convert user and developer documentation to PDF format
 * In Progress
+** Fix Mathcad 5.0 Bug 
+   :LOGBOOK:
+   CLOCK: [2021-07-08 Thu 12:26]
+   :END:
+    - no localobj 
+    - Mathcad's example doesn't work, which makes me think that the issue is with how Mathcad Prime 5.0 was installed on the VDI
+    - Can create a virtual machine with windows installed as the operating system, then download mathcad and run the program from there
+    - Download Mathcad Prime 4.0 and test if it works  
+* Done
 ** CG in excel
     Set one of the inputs as center of gravity
-** Tooltips
-    Set tooltips in the program
-** Fix Mathcad 5.0 Bug 
-    - no localobj 
-* Done
 ** Excel doc
     Write some documentation on the excel sheet
 ** Project Number
     - Include project number as one of the required fields
     - Include prject number in the database 
 ** Python38.dll
-    Create a zip folder with the program, python38.dll, template files 
+    Create a zip folder with the program, python38.dll, template files
+** Tooltips
+    Set tooltips in the program
+** Change size of preview images
 * Testing
 * Not Possible
 ** Can save to database csv even when it is open in excel 
