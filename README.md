@@ -39,7 +39,7 @@
 
 <h3>Using your own files:</h3>
 <ul>
-<li>If you decide to use your own inputs, make sure to label them <b><my_label>_input</b>. For example, <b>omega_input</b> would work, but <b>omega_something</b> would not work.</li>  
+<li>If you decide to use your own inputs, make sure to label them <b>[my_label]_input</b>. For example, <b>omega_input</b> would work, but <b>omega_something</b> would not work.</li> 
 <li>To use your custom template, just choose it using the graphical user interface.</li>
 <li>If you decide to create your own custom template, then ensure that the inputs and outputs follow the format of the template provided.</li>
 </ul>

@@ -2,24 +2,26 @@
 #+author: Piero Panariello
 #+STARTUP: content
 #+BEGIN: clocktable :scope file :maxlevel 2
-#+CAPTION: Clock summary at [2021-07-08 Thu 12:52]
-| Headline     | Time   |
-|--------------+--------|
-| *Total time* | *0:00* |
+#+CAPTION: Clock summary at [2021-07-08 Thu 18:09]
+| Headline                |   Time |      |
+|-------------------------+--------+------|
+| *Total time*            | *3:59* |      |
+|-------------------------+--------+------|
+| In Progress             |   1:58 |      |
+| \_  Documentation       |        | 1:58 |
+| Not Possible            |   2:01 |      |
+| \_  Fix Mathcad 5.0 Bug |        | 2:01 |
 #+END:
 
-* TODO
-** Documentation 
-   Convert user and developer documentation to PDF format
+* Ideas
+** Package the application
+into a zip file and prepare for distribution
 * In Progress
-** Fix Mathcad 5.0 Bug 
-   :LOGBOOK:
-   CLOCK: [2021-07-08 Thu 12:26]
-   :END:
-    - no localobj 
-    - Mathcad's example doesn't work, which makes me think that the issue is with how Mathcad Prime 5.0 was installed on the VDI
-    - Can create a virtual machine with windows installed as the operating system, then download mathcad and run the program from there
-    - Download Mathcad Prime 4.0 and test if it works  
+** Documentation
+:LOGBOOK:
+CLOCK: [2021-07-08 Thu 16:10]--[2021-07-08 Thu 18:08]
+:END:
+   Convert user and developer documentation to PDF format
 * Done
 ** CG in excel
     Set one of the inputs as center of gravity
@@ -35,4 +37,15 @@
 ** Change size of preview images
 * Testing
 * Not Possible
-** Can save to database csv even when it is open in excel 
+** Can save to database csv even when it is open in excel
+** Fix Mathcad 5.0 Bug
+:LOGBOOK:
+CLOCK: [2021-07-08 Thu 12:37]--[2021-07-08 Thu 14:38] =>  2:01
+:END:
+
+    - no localobj
+    - Mathcad's example doesn't work, which makes me think that the issue is with how Mathcad Prime 5.0 was installed on the VDI
+    - Can create a virtual machine with windows installed as the operating system, then download mathcad and run the program from there
+    - Download Mathcad Prime 4.0 and test if it works
+    - If it doesn't work, might need to look at modifying the MathcadPy file
+    - Can't install legacy versions of Mathcad
