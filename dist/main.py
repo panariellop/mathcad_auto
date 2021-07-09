@@ -878,7 +878,7 @@ def generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:
     try:
         cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'][0])
         cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
-        cur_worksheet.set_string_input('project_name', cur_eqpt['project_name'][0])
+        cur_worksheet.set_string_input('project_number', cur_eqpt['project_number'][0])
     except:
         pass
 
