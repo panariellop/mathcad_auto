@@ -875,8 +875,11 @@ def generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:
             pass
 
     #name and mounting location:
-    cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'][0])
-    cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
+    try:
+        cur_worksheet.set_string_input('eqpt_name', cur_eqpt['eqpt_name'][0])
+        cur_worksheet.set_string_input('mounting_location', cur_eqpt['mounting_location'][0])
+    except:
+        pass
 
 
     #check if output folder exists, if not, make one
@@ -885,6 +888,8 @@ def generate_report(cur_eqpt, equipment:Equipment, file_name:str, template_file:
         os.makedirs(output_folder_filepath)
 
     report_filepath = output_folder_filepath + "/" + file_name + ".mcdx"
+    if not cur_worksheet.save_as(report_filepath): #checks if the document is already created or not, if it is, then create another unique name
+        report_filepath = report_filepath.split(".")[0] + "1"+ ".mcdx"
 
     if cur_worksheet.save_as(report_filepath): #save the report
         cur_worksheet.close()
