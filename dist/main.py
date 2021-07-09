@@ -718,10 +718,15 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
         if row[0] == "eqpt_name":
             headers = list(row) #will search for header row, then start to take data from the rest of the rows
             #Clean up header row
+            print(headers) #TODO Remove this for production
             while "" in headers:
                 headers.remove("")
             while None in headers:
                 headers.remove(None)
+            while " " in headers:
+                headers.remove(" ")
+
+
             header_row_found = True  
         elif header_row_found and row[0] is not None:
             cur_eqpt = dict()
