@@ -1,45 +1,97 @@
-<h1>Mathcad Anchorage Automation</h1>
-<b>Written by Piero Panariello</b>
+```{=org}
+#+STARTUP: showeverything
+```
+```{=org}
+#+LATEX_CLASS-OPTIONS: [letterpaper]
+```
+About
+=====
 
-<h3>About:</h3>
-<p>This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.</p>
-<p>Please note that this is only compatible with Mathcad Prime 3.1 and above.</p>
+This program is designed to help automate the heavy lifting of data
+entry into Mathcad for the equipment anchorage process. It helps you
+view and modify values taken from an excel spreadsheet before generating
+a mathcad report.
 
-<h3><a target = blank href = "https://youtu.be/La43SoQ3HMg">Tutorial</a></h3>
+Please note that this is only compatible with Mathcad Prime 3.1 and
+above. [Tutorial Video](https://youtu.be/La43SoQ3HMg)
 
-<h3>Installation and Use:</h3>
-<ul>
-<li>Go to the releases tab on this github page, find the lastest distribution and download it. Download the template files provided to get started.</li>
-<li>Double click the application_v1.exe file to launch the application.</li>
-<li>Select the excel file from the templates provided containing the equipment and the input data. The excel sheet should follow this format:</li>
+Installation
+============
 
-| eqpt\_name                 | mounting\_location | tags         | w\_p\_input(lb) | s\_ds\_input | a\_p\_input | r\_p\_input | i\_p\_input | z\_input | h\_input | capital\_a\_input(in) | capital\_b\_input(in) | a\_input(in) | b\_input(in) | capital\_h\_input(ft) | omega\_input |
-| -------------------------- | ------------------ | ------------ | --------------- | ------------ | ----------- | ----------- | ----------- | -------- | -------- | --------------------- | --------------------- | ------------ | ------------ | --------------------- | ------------ |
-| Anesthesia Machine         | Wall, Floor        | Medical, ICU | 335             | 1.121        | 1           | 2.5         | 1.5         | 0        | 75       | 30                    | 20.5                  | 1.5          | \-1.5        | 74.25                 | 2.5          |
-| Warming Cabinet            | Floor              | Medical      | 137             | 1.121        | 1           | 2.5         | 1.5         | 3        | 75       | 30                    | 21.5                  | 1.5          | \-3.5        | 24.5                  | 2.5          |
-| Surgical Scrub Sink        | Wall               | Medical      | 295             | 1.121        | 1           | 2.5         | 1.5         | 4        | 75       | 64                    | 28                    | 1.5          | \-3.5        | 39.5                  | 2.5          |
-| Retractable Ceiling Column | Ceiling            | Medical      | 800             | 1.121        | 1           | 2.5         | 1.5         | 15       | 75       |                       |                       | 14           | 14           | 45                    | 2.5          |
-</br>
-<i>Note: Tags should be seperated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview_images. Take a look at example_sheet.xlsx for reference.</i>
-<li>Select your Mathcad template file for each mounting locaiton. I have provided one to help you get started (01_LPCH ERCP_Anchorage_Template.mcdx).</li>
-<li>You can always go back to the file selection screen by clicking <b>Change Input Files</b>. You can reload the information from the excel spreadsheet by clicking <b>Refresh</b>.
-<li>If you want to save details about the report to a database, then click <b>Save to database?</b>.</li>
-<ul>
-    <li>The "database" is a .csv file containting all the calculations you have performed with the automation software. This helps with organiziation and future reference.</li>
-    <li>Choose the database that you want to make an entry into. If you choose an already existing database, your new reports will be appended. You can leave this field blank, and the software will automatically generate a database file saved to the same folder as the generated reports. </li>
-</ul>
-<li>Click the Previous or Next buttons to scroll the equipment listed in your excel file. </li>
-<li>Click the "Preview Calculation Outputs" button to preview the output values. 
-<li>Click the Generate button and provide a file name to generate a report for the equipment. You do not need to provide a filename if you are generating a report for all equipment entries.</li>
-<li>The application is processing your request once you click a buttion. A confirmation popup will appear when the processing is complete.</li>
-</ul>
-</br>
-<b>Note: all generated reports are saved in the folder called "mathcad_automation_output".</b>
+1.  Go to the releases tab on this github page, find the latest
+    distribution and download it. Download the template files provided
+    to get started.
+2.  Double click the **application_v1.exe** file to launch the
+    application.
 
+Use
+===
 
-<h3>Using your own files:</h3>
-<ul>
-<li>If you decide to use your own inputs, make sure to label them <b>[my_label]_input</b>. For example, <b>omega_input</b> would work, but <b>omega_something</b> would not work.</li> 
-<li>To use your custom template, just choose it using the graphical user interface.</li>
-<li>If you decide to create your own custom template, then ensure that the inputs and outputs follow the format of the template provided.</li>
-</ul>
+Select the excel file from the templates provided containing the
+equipment and the input data. The excel sheet should have the following
+key headers:
+
+  eqpt_name                    mounting_location   project_number   tags
+  ---------------------------- ------------------- ---------------- -------------------------
+  Anesthesia machine           Wall, Floor         1111             Medical, ICU, something
+  Warming Cabinet              Floor               1111             Medical
+  Surgical Scrub Sink          Wall                1111             Medical
+  Retractable Ceiling Column   Ceiling             1111             Medical
+
+Note: Tags should be separated by comma. If you decide to include units,
+put parentheses around the unit and do not include any spaces in the
+header. There must be two sheets - values and preview_images. Take a
+look at example_sheet.xlsx for reference.
+
+1.  Select your Mathcad template file for each mounting location. I have
+    provided a single file that works for each location to help you get
+    started. It is located on the same page as the latest distribution.
+2.  You can always go back to the file selection screen by clicking
+    **Change Input Files**. You can reload the information from the
+    excel spreadsheet by clicking **Refresh**.
+3.  If you want to save details about the report to the database, then
+    click **Save to Database**. See the section `Database` for more
+    information.
+4.  Click the Previous or Next buttons to scroll the equipment listed in
+    your excel file.
+5.  Click the \"Preview Calculation Outputs\" button to preview the
+    output values.
+6.  Click the Generate button and provide a file name to generate a
+    report for the equipment. You do not need to provide a filename if
+    you are generating a report for all equipment entries.
+7.  The application is processing your request once you click **Generate
+    Report** or **Generate Report For All**. A confirmation popup will
+    appear when the processing is complete.
+
+Database
+========
+
+1.  The \"database\" is a .csv file containing all the calculations you
+    have performed with the automation software. This helps with
+    organization and future reference.
+2.  Choose the database that you want to make an entry into. If you
+    choose an already existing database, your new reports will be
+    appended. You can leave this field blank, and the software will
+    automatically generate a database file saved to the same folder as
+    the generated reports.
+
+Important Information
+=====================
+
+1.  Make sure to select the appropriate Mathcad template file from the
+    teplates provided. If you are using Mathcad Prime 5.0, you must use
+    a file compatible with that version. Mathcad Prime is backward
+    compatible, however, and older files can be run on more modern
+    versions of the software.
+2.  All Generated reports are saved to a folder called
+    **mathcad_automation_output**. This folder is created (if it
+    doesn\'t exist already) in the same directory as the application.
+3.  Customizing the App: a. If you decide to you want to include your
+    own inputs and outputs, make sure to label your inputs
+    **\<my_label\>\_input**. For example, **alpha_input** would work,
+    but **alpha_something** would not. b. To use your own custom Mathcad
+    template, choose it using the **Change Input Files** button. Ensure
+    the format follows the example Mathcad template provided. c. To use
+    your own custom excel file, choose it using the **Change Input
+    Files** button. Your custom file must follow the formatting rules
+    explicitly defined in the example excel document.

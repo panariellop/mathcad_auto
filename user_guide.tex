@@ -1,4 +1,4 @@
-% Created 2021-07-09 Fri 15:13
+% Created 2021-07-09 Fri 16:26
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -26,7 +26,7 @@
  pdftitle={User Guide to Mathcad Automation Software},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 27.2 (Org mode 9.4.4)}, 
+ pdfcreator={Emacs 27.1 (Org mode 9.5)}, 
  pdflang={English}}
 \begin{document}
 
@@ -36,20 +36,20 @@
 
 
 \section{About}
-\label{sec:org7c0b97e}
+\label{sec:org7b95311}
 This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 3.1 and above.
 \href{https://youtu.be/La43SoQ3HMg}{Tutorial Video}
 
 \section{Installation}
-\label{sec:orge656ad0}
+\label{sec:org295f94f}
 \begin{enumerate}
-\item Go to the releases tab on this github page, find the lastest distribution and download it. Download the template files provided to get started.
-\item Double click the application\_v1.exe file to launch the application.
+\item Go to the releases tab on this github page, find the latest distribution and download it. Download the template files provided to get started.
+\item Double click the \textbf{application\_v1.exe} file to launch the application.
 \end{enumerate}
 \section{Use}
-\label{sec:org748c81c}
+\label{sec:org05c8cab}
 Select the excel file from the templates provided containing the equipment and the input data. The excel sheet should have the following key headers:
 \begin{center}
 \begin{tabular}{llrl}
@@ -59,33 +59,36 @@ eqpt\_name & mounting\_location & project\_number & tags\\
 Anesthesia machine & Wall, Floor & 1111 & Medical, ICU, something\\
 Warming Cabinet & Floor & 1111 & Medical\\
 Surgical Scrub Sink & Wall & 1111 & Medical\\
-Retratable Ceiling Column & Ceiling & 1111 & Medical\\
+Retractable Ceiling Column & Ceiling & 1111 & Medical\\
 \hline
 \end{tabular}
 \end{center}
-Note: Tags should be seperated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview\_images. Take a look at example\_sheet.xlsx for reference.
+Note: Tags should be separated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview\_images. Take a look at example\_sheet.xlsx for reference.
 \begin{enumerate}
-\item Select your Mathcad template file for each mounting locaiton. I have provided a single file that works for each location to help you get started. It is located on the same page as the latest distribution.
+\item Select your Mathcad template file for each mounting location. I have provided a single file that works for each location to help you get started. It is located on the same page as the latest distribution.
 \item You can always go back to the file selection screen by clicking \textbf{Change Input Files}. You can reload the information from the excel spreadsheet by clicking \textbf{Refresh}.
 \item If you want to save details about the report to the database, then click \textbf{Save to Database}. See the section \texttt{Database} for more information.
 \item Click the Previous or Next buttons to scroll the equipment listed in your excel file.
-\item Click the "Preview Calculation Outputs" button to preview the output values.
+\item Click the ``Preview Calculation Outputs'' button to preview the output values.
 \item Click the Generate button and provide a file name to generate a report for the equipment. You do not need to provide a filename if you are generating a report for all equipment entries.
 \item The application is processing your request once you click \textbf{Generate Report} or \textbf{Generate Report For All}. A confirmation popup will appear when the processing is complete.
 \end{enumerate}
 \section{Database}
-\label{sec:orgb4731a8}
+\label{sec:orgf737122}
 \begin{enumerate}
-\item The "database" is a .csv file containting all the calculations you have performed with the automation software. This helps with organiziation and future reference.
+\item The ``database'' is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
 \item Choose the database that you want to make an entry into. If you choose an already existing database, your new reports will be appended. You can leave this field blank, and the software will automatically generate a database file saved to the same folder as the generated reports.
 \end{enumerate}
 \section{Important Information}
-\label{sec:orgb21c9ff}
+\label{sec:orga94bab5}
 \begin{enumerate}
+\item Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, and older files can be run on more modern versions of the software.
 \item All Generated reports are saved to a folder called \textbf{mathcad\_automation\_output}. This folder is created (if it doesn't exist already) in the same directory as the application.
 \item Customizing the App:
-a. If you decide to you want to include your own inputs and outputs, make sure to label your inputs \textbf{<my\_label>\_input}. For example, \textbf{alpha\_input} would work, but \textbf{alpha\_something} would not.
-b. To use your own custom Mathcad template, choose it using the \textbf{Change Input Files} button. Ensure the format follows the example Mathcad template provided.
-c. To use your own custom excel file, choose it using the \textbf{Change Input Files} button. Your custom file must follow the formating rules explicity defined in the example excel document.
+\begin{enumerate}
+\item If you decide to you want to include your own inputs and outputs, make sure to label your inputs \textbf{<my\_label>\_input}. For example, \textbf{alpha\_input} would work, but \textbf{alpha\_something} would not.
+\item To use your own custom Mathcad template, choose it using the \textbf{Change Input Files} button. Ensure the format follows the example Mathcad template provided.
+\item To use your own custom excel file, choose it using the \textbf{Change Input Files} button. Your custom file must follow the formatting rules explicitly defined in the example excel document.
+\end{enumerate}
 \end{enumerate}
 \end{document}
