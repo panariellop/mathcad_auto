@@ -4,7 +4,10 @@ env\scripts\activate
 pip install -r requirements.txt
 
 Pyinstaller (I use pyinstaller because it doesn't throw a python38.dll error)
+Developer Line:
 PyInstaller --paths='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\MathcadPy' -i "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" --name "Mathcad_Anchorage_Automation_v1.1" main.py 
+Production Line:
+PyInstaller --onefile --windowed --paths='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\MathcadPy' -i "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" --name "Mathcad_Anchorage_Automation_v1.1" main.py 
 
 How to package the application: 
 Nuitka: (python to exe converter -- runs on c)

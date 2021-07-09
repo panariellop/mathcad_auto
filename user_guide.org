@@ -18,7 +18,7 @@ Please note that this is only compatible with Mathcad Prime 3.1 and above.
 
 * Installation
 1. Go to the releases tab on this github page, find the latest distribution and download it. Download the template files provided to get started.
-2. Double click the application_v1.exe file to launch the application.
+2. Double click the *application_v1.exe* file to launch the application.
 * Use
 Select the excel file from the templates provided containing the equipment and the input data. The excel sheet should have the following key headers:
 |---------------------------+-------------------+----------------+-------------------------|
