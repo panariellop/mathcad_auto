@@ -716,7 +716,12 @@ def get_eqpt_from_xl(filepath:str)->Equipment:
     header_row_found = False
     for idx, row in enumerate(sheet.iter_rows(values_only=True)):
         if row[0] == "eqpt_name":
-            headers = list(row) #will search for header row, then start to take data from the rest of the rows 
+            headers = list(row) #will search for header row, then start to take data from the rest of the rows
+            #Clean up header row
+            while "" in headers:
+                headers.remove("")
+            while None in headers:
+                headers.remove(None)
             header_row_found = True  
         elif header_row_found and row[0] is not None:
             cur_eqpt = dict()
