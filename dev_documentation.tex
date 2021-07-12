@@ -1,4 +1,4 @@
-% Created 2021-07-09 Fri 16:24
+% Created 2021-07-12 Mon 13:15
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -16,10 +16,10 @@
 \usepackage{hyperref}
 \usepackage[legalpaper, portrait, margin=1in]{geometry}
 \author{Piero Panariello}
-\documentclass[7pt]
 \author{Piero Panariello}
 \date{\today}
-\title{Developer Documentation for Mathcad Automation Software}
+\title{Developer Documentation for Mathcad Automation Software\\\medskip
+\large Thornton and Tomasetti}
 \hypersetup{
  pdfauthor={Piero Panariello},
  pdftitle={Developer Documentation for Mathcad Automation Software},
@@ -34,7 +34,7 @@
 
 
 \section{Technologies Used}
-\label{sec:org9c791f4}
+\label{sec:org7854667}
 \begin{enumerate}
 \item Python is the programming language of choice
 \item PySimpleGUI : used to render the graphical user interface. \href{https://pysimplegui.readthedocs.io/en/latest/}{Documentation}
@@ -46,72 +46,72 @@
 \end{enumerate}
 
 \section{Mathcad API}
-\label{sec:org8009997}
+\label{sec:org628ebf9}
 Currently, the Mathcad API supports Mathcad Prime 3.0 and above. From my testing it works best with Mathcad Prime 7.0 (the lastest version). The API documentation can be located \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. You can purchase the SDK from Mathcad to get more information and examples, but I would recommend against it (it's \$9000).
 \section{Datypes and Storage of Data}
-\label{sec:orga595035}
+\label{sec:org384616c}
 \subsubsection{Equipment Class: (stores all the equipment from the excel file)}
-\label{sec:orgc63ce3f}
+\label{sec:org22b82d8}
 \begin{enumerate}
 \item Class variables:
-\label{sec:org1806f12}
+\label{sec:org4cb61c6}
 \begin{itemize}
-\item self.items = list()
+\item \textbf{self.items} = list()
 \end{itemize}
 List of all the equipment in the excel file, stored as individual dictionaries.
 
 \begin{itemize}
-\item self.cur\_index = 0
+\item \textbf{self.cur\_index} = 0
 \end{itemize}
 The current index of the equipment that the user is viewing in the GUI
 
 \begin{itemize}
-\item self.length = 0
+\item \textbf{self.length} = 0
 \end{itemize}
 Holds the length of self.items
 
 \begin{itemize}
-\item self.fields = list()
+\item \textbf{self.fields} = list()
 \end{itemize}
 A list of all the elements from the header row from the excel document
 
 \begin{itemize}
-\item self.names = list()
+\item \textbf{self.names} = list()
 \end{itemize}
 A list of all the equipment names from the excel document
 
 \begin{itemize}
-\item self.inputs = list()
+\item \textbf{self.inputs} = list()
 \end{itemize}
 A list of all the inputs from the header row in the excel document
 
 \item Class methods:
-\label{sec:org134d424}
+\label{sec:org19681f6}
 
 \begin{itemize}
-\item append(self, to\_append:dict) Takes in a dict as an argument
+\item \textbf{append(self, to\_append:dict)} Takes in a dict as an argument
 \end{itemize}
 Appends self.items with the new equipment dictionary, appends self.names, appends self.inputs
 
 \begin{itemize}
-\item next\_index(self) No arguments
+\item \textbf{next\_index(self)} No arguments
 \end{itemize}
 Increments the value of self.cur\_index
 
 \begin{itemize}
-\item prev\_index(self) No arguments
+\item \textbf{prev\_index(self)} No arguments
 \end{itemize}
 Decriments the value of self.cur\_index
 \end{enumerate}
 
 \subsubsection{Outputs Class: (stores the values of the outputs when the user decides to preview the output variables from the Mathcad file)}
-\label{sec:org7b556e1}
+\label{sec:org3ccf58b}
 \begin{enumerate}
 \item Class variables:
-\label{sec:org937b509}
+\label{sec:orge60f7e7}
 
 \begin{itemize}
-\item self.items = list()
+\item \textbf{self.items} = list()
 \end{itemize}
 Follows the format:
 alias, [value, unit, power]
@@ -120,30 +120,31 @@ alias, [value, unit, power]
 ['f\_p\_tot\_output', [76.65291480057748, 'kg', 0]],
 \ldots{}
 \item Class methods:
-\label{sec:orgadde688}
+\label{sec:org243dda9}
 \begin{itemize}
-\item append(self, to\_append)Takes tuple or list argument
+\item \textbf{append(self, to\_append)} Takes tuple or list argument
 \end{itemize}
 Converts to\_append to array and appends self.items
 
 \begin{itemize}
-\item clear(self)
+\item \textbf{clear(self)} Takes no arguments
 \end{itemize}
 Clears self.items
 
 \begin{itemize}
-\item display(self)->list No arguments
+\item \textbf{display(self)->list} Takes no arguments
 \end{itemize}
 Returns a list of variables and values that is easier to display in the GUI. Rounds decimals to 2 digits.
 Ex: [ 'f\_p\_tot\_output = 408.82 kg', 'f\_p\_min\_output = 76.65 kg', \ldots{}]
 \end{enumerate}
 
-\section{Excel and Mathcad}
-\label{sec:org60b0758}
+\section{API Details}
+\label{sec:org8a4c024}
 
 The MathcadPy library is used as a wrapper that allows you to access all of the mathcad api endpoints from the comfort of Python. You can read more about the Mathcad API \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. The API allows you to modify and change Mathcad Prime files. Despite PTC's documenation, you cannot print documents.
 
-The function get\_eqpt\_from\_xl(filepath:str)->Equipment takes in the filepath of the input excel file and returns the Equipment object. This function is executed right after the choose files window is closed.
+\textbf{get\_eqpt\_from\_xl(filepath:str)->Equipment}
+    Takes in the filepath of the input excel file and returns the \textbf{Equipment} object. This function is executed right after the choose files window is closed.
 
 The excel table looks similar to the one below:
 \begin{center}
@@ -159,24 +160,34 @@ Retratable Ceiling Column & Ceiling & 1111 & Medical\\
 \end{tabular}
 \end{center}
 
-The function pre\_generate\_report(equipment:Equipment, files, generating\_multiple\_reports = False) acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the generate\_report function. The function generate\_report(cur\_eqpt, equipment:Equipment, file\_name:str, template\_file:str, files, debug = False)->bool connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called num\_threads in the event generate\_report\_for\_all.
+\textbf{pre\_generate\_report(equipment:Equipment, files, generating\_multiple\_reports = False)}
+    This acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the generate\_report function.
 
-The function mathcad\_calculate(eqpt, files, debug = False) allows the user to preview the Mathcad calculation output. It duplicates the template file into a temp file, takes the inputs and waits for the outputs to generate. It then deletes the temp file when finished. It returns a dictionary with the output values. The debug variable changes if Mathcad will display the windows being edited or not. When debug = False, no window is shown, when debug = True, windows are shown.
+\textbf{generate\_report(cur\_eqpt, equipment:Equipment, file\_name:str, template\_file:str, files, debug = False)->bool}
+    The function connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called \textbf{num\_threads} in the event \textbf{generate\_report\_for\_all}. (Events are how PySimpleGUI handles buttons being pressed. Events are checked in the main GUI loop.)
+
+\textbf{mathcad\_calculate(eqpt, files, debug = False)->dict}
+    Allows the user to preview the Mathcad calculation output. It duplicates the template file into a temp file, takes the inputs and waits for the outputs to generate. It then deletes the temp file when finished. It returns a dictionary with the output values. The debug variable changes if Mathcad will display the windows being edited or not. When \textbf{debug = False}, no window is shown, when \textbf{debug = True}, windows are shown.
 
 \section{Rendering to the GUI}
-\label{sec:org8f9190b}
-Choose equipment: Once the user has input the excel file they want to read from, the program extracts all information in the get\_eqpt\_from\_xl function and places all the equipment names in the Choose Equipment column.
+\label{sec:org4440a59}
+\textbf{Choose equipment}
+    Once the user has input the excel file they want to read from, the program extracts all information in the \textbf{get\_eqpt\_from\_xl} function and places all the equipment names in the Choose Equipment column.
 
-Inputs: Once we get the Equipment from the get\_eqpt\_from\_xl function, we can then render it to the input fields in the GUI.
+\textbf{Inputs}
+    Once we get the Equipment from the \textbf{get\_eqpt\_from\_xl} function, we can then render it to the input fields in the GUI.
 
-Outputs: If the user clicks the Preview Calculation Outputs button, the inputs from the current equipment being used is sent to the template corresponding to the correct mounting location and the output fields are gathered via the mathcad\_calculate function. The outputs are saved in the Outputs class and the information is displayed in the GUI.
+\textbf{Outputs}
+    If the user clicks the Preview Calculation Outputs button, the inputs from the current equipment being used is sent to the template corresponding to the correct mounting location and the output fields are gathered via the \textbf{mathcad\_calculate} function. The outputs are saved in the Outputs class and the information is displayed in the GUI.
 
-Preview Images: The user has the option to include preview images that correspond to the mounting locations. The images must be included in the excel document. Use the example\_sheet.xlsx as a template. Images muse be .png or .jpg or .jpeg. The images are gathered from the excel sheet using the get\_images\_from\_xl(self, num\_images:int) function. Images are stored as binaries. When the user views a different equipment, the image corresponding to the mounting location is loaded into the Image Preview section of the GUI. Use ./dist/img\_to\_b64.py to convert images from .png/.jpg to binaries. It provides a python file called output.py with the binaries stored in variables. Preview images are automatically converted to binaries in get\_images\_from\_xl.
+\textbf{Preview Images}
+    The user has the option to include preview images that correspond to the mounting locations. The images must be included in the excel document. Use the example\_sheet.xlsx as a template. Images muse be .png or .jpg or .jpeg. The images are gathered from the excel sheet using the \textbf{get\_images\_from\_xl(self, num\_images:int)} function. Images are stored as binaries. When the user views a different equipment, the image corresponding to the mounting location is loaded into the Image Preview section of the GUI. Use ./dist/img\_to\_b64.py to convert images from .png/.jpg to binaries. It provides a python file called output.py with the binaries stored in variables. Preview images are automatically converted to binaries in \textbf{get\_images\_from\_xl}.
 
 \section{Saving to the Database}
-\label{sec:org8ea2cb7}
+\label{sec:org1ed8f59}
 
-Saving to Database: The database is a .csv file which holds some important information about generated repors. The function save\_to\_csv is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the mathcad\_automation\_output folder.
+\textbf{Saving to Database}
+    The database is a .csv file which holds some important information about generated repors. The function save\_to\_csv is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the \textbf{mathcad\_automation\_output} directory.
 
 The table looks like the one below:
 \begin{center}
@@ -191,10 +202,10 @@ Date & Tags & Name & Mounting Location & File Name\\
 \end{tabular}
 \end{center}
 \section{Flowchart}
-\label{sec:org4f1ac1d}
+\label{sec:org09e8b63}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./dist/documentation/component_flowchart.png}
-\caption{\label{fig:1}Flow chart of program functions}
+\caption{\label{fig:1}Flow chart of program API}
 \end{figure}
 \end{document}

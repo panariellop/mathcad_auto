@@ -1,4 +1,4 @@
-% Created 2021-07-09 Fri 16:26
+% Created 2021-07-12 Mon 13:19
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -36,20 +36,20 @@
 
 
 \section{About}
-\label{sec:org7b95311}
+\label{sec:org943ca02}
 This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 3.1 and above.
 \href{https://youtu.be/La43SoQ3HMg}{Tutorial Video}
 
 \section{Installation}
-\label{sec:org295f94f}
+\label{sec:org54a9f58}
 \begin{enumerate}
 \item Go to the releases tab on this github page, find the latest distribution and download it. Download the template files provided to get started.
 \item Double click the \textbf{application\_v1.exe} file to launch the application.
 \end{enumerate}
 \section{Use}
-\label{sec:org05c8cab}
+\label{sec:org9e17ebf}
 Select the excel file from the templates provided containing the equipment and the input data. The excel sheet should have the following key headers:
 \begin{center}
 \begin{tabular}{llrl}
@@ -63,7 +63,7 @@ Retractable Ceiling Column & Ceiling & 1111 & Medical\\
 \hline
 \end{tabular}
 \end{center}
-Note: Tags should be separated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - values and preview\_images. Take a look at example\_sheet.xlsx for reference.
+Note: Tags should be separated by comma. If you decide to include units, put parentheses around the unit and do not include any spaces in the header. There must be two sheets - \textbf{values} and \textbf{preview\_images}. Take a look at \textbf{example\_sheet.xlsx} for reference.
 \begin{enumerate}
 \item Select your Mathcad template file for each mounting location. I have provided a single file that works for each location to help you get started. It is located on the same page as the latest distribution.
 \item You can always go back to the file selection screen by clicking \textbf{Change Input Files}. You can reload the information from the excel spreadsheet by clicking \textbf{Refresh}.
@@ -74,13 +74,13 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 \item The application is processing your request once you click \textbf{Generate Report} or \textbf{Generate Report For All}. A confirmation popup will appear when the processing is complete.
 \end{enumerate}
 \section{Database}
-\label{sec:orgf737122}
+\label{sec:orga17cb46}
 \begin{enumerate}
 \item The ``database'' is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
-\item Choose the database that you want to make an entry into. If you choose an already existing database, your new reports will be appended. You can leave this field blank, and the software will automatically generate a database file saved to the same folder as the generated reports.
+\item Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the same folder as the generated reports, and the new reports will be appended.
 \end{enumerate}
 \section{Important Information}
-\label{sec:orga94bab5}
+\label{sec:org36fcba3}
 \begin{enumerate}
 \item Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, and older files can be run on more modern versions of the software.
 \item All Generated reports are saved to a folder called \textbf{mathcad\_automation\_output}. This folder is created (if it doesn't exist already) in the same directory as the application.

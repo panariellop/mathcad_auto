@@ -788,7 +788,7 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     return equipment
 
 
-def mathcad_calculate(eqpt, files, debug=False):
+def mathcad_calculate(eqpt, files, debug=False)->dict:
     """
     Gets all the inputs and performs calculations,
     returns a dictionary with the output values
