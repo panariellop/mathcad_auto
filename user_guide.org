@@ -5,7 +5,7 @@
 #+OPTIONS: ^:nil
 #+STARTUP: showeverything
 #+LATEX_CLASS-OPTIONS: [letterpaper]
-#+LATEX_HEADER: \usepackage[legalpaper, portrait, margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage[letterpaper, portrait, margin=1in]{geometry}
 #+LATEX_HEADER: \author{Piero Panariello}
 #+LATEX_HEADER: \documentclass[7pt]
 

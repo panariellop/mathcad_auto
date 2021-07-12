@@ -4,7 +4,7 @@
 #+OPTIONS: toc:t
 #+OPTIONS: ^:nil
 #+STARTUP: showeverything
-#+LATEX_HEADER: \usepackage[legalpaper, portrait, margin=1in]{geometry}
+#+LATEX_HEADER: \usepackage[letterpaper, portrait, margin=1in]{geometry}
 #+LATEX_HEADER: \author{Piero Panariello}
 
 * Technologies Used
@@ -116,13 +116,13 @@ The MathcadPy library is used as a wrapper that allows you to access all of the 
     The database is a .csv file which holds some important information about generated repors. The function save_to_csv is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the *mathcad_automation_output* directory.
 
 The table looks like the one below:
-|------------+---------+----------------------------+-------------------+----------------------|
-|       Date | Tags    | Name                       | Mounting Location | File Name            |
-|------------+---------+----------------------------+-------------------+----------------------|
-| 2021-06-30 | MEDICAL | RETRACTABLE CEILING COLUMN | CEILING           | test.mcdx            |
-| 2021-06-30 | MEDICAL | RETRACTABLE CEILING COLUMN | CEILING           | Retractable_....mcdx |
-| 2021-06-30 | MEDICAL | SURGICAL SCRUB SINK        | WALL              | Surgical_....mcdx    |
-|------------+---------+----------------------------+-------------------+----------------------|
+|------------+---------+---------------+-------------------+----------------------|
+|       Date | Tags    | Name          | Mounting Location | File Name            |
+|------------+---------+---------------+-------------------+----------------------|
+| 2021-06-30 | MEDICAL | RET... COLUMN | CEILING           | test.mcdx            |
+| 2021-06-30 | MEDICAL | RET... COLUMN | CEILING           | Retractable_....mcdx |
+| 2021-06-30 | MEDICAL | SUR... SINK   | WALL              | Surgical_....mcdx    |
+|------------+---------+---------------+-------------------+----------------------|
 * Flowchart
 #+CAPTION: Flow chart of program API
 #+NAME:     fig:1
