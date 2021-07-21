@@ -168,6 +168,9 @@ class Popup():
         self.message = message
 
     def confirm(self) -> bool:
+        """
+        Confirmation window - if you want to confirm with the user yes/no
+        """
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message), ],
@@ -185,6 +188,9 @@ class Popup():
                 return True
 
     def alert(self):
+        """
+        Alert window - alert the user with a message
+        """
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message)],
@@ -200,6 +206,9 @@ class Popup():
                 pass
 
     def take_input(self, trailing_text: str) -> str:
+        """
+        Input window - if you want the user to input some information
+        """
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message), sg.InputText(key="input", size=(15, 1)), sg.Text(trailing_text)],
