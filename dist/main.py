@@ -229,10 +229,9 @@ class Popup():
             [sg.Image(data=image)]
         ])
         while True: #logic loop
-        """
-        Window will stay active until the user exits the window or they click
-        the OK buttion
-        """
+            """
+            Window will stay active until the user exits the window or they click the OK buttion
+            """
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
                 popup.close()
