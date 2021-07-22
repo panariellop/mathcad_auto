@@ -14,6 +14,7 @@
 \usepackage{amssymb}
 \usepackage{capt-of}
 \usepackage{hyperref}
+\usepackage{listings}
 \usepackage[letterpaper, portrait, margin=1in]{geometry}
 \author{Piero Panariello}
 \author{Piero Panariello}
@@ -47,7 +48,7 @@
 
 \section{Mathcad API}
 \label{sec:org28a2280}
-Currently, the Mathcad API supports Mathcad Prime 3.0 and above. From my testing it works best with Mathcad Prime 7.0 (the lastest version). The API documentation can be located \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. You can purchase the SDK from Mathcad to get more information and examples, but I would recommend against it (it's \$9000).
+Currently, the Mathcad API supports Mathcad Prime 3.0 and above. From my testing it works best with Mathcad Prime 7.0 (the lastest version). The API documentation can be located \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. You can purchase the SDK from PTC to get more information and examples, but I would recommend against it (it's \$9000).
 \section{Datypes and Storage of Data}
 \label{sec:org129ae49}
 \subsubsection{Equipment Class: (stores all the equipment from the excel file)}
@@ -164,7 +165,7 @@ Retratable Ceiling Column & Ceiling & 1111 & Medical\\
     This acts as a pre-fight test. It checks if the proper template is given for the equipment and passes the equipment and a uniquely generated filename to the generate\_report function.
 
 \textbf{generate\_report(cur\_eqpt, equipment:Equipment, file\_name:str, template\_file:str, files, debug = False)->bool}
-    The function connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generateing multiple reports, multithreading is used to speed up the process. Currently 4 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called \textbf{num\_threads} in the event \textbf{generate\_report\_for\_all}. (Events are how PySimpleGUI handles buttons being pressed. Events are checked in the main GUI loop.)
+    The function connects to the Mathcad API, opens the template file specific to the mounting location, updates the input values specific to the equipment, and then saves the document. If generating multiple reports, multithreading is used to speed up the process. Currently 16 threads are being used, but feel free to increase this number if the workflow demands more throughput. This variable is called \textbf{num\_threads} in the event \textbf{generate\_report\_for\_all}. See section 8 (Improving Performance) for more details. (Events are how PySimpleGUI handles buttons being pressed. Events are checked in the main GUI loop.)
 
 \textbf{mathcad\_calculate(eqpt, files, debug = False)->dict}
     Allows the user to preview the Mathcad calculation output. It duplicates the template file into a temp file, takes the inputs and waits for the outputs to generate. It then deletes the temp file when finished. It returns a dictionary with the output values. The debug variable changes if Mathcad will display the windows being edited or not. When \textbf{debug = False}, no window is shown, when \textbf{debug = True}, windows are shown.
@@ -204,8 +205,45 @@ Date & Tags & Name & Mounting Location & File Name\\
 \section{Flowchart}
 \label{sec:org2688bed}
 \begin{figure}[htbp]
-\centering
+\begin{centering}
 \includegraphics[width=.9\linewidth]{./dist/documentation/component_flowchart.png}
 \caption{\label{fig:1}Flow chart of program API}
+
+\end{centering}
 \end{figure}
+
+\section{Improving Performance}
+\label{sec:orgdcdaf9d}
+While the application is performant, there are a few ways to tune the application to improve performance. The function that is least performant is the \textbf{generate\_report\_for\_all} event. Multiple reports need to be generated through Mathcad. To improve performance, I implemented parallel processing. This allows multiple processes to run at the same time: each report is run on a seperate process and is then joined when each process finishes. The \textbf{num\_threads=16} variable allows you to adjust the number of parallel processes occuring. This number is limited to your computer's available threads. I suggest starting at \textbf{num\_threads = 16} and slowly increasing the variable by powers of 2 (ex: 16, 32, 64) until you achieve the desired performance. Keep in mind that the speed in which the Mathcad API can run to generate a single report is constant. Increasing \textbf{num\_threads} will only increase performance if the number of reports to be generated is greater than \textbf{num\_threads}. Note that performance will not be increased if \textbf{num\_threads} is greater than the number of reports to be generated. 
+
+\section{Re-Creating the Virtual Environment}
+\label{sec:orgccc3af9d}
+Typical python projects use a "virtual environment" to test and develop the application. This allows for consitancy between machines running the same program. In order to activate the virtual environment, first install \textbf{virtualenv} using pip. 
+\begin{verbatim}
+pip install virtualenv
+\end{verbatim}
+Then, create the virtual environment in the project's ./dist directory using the command below. 
+\begin{verbatim}
+python -m venv env 
+\end{verbatim}
+This creates a virtual envionment called \textbf{env} in the ./dist directory. \\
+Then, activate the virtual environment using the command below. 
+\begin{verbatim}
+env\scripts\activate 
+\end{verbatim}
+Then, install all the project requirements into the virtual environment by running. 
+\begin{verbatim}
+pip install -r requirements.txt  
+\end{verbatim}
+You can now make changes to main.py and test it. 
+
+\section{Packaging and Distribution}
+\label{sec:orgcccaf9d}
+I have found that PyInstaller is the best method to package python applications. It "freezes" the code in order to create an executable. Install PyInstaller using pip, and ensure that it is installed by typing \begin{verbatim}PyInstaller\end{verbatim} in PowerShell. If it is properly installed, run the code below within the activated virtual environment to package the application. Copy the following code onto \textbf{one line} in PowerShell to run it. 
+\begin{verbatim}
+PyInstaller --onefile --windowed 
+--paths= "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\MathcadPy" 
+ -i  "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" 
+ --name "Mathcad_Anchorage_Automation_v1.1" main.py 
+\end{verbatim}
 \end{document}
