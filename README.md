@@ -1,9 +1,3 @@
-```{=org}
-#+STARTUP: showeverything
-```
-```{=org}
-#+LATEX_CLASS-OPTIONS: [letterpaper]
-```
 About
 =====
 
@@ -30,18 +24,28 @@ Use
 Select the excel file from the templates provided containing the
 equipment and the input data. The excel sheet should have the following
 key headers:
-
-  eqpt_name                    mounting_location   project_number   tags
-  ---------------------------- ------------------- ---------------- -------------------------
-  Anesthesia machine           Wall, Floor         1111             Medical, ICU, something
-  Warming Cabinet              Floor               1111             Medical
-  Surgical Scrub Sink          Wall                1111             Medical
-  Retractable Ceiling Column   Ceiling             1111             Medical
+<table>
+<tr>
+<th>eqpt_name</th><th>mounting_location</th><th>project_number</th><th>tags</th>
+</tr>
+<tr>
+  <td>Anesthesia machine</td><td>Wall, Floor</td><td>1111</td><td>Medical, ICU, something</td>
+</tr>
+<tr>
+  <td>Warming Cabinet</td><td>Floor</td><td>1111</td><td>Medical</td>
+</tr>
+<tr>
+  <td>Surgical Scrub Sink</td><td>Wall</td><td>1111</td><td>Medical</td>
+</tr>
+<tr>
+  <td>Retractable Ceiling Column</td><td>Ceiling</td><td>1111</td><td>Medical</td>
+</tr>
+</table
 
 Note: Tags should be separated by comma. If you decide to include units,
 put parentheses around the unit and do not include any spaces in the
-header. There must be two sheets - values and preview_images. Take a
-look at example_sheet.xlsx for reference.
+header. There must be two sheets - **values** and **preview_images**. Take a
+look at **example_sheet.xlsx** for reference.
 
 1.  Select your Mathcad template file for each mounting location. I have
     provided a single file that works for each location to help you get
