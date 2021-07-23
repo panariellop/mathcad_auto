@@ -42,11 +42,41 @@ class SelectTemplates():
         self.database = ""
         self.save_to_database = True
         self.excel = ""
+        self.template_layout = []
+        self.templates = {}
         self.wall_template = ""
         self.floor_template = ""
         self.wallfloor_template = ""
         self.ceiling_template = ""
         self.images = dict()
+
+    def choose_templates(self):
+        sg.theme("Reddit")
+        window = sg.Window("Choose Template Files", [
+            self.template_layout,
+            [sg.Button("Continue", key = "continue", button_color = "green", enable_events = True)]
+        ], icon = ma_logo_png)
+        while True: #logic loop
+            event, values = window.read()
+            if event == 'OK' or event == sg.WIN_CLOSED:
+                window.close()
+                return False
+            if event == "continue":
+                #set each template to the corresponding GUI item
+                errors = []
+                for k, v in self.templates.items():
+                    if check_file_type(values[k+"_name"], "mcdx"):
+                        self.templates[k] = values[k+"_name"]
+                    else:
+                        errors.append(k+" must be a .mcdx file.")
+
+                if len(errors) < 1:
+                    window.close()
+                    return self.templates
+                else:
+                    popup = Popup("Error", "".join(errors))
+                    popup.alert()
+
 
     def display_and_update(self):
         """
@@ -56,31 +86,15 @@ class SelectTemplates():
         window = sg.Window("Mathcad Automation", [
             [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key="excel_file", enable_events=True),
                                               sg.InputText(self.excel, key="excel_name", size=(30, 1),
-                                                           background_color='white', enable_events=True)], ])],
+                                                           background_color='white', enable_events=True),],
+
+                                              [sg.Button("Choose Templates", key = "load_excel", enable_events = True)],
+                                            ])],
             [sg.Frame("Choose Database File", [[sg.FileBrowse(key="database_file", enable_events=True),
                                                 sg.InputText(self.database, key="database_name", size=(30, 1),
                                                              background_color='white', enable_events=True)], ])],
             [sg.Checkbox("Save to database?", key="save_to_database", default=self.save_to_database,
                          tooltip="If selected, details about the generated report will be saved to a database.")],
-
-            [sg.Frame("Choose Mathcad Templates*", [
-                [sg.Frame("Choose Wall Mounted Template", [[sg.FileBrowse(key="wall_template_file", enable_events=True),
-                                                            sg.InputText(self.wall_template, key="wall_template_name",
-                                                                         size=(30, 1), background_color='white',
-                                                                         enable_events=True)], ])],
-                [sg.Frame("Choose Floor Mounted Template", [
-                    [sg.FileBrowse(key="floor_template_file", enable_events=True),
-                     sg.InputText(self.floor_template, key="floor_template_name", size=(30, 1),
-                                  background_color='white', enable_events=True)], ])],
-                [sg.Frame("Choose Floor and Wall Mounted Template", [
-                    [sg.FileBrowse(key="wallfoor_template_file", enable_events=True),
-                     sg.InputText(self.wallfloor_template, key="wallfloor_template_name", size=(30, 1),
-                                  background_color='white', enable_events=True)], ])],
-                [sg.Frame("Choose Ceiling Mounted Template", [
-                    [sg.FileBrowse(key="ceiling_template_file", enable_events=True),
-                     sg.InputText(self.ceiling_template, key="ceiling_template_name", size=(30, 1),
-                                  background_color='white', enable_events=True)], ])],
-            ])],
 
             [sg.Button("Continue", key="continue", button_color="green")],
 
@@ -92,6 +106,27 @@ class SelectTemplates():
                 window.close()
                 return False
             else:
+                if event == "load_excel":
+                    """
+                    load the excel file and search for different mounting locations
+                    """
+                    if check_file_type(values['excel_name'], 'xlsx'):
+                        self.excel = values['excel_name']
+                        #get the mounting locations
+                        equipment = get_eqpt_from_xl(self.excel)
+                        self.template_layout = []
+                        for idx, item in enumerate(equipment.mounting_locations):
+                            if item not in self.templates:
+                                self.templates[item] = ""
+                            self.template_layout += [
+                                [sg.Text("Choose " + item + " mounting template:")],
+                                [sg.FileBrowse(key= item, enable_events=True),
+                                  sg.InputText(self.templates[item], key=item + "_name",
+                                  size=(60, 1), background_color='white', enable_events=True)],
+                            ]
+                        self.choose_templates()
+
+
                 if event == "continue":  # user has input all information
                     # list of all the user errors when they input information
                     errors = list()
@@ -107,25 +142,6 @@ class SelectTemplates():
                         self.excel = values['excel_name']
                     else:
                         errors.append("Excel file must be a .xlsx file.")
-                    #check if the templates are .mcdx
-                    if check_file_type(values['wall_template_name'], "mcdx") or values['wall_template_name'] == "":
-                        self.wall_template = values['wall_template_name']
-                    else:
-                        errors.append("Wall template file must be a .mcdx file.")
-                    if check_file_type(values['floor_template_name'], "mcdx") or values['floor_template_name'] == "":
-                        self.floor_template = values['floor_template_name']
-                    else:
-                        errors.append("Floor template must be a .mcdx file.")
-                    if check_file_type(values['wallfloor_template_name'], "mcdx") or values[
-                        'wallfloor_template_name'] == "":
-                        self.wallfloor_template = values['wallfloor_template_name']
-                    else:
-                        errors.append("Wall and Floor template must be a .mcdx file.")
-                    if check_file_type(values['ceiling_template_name'], "mcdx") or values[
-                        'ceiling_template_name'] == "":
-                        self.ceiling_template = values['ceiling_template_name']
-                    else:
-                        errors.append("Ceiling template must be a .mcdx file.")
                     # Error handling
                     if len(errors) == 0: #no errors
                         window.close()
@@ -250,6 +266,7 @@ class Equipment():
         self.fields = list()
         self.names = list()
         self.inputs = list()
+        self.mounting_locations = list()
 
     def append(self, to_append: dict):
         """
@@ -264,6 +281,8 @@ class Equipment():
                 self.fields.append(key)
             if key == 'eqpt_name' or key == "Equipment Name":  # append names of equiptment (always the first column in the template file)
                 self.names.append(field[0])
+            if key == "mounting_location" and field[0] not in self.mounting_locations:
+                self.mounting_locations.append(field[0])
             if key.split("_")[-1] == "input" and key not in self.inputs:
                 self.inputs.append(key)
         return
@@ -408,27 +427,6 @@ def check_file_type(filename, filetype):
         return False
     return True
 
-
-def test_template_exists(template_file: str, mounting_location: str) -> bool:
-    """
-    Tests if a template exists for a given mounting location
-    """
-    if mounting_location == "WALL" and template_file != "":
-        return True
-    elif mounting_location == "FLOOR" and template_file != "":
-        return True
-    elif mounting_location == "FLOOR,WALL" and template_file != "":
-        return True
-    elif mounting_location == "FLOOR, WALL" and template_file != "":
-        return True
-    elif mounting_location == "WALL, FLOOR" and template_file != "":
-        return True
-    elif mounting_location == "WALL,FLOOR" and template_file != "":
-        return True
-    elif mounting_location == "CEILING" and template_file != "":
-        return True
-    else:
-        return False
 
 
 def resource_path(relative_path):
@@ -652,23 +650,6 @@ def load_gui():
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
             """
-            Update the maximum tension and shear anchor points labels
-            """
-            if event == "connection_to_base" or event == "connection_to_eqpt":
-                if values["connection_to_base"] == "ASD":
-                    window['base_t_max_det_label'].update("T_max=")
-                    window['base_v_max_det_label'].update("V_max=")
-                if values["connection_to_eqpt"] == "ASD":
-                    window['eqpt_t_max_det_label'].update("T_max=")
-                    window['eqpt_v_max_det_label'].update("V_max=")
-                if values["connection_to_base"] == "LRFD":
-                    window['base_t_max_det_label'].update("T_u=")
-                    window['base_v_max_det_label'].update("V_u=")
-                if values["connection_to_eqpt"] == "LRFD":
-                    window['eqpt_t_max_det_label'].update("T_u=")
-                    window['eqpt_v_max_det_label'].update("V_u=")
-
-            """
             Generate report for one eqpt
             """
             if event == "generate_report":
@@ -689,59 +670,62 @@ def load_gui():
             Generate Report for all eqpt
             """
             if event == "generate_report_for_all":
-                #check if templates exist
-                if files.excel == "" or files.wall_template == "" or files.floor_template == "" or files.wallfloor_template == "" or files.ceiling_template == "":
-                    alert = Popup("Alert", "Please select templates for each mounting location")
-                    alert.alert()
-                else:
-                    """
-                    Using multithreading to improve speed
-                    Each thread is an independant process, and keeps track of its
-                    local variables. Once it is finished with the proces, we must
-                    merge all "hanging" threads into the main thread.
-                    """
-                    threads = list()
-                    num_threads = 16
-                    cur_row = 0
-                    equipment.cur_index = 0  # set to beginning of list
-                    while cur_row < len(equipment.items):
-                        for i in range(num_threads):
-                            if (cur_row < len(equipment.items)):
-                                print(f'Processing equipment: {cur_row + 1}/{len(equipment.items)}')
-                                #create a thread who's target is pre_generate_report
-                                t = threading.Thread(target=pre_generate_report, args=(equipment, files, True))
-                                threads.append(t) #append list so we can keep track of active threads
-                                t.start() #starts thread
-                                cur_row += 1
-                                equipment.next_index()
-                            else:
-                                break
-                        for i in range(len(threads)):
-                            threads[i].join()  # join all threads to the main thread when finished
-                    print("Finished threading ...")
-                    # cleanup files -- need to guess the file names (performance should be fine for <1000 pieces of equipment)
+                """
+                Using multithreading to improve speed
+                Each thread is an independant process, and keeps track of its
+                local variables. Once it is finished with the proces, we must
+                merge all "hanging" threads into the main thread.
+                """
+                threads = list()
+                num_threads = 16
+                cur_row = 0
+                equipment.cur_index = 0  # set to beginning of list
+                while cur_row < len(equipment.items):
+                    for i in range(num_threads):
+                        if (cur_row < len(equipment.items)):
+                            print(f'Processing equipment: {cur_row + 1}/{len(equipment.items)}')
+                            #create a thread who's target is pre_generate_report
+                            t = threading.Thread(target=pre_generate_report, args=(equipment, files, True))
+                            threads.append(t) #append list so we can keep track of active threads
+                            t.start() #starts thread
+                            cur_row += 1
+                            equipment.next_index()
+                        else:
+                            break
+                    for i in range(len(threads)):
+                        threads[i].join()  # join all threads to the main thread when finished
+                print("Finished threading ...")
+                # cleanup files -- need to guess the file names (performance should be fine for <1000 pieces of equipment)
+                for k, v in files.templates.items():
                     for i in range(len(equipment.items)):
                         try:
-                            os.remove(files.wall_template.split(".")[0] + str(i) + ".mcdx")
-                        except:
-                            continue
-                    for i in range(len(equipment.items)):
-                        try:
-                            os.remove(files.floor_template.split(".")[0] + str(i) + ".mcdx")
-                        except:
-                            continue
-                    for i in range(len(equipment.items)):
-                        try:
-                            os.remove(files.wallfloor_template.split(".")[0] + str(i) + ".mcdx")
-                        except:
-                            continue
-                    for i in range(len(equipment.items)):
-                        try:
-                            os.remove(files.ceiling_template.split(".")[0] + str(i) + ".mcdx")
-                        except:
-                            continue
-                    alert = Popup("File saved", "All files have been saved successfuly.")
-                    alert.alert()
+                            os.remove(v.split(".")[0]+str(i)+".mcdx")
+                        except: continue
+
+                # for i in range(len(equipment.items)):
+                #     try:
+                #         os.remove(files.templates[cu])
+                #     try:
+                #         os.remove(files.wall_template.split(".")[0] + str(i) + ".mcdx")
+                #     except:
+                #         continue
+                # for i in range(len(equipment.items)):
+                #     try:
+                #         os.remove(files.floor_template.split(".")[0] + str(i) + ".mcdx")
+                #     except:
+                #         continue
+                # for i in range(len(equipment.items)):
+                #     try:
+                #         os.remove(files.wallfloor_template.split(".")[0] + str(i) + ".mcdx")
+                #     except:
+                #         continue
+                # for i in range(len(equipment.items)):
+                #     try:
+                #         os.remove(files.ceiling_template.split(".")[0] + str(i) + ".mcdx")
+                #     except:
+                #         continue
+                alert = Popup("File saved", "All files have been saved successfuly.")
+                alert.alert()
 
             """
             Preview
@@ -862,23 +846,20 @@ def mathcad_calculate(eqpt, files, debug=False)->dict:
     cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible=debug) #creates a Mathcadpy object
     # Choose template files depending on the mounting location
-    if cur_eqpt['mounting_location'][0].upper() == "WALL":
-        template_file = files.wall_template
-    elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
-        template_file = files.floor_template
-    elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][
-        0].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'][0].upper() == "FLOOR,WALL" or cur_eqpt['mounting_location'][0].upper() == "FLOOR, WALL" :
-        template_file = files.wallfloor_template
-    elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
-        template_file = files.ceiling_template
-    else:  # defaults to floor mounted
-        template_file = files.floor_template
 
-    # Test if the template acutally exists
-    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'][0].upper()) != True:
-        alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
-        alert.alert()
-        return dict()  # template does not exist
+    template_file = files.templates[cur_eqpt['mounting_location'][0]]
+
+    # if cur_eqpt['mounting_location'][0].upper() == "WALL":
+    #     template_file = files.wall_template
+    # elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
+    #     template_file = files.floor_template
+    # elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][
+    #     0].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'][0].upper() == "FLOOR,WALL" or cur_eqpt['mounting_location'][0].upper() == "FLOOR, WALL" :
+    #     template_file = files.wallfloor_template
+    # elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
+    #     template_file = files.ceiling_template
+    # else:  # defaults to floor mounted
+    #     template_file = files.floor_template
 
     # Create a new temp file to fill in the values
     new_filepath = template_file.split("/")[0:-1]
@@ -926,49 +907,51 @@ def pre_generate_report(equipment: Equipment, files, generating_multiple_reports
     """
     copy files and select template file depending on the mounting location of the cur_eqpt
     """
-    if cur_eqpt['mounting_location'][0].upper() == "WALL":
-        if generating_multiple_reports:
-            template_file = files.wall_template.split(".")[0] + str(
-                equipment.cur_index) + ".mcdx"  # need this to enable multithreading
-            copyfile(files.wall_template, template_file)  # need to copy file to prevent collisions in writing/reading
-        else:
-            template_file = files.wall_template
+    if generating_multiple_reports:
+        template_file = files.templates[cur_eqpt['mounting_location'][0]].split(".")[0] + str(
+        equipment.cur_index) + ".mcdx"
+        copyfile(files.templates[cur_eqpt['mounting_location'][0]], template_file)
+    else:
+        template_file = files.templates[cur_eqpt['mounting_location'][0]]
 
+    # if cur_eqpt['mounting_location'][0].upper() == "WALL":
+    #     if generating_multiple_reports:
+    #         template_file = files.wall_template.split(".")[0] + str(
+    #             equipment.cur_index) + ".mcdx"  # need this to enable multithreading
+    #         copyfile(files.wall_template, template_file)  # need to copy file to prevent collisions in writing/reading
+    #     else:
+    #         template_file = files.wall_template
+    #
+    #
+    # elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
+    #     if generating_multiple_reports:
+    #         template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+    #         copyfile(files.wall_template, template_file)
+    #     else:
+    #         template_file = files.floor_template
+    #
+    # elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][
+    #     0].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'][0].upper() == "FLOOR, WALL" or \
+    #         cur_eqpt['mounting_location'][0].upper() == "FLOOR,WALL":
+    #     if generating_multiple_reports:
+    #         template_file = files.wallfloor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+    #         copyfile(files.wall_template, template_file)
+    #     else:
+    #         template_file = files.wallfloor_template
+    #
+    # elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
+    #     if generating_multiple_reports:
+    #         template_file = files.ceiling_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+    #         copyfile(files.wall_template, template_file)
+    #     else:
+    #         template_file = files.ceiling_template
+    # else:  # defaults to floor mounted
+    #     if generating_multiple_reports:
+    #         template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
+    #         copyfile(files.wall_template, template_file)
+    #     else:
+    #         template_file = files.floor_template
 
-    elif cur_eqpt['mounting_location'][0].upper() == "FLOOR":
-        if generating_multiple_reports:
-            template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
-            copyfile(files.wall_template, template_file)
-        else:
-            template_file = files.floor_template
-
-    elif cur_eqpt['mounting_location'][0].upper() == "WALL, FLOOR" or cur_eqpt['mounting_location'][
-        0].upper() == "WALL,FLOOR" or cur_eqpt['mounting_location'][0].upper() == "FLOOR, WALL" or \
-            cur_eqpt['mounting_location'][0].upper() == "FLOOR,WALL":
-        if generating_multiple_reports:
-            template_file = files.wallfloor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
-            copyfile(files.wall_template, template_file)
-        else:
-            template_file = files.wallfloor_template
-
-    elif cur_eqpt['mounting_location'][0].upper() == "CEILING":
-        if generating_multiple_reports:
-            template_file = files.ceiling_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
-            copyfile(files.wall_template, template_file)
-        else:
-            template_file = files.ceiling_template
-    else:  # defaults to floor mounted
-        if generating_multiple_reports:
-            template_file = files.floor_template.split(".")[0] + str(equipment.cur_index) + ".mcdx"
-            copyfile(files.wall_template, template_file)
-        else:
-            template_file = files.floor_template
-
-    # check to see if the template exists
-    if test_template_exists(template_file, mounting_location=cur_eqpt['mounting_location'][0].upper()) != True:
-        alert = Popup("Alert", "Please select a template file corresponding to the mounting location.")
-        alert.alert()
-        return  # template does not exist
 
     #call generate report to set inputs and save file
     status = generate_report(cur_eqpt, equipment, file_name, template_file, files, debug=False)
