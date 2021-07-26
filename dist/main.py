@@ -112,22 +112,24 @@ class SelectTemplates():
                     load the excel file and search for different mounting locations
                     """
                     if check_file_type(values['excel_name'], 'xlsx'):
-                        self.excel = values['excel_name']
                         #get the mounting locations
-                        equipment = get_eqpt_from_xl(self.excel)
-                        self.template_layout = []
-                        for idx, item in enumerate(equipment.mounting_locations):
-                            if item not in self.templates:
-                                self.templates[item] = ""
-                            #create the layout for the choose templates window
-                            self.template_layout += [
-                                [sg.Text("Choose " + item + " mounting template:")],
-                                [sg.FileBrowse(key= item, enable_events=True),
-                                  sg.InputText(self.templates[item], key=item + "_name",
-                                  size=(60, 1), background_color='white', enable_events=True)],
-                            ]
-                        if self.choose_templates():
-                            self.can_continue = True
+                        equipment = get_eqpt_from_xl(values['excel_name'])
+                        print(equipment.length)
+                        if len(equipment.items) > 0:
+                            self.excel = values['excel_name']
+                            self.template_layout = []
+                            for idx, item in enumerate(equipment.mounting_locations):
+                                if item not in self.templates:
+                                    self.templates[item] = ""
+                                #create the layout for the choose templates window
+                                self.template_layout += [
+                                    [sg.Text("Choose " + item + " mounting template:")],
+                                    [sg.FileBrowse(key= item, enable_events=True),
+                                      sg.InputText(self.templates[item], key=item + "_name",
+                                      size=(60, 1), background_color='white', enable_events=True)],
+                                ]
+                            if self.choose_templates():
+                                self.can_continue = True
 
 
                 if event == "continue":  # user has input all information
@@ -759,11 +761,12 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     with open(filepath, "a", newline="") as f:
         csv_writer = csv.writer(f)
         #write the header line
-        if header: csv_writer.writerow(["Date", "Project Number", "Tags", "Name", "Mounting Location", "File Name"])
+        if header: csv_writer.writerow(["Date", "Project Number", "Equipment Number", "Tags", "Name", "Mounting Location", "File Name"])
         try:
             new_row = [ #create the new row
                 cur_date,
                 values['project_number'][0],
+                values['eqpt_number'][0],
                 values['tags'][0].upper(),
                 values['eqpt_name'][0].upper(),
                 values['mounting_location'][0].upper(),
@@ -801,6 +804,12 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
                 headers.remove(None)
             while " " in headers:
                 headers.remove(" ")
+            required_headers = ["eqpt_name", "project_number", "tags", "eqpt_number", "mounting_location"]
+            for required_header in required_headers:
+                if required_header not in headers: #error
+                    alert = Popup("Error", "You must include the following column headers in your excel input file: eqpt_name, project_number, tags, eqpt_number, mounting_location")
+                    alert.alert() #alert the user of their mistake 
+                    return equipment #return a blank equipment 
 
             header_row_found = True #we found the start of the useful information
         #if we found the header row and the current row is not blank
