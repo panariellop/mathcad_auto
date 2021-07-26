@@ -924,8 +924,8 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
         except:
             pass
 
-    # Set name and mounting location and project number on the worksheet :
-    for i in ['eqpt_name', 'mounting_location', 'project_number']:
+    # Set name and mounting location and project number and equipment number on the worksheet :
+    for i in ['eqpt_name', 'mounting_location', 'project_number', 'eqpt_number']:
         try:
             cur_worksheet.set_string_input(i, str(cur_eqpt[i][0])) # set the string on the worksheet
         except Exception as e:
