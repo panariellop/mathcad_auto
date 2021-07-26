@@ -114,7 +114,6 @@ class SelectTemplates():
                     if check_file_type(values['excel_name'], 'xlsx'):
                         #get the mounting locations
                         equipment = get_eqpt_from_xl(values['excel_name'])
-                        print(equipment.length)
                         if len(equipment.items) > 0:
                             self.excel = values['excel_name']
                             self.template_layout = []
@@ -453,16 +452,23 @@ def load_inputs(equipment: Equipment):
     fields with sg parts
     """
     input_fields = list()
-
+    num_fields = 0
     for field, value in equipment.items[equipment.cur_index].items():  # each eqpt is a dictionary, field is key
         name = field.split("(")[0]
         name = name.replace(" ", "")
-
-        input_fields.append( #provides some pysimplegui text and input boxes
-            [sg.Text(str(name + " = "), size=(20, 1)),
-             sg.InputText(value[0], size=(20, 1), key=str(field), enable_events=True),
-             sg.Text(value[1])]
-        )
+        if num_fields % 2 == 0:
+            input_fields.append( #provides some pysimplegui text and input boxes
+                [sg.Text(str(name + " = "), size=(20, 1)),
+                 sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
+                 sg.Text(value[1])]
+            )
+        else:
+            input_fields.append( #provides some pysimplegui text and input boxes
+                [sg.Text(str(name + " = "), size=(20, 1), background_color = "light gray"),
+                 sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True),
+                 sg.Text(value[1])]
+            )
+        num_fields += 1 
     return input_fields
 
 
