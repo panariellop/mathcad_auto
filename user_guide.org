@@ -14,7 +14,7 @@
 This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 3.1 and above.
-[[https://youtu.be/La43SoQ3HMg][Tutorial Video]]
+[[https://youtu.be/WerhVoz60nI][Tutorial Video]]
 
 * Installation
 1. Go to the releases tab on this github page, find the latest distribution and download it. Download the template files provided to get started.

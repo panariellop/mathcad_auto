@@ -7,7 +7,7 @@ view and modify values taken from an excel spreadsheet before generating
 a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 3.1 and
-above. [Tutorial Video](https://youtu.be/La43SoQ3HMg)
+above. [Tutorial Video](https://youtu.be/WerhVoz60nI)
 
 Installation
 ============
