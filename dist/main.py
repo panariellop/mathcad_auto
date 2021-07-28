@@ -502,6 +502,7 @@ def load_gui():
     files = SelectTemplates()
     files.display_and_update()
     files.get_images_from_xl(num_images=4)
+    print(files.templates)
     equipment = get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
 
@@ -728,7 +729,7 @@ def load_gui():
                     alert = Popup("Error", "Please select an input excel file from the input files window.")
                     alert.alert()
                 else:
-                    to_out = mathcad_calculate(equipment, files)
+                    to_out = mathcad_calculate(equipment, files.templates[cur_eqpt['mounting_location'][0]])
                     outputs.clear()  # clear the outputs to prepare for new ones
                     #add all the output we got from mathcad_calculate to the outputs class
                     for key, val in to_out.items(): outputs.append([key, val])
@@ -837,7 +838,7 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     return equipment
 
 
-def mathcad_calculate(eqpt, files, debug=False)->dict:
+def mathcad_calculate(eqpt, template_file, debug=False)->dict:
     """
     Gets all the inputs and performs calculations,
     returns a dictionary with the output values
@@ -846,7 +847,6 @@ def mathcad_calculate(eqpt, files, debug=False)->dict:
     mathcad_app = Mathcad(visible=debug) #creates a Mathcadpy object
     # Choose template files depending on the mounting location
 
-    template_file = files.templates[cur_eqpt['mounting_location'][0]]
 
     # Create a new temp file to fill in the values
     new_filepath = template_file.split("/")[0:-1]
