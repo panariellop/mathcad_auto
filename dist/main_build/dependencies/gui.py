@@ -61,19 +61,20 @@ class SelectTemplates():
         """
         sg.theme("Reddit")
         window = sg.Window("Mathcad Automation", [
-            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key="excel_file", enable_events=True),
+            [sg.Image(data = images.tt_logo)], 
+            [sg.Frame("Choose Excel File*", [[sg.FileBrowse("1. Browse", key="excel_file", enable_events=True),
                                               sg.InputText(self.excel, key="excel_name", size=(30, 1),
                                                            background_color='white', enable_events=True),],
 
-                                              [sg.Button("Choose Templates", key = "choose_templates", enable_events = True)],
+                                              [sg.Button("2. Choose Templates", key = "choose_templates", enable_events = True)],
                                             ])],
-            [sg.Frame("Choose Database File", [[sg.FileBrowse(key="database_file", enable_events=True),
+            [sg.Frame("Choose Database File (Optional)", [[sg.FileBrowse(key="database_file", enable_events=True),
                                                 sg.InputText(self.database, key="database_name", size=(30, 1),
                                                              background_color='white', enable_events=True)], ])],
             [sg.Checkbox("Save to database?", key="save_to_database", default=self.save_to_database,
                          tooltip="If selected, details about the generated report will be saved to a database.")],
 
-            [sg.Button("Continue", key="continue", button_color="green")],
+            [sg.Button("3. Continue", key="continue", button_color="green")],
 
         ], icon=images.ma_logo_png)
         """Listen for events"""

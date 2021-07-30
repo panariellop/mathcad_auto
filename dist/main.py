@@ -70,7 +70,7 @@ def load_inputs(equipment: Equipment):
 
 def update_inputs(equipment: Equipment, values, window):
     """
-    Updates the window and value to reflect the object selected
+    Updates the window with the inputs values to reflect the object selected
     """
     for field, val in equipment.items[equipment.cur_index].items():
         values[field] = val[0]
@@ -105,7 +105,7 @@ def load_gui():
     sg.theme('Reddit')
     sg.set_options(icon=images.ma_logo_png)
     layout = [
-
+        [sg.Column([[sg.Image(data = images.tt_logo_small)]], vertical_alignment='center', justification='center',  k='-C-')],
         [
             sg.Button("Change Input Files", key="change_input_files", tooltip="Reselect the input files."),
             sg.Text(" ", size=(5, 1)),
