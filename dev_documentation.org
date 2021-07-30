@@ -16,6 +16,21 @@
 6. Look in ~./dist/requirements.txt to view all the dependencies
 7. Look in ~./dist/info.txt for more information on how to package the application and how to re-create the python virutal environment.
 
+* File Descriptions
+  All files are located in the ./dist directory. 
+  1. *info.txt*
+     This file has information about how to re-create the development environment and how to package and distribute the application. Consult the section *Packaging and Distribtion* for more information. 
+  2. *img_t0_b64.py*
+     In order to allow images to be displayed within the application, we cannot use traditional .jpg or .png files. We must convert them to a binary format. This allows images to be stored as strings (base64 format). This file converts .png and .jpg files into a python file containing string variables. These variables hold the information of those photos in base46 format. Run the script using *python img_to_b64.py*.
+  3. *images.py*
+     This file holds the images we will be using in the application as python variables in base64 format.
+  4. *main.py*
+     The application source code. Ensure the developer environment is activated and run *python main.py* to start the application.
+  5. *requirements.txt*
+     Holds the name and versions of all the python packages that the program uses. You will use this file when creating the developer environment. Read more in the *Re-Creating the Virtual Environment* section.
+  6. *./main_build/MathcadPy*
+     This is the python wrapper for Mathcad. It is directly imported in to the application. Feel free to edit this file if the connection to the API is not working for some reason. 
+  
 * Mathcad API
 Currently, the Mathcad API supports Mathcad Prime 3.0 and above. From my testing it works best with Mathcad Prime 7.0 (the lastest version). The API documentation can be located [[https://support.ptc.com/help/mathcad/r7.0/en/index.html#page/PTC_Mathcad_Help%2Fmathcad_and_automation_api.html%23][here]]. You can purchase the SDK from Mathcad to get more information and examples, but I would recommend against it (it's $9000).
 * Datypes and Storage of Data
@@ -127,3 +142,41 @@ The table looks like the one below:
 #+CAPTION: Flow chart of program API
 #+NAME:     fig:1
 [[./dist/documentation/component_flowchart.png]]
+
+* Improving Performance
+  While the application is performant, there are a few ways to tune the application to improve performance. The function that is least performant is the *generate_report_for_all* event. Multiple reports need to be generated through Mathcad. To improve performance, I implemented parallel processing. This allows multiple processes to run at the same time: each report is run on a seperate process and is then joined when each process finishes. The *num_threads=16* variable allows you to adjust the number of parallel processes occuring. This number is limited to your computer's available threads. I suggest starting at *num_threads = 16* and slowly increasing the variable by powers of 2 (ex: 16, 32, 64) until you achieve the desired performance. Keep in mind that the speed in which the Mathcad API can run to generate a single report is constant. Increasing *num_threads* will only increase performance if the number of reports to be generated is greater than *num_threads*. Note that performance will not be increased if *num_threads* is greater than the number of reports to be generated
+
+* Re-Creating the Virtual Environment
+  Typical python projects use a "virtual environment" to test and develop the application. This allows for consitancy between machines running the same program. In order to activate the virtual environment, first install *virtualenv* using pip. Open PowerShell and type the following commands:
+  
+  Install virtualenv 
+  #+BEGIN_SRC bash
+  pip install virtualenv
+  #+END_SRC
+
+  Create the virtual environment in the project's ./dist directory
+  #+BEGIN_SRC bash
+  python -m venv env
+  #+END_SRC
+
+  Activate the virtual environment
+  #+BEGIN_SRC bash
+  env\scripts\activate
+  #+END_SRC
+
+  Install all the requirements into the virtual environment
+  #+BEGIN_SRC bash
+  pip install -r requirements.txt
+  #+END_SRC
+
+  You can now make changes to the application in *main.py* and run the application with those new changes.
+
+* Packaging and Distribution
+  I have found that PyInstaller is the best method to package python applications. It "freezes" the code in order to create an executable. Install PyInstaller using pip, and ensure that it is installed by typing *PyInstaller* in PowerShell. If it is properly installed, run the code below within the activated virtual environment to package the application. Copy the following code onto one line in PowerShell and run it.
+  #+BEGIN_SRC bash
+  PyInstaller --onefile --windowed 
+--paths= "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\MathcadPy" 
+ -i  "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" 
+ --name "Mathcad_Anchorage_Automation_v1.1" main.py
+ #+END_SRC
+  
