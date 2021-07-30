@@ -236,8 +236,10 @@ def load_gui():
                     equipment.prev_index()
                 if files.excel != "" and helpers.check_file_type(files.excel, 'xlsx'):
                     values, window = update_inputs(equipment, values, window) #update inputs
-                window['outputs'].update(values=[]) # clear the outputs in the GUI
-                window['equipment_list'].set_focus(equipment.cur_index)  # display the current one being selected
+                    # clear the outputs in the GUI
+                    window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
+                 # display the current one being selected
+                window['equipment_list'].set_focus(equipment.cur_index) 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
             """
@@ -248,7 +250,7 @@ def load_gui():
                 equipment.cur_index = window['equipment_list'].get_indexes()[0]
                 # update viewport
                 values, window = update_inputs(equipment, values, window)
-                window['outputs'].update(values=[])
+                window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
             """
@@ -257,8 +259,12 @@ def load_gui():
             if event == "goto_eqpt":
                 if values['goto_eqpt'] != "" and int(values['goto_eqpt']) <= len(equipment.items):
                     equipment.cur_index = int(values['goto_eqpt']) - 1
-                    values, window = update_inputs(equipment, values, window)  # update the inputs in the window
-                    window['equipment_list'].set_focus(equipment.cur_index)  # display the eqpt being selected
+                     # update the inputs in the window
+                    values, window = update_inputs(equipment, values, window) 
+                    # display the eqpt being selected
+                    window['equipment_list'].set_focus(equipment.cur_index)  
+                    #update the outputs
+                    window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
             """
@@ -326,10 +332,13 @@ def load_gui():
                     alert.alert()
                 else:
                     to_out = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
-                    outputs.clear()  # clear the outputs to prepare for new ones
                     #add all the output we got from mathcad_calculate to the outputs class
-                    for key, val in to_out.items(): outputs.append([key, val])
-                    window['outputs'].update(values=outputs.display())
+                    cur_outputs = equipment.outputs[equipment.cur_index]
+                    cur_outputs.clear() #clear to prep for next inputs 
+                    for key, val in to_out.items():
+                        cur_outputs.append([key, val]) 
+                        #outputs.append([key, val])
+                    window['outputs'].update(values=cur_outputs.display())
                     alert = Popup("Calcuation Complete", "Output fields have been updated.")
                     alert.alert()
 
@@ -337,11 +346,13 @@ def load_gui():
             Convert Units
             """
             if event == "convert_to_imperial":
-                outputs.convert_units('metric', 'imperial')
-                window['outputs'].update(values=outputs.display())
+                cur_outputs = equipment.outputs[equipment.cur_index] 
+                cur_outputs.convert_units('metric', 'imperial')
+                window['outputs'].update(values=cur_outputs.display())
             if event == "convert_to_metric":
-                outputs.convert_units('imperial', 'metric')
-                window['outputs'].update(values=outputs.display())
+                cur_outputs = equipment.outputs[equipment.cur_index] 
+                cur_outputs.convert_units('imperial', 'metric')
+                window['outputs'].update(values=cur_outputs.display())
 
     window.close();
     del window

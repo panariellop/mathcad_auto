@@ -156,11 +156,18 @@ imports:
  &#8226;   <a href="#enum">enum</a>
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#heapq">heapq</a>
- &#8226;   <a href="#images">images</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#keyword">keyword</a>
  &#8226;   <a href="#linecache">linecache</a>
  &#8226;   <a href="#locale">locale</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+ &#8226;   <a href="#main_build.images">main_build.images</a>
+ &#8226;   <a href="#main_build.images.images">main_build.images.images</a>
  &#8226;   <a href="#mathcadpy">mathcadpy</a>
  &#8226;   <a href="#openpyxl">openpyxl</a>
  &#8226;   <a href="#openpyxl_image_loader">openpyxl_image_loader</a>
@@ -364,7 +371,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>'org.python'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#copy">copy</a>
+    <a href="#pickle">pickle</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
 
   </div>
@@ -437,7 +444,6 @@ imports:
  &#8226;   <a href="#PIL.ImageSequence">PIL.ImageSequence</a>
  &#8226;   <a href="#PIL.ImageShow">PIL.ImageShow</a>
  &#8226;   <a href="#PIL.ImageTk">PIL.ImageTk</a>
- &#8226;   <a href="#PIL.Jpeg2KImagePlugin">PIL.Jpeg2KImagePlugin</a>
  &#8226;   <a href="#PIL.JpegImagePlugin">PIL.JpegImagePlugin</a>
  &#8226;   <a href="#PIL.PaletteFile">PIL.PaletteFile</a>
  &#8226;   <a href="#PIL.PdfParser">PIL.PdfParser</a>
@@ -1423,8 +1429,7 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#PIL">PIL</a>
- &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
+    <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
  &#8226;   <a href="#PIL.Image">PIL.Image</a>
 
   </div>
@@ -2274,6 +2279,7 @@ imports:
 imported by:
     <a href="#PySimpleGUI.PySimpleGUI">PySimpleGUI.PySimpleGUI</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
 
   </div>
 
@@ -4974,8 +4980,8 @@ imported by:
   <a target="code" href="///C:/Python38/lib/copy.py" type="text/plain"><tt>copy</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#'org.python'">'org.python'</a>
- &#8226;   <a href="#copyreg">copyreg</a>
+    <a href="#copyreg">copyreg</a>
+ &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#types">types</a>
  &#8226;   <a href="#weakref">weakref</a>
 
@@ -4993,6 +4999,8 @@ imported by:
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#logging.handlers">logging.handlers</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#openpyxl.cell.cell">openpyxl.cell.cell</a>
  &#8226;   <a href="#openpyxl.descriptors.serialisable">openpyxl.descriptors.serialisable</a>
  &#8226;   <a href="#openpyxl.styles.proxy">openpyxl.styles.proxy</a>
@@ -5043,6 +5051,8 @@ imports:
 imported by:
     <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
 
   </div>
 
@@ -5132,6 +5142,8 @@ imported by:
  &#8226;   <a href="#http.cookiejar">http.cookiejar</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#nntplib">nntplib</a>
  &#8226;   <a href="#openpyxl.cell._writer">openpyxl.cell._writer</a>
  &#8226;   <a href="#openpyxl.cell.cell">openpyxl.cell.cell</a>
@@ -9240,17 +9252,6 @@ imported by:
 </div>
 
 <div class="node">
-  <a name="images"></a>
-  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/images.py" type="text/plain"><tt>images</tt></a>
-<span class="moduletype">SourceModule</span>  <div class="import">
-imported by:
-    <a href="#main.py">main.py</a>
-
-  </div>
-
-</div>
-
-<div class="node">
   <a name="importlib"></a>
   <a target="code" href="///C:/Python38/lib/importlib/__init__.py" type="text/plain"><tt>importlib</tt></a>
 <span class="moduletype">Package</span>  <div class="import">
@@ -9555,6 +9556,8 @@ imported by:
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#lzma">lzma</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.popen_forkserver">multiprocessing.popen_forkserver</a>
  &#8226;   <a href="#multiprocessing.popen_spawn_posix">multiprocessing.popen_spawn_posix</a>
@@ -9887,6 +9890,202 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="main_build"></a>
+  <a target="code" href="-" type="text/plain"><tt>main_build</tt></a>
+<span class="moduletype">NamespacePackage</span>  <div class="import">
+imported by:
+    <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.images">main_build.images</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/__init__.py" type="text/plain"><tt>main_build.dependencies</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#main_build">main_build</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies.data"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/data.py" type="text/plain"><tt>main_build.dependencies.data</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies.filestream"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/filestream.py" type="text/plain"><tt>main_build.dependencies.filestream</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#copy">copy</a>
+ &#8226;   <a href="#csv">csv</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#openpyxl">openpyxl</a>
+ &#8226;   <a href="#random">random</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies.gui"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/gui.py" type="text/plain"><tt>main_build.dependencies.gui</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PySimpleGUI">PySimpleGUI</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.images">main_build.images</a>
+ &#8226;   <a href="#main_build.images.images">main_build.images.images</a>
+ &#8226;   <a href="#openpyxl">openpyxl</a>
+ &#8226;   <a href="#openpyxl_image_loader">openpyxl_image_loader</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies.helpers"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/helpers.py" type="text/plain"><tt>main_build.dependencies.helpers</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#io">io</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#random">random</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.dependencies.reports"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/dependencies/reports.py" type="text/plain"><tt>main_build.dependencies.reports</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#copy">copy</a>
+ &#8226;   <a href="#csv">csv</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+ &#8226;   <a href="#main_build.dependencies.data">main_build.dependencies.data</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#mathcadpy">mathcadpy</a>
+ &#8226;   <a href="#openpyxl_image_loader">openpyxl_image_loader</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pyperclip">pyperclip</a>
+ &#8226;   <a href="#random">random</a>
+ &#8226;   <a href="#shutil">shutil</a>
+ &#8226;   <a href="#stat">stat</a>
+ &#8226;   <a href="#threading">threading</a>
+ &#8226;   <a href="#time">time</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies">main_build.dependencies</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.images"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/images/__init__.py" type="text/plain"><tt>main_build.images</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#main_build">main_build</a>
+ &#8226;   <a href="#main_build.images.images">main_build.images.images</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.images.images">main_build.images.images</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="main_build.images.images"></a>
+  <a target="code" href="///C:/Users/Owner/Desktop/mathcad_auto/dist/main_build/images/images.py" type="text/plain"><tt>main_build.images.images</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#main_build.images">main_build.images</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.images">main_build.images</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="marshal"></a>
   <tt>marshal</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
@@ -9933,6 +10132,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
 
   </div>
 
@@ -10960,6 +11160,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
  &#8226;   <a href="#openpyxl._constants">openpyxl._constants</a>
  &#8226;   <a href="#openpyxl.cell">openpyxl.cell</a>
  &#8226;   <a href="#openpyxl.cell._writer">openpyxl.cell._writer</a>
@@ -15576,6 +15778,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.gui">main_build.dependencies.gui</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#openpyxl_image_loader.sheet_image_loader">openpyxl_image_loader.sheet_image_loader</a>
 
   </div>
@@ -15655,7 +15859,7 @@ imported by:
   <a target="code" href="" type="text/plain"><tt>org</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
-    <a href="#pickle">pickle</a>
+    <a href="#copy">copy</a>
 
   </div>
 
@@ -15747,6 +15951,8 @@ imported by:
  &#8226;   <a href="#logging.handlers">logging.handlers</a>
  &#8226;   <a href="#lzma">lzma</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#mimetypes">mimetypes</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
@@ -15898,7 +16104,8 @@ imported by:
   <a target="code" href="///C:/Python38/lib/pickle.py" type="text/plain"><tt>pickle</tt></a>
 <span class="moduletype">SourceModule</span>  <div class="import">
 imports:
-    <a href="#_compat_pickle">_compat_pickle</a>
+    <a href="#'org.python'">'org.python'</a>
+ &#8226;   <a href="#_compat_pickle">_compat_pickle</a>
  &#8226;   <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#codecs">codecs</a>
  &#8226;   <a href="#copyreg">copyreg</a>
@@ -15906,7 +16113,6 @@ imports:
  &#8226;   <a href="#functools">functools</a>
  &#8226;   <a href="#io">io</a>
  &#8226;   <a href="#itertools">itertools</a>
- &#8226;   <a href="#org">org</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#re">re</a>
  &#8226;   <a href="#struct">struct</a>
@@ -16243,6 +16449,7 @@ imports:
   <div class="import">
 imported by:
     <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
 
   </div>
 
@@ -16573,6 +16780,9 @@ imported by:
  &#8226;   <a href="#email.generator">email.generator</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.filestream">main_build.dependencies.filestream</a>
+ &#8226;   <a href="#main_build.dependencies.helpers">main_build.dependencies.helpers</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#secrets">secrets</a>
  &#8226;   <a href="#tempfile">tempfile</a>
 
@@ -16887,6 +17097,7 @@ imported by:
  &#8226;   <a href="#ctypes.util">ctypes.util</a>
  &#8226;   <a href="#http.server">http.server</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#multiprocessing.util">multiprocessing.util</a>
  &#8226;   <a href="#pyi_rth_win32comgenpy.py">pyi_rth_win32comgenpy.py</a>
  &#8226;   <a href="#pyperclip">pyperclip</a>
@@ -17121,6 +17332,7 @@ imported by:
  &#8226;   <a href="#genericpath">genericpath</a>
  &#8226;   <a href="#logging.handlers">logging.handlers</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#netrc">netrc</a>
  &#8226;   <a href="#ntpath">ntpath</a>
  &#8226;   <a href="#os">os</a>
@@ -17643,6 +17855,7 @@ imported by:
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#logging.handlers">logging.handlers</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#multiprocessing.context">multiprocessing.context</a>
  &#8226;   <a href="#multiprocessing.dummy">multiprocessing.dummy</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
@@ -17696,6 +17909,7 @@ imported by:
  &#8226;   <a href="#logging">logging</a>
  &#8226;   <a href="#logging.handlers">logging.handlers</a>
  &#8226;   <a href="#main.py">main.py</a>
+ &#8226;   <a href="#main_build.dependencies.reports">main_build.dependencies.reports</a>
  &#8226;   <a href="#multiprocessing.connection">multiprocessing.connection</a>
  &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
  &#8226;   <a href="#multiprocessing.pool">multiprocessing.pool</a>

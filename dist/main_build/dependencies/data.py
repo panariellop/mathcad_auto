@@ -17,6 +17,7 @@ class Equipment():
         self.names = list()
         self.inputs = list()
         self.mounting_locations = list()
+        self.outputs = list()
 
     def append(self, to_append: dict):
         """
@@ -26,6 +27,8 @@ class Equipment():
         argument is a dictionary
         """
         self.items.append(to_append)
+        blank_outputs = Outputs()
+        self.outputs.append(blank_outputs) 
         for key, field in to_append.items():  # key value pair
             if key not in self.fields:  # append fields - this is the first row in the excel document
                 self.fields.append(key)
