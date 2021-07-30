@@ -9,7 +9,14 @@ sys.path.append(os.getcwd() + "/main_build/MathcadPy")  # allows inport of mathc
 from mathcadpy import Mathcad, Worksheet  # loading custom
 # from MathcadPy import Mathcad, Worksheet
 # imports the images as binaries
-from images import *
+#from images import *
+from main_build.images import images
+from main_build.dependencies import helpers
+from main_build.dependencies import reports
+from main_build.dependencies import filestream
+from main_build.dependencies.data import *
+from main_build.dependencies.gui import * 
+
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
 # needed to open excel files
@@ -32,418 +39,7 @@ from openpyxl_image_loader import SheetImageLoader
 import stat
 
 
-class SelectTemplates():
-    """
-    This is the select templates window that users can use to edit or add
-    templates to the program.
-    """
 
-    def __init__(self):
-        self.database = ""
-        self.save_to_database = True
-        self.excel = ""
-        self.template_layout = []
-        self.templates = {}
-        self.wall_template = ""
-        self.floor_template = ""
-        self.wallfloor_template = ""
-        self.ceiling_template = ""
-        self.images = dict()
-        self.can_continue = False
-
-    def choose_templates(self):
-        sg.theme("Reddit")
-        window = sg.Window("Choose Template Files", [
-            self.template_layout,
-            [sg.Button("Continue", key = "continue", button_color = "green", enable_events = True)]
-        ], icon = ma_logo_png)
-        while True: #logic loop
-            event, values = window.read()
-            if event == 'OK' or event == sg.WIN_CLOSED:
-                window.close()
-                return False
-            if event == "continue":
-                #set each template to the corresponding GUI item
-                errors = []
-                for k, v in self.templates.items():
-                    if check_file_type(values[k+"_name"], "mcdx"):
-                        self.templates[k] = values[k+"_name"]
-                    else:
-                        errors.append(k+" mounting template must be a .mcdx file.")
-                #error management
-                if len(errors) < 1:
-                    window.close()
-                    return self.templates
-                else:
-                    popup = Popup("Error", " ".join(errors))
-                    popup.alert()
-
-
-    def display_and_update(self):
-        """
-        Displays the window and will update the object variables when the user hits continue
-        """
-        sg.theme("Reddit")
-        window = sg.Window("Mathcad Automation", [
-            [sg.Frame("Choose Excel File*", [[sg.FileBrowse(key="excel_file", enable_events=True),
-                                              sg.InputText(self.excel, key="excel_name", size=(30, 1),
-                                                           background_color='white', enable_events=True),],
-
-                                              [sg.Button("Choose Templates", key = "choose_templates", enable_events = True)],
-                                            ])],
-            [sg.Frame("Choose Database File", [[sg.FileBrowse(key="database_file", enable_events=True),
-                                                sg.InputText(self.database, key="database_name", size=(30, 1),
-                                                             background_color='white', enable_events=True)], ])],
-            [sg.Checkbox("Save to database?", key="save_to_database", default=self.save_to_database,
-                         tooltip="If selected, details about the generated report will be saved to a database.")],
-
-            [sg.Button("Continue", key="continue", button_color="green")],
-
-        ], icon=ma_logo_png)
-        """Listen for events"""
-        while True: #logic loop
-            event, values = window.read()
-            if event == 'OK' or event == sg.WIN_CLOSED:
-                window.close()
-                return False
-            else:
-                if event == "choose_templates":
-                    """
-                    load the excel file and search for different mounting locations
-                    """
-                    if check_file_type(values['excel_name'], 'xlsx'):
-                        #get the mounting locations
-                        equipment = get_eqpt_from_xl(values['excel_name'])
-                        if len(equipment.items) > 0:
-                            self.excel = values['excel_name']
-                            self.template_layout = []
-                            for idx, item in enumerate(equipment.mounting_locations):
-                                if item not in self.templates:
-                                    self.templates[item] = ""
-                                #create the layout for the choose templates window
-                                self.template_layout += [
-                                    [sg.Text("Choose " + item + " mounting template:")],
-                                    [sg.FileBrowse(key= item, enable_events=True),
-                                      sg.InputText(self.templates[item], key=item + "_name",
-                                      size=(60, 1), background_color='white', enable_events=True)],
-                                ]
-                            if self.choose_templates():
-                                self.can_continue = True
-
-
-                if event == "continue":  # user has input all information
-                    # list of all the user errors when they input information
-                    errors = list()
-                    # validate the filepaths
-                    self.save_to_database = values['save_to_database']
-                    #check if the database is a .csv file - if not, append error list
-                    if check_file_type(values['database_name'], 'csv') or values['database_name'] == "":
-                        self.database = values['database_name']
-                    else:
-                        errors.append("Database file must be a .csv file.")
-                    #check if excel file is .xlsx
-                    if check_file_type(values['excel_name'], 'xlsx'):
-                        self.excel = values['excel_name']
-                    else:
-                        errors.append("Excel file must be a .xlsx file.")
-                    # Error handling
-                    if len(errors) == 0 and self.can_continue: #no errors
-                        window.close()
-                        return True
-                    elif self.can_continue == False:
-                        alert = Popup("Error", "You must choose template files.")
-                        alert.alert()
-                        continue
-                    else: #show errors in a popup window
-                        alert = Popup("Errors", "\n".join(errors))
-                        alert.alert()
-                        continue
-
-    def get_images_from_xl(self, num_images: int):
-        """
-        Gets all the preview images from the excel file and saves a dictionary of
-        mounting locations and binary images in self.images
-        <num_images:int> Corresponds to the number of mounting locations,
-        indicated in the preview_images portion of the input excel document
-        """
-        wb = load_workbook(self.excel)
-        sheet = wb['preview_images']
-
-        image_loader = SheetImageLoader(sheet)
-        for i in range(num_images):
-            # hard coded
-            mounting_locations = ['wall', 'floor', 'wall,floor', 'ceiling']
-            try:  # load all the images in cells B2-5
-                image = image_loader.get('B' + str(i + 2))
-                buf = io.BytesIO()
-                image.save(buf, format="PNG")  # save as a bytes string so pysimplegui can use it
-                self.images[mounting_locations[i]] = buf.getvalue()
-            except Exception as e:
-                print(e)
-
-
-class Popup():
-    """
-    Simple class to create a popup window. Used to create a popup to input filenames,
-    display errors, etc.
-    """
-    def __init__(self, title, message=""):
-        self.title = title
-        self.message = message
-
-    def confirm(self) -> bool:
-        """
-        Confirmation window - if you want to confirm with the user yes/no
-        """
-        popup = sg.Window(self.title, [
-            [sg.Text("")],
-            [sg.Text(self.message), ],
-            [sg.Text("")],
-            [sg.Button("YES", key="YES", button_color='green'), sg.Button("NO", key="NO", button_color='red')],
-        ],
-                          icon=ma_logo_png, )
-        while True:
-            event, values = popup.read()
-            if event == "OK" or event == "NO" or event == sg.WIN_CLOSED:
-                popup.close()
-                return False
-            if event == "YES":
-                popup.close()
-                return True
-
-    def alert(self):
-        """
-        Alert window - alert the user with a message
-        """
-        popup = sg.Window(self.title, [
-            [sg.Text("")],
-            [sg.Text(self.message)],
-            [sg.Button("OK", key='OK', button_color='green')],
-        ],
-                          icon=ma_logo_png, )
-        while True:
-            event, values = popup.read()
-            if event == "OK" or event == sg.WIN_CLOSED:
-                popup.close()
-                break
-            else:
-                pass
-
-    def take_input(self, trailing_text: str) -> str:
-        """
-        Input window - if you want the user to input some information
-        """
-        popup = sg.Window(self.title, [
-            [sg.Text("")],
-            [sg.Text(self.message), sg.InputText(key="input", size=(15, 1)), sg.Text(trailing_text)],
-            [sg.Button("OK", key='OK', button_color='green')],
-        ],
-                          icon=ma_logo_png, )
-        while True:
-            event, values = popup.read()
-            if event == "OK" or event == sg.WIN_CLOSED:
-                popup.close()
-                return values['input']
-
-    def image(self, image):
-        """
-        Creates a popup window with title and image
-        """
-        popup = sg.Window(self.title, [
-            [sg.Image(data=image)]
-        ])
-        while True: #logic loop
-            """
-            Window will stay active until the user exits the window or they click the OK buttion
-            """
-            event, values = popup.read()
-            if event == "OK" or event == sg.WIN_CLOSED:
-                popup.close()
-                break
-
-
-class Equipment():
-    """
-    Equipment class that holds the information of all the equipment
-    """
-
-    def __init__(self):
-        self.items = list()
-        self.cur_index = 0
-        self.length = 0
-        self.fields = list()
-        self.names = list()
-        self.inputs = list()
-        self.mounting_locations = list()
-
-    def append(self, to_append: dict):
-        """
-        Add an eqipment to this class by appending self.items, self.names under
-        specific circumstances, and self.inputs if
-
-        argument is a dictionary
-        """
-        self.items.append(to_append)
-        for key, field in to_append.items():  # key value pair
-            if key not in self.fields:  # append fields - this is the first row in the excel document
-                self.fields.append(key)
-            if key == 'eqpt_name' or key == "Equipment Name":  # append names of equiptment (always the first column in the template file)
-                self.names.append(field[0])
-            if key == "mounting_location" and field[0] not in self.mounting_locations:
-                self.mounting_locations.append(field[0])
-            if key.split("_")[-1] == "input" and key not in self.inputs:
-                self.inputs.append(key)
-        return
-
-    def next_index(self):  # don't want to throw out of bounds error !
-        """
-        Incriment cur_index to the next index
-        """
-        self.cur_index = (self.cur_index + 1) % len(self.items)
-
-    def prev_index(self):
-        """
-        Decriment cur_index to the previous index
-        """
-        if self.cur_index == 0:
-            self.cur_index = len(self.items) - 1
-        else:
-            self.cur_index -= 1
-
-    def display_choose_eqpt(self) -> list:
-        """
-        Converts the names of the equipment to a list and provides the number to the left
-        ex: ['1. Anesthesia Machine', ...]
-        """
-        output = list()
-        for idx, name in enumerate(self.names):
-            output.append(str(idx + 1) + ". " + name)
-        return output
-
-
-class Outputs():
-    """
-    Class that stores the information that gets presented to the user when they
-    click "preview calculation outputs"
-    """
-    def __init__(self):
-        self.items = list()
-        """
-        ['f_p_max_output', [408.81554560308007, 'kg', 0]]
-        ['f_p_min_output', [76.65291480057748, 'kg', 0]]
-        ['f_p_tot_output', [76.65291480057748, 'kg', 0]]
-        """
-
-    def append(self, to_append):
-        """
-        convert to_append to list and append self.items
-        """
-        name = to_append[0]
-        values = list(to_append[1])  # need to convert from tuple to array bc tuple is immutable
-        self.items.append([name, values])
-
-    def clear(self):
-        """Clear self.items"""
-        self.items = []
-
-    def display(self) -> list:
-        """
-        Presents self.items in a more displayable format so the GUI has an easier time
-        """
-        to_display = list()
-        for i in self.items:
-            to_display.append(str(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
-        return to_display
-
-    def convert_units(self, in_units, tg_units):
-        """
-        Convert units: <input> is 'imperial' or 'metric' ; <target> is 'imperial' or 'metric'
-        Uses the global function convert_units
-        """
-        for i in self.items:
-            if in_units == "imperial" and tg_units == 'metric':  # convert from imperial to metric
-                if i[1][1] == "in":
-                    i[1][1] = "m"
-                    i[1][0] = convert_units(i[1][0], "in", "m")
-                if i[1][1] == "ft":
-                    i[1][1] = "m"
-                    i[1][0] = convert_units(i[1][0], "ft", "m")
-                if i[1][1] == "lb":
-                    i[1][1] = "kg"
-                    i[1][0] = convert_units(i[1][0], "lb", "kg")
-                if i[1][1] == "lbf":
-                    i[1][1] = "n"
-                    i[1][0] = convert_units(i[1][0], "lb", "n")
-            else:
-                if i[1][1] == "m":
-                    i[1][1] = "ft"
-                    i[1][0] = convert_units(i[1][0], "m", "ft")
-                if i[1][1] == "kg":
-                    i[1][1] = "lb"
-                    i[1][0] = convert_units(i[1][0], "kg", "lb")
-                if i[1][1] == "n":
-                    i[1][1] = "lbf"
-                    i[1][0] = convert_units(i[1][0], "n", "lbf")
-
-
-def convert_units(value: int, input_units: str, target_units: str) -> int:
-    """
-    Takes in a value and its units and outputs the value in the target units
-    Supported conversions: m <-> in ; m <-> ft ; kg <-> lb ; n <-> lbf
-    """
-    input_units = input_units.lower()
-    target_units = target_units.lower()
-    if input_units == "m" and target_units == "in":
-        return value * 39.37008
-    elif input_units == "in" and target_units == "m":
-        return value / 39.37008
-    elif input_units == "m" and target_units == "ft":
-        return value * 3.28084
-    elif input_units == "ft" and target_units == "m":
-        return value / 3.28084
-    elif input_units == "kg" and target_units == "lb":
-        return value * 2.204623
-    elif input_units == "lb" and target_units == "kg":
-        return value / 2.204623
-    elif input_units == "n" and target_units == "lbf":
-        return value * 0.2248089
-    elif input_units == "lbf" and target_units == "n":
-        return value / 0.2248089
-
-    else:
-        return value
-
-
-def gen_random_string(length: int) -> str:
-    """
-    Generates a string of random characters
-    """
-    out = ""
-    for i in range(length):
-        char = random.randint(65, 90)
-        out += chr(char)
-    return out
-
-
-def check_file_type(filename, filetype):
-    """
-    Checks if the input file is of a certain type
-    ex <filename.csv> <csv>
-    """
-    type = filename.split(".")[-1] #get the file extension
-    if type != filetype:
-        return False
-    return True
-
-
-
-def resource_path(relative_path):
-    """
-    Determines the resource path for a graphic, etc
-    """
-    if hasattr(sys, '_MEIPASS'):
-        return os.path.join(sys._MEIPASS, relative_path)
-    return os.path.join(os.path.abspath("."), relative_path)
 
 
 def load_inputs(equipment: Equipment):
@@ -489,7 +85,7 @@ def update_preview_image(equipment: Equipment, files):
     """
     mounting_location = str(equipment.items[equipment.cur_index]['mounting_location'][0])
     mounting_location = mounting_location.lower().replace(" ", "")
-    # wall,floor and floor,wall handling:
+    # wall,floor and floor,wall handling for the preview images:
     if mounting_location == "floor,wall": mounting_location = "wall,floor"
     image = files.images[mounting_location]
     return image
@@ -503,11 +99,11 @@ def load_gui():
     files.display_and_update()
     files.get_images_from_xl(num_images=4)
     print(files.templates)
-    equipment = get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
+    equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
 
     sg.theme('Reddit')
-    sg.set_options(icon=ma_logo_png)
+    sg.set_options(icon=images.ma_logo_png)
     layout = [
 
         [
@@ -606,7 +202,7 @@ def load_gui():
                 confirm = Popup("Confirm",
                                 "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
                 if confirm.confirm():
-                    equipment = get_eqpt_from_xl(files.excel)
+                    equipment = filestream.get_eqpt_from_xl(files.excel)
                     files.get_images_from_xl(4)
                     values, window = update_inputs(equipment, values, window)
 
@@ -638,7 +234,7 @@ def load_gui():
                     equipment.next_index()
                 if event == "previous":
                     equipment.prev_index()
-                if files.excel != "" and check_file_type(files.excel, 'xlsx'):
+                if files.excel != "" and helpers.check_file_type(files.excel, 'xlsx'):
                     values, window = update_inputs(equipment, values, window) #update inputs
                 window['outputs'].update(values=[]) # clear the outputs in the GUI
                 window['equipment_list'].set_focus(equipment.cur_index)  # display the current one being selected
@@ -670,11 +266,11 @@ def load_gui():
             """
             if event == "generate_report":
                 # check if the files exist and are the correct file type
-                if files.excel == "" or check_file_type(files.excel, "xlsx") != True:
+                if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
                     popup = Popup("Error", "Please select an input excel file.")
                     popup.alert()
                 else:
-                    status = pre_generate_report(equipment=equipment, files=files, generating_multiple_reports=False)
+                    status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
@@ -701,7 +297,7 @@ def load_gui():
                         if (cur_row < len(equipment.items)):
                             print(f'Processing equipment: {cur_row + 1}/{len(equipment.items)}')
                             #create a thread who's target is pre_generate_report
-                            t = threading.Thread(target=pre_generate_report, args=(equipment, files, True))
+                            t = threading.Thread(target=reports.pre_generate_report, args=(equipment, files, os.getcwd(), True))
                             threads.append(t) #append list so we can keep track of active threads
                             t.start() #starts thread
                             cur_row += 1
@@ -729,7 +325,7 @@ def load_gui():
                     alert = Popup("Error", "Please select an input excel file from the input files window.")
                     alert.alert()
                 else:
-                    to_out = mathcad_calculate(equipment, files.templates[cur_eqpt['mounting_location'][0]])
+                    to_out = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
                     outputs.clear()  # clear the outputs to prepare for new ones
                     #add all the output we got from mathcad_calculate to the outputs class
                     for key, val in to_out.items(): outputs.append([key, val])
@@ -752,209 +348,12 @@ def load_gui():
     return
 
 
-def save_eqpt_to_csv(values, filepath, unique_report_name):
-    """
-    Saves the equipment currently being reported to a csv file
-    """
-    cur_date = date.today()
-    header = False
-    # check if header needs to be generated (happens when the file hasn't been
-    # created before)
-    try:
-        with open(filepath, "r", newline="") as f:
-            pass
-    except Exception as e:
-        header = True #header needs to be generated
-    with open(filepath, "a", newline="") as f:
-        csv_writer = csv.writer(f)
-        #write the header line
-        if header: csv_writer.writerow(["Date", "Project Number", "Equipment Number", "Tags", "Name", "Mounting Location", "File Name"])
-        try:
-            new_row = [ #create the new row
-                cur_date,
-                values['project_number'][0],
-                values['eqpt_number'][0],
-                values['tags'][0].upper(),
-                values['eqpt_name'][0].upper(),
-                values['mounting_location'][0].upper(),
-                unique_report_name + ".mcdx",
-            ]
-        except Exception as e:
-            print(e)
-        csv_writer.writerow(new_row) #insert the new row
-    f.close() #necissary to close the file
-    return True
 
 
-def get_eqpt_from_xl(filepath: str) -> Equipment:
-    """
-    Gets all the equipment from an excel file and returns an equipment object
-    """
-    wb = load_workbook(filename=filepath)
-    sheet = wb['values'] #set worksheet to the values sheet
-    # iterate through each of the equipment and append it to the object
-    headers = list()
-    equipment = Equipment() #new equipment class
-
-    """
-    Search for header row before finding data
-    """
-    header_row_found = False
-    for idx, row in enumerate(sheet.iter_rows(values_only=True)):
-        #gow through each row in the excel worksheet
-        if row[0] == "eqpt_name":
-            headers = list(row)  # will search for header row, then start to take data from the rest of the rows
-            # Clean up headers variable by removing all errananeous items
-            while "" in headers:
-                headers.remove("")
-            while None in headers:
-                headers.remove(None)
-            while " " in headers:
-                headers.remove(" ")
-            required_headers = ["eqpt_name", "project_number", "tags", "eqpt_number", "mounting_location"]
-            for required_header in required_headers:
-                if required_header not in headers: #error
-                    alert = Popup("Error", "You must include the following column headers in your excel input file: eqpt_name, project_number, tags, eqpt_number, mounting_location")
-                    alert.alert() #alert the user of their mistake 
-                    return equipment #return a blank equipment 
-
-            header_row_found = True #we found the start of the useful information
-        #if we found the header row and the current row is not blank
-        elif header_row_found and row[0] is not None:
-            cur_eqpt = dict()
-            for i, header in enumerate(headers):
-                # populates each eqpt with the input fields and [value, units]
-                try:
-                    units = header.split("(")[1]
-                    units = units.strip(")")
-                    field = header.split("(")[0]
-                    field = field.strip(" ")
-                    cur_eqpt[field] = [row[i], units]  # assign cur_eqpt
-                except:
-                    cur_eqpt[header] = [row[i], ""]  # <- blank units
-            equipment.append(cur_eqpt)
-        elif header_row_found and row[0] is None:
-            break  # want to break out and not view all rows when reached end of eqpt list
-    return equipment
 
 
-def mathcad_calculate(eqpt, template_file, debug=False)->dict:
-    """
-    Gets all the inputs and performs calculations,
-    returns a dictionary with the output values
-    """
-    cur_eqpt = eqpt.items[eqpt.cur_index]
-    mathcad_app = Mathcad(visible=debug) #creates a Mathcadpy object
-    # Choose template files depending on the mounting location
 
 
-    # Create a new temp file to fill in the values
-    new_filepath = template_file.split("/")[0:-1]
-    new_filepath = "/".join(new_filepath)
-    new_filepath = new_filepath + "/" + "temp" + ".mcdx"
-    #some debug print statements
-    print("Template file: ", template_file)
-    print("Mathcad application: ", mathcad_app, mathcad_app.version, mathcad_app.open_worksheets)
-    cur_worksheet = mathcad_app.open(template_file) #open the template file
-
-    for input in eqpt.inputs:  # set inputs
-        try:
-            cur_worksheet.set_real_input(input, float(cur_eqpt[input][0]), units=cur_eqpt[input][1],
-                                         preserve_worksheet_units=False)  # alias, value, units
-        except Exception as e:
-            print(e)
-    cur_worksheet.ws_object.Synchronize()  # must synchronize to make sure outputs are being updated
-    toout = dict()
-    output_aliases = cur_worksheet.outputs() #get the aliases for each of the worksheet's outputs
-    for o in output_aliases:  # assign each alias the value associated with the output ex: r = 12
-        toout[o] = cur_worksheet.get_real_output(o) #get the real value of the output
-    if debug == False:
-        cur_worksheet.close(2)  # closes the worksheet and doesn't save it
-
-    return toout
-
-
-def pre_generate_report(equipment: Equipment, files, generating_multiple_reports=False):
-    """
-    Checks if the proper template is given
-    Creates a filename or asks for it
-    Passes on the equipment (extracts the current eqpt from the object), file name, and template path to the generate report function
-    """
-    cur_eqpt = equipment.items[equipment.cur_index]
-    file_name = str()
-    if generating_multiple_reports:  # generates a unique eqpt name (used if generating multiple reports)
-        file_name = cur_eqpt['eqpt_name'][0]
-        file_name = file_name.replace(" ", "_")
-        file_name += "_report_"
-        file_name += gen_random_string(8)
-    else:  # prompts user for a filename input
-        popup = Popup("File Name", "Choose a file name:")
-        file_name = popup.take_input(".mcdx")
-
-    """
-    copy files and select template file depending on the mounting location of the cur_eqpt
-    """
-    if generating_multiple_reports:
-        #make a new template file path - we need to make multiple because we don't want the threads to collide
-        template_file = files.templates[cur_eqpt['mounting_location'][0]].split(".")[0] + str(
-        equipment.cur_index) + ".mcdx"
-        #copy the template so we can work on it
-        copyfile(files.templates[cur_eqpt['mounting_location'][0]], template_file)
-    else:
-        template_file = files.templates[cur_eqpt['mounting_location'][0]]
-
-    #call generate report to set inputs and save file
-    status = generate_report(cur_eqpt, equipment, file_name, template_file, files, debug=False)
-    print(f'Finished generating file {str(status)}')  # some debug output
-    return status
-
-
-def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_file: str, files, debug=False) -> bool:
-    """
-    Generates report with input values found in the gui
-    Saves the file in the save folder as the template chosen
-    """
-    mathcad_app = Mathcad(visible=debug)
-    cur_worksheet = mathcad_app.open(template_file)
-
-    for input in equipment.inputs:  # set all the real number inputs on the mathcad file
-        try:
-            cur_worksheet.set_real_input(str(input), float(cur_eqpt[input][0]), units=cur_eqpt[input][1],
-                                         preserve_worksheet_units=False)  # alias, value, units
-        except:
-            pass
-
-    # Set name and mounting location and project number and equipment number on the worksheet :
-    for i in ['eqpt_name', 'mounting_location', 'project_number', 'eqpt_number']:
-        try:
-            cur_worksheet.set_string_input(i, str(cur_eqpt[i][0])) # set the string on the worksheet
-        except Exception as e:
-            print('Error editing the string field in Mathcad: ', e)
-
-    # check if output folder exists, if not, make one
-    output_folder_filepath = os.getcwd() + "/mathcad_automation_output"
-    if not os.path.exists(output_folder_filepath):
-        os.makedirs(output_folder_filepath)
-
-    #get the path of the report
-    report_filepath = output_folder_filepath + "/" + file_name + ".mcdx"
-    if not cur_worksheet.save_as(
-            report_filepath):  # checks if the document is already created or not, if it is, then create another unique name
-        report_filepath = report_filepath.split(".")[0] + "1" + ".mcdx"
-
-    if cur_worksheet.save_as(report_filepath):  # save the report
-        cur_worksheet.close()
-        # save to reports ledger
-        if (files.save_to_database == True):
-            if (files.database == ""):
-                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"  # defaults save to the same folder as output if not specified
-            else:
-                ledger_filepath = files.database
-            save_eqpt_to_csv(cur_eqpt, ledger_filepath, file_name) #save the entry to the csv
-        return True
-    else:
-        cur_worksheet.close()
-        return False
 
 
 if __name__ == "__main__":
