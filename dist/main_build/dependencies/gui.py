@@ -237,6 +237,27 @@ class Popup():
             if event == "OK" or event == sg.WIN_CLOSED:
                 popup.close()
                 break
+    def link(self, description_text, link):
+        """
+        Creates a popup with a clickable link
+        """
+        popup = sg.Window(self.title, [
+            [sg.Text("")],
+            [sg.Multiline(self.message, s = (80,10), disabled = True, text_color = "black", background_color = "white")],
+            [sg.Button(description_text, enable_events = True, key = "LINK")], 
+            [sg.Text("")],
+            [sg.Text("")],
+        ])
+        while True:
+            event, values = popup.read()
+            if event == "OK" or event == sg.WIN_CLOSED:
+                popup.close()
+                break
+            if event == "LINK":
+                popup.close()
+                import webbrowser
+                webbrowser.open(link)
+                break 
 
 
 if __name__ == "__main__":

@@ -98,14 +98,13 @@ def load_gui():
     files = SelectTemplates()
     files.display_and_update()
     files.get_images_from_xl(num_images=4)
-    print(files.templates)
     equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
 
     sg.theme('Reddit')
     sg.set_options(icon=images.ma_logo_png)
     layout = [
-        [sg.Column([[sg.Image(data = images.tt_logo_small)]], vertical_alignment='center', justification='center',  k='-C-')],
+        [sg.Column([[sg.Image(data = images.tt_logo_small)]], vertical_alignment='center', justification='center',  k='-C-'), sg.Text(" ", size = (100,1)), sg.Button("Get Help", enable_events = True, key = "get_help_link")],
         [
             sg.Button("Change Input Files", key="change_input_files", tooltip="Reselect the input files."),
             sg.Text(" ", size=(5, 1)),
@@ -184,6 +183,7 @@ def load_gui():
     window = sg.Window('Anchorage Mathcad Automation', layout)
 
     """Logic loop"""
+    """==============================================="""
     while True:
         event, values = window.read()
         if event == "OK" or event == sg.WIN_CLOSED:
@@ -236,7 +236,7 @@ def load_gui():
                     equipment.prev_index()
                 if files.excel != "" and helpers.check_file_type(files.excel, 'xlsx'):
                     values, window = update_inputs(equipment, values, window) #update inputs
-                    # clear the outputs in the GUI
+                    # Update the outputs in the GUI
                     window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                  # display the current one being selected
                 window['equipment_list'].set_focus(equipment.cur_index) 
@@ -250,6 +250,7 @@ def load_gui():
                 equipment.cur_index = window['equipment_list'].get_indexes()[0]
                 # update viewport
                 values, window = update_inputs(equipment, values, window)
+                #Update the output in the GUI 
                 window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
@@ -263,7 +264,7 @@ def load_gui():
                     values, window = update_inputs(equipment, values, window) 
                     # display the eqpt being selected
                     window['equipment_list'].set_focus(equipment.cur_index)  
-                    #update the outputs
+                    #update the outputs in the GUI 
                     window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
 
@@ -353,6 +354,11 @@ def load_gui():
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('imperial', 'metric')
                 window['outputs'].update(values=cur_outputs.display())
+
+            """Get help"""
+            if event == "get_help_link":
+                popup = Popup("Get Help", "Please direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
+                popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
 
     window.close();
     del window
