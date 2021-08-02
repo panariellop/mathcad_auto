@@ -2,8 +2,10 @@
 All the important data structures in the application 
 
 """
-from main_build.dependencies import helpers
-
+try:
+    from main_build.dependencies import helpers
+except:
+    import helpers
 class Equipment():
     """
     Equipment class that holds the information of all the equipment
