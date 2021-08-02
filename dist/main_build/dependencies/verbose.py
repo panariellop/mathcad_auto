@@ -33,5 +33,17 @@ def inputs(cur_input):
         #in case the conversion is not listed here 
         return cur_input 
 
+def outputs(cur_output):
+    conversion = {
+        'z_h_output': "z\u2095",
+        'cgy_output': "CGy",
+        'cgx1_output': 'CGx\u2081',
+        'cgx2_output': 'CGx\u2082',
+        't_max_1_output': 'Tmax\u2081',
+        't_max_2_output': 'Tmax\u2082',
+        }
+    #convert, but if not then just return the output back 
+    try: return conversion[cur_output]
+    except: return cur_output
 if __name__ == "__main__":
     pass

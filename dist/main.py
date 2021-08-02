@@ -339,8 +339,10 @@ def load_gui():
                     to_out = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
                     #add all the output we got from mathcad_calculate to the outputs class
                     cur_outputs = equipment.outputs[equipment.cur_index]
-                    cur_outputs.clear() #clear to prep for next inputs 
+                    cur_outputs.clear() #clear to prep for next inputs
+                    from main_build.dependencies import verbose 
                     for key, val in to_out.items():
+                        key = verbose.outputs(key) 
                         cur_outputs.append([key, val]) 
                         #outputs.append([key, val])
                     window['outputs'].update(values=cur_outputs.display())
