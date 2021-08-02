@@ -89,7 +89,6 @@ def update_preview_image(equipment: Equipment, files):
     mounting_location = str(equipment.items[equipment.cur_index]['mounting_location'][0])
     mounting_location = mounting_location.lower().replace(" ", "")
     # wall,floor and floor,wall handling for the preview images:
-    if mounting_location == "floor,wall": mounting_location = "wall,floor"
     image = files.images[mounting_location]
     return image
 
@@ -104,7 +103,6 @@ def load_gui():
     files.get_images_from_xl(num_images=4)
     equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
-
     sg.theme('Reddit')
     sg.set_options(icon=images.ma_logo_png)
     layout = [
@@ -135,16 +133,18 @@ def load_gui():
                                      tooltip="Go to a specific equipment index."),
                     ],
                     [sg.Text("Equipment: ", key="cur_eqpt", size=(20, 1), background_color="gray")],
-                    [sg.Button("View Preview Image",
-                               tooltip="View the image corresponding to the mounting location. This image is defined in the excel spreadsheet in the preview_images tab",
-                               key="preview_image")]
                 ])],
             ]),
             sg.Column([
-                [sg.Frame("Inputs",
+                [sg.Frame("Seismic Design Parameters and Geometry",
                           load_inputs(equipment)
                           )],
             ]),
+            sg.Column([
+                [
+                    sg.Frame("Preview Images Per Mounting Location", [[sg.Image(key = "preview_image", data = update_preview_image(equipment, files))]])
+                ]
+            ]), 
             sg.Column([
                 [sg.Frame("Outputs",
                           [
@@ -226,9 +226,6 @@ def load_gui():
             if event in equipment.fields:
                 # change the cur eqpt field being edited
                 equipment.items[equipment.cur_index][event][0] = values[event]
-            if event == "preview_image":
-                popup = Popup("Preview Image")
-                popup.image(update_preview_image(equipment, files))
 
             """
             Move to the next or previous eqpt
@@ -245,6 +242,7 @@ def load_gui():
                  # display the current one being selected
                 window['equipment_list'].set_focus(equipment.cur_index) 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                window['preview_image'].update(data = update_preview_image(equipment, files)) 
 
             """
             Display the eqpt being selected by the listbox (left most column)
@@ -257,6 +255,8 @@ def load_gui():
                 #Update the output in the GUI 
                 window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                window['preview_image'].update(data = update_preview_image(equipment, files)) 
+
 
             """
             Go to a specific eqpt number
@@ -271,6 +271,8 @@ def load_gui():
                     #update the outputs in the GUI 
                     window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
+                    window['preview_image'].update(data = update_preview_image(equipment, files)) 
+
 
             """
             Generate report for one eqpt

@@ -159,6 +159,7 @@ class SelectTemplates():
             mounting_locations = ['wall', 'floor', 'wall,floor', 'ceiling']
             try:  # load all the images in cells B2-5
                 image = image_loader.get('B' + str(i + 2))
+                import io 
                 buf = io.BytesIO()
                 image.save(buf, format="PNG")  # save as a bytes string so pysimplegui can use it
                 self.images[mounting_locations[i]] = buf.getvalue()
