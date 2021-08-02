@@ -53,15 +53,17 @@ def load_inputs(equipment: Equipment):
     for field, value in equipment.items[equipment.cur_index].items():  # each eqpt is a dictionary, field is key
         name = field.split("(")[0]
         name = name.replace(" ", "")
+        from main_build.dependencies import verbose #verbose names (more legible names) 
+        name  = verbose.inputs(name) 
         if num_fields % 2 == 0:
             input_fields.append( #provides some pysimplegui text and input boxes
-                [sg.Text(str(name + " = "), size=(20, 1)),
+                [sg.Text(str(name), size=(20, 1)),
                  sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
                  sg.Text(value[1])]
             )
         else:
             input_fields.append( #provides some pysimplegui text and input boxes
-                [sg.Text(str(name + " = "), size=(20, 1), background_color = "light gray"),
+                [sg.Text(str(name), size=(20, 1), background_color = "light gray"),
                  sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True),
                  sg.Text(value[1])]
             )

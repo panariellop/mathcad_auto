@@ -2,16 +2,19 @@
 Gives verbose version of the argument 
 """
 
-def verbose_input(cur_input):
+def inputs(cur_input):
     conversion = {
+        'eqpt_name': 'Equipment Name',
+        'project_number': "Project Number", 
         "tags": "Equipment Tags",
         "eqpt_number":"Equipment ID",
         "mounting_location": "Mounting Location", 
-        "w_p_input": "W_p",
+        "w_p_input": "W\u209A",
         "s_ds_input": "S_DS",
         "a_p_input": "a_P",
-        "r_p_input":"R_p",
-        "omega_input": "Omega_0",
+        "r_p_input":"R\u209A",
+        'i_p_input':"I\u209A", 
+        "omega_input": "Omega\u2080",
         "z_input":"z",
         "h_input":"h",
         "capital_a_input":"A",
@@ -19,9 +22,9 @@ def verbose_input(cur_input):
         "a_input":"a",
         "b_input":"b",
         "capital_h_input":"H",
-        "cg_factor_input":"CG_factor",
-        "cgz_factor_input":"CG_z.factor",
-        "h_1_input":"h1", 
+        "cg_factor_input":"CG factor",
+        "cgz_factor_input":"CG z.factor",
+        "h_1_input":"h\u2081", 
 
     }
     try:
