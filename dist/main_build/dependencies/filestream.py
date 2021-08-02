@@ -1,7 +1,10 @@
 """
 All the functions that pull information from or save information to files 
 """
-from main_build.dependencies.data import Equipment
+try:
+    from main_build.dependencies.data import Equipment
+except:
+    from data import Equipment
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 from datetime import date

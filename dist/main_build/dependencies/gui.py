@@ -1,11 +1,18 @@
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
+import sys
 from openpyxl_image_loader import SheetImageLoader
-from main_build.images import images
-from main_build.dependencies import helpers
-from main_build.dependencies import filestream
-from main_build.dependencies.data import *
-
+try:
+    from main_build.images import images
+    from main_build.dependencies import helpers
+    from main_build.dependencies import filestream
+    from main_build.dependencies.data import *
+except:
+    sys.path.insert(0,'..')
+    import images 
+    import helpers 
+    import filestream
+    import data
 import PySimpleGUI as sg
 
 class SelectTemplates():

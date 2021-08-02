@@ -1,24 +1,32 @@
 class InputValidation():
     """
     Call validate to check all inputs 
-    Validate the following inputs:
-    1) Mounting Location 
-    2) 
+    Example equipment item 
+    [{'eqpt_name': ['Anesthesia Machine ', ''], 'eqpt_number': [1234, ''], 'mounting_location': ['Wall, Floor', ''], 'project_number': [1111, ''], 'tags': ['Medical, ICU, something', ''], 'w_p_input': [335, 'lb'], 's_ds_input': [1.121, ''], 'a_p_input': [1, ''], 'r_p_input': [2.5, ''], 'i_p_input': [1.5, ''], 'z_input': [0, ''], 'h_input': [75,5, ''], 'factor_input': [0.666666, '']}
     """
-    def __init__(self, equipment):
-        self.equipment = equipment
+    def __init__(self):
         self.errors = []
-    def validate(self):
+    def validate(self, equipment, debug = False):
         """
         Validates all the equipment 
         """
-        for e in self.equipment.items:
-            self.mounting_location(e, self.equipment)
+        self.errors = []
+        for e in equipment.items:
+            self.mounting_location(e, equipment)
             self.input_values(e)
         #Check if any errors have occured 
-        if len(self.errors) == 0:
-            return True
-        else: return False 
+        if len(self.errors) > 0:
+            if debug == False:
+                try:
+                    from main_build.dependencies.gui import Popup
+                except:
+                    from gui import Popup
+                popup = Popup("Errors", "; ".join(self.errors))
+                popup.alert()
+            else:
+                print(self.errors) 
+            return False
+        else: return True 
             
     def mounting_location(self,cur_eqpt, eqpt):
         """
@@ -29,7 +37,7 @@ class InputValidation():
             #Check if the mounting location is in the templates
             pass
         else:
-            self.errors.append(f"{cur_eqpt['eqpt_name']}: mounting location must be one of the mounting locations mentioned in the input excel file. {mounting_location} is not mentioned.")
+            self.errors.append(f"{cur_eqpt['eqpt_name'][0]}: mounting location must be one of the mounting locations mentioned in the input excel file. {mounting_location[0]} is not mentioned.")
             
     def input_values(self, cur_eqpt):
         eqpt_name = cur_eqpt['eqpt_name']
@@ -47,11 +55,16 @@ class InputValidation():
                              'a_input',] 
 
         for i in pos_inputs:
-            if int(cur_eqpt[i]) < 0:
-                self.errors.append(f"{eqpt_name}: {i} should be greater than 0")
+            try:
+                if int(cur_eqpt[i][0]) < 0:
+                    self.errors.append(f"{eqpt_name[0]}: {i} should be greater than 0")
+            except:
+                pass
         for i in plus_minus_inputs:
-            if int(cur_eqpt[i]) == 0:
-                self.errors.append(f"{eqpt_name}: {i} should be greater than or less than 0")
+            try:
+                if int(cur_eqpt[i][0]) == 0:
+                    self.errors.append(f"{eqpt_name[0]}: {i} should be greater than or less than 0")
+            except:pass
         
 
 if __name__ == "__main__":
@@ -60,20 +73,20 @@ if __name__ == "__main__":
     equipment.append(
         {"eqpt_name": "Test1",
          "mounting_location": "Floor",
-         'w_p_input': '4',
-          's_ds_input': '4',
-          'a_p_input': '4',
-          'r_p_input': '10',
-          'omega_input': '4',
-          'z_input':'4',
-          'h_input': '4',
-          'capital_a_input': '-1',
-          'capital_b_input': '4',
-         'b_input': '0',
-         'a_input': '4', 
+         'w_p_input': ['4',''],
+          's_ds_input': ['4',''],
+          'a_p_input': ['4',''],
+          'r_p_input': ['4',''],
+          'omega_input': ['4',''],
+          'z_input':['4',''],
+          'h_input': ['4',''],
+          'capital_a_input': ['-1', ''],
+          'capital_b_input': ['4',''],
+         'b_input': ['0', ''],
+         'a_input': ['4',''], 
          }
     )
-    test = InputValidation(equipment)
-    test.validate()
+    test = InputValidation()
+    test.validate(equipment, debug = True)
     print(test.errors) 
     

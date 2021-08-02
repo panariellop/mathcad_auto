@@ -15,7 +15,8 @@ from main_build.dependencies import helpers
 from main_build.dependencies import reports
 from main_build.dependencies import filestream
 from main_build.dependencies.data import *
-from main_build.dependencies.gui import * 
+from main_build.dependencies.gui import *
+from main_build.dependencies.validation import InputValidation
 
 import PySimpleGUI as sg
 from pathlib import Path, PurePath
@@ -96,6 +97,7 @@ def load_gui():
     Main GUI - controlls graphics and logic
     """
     files = SelectTemplates()
+    input_validation = InputValidation()
     files.display_and_update()
     files.get_images_from_xl(num_images=4)
     equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
@@ -229,7 +231,7 @@ def load_gui():
             """
             Move to the next or previous eqpt
             """
-            if event == "next" or event == "previous":
+            if (event == "next" or event == "previous") and input_validation.validate(equipment):
                 if event == "next":
                     equipment.next_index()
                 if event == "previous":
@@ -245,7 +247,7 @@ def load_gui():
             """
             Display the eqpt being selected by the listbox (left most column)
             """
-            if event == "equipment_list":
+            if event == "equipment_list" and input_validation.validate(equipment):
                 # get the current index
                 equipment.cur_index = window['equipment_list'].get_indexes()[0]
                 # update viewport
@@ -257,7 +259,7 @@ def load_gui():
             """
             Go to a specific eqpt number
             """
-            if event == "goto_eqpt":
+            if event == "goto_eqpt" and input_validation.validate(equipment):
                 if values['goto_eqpt'] != "" and int(values['goto_eqpt']) <= len(equipment.items):
                     equipment.cur_index = int(values['goto_eqpt']) - 1
                      # update the inputs in the window
@@ -271,7 +273,7 @@ def load_gui():
             """
             Generate report for one eqpt
             """
-            if event == "generate_report":
+            if event == "generate_report" and input_validation.validate(equipment):
                 # check if the files exist and are the correct file type
                 if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
                     popup = Popup("Error", "Please select an input excel file.")
@@ -288,7 +290,7 @@ def load_gui():
             """
             Generate Report for all eqpt
             """
-            if event == "generate_report_for_all":
+            if event == "generate_report_for_all" and input_validation.validate(equipment):
                 """
                 Using multithreading to improve speed
                 Each thread is an independant process, and keeps track of its
@@ -326,7 +328,7 @@ def load_gui():
             """
             Preview
             """
-            if event == "calculate":
+            if event == "calculate" and input_validation.validate(equipment):
                 #check if the excel file exists
                 if files.excel == "":
                     alert = Popup("Error", "Please select an input excel file from the input files window.")

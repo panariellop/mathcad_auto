@@ -7,7 +7,7 @@ def verbose_input(cur_input):
         "tags": "Equipment Tags",
         "eqpt_number":"Equipment ID",
         "mounting_location": "Mounting Location", 
-        "w_p_input": "WP",
+        "w_p_input": "W_p",
         "s_ds_input": "S_DS",
         "a_p_input": "a_P",
         "r_p_input":"R_p",
