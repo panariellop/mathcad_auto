@@ -196,31 +196,32 @@ def load_gui(pick_files = False):
     ]
 
         # ------ Menu Definition ------ #
-    menu_def = [['&File', ['&Select', '&Save']],
-                ['&Edit', ['&Undo']],
+    menu_def = [['&File', ['&Select   Ctrl-i', '---', '&Save   Ctrl-s']],
+                ['&Edit', ['&Undo   Ctrl-z']],
             ['&Help', '&Help'],]
 
     layout += [[sg.Menu(menu_def)]]
 
-    window = sg.Window('Anchorage Mathcad Automation', layout)
+    window = sg.Window('Anchorage Mathcad Automation', layout, return_keyboard_events=True)
 
     """Logic loop"""
     """==============================================="""
     while True:
         event, values = window.read()
+        print(event)
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:
             """
             Change Input Files
             """
-            if event == "Select":
+            if event == "Select" or event == "i:73":
                 files.display_and_update()
 
             """
             Undo changes 
             """
-            if event == "Undo":
+            if event == "Undo" or event == "z:90": #Ctrl-z
                 #need to pop the latest action from the stack 
                 pass 
 
@@ -240,7 +241,7 @@ def load_gui(pick_files = False):
             if event in equipment.fields:
                 # change the cur eqpt field being edited
                 equipment.items[equipment.cur_index][event][0] = values[event]
-            if event == "Save":
+            if event == "Save" or event == 's:83': #Ctrl-s
                 # update the excel file
                 filestream.save_eqpt_to_xl(equipment, files.excel)
 
@@ -382,7 +383,7 @@ def load_gui(pick_files = False):
 
             """Get help"""
             if event == "Help":
-                popup = Popup("Get Help", "---File Manipulation---\nFile->Select to select input files \nFile->Save to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
+                popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
 
     window.close()

@@ -129,7 +129,7 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
     # excel file might be open 
     try:
         wb.save(filepath) 
-        popup = Popup("File Saved", f"The inputs were successfuly saved to the excel input file.")
+        popup = Popup("File Saved", f"The inputs were saved successfuly to the excel input file.")
         popup.alert()
     except:
         popup = Popup("Error", f"Please close {filepath} and save again.") 
