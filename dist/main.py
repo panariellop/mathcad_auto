@@ -3,6 +3,7 @@
 #########################################
 # By: Piero Panariello
 # Created: July 2021
+from main_build.dependencies.filestream import get_eqpt_from_xl
 import os, sys
 
 sys.path.append(os.getcwd() + "/main_build/MathcadPy")  # allows inport of mathcad module
@@ -196,16 +197,18 @@ def load_gui(pick_files = False):
     ]
 
         # ------ Menu Definition ------ #
-    menu_def = [['&File', ['&Select   Ctrl-i', '---', '&Save   Ctrl-s']],
-                ['&Edit', ['&Undo   Ctrl-z']],
+    menu_def = [['&File', ['&Select Input Files', '---', '&Save Inputs To Excel']],
+                ['&Edit', ['&Undo', '---', '&Revert Inputs']],
             ['&Help', '&Help'],]
 
     layout += [[sg.Menu(menu_def)]]
 
     window = sg.Window('Anchorage Mathcad Automation', layout, return_keyboard_events=True)
 
+    """==============================================="""
     """Logic loop"""
     """==============================================="""
+    user_actions = UserActions()
     while True:
         event, values = window.read()
         print(event)
@@ -215,16 +218,26 @@ def load_gui(pick_files = False):
             """
             Change Input Files
             """
-            if event == "Select" or event == "i:73":
+            if event == "Select Input Files" or event == "i:73":
                 files.display_and_update()
 
             """
             Undo changes 
             """
-            if event == "Undo" or event == "z:90": #Ctrl-z
+            if event == "Undo":
                 #need to pop the latest action from the stack 
-                pass 
-
+                user_actions.clear()
+                equipment = get_eqpt_from_xl(files.excel) 
+                continue 
+            if event == "Revert Inputs":
+                while True:
+                    event, value = user_actions.pop()
+                    if event is not None:
+                        equipment.items[equipment.cur_index][event][0] = value
+                        window[event].update(value)
+                    else: #reached the end of the stack 
+                        break 
+                continue 
             """
             If user wants to copy output
             """
@@ -238,10 +251,12 @@ def load_gui(pick_files = False):
             """
             Update the Equipment object when the user edits an input field
             """
-            if event in equipment.fields:
+            if event in equipment.fields and event != "Undo":
                 # change the cur eqpt field being edited
+                user_actions.push((event, equipment.items[equipment.cur_index][event][0]))
                 equipment.items[equipment.cur_index][event][0] = values[event]
-            if event == "Save" or event == 's:83': #Ctrl-s
+                
+            if event == "Save Inputs To Excel" or event == 's:83': #Ctrl-s
                 # update the excel file
                 filestream.save_eqpt_to_xl(equipment, files.excel)
 
