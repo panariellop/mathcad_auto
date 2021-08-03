@@ -142,8 +142,11 @@ class SelectTemplates():
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
                         continue
-    def dev_get_xl_and_templates(self): 
-        self.excel = "C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template.xlsx"
+    def dev_get_xl_and_templates(self):
+        """
+        Skips the choose file menu by setting teh excel file and template files to files already in system
+        """
+        self.excel = "C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_copy.xlsx"
         self.templates = {'Wall, Floor': 'C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_document_mathcad_7.mcdx',
                           'Ceiling': 'C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_document_mathcad_7.mcdx'
         }

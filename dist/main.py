@@ -39,10 +39,6 @@ from time import sleep
 from openpyxl_image_loader import SheetImageLoader
 import stat
 
-
-
-
-
 def load_inputs(equipment: Equipment):
     """
     Takes in the equipment being viewed by the user and returns all the input
@@ -87,6 +83,7 @@ def load_inputs(equipment: Equipment):
 def update_inputs(equipment: Equipment, values, window):
     """
     Updates the window with the inputs values to reflect the object selected
+    Also updates the excel spreadsheet with the values you changed 
     """
     for field, val in equipment.items[equipment.cur_index].items():
         values[field] = val[0]
@@ -122,9 +119,7 @@ def load_gui(pick_files = False):
     sg.theme('Reddit')
     sg.set_options(icon=images.ma_logo_png)
 
-    # ------ Menu Definition ------ #
-    menu_def = [['&File', ['&Select', '&Refresh' ]],
-            ['&Help', '&Help'],]
+
     
     layout = [
         [sg.Column([[sg.Image(data = images.tt_logo_small)]], justification='c',  k='-C-')],
@@ -200,6 +195,11 @@ def load_gui(pick_files = False):
 
     ]
 
+        # ------ Menu Definition ------ #
+    menu_def = [['&File', ['&Select', '&Save']],
+                ['&Edit', ['&Undo']],
+            ['&Help', '&Help'],]
+
     layout += [[sg.Menu(menu_def)]]
 
     window = sg.Window('Anchorage Mathcad Automation', layout)
@@ -218,15 +218,11 @@ def load_gui(pick_files = False):
                 files.display_and_update()
 
             """
-            Refresh input files
+            Undo changes 
             """
-            if event == "Refresh":
-                confirm = Popup("Confirm",
-                                "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
-                if confirm.confirm():
-                    equipment = filestream.get_eqpt_from_xl(files.excel)
-                    files.get_images_from_xl(4)
-                    values, window = update_inputs(equipment, values, window)
+            if event == "Undo":
+                #need to pop the latest action from the stack 
+                pass 
 
             """
             If user wants to copy output
@@ -244,6 +240,9 @@ def load_gui(pick_files = False):
             if event in equipment.fields:
                 # change the cur eqpt field being edited
                 equipment.items[equipment.cur_index][event][0] = values[event]
+            if event == "Save":
+                # update the excel file
+                filestream.save_eqpt_to_xl(equipment, files.excel)
 
             """
             Move to the next or previous eqpt
@@ -282,11 +281,11 @@ def load_gui(pick_files = False):
             if event == "goto_eqpt" and input_validation.validate(equipment):
                 if values['goto_eqpt'] != "" and int(values['goto_eqpt']) <= len(equipment.items):
                     equipment.cur_index = int(values['goto_eqpt']) - 1
-                     # update the inputs in the window
+                    # update the inputs in the window
                     values, window = update_inputs(equipment, values, window) 
                     # display the eqpt being selected
                     window['equipment_list'].set_focus(equipment.cur_index)  
-                    #update the outputs in the GUI 
+                    # update the outputs in the GUI
                     window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                     window['preview_image'].update(data = update_preview_image(equipment, files)) 
@@ -383,10 +382,10 @@ def load_gui(pick_files = False):
 
             """Get help"""
             if event == "Help":
-                popup = Popup("Get Help", "Please direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
+                popup = Popup("Get Help", "---File Manipulation---\nFile->Select to select input files \nFile->Save to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
 
-    window.close();
+    window.close()
     del window
     return
 

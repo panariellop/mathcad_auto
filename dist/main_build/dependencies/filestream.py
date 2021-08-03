@@ -3,14 +3,14 @@ All the functions that pull information from or save information to files
 """
 try:
     from main_build.dependencies.data import Equipment
+    from main_build.dependencies.gui import Popup 
 except:
     from data import Equipment
+    from gui import Popup 
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 from datetime import date
 import csv
-import random
-import copy
 
 def save_eqpt_to_csv(values, filepath, unique_report_name):
     """
@@ -51,10 +51,10 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     Gets all the equipment from an excel file and returns an equipment object
     """
     wb = load_workbook(filename=filepath)
-    sheet = wb['values'] #set worksheet to the values sheet
+    sheet = wb['values'] # set worksheet to the values sheet
     # iterate through each of the equipment and append it to the object
     headers = list()
-    equipment = Equipment() #new equipment class
+    equipment = Equipment() # new equipment class
 
     """
     Search for header row before finding data
@@ -97,6 +97,45 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
             break  # want to break out and not view all rows when reached end of eqpt list
     return equipment
 
+def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
+    """
+    Saves the equipment back to the excel file
+    """
+    wb = load_workbook(filename=filepath)
+    sheet = wb['values']  # set worksheet to the values sheet
+    # iterate through each of the equipment and append it to the object
+    headers = list()
+
+    """
+    Search for header row before finding data
+    """
+    header_row_location = None 
+    for idx, row in enumerate(sheet.iter_rows(values_only=True)):
+        #gow through each row in the excel worksheet
+        if row[0] == "eqpt_name":
+            #start saving the equipment 
+            header_row_location = idx  
+            for idx, item in enumerate(equipment.items): # each equipment 
+                col_number = 1 
+                for key, val in item.items():
+                    """
+                    Equipment {'eqpt_name':['asdf', ' '], '...'}
+                    """
+                    sheet.cell(row = header_row_location + 1 + idx + 1,
+                                column = col_number,
+                                value = val[0])
+                    col_number +=1
+            break  
+    # excel file might be open 
+    try:
+        wb.save(filepath) 
+        popup = Popup("File Saved", f"The inputs were successfuly saved to the excel input file.")
+        popup.alert()
+    except:
+        popup = Popup("Error", f"Please close {filepath} and save again.") 
+        popup.alert()
+
+    
 
 
 if __name__ == "__main__":
