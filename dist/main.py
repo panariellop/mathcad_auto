@@ -57,13 +57,13 @@ def load_inputs(equipment: Equipment):
                 input_fields.append(
                     [sg.Text(str(name), size = (20,1)),
                      sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field)),
-                     sg.Text(value[1])]
+                     sg.Text(value[1]), ]
                 )
             else:
                 input_fields.append( #provides some pysimplegui text and input boxes
                     [sg.Text(str(name), size=(20, 1)),
                      sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
-                     sg.Text(value[1])]
+                     sg.Text(value[1]),]
                 )
         else:
             if field == 'mounting_location':
@@ -211,7 +211,6 @@ def load_gui(pick_files = False):
     user_actions = UserActions()
     while True:
         event, values = window.read()
-        print(event)
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:
@@ -255,7 +254,7 @@ def load_gui(pick_files = False):
                 # change the cur eqpt field being edited
                 user_actions.push((event, equipment.items[equipment.cur_index][event][0]))
                 equipment.items[equipment.cur_index][event][0] = values[event]
-                
+                continue 
             if event == "Save Inputs To Excel" or event == 's:83': #Ctrl-s
                 # update the excel file
                 filestream.save_eqpt_to_xl(equipment, files.excel)

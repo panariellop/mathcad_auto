@@ -66,7 +66,13 @@ def resource_path(relative_path):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
-
+def format_comment(comment:str)->str:
+    """
+    Formats the comments properly since tehy come as garbled text
+    """
+    out = comment.split("Comment:")
+    out = out[-1]
+    return out 
 
 if __name__ == "__main__":
     pass

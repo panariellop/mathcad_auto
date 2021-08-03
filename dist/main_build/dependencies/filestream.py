@@ -59,7 +59,7 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     """
     Search for header row before finding data
     """
-    header_row_found = False
+    header_row = None 
     for idx, row in enumerate(sheet.iter_rows(values_only=True)):
         #gow through each row in the excel worksheet
         if row[0] == "eqpt_name":
@@ -78,9 +78,9 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
                     alert.alert() #alert the user of their mistake 
                     return equipment #return a blank equipment 
 
-            header_row_found = True #we found the start of the useful information
+            header_row = idx  #we found the start of the useful information
         #if we found the header row and the current row is not blank
-        elif header_row_found and row[0] is not None:
+        elif header_row and row[0] is not None:
             cur_eqpt = dict()
             for i, header in enumerate(headers):
                 # populates each eqpt with the input fields and [value, units]
@@ -89,11 +89,15 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
                     units = units.strip(")")
                     field = header.split("(")[0]
                     field = field.strip(" ")
-                    cur_eqpt[field] = [row[i], units]  # assign cur_eqpt
+                    comment = sheet.cell(row = header_row+1, column = i+1).comment 
+                    from main_build.dependencies import helpers 
+                    try: comment = helpers.format_comment(comment.text)
+                    except: pass 
+                    cur_eqpt[field] = [row[i], units, comment]  # assign cur_eqpt
                 except:
-                    cur_eqpt[header] = [row[i], ""]  # <- blank units
+                    cur_eqpt[header] = [row[i], "", ""]  # <- blank units
             equipment.append(cur_eqpt)
-        elif header_row_found and row[0] is None:
+        elif header_row and row[0] is None:
             break  # want to break out and not view all rows when reached end of eqpt list
     return equipment
 
