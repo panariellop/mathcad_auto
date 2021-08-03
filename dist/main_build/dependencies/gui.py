@@ -142,6 +142,11 @@ class SelectTemplates():
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
                         continue
+    def dev_get_xl_and_templates(self): 
+        self.excel = "C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template.xlsx"
+        self.templates = {'Wall, Floor': 'C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_document_mathcad_7.mcdx',
+                          'Ceiling': 'C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_document_mathcad_7.mcdx'
+        }
 
     def get_images_from_xl(self, num_images: int):
         """
@@ -255,7 +260,7 @@ class Popup():
             [sg.Button(description_text, enable_events = True, key = "LINK")], 
             [sg.Text("")],
             [sg.Text("")],
-        ])
+        ], icon = images.ma_logo_png)
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
@@ -265,8 +270,6 @@ class Popup():
                 popup.close()
                 import webbrowser
                 webbrowser.open(link)
-                break 
-
-
+                break
 if __name__ == "__main__":
     pass

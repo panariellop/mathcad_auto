@@ -56,13 +56,26 @@ def load_inputs(equipment: Equipment):
         from main_build.dependencies import verbose #verbose names (more legible names) 
         name  = verbose.inputs(name) 
         if num_fields % 2 == 0:
-            input_fields.append( #provides some pysimplegui text and input boxes
-                [sg.Text(str(name), size=(20, 1)),
-                 sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
-                 sg.Text(value[1])]
-            )
+            if field == 'mounting_location': #create dropdown for mounting location 
+                input_fields.append(
+                    [sg.Text(str(name), size = (20,1)),
+                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field)),
+                     sg.Text(value[1])]
+                )
+            else:
+                input_fields.append( #provides some pysimplegui text and input boxes
+                    [sg.Text(str(name), size=(20, 1)),
+                     sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
+                     sg.Text(value[1])]
+                )
         else:
-            input_fields.append( #provides some pysimplegui text and input boxes
+            if field == 'mounting_location':
+                input_fields.append(
+                    [sg.Text(str(name), size = (20,1)),
+                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field)),
+                     sg.Text(value[1])]) 
+            else:
+                input_fields.append( #provides some pysimplegui text and input boxes
                 [sg.Text(str(name), size=(20, 1), background_color = "light gray"),
                  sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True),
                  sg.Text(value[1])]
@@ -93,25 +106,28 @@ def update_preview_image(equipment: Equipment, files):
     return image
 
 
-def load_gui():
+def load_gui(pick_files = False):
     """
     Main GUI - controlls graphics and logic
     """
     files = SelectTemplates()
     input_validation = InputValidation()
-    files.display_and_update()
+    if pick_files: #skip the choose file menu
+        files.dev_get_xl_and_templates()
+    else: #
+        files.display_and_update()
     files.get_images_from_xl(num_images=4)
     equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
     sg.theme('Reddit')
     sg.set_options(icon=images.ma_logo_png)
+
+    # ------ Menu Definition ------ #
+    menu_def = [['&File', ['&Select', '&Refresh' ]],
+            ['&Help', '&Help'],]
+    
     layout = [
-        [sg.Column([[sg.Image(data = images.tt_logo_small)]], vertical_alignment='center', justification='center',  k='-C-'), sg.Text(" ", size = (100,1)), sg.Button("Get Help", enable_events = True, key = "get_help_link")],
-        [
-            sg.Button("Change Input Files", key="change_input_files", tooltip="Reselect the input files."),
-            sg.Text(" ", size=(5, 1)),
-            sg.Button("Refresh", key="refresh_input_files", tooltip="Reload the data from the excel sheet.")
-        ],
+        [sg.Column([[sg.Image(data = images.tt_logo_small)]], justification='c',  k='-C-')],
 
         [
             # list of equiptment
@@ -184,6 +200,8 @@ def load_gui():
 
     ]
 
+    layout += [[sg.Menu(menu_def)]]
+
     window = sg.Window('Anchorage Mathcad Automation', layout)
 
     """Logic loop"""
@@ -196,13 +214,13 @@ def load_gui():
             """
             Change Input Files
             """
-            if event == "change_input_files":
+            if event == "Select":
                 files.display_and_update()
 
             """
             Refresh input files
             """
-            if event == "refresh_input_files":
+            if event == "Refresh":
                 confirm = Popup("Confirm",
                                 "This will reload the information from the input excel document and erase any changes you have made to the inputs.")
                 if confirm.confirm():
@@ -364,7 +382,7 @@ def load_gui():
                 window['outputs'].update(values=cur_outputs.display())
 
             """Get help"""
-            if event == "get_help_link":
+            if event == "Help":
                 popup = Popup("Get Help", "Please direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
 
@@ -382,4 +400,6 @@ def load_gui():
 
 
 if __name__ == "__main__":
-    load_gui()
+    #TODO ensure pick_files is set to false when packaging application
+    #pick_files hides the menu to choose input files 
+    load_gui(pick_files=True)
