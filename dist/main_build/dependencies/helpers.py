@@ -24,9 +24,9 @@ def convert_units(value: int, input_units: str, target_units: str) -> int:
         return value * 2.204623
     elif input_units == "lb" and target_units == "kg":
         return value / 2.204623
-    elif input_units == "n" and target_units == "lbf":
+    elif input_units == "N" and target_units == "lbf":
         return value * 0.2248089
-    elif input_units == "lbf" and target_units == "n":
+    elif input_units == "lbf" and target_units == "N":
         return value / 0.2248089
 
     else:
@@ -90,22 +90,5 @@ def get_input_from_info(event:str)->str:
     return out 
 
 
-def is_asd_output(output:str)->bool:
-    allowed = [
-        't_max_1_output',
-        't_max_2_output'
-    ]
-    if output in allowed: return True
-    else: return False 
-
-def is_lrfd_output(output:str)->bool:
-    allowed = [
-        't_u1_output',
-        't_u2_output',
-        't_u12_output',
-        't_u12_output',
-    ]
-    if output in allowed: return True 
-    else: return False 
 if __name__ == "__main__":
     pass

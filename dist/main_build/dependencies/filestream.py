@@ -51,7 +51,8 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     Gets all the equipment from an excel file and returns an equipment object
     """
     wb = load_workbook(filename=filepath)
-    sheet = wb['values'] # set worksheet to the values sheet
+    try: sheet = wb['values'] # set worksheet to the values sheet
+    except: sheet = wb['Calculation']
     # iterate through each of the equipment and append it to the object
     headers = list()
     equipment = Equipment() # new equipment class
@@ -106,7 +107,8 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
     Saves the equipment back to the excel file
     """
     wb = load_workbook(filename=filepath)
-    sheet = wb['values']  # set worksheet to the values sheet
+    try: sheet = wb['values'] # set worksheet to the values sheet
+    except: sheet = wb['Calculation']
     # iterate through each of the equipment and append it to the object
     headers = list()
 
@@ -133,7 +135,7 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
     # excel file might be open 
     try:
         wb.save(filepath) 
-        popup = Popup("File Saved", f"The inputs were saved successfuly to the excel input file.")
+        popup = Popup("File Saved", f"The inputs were saved successfuly to {filepath}")
         popup.alert()
     except:
         popup = Popup("Error", f"Please close {filepath} and save again.") 

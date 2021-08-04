@@ -111,7 +111,7 @@ def load_gui(pick_files = False):
             sg.Column([
                 [sg.Frame("Choose Equipment", [
                     [sg.Listbox(values=equipment.display_choose_eqpt(),
-                                size=(30, 20),
+                                size=(30, 33),
                                 key='equipment_list',
                                 select_mode="LISTBOX_SELECT_MODE_SINGLE",
                                 enable_events=True,
@@ -179,9 +179,9 @@ def load_gui(pick_files = False):
                                 ],
                                 ],
 
-                          )],
+                          element_justification = 'c'), ],
 
-            ])
+            ], justification = 'c')
 
         ],
 
@@ -334,6 +334,30 @@ def load_gui(pick_files = False):
                     else:
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
+            if event == "generate_report_for_all" and input_validation.validate(equipment):
+                # check if the files exist and are the correct file type
+                if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
+                    popup = Popup("Error", "Please select an input excel file.")
+                    popup.alert()
+                else:
+                    errors = []
+                    for eqpt in equipment.items:
+                        status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
+                        if not status:
+                            errors.append(f'There was an issue processing {eqpt["eqpt_name"]}')
+                    for k, v in files.templates.items():
+                        for i in range(len(equipment.items)):
+                            try:
+                                os.remove(v.split(".")[0]+str(i)+".mcdx")
+                            except: continue
+                    if len(errors)>0:
+                        popup = Popup("Error", "\n".join(errors))
+                        popup.alert()
+                    else:
+                        popup = Popup("Success", "Successfuly saved reports.")
+                        popup.alert()
+                continue 
+                
 
             """
             Generate Report for all eqpt

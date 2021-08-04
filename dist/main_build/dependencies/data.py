@@ -101,7 +101,7 @@ class Outputs():
         """
         to_display = list()
         for i in self.items:
-            if helpers.is_asd_output(i[0]):
+            if verbose.is_asd_output(i[0]):
                 to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
         return to_display
     def display_lrfd(self)->list:
@@ -110,7 +110,7 @@ class Outputs():
         """
         to_display = list()
         for i in self.items:
-            if helpers.is_lrfd_output(i[0]):
+            if verbose.is_lrfd_output(i[0]):
                 to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
         return to_display
     def display_misc(self)->list: 
@@ -119,7 +119,7 @@ class Outputs():
         """
         to_display = list()
         for i in self.items:
-            if not helpers.is_asd_output(i[0]) and not helpers.is_lrfd_output(i[0]):
+            if not verbose.is_asd_output(i[0]) and not verbose.is_lrfd_output(i[0]):
                 to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
         return to_display
 
@@ -140,8 +140,8 @@ class Outputs():
                     i[1][1] = "kg"
                     i[1][0] = helpers.convert_units(i[1][0], "lb", "kg")
                 if i[1][1] == "lbf":
-                    i[1][1] = "n"
-                    i[1][0] = helpers.convert_units(i[1][0], "lb", "n")
+                    i[1][1] = "N"
+                    i[1][0] = helpers.convert_units(i[1][0], "lb", "N")
             else:
                 if i[1][1] == "m":
                     i[1][1] = "ft"
@@ -149,9 +149,9 @@ class Outputs():
                 if i[1][1] == "kg":
                     i[1][1] = "lb"
                     i[1][0] = helpers.convert_units(i[1][0], "kg", "lb")
-                if i[1][1] == "n":
+                if i[1][1] == "N":
                     i[1][1] = "lbf"
-                    i[1][0] = helpers.convert_units(i[1][0], "n", "lbf")
+                    i[1][0] = helpers.convert_units(i[1][0], "N", "lbf")
 
 class UserActions():
     def __init__(self):

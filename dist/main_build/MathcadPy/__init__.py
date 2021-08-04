@@ -12,7 +12,7 @@ Mathcad Prime (https://www.mathcad.com)
 PyWin32 (https://github.com/mhammond/pywin32)
 """
 
-from ._application import *
+#from ._application import *
 from . import __version__
 
 __author__ = __version__.__author__

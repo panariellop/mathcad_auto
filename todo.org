@@ -24,18 +24,23 @@
    - [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
    - [ ] Preview image not updated when changing text inputs
 
+* Bug Fixes 
+      - [X] Fix generate all reports function 
+      'Mathcad' object has no attribute '_Mathcad__mcadapp'
+      '(-2147221008, 'CoInitialize has not been called.', None, None)'
+
 * Documentation Changes 
    - [ ] Change documentaion 
    - [X] * Put help, refresh, select files into menubar
 
 * Updater? 
       + [ ] Update feature 
-            - Seperate program that gets bundled with the distribution
-            - Updates the main program every time there are pushes to the main branch 
-                  + Find the push history to main branch using the Github API 
-                  + Every time there is a push to the main branch, package it on the remote machine and store the executable in a bucket 
-                  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
-                  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be downloaded 
+	- Seperate program that gets bundled with the distribution
+	- Updates the main program every time there are pushes to the main branch 
+	  + Find the push history to main branch using the Github API 
+	  + Every time there is a push to the main branch, package it on the remote machine and store the executable in a bucket 
+	  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
+	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be downloaded 
 * Teach Parth 
       ** File Structure 
       ** How to use the developer documentation 

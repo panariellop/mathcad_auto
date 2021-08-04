@@ -24,8 +24,8 @@ class Mathcad():
             else:
                 self.__mcadapp.Visible = True
             self._list_worksheets()
-        except:  # TODO - improve error handling - specific COM exceptions
-            print("Could not locate the Mathcad Automation API")
+        except Exception as e:  # TODO - improve error handling - specific COM exceptions
+            print("Could not locate the Mathcad Automation API", e)
 
     def _list_worksheets(self):
         """ lists worksheets open in the Mathcad instance """

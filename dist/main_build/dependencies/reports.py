@@ -4,21 +4,12 @@ All of the functions that perform report generating or calculations with Mathcad
 from main_build.dependencies.filestream import * 
 from main_build.dependencies.data import Equipment
 from main_build.dependencies.gui import * 
-from mathcadpy import Mathcad, Worksheet  # loading custom
+from main_build.MathcadPy.mathcadpy import Mathcad, Worksheet  # loading custom
 
 from shutil import copyfile
-import threading
-# needed to save to leger csv
-import csv
-import random
-import copy
-from datetime import date
+
 # so user can copy to clipboard
-import pyperclip
-import io
-from time import sleep
 # so we can grab images from the sheet
-from openpyxl_image_loader import SheetImageLoader
 import stat
 
 
@@ -78,6 +69,7 @@ def pre_generate_report(equipment: Equipment, files, cur_directory, generating_m
     else:  # prompts user for a filename input
         popup = Popup("File Name", "Choose a file name:")
         file_name = popup.take_input(".mcdx")
+        if file_name == "" or file_name == None: return False
 
     """
     copy files and select template file depending on the mounting location of the cur_eqpt
@@ -128,8 +120,9 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
 
     #get the path of the report
     report_filepath = output_folder_filepath + "/" + file_name + ".mcdx"
-    if not cur_worksheet.save_as(
-            report_filepath):  # checks if the document is already created or not, if it is, then create another unique name
+    
+    if not cur_worksheet.save_as(report_filepath):
+        # checks if the document is already created or not, if it is, then create another unique name
         report_filepath = report_filepath.split(".")[0] + "1" + ".mcdx"
 
     if cur_worksheet.save_as(report_filepath):  # save the report
@@ -137,10 +130,12 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
         # save to reports ledger
         if (files.save_to_database == True):
             if (files.database == ""):
-                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"  # defaults save to the same folder as output if not specified
+                # defaults save to the same folder as output if not specified
+                ledger_filepath = output_folder_filepath + "/all_mathcad_reports.csv"  
             else:
                 ledger_filepath = files.database
-            save_eqpt_to_csv(cur_eqpt, ledger_filepath, file_name) #save the entry to the csv
+            #save the entry to the csv
+            save_eqpt_to_csv(cur_eqpt, ledger_filepath, file_name) 
         return True
     else:
         cur_worksheet.close()

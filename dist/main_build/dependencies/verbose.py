@@ -50,5 +50,24 @@ def outputs(cur_output):
     #convert, but if not then just return the output back 
     try: return conversion[cur_output]
     except: return cur_output
+
+
+def is_asd_output(output:str)->bool:
+    allowed = [
+        't_max_1_output',
+        't_max_2_output'
+    ]
+    if output in allowed: return True
+    else: return False 
+
+def is_lrfd_output(output:str)->bool:
+    allowed = [
+        't_u1_output',
+        't_u2_output',
+        't_u12_output',
+        't_u12_output',
+    ]
+    if output in allowed: return True 
+    else: return False 
 if __name__ == "__main__":
     pass
