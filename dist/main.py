@@ -276,7 +276,9 @@ def load_gui(pick_files = False):
                 if files.excel != "" and helpers.check_file_type(files.excel, 'xlsx'):
                     values, window = update_inputs(equipment, values, window) #update inputs
                     # Update the outputs in the GUI
-                    window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
+                    window['asd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_asd())
+                    window['lrfd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_lrfd())
+                    window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                  # display the current one being selected
                 window['equipment_list'].set_focus(equipment.cur_index) 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
@@ -291,7 +293,9 @@ def load_gui(pick_files = False):
                 # update viewport
                 values, window = update_inputs(equipment, values, window)
                 #Update the output in the GUI 
-                window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
+                window['asd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_asd())
+                window['lrfd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_lrfd())
+                window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                 window['preview_image'].update(data = update_preview_image(equipment, files)) 
 
@@ -307,7 +311,9 @@ def load_gui(pick_files = False):
                     # display the eqpt being selected
                     window['equipment_list'].set_focus(equipment.cur_index)  
                     # update the outputs in the GUI
-                    window['outputs'].update(values=equipment.outputs[equipment.cur_index].display())
+                    window['asd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_asd())
+                    window['lrfd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_lrfd())
+                    window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                     window['preview_image'].update(data = update_preview_image(equipment, files)) 
 
