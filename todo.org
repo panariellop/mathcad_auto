@@ -18,11 +18,10 @@
             2. Pop the stack when user clicks Edit->Undo
    - [X] Link inputs to excel file (maybe have a save inputs to excel button)
    - [X] Add a comment in excel spreadsheet linked to info button
-      - [ ] Only render info button if the comment is valid 
+      - [X] Only render info button if the comment is valid 
    - [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])  
    - [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-   - [ ] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-   - [ ] Info buttons for each of the inputs
+   - [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
    - [ ] Preview image not updated when changing text inputs
 
 * Documentation Changes 
@@ -31,3 +30,14 @@
 
 * Updater? 
       + [ ] Update feature 
+            - Seperate program that gets bundled with the distribution
+            - Updates the main program every time there are pushes to the main branch 
+                  + Find the push history to main branch using the Github API 
+                  + Every time there is a push to the main branch, package it on the remote machine and store the executable in a bucket 
+                  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
+                  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be downloaded 
+* Teach Parth 
+      ** File Structure 
+      ** How to use the developer documentation 
+      ** How to make updates/changes 
+      ** Deploying those updates/changes 

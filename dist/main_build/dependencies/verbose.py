@@ -1,5 +1,6 @@
 """
-Gives verbose version of the argument 
+Gives verbose version of the argument (more readable version)
+ex: h_1_input -> h1
 """
 
 def inputs(cur_input):
@@ -41,6 +42,10 @@ def outputs(cur_output):
         'cgx2_output': 'CGx\u2082',
         't_max_1_output': 'Tmax\u2081',
         't_max_2_output': 'Tmax\u2082',
+        't_u1_output': "Tu\u2081 - Direction X",
+        't_u2_output': "Tu\u2082 - Direction Y",
+        't_u12_output': "Tu\u2081 - Direction X",
+        't_u12_output': "Tu\u2082 - Direction Y",
         }
     #convert, but if not then just return the output back 
     try: return conversion[cur_output]

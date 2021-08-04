@@ -4,8 +4,10 @@ All the important data structures in the application
 """
 try:
     from main_build.dependencies import helpers
+    from main_build.dependencies import verbose
 except:
     import helpers
+    import verbose 
 class Equipment():
     """
     Equipment class that holds the information of all the equipment
@@ -93,13 +95,32 @@ class Outputs():
         """Clear self.items"""
         self.items = []
 
-    def display(self) -> list:
+    def display_asd(self) -> list:
         """
         Presents self.items in a more displayable format so the GUI has an easier time
         """
         to_display = list()
         for i in self.items:
-            to_display.append(str(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
+            if helpers.is_asd_output(i[0]):
+                to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
+        return to_display
+    def display_lrfd(self)->list:
+        """
+        Presents self.items in a more displayable format so the GUI has an easier time
+        """
+        to_display = list()
+        for i in self.items:
+            if helpers.is_lrfd_output(i[0]):
+                to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
+        return to_display
+    def display_misc(self)->list: 
+        """
+        Presents self.items in a more displayable format so the GUI has an easier time
+        """
+        to_display = list()
+        for i in self.items:
+            if not helpers.is_asd_output(i[0]) and not helpers.is_lrfd_output(i[0]):
+                to_display.append(verbose.outputs(i[0]) + " = " + str(round(i[1][0], 2)) + " " + str(i[1][1]))  # name = value units
         return to_display
 
     def convert_units(self, in_units, tg_units):

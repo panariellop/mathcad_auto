@@ -7,7 +7,6 @@ from main_build.dependencies.filestream import get_eqpt_from_xl
 import os, sys
 
 sys.path.append(os.getcwd() + "/main_build/MathcadPy")  # allows inport of mathcad module
-from mathcadpy import Mathcad, Worksheet  # loading custom
 # from MathcadPy import Mathcad, Worksheet
 # imports the images as binaries
 #from images import *
@@ -20,25 +19,11 @@ from main_build.dependencies.gui import *
 from main_build.dependencies.validation import InputValidation
 
 import PySimpleGUI as sg
-from pathlib import Path, PurePath
 # needed to open excel files
-from openpyxl import Workbook as xlwkbk
-from openpyxl import load_workbook
 # needed for parrallel processing
-from shutil import copyfile
 import threading
-# needed to save to leger csv
-import csv
-import random
-import copy
-from datetime import date
 # so user can copy to clipboard
 import pyperclip
-import io
-from time import sleep
-# so we can grab images from the sheet
-from openpyxl_image_loader import SheetImageLoader
-import stat
 
 def load_inputs(equipment: Equipment):
     """
@@ -57,21 +42,20 @@ def load_inputs(equipment: Equipment):
             if field == 'mounting_location': #create dropdown for mounting location 
                     to_append.append(sg.Text(str(name), size = (20,1)))
                     to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
-                    to_append.append(sg.Text(value[1], size = (4,1))) 
             else:
                     to_append.append(sg.Text(str(name), size=(20, 1)))
                     to_append.append(sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True))
-                    to_append.append(sg.Text(value[1], size = (4, 1)))
         else:
             if field == 'mounting_location':
                     to_append.append(sg.Text(str(name), size = (20,1)))
                     to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
-                    to_append.append(sg.Text(value[1], size = (4,1))) 
             else:
                 to_append.append(sg.Text(str(name), size=(20, 1), background_color = "light gray"))
                 to_append.append(sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True))
-                to_append.append(sg.Text(value[1], size = (4, 1)))
+        # units 
+        to_append.append(sg.Text(value[1], size = (4, 1)))
         if value[2] != "":
+            #info button 
             to_append.append(sg.Button("i", key = (field+"_info"), enable_events = True))
         input_fields.append(to_append)
         num_fields += 1 
@@ -120,7 +104,7 @@ def load_gui(pick_files = False):
 
     
     layout = [
-        [sg.Column([[sg.Image(data = images.tt_logo_small)]], justification='c',  k='-C-')],
+        [sg.Column([[sg.Image(data = images.tt_logo)]], justification='l',  k='-C-')],
 
         [
             # list of equiptment
@@ -161,16 +145,39 @@ def load_gui(pick_files = False):
                                         tooltip="Switch outputs to imperial units."),
                                sg.Radio("Metric Units", "RADIO1", default=True, key="convert_to_metric",
                                         enable_events=True, tooltip="Switch outputs to metric units.")],
-
+                                [sg.Text("ASD Outputs")], 
                               [sg.Listbox(values=[],
-                                          size=(30, 20),
-                                          key='outputs',
+                                          size=(20, 8),
+                                          key='asd_outputs',
                                           select_mode="LISTBOX_SELECT_MODE_BROWSE",
                                           right_click_menu=['&Right', ["Copy"]],
                                           enable_events=True)],
+                                [sg.Text("LRFD Outputs")], 
+                              [sg.Listbox(values=[],
+                                        size=(20, 8),
+                                        key='lrfd_outputs',
+                                        select_mode="LISTBOX_SELECT_MODE_BROWSE",
+                                        right_click_menu=['&Right', ["Copy"]],
+                                        enable_events=True)],
+                                [sg.Text("Misc. Outputs")], 
+                              [sg.Listbox(values=[],
+                                        size=(20, 8),
+                                        key='misc_outputs',
+                                        select_mode="LISTBOX_SELECT_MODE_BROWSE",
+                                        right_click_menu=['&Right', ["Copy"]],
+                                        enable_events=True)],
                               [sg.Button("Preview Calculation Outputs", key="calculate",
                                          tooltip="This will calculate the designated outputs for the current inputs and display them in the output field.")],
-                          ],
+                               [
+                                sg.Button("Generate Report", key="generate_report", size=(17, 1),
+                                        tooltip="This will save a Mathcad report for the equipment being viewed. \nThe template file corresponding to the mounting location will be used."),
+                                ],
+
+                                [
+                                sg.Button("Generate Report For All", key="generate_report_for_all",
+                                        tooltip="This will generate a Mathad report for all the equipment listed.\nTemplate files corresponding to each equipment's mounting location will be used.")
+                                ],
+                                ],
 
                           )],
 
@@ -178,18 +185,7 @@ def load_gui(pick_files = False):
 
         ],
 
-        [
-
-            sg.Frame("", [[
-                sg.Button("Generate Report", key="generate_report", size=(17, 1),
-                          tooltip="This will save a Mathcad report for the equipment being viewed. \nThe template file corresponding to the mounting location will be used."),
-            ],
-
-                [
-                    sg.Button("Generate Report For All", key="generate_report_for_all",
-                              tooltip="This will generate a Mathad report for all the equipment listed.\nTemplate files corresponding to each equipment's mounting location will be used.")
-                ],
-            ])],
+     
 
     ]
 
@@ -237,9 +233,9 @@ def load_gui(pick_files = False):
             """
             If user wants to copy output
             """
-            if event == "outputs":
+            if event == "asd_outputs" or event == "lrfd_outputs" or event == "misc_outputs":
                 try:
-                    to_copy = window['outputs'].get()[0]
+                    to_copy = window[event].get()[0]
                     pyperclip.copy(str(to_copy)) #uses pyperclip to copy to user's clipboard
                 except:
                     pass
@@ -256,11 +252,15 @@ def load_gui(pick_files = False):
             """
             Update the Equipment object when the user edits an input field
             """
-            if event in equipment.fields and event != "Undo":
+            if event in equipment.fields:
                 # change the cur eqpt field being edited
                 user_actions.push((event, equipment.items[equipment.cur_index][event][0]))
                 equipment.items[equipment.cur_index][event][0] = values[event]
                 continue 
+                
+            """
+            Save equipment back to excel 
+            """
             if event == "Save Inputs To Excel" or event == 's:83': #Ctrl-s
                 # update the excel file
                 filestream.save_eqpt_to_xl(equipment, files.excel)
@@ -376,16 +376,16 @@ def load_gui(pick_files = False):
                     alert = Popup("Error", "Please select an input excel file from the input files window.")
                     alert.alert()
                 else:
-                    to_out = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
+                    outputs = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
                     #add all the output we got from mathcad_calculate to the outputs class
                     cur_outputs = equipment.outputs[equipment.cur_index]
                     cur_outputs.clear() #clear to prep for next inputs
                     from main_build.dependencies import verbose 
-                    for key, val in to_out.items():
-                        key = verbose.outputs(key) 
+                    for key, val in outputs.items():
                         cur_outputs.append([key, val]) 
-                        #outputs.append([key, val])
-                    window['outputs'].update(values=cur_outputs.display())
+                    window['asd_outputs'].update(values=cur_outputs.display_asd())
+                    window['lrfd_outputs'].update(values=cur_outputs.display_lrfd())
+                    window['misc_outputs'].update(values=cur_outputs.display_misc())
                     alert = Popup("Calcuation Complete", "Output fields have been updated.")
                     alert.alert()
 
@@ -395,12 +395,15 @@ def load_gui(pick_files = False):
             if event == "convert_to_imperial":
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('metric', 'imperial')
-                window['outputs'].update(values=cur_outputs.display())
+                window['asd_outputs'].update(values=cur_outputs.display_asd())
+                window['lrfd_outputs'].update(values=cur_outputs.display_lrfd())
+                window['misc_outputs'].update(values=cur_outputs.display_misc())
             if event == "convert_to_metric":
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('imperial', 'metric')
-                window['outputs'].update(values=cur_outputs.display())
-
+                window['asd_outputs'].update(values=cur_outputs.display_asd())
+                window['lrfd_outputs'].update(values=cur_outputs.display_lrfd())
+                window['misc_outputs'].update(values=cur_outputs.display_misc())
             """Get help"""
             if event == "Help":
                 popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
@@ -421,5 +424,6 @@ def load_gui(pick_files = False):
 
 if __name__ == "__main__":
     #TODO ensure pick_files is set to false when packaging application
-    #pick_files hides the menu to choose input files 
+    #pick_files is another way of saying developer environment  
+    #pick_files hides the menu to choose input files when True 
     load_gui(pick_files=True)
