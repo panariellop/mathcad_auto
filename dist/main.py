@@ -343,13 +343,9 @@ def load_gui(pick_files = False):
                     errors = []
                     for eqpt in equipment.items:
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
+                        equipment.next_index()
                         if not status:
-                            errors.append(f'There was an issue processing {eqpt["eqpt_name"]}')
-                    for k, v in files.templates.items():
-                        for i in range(len(equipment.items)):
-                            try:
-                                os.remove(v.split(".")[0]+str(i)+".mcdx")
-                            except: continue
+                            errors.append(f'There was an issue processing {eqpt["eqpt_name"][0]}')
                     if len(errors)>0:
                         popup = Popup("Error", "\n".join(errors))
                         popup.alert()
@@ -455,5 +451,8 @@ def load_gui(pick_files = False):
 if __name__ == "__main__":
     #TODO ensure pick_files is set to false when packaging application
     #pick_files is another way of saying developer environment  
-    #pick_files hides the menu to choose input files when True 
-    load_gui(pick_files=True)
+    #pick_files hides the menu to choose input files when True
+    import sys
+    if len(sys.argv) > 1 and sys.argv[1] == "-dev":
+        load_gui(pick_files=True)
+    else: load_gui()

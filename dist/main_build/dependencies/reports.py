@@ -74,6 +74,7 @@ def pre_generate_report(equipment: Equipment, files, cur_directory, generating_m
     """
     copy files and select template file depending on the mounting location of the cur_eqpt
     """
+    """
     if generating_multiple_reports:
         #make a new template file path - we need to make multiple because we don't want the threads to collide
         template_file = files.templates[cur_eqpt['mounting_location'][0]].split(".")[0] + str(
@@ -81,7 +82,8 @@ def pre_generate_report(equipment: Equipment, files, cur_directory, generating_m
         #copy the template so we can work on it
         copyfile(files.templates[cur_eqpt['mounting_location'][0]], template_file)
     else:
-        template_file = files.templates[cur_eqpt['mounting_location'][0]]
+    """
+    template_file = files.templates[cur_eqpt['mounting_location'][0]]
 
     #call generate report to set inputs and save file
     status = generate_report(cur_eqpt, equipment, file_name, template_file, files, cur_directory, debug=False)
