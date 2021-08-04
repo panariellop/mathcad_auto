@@ -72,7 +72,15 @@ def format_comment(comment:str)->str:
     """
     out = comment.split("Comment:")
     out = out[-1]
+    out = out.strip("\n")
     return out 
 
+def get_input_from_info(event:str)->str:
+    """
+    mounting_location_info -> mounting_location
+    """
+    out = event.split("_")[0:-1]
+    out = "_".join(out)
+    return out 
 if __name__ == "__main__":
     pass

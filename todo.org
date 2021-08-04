@@ -13,10 +13,10 @@
    - [X] Change outputs to verbose names
    - [X] Embed preview image in main window
    - [X] Make mounting location a dropdown
-   - [ ] Undo button
+   - [X] Undo button
             1. Need to implement a stack of changes made
-            2. Pop the stack when user hits Ctrl-z or Edit->Undo
-   - [ ] Link inputs to excel file (maybe have a save inputs to excel button)
+            2. Pop the stack when user clicks Edit->Undo
+   - [X] Link inputs to excel file (maybe have a save inputs to excel button)
    - [ ] Create API so parth can edit info about each input 
    - [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])  
    - [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
@@ -24,6 +24,9 @@
    - [ ] Info buttons for each of the inputs
    - [ ] Preview image not updated when changing text inputs
 
-     
+* Documentation Changes 
    - [ ] Change documentaion 
    - [X] * Put help, refresh, select files into menubar
+
+* Updater? 
+      + [ ] Update feature 

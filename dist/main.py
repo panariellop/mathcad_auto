@@ -56,26 +56,31 @@ def load_inputs(equipment: Equipment):
             if field == 'mounting_location': #create dropdown for mounting location 
                 input_fields.append(
                     [sg.Text(str(name), size = (20,1)),
-                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field)),
-                     sg.Text(value[1]), ]
+                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)),
+                     sg.Text(value[1], size = (4,1)), 
+                     sg.Button("i", key = (field+"_info"), enable_events = True)
+                     ]
                 )
             else:
                 input_fields.append( #provides some pysimplegui text and input boxes
                     [sg.Text(str(name), size=(20, 1)),
                      sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
-                     sg.Text(value[1]),]
+                     sg.Text(value[1], size = (4, 1)),
+                     sg.Button("i", key = (field+"_info"), enable_events = True)]
                 )
         else:
             if field == 'mounting_location':
                 input_fields.append(
                     [sg.Text(str(name), size = (20,1)),
-                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field)),
-                     sg.Text(value[1])]) 
+                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)),
+                     sg.Text(value[1], size = (4,1)), 
+                     sg.Button("i", key = (field+"_info"), enable_events = True)]) 
             else:
                 input_fields.append( #provides some pysimplegui text and input boxes
                 [sg.Text(str(name), size=(20, 1), background_color = "light gray"),
                  sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True),
-                 sg.Text(value[1])]
+                 sg.Text(value[1], size = (4, 1)), 
+                 sg.Button("i", key = (field+"_info"), enable_events = True)]
             )
         num_fields += 1 
     return input_fields
@@ -211,6 +216,7 @@ def load_gui(pick_files = False):
     user_actions = UserActions()
     while True:
         event, values = window.read()
+        print(event)
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:
@@ -246,6 +252,15 @@ def load_gui(pick_files = False):
                     pyperclip.copy(str(to_copy)) #uses pyperclip to copy to user's clipboard
                 except:
                     pass
+            """
+            Get info for inputs 
+            """
+            if helpers.get_input_from_info(event) in equipment.fields:
+                field = helpers.get_input_from_info(event)
+                print(equipment.items[equipment.cur_index]['eqpt_name'][0])
+                popup = Popup(equipment.items[equipment.cur_index]['eqpt_name'][0], equipment.items[equipment.cur_index][field][2])
+                popup.alert()
+                continue
 
             """
             Update the Equipment object when the user edits an input field
