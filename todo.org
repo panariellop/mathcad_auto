@@ -17,7 +17,8 @@
             1. Need to implement a stack of changes made
             2. Pop the stack when user clicks Edit->Undo
    - [X] Link inputs to excel file (maybe have a save inputs to excel button)
-   - [ ] Create API so parth can edit info about each input 
+   - [X] Add a comment in excel spreadsheet linked to info button
+      - [ ] Only render info button if the comment is valid 
    - [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])  
    - [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
    - [ ] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 

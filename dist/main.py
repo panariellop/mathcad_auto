@@ -48,40 +48,32 @@ def load_inputs(equipment: Equipment):
     input_fields = list()
     num_fields = 0
     for field, value in equipment.items[equipment.cur_index].items():  # each eqpt is a dictionary, field is key
+        to_append = []
         name = field.split("(")[0]
         name = name.replace(" ", "")
         from main_build.dependencies import verbose #verbose names (more legible names) 
         name  = verbose.inputs(name) 
         if num_fields % 2 == 0:
             if field == 'mounting_location': #create dropdown for mounting location 
-                input_fields.append(
-                    [sg.Text(str(name), size = (20,1)),
-                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)),
-                     sg.Text(value[1], size = (4,1)), 
-                     sg.Button("i", key = (field+"_info"), enable_events = True)
-                     ]
-                )
+                    to_append.append(sg.Text(str(name), size = (20,1)))
+                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
+                    to_append.append(sg.Text(value[1], size = (4,1))) 
             else:
-                input_fields.append( #provides some pysimplegui text and input boxes
-                    [sg.Text(str(name), size=(20, 1)),
-                     sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True),
-                     sg.Text(value[1], size = (4, 1)),
-                     sg.Button("i", key = (field+"_info"), enable_events = True)]
-                )
+                    to_append.append(sg.Text(str(name), size=(20, 1)))
+                    to_append.append(sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True))
+                    to_append.append(sg.Text(value[1], size = (4, 1)))
         else:
             if field == 'mounting_location':
-                input_fields.append(
-                    [sg.Text(str(name), size = (20,1)),
-                     sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)),
-                     sg.Text(value[1], size = (4,1)), 
-                     sg.Button("i", key = (field+"_info"), enable_events = True)]) 
+                    to_append.append(sg.Text(str(name), size = (20,1)))
+                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
+                    to_append.append(sg.Text(value[1], size = (4,1))) 
             else:
-                input_fields.append( #provides some pysimplegui text and input boxes
-                [sg.Text(str(name), size=(20, 1), background_color = "light gray"),
-                 sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True),
-                 sg.Text(value[1], size = (4, 1)), 
-                 sg.Button("i", key = (field+"_info"), enable_events = True)]
-            )
+                to_append.append(sg.Text(str(name), size=(20, 1), background_color = "light gray"))
+                to_append.append(sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True))
+                to_append.append(sg.Text(value[1], size = (4, 1)))
+        if value[2] != "":
+            to_append.append(sg.Button("i", key = (field+"_info"), enable_events = True))
+        input_fields.append(to_append)
         num_fields += 1 
     return input_fields
 
@@ -216,7 +208,6 @@ def load_gui(pick_files = False):
     user_actions = UserActions()
     while True:
         event, values = window.read()
-        print(event)
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:

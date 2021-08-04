@@ -62,18 +62,26 @@ def resource_path(relative_path):
     """
     Determines the resource path for a graphic, etc
     """
+    import sys 
     if hasattr(sys, '_MEIPASS'):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
 
 def format_comment(comment:str)->str:
     """
-    Formats the comments properly since tehy come as garbled text
+    Formats the comments properly since comments come as garbled text from the API 
     """
     out = comment.split("Comment:")
     out = out[-1]
-    out = out.strip("\n")
-    return out 
+    #check if there are valid characters 
+    is_valid = False 
+    for char in out:
+        ascii = ord(char)
+        if (ascii >=33 and ascii <=126): 
+            #from  ascii characters ! to ~ https://www.asciitable.com/
+            is_valid = True 
+    if is_valid: return out 
+    else: return "" 
 
 def get_input_from_info(event:str)->str:
     """
