@@ -19,6 +19,7 @@ from main_build.dependencies.gui import *
 from main_build.dependencies.validation import InputValidation
 
 import PySimpleGUI as sg
+import asyncio
 # needed to open excel files
 # needed for parrallel processing
 import threading
@@ -192,7 +193,7 @@ def load_gui(pick_files = False):
         # ------ Menu Definition ------ #
     menu_def = [['&File', ['&Select Input Files', '---', '&Save Inputs To Excel']],
                 ['&Edit', ['&Undo', '---', '&Revert Inputs']],
-            ['&Help', '&Help'],]
+            ['&Help', ['&About', '&Help']],]
 
     layout += [[sg.Menu(menu_def)]]
 
@@ -203,7 +204,7 @@ def load_gui(pick_files = False):
     """==============================================="""
     user_actions = UserActions()
     while True:
-        event, values = window.read()
+        event, values = window.read(timeout = 0.001)
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:
@@ -328,22 +329,31 @@ def load_gui(pick_files = False):
                     popup = Popup("Error", "Please select an input excel file.")
                     popup.alert()
                 else:
+                    loading = LoadingIndicator(2)
+                    loading.render()
                     status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
+                    loading.update()
+                    loading.close()
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
                     else:
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
+
+                        
             if event == "generate_report_for_all" and input_validation.validate(equipment):
                 # check if the files exist and are the correct file type
                 if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
                     popup = Popup("Error", "Please select an input excel file.")
                     popup.alert()
                 else:
+                    loading = LoadingIndicator(len(equipment.items))
+                    loading.render()
                     errors = []
                     for eqpt in equipment.items:
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
+                        loading.update()
                         equipment.next_index()
                         if not status:
                             errors.append(f'There was an issue processing {eqpt["eqpt_name"][0]}')
@@ -351,6 +361,7 @@ def load_gui(pick_files = False):
                         popup = Popup("Error", "\n".join(errors))
                         popup.alert()
                     else:
+                        loading.close()
                         popup = Popup("Success", "Successfuly saved reports.")
                         popup.alert()
                 continue 
@@ -436,17 +447,13 @@ def load_gui(pick_files = False):
                 popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
 
+            """About/metadata"""
+            if event == "About":
+                popup = Popup("About", "Mathcad Automation Software v1\nCreated by Piero Panariello\nAugust 2021\n\nClick the link below to find the most recent version of the software.")
+                popup.link("Releases","https://github.com/panariellop/mathcad_auto/releases") 
     window.close()
     del window
     return
-
-
-
-
-
-
-
-
 
 
 if __name__ == "__main__":
@@ -454,6 +461,10 @@ if __name__ == "__main__":
     #pick_files is another way of saying developer environment  
     #pick_files hides the menu to choose input files when True
     import sys
+   
+    
     if len(sys.argv) > 1 and sys.argv[1] == "-dev":
-        load_gui(pick_files=True)
-    else: load_gui()
+        load_gui(pick_files = True)
+    else:
+        load_gui(pick_files = False)
+

@@ -274,5 +274,26 @@ class Popup():
                 import webbrowser
                 webbrowser.open(link)
                 break
+class LoadingIndicator():
+    def __init__(self, num_tasks):
+        self.progress = 0
+        self.num_tasks = num_tasks
+        self.window = None 
+    def render(self):
+        self.window = sg.Window("Progress", [[
+            sg.ProgressBar(self.num_tasks, orientation='h', size=(20, 20), key='progressbar')],
+                                             [sg.Text(f'{self.progress}/{self.num_tasks} - Tasks Completed', key = "text", size = (20,1))],
+                                             ]
+                                , icon = images.ma_logo_png)
+        event, values = self.window.read(timeout=10)
+        if event == 'Cancel'  or event == sg.WIN_CLOSED:
+            self.window.close()
+    def update(self):
+        progress_bar = self.window['progressbar']
+        self.window['text'].update(f'{self.progress+1}/{self.num_tasks} - Tasks Completed')
+        self.progress +=1
+        progress_bar.UpdateBar(self.progress)
+    def close(self):
+        self.window.close()
 if __name__ == "__main__":
     pass

@@ -98,6 +98,7 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
     Generates report with input values found in the gui
     Saves the file in the save folder as the template chosen
     """
+
     mathcad_app = Mathcad(visible=debug)
     cur_worksheet = mathcad_app.open(template_file)
 
@@ -126,6 +127,7 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
     if not cur_worksheet.save_as(report_filepath):
         # checks if the document is already created or not, if it is, then create another unique name
         report_filepath = report_filepath.split(".")[0] + "1" + ".mcdx"
+
 
     if cur_worksheet.save_as(report_filepath):  # save the report
         cur_worksheet.close()

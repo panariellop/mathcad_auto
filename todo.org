@@ -20,12 +20,14 @@
   8. [X] Add a comment in excel spreadsheet linked to info button
      - [X] Only render info button if the comment is valid 
   9. [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-  10. [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
+  10. [X] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
       - Parsing from excel file
       - Saving back to excel file? 
       - Saving to CSV "database"
   11. [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
-  12. [ ] Metadata in app to display current version, relavent data, etc. 
+      Don't think this would be a good idea because it would limit flexibility 
+  12. [X] Metadata in app to display current version, relavent data, etc.
+  13. [ ] Have a status bar for when we are generating multiple reports 
 
 * Bug Fixes 
       - [X] Fix generate all reports function 
@@ -34,13 +36,16 @@
       - Not sure if we can make this multithreaded 
 
 * Documentation Changes 
-   - [ ] Change documentaion 
+   - [ ] Change documentaion
+     - User documentation
+     - Developer documentation
+       - Multithreading now gone 
+     - Tutorial Video 
    - [X] * Put help, refresh, select files into menubar
-     - Multithreading now gone 
 
 * Updater? [0/2]                                                       :work:
-  +  [ ] Updates from the developer side
-    Want to just have to push code to github 
+  + [ ] Updates from the developer side
+    Want to just have to push code to github master branch 
   + [ ] Update feature 
 	- Seperate program that gets bundled with the distribution
 	- Updates the main program every time there are pushes to the main branch
@@ -51,7 +56,16 @@
 	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be download
 
 	    
-* TODO Code review 
+* TODO Code review
+  - [ ] Main.py
+  - [ ] Verbose.py
+  - [ ] Helpers.py
+  - [ ] Gui.py
+  - [ ] Reports.py
+  - [ ] Validation.py
+  - [ ] Data.py
+  - [ ] Filestream.py
+  - [ ] Unittests.py 
 * Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
