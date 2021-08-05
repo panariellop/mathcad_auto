@@ -19,8 +19,6 @@ from main_build.dependencies.gui import *
 from main_build.dependencies.validation import InputValidation
 
 import PySimpleGUI as sg
-import asyncio
-# needed to open excel files
 # needed for parrallel processing
 import threading
 # so user can copy to clipboard
@@ -341,7 +339,7 @@ def load_gui(pick_files = False):
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
 
-                        
+            """Generate for multiple eqpt"""            
             if event == "generate_report_for_all" and input_validation.validate(equipment):
                 # check if the files exist and are the correct file type
                 if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
@@ -368,7 +366,7 @@ def load_gui(pick_files = False):
                 
 
             """
-            Generate Report for all eqpt
+            OLD -- Generate Report for all eqpt
             """
             if event == "generate_report_for_all" and input_validation.validate(equipment):
                 """
@@ -414,8 +412,12 @@ def load_gui(pick_files = False):
                     alert = Popup("Error", "Please select an input excel file from the input files window.")
                     alert.alert()
                 else:
+                    loading = LoadingIndicator(1)
+                    loading.render()
                     outputs = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
                     #add all the output we got from mathcad_calculate to the outputs class
+                    loading.update()
+                    loading.close()
                     cur_outputs = equipment.outputs[equipment.cur_index]
                     cur_outputs.clear() #clear to prep for next inputs
                     from main_build.dependencies import verbose 

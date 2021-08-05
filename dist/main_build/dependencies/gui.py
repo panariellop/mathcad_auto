@@ -285,7 +285,7 @@ class LoadingIndicator():
                                              [sg.Text(f'{self.progress}/{self.num_tasks} - Tasks Completed', key = "text", size = (20,1))],
                                              ]
                                 , icon = images.ma_logo_png)
-        event, values = self.window.read(timeout=10)
+        event, values = self.window.read(timeout = 0.1)
         if event == 'Cancel'  or event == sg.WIN_CLOSED:
             self.window.close()
     def update(self):
@@ -294,6 +294,7 @@ class LoadingIndicator():
         self.progress +=1
         progress_bar.UpdateBar(self.progress)
     def close(self):
-        self.window.close()
+        if self.window != None:
+            self.window.close()
 if __name__ == "__main__":
     pass

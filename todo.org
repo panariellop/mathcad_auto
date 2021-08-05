@@ -27,7 +27,8 @@
   11. [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
       Don't think this would be a good idea because it would limit flexibility 
   12. [X] Metadata in app to display current version, relavent data, etc.
-  13. [ ] Have a status bar for when we are generating multiple reports 
+  13. [X] Have a status bar for when we are generating multiple reports
+  14. [ ] Cancel button 
 
 * Bug Fixes 
       - [X] Fix generate all reports function 
