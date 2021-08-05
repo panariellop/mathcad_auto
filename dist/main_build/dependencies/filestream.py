@@ -28,12 +28,13 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     with open(filepath, "a", newline="") as f:
         csv_writer = csv.writer(f)
         #write the header line
-        if header: csv_writer.writerow(["Date", "Project Number", "Equipment Number", "Tags", "Name", "Mounting Location", "File Name"])
+        if header: csv_writer.writerow(["Date", "Project Number", "Equipment Number", "Equipment Tags", "Tags", "Name", "Mounting Location", "File Name"])
         try:
             new_row = [ #create the new row
                 cur_date,
                 values['project_number'][0],
                 values['eqpt_number'][0],
+                values['eqpt_tags'][0].upper(), 
                 values['tags'][0].upper(),
                 values['eqpt_name'][0].upper(),
                 values['mounting_location'][0].upper(),
@@ -72,10 +73,10 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
                 headers.remove(None)
             while " " in headers:
                 headers.remove(" ")
-            required_headers = ["eqpt_name", "project_number", "tags", "eqpt_number", "mounting_location"]
+            required_headers = ["eqpt_name", "project_number", 'eqpt_tags', "tags", "eqpt_number", "mounting_location"]
             for required_header in required_headers:
                 if required_header not in headers: #error
-                    alert = Popup("Error", "You must include the following column headers in your excel input file: eqpt_name, project_number, tags, eqpt_number, mounting_location")
+                    alert = Popup("Error", "You must include the following column headers in your excel input file: eqpt_name, project_number, 'eqpt_tags', tags, eqpt_number, mounting_location")
                     alert.alert() #alert the user of their mistake 
                     return equipment #return a blank equipment 
 

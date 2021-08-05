@@ -7,7 +7,8 @@ def inputs(cur_input):
     conversion = {
         'eqpt_name': 'Equipment Name',
         'project_number': "Project Number", 
-        "tags": "Equipment Tags",
+        "tags": "Tags/Category",
+        "eqpt_tags":"Equipment Tags", 
         "eqpt_number":"Equipment ID",
         "mounting_location": "Mounting Location", 
         "w_p_input": "W\u209A",

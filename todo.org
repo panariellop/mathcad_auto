@@ -1,28 +1,31 @@
 * Parth's charges
-- [X] Make the application object-based
-   - [X] TT logo on the main window
-   - [X] Save outputs so they can be viewed later 
-   - [X] About link in the main window with a link to the documentation
-         [X] Make it be an image (construct in paint)
+- [-] Make the application object-based
+  - [X] TT logo on the main window
+  - [X] Save outputs so they can be viewed later 
+  - [X] About link in the main window with a link to the documentation
+        [X] Make it be an image (construct in paint)
   [X] Make it appear on the right had corner of the screen
   [X] TT logo on left hand corner of the screen 
 	
-   - [X] Input data validation
+  1. [X] Input data validation
          [X] Need to create a class that will become a dependency 
-   - [X] Change inputs to verbose names
-   - [X] Change outputs to verbose names
-   - [X] Embed preview image in main window
-   - [X] Make mounting location a dropdown
-   - [X] Undo button
-            1. Need to implement a stack of changes made
-            2. Pop the stack when user clicks Edit->Undo
-   - [X] Link inputs to excel file (maybe have a save inputs to excel button)
-   - [X] Add a comment in excel spreadsheet linked to info button
-      - [X] Only render info button if the comment is valid 
-   - [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])  
-   - [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-   - [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-   - [ ] Preview image not updated when changing text inputs
+  2. [X] Change inputs to verbose names
+  3. [X] Change outputs to verbose names
+  4. [X] Embed preview image in main window
+  5. [X] Make mounting location a dropdown
+  6. [X] Undo button
+     1. Need to implement a stack of changes made
+     2. Pop the stack when user clicks Edit->Undo
+  7. [X] Link inputs to excel file (maybe have a save inputs to excel button)
+  8. [X] Add a comment in excel spreadsheet linked to info button
+     - [X] Only render info button if the comment is valid 
+  9. [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
+  10. [ ] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
+      - Parsing from excel file
+      - Saving back to excel file? 
+      - Saving to CSV "database"
+  11. [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
+  12. [ ] Metadata in app to display current version, relavent data, etc. 
 
 * Bug Fixes 
       - [X] Fix generate all reports function 
@@ -35,18 +38,23 @@
    - [X] * Put help, refresh, select files into menubar
      - Multithreading now gone 
 
-* Updater? 
-      + [ ] Update feature 
+* Updater? [0/2]                                                       :work:
+  +  [ ] Updates from the developer side
+    Want to just have to push code to github 
+  + [ ] Update feature 
 	- Seperate program that gets bundled with the distribution
-	- Updates the main program every time there are pushes to the main branch 
+	- Updates the main program every time there are pushes to the main branch
+	- Use the Github API to check if there are more recent versions of the applicaiton
 	  + Find the push history to main branch using the Github API 
 	  + Every time there is a push to the main branch, package it on the remote machine and store the executable in a bucket 
 	  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
-	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be downloaded 
+	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be download
+
+	    
+* TODO Code review 
 * Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
 ** How to make updates/changes 
 ** Deploying those updates/changes 
 
-* TODO Code review 
