@@ -28,10 +28,12 @@
       - [X] Fix generate all reports function 
       'Mathcad' object has no attribute '_Mathcad__mcadapp'
       '(-2147221008, 'CoInitialize has not been called.', None, None)'
+      - Not sure if we can make this multithreaded 
 
 * Documentation Changes 
    - [ ] Change documentaion 
    - [X] * Put help, refresh, select files into menubar
+     - Multithreading now gone 
 
 * Updater? 
       + [ ] Update feature 
@@ -42,7 +44,9 @@
 	  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
 	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be downloaded 
 * Teach Parth 
-      ** File Structure 
-      ** How to use the developer documentation 
-      ** How to make updates/changes 
-      ** Deploying those updates/changes 
+** File Structure 
+** How to use the developer documentation 
+** How to make updates/changes 
+** Deploying those updates/changes 
+
+* TODO Code review 

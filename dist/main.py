@@ -244,8 +244,9 @@ def load_gui(pick_files = False):
             """
             if helpers.get_input_from_info(event) in equipment.fields:
                 field = helpers.get_input_from_info(event)
-                print(equipment.items[equipment.cur_index]['eqpt_name'][0])
-                popup = Popup(equipment.items[equipment.cur_index]['eqpt_name'][0], equipment.items[equipment.cur_index][field][2])
+                from main_build.dependencies import verbose 
+                verbose_field = verbose.inputs(field) 
+                popup = Popup(verbose_field, equipment.items[equipment.cur_index][field][2])
                 popup.alert()
                 continue
 
