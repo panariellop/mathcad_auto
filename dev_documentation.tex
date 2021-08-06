@@ -1,4 +1,4 @@
-% Created 2021-08-05 Thu 18:09
+% Created 2021-08-06 Fri 12:12
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -34,7 +34,7 @@
 
 
 \section{Technologies Used}
-\label{sec:orgce4091d}
+\label{sec:orgedc3a64}
 \begin{enumerate}
 \item Python is the programming language of choice
 \item PySimpleGUI : used to render the graphical user interface. \href{https://pysimplegui.readthedocs.io/en/latest/}{Documentation}
@@ -46,7 +46,7 @@
 \end{enumerate}
 
 \section{File Descriptions}
-\label{sec:org3997b83}
+\label{sec:org1e93595}
 All files are located in the ./dist directory. 
 \begin{enumerate}
 \item \textbf{info.txt}
@@ -108,15 +108,15 @@ All files are located in the ./dist directory.
 \end{enumerate}
 
 \section{Mathcad API}
-\label{sec:org70ebe8f}
+\label{sec:org4f5c9da}
 Currently, the Mathcad API supports Mathcad Prime 3.0 and above. From my testing it works best with Mathcad Prime 7.0 (the lastest version). The API documentation can be located \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. You can purchase the SDK from Mathcad to get more information and examples, but I would recommend against it (it's \$9000).
 \section{Datypes and Storage of Data}
-\label{sec:orgf8c7d8f}
+\label{sec:orgb97c4f5}
 \subsubsection{Equipment Class: (stores all the equipment from the excel file)}
-\label{sec:org08cddcd}
+\label{sec:orgdd08703}
 \begin{enumerate}
 \item Class variables:
-\label{sec:orga99ecc8}
+\label{sec:org8ab64b3}
 \begin{itemize}
 \item \textbf{self.items} = list()
 \end{itemize}
@@ -153,7 +153,7 @@ A list of all the inputs from the header row in the excel document
 A list of all the outputs per equipment generated when the user clicked \textbf{Preview Calculation Outputs}. 
 
 \item Class methods:
-\label{sec:org2cb4996}
+\label{sec:orgacc1bf7}
 
 \begin{itemize}
 \item \textbf{append(self, to\_append:dict)} Takes in a dict as an argument
@@ -172,10 +172,10 @@ Decriments the value of self.cur\_index
 \end{enumerate}
 
 \subsubsection{Outputs Class: (stores the values of the outputs when the user decides to preview the output variables from the Mathcad file)}
-\label{sec:org5c6964b}
+\label{sec:org9e21790}
 \begin{enumerate}
 \item Class variables:
-\label{sec:org7016954}
+\label{sec:orgff94237}
 
 \begin{itemize}
 \item \textbf{self.items} = list()
@@ -189,7 +189,7 @@ Follows the format:
 ...
 \end{verbatim}
 \item Class methods:
-\label{sec:org2cd14dd}
+\label{sec:orgc548774}
 \begin{itemize}
 \item \textbf{append(self, to\_append)} Takes tuple or list argument
 \end{itemize}
@@ -208,7 +208,7 @@ Ex: [ 'f\_p\_tot\_output = 408.82 kg', 'f\_p\_min\_output = 76.65 kg', \ldots{}]
 \end{enumerate}
 
 \section{API Details}
-\label{sec:org8fa64e6}
+\label{sec:orgd3ec049}
 
 The MathcadPy library is used as a wrapper that allows you to access all of the mathcad api endpoints from the comfort of Python. You can read more about the Mathcad API \href{https://support.ptc.com/help/mathcad/r7.0/en/index.html\#page/PTC\_Mathcad\_Help\%2Fmathcad\_and\_automation\_api.html\%23}{here}. The API allows you to modify and change Mathcad Prime files. Despite PTC's documenation, you cannot print documents.
 
@@ -257,7 +257,7 @@ Saves the inputs the user has changed in the application back to the excel file.
 \end{itemize}
 
 \section{Rendering to the GUI}
-\label{sec:org83dbcfc}
+\label{sec:orgbf5d053}
 \textbf{Choose equipment}
 \begin{itemize}
 \item Once the user has input the excel file they want to read from, the program extracts all information in the \textbf{get\_eqpt\_from\_xl} function and places all the equipment names in the Choose Equipment column.
@@ -279,7 +279,7 @@ Saves the inputs the user has changed in the application back to the excel file.
 \end{itemize}
 
 \section{Saving to the Database}
-\label{sec:org16f41f6}
+\label{sec:orge56a190}
 The database is a .csv file which holds some important information about generated repors. The function save\_to\_csv is used. When the user decides to save the report to the database, they are saving the equipment name, mounting location, tags, and the generated report's unique filename. The user can choose a specific database to save to, or it will save to the default database located in the \textbf{mathcad\_automation\_output} directory.
 
 The table looks like the one below:
@@ -296,19 +296,15 @@ Date & Tags & Name & Mounting Location & File Name\\
 \end{center}
 
 \section{Flowchart}
-\label{sec:org6611239}
+\label{sec:orgbc8e948}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.9\linewidth]{./dist/documentation/component_flowchart.png}
-\caption{\label{fig:org3922dbb}Flow chart of program API}
+\caption{\label{fig:org0c4abec}Flow chart of program API}
 \end{figure}
 
-\section{Improving Performance}
-\label{sec:org395bf22}
-While the application is performant, there are a few ways to tune the application to improve performance. The function that is least performant is the \textbf{generate\_report\_for\_all} event. Multiple reports need to be generated through Mathcad. To improve performance, I implemented parallel processing. This allows multiple processes to run at the same time: each report is run on a seperate process and is then joined when each process finishes. The \textbf{num\_threads=16} variable allows you to adjust the number of parallel processes occuring. This number is limited to your computer's available threads. I suggest starting at \textbf{num\_threads = 16} and slowly increasing the variable by powers of 2 (ex: 16, 32, 64) until you achieve the desired performance. Keep in mind that the speed in which the Mathcad API can run to generate a single report is constant. Increasing \textbf{num\_threads} will only increase performance if the number of reports to be generated is greater than \textbf{num\_threads}. Note that performance will not be increased if \textbf{num\_threads} is greater than the number of reports to be generated
-
-\section{Re-Creating the Virtual Environment}
-\label{sec:orgb4bcacb}
+\section{Re-Creating the Developer Environment}
+\label{sec:org8804aab}
 Typical python projects use a "virtual environment" to test and develop the application. This allows for consitancy between machines running the same program. In order to activate the virtual environment, first install \textbf{virtualenv} using pip. Open PowerShell and type the following commands:
 
 Install virtualenv 
@@ -331,10 +327,10 @@ Install all the requirements into the virtual environment
 pip install -r requirements.txt
 \end{verbatim}
 
-You can now make changes to the application in \textbf{main.py} and run the application with those new changes.
+You can now make changes to the application in \textbf{main.py} and run the application with those new changes. If you are creating updates, please create a new git branch and create a pull request when finished. 
 
 \section{Packaging and Distribution}
-\label{sec:org329b412}
+\label{sec:org4e8f643}
 I have found that PyInstaller is the best method to package python applications. It "freezes" the code in order to create an executable. Install PyInstaller using pip, and ensure that it is installed by typing \textbf{PyInstaller} in PowerShell. If it is properly installed, run the code below within the activated virtual environment to package the application. Copy the following code onto one line in PowerShell and run it.
 \begin{verbatim}
  PyInstaller --onefile --windowed 
@@ -342,4 +338,6 @@ I have found that PyInstaller is the best method to package python applications.
 -i  "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" 
 --name "Mathcad_Anchorage_Automation_v1.1" main.py
 \end{verbatim}
+
+This will create a new executable in the ./dist/dist directory. 
 \end{document}

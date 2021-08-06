@@ -171,10 +171,7 @@ The table looks like the one below:
 #+NAME:     fig:1
 [[./dist/documentation/component_flowchart.png]]
 
-* Improving Performance
-  While the application is performant, there are a few ways to tune the application to improve performance. The function that is least performant is the *generate_report_for_all* event. Multiple reports need to be generated through Mathcad. To improve performance, I implemented parallel processing. This allows multiple processes to run at the same time: each report is run on a seperate process and is then joined when each process finishes. The *num_threads=16* variable allows you to adjust the number of parallel processes occuring. This number is limited to your computer's available threads. I suggest starting at *num_threads = 16* and slowly increasing the variable by powers of 2 (ex: 16, 32, 64) until you achieve the desired performance. Keep in mind that the speed in which the Mathcad API can run to generate a single report is constant. Increasing *num_threads* will only increase performance if the number of reports to be generated is greater than *num_threads*. Note that performance will not be increased if *num_threads* is greater than the number of reports to be generated
-
-* Re-Creating the Virtual Environment
+* Re-Creating the Developer Environment
   Typical python projects use a "virtual environment" to test and develop the application. This allows for consitancy between machines running the same program. In order to activate the virtual environment, first install *virtualenv* using pip. Open PowerShell and type the following commands:
   
   Install virtualenv 
@@ -197,7 +194,7 @@ The table looks like the one below:
   pip install -r requirements.txt
   #+END_SRC
 
-  You can now make changes to the application in *main.py* and run the application with those new changes.
+  You can now make changes to the application in *main.py* and run the application with those new changes. If you are creating updates, please create a new git branch and create a pull request when finished. 
 
 * Packaging and Distribution
   I have found that PyInstaller is the best method to package python applications. It "freezes" the code in order to create an executable. Install PyInstaller using pip, and ensure that it is installed by typing *PyInstaller* in PowerShell. If it is properly installed, run the code below within the activated virtual environment to package the application. Copy the following code onto one line in PowerShell and run it.
@@ -207,4 +204,5 @@ The table looks like the one below:
  -i  "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" 
  --name "Mathcad_Anchorage_Automation_v1.1" main.py
  #+END_SRC
-  
+
+ This will create a new executable in the ./dist/dist directory. 

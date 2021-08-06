@@ -28,7 +28,8 @@
       Don't think this would be a good idea because it would limit flexibility 
   12. [X] Metadata in app to display current version, relavent data, etc.
   13. [X] Have a status bar for when we are generating multiple reports
-  14. [ ] Cancel button 
+  14. [X] Cancel button
+      Doesn't really work since we can't get 2 concurrent processes 
 
 * Bug Fixes 
       - [X] Fix generate all reports function 
@@ -38,10 +39,10 @@
 
 * Documentation Changes 
    - [ ] Change documentaion
-     - User documentation
-     - Developer documentation
-       - Multithreading now gone 
-     - Tutorial Video 
+     1) User documentation
+     2) Developer documentation
+	- Multithreading now gone 
+     3) Tutorial Video 
    - [X] * Put help, refresh, select files into menubar
 
 * Updater? [0/2]                                                       :work:
@@ -56,7 +57,10 @@
 	  + Have a local updater program that can detect the version the user is running and if there are any more recent versions. If there are, then download the most recent version from the bucket and replace the current application. 
 	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be download
 
-	    
+
+* Other updater idea
+  1. Have a check for updates script run at startup, and alert the user if there is a more recent version of the software.
+  2. Create a link to the releases tab in the github page 
 * TODO Code review
   - [ ] Main.py
   - [ ] Verbose.py

@@ -191,7 +191,7 @@ def load_gui(pick_files = False):
         # ------ Menu Definition ------ #
     menu_def = [['&File', ['&Select Input Files', '---', '&Save Inputs To Excel']],
                 ['&Edit', ['&Undo', '---', '&Revert Inputs']],
-            ['&Help', ['&About', '&Help']],]
+            ['&Help', ['&Version', '&About', '&Help']],]
 
     layout += [[sg.Menu(menu_def)]]
 
@@ -452,7 +452,18 @@ def load_gui(pick_files = False):
             """About/metadata"""
             if event == "About":
                 popup = Popup("About", "Mathcad Automation Software v1\nCreated by Piero Panariello\nAugust 2021\n\nClick the link below to find the most recent version of the software.")
-                popup.link("Releases","https://github.com/panariellop/mathcad_auto/releases") 
+                popup.link("Releases","https://github.com/panariellop/mathcad_auto/releases")
+            if event == "Version":
+                from main_build.dependencies.gui import VersionInfo
+                version = VersionInfo()
+                cur_version = version.get_cur_version()
+                popup = Popup("Version", f'Current version: {cur_version}')
+                if version.need_to_update():
+                    popup.message += "\nThere is a newer version available."
+                    popup.link("Get latest version", "https://github.com/panariellop/mathcad_auto/releases")
+                else:
+                    popup.message += "\nYour version is up to date."
+                    popup.alert()
     window.close()
     del window
     return

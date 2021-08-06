@@ -15,6 +15,49 @@ except:
     import data
 import PySimpleGUI as sg
 
+class VersionInfo():
+    def __init__(self):
+        pass 
+    def need_to_update(self)->bool:
+        import os
+        import requests
+        import pprint
+        latest_version_num = 0 
+        try:
+            # this will happen everytime the user calles the function (that is not the first time) 
+            metadata_f = open('.metadata', 'r')
+            cur_version = float(metadata_f.read()) #TODO need to add error handling for no internet 
+            try:
+                response = requests.get("https://api.github.com/repos/panariellop/mathcad_auto/releases")
+                latest_version_num = float(response.json()[0]['tag_name'])
+                print(cur_version, latest_version_num) 
+            except: pass  
+            if latest_version_num > cur_version:
+                return True 
+            else:
+                return False 
+        except:
+            # this will happen on the first time this function gets called by the user  
+            try:
+                response = requests.get("https://api.github.com/repos/panariellop/mathcad_auto/releases")
+                version = response.json()[0]['tag_name']
+                metadata_f = open('.metadata', 'a')
+                metadata_f.write(f'{version}')
+                #hides the file from the windows file manager 
+                os.system('attrib +H *.metadata /S')
+                return False
+            except:
+                return False 
+    def get_cur_version(self)->int:
+        try:
+            metadata_f = open('.metadata', 'r')
+            cur_version = float(metadata_f.read())
+            return cur_version
+        except:
+            #for some reason if this is called before self.need_to_update
+            self.need_to_update()
+            return self.get_cur_version()
+            
 class SelectTemplates():
     """
     This is the select templates window that users can use to edit or add
@@ -22,6 +65,9 @@ class SelectTemplates():
     """
 
     def __init__(self):
+        try:
+            from main_build.dependencies.gui import VersionInfo
+        except: pass 
         self.database = ""
         self.save_to_database = True
         self.excel = ""
@@ -33,6 +79,8 @@ class SelectTemplates():
         self.ceiling_template = ""
         self.images = dict()
         self.can_continue = False
+        self.version = VersionInfo()
+        self.version = self.version.get_cur_version()
 
     def choose_templates(self):
         sg.theme("Reddit")
@@ -68,7 +116,8 @@ class SelectTemplates():
         """
         sg.theme("Reddit")
         window = sg.Window("Mathcad Automation", [
-            [sg.Image(data = images.tt_logo)], 
+            [sg.Image(data = images.tt_logo)],
+            [sg.Text(f'Version: {self.version}', size = (10,1))], 
             [sg.Frame("Choose Excel File*", [[sg.FileBrowse("1. Browse", key="excel_file", enable_events=True),
                                               sg.InputText(self.excel, key="excel_name", size=(30, 1),
                                                            background_color='white', enable_events=True),],
@@ -297,4 +346,5 @@ class LoadingIndicator():
         if self.window != None:
             self.window.close()
 if __name__ == "__main__":
-    pass
+    v = VersionInfo()
+    v.need_to_update()
