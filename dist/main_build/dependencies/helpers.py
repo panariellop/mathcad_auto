@@ -3,7 +3,6 @@ Helper Functions - misc
 """
 import os 
 import random
-import asyncio 
 
 
 def convert_units(value: int, input_units: str, target_units: str) -> int:
@@ -50,7 +49,8 @@ def check_file_type(filename, filetype):
     Checks if the input file is of a certain type
     ex <filename.csv> <csv>
     """
-    type = filename.split(".")[-1] #get the file extension
+    # get the file extension - how we check if the filetype is proper
+    type = filename.split(".")[-1] 
     if type != filetype:
         return False
     return True
@@ -68,7 +68,7 @@ def resource_path(relative_path):
 
 def format_comment(comment:str)->str:
     """
-    Formats the comments properly since comments come as garbled text from the API 
+    Formats the comments properly since comments come as garbled text from the excel API 
     """
     out = comment.split("Comment:")
     out = out[-1]
@@ -84,10 +84,12 @@ def format_comment(comment:str)->str:
 
 def get_input_from_info(event:str)->str:
     """
+    when clicking the info button, we can pull the corresponding input 
     mounting_location_info -> mounting_location
     """
     out = event.split("_")[0:-1]
     out = "_".join(out)
     return out
+
 if __name__ == "__main__":
     pass 

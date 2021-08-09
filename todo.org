@@ -61,7 +61,7 @@
 * TODO Code review
   - [X] Main.py
   - [X] Verbose.py
-  - [ ] Helpers.py
+  - [X] Helpers.py
   - [ ] Gui.py
   - [ ] Reports.py
   - [ ] Validation.py
