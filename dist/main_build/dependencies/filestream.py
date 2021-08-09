@@ -1,10 +1,10 @@
 """
 All the functions that pull information from or save information to files 
 """
-try:
+try: # when running from main.py 
     from main_build.dependencies.data import Equipment
     from main_build.dependencies.gui import Popup 
-except:
+except: # when runnning from current directory 
     from data import Equipment
     from gui import Popup 
 from openpyxl import Workbook as xlwkbk
@@ -133,7 +133,7 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
                                 value = val[0])
                     col_number +=1
             break  
-    # excel file might be open 
+    # excel file might be open - which will cause fall into except
     try:
         wb.save(filepath) 
         popup = Popup("File Saved", f"The inputs were saved successfuly to {filepath}")
