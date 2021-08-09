@@ -31,8 +31,9 @@ def load_inputs(equipment: Equipment):
     """
     input_fields = list()
     num_fields = 0
-    for field, value in equipment.items[equipment.cur_index].items():  # each eqpt is a dictionary, field is key
-        to_append = []
+    cur_eqpt = equipment.items[equipment.cur_index]
+    for field, value in cur_eqpt.items():  # each eqpt is a dictionary, field is key
+        to_append = [] #all the new SimpleGui items we will create in the window 
         name = field.split("(")[0]
         name = name.replace(" ", "")
         from main_build.dependencies import verbose #verbose names (more legible names) 
@@ -66,7 +67,8 @@ def update_inputs(equipment: Equipment, values, window):
     Updates the window with the inputs values to reflect the object selected
     Also updates the excel spreadsheet with the values you changed 
     """
-    for field, val in equipment.items[equipment.cur_index].items():
+    cur_item = equipment.items[equipment.cur_index]
+    for field, val in cur_item.items():
         values[field] = val[0]
         window[field].update(val[0])
 
@@ -77,7 +79,9 @@ def update_preview_image(equipment: Equipment, files):
     """
     Takes in the equipment and files and window objects and returns the image binary
     """
-    mounting_location = str(equipment.items[equipment.cur_index]['mounting_location'][0])
+    cur_item = equipment.items[equipment.cur_index]
+    mounting_location = str(cur_item['mounting_location'][0])
+    #some cleanup 
     mounting_location = mounting_location.lower().replace(" ", "")
     # wall,floor and floor,wall handling for the preview images:
     image = files.images[mounting_location]
@@ -90,18 +94,20 @@ def load_gui(pick_files = False):
     """
     files = SelectTemplates()
     input_validation = InputValidation()
-    if pick_files: #skip the choose file menu
+    if pick_files:
+        # just get the developer templates and input files 
         files.dev_get_xl_and_templates()
-    else: #
+    else: 
+        # have the user choose their excel file and templates 
         files.display_and_update()
     files.get_images_from_xl(num_images=4)
     equipment = filestream.get_eqpt_from_xl(files.excel)  # initial loading of eqpt data
     outputs = Outputs()  # preview output object
-    sg.theme('Reddit')
+    sg.theme('Reddit') # sets the color theme 
     sg.set_options(icon=images.ma_logo_png)
 
 
-    
+    # SG layout 
     layout = [
         [sg.Column([[sg.Image(data = images.tt_logo)]], justification='l',  k='-C-')],
 
@@ -190,7 +196,7 @@ def load_gui(pick_files = False):
 
         # ------ Menu Definition ------ #
     menu_def = [['&File', ['&Select Input Files', '---', '&Save Inputs To Excel']],
-                ['&Edit', ['&Undo', '---', '&Revert Inputs']],
+                ['&Edit', ['&Revert Inputs']],
             ['&Help', ['&Version', '&About', '&Help']],]
 
     layout += [[sg.Menu(menu_def)]]
@@ -202,32 +208,27 @@ def load_gui(pick_files = False):
     """==============================================="""
     user_actions = UserActions()
     while True:
-        event, values = window.read(timeout = 0.001)
+        event, values = window.read()
         if event == "OK" or event == sg.WIN_CLOSED:
             break  # ends gui
         else:
             """
             Change Input Files
             """
-            if event == "Select Input Files" or event == "i:73":
+            if event == "Select Input Files" or event == "i:73": # keybinding Ctrl-i
                 files.display_and_update()
 
             """
             Undo changes 
             """
-            if event == "Undo":
-                #need to pop the latest action from the stack 
-                user_actions.clear()
-                equipment = get_eqpt_from_xl(files.excel) 
-                continue 
             if event == "Revert Inputs":
-                while True:
-                    event, value = user_actions.pop()
-                    if event is not None:
-                        equipment.items[equipment.cur_index][event][0] = value
-                        window[event].update(value)
-                    else: #reached the end of the stack 
-                        break 
+                # need to pop the latest action from the stack 
+                popup = Popup("Confirm", "Reverting inputs will reload the inputs from the excel spreadsheet.")
+                if popup.confirm(): # confirm from the user if they want to refresh 
+                    equipment = get_eqpt_from_xl(files.excel) 
+                    values, window = update_inputs(equipment, values, window)
+                else:
+                    pass 
                 continue 
             """
             If user wants to copy output
@@ -235,13 +236,14 @@ def load_gui(pick_files = False):
             if event == "asd_outputs" or event == "lrfd_outputs" or event == "misc_outputs":
                 try:
                     to_copy = window[event].get()[0]
-                    pyperclip.copy(str(to_copy)) #uses pyperclip to copy to user's clipboard
+                    pyperclip.copy(str(to_copy)) # uses pyperclip to copy to user's clipboard
                 except:
                     pass
+                continue 
             """
             Get info for inputs 
             """
-            if helpers.get_input_from_info(event) in equipment.fields:
+            if helpers.get_input_from_info(event) in equipment.fields: # parses to check which input info user clicked on 
                 field = helpers.get_input_from_info(event)
                 from main_build.dependencies import verbose 
                 verbose_field = verbose.inputs(field) 
@@ -263,7 +265,12 @@ def load_gui(pick_files = False):
             """
             if event == "Save Inputs To Excel" or event == 's:83': #Ctrl-s
                 # update the excel file
-                filestream.save_eqpt_to_xl(equipment, files.excel)
+                popup = Popup("Confirm", "This will overrite the data in the excel file with the data you have input.")
+                if popup.confirm():
+                    filestream.save_eqpt_to_xl(equipment, files.excel)
+                else:
+                    pass 
+                continue 
 
             """
             Move to the next or previous eqpt
@@ -280,10 +287,10 @@ def load_gui(pick_files = False):
                     window['lrfd_outputs'].update(values=equipment.outputs[equipment.cur_index].display_lrfd())
                     window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                  # display the current one being selected
-                window['equipment_list'].set_focus(equipment.cur_index) 
+                window['equipment_list'].set_focus(equipment.cur_index) # highlight the proper equipment in the list 
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                 window['preview_image'].update(data = update_preview_image(equipment, files)) 
-
+                continue 
             """
             Display the eqpt being selected by the listbox (left most column)
             """
@@ -299,7 +306,7 @@ def load_gui(pick_files = False):
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                 window['preview_image'].update(data = update_preview_image(equipment, files)) 
 
-
+                continue 
             """
             Go to a specific eqpt number
             """
@@ -317,7 +324,7 @@ def load_gui(pick_files = False):
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                     window['preview_image'].update(data = update_preview_image(equipment, files)) 
 
-
+                continue 
             """
             Generate report for one eqpt
             """
@@ -327,10 +334,10 @@ def load_gui(pick_files = False):
                     popup = Popup("Error", "Please select an input excel file.")
                     popup.alert()
                 else:
-                    loading = LoadingIndicator(2)
+                    loading = LoadingIndicator(2) # instantiate the loading indicator 
                     loading.render()
                     status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
-                    loading.update()
+                    loading.update() # progress the indicator 
                     loading.close()
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
@@ -338,8 +345,11 @@ def load_gui(pick_files = False):
                     else:
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
+                continue 
 
-            """Generate for multiple eqpt"""            
+            """
+            Generate for multiple eqpt
+            """            
             if event == "generate_report_for_all" and input_validation.validate(equipment):
                 # check if the files exist and are the correct file type
                 if files.excel == "" or helpers.check_file_type(files.excel, "xlsx") != True:
@@ -355,54 +365,15 @@ def load_gui(pick_files = False):
                         equipment.next_index()
                         if not status:
                             errors.append(f'There was an issue processing {eqpt["eqpt_name"][0]}')
-                    if len(errors)>0:
+                    if len(errors)>0: #create a popup with all the errors (if there are any)
                         popup = Popup("Error", "\n".join(errors))
                         popup.alert()
                     else:
-                        loading.close()
+                        loading.close() 
                         popup = Popup("Success", "Successfuly saved reports.")
                         popup.alert()
                 continue 
-                
-
-            """
-            OLD -- Generate Report for all eqpt
-            """
-            if event == "generate_report_for_all" and input_validation.validate(equipment):
-                """
-                Using multithreading to improve speed
-                Each thread is an independant process, and keeps track of its
-                local variables. Once it is finished with the proces, we must
-                merge all "hanging" threads into the main thread.
-                """
-                threads = list()
-                num_threads = 16
-                cur_row = 0
-                equipment.cur_index = 0  # set to beginning of list
-                while cur_row < len(equipment.items):
-                    for i in range(num_threads):
-                        if (cur_row < len(equipment.items)):
-                            print(f'Processing equipment: {cur_row + 1}/{len(equipment.items)}')
-                            #create a thread who's target is pre_generate_report
-                            t = threading.Thread(target=reports.pre_generate_report, args=(equipment, files, os.getcwd(), True))
-                            threads.append(t) #append list so we can keep track of active threads
-                            t.start() #starts thread
-                            cur_row += 1
-                            equipment.next_index()
-                        else:
-                            break
-                    for i in range(len(threads)):
-                        threads[i].join()  # join all threads to the main thread when finished
-                print("Finished threading ...")
-                # cleanup files -- need to guess the file names (performance should be fine for <1000 pieces of equipment)
-                for k, v in files.templates.items():
-                    for i in range(len(equipment.items)):
-                        try:
-                            os.remove(v.split(".")[0]+str(i)+".mcdx")
-                        except: continue
-                alert = Popup("File saved", "All files have been saved successfuly.")
-                alert.alert()
-
+            
             """
             Preview
             """
@@ -428,6 +399,7 @@ def load_gui(pick_files = False):
                     window['misc_outputs'].update(values=cur_outputs.display_misc())
                     alert = Popup("Calcuation Complete", "Output fields have been updated.")
                     alert.alert()
+                continue 
 
             """
             Convert Units
@@ -438,21 +410,32 @@ def load_gui(pick_files = False):
                 window['asd_outputs'].update(values=cur_outputs.display_asd())
                 window['lrfd_outputs'].update(values=cur_outputs.display_lrfd())
                 window['misc_outputs'].update(values=cur_outputs.display_misc())
+                continue 
             if event == "convert_to_metric":
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('imperial', 'metric')
                 window['asd_outputs'].update(values=cur_outputs.display_asd())
                 window['lrfd_outputs'].update(values=cur_outputs.display_lrfd())
                 window['misc_outputs'].update(values=cur_outputs.display_misc())
-            """Get help"""
+                continue 
+
+            """
+            Get help
+            """
             if event == "Help":
                 popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
-
-            """About/metadata"""
+                continue 
+            """
+            About
+            """
             if event == "About":
-                popup = Popup("About", "Mathcad Automation Software v1\nCreated by Piero Panariello\nAugust 2021\n\nClick the link below to find the most recent version of the software.")
+                popup = Popup("About", "Mathcad Automation Software v1\nCreated by Piero Panariello\nAugust 2021\n\nCLick Help->Version to check your version. \nClick the link below to find the most recent version of the software.")
                 popup.link("Releases","https://github.com/panariellop/mathcad_auto/releases")
+            
+            """
+            Version info and metadata 
+            """
             if event == "Version":
                 from main_build.dependencies.gui import VersionInfo
                 version = VersionInfo()
@@ -464,6 +447,8 @@ def load_gui(pick_files = False):
                 else:
                     popup.message += "\nYour version is up to date."
                     popup.alert()
+                continue 
+            
     window.close()
     del window
     return
@@ -475,7 +460,9 @@ if __name__ == "__main__":
     #pick_files hides the menu to choose input files when True
     import sys
    
-    
+    # choose the developer or the regular version of he script -
+    # the dev version just skips the choose files menu with the dev
+    # input and template files 
     if len(sys.argv) > 1 and sys.argv[1] == "-dev":
         load_gui(pick_files = True)
     else:
