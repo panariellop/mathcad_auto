@@ -63,6 +63,7 @@
   - [X] Verbose.py
   - [X] Helpers.py
   - [ ] Gui.py
+    Need to make the image loader more flexible 
   - [ ] Reports.py
   - [ ] Validation.py
   - [ ] Data.py

@@ -2,52 +2,60 @@ from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 import sys
 from openpyxl_image_loader import SheetImageLoader
-try:
+try: # if using functions from main.py
     from main_build.images import images
     from main_build.dependencies import helpers
     from main_build.dependencies import filestream
     from main_build.dependencies.data import *
-except:
+except: # if using functions from this file 
     sys.path.insert(0,'..')
     import images 
     import helpers 
     import filestream
-    import data
+
 import PySimpleGUI as sg
 
 class VersionInfo():
     def __init__(self):
         pass 
     def need_to_update(self)->bool:
+        """
+        Either creates a .metadata file or reads from it to get the current version
+        Writing will happen when the user firsts opens the application
+            -> Will get the information from the github api and find the most recent version
+            -> Serializes it to .metadata and hides the file from plain sight 
+        Reading will happen when the user opens the application any other time 
+            -> Will query the github api to check version with .metadata
+        """
         import os
         import requests
-        import pprint
         latest_version_num = 0 
         try:
             # this will happen everytime the user calles the function (that is not the first time) 
             metadata_f = open('.metadata', 'r')
-            cur_version = float(metadata_f.read()) #TODO need to add error handling for no internet 
-            try:
+            cur_version = float(metadata_f.read()) 
+            try: # get the latest version 
                 response = requests.get("https://api.github.com/repos/panariellop/mathcad_auto/releases")
                 latest_version_num = float(response.json()[0]['tag_name'])
                 print(cur_version, latest_version_num) 
-            except: pass  
+            except: pass  # in case of no internet 
             if latest_version_num > cur_version:
                 return True 
             else:
                 return False 
         except:
-            # this will happen on the first time this function gets called by the user  
-            try:
+            # this will happen on the first time the application is opened by the user  
+            try: 
                 response = requests.get("https://api.github.com/repos/panariellop/mathcad_auto/releases")
                 version = response.json()[0]['tag_name']
                 metadata_f = open('.metadata', 'a')
                 metadata_f.write(f'{version}')
-                #hides the file from the windows file manager 
+                # hides the file from the windows file manager (invisible to user) 
                 os.system('attrib +H *.metadata /S')
                 return False
-            except:
+            except: # might happen if there is no internet connection 
                 return False 
+
     def get_cur_version(self)->int:
         try:
             metadata_f = open('.metadata', 'r')
@@ -63,11 +71,10 @@ class SelectTemplates():
     This is the select templates window that users can use to edit or add
     templates to the program.
     """
-
     def __init__(self):
-        try:
+        try: # running from main.py 
             from main_build.dependencies.gui import VersionInfo
-        except: pass 
+        except: pass # running locally 
         self.database = ""
         self.save_to_database = True
         self.excel = ""
@@ -79,8 +86,8 @@ class SelectTemplates():
         self.ceiling_template = ""
         self.images = dict()
         self.can_continue = False
-        self.version = VersionInfo()
-        self.version = self.version.get_cur_version()
+        self.version = VersionInfo() # instantiate 
+        self.version = self.version.get_cur_version() # get actual value 
 
     def choose_templates(self):
         sg.theme("Reddit")
@@ -88,6 +95,7 @@ class SelectTemplates():
             self.template_layout,
             [sg.Button("Continue", key = "continue", button_color = "green", enable_events = True)]
         ], icon = images.ma_logo_png)
+
         while True: #logic loop
             event, values = window.read()
             if event == 'OK' or event == sg.WIN_CLOSED:
@@ -152,7 +160,7 @@ class SelectTemplates():
                             self.template_layout = []
                             for idx, item in enumerate(equipment.mounting_locations):
                                 if item not in self.templates:
-                                    self.templates[item] = ""
+                                    self.templates[item] = "" # instanitate each templates to be empty string
                                 #create the layout for the choose templates window
                                 self.template_layout += [
                                     [sg.Text("Choose " + item + " mounting template:")],
@@ -191,9 +199,10 @@ class SelectTemplates():
                         alert = Popup("Errors", "\n".join(errors))
                         alert.alert()
                         continue
+
     def dev_get_xl_and_templates(self):
         """
-        Skips the choose file menu by setting teh excel file and template files to files already in system
+        Skips the choose file menu by setting the excel file and template files to files already in system
         """
         self.excel = "C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_copy.xlsx"
         self.templates = {'Wall, Floor': 'C:/Users/Owner/Desktop/mathcad_auto/templates/dev_templates/starter_template_document_mathcad_7.mcdx',
@@ -211,18 +220,15 @@ class SelectTemplates():
         sheet = wb['preview_images']
 
         image_loader = SheetImageLoader(sheet)
-        for i in range(num_images):
-            # hard coded
-            mounting_locations = ['wall', 'floor', 'wall,floor', 'ceiling']
-            try:  # load all the images in cells B2-5
-                image = image_loader.get('B' + str(i + 2))
+        for idx, row in enumerate(sheet.iter_rows(values_only=True)): 
+            try:
+                image = image_loader.get('B' + str(idx+1) )
                 import io 
                 buf = io.BytesIO()
-                image.save(buf, format="PNG")  # save as a bytes string so pysimplegui can use it
-                self.images[mounting_locations[i]] = buf.getvalue()
-            except Exception as e:
+                image.save(buf, format = "PNG")
+                self.images[row[0]] = buf.getvalue()
+            except Exception as e: 
                 print(e)
-
 
 class Popup():
     """

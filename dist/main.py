@@ -84,7 +84,10 @@ def update_preview_image(equipment: Equipment, files):
     #some cleanup 
     mounting_location = mounting_location.lower().replace(" ", "")
     # wall,floor and floor,wall handling for the preview images:
-    image = files.images[mounting_location]
+    try: 
+        image = files.images[mounting_location]
+    except: 
+        image = images.image_not_found
     return image
 
 
@@ -448,7 +451,7 @@ def load_gui(pick_files = False):
                     popup.message += "\nYour version is up to date."
                     popup.alert()
                 continue 
-            
+
     window.close()
     del window
     return
