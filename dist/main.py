@@ -209,7 +209,6 @@ def load_gui(pick_files = False):
     """==============================================="""
     """Logic loop"""
     """==============================================="""
-    user_actions = UserActions()
     while True:
         event, values = window.read()
         if event == "OK" or event == sg.WIN_CLOSED:
@@ -259,7 +258,6 @@ def load_gui(pick_files = False):
             """
             if event in equipment.fields:
                 # change the cur eqpt field being edited
-                user_actions.push((event, equipment.items[equipment.cur_index][event][0]))
                 equipment.items[equipment.cur_index][event][0] = values[event]
                 continue 
                 

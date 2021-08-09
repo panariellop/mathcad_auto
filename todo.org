@@ -64,8 +64,8 @@
   - [X] Helpers.py
   - [X] Gui.py
   - [X] Reports.py
-  - [ ] Validation.py
-  - [ ] Data.py
+  - [X] Validation.py
+  - [X] Data.py
   - [ ] Filestream.py
   - [ ] Unittests.py 
 * Teach Parth 

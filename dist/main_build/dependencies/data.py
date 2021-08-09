@@ -16,7 +16,6 @@ class Equipment():
     def __init__(self):
         self.items = list()
         self.cur_index = 0
-        self.length = 0
         self.fields = list()
         self.names = list()
         self.inputs = list()
@@ -92,7 +91,9 @@ class Outputs():
         self.items.append([name, values])
 
     def clear(self):
-        """Clear self.items"""
+        """
+        Clear self.items
+        """
         self.items = []
 
     def display_asd(self) -> list:
@@ -153,30 +154,5 @@ class Outputs():
                     i[1][1] = "lbf"
                     i[1][0] = helpers.convert_units(i[1][0], "N", "lbf")
 
-class UserActions():
-    def __init__(self):
-        self.stack = []
-        self.size = 0 
-        self.stack_limit = 2048 # how many items will be able to be stored on the stack 
-    def push(self, to_append):
-        if len(self.stack) < self.stack_limit:
-            self.stack.append(to_append)
-        else:
-            self.stack = []
-            self.stack.append(to_append)
-    def pop(self):
-        if len(self.stack) >0:
-            self.size -= 1 
-            to_return  = self.stack.pop()
-            return to_return
-        else:
-            return (None, None) 
-    def peek(self):
-        try:
-            return self.stack[-1]
-        except: 
-            return (None, None)  
-    def clear(self):
-        self.stack = []
 if __name__ == "__main__":
     pass 
