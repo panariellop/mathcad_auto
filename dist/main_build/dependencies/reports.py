@@ -4,14 +4,10 @@ All of the functions that perform report generating or calculations with Mathcad
 from main_build.dependencies.filestream import * 
 from main_build.dependencies.data import Equipment
 from main_build.dependencies.gui import * 
-from main_build.MathcadPy.mathcadpy import Mathcad, Worksheet  # loading custom
-
-from shutil import copyfile
+from main_build.MathcadPy.mathcadpy import Mathcad  # loading custom
 
 # so user can copy to clipboard
 # so we can grab images from the sheet
-import stat
-
 
 import os 
 
@@ -22,9 +18,6 @@ def mathcad_calculate(eqpt, template_file, debug=False)->dict:
     """
     cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible=debug) #creates a Mathcadpy object
-    # Choose template files depending on the mounting location
-
-
     # Create a new temp file to fill in the values
     new_filepath = template_file.split("/")[0:-1]
     new_filepath = "/".join(new_filepath)

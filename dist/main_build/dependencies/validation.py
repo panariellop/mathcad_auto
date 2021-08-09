@@ -30,7 +30,7 @@ class InputValidation():
             
     def mounting_location(self,cur_eqpt, eqpt):
         """
-        Can have the following 
+        Mounting location needs to be mentioned in the excel file 
         """
         mounting_location = cur_eqpt['mounting_location']
         if mounting_location[0] in eqpt.mounting_locations:
@@ -40,6 +40,9 @@ class InputValidation():
             self.errors.append(f"{cur_eqpt['eqpt_name'][0]}: mounting location must be one of the mounting locations mentioned in the input excel file. {mounting_location[0]} is not mentioned.")
             
     def input_values(self, cur_eqpt):
+        """
+        Checks if input values are within the correct ranges
+        """
         eqpt_name = cur_eqpt['eqpt_name']
         pos_inputs = ['w_p_input',
                       's_ds_input',
@@ -68,25 +71,4 @@ class InputValidation():
         
 
 if __name__ == "__main__":
-    from data import Equipment 
-    equipment = Equipment()
-    equipment.append(
-        {"eqpt_name": "Test1",
-         "mounting_location": "Floor",
-         'w_p_input': ['4',''],
-          's_ds_input': ['4',''],
-          'a_p_input': ['4',''],
-          'r_p_input': ['4',''],
-          'omega_input': ['4',''],
-          'z_input':['4',''],
-          'h_input': ['4',''],
-          'capital_a_input': ['-1', ''],
-          'capital_b_input': ['4',''],
-         'b_input': ['0', ''],
-         'a_input': ['4',''], 
-         }
-    )
-    test = InputValidation()
-    test.validate(equipment, debug = True)
-    print(test.errors) 
-    
+    pass 

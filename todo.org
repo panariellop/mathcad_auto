@@ -62,9 +62,8 @@
   - [X] Main.py
   - [X] Verbose.py
   - [X] Helpers.py
-  - [ ] Gui.py
-    Need to make the image loader more flexible 
-  - [ ] Reports.py
+  - [X] Gui.py
+  - [X] Reports.py
   - [ ] Validation.py
   - [ ] Data.py
   - [ ] Filestream.py
