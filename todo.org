@@ -1,44 +1,41 @@
-* Parth's charges
-- [-] Make the application object-based
-  - [X] TT logo on the main window
-  - [X] Save outputs so they can be viewed later 
-  - [X] About link in the main window with a link to the documentation
-        [X] Make it be an image (construct in paint)
-  [X] Make it appear on the right had corner of the screen
-  [X] TT logo on left hand corner of the screen 
-	
-  1. [X] Input data validation
+* DONE Parth's charges
+- [X] Make the application object-based
+  1. [X] TT logo on the main window
+  2. [X] Save outputs so they can be viewed later 
+  3. [X] About link in the main window with a link to the documentation
+         [X] Make it be an image (construct in paint)
+         [X] Make it appear on the right had corner of the screen
+         [X] TT logo on left hand corner of the screen 	
+  4. [X] Input data validation
          [X] Need to create a class that will become a dependency 
-  2. [X] Change inputs to verbose names
-  3. [X] Change outputs to verbose names
-  4. [X] Embed preview image in main window
-  5. [X] Make mounting location a dropdown
-  6. [X] Undo button
+  5. [X] Change inputs to verbose names
+  6. [X] Change outputs to verbose names
+  7. [X] Embed preview image in main window
+  8. [X] Make mounting location a dropdown
+  9. [X] Undo button
      1. Need to implement a stack of changes made
      2. Pop the stack when user clicks Edit->Undo
-  7. [X] Link inputs to excel file (maybe have a save inputs to excel button)
-  8. [X] Add a comment in excel spreadsheet linked to info button
-     - [X] Only render info button if the comment is valid 
-  9. [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
-  10. [X] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
+  10. [X] Link inputs to excel file (maybe have a save inputs to excel button)
+  11. [X] Add a comment in excel spreadsheet linked to info button
+      - [X] Only render info button if the comment is valid 
+  12. [X] Information link for each input (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]]) 
+  13. [X] Change tags to Equipment Tag and Tag/Category (mentioned in the [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
       - Parsing from excel file
       - Saving back to excel file? 
       - Saving to CSV "database"
-  11. [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
+  14. [ ] Include project number (mentioned in [[file:\Users\Owner\Downloads\updates.pdf][updates.pdf]])
       Don't think this would be a good idea because it would limit flexibility 
-  12. [X] Metadata in app to display current version, relavent data, etc.
-  13. [X] Have a status bar for when we are generating multiple reports
-  14. [X] Cancel button
-      Doesn't really work since we can't get 2 concurrent processes 
+  15. [X] Metadata in app to display current version, relavent data, etc.
+  16. [X] Have a status bar for when we are generating multiple reports
 
-* Bug Fixes 
+* DONE Bug Fixes 
       - [X] Fix generate all reports function 
       'Mathcad' object has no attribute '_Mathcad__mcadapp'
       '(-2147221008, 'CoInitialize has not been called.', None, None)'
       - Not sure if we can make this multithreaded 
 
-* Documentation Changes 
-   - [ ] Change documentaion
+* DONE Documentation Changes 
+   - [X] Change documentaion
      1) User documentation
      2) Developer documentation
 	- Multithreading now gone 
@@ -58,12 +55,12 @@
 	  + Package the application remotely using a cloud machine - allow the most recent version of the executable to be download
 
 
-* Other updater idea
+* DONE Other updater idea
   1. Have a check for updates script run at startup, and alert the user if there is a more recent version of the software.
   2. Create a link to the releases tab in the github page 
 * TODO Code review
-  - [ ] Main.py
-  - [ ] Verbose.py
+  - [X] Main.py
+  - [X] Verbose.py
   - [ ] Helpers.py
   - [ ] Gui.py
   - [ ] Reports.py

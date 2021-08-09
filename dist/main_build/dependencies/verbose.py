@@ -4,6 +4,9 @@ ex: h_1_input -> h1
 """
 
 def inputs(cur_input):
+    """
+    Gives verbose input
+    """
     conversion = {
         'eqpt_name': 'Equipment Name',
         'project_number': "Project Number", 
@@ -36,6 +39,9 @@ def inputs(cur_input):
         return cur_input 
 
 def outputs(cur_output):
+    """
+    Gives verbose output
+    """
     conversion = {
         'z_h_output': "z\u2095",
         'cgy_output': "CGy",
@@ -54,6 +60,9 @@ def outputs(cur_output):
 
 
 def is_asd_output(output:str)->bool:
+    """
+    Checks if the current output is asd 
+    """
     allowed = [
         't_max_1_output',
         't_max_2_output'
@@ -62,6 +71,9 @@ def is_asd_output(output:str)->bool:
     else: return False 
 
 def is_lrfd_output(output:str)->bool:
+    """
+    Checks if current output is lrfd
+    """
     allowed = [
         't_u1_output',
         't_u2_output',
@@ -70,5 +82,7 @@ def is_lrfd_output(output:str)->bool:
     ]
     if output in allowed: return True 
     else: return False 
+
+    
 if __name__ == "__main__":
     pass
