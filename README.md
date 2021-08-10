@@ -1,25 +1,25 @@
 
 # Table of Contents
 
-1.  [About](#org367d1c1)
-2.  [Installation](#org0f202ac)
-3.  [Use](#org982c1ea)
-4.  [Database](#org416366d)
-5.  [Important Information](#org6484698)
+1.  [About](#org942ff75)
+2.  [Installation](#org340365f)
+3.  [Use](#orgf52d40a)
+4.  [Database](#org03b7281)
+5.  [Important Information](#orgdf6fa9c)
 
 
 
-<a id="org367d1c1"></a>
+<a id="org942ff75"></a>
 
 # About
 
 This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 5.0 and above.
-[Tutorial Video](https://youtu.be/WerhVoz60nI)
+[Tutorial Video](https://youtu.be/aOWT9xCHb2I)
 
 
-<a id="org0f202ac"></a>
+<a id="org340365f"></a>
 
 # Installation
 
@@ -27,7 +27,7 @@ Please note that this is only compatible with Mathcad Prime 5.0 and above.
 2.  Double click the application executable to launch the application.
 
 
-<a id="org982c1ea"></a>
+<a id="orgf52d40a"></a>
 
 # Use
 
@@ -113,7 +113,7 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 7.  The application is processing your request once you click **Generate Report** or **Generate Report For All**. A confirmation popup will appear when the processing is complete. Be patient - the Mathcad API is not very fast and unfortunately there is no way to speed it up. You can do whatever tasks you like in the background.
 
 
-<a id="org416366d"></a>
+<a id="org03b7281"></a>
 
 # Database
 
@@ -121,7 +121,7 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 2.  Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the **mathcad\_automation\_output** folder, and the new reports will be appended.
 
 
-<a id="org6484698"></a>
+<a id="orgdf6fa9c"></a>
 
 # Important Information
 

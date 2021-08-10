@@ -67,7 +67,28 @@
   - [X] Validation.py
   - [X] Data.py
   - [X] Filestream.py
-  - [ ] Unittests.py 
+  - [X] Unittests.py 
+
+* TODO Create new tutorial video (again) 
+  - Maybe link to the video in the application about section 
+  - Update all the links with the proper video link 
+
+  - Introduction 
+  - Preparing the excel file 
+  - Preparing the Mathcad Files 
+  - Loading the files into the automation software 
+  - Using the software 
+    - Preview 
+    - Multiple/Single
+    - Saving back to excel 
+    - Reload from excel 
+  - Outputs 
+  - Checking for updates / getting new updates 
+
+* TODO Prep starter materials 
+  - Excel spreadsheet
+  - Documentation
+  - Mathcad files (per mounting location)
 * Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
