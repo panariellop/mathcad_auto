@@ -1,1 +1,1 @@
-__all__ = ['images']
+__all__ = ['imagespy']

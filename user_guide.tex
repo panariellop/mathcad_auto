@@ -1,4 +1,4 @@
-% Created 2021-08-05 Thu 18:13
+% Created 2021-08-10 Tue 17:59
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -36,20 +36,20 @@
 
 
 \section{About}
-\label{sec:org2c924ca}
+\label{sec:orgc9e1df3}
 This program is designed to help automate the heavy lifting of data entry into Mathcad for the equipment anchorage process. It helps you view and modify values taken from an excel spreadsheet before generating a mathcad report.
 
 Please note that this is only compatible with Mathcad Prime 5.0 and above.
-\href{https://youtu.be/WerhVoz60nI}{Tutorial Video}
+\href{https://youtu.be/aOWT9xCHb2I}{Tutorial Video}
 
 \section{Installation}
-\label{sec:org5e25fab}
+\label{sec:org3d61d61}
 \begin{enumerate}
 \item Go to the releases tab on this github page, find the latest distribution and download it. Download the template files provided to help you get started.
 \item Double click the application executable to launch the application.
 \end{enumerate}
 \section{Use}
-\label{sec:org6b01d97}
+\label{sec:org6fc20ba}
 Select the excel file from the templates provided containing the equipment and the input data. The excel sheet should have the following key headers:
 \begin{center}
 \begin{tabular}{llrrll}
@@ -74,13 +74,13 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 \item The application is processing your request once you click \textbf{Generate Report} or \textbf{Generate Report For All}. A confirmation popup will appear when the processing is complete. Be patient - the Mathcad API is not very fast and unfortunately there is no way to speed it up. You can do whatever tasks you like in the background.
 \end{enumerate}
 \section{Database}
-\label{sec:org1161bc3}
+\label{sec:org7b67e39}
 \begin{enumerate}
 \item The "database" is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
 \item Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the \textbf{mathcad\_automation\_output} folder, and the new reports will be appended.
 \end{enumerate}
 \section{Important Information}
-\label{sec:org35d0abc}
+\label{sec:orgc9b376d}
 \begin{enumerate}
 \item Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, older files can be run on more modern versions of the software.
 \item All Generated reports are saved to a folder called \textbf{mathcad\_automation\_output}. This folder is created (if it doesn't exist already) in the same directory as the application.

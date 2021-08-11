@@ -1,3 +1,4 @@
+from PySimpleGUI.PySimpleGUI import R
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 import sys
@@ -436,8 +437,13 @@ class ViewReports():
         """
         sg.theme('Reddit')
         headings = []
-        for key, val in self.reports[0].items():
-            headings.append(key)
+        if len(self.reports)>0:
+            for key, val in self.reports[0].items():
+                headings.append(key)
+        else: 
+            status = self.choose_database_file()
+            if not status: 
+                return 
 
         layout = [[
             [sg.Combo(headings, default_value = headings[0], key= "search_scope", enable_events = True), 
@@ -503,12 +509,12 @@ class ViewReports():
             event, values = window.read()
             if event == 'Cancel'  or event == sg.WIN_CLOSED:
                 window.close()
-                break 
+                return False 
             if event == "Continue" and (values['filename'].endswith("csv") or values['filename'] == ""):
                 self.database_file = values['filename']
-                self.update_reports()
-                window.close()
-                break 
+                if self.update_reports():
+                    window.close()
+                    return True 
 
 
 if __name__ == "__main__":
