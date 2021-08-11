@@ -351,6 +351,98 @@ class LoadingIndicator():
     def close(self):
         if self.window != None:
             self.window.close()
+
+class ViewReports():
+    def __init__(self):
+        self.window = None 
+        self.reports = [] 
+        self.update_reports()
+        self.render()
+    def get_reports_attribute(self, attribute:str)->list():
+        """
+        Will generate a list of values given a key
+        ex: File Names, Dates, etc
+        """
+        out = []
+        for report in self.reports: #this is a list 
+            for key, val in report.items(): #this is a dict
+                if str(key) == attribute:
+                    out.append(report[key])
+        return out
+    def get_reports_as_list(self)->list():
+        out = []
+        for report in self.reports:
+            report_vals = []
+            for key, val in report.items():
+                report_vals.append(val)
+            out.append(report_vals)
+        return out 
+
+    def add_report(self, to_append):
+        """
+        Adds a report to the class
+        """
+        self.reports.append(to_append)
+
+    def update_reports(self):
+        """
+        Check if there are new reports that we need to be aware of
+        """
+        path_to_reports = "."
+        csv_file = None 
+        import os 
+        for root, dirs, files in os.walk(path_to_reports, topdown=False):
+            for name in files:
+                if name.endswith("csv"): # find the csv file 
+                    csv_file = os.path.join(root, name)
+        
+        #parse the csv file 
+        import csv
+        with open(csv_file, "r", newline="") as f:
+            reader = csv.DictReader(f)
+            for line in reader:
+                if line['File Name'] not in self.get_reports_attribute('File Name'):
+                    self.add_report(line)
+        
+        print(self.get_reports_attribute('File Name'))
+        if csv_file: return True 
+        else: return False 
+    
+    def render(self):
+        """
+        Render the GUI
+        """
+        headings = []
+        for key, val in self.reports[0].items():
+            headings.append(key)
+
+        self.window = sg.Window("View Reports", [[
+            [sg.Combo(headings, default_value = headings[0], key= "search_scope"), sg.InputText(key = "search_input"), sg.Button("Search", key = "Search")], 
+            [sg.Table(values = self.get_reports_as_list(), 
+                headings = headings, 
+                auto_size_columns = True, 
+                max_col_width = 75, 
+                def_col_width = 25, 
+                num_rows = 45, 
+                display_row_numbers = True, 
+                enable_events = True, 
+                key = "table",
+                select_mode = 'browse', 
+                )], 
+        ]])
+        while True:
+            event, values = self.window.read()
+            if event == 'Cancel'  or event == sg.WIN_CLOSED:
+                self.window.close()
+                break 
+            if event == "Search":
+                print(values['search_scope'], values['search_input'])
+            else: 
+                print(event)
+        
+
+
+
 if __name__ == "__main__":
-    v = VersionInfo()
-    v.need_to_update()
+    view = ViewReports()
+
