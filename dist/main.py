@@ -185,7 +185,10 @@ def load_gui(pick_files = False):
                                 sg.Button("Generate Report For All", key="generate_report_for_all",
                                         tooltip="This will generate a Mathad report for all the equipment listed.\nTemplate files corresponding to each equipment's mounting location will be used.")
                                 ],
-                                ],
+                                [
+                                sg.Button("View Generated Reports", key="view_generated_reports", 
+                                    tooltip = "View the generated reports in table format. Filter and search through data.")
+                          ]],
 
                           element_justification = 'c'), ],
 
@@ -449,6 +452,14 @@ def load_gui(pick_files = False):
                     popup.message += "\nYour version is up to date."
                     popup.alert()
                 continue 
+
+            """
+            View Database file
+            """
+            if event == "view_generated_reports":
+                from main_build.dependencies.gui import ViewReports
+                vr = ViewReports()
+                continue
 
     window.close()
     del window

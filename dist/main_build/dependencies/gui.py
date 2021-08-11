@@ -8,8 +8,8 @@ try: # if using functions from main.py
     from main_build.dependencies import filestream
     from main_build.dependencies.data import *
 except: # if using functions from this file 
-    sys.path.insert(0,'..')
-    import images 
+    sys.path.insert(0,'../')
+    from images import images 
     import helpers 
     import filestream
 
@@ -355,6 +355,7 @@ class LoadingIndicator():
 class ViewReports():
     def __init__(self):
         self.window = None 
+        self.database_file = None
         self.reports = [] 
         self.update_reports()
         self.render()
@@ -369,13 +370,27 @@ class ViewReports():
                 if str(key) == attribute:
                     out.append(report[key])
         return out
-    def get_reports_as_list(self)->list():
+    def get_reports_as_list(self, category = "", filter="", inclusive = True)->list():
         out = []
+        filter = filter.upper()
         for report in self.reports:
             report_vals = []
+            is_filtered = False 
             for key, val in report.items():
                 report_vals.append(val)
-            out.append(report_vals)
+                """
+                Filter = wall
+                val = wall,floor
+                """
+                if inclusive == True: 
+                    if filter in val.upper() and category == key: #f = wall, v = wall,floor OK 
+                        is_filtered = True 
+                elif inclusive == False:
+                    if filter == val.upper() and category == key: #f = wall, v = wall OK; K
+                        is_filtered = True 
+                if filter == "" or category == "":
+                    is_filtered = True
+            if len(report_vals) > 0 and is_filtered: out.append(report_vals)
         return out 
 
     def add_report(self, to_append):
@@ -388,23 +403,30 @@ class ViewReports():
         """
         Check if there are new reports that we need to be aware of
         """
-        path_to_reports = "."
+        self.reports = []
         csv_file = None 
+        if self.database_file == None or self.database_file == "":
+            cur_path = "./"
+        else:
+            cur_path = self.database_file
         import os 
-        for root, dirs, files in os.walk(path_to_reports, topdown=False):
+        for root, dirs, files in os.walk(cur_path, topdown=False):
             for name in files:
                 if name.endswith("csv"): # find the csv file 
+                    print(name)
                     csv_file = os.path.join(root, name)
         
         #parse the csv file 
         import csv
-        with open(csv_file, "r", newline="") as f:
-            reader = csv.DictReader(f)
-            for line in reader:
-                if line['File Name'] not in self.get_reports_attribute('File Name'):
+        if csv_file == None:
+            csv_file = self.database_file
+        try:
+            with open(csv_file, "r", newline="") as f:
+                reader = csv.DictReader(f)
+                for line in reader:
                     self.add_report(line)
-        
-        print(self.get_reports_attribute('File Name'))
+        except: #there is no file 
+            pass 
         if csv_file: return True 
         else: return False 
     
@@ -412,12 +434,17 @@ class ViewReports():
         """
         Render the GUI
         """
+        sg.theme('Reddit')
         headings = []
         for key, val in self.reports[0].items():
             headings.append(key)
 
-        self.window = sg.Window("View Reports", [[
-            [sg.Combo(headings, default_value = headings[0], key= "search_scope"), sg.InputText(key = "search_input"), sg.Button("Search", key = "Search")], 
+        layout = [[
+            [sg.Combo(headings, default_value = headings[0], key= "search_scope", enable_events = True), 
+            sg.InputText(key = "search_input", enable_events = True), 
+            sg.Text("Inclusive?"), 
+            sg.Combo(['Yes', 'No'], default_value = ['Yes'], key="is_inclusive", enable_events = True), 
+            sg.Button("Clear", key="Clear")], 
             [sg.Table(values = self.get_reports_as_list(), 
                 headings = headings, 
                 auto_size_columns = True, 
@@ -427,20 +454,61 @@ class ViewReports():
                 display_row_numbers = True, 
                 enable_events = True, 
                 key = "table",
-                select_mode = 'browse', 
+                select_mode=['browse']
                 )], 
-        ]])
+        ]]
+
+        menu = [['&File', ['&Select Database File', "---", "Export Visible Data"]]]
+        layout += [[sg.Menu(menu)]]       
+        self.window = sg.Window("View Reports", layout, icon = images.ma_logo_png)
+
         while True:
             event, values = self.window.read()
             if event == 'Cancel'  or event == sg.WIN_CLOSED:
                 self.window.close()
                 break 
-            if event == "Search":
-                print(values['search_scope'], values['search_input'])
-            else: 
-                print(event)
-        
+            if event == "search_scope" or "search_input" or "is_inclusive":
+                if values['is_inclusive'] == "Yes":
+                    is_inclusive = True
+                else: is_inclusive = False 
+                new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                if len(new_values) > 0: 
+                    self.window['table'].update(values = new_values)
+            if event == "Clear": 
+                values['search_input'] = ""
+                self.window['search_input'].update("")
+                self.window['is_inclusive'].update("Yes")
+                self.window['table'].update(values = self.get_reports_as_list())
+            if event == "Select Database File":
+                self.choose_database_file()
+                new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                if len(new_values) > 0: 
+                    self.window['table'].update(values = new_values)
+            if event == "Export Visible Data":
+                print(self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive))
 
+    
+    def choose_database_file(self):
+        sg.theme("Reddit")
+        window = sg.Window("Choose Database File", [
+            [sg.FileBrowse("Browse", key="file", enable_events=True),
+            sg.InputText(key="filename", size=(45, 1),background_color='white', enable_events=True)
+            ],
+            [sg.Button("Continue", key="Continue")],
+            ]
+                                            
+
+        , icon = images.ma_logo_png)
+        while True:
+            event, values = window.read()
+            if event == 'Cancel'  or event == sg.WIN_CLOSED:
+                window.close()
+                break 
+            if event == "Continue" and (values['filename'].endswith("csv") or values['filename'] == ""):
+                self.database_file = values['filename']
+                self.update_reports()
+                window.close()
+                break 
 
 
 if __name__ == "__main__":
