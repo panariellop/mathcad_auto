@@ -110,7 +110,10 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
             print('Error editing the string field in Mathcad: ', e)
 
     # check if output folder exists, if not, make one
-    output_folder_filepath = cur_directory + "/mathcad_automation_output"
+    if files.output_folder:
+        output_folder_filepath = cur_directory
+    else:
+        output_folder_filepath = cur_directory + "/mathcad_automation_output"
     if not os.path.exists(output_folder_filepath):
         os.makedirs(output_folder_filepath)
 

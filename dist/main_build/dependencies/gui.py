@@ -86,6 +86,7 @@ class SelectTemplates():
         self.wallfloor_template = ""
         self.ceiling_template = ""
         self.images = dict()
+        self.output_folder = None
         self.can_continue = False
         self.version = VersionInfo() # instantiate 
         self.version = self.version.get_cur_version() # get actual value 
@@ -293,6 +294,25 @@ class Popup():
             if event == "OK" or event == sg.WIN_CLOSED:
                 popup.close()
                 return values['input']
+
+    def take_filepath_input(self, output_folder)->str:
+        popup = sg.Window(self.title, [
+            [sg.Text(self.message)], 
+            [sg.FolderBrowse("Browse", key="file", enable_events=True),
+            sg.InputText(output_folder, key="filename", size=(45, 1),background_color='white', enable_events=True)
+            ],
+            [sg.Button("Continue", key="Continue")],
+        ],
+        icon=images.ma_logo_png, )
+        
+        while True:
+            event, values = popup.read()
+            if event == "OK" or event == "CANCEL" or event == sg.WIN_CLOSED:
+                popup.close()
+                return output_folder 
+            if event == "Continue":
+                popup.close()
+                return values['filename']
 
     def image(self, image):
         """

@@ -201,7 +201,7 @@ def load_gui(pick_files = False):
     ]
 
         # ------ Menu Definition ------ #
-    menu_def = [['&File', ['&Select Input Files', '---', '&Save Inputs To Excel']],
+    menu_def = [['&File', ['&Select Input Files', '&Select Output Folder', '---', '&Save Inputs To Excel']],
                 ['&Edit', ['&Revert Inputs']],
             ['&Help', ['&Version', '&About', '&Help']],]
 
@@ -340,7 +340,10 @@ def load_gui(pick_files = False):
                 else:
                     loading = LoadingIndicator(2) # instantiate the loading indicator 
                     loading.render()
-                    status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
+                    if files.output_folder:
+                        status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=files.output_folder, generating_multiple_reports=False)
+                    else: 
+                        status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
                     loading.update() # progress the indicator 
                     loading.close()
                     if status:
@@ -364,7 +367,10 @@ def load_gui(pick_files = False):
                     loading.render()
                     errors = []
                     for eqpt in equipment.items:
-                        status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
+                        if files.output_folder:
+                            status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=files.output_folder, generating_multiple_reports=True)
+                        else:
+                            status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
                         loading.update()
                         equipment.next_index()
                         if not status:
@@ -460,6 +466,20 @@ def load_gui(pick_files = False):
                 from main_build.dependencies.gui import ViewReports
                 vr = ViewReports()
                 continue
+            
+            """
+            Specify output folder
+            """
+            if event == "Select Output Folder":
+                # Create a dialogue, save to files variable 
+                popup = Popup("Choose output folder", "Choose output folder:")
+                if files.output_folder:
+                    filepath = popup.take_filepath_input(files.output_folder)
+                else:
+                    filepath = popup.take_filepath_input(os.getcwd()+"\mathcad_automation_output")
+                if filepath:
+                    files.output_folder = filepath 
+                    print(files.output_folder)
 
     window.close()
     del window
