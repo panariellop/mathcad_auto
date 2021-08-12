@@ -411,10 +411,10 @@ class ViewReports():
         else:
             cur_path = self.database_file
         import os 
-        for root, dirs, files in os.walk(cur_path, topdown=False):
+        depth = 2 
+        for root, dirs, files in helpers.walklevel(cur_path, depth = 2):
             for name in files:
                 if name.endswith("csv"): # find the csv file 
-                    print(name)
                     csv_file = os.path.join(root, name)
         
         #parse the csv file 
@@ -437,20 +437,22 @@ class ViewReports():
         """
         sg.theme('Reddit')
         headings = []
-        if len(self.reports)>0:
+        if len(self.reports) > 0 :
             for key, val in self.reports[0].items():
                 headings.append(key)
         else: 
             status = self.choose_database_file()
             if not status: 
                 return 
-
+            else: 
+                self.render()
         layout = [[
-            [sg.Combo(headings, default_value = headings[0], key= "search_scope", enable_events = True), 
+            [sg.Frame("Filter", [[sg.Combo(headings, default_value = headings[0], key= "search_scope", enable_events = True), 
             sg.InputText(key = "search_input", enable_events = True), 
             sg.Text("Inclusive?"), 
             sg.Combo(['Yes', 'No'], default_value = ['Yes'], key="is_inclusive", enable_events = True), 
-            sg.Button("Clear", key="Clear")], 
+            sg.Button("Clear", key="Clear")], ])],
+            
             [sg.Table(values = self.get_reports_as_list(), 
                 headings = headings, 
                 auto_size_columns = True, 
@@ -464,7 +466,7 @@ class ViewReports():
                 )], 
         ]]
 
-        menu = [['&File', ['&Select Database File', "---", "Export Visible Data"]]]
+        menu = [['&File', ['&Select Database File']], ['&Export', ["Export Visible Data to Clipboard"]]]
         layout += [[sg.Menu(menu)]]       
         self.window = sg.Window("View Reports", layout, icon = images.ma_logo_png)
 
@@ -490,8 +492,11 @@ class ViewReports():
                 new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
                 if len(new_values) > 0: 
                     self.window['table'].update(values = new_values)
-            if event == "Export Visible Data":
-                print(self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive))
+            if event == "Export Visible Data to Clipboard":
+                import pandas 
+                data = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                df = pandas.DataFrame(data = data, columns = headings)
+                df.to_clipboard()
 
     
     def choose_database_file(self):
