@@ -186,7 +186,7 @@ def load_gui(pick_files = False):
                                         tooltip="This will generate a Mathad report for all the equipment listed.\nTemplate files corresponding to each equipment's mounting location will be used.")
                                 ],
                                 [
-                                sg.Button("View Generated Reports", key="view_generated_reports", 
+                                sg.Button("View Database File", key="view_generated_reports", 
                                     tooltip = "View the generated reports in table format. Filter and search through data.")
                           ]],
 
@@ -464,7 +464,10 @@ def load_gui(pick_files = False):
             """
             if event == "view_generated_reports":
                 from main_build.dependencies.gui import ViewReports
-                vr = ViewReports()
+                if files.database != "":
+                    vr = ViewReports(database_file= files.database)
+                else:
+                    vr = ViewReports()
                 continue
             
             """

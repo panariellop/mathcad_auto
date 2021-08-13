@@ -374,9 +374,9 @@ class LoadingIndicator():
             self.window.close()
 
 class ViewReports():
-    def __init__(self):
+    def __init__(self, database_file = None):
         self.window = None 
-        self.database_file = None
+        self.database_file = database_file
         self.reports = [] 
         self.update_reports()
         self.render()

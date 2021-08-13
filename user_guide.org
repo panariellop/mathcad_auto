@@ -40,10 +40,12 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 * Database
 1. The "database" is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
 2. Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the *mathcad_automation_output* folder, and the new reports will be appended.
+3. You can view the database file by 
 * Important Information
 1. Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, older files can be run on more modern versions of the software.
-2. All Generated reports are saved to a folder called *mathcad_automation_output*. This folder is created (if it doesn't exist already) in the same directory as the application.
-3. Customizing the App:
+2. If you would like to change the output folder (where all reports and the database file are saved) then specify it in *File->Select Output Folder*. 
+3. All Generated reports are saved to a folder called *mathcad_automation_output*. This folder is created (if it doesn't exist already) in the same directory as the application. If you specify an output folder, it will be used instead. 
+4. Customizing the App:
    - If you decide to you want to include your own inputs and outputs, make sure to label your inputs *<my_label>_input*. For example, *alpha_input* would work, but *alpha_something* would not.
    - To use your own custom Mathcad template, choose it using the *Change Input Files* button. Ensure the format follows the example Mathcad template provided.
    - To use your own custom excel file, choose it using *File->Change Input Files* or the shortcut *Ctrl-i*. Your custom file must follow the formatting rules explicitly defined in the example excel document.
