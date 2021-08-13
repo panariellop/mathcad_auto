@@ -40,7 +40,7 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 * Database
 1. The "database" is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
 2. Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the *mathcad_automation_output* folder, and the new reports will be appended.
-3. You can view the database file by 
+3. You can view the database file by clicking *View Database File*. This will either load the database file specified in the inputs or load the default database file generated when you clicked *Generate Report* or *Generate Reports for All*. You can always load a different database file for viewing by clicking *View Database File* and then *File->Select Database File*. 
 * Important Information
 1. Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, older files can be run on more modern versions of the software.
 2. If you would like to change the output folder (where all reports and the database file are saved) then specify it in *File->Select Output Folder*. 

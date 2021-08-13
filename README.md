@@ -1,15 +1,15 @@
 
 # Table of Contents
 
-1.  [About](#org942ff75)
-2.  [Installation](#org340365f)
-3.  [Use](#orgf52d40a)
-4.  [Database](#org03b7281)
-5.  [Important Information](#orgdf6fa9c)
+1.  [About](#org9c1fd81)
+2.  [Installation](#org066badd)
+3.  [Use](#orgf70a4cd)
+4.  [Database](#org84477db)
+5.  [Important Information](#org617affb)
 
 
 
-<a id="org942ff75"></a>
+<a id="org9c1fd81"></a>
 
 # About
 
@@ -19,7 +19,7 @@ Please note that this is only compatible with Mathcad Prime 5.0 and above.
 [Tutorial Video](https://youtu.be/aOWT9xCHb2I)
 
 
-<a id="org340365f"></a>
+<a id="org066badd"></a>
 
 # Installation
 
@@ -27,7 +27,7 @@ Please note that this is only compatible with Mathcad Prime 5.0 and above.
 2.  Double click the application executable to launch the application.
 
 
-<a id="orgf52d40a"></a>
+<a id="orgf70a4cd"></a>
 
 # Use
 
@@ -113,21 +113,23 @@ Note: Tags should be separated by comma. If you decide to include units, put par
 7.  The application is processing your request once you click **Generate Report** or **Generate Report For All**. A confirmation popup will appear when the processing is complete. Be patient - the Mathcad API is not very fast and unfortunately there is no way to speed it up. You can do whatever tasks you like in the background.
 
 
-<a id="org03b7281"></a>
+<a id="org84477db"></a>
 
 # Database
 
 1.  The "database" is a .csv file containing all the calculations you have performed with the automation software. This helps with organization and future reference.
 2.  Choose the database that you want your generated reports to be appended to. If you choose an already existing database, your new reports will automatically be appended. You can leave this field blank: a database file will automatically be generated in the **mathcad\_automation\_output** folder, and the new reports will be appended.
+3.  You can view the database file by clicking **View Database File**. This will either load the database file specified in the inputs or load the default database file generated when you clicked **Generate Report** or **Generate Reports for All**. You can always load a different database file for viewing by clicking **View Database File** and then **File->Select Database File**.
 
 
-<a id="orgdf6fa9c"></a>
+<a id="org617affb"></a>
 
 # Important Information
 
 1.  Make sure to select the appropriate Mathcad template file from the teplates provided. If you are using Mathcad Prime 5.0, you must use a file compatible with that version. Mathcad Prime is backward compatible, however, older files can be run on more modern versions of the software.
-2.  All Generated reports are saved to a folder called **mathcad\_automation\_output**. This folder is created (if it doesn't exist already) in the same directory as the application.
-3.  Customizing the App:
+2.  If you would like to change the output folder (where all reports and the database file are saved) then specify it in **File->Select Output Folder**.
+3.  All Generated reports are saved to a folder called **mathcad\_automation\_output**. This folder is created (if it doesn't exist already) in the same directory as the application. If you specify an output folder, it will be used instead.
+4.  Customizing the App:
     -   If you decide to you want to include your own inputs and outputs, make sure to label your inputs **<my\_label>\_input**. For example, **alpha\_input** would work, but **alpha\_something** would not.
     -   To use your own custom Mathcad template, choose it using the **Change Input Files** button. Ensure the format follows the example Mathcad template provided.
     -   To use your own custom excel file, choose it using **File->Change Input Files** or the shortcut **Ctrl-i**. Your custom file must follow the formatting rules explicitly defined in the example excel document.
