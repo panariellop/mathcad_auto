@@ -1,0 +1,5 @@
+Date,Project Number,Equipment Number,Equipment Tags,Tags,Name,Mounting Location,File Name
+2021-08-13,1111,1234,FOO,"MEDICAL, ICU, SOMETHING",ANESTHESIA MACHINE ,"WALL, FLOOR",Anesthesia_Machine__report_CDOLKCVY.mcdx
+2021-08-13,1111,1234,"FOO, BAR ",MEDICAL,WARMING CABINET,"WALL, FLOOR",Warming_Cabinet_report_FFCHQQEN.mcdx
+2021-08-13,1111,1234,A,MEDICAL,SURGICAL SCRUB SINK,"WALL, FLOOR",Surgical_Scrub_Sink_report_OEHDCKMK.mcdx
+2021-08-13,1111,1234,"FOO, BAR, A ",MEDICAL,RETRACTABLE CEILING COLUMN,CEILING,Retractable_Ceiling_Column_report_SKAHHWOP.mcdx

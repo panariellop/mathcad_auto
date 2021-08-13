@@ -414,6 +414,24 @@ class ViewReports():
             if len(report_vals) > 0 and is_filtered: out.append(report_vals)
         return out 
 
+    def sort_by(self, reports:list, category:int, is_increasing = False)->list: 
+        """
+        Sorts the reports by category increasing or decreasing
+        """
+        if len(reports) == 0: return reports 
+        sorted = [] 
+        #create identifiers, put into multidimentsional array, then sort using arr.sort()
+        multi = list()
+        for idx, report in enumerate(reports):
+            multi.append([report[category], idx]) 
+        if is_increasing:
+            multi.sort() 
+        else:
+            multi.sort(reverse=True)
+        for m in multi:
+            sorted.append(reports[m[1]])
+        return sorted 
+
     def add_report(self, to_append):
         """
         Adds a report to the class
@@ -472,6 +490,12 @@ class ViewReports():
             sg.Text("Inclusive?"), 
             sg.Combo(['Yes', 'No'], default_value = ['Yes'], key="is_inclusive", enable_events = True), 
             sg.Button("Clear", key="Clear")], ])],
+
+            [sg.Frame("Sort By", [[
+                sg.Combo(headings, default_value = headings[0], key= "sort_category", enable_events = True), 
+                sg.Text("Increasing?"), 
+                sg.Combo(['Yes', 'No'], default_value = ['Yes'], key="is_increasing", enable_events = True), 
+            ]])], 
             
             [sg.Table(values = self.get_reports_as_list(), 
                 headings = headings, 
@@ -495,29 +519,52 @@ class ViewReports():
             if event == 'Cancel'  or event == sg.WIN_CLOSED:
                 self.window.close()
                 break 
+
             if event == "search_scope" or "search_input" or "is_inclusive":
                 if values['is_inclusive'] == "Yes":
                     is_inclusive = True
                 else: is_inclusive = False 
                 new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                category = headings.index(values['sort_category'])
+                if values['is_increasing'] == "Yes":
+                    sorted = self.sort_by(new_values, category, is_increasing=True)
+                else:
+                    sorted = self.sort_by(new_values, category, is_increasing=False)
                 if len(new_values) > 0: 
-                    self.window['table'].update(values = new_values)
+                    self.window['table'].update(values = sorted)
+
             if event == "Clear": 
                 values['search_input'] = ""
                 self.window['search_input'].update("")
                 self.window['is_inclusive'].update("Yes")
                 self.window['table'].update(values = self.get_reports_as_list())
+
             if event == "Select Database File":
                 self.choose_database_file()
                 new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
                 if len(new_values) > 0: 
                     self.window['table'].update(values = new_values)
+
             if event == "Export Visible Data to Clipboard":
                 import pandas 
-                data = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
-                df = pandas.DataFrame(data = data, columns = headings)
+                reports = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                category = headings.index(values['sort_category'])
+                if values['is_increasing'] == "Yes":
+                    sorted = self.sort_by(reports, category, is_increasing=True)
+                else:
+                    sorted = self.sort_by(reports, category, is_increasing=False)
+                df = pandas.DataFrame(data = sorted, columns = headings)
                 df.to_clipboard()
 
+            if event == "is_increasing" or event == "sort_category":
+                reports = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
+                category = headings.index(values['sort_category'])
+                if values['is_increasing'] == "Yes":
+                    sorted = self.sort_by(reports, category, is_increasing=True)
+                else:
+                    sorted = self.sort_by(reports, category, is_increasing=False)
+                self.window['table'].update(values = sorted)
+                continue 
     
     def choose_database_file(self):
         sg.theme("Reddit")
@@ -544,4 +591,3 @@ class ViewReports():
 
 if __name__ == "__main__":
     view = ViewReports()
-

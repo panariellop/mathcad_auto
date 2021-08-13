@@ -58,7 +58,7 @@
 * DONE Other updater idea
   1. Have a check for updates script run at startup, and alert the user if there is a more recent version of the software.
   2. Create a link to the releases tab in the github page 
-* TODO Code review
+* DONE Code review
   - [X] Main.py
   - [X] Verbose.py
   - [X] Helpers.py
@@ -69,7 +69,7 @@
   - [X] Filestream.py
   - [X] Unittests.py 
 
-* TODO Create new tutorial video (again) 
+* DONE Create new tutorial video (again) 
   - Maybe link to the video in the application about section 
   - Update all the links with the proper video link 
 
@@ -85,10 +85,18 @@
   - Outputs 
   - Checking for updates / getting new updates 
 
-* TODO Prep starter materials 
+* DONE Prep starter materials 
   - Excel spreadsheet
   - Documentation
   - Mathcad files (per mounting location)
+
+* IP View database file 
+  - Sort by
+  - DONE Filter 
+  - DONE Open other database file 
+  - DONE Specifiy output folder 
+
+  
 * Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
