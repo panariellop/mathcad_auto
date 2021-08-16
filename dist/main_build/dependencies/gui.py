@@ -389,27 +389,26 @@ class ViewReports():
         for report in self.reports: #this is a list 
             for key, val in report.items(): #this is a dict
                 if str(key) == attribute:
-                    out.append(report[key])
+                    out.append(report[key]) #will just pull the specific column item 
         return out
     def get_reports_as_list(self, category = "", filter="", inclusive = True)->list():
+        """
+        Will filter reports and give an output as a multidimensional array (which is what the GUI renderer wants)
+        """
         out = []
         filter = filter.upper()
         for report in self.reports:
-            report_vals = []
+            report_vals = [] # 
             is_filtered = False 
-            for key, val in report.items():
-                report_vals.append(val)
-                """
-                Filter = wall
-                val = wall,floor
-                """
-                if inclusive == True: 
+            for key, val in report.items(): # report is a dict 
+                report_vals.append(val) #need to preload all the values before we determine the filter 
+                if inclusive == True: #inclusive search 
                     if filter in val.upper() and category == key: #f = wall, v = wall,floor OK 
                         is_filtered = True 
-                elif inclusive == False:
-                    if filter == val.upper() and category == key: #f = wall, v = wall OK; K
+                elif inclusive == False: #exclusive search 
+                    if filter == val.upper() and category == key: #f = wall, v = wall OK; 
                         is_filtered = True 
-                if filter == "" or category == "":
+                if filter == "" or category == "": #if there is no category or filter than we still want the current row to be counted
                     is_filtered = True
             if len(report_vals) > 0 and is_filtered: out.append(report_vals)
         return out 
@@ -418,47 +417,48 @@ class ViewReports():
         """
         Sorts the reports by category increasing or decreasing
         """
-        if len(reports) == 0: return reports 
+        if len(reports) == 0: return reports # edge case 
         sorted = [] 
         #create identifiers, put into multidimentsional array, then sort using arr.sort()
-        multi = list()
+        multi = list() # multidimensional array that is used to sort [[report[category], idx]]
         for idx, report in enumerate(reports):
             multi.append([report[category], idx]) 
-        if is_increasing:
-            multi.sort() 
+        if is_increasing: #if we want increasing values 
+            multi.sort() #sorts alphanumericaly 
         else:
-            multi.sort(reverse=True)
-        for m in multi:
-            sorted.append(reports[m[1]])
+            multi.sort(reverse=True) # reverse sort 
+        for m in multi: 
+            sorted.append(reports[m[1]]) #need to disassemble the miltidimensional sorted array (this is were the idx comes in handy)
         return sorted 
 
     def add_report(self, to_append):
         """
         Adds a report to the class
         """
-        self.reports.append(to_append)
+        self.reports.append(to_append) #simple append (can be more flexible in future)
 
     def update_reports(self):
         """
         Check if there are new reports that we need to be aware of
         """
-        self.reports = []
+        self.reports = [] #make empty to prepare for new ones 
         csv_file = None 
         if self.database_file == None or self.database_file == "":
+             # if user has not chosen a database file, start search in current directory for a database file
             cur_path = "./"
+            import os 
+            depth = 2 # how deep into children directories do we want to search? 
+            for root, dirs, files in helpers.walklevel(cur_path, depth = depth):
+                for name in files:
+                    if name.endswith("csv"): # find the csv file 
+                        csv_file = os.path.join(root, name) # create the filepath 
         else:
-            cur_path = self.database_file
-        import os 
-        depth = 2 
-        for root, dirs, files in helpers.walklevel(cur_path, depth = 2):
-            for name in files:
-                if name.endswith("csv"): # find the csv file 
-                    csv_file = os.path.join(root, name)
+            cur_path = self.database_file #user has specified database file 
         
         #parse the csv file 
         import csv
         if csv_file == None:
-            csv_file = self.database_file
+            csv_file = self.database_file # if user sepecified 
         try:
             with open(csv_file, "r", newline="") as f:
                 reader = csv.DictReader(f)
@@ -466,24 +466,24 @@ class ViewReports():
                     self.add_report(line)
         except: #there is no file 
             pass 
-        if csv_file: return True 
-        else: return False 
+        if csv_file: return True # we found the csv file
+        else: return False # we did not find anything (ERROR!)
     
     def render(self):
         """
         Render the GUI
         """
         sg.theme('Reddit')
-        headings = []
-        if len(self.reports) > 0 :
+        headings = [] # need to define the headings to the table
+        if len(self.reports) > 0:
             for key, val in self.reports[0].items():
                 headings.append(key)
         else: 
             status = self.choose_database_file()
             if not status: 
-                return 
+                return # error has occured 
             else: 
-                self.render()
+                self.render() # recur since user has now chosen the database file 
         layout = [[
             [sg.Frame("Filter", [[sg.Combo(headings, default_value = headings[0], key= "search_scope", enable_events = True), 
             sg.InputText(key = "search_input", enable_events = True), 
@@ -521,6 +521,9 @@ class ViewReports():
                 break 
 
             if event == "search_scope" or "search_input" or "is_inclusive":
+                """
+                User is filtering data 
+                """
                 if values['is_inclusive'] == "Yes":
                     is_inclusive = True
                 else: is_inclusive = False 
@@ -534,18 +537,27 @@ class ViewReports():
                     self.window['table'].update(values = sorted)
 
             if event == "Clear": 
+                """
+                Clear filter
+                """
                 values['search_input'] = ""
                 self.window['search_input'].update("")
                 self.window['is_inclusive'].update("Yes")
                 self.window['table'].update(values = self.get_reports_as_list())
 
             if event == "Select Database File":
+                """
+                Select custom database file
+                """
                 self.choose_database_file()
                 new_values = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
                 if len(new_values) > 0: 
                     self.window['table'].update(values = new_values)
 
             if event == "Export Visible Data to Clipboard":
+                """
+                Export Data - only supports export to clipboard, but can include more in the future 
+                """
                 import pandas 
                 reports = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
                 category = headings.index(values['sort_category'])
@@ -557,6 +569,9 @@ class ViewReports():
                 df.to_clipboard()
 
             if event == "is_increasing" or event == "sort_category":
+                """
+                User is sorting data
+                """
                 reports = self.get_reports_as_list(values['search_scope'], values['search_input'], is_inclusive)
                 category = headings.index(values['sort_category'])
                 if values['is_increasing'] == "Yes":
@@ -567,6 +582,9 @@ class ViewReports():
                 continue 
     
     def choose_database_file(self):
+        """
+        Creates popup window that allows user to choose a file
+        """
         sg.theme("Reddit")
         window = sg.Window("Choose Database File", [
             [sg.FileBrowse("Browse", key="file", enable_events=True),
