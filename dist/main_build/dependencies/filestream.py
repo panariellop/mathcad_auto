@@ -157,7 +157,7 @@ class DebugLogger():
         Creates the log file and hides it from the windows file manager"""
         import os
         self.log_file = os.getcwd() + "/.debug"  
-        file = open(self.log_file, 'r')
+        file = open(self.log_file, 'a')
         # hides the file from the windows file manager (invisible to user) 
         os.system('attrib +H *.debug /S')
         file.close()
@@ -180,7 +180,7 @@ class DebugLogger():
         """
         import os 
         try:
-            if os.path.getsize(self.log_file) > 1000*7: # if larger than 7 kb then cut it 
+            if os.path.getsize(self.log_file) > 5000: # if larger than 5 kb then cut it 
                 self.cut_file_in_half()
             file = open(self.log_file, 'a')
             from datetime import datetime
@@ -270,7 +270,6 @@ class DebugLogger():
 if __name__ == "__main__":
     d = DebugLogger()
     d.log("Hello world!")
-    # d.cut_file_in_half()
     d.render()
     
 

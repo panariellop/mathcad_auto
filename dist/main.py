@@ -14,6 +14,7 @@ from main_build.images import images
 from main_build.dependencies import helpers
 from main_build.dependencies import reports
 from main_build.dependencies import filestream
+from main_build.dependencies.filestream import DebugLogger
 from main_build.dependencies.data import *
 from main_build.dependencies.gui import *
 from main_build.dependencies.validation import InputValidation
@@ -95,6 +96,7 @@ def load_gui(pick_files = False):
     """
     Main GUI - controlls graphics and logic
     """
+    debug = DebugLogger()
     files = SelectTemplates()
     input_validation = InputValidation()
     if pick_files:
@@ -228,6 +230,7 @@ def load_gui(pick_files = False):
             """
             if event == "Revert Inputs":
                 # need to pop the latest action from the stack 
+                debug.log("User clicked Revert Inputs")
                 popup = Popup("Confirm", "Reverting inputs will reload the inputs from the excel spreadsheet.")
                 if popup.confirm(): # confirm from the user if they want to refresh 
                     equipment = get_eqpt_from_xl(files.excel) 
@@ -242,6 +245,7 @@ def load_gui(pick_files = False):
                 try:
                     to_copy = window[event].get()[0]
                     pyperclip.copy(str(to_copy)) # uses pyperclip to copy to user's clipboard
+                    debug.log(f"User copied {to_copy} to the clipboard")
                 except:
                     pass
                 continue 
@@ -252,6 +256,7 @@ def load_gui(pick_files = False):
                 field = helpers.get_input_from_info(event)
                 from main_build.dependencies import verbose 
                 verbose_field = verbose.inputs(field) 
+                debug.log(f"User opened information field about {verbose_field}") 
                 popup = Popup(verbose_field, equipment.items[equipment.cur_index][field][2])
                 popup.alert()
                 continue
@@ -261,6 +266,7 @@ def load_gui(pick_files = False):
             """
             if event in equipment.fields:
                 # change the cur eqpt field being edited
+                debug.log(f"User edited {event}")
                 equipment.items[equipment.cur_index][event][0] = values[event]
                 continue 
                 
@@ -271,6 +277,7 @@ def load_gui(pick_files = False):
                 # update the excel file
                 popup = Popup("Confirm", "This will overrite the data in the excel file with the data you have input.")
                 if popup.confirm():
+                    debug.log(f"User clicked Save Inputs to Excel")
                     filestream.save_eqpt_to_xl(equipment, files.excel)
                 else:
                     pass 
@@ -281,9 +288,11 @@ def load_gui(pick_files = False):
             """
             if (event == "next" or event == "previous") and input_validation.validate(equipment):
                 if event == "next":
+                    debug.log("User clicked Next eqpt")
                     equipment.next_index()
                 if event == "previous":
                     equipment.prev_index()
+                    debug.log("User clicked Previous eqpt")
                 if files.excel != "" and helpers.check_file_type(files.excel, 'xlsx'):
                     values, window = update_inputs(equipment, values, window) #update inputs
                     # Update the outputs in the GUI
