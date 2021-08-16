@@ -205,7 +205,7 @@ def load_gui(pick_files = False):
         # ------ Menu Definition ------ #
     menu_def = [['&File', ['&Select Input Files', '&Select Output Folder', '---', '&Save Inputs To Excel']],
                 ['&Edit', ['&Revert Inputs']],
-            ['&Help', ['&Version', '&About', '&Help']],]
+            ['&Help', ['&Version', '&About', '&Help', "&Bugs"]],]
 
     layout += [[sg.Menu(menu_def)]]
 
@@ -336,6 +336,7 @@ def load_gui(pick_files = False):
                     window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                     window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                     window['preview_image'].update(data = update_preview_image(equipment, files)) 
+                    debug.log(f"User went to equipment number {values['goto_eqpt']}")
 
                 continue 
             """
@@ -353,14 +354,17 @@ def load_gui(pick_files = False):
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=files.output_folder, generating_multiple_reports=False)
                     else: 
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
+                    debug.log("Generating 1 report")
                     loading.update() # progress the indicator 
                     loading.close()
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
+                        debug.log("The file have been saved successfuly.")
                     else:
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
+                        debug.log("There was an error saving the file")
                 continue 
 
             """
@@ -375,15 +379,18 @@ def load_gui(pick_files = False):
                     loading = LoadingIndicator(len(equipment.items))
                     loading.render()
                     errors = []
+                    debug.log("Generating multiple reports")
                     for eqpt in equipment.items:
                         if files.output_folder:
                             status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=files.output_folder, generating_multiple_reports=True)
                         else:
                             status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=True)
                         loading.update()
+                        debug.log(f"Generated report for {equipment.cur_index}")
                         equipment.next_index()
                         if not status:
                             errors.append(f'There was an issue processing {eqpt["eqpt_name"][0]}')
+                            debug.log(f'There was an issue processing {eqpt["eqpt_name"][0]}')
                     if len(errors)>0: #create a popup with all the errors (if there are any)
                         popup = Popup("Error", "\n".join(errors))
                         popup.alert()
@@ -391,6 +398,7 @@ def load_gui(pick_files = False):
                         loading.close() 
                         popup = Popup("Success", "Successfuly saved reports.")
                         popup.alert()
+                        debug.log("Successfuly saved reports.")
                 continue 
             
             """
@@ -492,6 +500,8 @@ def load_gui(pick_files = False):
                 if filepath:
                     files.output_folder = filepath 
                     print(files.output_folder)
+            if event == "Bugs":
+                debug.render()
 
     window.close()
     del window

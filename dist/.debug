@@ -1,6 +1,50 @@
-2021-08-16 17:29:30.503232: User clicked Next eqpt
-2021-08-16 17:29:31.135914: User clicked Previous eqpt
-2021-08-16 17:29:31.768738: User clicked Next eqpt
-2021-08-16 17:29:31.991065: User clicked Next eqpt
-2021-08-16 17:29:32.137994: User clicked Next eqpt
-2021-08-16 17:29:58.580682: User clicked Save Inputs to Excel
+2021-08-16 18:09:30.771400: User edited eqpt_name
+2021-08-16 18:09:30.903092: User edited eqpt_name
+2021-08-16 18:09:31.226670: User edited eqpt_name
+2021-08-16 18:09:33.211550: Popup Version Current version: 1.2 created
+2021-08-16 18:10:23.974504: Popup --- Title:Version --- Message:Current version: 1.2 created
+2021-08-16 18:37:32.252132: Called update_reports function
+2021-08-16 18:37:32.264142: Displaying View Reports window
+2021-08-16 18:37:32.264142: User filtering reports
+2021-08-16 18:37:52.124562: Called update_reports function
+2021-08-16 18:37:52.124562: Displaying View Reports window
+2021-08-16 18:37:52.124562: User filtering reports
+2021-08-16 18:37:55.179494: User filtering reports
+2021-08-16 18:37:55.179494: User sorting reports 
+2021-08-16 18:37:55.232963: User filtering reports
+2021-08-16 18:37:55.232963: User sorting reports 
+2021-08-16 18:37:55.264310: User filtering reports
+2021-08-16 18:37:55.264310: User sorting reports 
+2021-08-16 18:37:55.333329: User filtering reports
+2021-08-16 18:37:55.333329: User sorting reports 
+2021-08-16 18:37:55.680142: User filtering reports
+2021-08-16 18:37:55.680142: User sorting reports 
+2021-08-16 18:37:55.764974: User filtering reports
+2021-08-16 18:37:55.764974: User sorting reports 
+2021-08-16 18:37:55.950253: User filtering reports
+2021-08-16 18:37:55.950253: User sorting reports 
+2021-08-16 18:37:56.081946: User filtering reports
+2021-08-16 18:37:56.081946: User sorting reports 
+2021-08-16 18:37:56.097570: User filtering reports
+2021-08-16 18:37:56.097570: User sorting reports 
+2021-08-16 18:37:57.834346: User filtering reports
+2021-08-16 18:37:57.834346: User sorting reports 
+2021-08-16 18:38:00.997519: User filtering reports
+2021-08-16 18:38:00.997519: User sorting reports 
+2021-08-16 18:38:02.601473: User filtering reports
+2021-08-16 18:38:02.601473: User sorting reports 
+2021-08-16 18:38:02.733052: User filtering reports
+2021-08-16 18:38:02.733052: User sorting reports 
+2021-08-16 18:38:02.949465: User filtering reports
+2021-08-16 18:38:02.949465: User sorting reports 
+2021-08-16 18:38:06.715030: Popup --- Title:Version --- Message:Current version: 1.2 created
+2021-08-16 18:38:07.047052: Link window created
+2021-08-16 18:38:07.911705: User closed window
+2021-08-16 18:38:48.791093: Popup --- Title:Get Help --- Message:---File Manipulation---
+File->Select or Ctrl-i to select input files 
+File->Save or Ctrl-s to save inputs back to the excel file
+
+---Inquiries---
+Please direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first: created
+2021-08-16 18:38:49.261069: Link window created
+2021-08-16 18:38:50.402142: User closed window

@@ -240,11 +240,14 @@ class Popup():
     def __init__(self, title, message=""):
         self.title = title
         self.message = message
+        self.debug = filestream.DebugLogger()
+        self.debug.log(f"Popup --- Title:{self.title} --- Message:{self.message} created")
 
     def confirm(self) -> bool:
         """
         Confirmation window - if you want to confirm with the user yes/no
         """
+        self.debug.log("Confirmation window created")
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message), ],
@@ -255,9 +258,11 @@ class Popup():
         while True:
             event, values = popup.read()
             if event == "OK" or event == "NO" or event == sg.WIN_CLOSED:
+                self.debug.log("User clicked NO")
                 popup.close()
                 return False
             if event == "YES":
+                self.debug.log("User clicked YES")
                 popup.close()
                 return True
 
@@ -265,6 +270,7 @@ class Popup():
         """
         Alert window - alert the user with a message
         """
+        self.debug.log("Alert window created")
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message)],
@@ -283,6 +289,7 @@ class Popup():
         """
         Input window - if you want the user to input some information
         """
+        self.debug.log("Take input window created")
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Text(self.message), sg.InputText(key="input", size=(15, 1)), sg.Text(trailing_text)],
@@ -292,10 +299,15 @@ class Popup():
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
+                self.debug.log(f"User input {values['input']}")
                 popup.close()
                 return values['input']
 
     def take_filepath_input(self, output_folder)->str:
+        """
+        Take file window
+        """
+        self.debug.log("Take filepath window created")
         popup = sg.Window(self.title, [
             [sg.Text(self.message)], 
             [sg.FolderBrowse("Browse", key="file", enable_events=True),
@@ -311,6 +323,7 @@ class Popup():
                 popup.close()
                 return output_folder 
             if event == "Continue":
+                self.debug.log(f"User gave file {values['filename']}")
                 popup.close()
                 return values['filename']
 
@@ -318,6 +331,7 @@ class Popup():
         """
         Creates a popup window with title and image
         """
+        self.debug.log("Display image window created")
         popup = sg.Window(self.title, [
             [sg.Image(data=image)]
         ])
@@ -327,12 +341,15 @@ class Popup():
             """
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
+                self.debug.log("User closed window")
                 popup.close()
                 break
+
     def link(self, description_text, link):
         """
         Creates a popup with a clickable link
         """
+        self.debug.log("Link window created")
         popup = sg.Window(self.title, [
             [sg.Text("")],
             [sg.Multiline(self.message, s = (80,10), disabled = True, text_color = "black", background_color = "white")],
@@ -343,10 +360,12 @@ class Popup():
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
+                self.debug.log("User closed window")
                 popup.close()
                 break
             if event == "LINK":
                 popup.close()
+                self.debug.log("User clicked link")
                 import webbrowser
                 webbrowser.open(link)
                 break
@@ -375,11 +394,13 @@ class LoadingIndicator():
 
 class ViewReports():
     def __init__(self, database_file = None):
+        self.debug = filestream.DebugLogger()
         self.window = None 
         self.database_file = database_file
         self.reports = [] 
         self.update_reports()
         self.render()
+
     def get_reports_attribute(self, attribute:str)->list():
         """
         Will generate a list of values given a key
@@ -391,10 +412,12 @@ class ViewReports():
                 if str(key) == attribute:
                     out.append(report[key]) #will just pull the specific column item 
         return out
+
     def get_reports_as_list(self, category = "", filter="", inclusive = True)->list():
         """
         Will filter reports and give an output as a multidimensional array (which is what the GUI renderer wants)
         """
+        self.debug.log("User filtering reports")
         out = []
         filter = filter.upper()
         for report in self.reports:
@@ -417,6 +440,7 @@ class ViewReports():
         """
         Sorts the reports by category increasing or decreasing
         """
+        self.debug.log("User sorting reports ")
         if len(reports) == 0: return reports # edge case 
         sorted = [] 
         #create identifiers, put into multidimentsional array, then sort using arr.sort()
@@ -441,6 +465,7 @@ class ViewReports():
         """
         Check if there are new reports that we need to be aware of
         """
+        self.debug.log("Called update_reports function")
         self.reports = [] #make empty to prepare for new ones 
         csv_file = None 
         if self.database_file == None or self.database_file == "":
@@ -473,6 +498,7 @@ class ViewReports():
         """
         Render the GUI
         """
+        self.debug.log("Displaying View Reports window")
         sg.theme('Reddit')
         headings = [] # need to define the headings to the table
         if len(self.reports) > 0:

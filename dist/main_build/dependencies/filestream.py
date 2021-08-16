@@ -180,7 +180,7 @@ class DebugLogger():
         """
         import os 
         try:
-            if os.path.getsize(self.log_file) > 5000: # if larger than 5 kb then cut it 
+            if os.path.getsize(self.log_file) > 20000: # if larger than 20 kb then cut it 
                 self.cut_file_in_half()
             file = open(self.log_file, 'a')
             from datetime import datetime
@@ -252,9 +252,9 @@ class DebugLogger():
                 if event == "up":
                     window.Element('ml').set_vscroll_position(0) 
                 if event == "Share":
-                    self.export(message = debug_info)
+                    self.export()
 
-    def export(self, message):
+    def export(self):
         """
         Exports the debug log
         """
@@ -262,9 +262,8 @@ class DebugLogger():
 
         outlook = win32.Dispatch('outlook.application')
         mail = outlook.CreateItem(0)
-        mail.To = "ppanariello@thorntontomasetti.com"
-        mail.Subject = "Bug"
         mail.Attachments.Add(self.log_file)
+        mail.HTMLBody = "Type your message here. Send this email with the current attachement to Parth Korde PKorde@ThorntonTomasetti.com, Richard Kuo RKuo@ThorntonTomasetti.com, or Theresa Curtis TCurtis@ThorntonTomasetti.com for more help."
         mail.Display(True)
 
 if __name__ == "__main__":
