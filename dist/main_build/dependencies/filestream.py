@@ -6,7 +6,7 @@ try: # when running from main.py
     from main_build.dependencies.gui import Popup 
 except: # when runnning from current directory 
     from data import Equipment
-    from gui import Popup 
+    #from gui import Popup 
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 from datetime import date
@@ -143,7 +143,134 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
         popup.alert()
 
     
+class DebugLogger():
+    """
+    Allows us to keep track of the user actions and in case of a bug or crash 
+    -> User has the ability to send us parts or the whole .debug file
+    """
+    def __init__(self):
+        self.log_file = None
+        self.instantiate_log_file()
 
+    def instantiate_log_file(self)->bool:
+        """
+        Creates the log file and hides it from the windows file manager"""
+        import os
+        self.log_file = os.getcwd() + "/.debug"  
+        file = open(self.log_file, 'r')
+        # hides the file from the windows file manager (invisible to user) 
+        os.system('attrib +H *.debug /S')
+        file.close()
+
+    def read(self)->list:
+        """
+        Read from the debug file
+        """
+        try:
+            file = open(self.log_file, "r")
+            contents = file.read()
+            contents = contents.split("\n")
+            return contents[0:-1] #need to get rid of the last blank line 
+        except:
+            return []
+    def log(self, to_log:str)->bool:
+        """
+        Logs the argument to the hidden file 
+        Returns a confirmation boolean 
+        """
+        import os 
+        try:
+            if os.path.getsize(self.log_file) > 1000*7: # if larger than 7 kb then cut it 
+                self.cut_file_in_half()
+            file = open(self.log_file, 'a')
+            from datetime import datetime
+            file.write(f'{datetime.now()}: {to_log}\n')
+            file.close()
+            return True 
+        except:
+            return False 
+            
+    def cut_file_in_half(self)->bool:
+        """
+        Cuts the file in half -- gets called when file is too big
+        """
+        import os 
+        filedata = self.read()
+        filedata = filedata[len(filedata)//2:]
+        os.system('attrib -H *.debug /S')
+        f = open(self.log_file, "w")
+        f.write("\n".join(filedata) + "\n")
+        f.close()
+        os.system('attrib +H *.debug /S')
+
+    def clear(self)->bool:
+        """
+        Clears all debug logs
+        """
+        import os 
+        try:
+            os.remove(self.log_file)
+            self.instantiate_log_file()
+            return True 
+        except:
+            return False 
+
+    def render(self):
+        """
+        Renders a GUI with multiline text so user can view most recent logs
+        """
+        import PySimpleGUI as sg 
+        debug_arr = self.read()
+        debug_arr.reverse()
+        debug_info = "\n".join(debug_arr)
+        sg.theme('Reddit')
+        window = sg.Window("Debug Log",[
+            [
+            sg.Multiline(
+                        default_text = debug_info,  
+                        s=(120,40), 
+                        disabled= True, 
+                        autoscroll=True, 
+                        key ="ml",
+                        enable_events=True
+                        )
+            ], 
+            [sg.Button("Scroll to Bottom", key = "down"), 
+            sg.Button("Scroll to Top", key = "up"), 
+            sg.Button("Share", 
+                        key = "Share",
+                        tooltip="Draft an email to the developer with your debug file attached.")]
+        ])
+        while True: #logic loop
+            event, values = window.read()
+            if event == 'OK' or event == sg.WIN_CLOSED:
+                window.close()
+                break 
+            else: 
+                if event == "down":
+                    window.Element('ml').set_vscroll_position(1.0) 
+                if event == "up":
+                    window.Element('ml').set_vscroll_position(0) 
+                if event == "Share":
+                    self.export(message = debug_info)
+
+    def export(self, message):
+        """
+        Exports the debug log
+        """
+        import win32com.client as win32   
+
+        outlook = win32.Dispatch('outlook.application')
+        mail = outlook.CreateItem(0)
+        mail.To = "ppanariello@thorntontomasetti.com"
+        mail.Subject = "Bug"
+        mail.Attachments.Add(self.log_file)
+        mail.Display(True)
 
 if __name__ == "__main__":
-    pass
+    d = DebugLogger()
+    d.log("Hello world!")
+    # d.cut_file_in_half()
+    d.render()
+    
+

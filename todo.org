@@ -91,15 +91,20 @@
   - Mathcad files (per mounting location)
 
 * IP View database file 
-  - Sort by
+  - DONE Sort by
   - DONE Filter 
   - DONE Open other database file 
-  - DONE Specifiy output folder 
+  - DONE Specify output folder 
 
-  
+
+* Comment code  
+* Debug log ?? 
+* Look over documentation again and edit it 
+* Convert documentation to word format 
+* PEP8? 
+* Tests again 
 * Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
 ** How to make updates/changes 
 ** Deploying those updates/changes 
-
