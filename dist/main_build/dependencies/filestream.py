@@ -4,9 +4,11 @@ All the functions that pull information from or save information to files
 try: # when running from main.py 
     from main_build.dependencies.data import Equipment
     from main_build.dependencies.gui import Popup 
+    from main_build.dependencies.filestream import DebugLogger
 except: # when runnning from current directory 
-    from data import Equipment
+    #from data import Equipment
     #from gui import Popup 
+    pass
 from openpyxl import Workbook as xlwkbk
 from openpyxl import load_workbook
 from datetime import date
@@ -16,6 +18,7 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
     """
     Saves the equipment currently being reported to a csv file
     """
+    debug = DebugLogger()
     cur_date = date.today()
     header = False
     # check if header needs to be generated (happens when the file hasn't been
@@ -41,8 +44,9 @@ def save_eqpt_to_csv(values, filepath, unique_report_name):
                 unique_report_name + ".mcdx",
             ]
         except Exception as e:
-            print(e)
+            debug.log(f"save_eqpt_to_csv threw exception: {e}")
         csv_writer.writerow(new_row) #insert the new row
+        debug.log(f"save_eqpt_to_csv wrote row: {new_row}")
     f.close() #necissary to close the file
     return True
 
@@ -51,6 +55,7 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
     """
     Gets all the equipment from an excel file and returns an equipment object
     """
+    debug = DebugLogger() 
     wb = load_workbook(filename=filepath)
     try: sheet = wb['values'] # set worksheet to the values sheet
     except: sheet = wb['Calculation']
@@ -101,12 +106,14 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
             equipment.append(cur_eqpt)
         elif header_row and row[0] is None:
             break  # want to break out and not view all rows when reached end of eqpt list
+        debug.log(f"Loaded equipment from excel: {equipment.items}")
     return equipment
 
 def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
     """
     Saves the equipment back to the excel file
     """
+    debug = DebugLogger()
     wb = load_workbook(filename=filepath)
     try: sheet = wb['values'] # set worksheet to the values sheet
     except: sheet = wb['Calculation']
@@ -138,6 +145,7 @@ def save_eqpt_to_xl(equipment: Equipment, filepath:str)->bool:
         wb.save(filepath) 
         popup = Popup("File Saved", f"The inputs were saved successfuly to {filepath}")
         popup.alert()
+        debug.log(f"Saved Equipment to excel file: {equipment.items}")
     except:
         popup = Popup("Error", f"Please close {filepath} and save again.") 
         popup.alert()
@@ -259,12 +267,14 @@ class DebugLogger():
         Exports the debug log
         """
         import win32com.client as win32   
-
-        outlook = win32.Dispatch('outlook.application')
-        mail = outlook.CreateItem(0)
-        mail.Attachments.Add(self.log_file)
-        mail.HTMLBody = "Type your message here. Send this email with the current attachement to Parth Korde PKorde@ThorntonTomasetti.com, Richard Kuo RKuo@ThorntonTomasetti.com, or Theresa Curtis TCurtis@ThorntonTomasetti.com for more help."
-        mail.Display(True)
+        try:
+            outlook = win32.Dispatch('outlook.application')
+            mail = outlook.CreateItem(0)
+            mail.Attachments.Add(self.log_file)
+            mail.HTMLBody = "Type your message here. Send this email with the current attachement to Parth Korde PKorde@ThorntonTomasetti.com, Richard Kuo RKuo@ThorntonTomasetti.com, or Theresa Curtis TCurtis@ThorntonTomasetti.com for more help."
+            mail.Display(True)
+        except Exception as e: 
+            self.log(f"Error exporting debug log: {e}")
 
 if __name__ == "__main__":
     d = DebugLogger()

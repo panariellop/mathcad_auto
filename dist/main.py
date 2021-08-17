@@ -318,7 +318,7 @@ def load_gui(pick_files = False):
                 window['misc_outputs'].update(values=equipment.outputs[equipment.cur_index].display_misc())
                 window['cur_eqpt'].update(f'Equipment {equipment.cur_index + 1}/{len(equipment.items)} loaded')
                 window['preview_image'].update(data = update_preview_image(equipment, files)) 
-
+                debug.log(f"User went to equipment number {equipment.cur_index}")
                 continue 
             """
             Go to a specific eqpt number
@@ -354,17 +354,15 @@ def load_gui(pick_files = False):
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=files.output_folder, generating_multiple_reports=False)
                     else: 
                         status = reports.pre_generate_report(equipment=equipment, files=files, cur_directory=os.getcwd(), generating_multiple_reports=False)
-                    debug.log("Generating 1 report")
+                    debug.log(f"Generating 1 report for {equipment.items[equipment.cur_index]}")
                     loading.update() # progress the indicator 
                     loading.close()
                     if status:
                         alert = Popup("File saved", "The file have been saved successfuly.")
                         alert.alert()
-                        debug.log("The file have been saved successfuly.")
                     else:
                         alert = Popup("Error", "There was an error saving the file")
                         alert.alert()
-                        debug.log("There was an error saving the file")
                 continue 
 
             """
@@ -398,7 +396,6 @@ def load_gui(pick_files = False):
                         loading.close() 
                         popup = Popup("Success", "Successfuly saved reports.")
                         popup.alert()
-                        debug.log("Successfuly saved reports.")
                 continue 
             
             """
@@ -412,6 +409,7 @@ def load_gui(pick_files = False):
                 else:
                     loading = LoadingIndicator(1)
                     loading.render()
+                    debug.log(f"User previewing calculation outputs for equipment number {equipment.cur_index}")
                     outputs = reports.mathcad_calculate(equipment, files.templates[equipment.items[equipment.cur_index]['mounting_location'][0]])
                     #add all the output we got from mathcad_calculate to the outputs class
                     loading.update()
@@ -432,6 +430,7 @@ def load_gui(pick_files = False):
             Convert Units
             """
             if event == "convert_to_imperial":
+                debug.log("User converting outputs to imperial")
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('metric', 'imperial')
                 window['asd_outputs'].update(values=cur_outputs.display_asd())
@@ -439,6 +438,7 @@ def load_gui(pick_files = False):
                 window['misc_outputs'].update(values=cur_outputs.display_misc())
                 continue 
             if event == "convert_to_metric":
+                debug.log("User converting outputs to metric")
                 cur_outputs = equipment.outputs[equipment.cur_index] 
                 cur_outputs.convert_units('imperial', 'metric')
                 window['asd_outputs'].update(values=cur_outputs.display_asd())
@@ -480,6 +480,7 @@ def load_gui(pick_files = False):
             View Database file
             """
             if event == "view_generated_reports":
+                debug.log("User viewing database file")
                 from main_build.dependencies.gui import ViewReports
                 if files.database != "":
                     vr = ViewReports(database_file= files.database)

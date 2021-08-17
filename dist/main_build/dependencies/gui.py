@@ -30,6 +30,7 @@ class VersionInfo():
         """
         import os
         import requests
+        debug = filestream.DebugLogger()
         latest_version_num = 0 
         try:
             # this will happen everytime the user calles the function (that is not the first time) 
@@ -39,7 +40,8 @@ class VersionInfo():
                 response = requests.get("https://api.github.com/repos/panariellop/mathcad_auto/releases")
                 latest_version_num = float(response.json()[0]['tag_name'])
                 print(cur_version, latest_version_num) 
-            except: pass  # in case of no internet 
+            except: 
+                debug.log("Could not connect to the Github API to check the current version of the software (probably didn't have an internet connection)")  # in case of no internet 
             if latest_version_num > cur_version:
                 return True 
             else:
@@ -55,6 +57,7 @@ class VersionInfo():
                 os.system('attrib +H *.metadata /S')
                 return False
             except: # might happen if there is no internet connection 
+                debug.log("Could not connect to the Github API to check the current version of the software (probably didn't have an internet connection)")
                 return False 
 
     def get_cur_version(self)->int:
@@ -611,6 +614,7 @@ class ViewReports():
         """
         Creates popup window that allows user to choose a file
         """
+        self.debug.log("User choosing database file")
         sg.theme("Reddit")
         window = sg.Window("Choose Database File", [
             [sg.FileBrowse("Browse", key="file", enable_events=True),
@@ -628,6 +632,7 @@ class ViewReports():
                 return False 
             if event == "Continue" and (values['filename'].endswith("csv") or values['filename'] == ""):
                 self.database_file = values['filename']
+                self.debug.log(f"User chose {values['filename']} as the database file")
                 if self.update_reports():
                     window.close()
                     return True 

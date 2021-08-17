@@ -90,21 +90,32 @@
   - Documentation
   - Mathcad files (per mounting location)
 
-* IP View database file 
+* DONE View database file 
   - DONE Sort by
   - DONE Filter 
   - DONE Open other database file 
   - DONE Specify output folder 
 
 
-* Comment code  
-* Debug log ?? 
-* Look over documentation again and edit it 
-* Convert documentation to word format 
+* IP Comment code  
+* IP Debug logger
+  - Finish integrating all debug lines into main program 
+  - Integrate debug lines into:
+    Main.py DONE 
+    gui.py 
+    filestream.py DONE  
+    reports.py
+    validation.py 
+* TODO Convert documentation to word format 
+* TODO Look over documentation again and edit it 
+  - Talk about the debugger 
 * PEP8? 
-* Tests again 
-* Teach Parth 
+* TODO Test again 
+  - Test all code make sure there are no bugs
+  - Check boundary cases 
+* TODO Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 
 ** How to make updates/changes 
+** Debugging / debug logger 
 ** Deploying those updates/changes 
