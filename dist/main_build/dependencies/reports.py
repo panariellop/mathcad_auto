@@ -16,15 +16,19 @@ def mathcad_calculate(eqpt, template_file, debug=False)->dict:
     Gets all the inputs and performs calculations,
     returns a dictionary with the output values
     """
+    debug = filestream.DebugLogger()
     cur_eqpt = eqpt.items[eqpt.cur_index]
     mathcad_app = Mathcad(visible=debug) #creates a Mathcadpy object
+    debug.log(f"mathcad_calculate: mathcad_app: {str(mathcad_app)}")
     # Create a new temp file to fill in the values
     new_filepath = template_file.split("/")[0:-1]
     new_filepath = "/".join(new_filepath)
     new_filepath = new_filepath + "/" + "temp" + ".mcdx"
     #some debug print statements
-    print("Template file: ", template_file)
-    print("Mathcad application: ", mathcad_app, mathcad_app.version, mathcad_app.open_worksheets)
+    debug.log(f"Template file: {template_file}")
+
+    debug.log(f"mathcad_calculate:mathcad_app.version;mathcad_app.open_worksheets: {mathcad_app.version} ; {mathcad_app.open_worksheets}")
+    
     cur_worksheet = mathcad_app.open(template_file) #open the template file
 
     for input in eqpt.inputs:  # set inputs
@@ -32,7 +36,7 @@ def mathcad_calculate(eqpt, template_file, debug=False)->dict:
             cur_worksheet.set_real_input(input, float(cur_eqpt[input][0]), units=cur_eqpt[input][1],
                                          preserve_worksheet_units=False)  # alias, value, units
         except Exception as e:
-            print(e)
+            debug.log(f"mathcad_calculate threw exception: {e}")
     cur_worksheet.ws_object.Synchronize()  # must synchronize to make sure outputs are being updated
     toout = dict()
     output_aliases = cur_worksheet.outputs() #get the aliases for each of the worksheet's outputs
@@ -91,10 +95,11 @@ def generate_report(cur_eqpt, equipment: Equipment, file_name: str, template_fil
     Generates report with input values found in the gui
     Saves the file in the save folder as the template chosen
     """
+    debug = DebugLogger()
 
     mathcad_app = Mathcad(visible=debug)
     cur_worksheet = mathcad_app.open(template_file)
-
+    debug.log(f"generate_report: mathcad_app; cur_worksheet {mathcad_app} ; {cur_worksheet}")
     for input in equipment.inputs:  # set all the real number inputs on the mathcad file
         try:
             cur_worksheet.set_real_input(str(input), float(cur_eqpt[input][0]), units=cur_eqpt[input][1],

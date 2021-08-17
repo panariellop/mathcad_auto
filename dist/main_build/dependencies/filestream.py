@@ -188,7 +188,7 @@ class DebugLogger():
         """
         import os 
         try:
-            if os.path.getsize(self.log_file) > 20000: # if larger than 20 kb then cut it 
+            if os.path.getsize(self.log_file) > 50000: # if larger than 50 kb then cut it 
                 self.cut_file_in_half()
             file = open(self.log_file, 'a')
             from datetime import datetime
@@ -230,7 +230,7 @@ class DebugLogger():
         import PySimpleGUI as sg 
         debug_arr = self.read()
         debug_arr.reverse()
-        debug_info = "\n".join(debug_arr)
+        debug_info = "\n\n".join(debug_arr)
         sg.theme('Reddit')
         window = sg.Window("Debug Log",[
             [

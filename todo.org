@@ -35,7 +35,7 @@
       - Not sure if we can make this multithreaded 
 
 * DONE Documentation Changes 
-   - [X] Change documentaion
+   - [X] Change documentation
      1) User documentation
      2) Developer documentation
 	- Multithreading now gone 
@@ -46,7 +46,7 @@
   + [ ] Updates from the developer side
     Want to just have to push code to github master branch 
   + [ ] Update feature 
-	- Seperate program that gets bundled with the distribution
+	- Separate program that gets bundled with the distribution
 	- Updates the main program every time there are pushes to the main branch
 	- Use the Github API to check if there are more recent versions of the applicaiton
 	  + Find the push history to main branch using the Github API 
@@ -102,7 +102,7 @@
   - Finish integrating all debug lines into main program 
   - Integrate debug lines into:
     Main.py DONE 
-    gui.py 
+    gui.py DONE 
     filestream.py DONE  
     reports.py
     validation.py 
@@ -113,6 +113,7 @@
 * TODO Test again 
   - Test all code make sure there are no bugs
   - Check boundary cases 
+* TODO Add a video to the documentation explaining the database viewer and debugger 
 * TODO Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 

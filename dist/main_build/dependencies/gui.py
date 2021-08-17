@@ -221,6 +221,7 @@ class SelectTemplates():
         <num_images:int> Corresponds to the number of mounting locations,
         indicated in the preview_images portion of the input excel document
         """
+        debug = filestream.DebugLogger()
         wb = load_workbook(self.excel)
         sheet = wb['preview_images']
 
@@ -233,7 +234,7 @@ class SelectTemplates():
                 image.save(buf, format = "PNG")
                 self.images[row[0]] = buf.getvalue()
             except Exception as e: 
-                print(e)
+                debug.log(f"{e}")
 
 class Popup():
     """
@@ -344,7 +345,7 @@ class Popup():
             """
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
-                self.debug.log("User closed window")
+                self.debug.log("User closed image window")
                 popup.close()
                 break
 
@@ -363,7 +364,7 @@ class Popup():
         while True:
             event, values = popup.read()
             if event == "OK" or event == sg.WIN_CLOSED:
-                self.debug.log("User closed window")
+                self.debug.log("User closed link window")
                 popup.close()
                 break
             if event == "LINK":
