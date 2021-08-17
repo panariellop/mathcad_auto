@@ -98,15 +98,15 @@
 
 
 * IP Comment code  
-* IP Debug logger
+* DONE Debug logger
   - Finish integrating all debug lines into main program 
   - Integrate debug lines into:
     Main.py DONE 
     gui.py DONE 
     filestream.py DONE  
-    reports.py
-    validation.py 
-* TODO Convert documentation to word format 
+    reports.py DONE 
+
+* DONE Convert documentation to word format 
 * TODO Look over documentation again and edit it 
   - Talk about the debugger 
 * PEP8? 
