@@ -97,7 +97,7 @@
   - DONE Specify output folder 
 
 
-* IP Comment code  
+* TODO Comment code  
 * DONE Debug logger
   - Finish integrating all debug lines into main program 
   - Integrate debug lines into:
@@ -107,13 +107,13 @@
     reports.py DONE 
 
 * DONE Convert documentation to word format 
-* TODO Look over documentation again and edit it 
+* DONE Look over documentation again and edit it 
   - Talk about the debugger 
-* PEP8? 
 * TODO Test again 
   - Test all code make sure there are no bugs
   - Check boundary cases 
-* TODO Add a video to the documentation explaining the database viewer and debugger 
+* TODO Add a video to the documentation explaining the database viewer and debugger
+* TODO create next version of the software and release it on github 
 * TODO Teach Parth 
 ** File Structure 
 ** How to use the developer documentation 

@@ -12,3 +12,5 @@ Production Line: (to be run in ./dist)
 PyInstaller --onefile --windowed --paths='C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\MathcadPy' -i "C:\Users\Owner\Desktop\mathcad_auto\dist\main_build\images\ma_logo.ico" --name "Mathcad_Anchorage_Automation_v1.1" main.py 
 
 
+Converting the User guide Word file into Markdown 
+pandoc -f docx -t markdown 'User Guide.docx' -o 'README.md'

@@ -450,7 +450,7 @@ def load_gui(pick_files = False):
             Get help
             """
             if event == "Help":
-                popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first:")
+                popup = Popup("Get Help", "---File Manipulation---\nFile->Select or Ctrl-i to select input files \nFile->Save or Ctrl-s to save inputs back to the excel file\n\n---Inquiries---\nPlease direct all inquires to Parth Korde <PKorde@ThorntonTomasetti.com>, Richard Kuo <RKuo@ThorntonTomasetti.com>, or Theresa Curtis <TCurtis@ThorntonTomasetti.com>. Please consult the documentation first. If you need to report a bug, please use the File->Bugs window and click the share button.")
                 popup.link("Documentation", "https://github.com/panariellop/mathcad_auto/blob/master/user_guide.pdf") 
                 continue 
             """
@@ -510,9 +510,6 @@ def load_gui(pick_files = False):
 
 
 if __name__ == "__main__":
-    #TODO ensure pick_files is set to false when packaging application
-    #pick_files is another way of saying developer environment  
-    #pick_files hides the menu to choose input files when True
     import sys
    
     # choose the developer or the regular version of he script -

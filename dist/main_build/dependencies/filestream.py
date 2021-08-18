@@ -157,7 +157,7 @@ class DebugLogger():
     -> User has the ability to send us parts or the whole .debug file
     """
     def __init__(self):
-        self.log_file = None
+        self.log_file = None # path to the log file 
         self.instantiate_log_file()
 
     def instantiate_log_file(self)->bool:
@@ -165,9 +165,8 @@ class DebugLogger():
         Creates the log file and hides it from the windows file manager"""
         import os
         self.log_file = os.getcwd() + "/.debug"  
-        file = open(self.log_file, 'a')
-        # hides the file from the windows file manager (invisible to user) 
-        os.system('attrib +H *.debug /S')
+        file = open(self.log_file, 'a') # need to open as append so it will create the file if it does not exist already
+        os.system('attrib +H *.debug /S') # hides the file from the windows file manager (invisible to user) 
         file.close()
 
     def read(self)->list:
@@ -188,11 +187,11 @@ class DebugLogger():
         """
         import os 
         try:
-            if os.path.getsize(self.log_file) > 50000: # if larger than 50 kb then cut it 
+            if os.path.getsize(self.log_file) > 50000: # if larger than 50 kb then cut the file in half (discard old data) 
                 self.cut_file_in_half()
-            file = open(self.log_file, 'a')
+            file = open(self.log_file, 'a') # open in appending mode 
             from datetime import datetime
-            file.write(f'{datetime.now()}: {to_log}\n')
+            file.write(f'{datetime.now()}: {to_log}\n') # timestamp and line 
             file.close()
             return True 
         except:
@@ -204,12 +203,12 @@ class DebugLogger():
         """
         import os 
         filedata = self.read()
-        filedata = filedata[len(filedata)//2:]
-        os.system('attrib -H *.debug /S')
+        filedata = filedata[len(filedata)//2:] # cut the array that is the read file in half 
+        os.system('attrib -H *.debug /S') # make the file visible so we can write to it 
         f = open(self.log_file, "w")
-        f.write("\n".join(filedata) + "\n")
+        f.write("\n".join(filedata) + "\n") # writing to the file 
         f.close()
-        os.system('attrib +H *.debug /S')
+        os.system('attrib +H *.debug /S') # make it hidden again from the filesystem 
 
     def clear(self)->bool:
         """
@@ -217,8 +216,8 @@ class DebugLogger():
         """
         import os 
         try:
-            os.remove(self.log_file)
-            self.instantiate_log_file()
+            os.remove(self.log_file) # delete 
+            self.instantiate_log_file() # make new .debug file
             return True 
         except:
             return False 
@@ -255,11 +254,11 @@ class DebugLogger():
                 window.close()
                 break 
             else: 
-                if event == "down":
+                if event == "down": # scroll to the bottom of the viewer 
                     window.Element('ml').set_vscroll_position(1.0) 
-                if event == "up":
+                if event == "up": # scroll to the top of the viewer 
                     window.Element('ml').set_vscroll_position(0) 
-                if event == "Share":
+                if event == "Share": # send the .debug file in an email  
                     self.export()
 
     def export(self):
@@ -268,11 +267,11 @@ class DebugLogger():
         """
         import win32com.client as win32   
         try:
-            outlook = win32.Dispatch('outlook.application')
-            mail = outlook.CreateItem(0)
-            mail.Attachments.Add(self.log_file)
+            outlook = win32.Dispatch('outlook.application') # open outlook 
+            mail = outlook.CreateItem(0) # create new mail 
+            mail.Attachments.Add(self.log_file) # attach document 
             mail.HTMLBody = "Type your message here. Send this email with the current attachement to Parth Korde PKorde@ThorntonTomasetti.com, Richard Kuo RKuo@ThorntonTomasetti.com, or Theresa Curtis TCurtis@ThorntonTomasetti.com for more help."
-            mail.Display(True)
+            mail.Display(True) # so the drafted mail appears on the screen 
         except Exception as e: 
             self.log(f"Error exporting debug log: {e}")
 
