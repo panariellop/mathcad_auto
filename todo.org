@@ -97,7 +97,7 @@
   - DONE Specify output folder 
 
 
-* TODO Comment code  
+* DONE Comment code  
 * DONE Debug logger
   - Finish integrating all debug lines into main program 
   - Integrate debug lines into:
@@ -109,7 +109,7 @@
 * DONE Convert documentation to word format 
 * DONE Look over documentation again and edit it 
   - Talk about the debugger 
-* TODO Test again 
+* DONE Test again 
   - Test all code make sure there are no bugs
   - Check boundary cases 
 * TODO Add a video to the documentation explaining the database viewer and debugger
