@@ -542,7 +542,7 @@ class ViewReports():
 
         menu = [['&File', ['&Select Database File']], ['&Export', ["Export Visible Data to Clipboard"]]]
         layout += [[sg.Menu(menu)]]       
-        self.window = sg.Window("View Reports", layout, icon = images.ma_logo_png)
+        self.window = sg.Window("View Reports", layout, icon = images.ma_logo_png, resizable=True, grab_anywhere=True)
 
         while True:
             event, values = self.window.read()

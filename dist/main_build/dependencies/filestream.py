@@ -92,11 +92,16 @@ def get_eqpt_from_xl(filepath: str) -> Equipment:
             for i, header in enumerate(headers):
                 # populates each eqpt with the input fields and [value, units]
                 try:
-                    units = header.split("(")[1]
+                    try:
+                        units = header.split("(")[1]
+                    except:
+                        units = "" 
                     units = units.strip(")")
-                    field = header.split("(")[0]
+                    try:
+                        field = header.split("(")[0]
+                    except: pass
                     field = field.strip(" ")
-                    comment = sheet.cell(row = header_row+1, column = i+1).comment 
+                    comment = sheet.cell(row = header_row+1, column = i+1).comment
                     from main_build.dependencies import helpers 
                     try: comment = helpers.format_comment(comment.text)
                     except: pass 

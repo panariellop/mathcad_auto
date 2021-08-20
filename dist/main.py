@@ -42,22 +42,24 @@ def load_inputs(equipment: Equipment):
         if num_fields % 2 == 0:
             if field == 'mounting_location': #create dropdown for mounting location 
                     to_append.append(sg.Text(str(name), size = (20,1)))
-                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
+                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), enable_events = True, size = (28,1)))
             else:
                     to_append.append(sg.Text(str(name), size=(20, 1)))
                     to_append.append(sg.InputText(value[0], background_color = "white", size=(30, 1), key=str(field), enable_events=True))
         else:
             if field == 'mounting_location':
                     to_append.append(sg.Text(str(name), size = (20,1)))
-                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), size = (28,1)))
+                    to_append.append(sg.Combo(equipment.mounting_locations, default_value = equipment.items[equipment.cur_index]['mounting_location'][0], key = str(field), enable_events = True, size = (28,1)))
             else:
                 to_append.append(sg.Text(str(name), size=(20, 1), background_color = "light gray"))
                 to_append.append(sg.InputText(value[0], background_color = "light gray", size=(30, 1), key=str(field), enable_events=True))
         # units 
         to_append.append(sg.Text(value[1], size = (4, 1)))
-        if value[2] != "":
+        if value[2] != "" and value[2] is not None:
             #info button 
-            to_append.append(sg.Button("i", key = (field+"_info"), enable_events = True))
+            to_append.append(sg.Button("i", key = (field+"_info"), enable_events = True, visible= True))
+        else: 
+            to_append.append(sg.Button("i", key = (field+"_info"), enable_events = True, visible= False))
         input_fields.append(to_append)
         num_fields += 1 
     return input_fields
@@ -72,7 +74,10 @@ def update_inputs(equipment: Equipment, values, window):
     for field, val in cur_item.items():
         values[field] = val[0]
         window[field].update(val[0])
-
+        if val[2] != "" and val[2] is not None:
+            window[field+"_info"].update(visible = True)
+        else:
+            window[field+"_info"].update(visible = False)
     return values, window
 
 
@@ -114,7 +119,7 @@ def load_gui(pick_files = False):
 
     # SG layout 
     layout = [
-        [sg.Column([[sg.Image(data = images.tt_logo)]], justification='l',  k='-C-')],
+        [sg.Column([[sg.Image(data = images.tt_logo_small)]], justification='l',  k='-C-')],
 
         [
             # list of equiptment
@@ -137,7 +142,7 @@ def load_gui(pick_files = False):
                     ],
                     [sg.Text("Equipment: ", key="cur_eqpt", size=(20, 1), background_color="gray")],
                 ])],
-            ]),
+            ], scrollable = True, s=(340,700)),
             sg.Column([
                 [sg.Frame("Seismic Design Parameters and Geometry",
                           load_inputs(equipment)
@@ -194,7 +199,7 @@ def load_gui(pick_files = False):
 
                           element_justification = 'c'), ],
 
-            ], justification = 'c')
+            ], justification = 'c', scrollable = True, s=(280, 750))
 
         ],
 
@@ -209,7 +214,7 @@ def load_gui(pick_files = False):
 
     layout += [[sg.Menu(menu_def)]]
 
-    window = sg.Window('Anchorage Mathcad Automation', layout, return_keyboard_events=True)
+    window = sg.Window('Anchorage Mathcad Automation', layout, return_keyboard_events=True, resizable=True, grab_anywhere=True)
 
     """==============================================="""
     """Logic loop"""
